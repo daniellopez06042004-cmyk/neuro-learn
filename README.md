@@ -25,12 +25,7 @@ The app now opens from your home screen like any other app, and it works without
 
 ## Add or update lessons
 
-The full guide is in [`content/README.md`](content/README.md). In short:
-
-1. On GitHub, open `content/lessons` → **Add file → Upload files**, drop in the new lesson JSON, and commit.
-2. Open `content/course.json`, click the pencil icon, add the lesson id to its unit's `"lessons"` list, and commit.
-
-Your phone picks up the new lesson the next time you open the app with internet.
+Put the lesson file in `content/lessons/`, add its id to `content/course.json`, then publish (see below). The full guide is in [`content/README.md`](content/README.md). You can also edit or upload files directly on GitHub, but then run `git pull` here before the next publish so the two copies stay in sync.
 
 ## Preview on your Mac (optional)
 
@@ -42,9 +37,17 @@ perl dev/serve.pl
 
 Then open http://localhost:8765. In this local preview, any problem in a lesson file opens straight to a list of errors that names the file and field. You can also see that list on the live app under **Settings → See content problems**.
 
-## Changing the app itself
+## Publishing changes
 
-If you edit anything outside `content/` (the code, styles or icons), also change `VERSION` at the top of `sw.js` (for example `v1` → `v2`). Otherwise phones keep the old cached version.
+This folder is connected to the GitHub repository, so you never need to upload files by hand again. From this folder, run:
+
+```bash
+sh dev/publish.sh "What changed"
+```
+
+It commits everything, pushes to GitHub, and, if any app code changed, bumps `VERSION` in `sw.js` so phones know there's a new version. GitHub rebuilds the site in about a minute. After that, the app on your phone updates itself the next time you open it or switch back to it. If you're in the middle of a lesson or review, it waits until you finish.
+
+Lesson-only changes (anything in `content/`) don't need a version bump, because lessons are always fetched fresh when you're online.
 
 ## What's where
 
@@ -68,7 +71,8 @@ content/
   course.json         tracks → units → lesson ids
   lessons/*.json      one file per lesson
   images/             figures used by lessons
-dev/serve.pl          local preview server (not needed on GitHub)
+dev/serve.pl          local preview server
+dev/publish.sh        commit, version-bump and push to GitHub
 ```
 
 Progress (XP, streak, review boxes) lives in the phone's local storage, separate from the content. Deleting the home-screen app or clearing Safari website data resets it.
