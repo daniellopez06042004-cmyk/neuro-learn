@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v6';
+const VERSION = 'v7';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -29,6 +29,11 @@ const SHELL = [
   './src/haptics.js',
   './src/circuit.js',
   './src/circuits-data.js',
+  './src/badge.js',
+  './src/sound.js',
+  './src/views/stats.js',
+  './src/views/glossary.js',
+  './src/views/pulse.js',
   './src/views/circuit.js',
   './src/views/home.js',
   './src/views/unit.js',
@@ -51,6 +56,10 @@ self.addEventListener('install', (event) => {
         await content.put('content/course.json', res.clone());
         const course = await res.json();
         const ids = course.tracks.flatMap((t) => t.units.flatMap((u) => u.lessons || []));
+        for (const extra of ['content/pulse.json', 'content/glossary.json']) {
+          const r = await fetch(extra, { cache: 'no-cache' }).catch(() => null);
+          if (r && r.ok) await content.put(extra, r);
+        }
         await Promise.all(ids.map(async (id) => {
           const url = `content/lessons/${encodeURIComponent(id)}.json`;
           const r = await fetch(url, { cache: 'no-cache' }).catch(() => null);

@@ -30,7 +30,8 @@ function write(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* storage full or blocked */ }
 }
 
-const empty = () => ({ completed: {}, review: {}, streak: { count: 0, last: null }, bonusXp: 0 });
+// days: XP earned per date, for the daily goal and the streak calendar.
+const empty = () => ({ completed: {}, review: {}, streak: { count: 0, last: null }, bonusXp: 0, days: {} });
 let state = read(KEY, empty());
 const save = () => write(KEY, state);
 
@@ -61,16 +62,45 @@ export const progress = {
   },
 
   completeLesson(lessonId, xp) {
+    let earned = xp;
     if (state.completed[lessonId]) {
-      state.bonusXp = (state.bonusXp || 0) + Math.ceil(xp / 2); // replay = half XP
+      earned = Math.ceil(xp / 2); // replay = half XP
+      state.bonusXp = (state.bonusXp || 0) + earned;
     } else {
       state.completed[lessonId] = { xp, date: today() };
     }
+    this.logXp(earned);
     this.bumpStreak();
     save();
   },
 
-  addBonusXp(n) { state.bonusXp = (state.bonusXp || 0) + n; save(); },
+  addBonusXp(n) { state.bonusXp = (state.bonusXp || 0) + n; this.logXp(n); save(); },
+
+  logXp(n) {
+    state.days ||= {};
+    state.days[today()] = (state.days[today()] || 0) + n;
+  },
+
+  // XP per day. Days from before the log existed are filled in from
+  // lesson completion dates so the calendar isn't empty.
+  dayLog() {
+    const log = { ...(state.days || {}) };
+    for (const c of Object.values(state.completed)) if (c.date && !(c.date in log)) log[c.date] = (log[c.date] || 0) + (c.xp || 0);
+    return log;
+  },
+  xpToday() { return this.dayLog()[today()] || 0; },
+  dailyGoal() { return settings.get('dailyGoal') || 20; },
+
+  bestStreak() {
+    const days = Object.keys(this.dayLog()).filter((d) => this.dayLog()[d] > 0).sort();
+    let best = 0, run = 0, prev = null;
+    for (const d of days) {
+      run = prev && addDays(prev, 1) === d ? run + 1 : 1;
+      best = Math.max(best, run);
+      prev = d;
+    }
+    return Math.max(best, this.streak());
+  },
 
   // key = "lessonId:stepId"
   recordAnswer(key, correct) {

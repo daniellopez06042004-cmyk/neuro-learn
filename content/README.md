@@ -74,6 +74,31 @@ The circuit screen draws each track as a real neural pathway, with the track's u
 
 A track without `"circuit"` gets the next unused one. Order the units so they follow the pathway, if you can. To add a new pathway, add an entry to `src/circuits-data.js`.
 
+## Glossary (`glossary.json`)
+
+Any lesson text can link a term with `[[DRG]]`, or `[[dorsal root ganglia|DRG]]` to show different words. Tapping it opens the definition without leaving the lesson. The glossary screen lists every term, with search.
+
+```json
+{ "terms": [
+  { "term": "DRG", "aliases": ["dorsal root ganglion"], "definition": "…", "track": "A" }
+] }
+```
+
+`aliases` and `track` (which colors the dot) are optional. The check warns about any `[[term]]` that isn't in the glossary. The two entries there now are placeholders, so replace them.
+
+## Field Pulse (`pulse.json`)
+
+Recent papers, newest first, with a "New" tag on ones you haven't seen. Only add a paper after checking its DOI, the same rule as lesson sources.
+
+```json
+{ "items": [
+  { "id": "2026-11-example", "date": "2026-11-02", "title": "…", "citation": "Author et al., 2026, Journal",
+    "doi": "10.xxxx/…", "verified": true, "summary": "…", "whyItMatters": "…", "track": "A", "tags": ["…"] }
+] }
+```
+
+`whyItMatters`, `track` and `tags` are optional.
+
 ## When you're done with the demo
 
 Delete the `"X"` track from `course.json` and the `lessons/X1-*.json` files. Also delete `images/sample-figure.svg` if no lesson uses it.

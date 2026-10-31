@@ -3,14 +3,19 @@ import { content, unitStats, unitUnlocked, dueCountForUnit } from '../content.js
 import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
 import { go } from '../router.js';
+import { unreadPulse } from './pulse.js';
 
 export function statsBar() {
   const due = progress.dueKeys().length;
   const streak = progress.streak();
+  const goal = progress.dailyGoal(), xpToday = progress.xpToday(), frac = Math.min(1, xpToday / goal);
   return [
-    h('span', { class: `stat${progress.didToday() ? ' hot' : ''}`, title: 'Day streak' },
-      icon('bolt'), streak, h('span', { class: 'sr-only' }, `day streak${progress.didToday() ? ', done today' : ''}`)),
-    h('span', { class: 'stat', title: 'Total XP' }, progress.totalXp(), h('span', { class: 'sr-only' }, ' XP'), h('span', { 'aria-hidden': 'true' }, ' xp')),
+    // Streak, with a ring that fills toward today's XP goal.
+    h('a', {
+      class: `stat${progress.didToday() ? ' hot' : ''}${frac >= 1 ? ' goal-done' : ''}`, href: '#/progress',
+      'aria-label': `${streak} day streak, ${xpToday} of ${goal} xp today. Open your progress.`,
+    }, svg(`<svg class="goal-ring" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" class="gr-bg"/><circle cx="12" cy="12" r="10" class="gr-fg" stroke-dasharray="${(frac * 62.83).toFixed(2)} 62.83" transform="rotate(-90 12 12)"/><path d="M13 6L8 13h4l-1 5 5-7h-4l1-5z" class="gr-bolt"/></svg>`), streak),
+    h('a', { class: 'stat', href: '#/progress', 'aria-label': `${progress.totalXp()} XP total` }, progress.totalXp(), h('span', { 'aria-hidden': 'true' }, ' xp')),
     h('a', { class: 'stat', href: '#/review', 'aria-label': `Review, ${due} due` },
       icon('review'), due ? h('span', { class: 'badge' }, due) : null),
   ];
@@ -26,6 +31,14 @@ function backupTip() {
     h('p', null, 'Your progress lives only on this phone. ', h('a', { href: '#/settings' }, 'Save a backup'), ' to Files or iCloud.'),
     h('button', { class: 'icon-btn', 'aria-label': 'Remind me later', onclick: () => { settings.set('backupTipSnoozed', today()); el.remove(); } }, icon('x')));
   return el;
+}
+
+function shortcuts() {
+  const unread = unreadPulse();
+  return h('nav', { class: 'shortcuts', 'aria-label': 'More' },
+    h('a', { class: 'pill', href: '#/pulse' }, 'Field Pulse', unread ? h('span', { class: 'badge' }, `${unread} new`) : null),
+    h('a', { class: 'pill', href: '#/glossary' }, 'Glossary'),
+    h('a', { class: 'pill', href: '#/progress' }, 'Progress'));
 }
 
 function installTip() {
@@ -74,6 +87,7 @@ export function renderHome(root, params) {
       h('a', { class: 'icon-btn', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
     backupTip(),
+    shortcuts(),
     chips,
     mapHost));
   drawChips();

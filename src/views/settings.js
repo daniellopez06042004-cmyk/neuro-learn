@@ -2,6 +2,8 @@ import { h, icon } from '../ui.js';
 import { content } from '../content.js';
 import { progress, settings, today } from '../progress.js';
 import { go } from '../router.js';
+import { badgeSupported, setBadgeEnabled } from '../badge.js';
+import { setSoundEnabled } from '../sound.js';
 
 export function renderSettings(root) {
   const unlock = h('input', {
@@ -24,6 +26,17 @@ export function renderSettings(root) {
           h('label', { for: 'unlock-all' }, h('strong', null, 'Unlock everything'), h('br'),
             h('span', { class: 'small muted' }, 'Skip prereqs and open every unit and lesson.')),
           h('span', { class: 'switch' }, unlock))),
+      h('div', { class: 'card' },
+        toggle('sound', 'Sound effects', 'A tick for each EPSP, chimes for answers, and a pop when the neuron fires.', (on) => setSoundEnabled(on)),
+        h('hr', { class: 'card-rule' }),
+        toggle('iconBadge', 'Reviews due on app icon', badgeSupported()
+          ? 'Shows how many review questions are due on the Home Screen icon. iPhone asks to allow notifications for this; none are ever sent.'
+          : 'Shows how many review questions are due on the Home Screen icon. Open the app from your Home Screen to turn this on.',
+        async (on, input, note) => {
+          const r = await setBadgeEnabled(on);
+          input.checked = r.on;
+          note.textContent = r.message || '';
+        })),
       h('div', { class: 'card small' },
         h('p', { style: 'margin:0' }, `${ready} lessons ready · ${lessons.length - ready - broken} not written yet${broken ? ` · ${broken} with errors` : ''}`),
         content.errors.length ? h('a', { href: '#/errors' }, `See ${content.errors.length} content problems`) : null),
@@ -86,4 +99,17 @@ function backupCard() {
       h('button', { class: 'btn', onclick: save }, 'Save backup'),
       h('button', { class: 'btn secondary', onclick: () => picker.click() }, 'Restore')),
     picker, status);
+}
+
+function toggle(key, title, help, onChange) {
+  const id = `set-${key}`;
+  const note = h('p', { class: 'small', style: 'margin:6px 0 0;color:var(--bad)', role: 'status' });
+  const input = h('input', { type: 'checkbox', role: 'switch', id });
+  input.checked = Boolean(settings.get(key));
+  input.addEventListener('change', () => onChange(input.checked, input, note));
+  return h('div', null,
+    h('div', { class: 'toggle-row' },
+      h('label', { for: id }, h('strong', null, title), h('br'), h('span', { class: 'small muted' }, help)),
+      h('span', { class: 'switch' }, input)),
+    note);
 }

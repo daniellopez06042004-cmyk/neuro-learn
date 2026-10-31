@@ -20,9 +20,11 @@ export function esc(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-// Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs.
+// Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs,
+// and [[term]] or [[shown text|term]] for a tappable glossary term.
 export function md(text, cls = 'md') {
   const inline = (s) => esc(s)
+    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, shown, term) => `<button type="button" class="term" data-term="${(term || shown).trim()}">${shown}</button>`)
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');

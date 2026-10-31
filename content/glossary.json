@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "0.1",
+  "terms": [
+    {
+      "term": "Example term",
+      "aliases": ["sample term"],
+      "definition": "Placeholder definition. Replace these entries with your own terms; lessons link to them with [[Example term]].",
+      "track": "X"
+    },
+    {
+      "term": "Placeholder",
+      "definition": "Another placeholder entry so the glossary screen has something to show. Delete it once real terms exist.",
+      "track": "X"
+    }
+  ]
+}

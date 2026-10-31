@@ -3,7 +3,7 @@
 // engine; prints problems and exits non-zero if there are any.
 // Extra arguments are the lesson files on disk, so unlisted files get noticed.
 
-import { validateCourse, validateLesson } from '../src/validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary } from '../src/validate.js';
 
 const problems = [], notes = [];
 const readJson = (path) => {
@@ -35,7 +35,28 @@ if (course.missing || course.error) {
     const id = file.replace(/^.*\//, '').replace(/\.json$/, '');
     if (!listed.has(id)) notes.push(`content/lessons/${id}.json isn't listed in course.json, so the app won't show it.`);
   }
-  print(`Checked course.json and ${written} lesson file${written === 1 ? '' : 's'}.`);
+
+  // Optional files.
+  const pulse = readJson('content/pulse.json');
+  if (pulse.error) problems.push(pulse.error);
+  else if (pulse.data) problems.push(...validatePulse(pulse.data));
+  const glossary = readJson('content/glossary.json');
+  const known = new Set();
+  if (glossary.error) problems.push(glossary.error);
+  else if (glossary.data) {
+    problems.push(...validateGlossary(glossary.data));
+    for (const t of glossary.data.terms || []) for (const n of [t.term, ...(t.aliases || [])]) if (typeof n === 'string') known.add(n.toLowerCase());
+  }
+  // [[term]] links in lessons should point at glossary entries.
+  for (const id of listed) {
+    let text;
+    try { text = read(`content/lessons/${id}.json`); } catch { continue; }
+    for (const m of text.matchAll(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g)) {
+      const term = (m[2] || m[1]).trim();
+      if (!known.has(term.toLowerCase())) notes.push(`lessons/${id}.json links [[${term}]], which isn't in glossary.json yet.`);
+    }
+  }
+  print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json and glossary.json.`);
 }
 
 for (const n of notes) print(`Note: ${n}`);

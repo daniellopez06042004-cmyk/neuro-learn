@@ -152,3 +152,44 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
   });
   return errs;
 }
+
+// content/pulse.json: recent papers, each with a checked DOI.
+export function validatePulse(pulse) {
+  const errs = [];
+  const at = (where, msg) => errs.push(`pulse.json › ${where}: ${msg}`);
+  if (!pulse || !isArr(pulse.items)) return ['pulse.json › "items" must be a list (it can be empty)'];
+  const ids = new Set();
+  pulse.items.forEach((p, i) => {
+    const w = `items[${i}]${p?.id ? ` (${p.id})` : ''}`;
+    if (!isStr(p?.id)) at(w, '"id" is missing');
+    else if (ids.has(p.id)) at(w, `duplicate id "${p.id}"`);
+    else ids.add(p.id);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(p?.date || '')) at(w, '"date" must look like "2026-10-31"');
+    if (!isStr(p?.title)) at(w, '"title" is missing');
+    if (!isStr(p?.citation)) at(w, '"citation" is missing');
+    if (!isStr(p?.doi)) at(w, '"doi" is missing (Field Pulse only lists papers with a checked DOI)');
+    if (p?.verified !== true) at(w, 'only verified papers belong here ("verified": true, after checking the DOI)');
+    if (!isStr(p?.summary)) at(w, '"summary" is missing');
+  });
+  return errs;
+}
+
+// content/glossary.json: terms you can tap in lessons with [[term]].
+export function validateGlossary(glossary) {
+  const errs = [];
+  const at = (where, msg) => errs.push(`glossary.json › ${where}: ${msg}`);
+  if (!glossary || !isArr(glossary.terms)) return ['glossary.json › "terms" must be a list (it can be empty)'];
+  const seen = new Set();
+  glossary.terms.forEach((t, i) => {
+    const w = `terms[${i}]${t?.term ? ` (${t.term})` : ''}`;
+    if (!isStr(t?.term)) at(w, '"term" is missing');
+    if (!isStr(t?.definition)) at(w, '"definition" is missing');
+    if (t?.aliases != null && (!isArr(t.aliases) || !t.aliases.every(isStr))) at(w, '"aliases" must be a list of strings');
+    for (const name of [t?.term, ...(t?.aliases || [])].filter(isStr)) {
+      const k = name.toLowerCase();
+      if (seen.has(k)) at(w, `"${name}" is already used by another term`);
+      seen.add(k);
+    }
+  });
+  return errs;
+}

@@ -1,7 +1,7 @@
 // Loads course.json and every lesson it lists, validates them, and answers
 // questions like "is this unit unlocked?" that need both content and progress.
 
-import { validateCourse, validateLesson } from './validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary } from './validate.js';
 import { progress, settings } from './progress.js';
 
 const CONTENT = 'content/';
@@ -12,6 +12,8 @@ export const content = {
   units: new Map(),    // unitId -> { unit, track }
   lessons: new Map(),  // lessonId -> { status: 'ok' | 'missing' | 'broken', data, errors, unitId }
   tracks: [],
+  pulse: [],           // Field Pulse papers, newest first
+  glossary: new Map(), // lower-case term or alias -> { term, aliases, definition, track }
 };
 
 export async function loadContent() {
@@ -41,8 +43,26 @@ export async function loadContent() {
   for (const { unit } of content.units.values()) {
     for (const id of unit.lessons) jobs.push(loadLesson(id, unit.id));
   }
+  jobs.push(loadOptional('pulse.json', validatePulse, (d) => {
+    content.pulse = [...d.items].sort((a, b) => b.date.localeCompare(a.date));
+  }));
+  jobs.push(loadOptional('glossary.json', validateGlossary, (d) => {
+    for (const t of d.terms) for (const name of [t.term, ...(t.aliases || [])]) content.glossary.set(name.toLowerCase(), t);
+  }));
   await Promise.all(jobs);
   return content;
+}
+
+// pulse.json and glossary.json are optional; problems are reported like lesson errors.
+async function loadOptional(file, validate, use) {
+  let res;
+  try { res = await fetch(CONTENT + file, { cache: 'no-cache' }); } catch { return; }
+  if (!res.ok) return;
+  let data;
+  try { data = JSON.parse(await res.text()); } catch (e) { content.errors.push(`${file} is not valid JSON: ${e.message}`); return; }
+  const errs = validate(data);
+  content.errors.push(...errs);
+  if (!errs.length) use(data);
 }
 
 async function loadLesson(id, unitId) {

@@ -7,6 +7,7 @@ import { h, md, icon, flagBadge, trackStyle } from './ui.js';
 import { createStep } from './steps.js';
 import { createTrace } from './trace.js';
 import { light, fire } from './haptics.js';
+import { sounds } from './sound.js';
 import { progress } from './progress.js';
 import { onLeave } from './router.js';
 import { renderCircuit } from './circuit.js';
@@ -117,6 +118,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
       progress.recordAnswer(item.key, ok);
       if (!ok && mode === 'lesson') queue.push({ ...item, retry: true });
     }
+    (ok ? sounds.right : sounds.wrong)();
     if (!ok) {
       // An IPSP: the potential dips, and a re-queued question moves threshold further away.
       misses++;
@@ -238,6 +240,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     trace.epsp(level(), level(pos + 1));
     if (pos + 1 >= queue.length) return finale();
     light();
+    sounds.epsp();
     stage.style.transform = '';
     stage.style.setProperty('--dx', `${fromX}px`);
     stage.className = 'stage fire-out';
@@ -256,6 +259,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     await trace.finale({
       onPeak: (at) => {
         fire();
+        sounds.fire();
         const host = traceHost.getBoundingClientRect(), box = shell.getBoundingClientRect();
         const x = `${host.left - box.left + at.x}px`, y = `${host.top - box.top + at.y}px`;
         const fx = h('div', { class: 'fx', style: `--x:${x};--y:${y}`, 'aria-hidden': 'true' },
