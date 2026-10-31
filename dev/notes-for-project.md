@@ -1,0 +1,5 @@
+- **C4-L3, step s2:** it had `"flag": { "level": "visual", … }`. `visual` isn't a flag level, so the live copy has `"flag": null`, because the visual's caption already says the same thing. Please make the same change in your `content/lessons/C4-L3.json`.
+- **Citations:** all 10 DOIs in C2–C5 resolve, and each one's title and first author match the citation. `curriculum.md` calls the colon paper "Zheng, Wolfson et al.", but its first author is Wolfson (Wolfson RL et al., Cell 2023, 10.1016/j.cell.2023.07.007). The lessons already have it right; the curriculum file doesn't.
+- **Unit snippets work well.** Keep giving units as `course-<ids>-snippet.json` with a `units` list. A snippet replaces the unit with the same id, and a new id is added to its track.
+- **Glossary:** sending your whole `glossary.json` is fine. It's merged by term, and your version of a term wins.
+- **What would help most next:** C1 (C2 lists it as a prereq), D1–D3 (the foundations Dan flagged as shaky), D6 (GI & pancreas anatomy), then the capstone unit E, which unlocks after C5 and D6.

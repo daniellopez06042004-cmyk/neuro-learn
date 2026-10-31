@@ -27,6 +27,25 @@ The app now opens from your home screen like any other app, and it works without
 
 Put the lesson file in `content/lessons/`, add its id to `content/course.json`, then publish (see below). The full guide is in [`content/README.md`](content/README.md). You can also edit or upload files directly on GitHub, but then run `git pull` here before the next publish so the two copies stay in sync.
 
+## Working with the content Project
+
+The Claude Project that writes lessons puts its files in `../content/` (the top-level `content` folder). Two files keep both sides in sync:
+
+- **`../APP-STATUS.md`** is written by `dev/status.py` after every publish. It covers what's live, every lesson id and glossary term, what the app supports, which Project files are waiting to be imported, the check results, and notes for the Project (from `dev/notes-for-project.md`).
+- **`../content/NOTES-FOR-APP.md`** is where the Project leaves questions and requests for this side.
+
+To bring in new content:
+
+```bash
+python3 dev/import.py --dry-run
+```
+
+```bash
+python3 dev/import.py && sh dev/publish.sh "Import new content"
+```
+
+The import copies only files the Project changed since the last import (tracked in `dev/import-manifest.json`), so fixes made here aren't overwritten by older copies.
+
 ## Preview on your Mac (optional)
 
 In Terminal, from this folder:
@@ -73,6 +92,8 @@ content/
   images/             figures used by lessons
 dev/serve.pl          local preview server
 dev/check.sh          check every lesson (uses macOS's built-in JavaScript)
+dev/import.py         bring in what the content Project changed
+dev/status.py         write ../APP-STATUS.md for the content Project
 dev/publish.sh        check, commit, version-bump and push to GitHub
 ```
 

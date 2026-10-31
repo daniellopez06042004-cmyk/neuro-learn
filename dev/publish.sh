@@ -29,3 +29,6 @@ git add -A
 git commit -q -m "$msg"
 git push -q origin main
 echo "Published: $(git log -1 --format='%h %s')"
+
+# Tell the content Project where things stand (../APP-STATUS.md).
+/usr/bin/python3 -I dev/status.py >/dev/null 2>&1 || echo "Couldn't update APP-STATUS.md"
