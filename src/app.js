@@ -7,6 +7,7 @@ import { renderLesson } from './views/lesson.js';
 import { renderReview } from './views/review.js';
 import { renderSettings } from './views/settings.js';
 import { renderErrors, renderFatal } from './views/errors.js';
+import { renderCircuitView } from './views/circuit.js';
 
 route('/', renderHome);
 route('/unit/:id', renderUnit);
@@ -14,6 +15,7 @@ route('/lesson/:id', renderLesson);
 route('/review', renderReview);
 route('/settings', renderSettings);
 route('/errors', renderErrors);
+route('/circuit', renderCircuitView);
 fallback(() => go('/', { replace: true }));
 
 // Offline caching is off while developing so edits show up on reload.

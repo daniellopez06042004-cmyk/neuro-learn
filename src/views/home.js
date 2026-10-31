@@ -58,6 +58,7 @@ export function renderHome(root, params) {
       h('h1', { class: 'sr-only' }, content.course.title),
       ...statsBar(),
       h('span', { style: 'flex:1' }),
+      h('a', { class: 'icon-btn', href: '#/circuit', 'aria-label': 'Your circuit' }, icon('neuron')),
       h('a', { class: 'icon-btn', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
     chips,

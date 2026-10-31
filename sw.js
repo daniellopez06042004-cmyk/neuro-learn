@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -26,6 +26,9 @@ const SHELL = [
   './src/steps.js',
   './src/player.js',
   './src/trace.js',
+  './src/haptics.js',
+  './src/circuit.js',
+  './src/views/circuit.js',
   './src/views/home.js',
   './src/views/unit.js',
   './src/views/lesson.js',

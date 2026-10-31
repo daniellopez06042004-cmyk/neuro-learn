@@ -1,13 +1,15 @@
-// Focus-mode player: one step per screen, a living-membrane progress trace on
+// Focus-mode player: one step per screen, the lesson's membrane potential on
 // top, and a feedback sheet after each answer. Used for lessons and review.
-// To move on, swipe left: dragging charges the neuron, and crossing
-// threshold fires you to the next step (the Continue button does the same).
+// To move on, swipe left: dragging charges the next EPSP, and releasing past
+// the line lands it. The last one reaches threshold and the neuron fires.
 
 import { h, md, icon, flagBadge, trackStyle } from './ui.js';
 import { createStep } from './steps.js';
 import { createTrace } from './trace.js';
+import { light, fire } from './haptics.js';
 import { progress } from './progress.js';
 import { onLeave } from './router.js';
+import { renderCircuit } from './circuit.js';
 
 const PRAISE = ['Correct', 'Nice', 'Exactly', 'Spot on'];
 const FIRE_AT = 0.33; // drag this fraction of the screen width to fire
@@ -18,10 +20,10 @@ const FIRE_AT = 0.33; // drag this fraction of the screen width to fire
  */
 export function runSession(root, { items, mode, onExit, onDone }) {
   const queue = items.map((it) => ({ ...it, retry: false }));
-  let pos = 0, graded = 0, correct = 0, finished = false;
+  let pos = 0, graded = 0, correct = 0, misses = 0, finished = false;
   let primary = null;       // the button Enter should press
   let canAdvance = false;   // true once Continue is on screen
-  let pendingRead = false;  // concept card: its spike fires on the way out
+  let pendingRead = false;  // concept card: nothing to answer before swiping
   let advancing = false;
 
   const ac = new AbortController();
@@ -68,7 +70,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     const item = queue[pos];
     shell.setAttribute('style', trackStyle(item.color));
     trace.refreshColors();
-    trace.setTotal(queue.length, pos + 1);
+    trace.layout(queue.length, misses, pos + 1);
     const ctl = createStep(item.step, { autoCheck: () => check(ctl, item) });
     stage.replaceChildren(h('div', { class: 'stage-inner' }, ctl.el));
     stage.scrollTop = 0;
@@ -104,15 +106,23 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     feedback(item, r);
   }
 
+  // The potential sits at (steps done / steps in the lesson).
+  const level = (n = pos) => n / queue.length;
+
   function grade(item, ok) {
+    const before = level();
     if (!item.retry) {
       graded++;
       if (ok) correct++;
       progress.recordAnswer(item.key, ok);
       if (!ok && mode === 'lesson') queue.push({ ...item, retry: true });
     }
-    trace.setTotal(queue.length, pos + 1);
-    trace.push(ok ? 'ok' : 'miss');
+    if (!ok) {
+      // An IPSP: the potential dips, and a re-queued question moves threshold further away.
+      misses++;
+      trace.layout(queue.length, misses, pos + 1);
+      trace.ipsp(before, level());
+    }
   }
 
   function feedback(item, r) {
@@ -186,12 +196,14 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     drag.dx = dx < 0 ? dx : dx * 0.15;
     const p = -drag.dx / fireDistance();
     stage.style.transform = `translateX(${drag.dx * 0.5}px)`;
-    trace.setCharge(p);
+    trace.setCharge(p, level(), level(pos + 1));
     const armed = p >= 1;
     if (armed !== dock.classList.contains('armed')) {
       dock.classList.toggle('armed', armed);
       const t = dock.querySelector('.swipe-text');
-      if (t) t.textContent = armed ? ' Release to fire' : ' Swipe left to continue';
+      const lastStep = pos + 1 >= queue.length;
+      if (t) t.textContent = !armed ? ' Swipe left to continue' : lastStep ? ' Release to fire' : ' Release to continue';
+      if (armed) light();
     }
   }, { signal });
 
@@ -202,7 +214,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     if (-d.dx >= fireDistance()) return advance(d.dx * 0.5);
     stage.className = 'stage spring';
     stage.style.transform = '';
-    trace.setCharge(0);
+    trace.setCharge(0, level(), level(pos + 1));
     dock.classList.remove('armed');
     const t = dock.querySelector('.swipe-text');
     if (t) t.textContent = ' Swipe left to continue';
@@ -222,8 +234,10 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     if (advancing || !canAdvance && !pendingRead && primary) return;
     advancing = true;
     canAdvance = false;
-    if (pendingRead) { pendingRead = false; trace.push('read'); }
-    trace.fire();
+    pendingRead = false;
+    trace.epsp(level(), level(pos + 1));
+    if (pos + 1 >= queue.length) return finale();
+    light();
     stage.style.transform = '';
     stage.style.setProperty('--dx', `${fromX}px`);
     stage.className = 'stage fire-out';
@@ -232,6 +246,26 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     const go = () => { if (done) return; done = true; advancing = false; next(); };
     stage.addEventListener('animationend', go, { once: true });
     setTimeout(go, 600); // in case the animation never runs
+  }
+
+  // Last step: threshold reached. Expand the scope, fire, light up the screen.
+  async function finale() {
+    finished = true;
+    stage.style.transform = '';
+    shell.classList.add('firing');
+    await trace.finale({
+      onPeak: (at) => {
+        fire();
+        const host = traceHost.getBoundingClientRect(), box = shell.getBoundingClientRect();
+        const x = `${host.left - box.left + at.x}px`, y = `${host.top - box.top + at.y}px`;
+        const fx = h('div', { class: 'fx', style: `--x:${x};--y:${y}`, 'aria-hidden': 'true' },
+          h('div', { class: 'fx-flash' }), h('div', { class: 'fx-wave' }),
+          h('div', { class: 'fx-ring' }), h('div', { class: 'fx-ring r2' }), h('div', { class: 'fx-ring r3' }));
+        shell.append(fx, h('p', { class: 'fx-label', role: 'status' }, 'Threshold reached', h('span', null, 'The neuron fired')));
+        shell.classList.add('jolt');
+      },
+    });
+    next();
   }
 
   function next() {
@@ -248,14 +282,15 @@ export function runSession(root, { items, mode, onExit, onDone }) {
   showStep();
 }
 
-export function finishScreen(root, { color, title, stats, button, onContinue }) {
+// After a lesson or review: your circuit (with what you just grew), then stats.
+export function finishScreen(root, { color, title, stats, button, onContinue, highlightUnit, newLesson }) {
+  const { el, summary } = renderCircuit({ highlightUnit, newLesson });
   root.replaceChildren(h('div', { class: 'finish', style: trackStyle(color) },
     h('div', { class: 'center' },
-      h('div', { html: `<svg class="burst" viewBox="0 0 160 160" aria-hidden="true">
-        <circle class="wave" cx="80" cy="80" r="40"/><circle class="wave" cx="80" cy="80" r="40"/><circle class="wave" cx="80" cy="80" r="40"/>
-        <path class="dend" d="M80 52 L80 14"/><path class="dend" d="M56 94 L24 124"/><path class="dend" d="M104 94 L136 124"/>
-        <path class="dend" d="M54 70 L18 58"/><path class="dend" d="M106 70 L142 58"/>
-        <circle class="core" cx="80" cy="80" r="30"/></svg>` }),
+      h('a', { class: 'circuit-link', href: '#/circuit', 'aria-label': 'Open your circuit' }, el),
+      h('p', { class: 'circuit-caption' }, summary.complete
+        ? 'Circuit complete. Every neuron is wired and myelinated.'
+        : `${summary.wired} of ${summary.total} neurons wired · ${summary.myelinated} myelinated`),
       h('h2', { tabindex: '-1' }, title),
       h('div', { class: 'stats' }, stats.map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k))))),
     h('button', { class: 'btn', onclick: onContinue }, button)));

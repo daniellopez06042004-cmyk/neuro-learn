@@ -54,6 +54,7 @@ const PATHS = {
   sliders: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/>',
   share: '<path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/>',
   star: '<path d="M12 4l2.5 5.2 5.5.7-4 3.9 1 5.6L12 16.8 7 19.4l1-5.6-4-3.9 5.5-.7z"/>',
+  neuron: '<circle cx="12" cy="12" r="3"/><path d="M12 9V3M9.6 13.8L5 19M14.4 13.8L19 19M15 12h6M3 10l6 1.5"/>',
   dots: '<circle cx="6" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="18" cy="12" r="1"/>',
 };
 

@@ -20,6 +20,8 @@ export function renderLesson(root, { id }) {
       const unitJustDone = !wasUnitComplete && unitStats(unit).complete;
       finishScreen(root, {
         color: track.color,
+        highlightUnit: unit.id,
+        newLesson: replay ? null : id,
         title: unitJustDone ? `${unit.title} complete` : 'Lesson complete',
         stats: [
           ['XP', `+${replay ? Math.ceil(xp / 2) : xp}`],
