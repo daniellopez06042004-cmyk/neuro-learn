@@ -45,7 +45,7 @@ This folder is connected to the GitHub repository, so you never need to upload f
 sh dev/publish.sh "What changed"
 ```
 
-It commits everything, pushes to GitHub, and, if any app code changed, bumps `VERSION` in `sw.js` so phones know there's a new version. GitHub rebuilds the site in about a minute. After that, the app on your phone updates itself the next time you open it or switch back to it. If you're in the middle of a lesson or review, it waits until you finish.
+It first checks every lesson with the app's own rules (`sh dev/check.sh` runs the same check by itself) and stops if anything is broken. Then it commits everything, pushes to GitHub, and, if any app code changed, bumps `VERSION` in `sw.js` so phones know there's a new version. GitHub rebuilds the site in about a minute. After that, the app on your phone updates itself the next time you open it or switch back to it. If you're in the middle of a lesson or review, it waits until you finish.
 
 Lesson-only changes (anything in `content/`) don't need a version bump, because lessons are always fetched fresh when you're online.
 
@@ -72,7 +72,8 @@ content/
   lessons/*.json      one file per lesson
   images/             figures used by lessons
 dev/serve.pl          local preview server
-dev/publish.sh        commit, version-bump and push to GitHub
+dev/check.sh          check every lesson (uses macOS's built-in JavaScript)
+dev/publish.sh        check, commit, version-bump and push to GitHub
 ```
 
 Progress (XP, streak, review boxes) lives in the phone's local storage, separate from the content. Deleting the home-screen app or clearing Safari website data resets it.

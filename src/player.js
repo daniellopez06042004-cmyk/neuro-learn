@@ -283,7 +283,16 @@ export function runSession(root, { items, mode, onExit, onDone }) {
 }
 
 // After a lesson or review: your circuit (with what you just grew), then stats.
-export function finishScreen(root, { color, title, stats, button, onContinue, highlightUnit, newLesson }) {
+function sourceList(sources) {
+  if (!sources?.length) return null;
+  return h('section', { class: 'sources' },
+    h('h3', null, 'Sources'),
+    h('ul', null, sources.map((s) => h('li', null,
+      s.doi ? h('a', { href: `https://doi.org/${encodeURI(s.doi)}`, target: '_blank', rel: 'noopener' }, s.citation) : s.citation,
+      s.note ? h('span', { class: 'note' }, s.note) : null))));
+}
+
+export function finishScreen(root, { color, title, stats, button, onContinue, highlightUnit, newLesson, sources }) {
   const { el, summary } = renderCircuit({ highlightUnit, newLesson });
   root.replaceChildren(h('div', { class: 'finish', style: trackStyle(color) },
     h('div', { class: 'center' },
@@ -292,7 +301,8 @@ export function finishScreen(root, { color, title, stats, button, onContinue, hi
         ? 'Circuit complete. Every neuron is wired and myelinated.'
         : `${summary.wired} of ${summary.total} neurons wired · ${summary.myelinated} myelinated`),
       h('h2', { tabindex: '-1' }, title),
-      h('div', { class: 'stats' }, stats.map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k))))),
+      h('div', { class: 'stats' }, stats.map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k)))),
+      sourceList(sources)),
     h('button', { class: 'btn', onclick: onContinue }, button)));
   root.querySelector('h2').focus();
 }

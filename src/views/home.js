@@ -1,6 +1,6 @@
 import { h, icon, svg, trackStyle } from '../ui.js';
 import { content, unitStats, unitUnlocked, dueCountForUnit } from '../content.js';
-import { progress, settings } from '../progress.js';
+import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
 import { go } from '../router.js';
 
@@ -14,6 +14,18 @@ export function statsBar() {
     h('a', { class: 'stat', href: '#/review', 'aria-label': `Review, ${due} due` },
       icon('review'), due ? h('span', { class: 'badge' }, due) : null),
   ];
+}
+
+// Once you have some progress, nudge you to back it up every two weeks.
+function backupTip() {
+  const done = Object.keys(progress.state.completed).length;
+  const last = settings.get('lastBackup') || settings.get('backupTipSnoozed');
+  if (done < 3 || (last && last > addDays(today(), -14))) return null;
+  const el = h('div', { class: 'banner', role: 'note' },
+    icon('review'),
+    h('p', null, 'Your progress lives only on this phone. ', h('a', { href: '#/settings' }, 'Save a backup'), ' to Files or iCloud.'),
+    h('button', { class: 'icon-btn', 'aria-label': 'Remind me later', onclick: () => { settings.set('backupTipSnoozed', today()); el.remove(); } }, icon('x')));
+  return el;
 }
 
 function installTip() {
@@ -61,6 +73,7 @@ export function renderHome(root, params) {
       h('a', { class: 'icon-btn', href: '#/circuit', 'aria-label': 'Your circuit' }, icon('neuron')),
       h('a', { class: 'icon-btn', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
+    backupTip(),
     chips,
     mapHost));
   drawChips();

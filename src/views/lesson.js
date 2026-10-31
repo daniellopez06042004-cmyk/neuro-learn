@@ -11,9 +11,17 @@ export function renderLesson(root, { id }) {
   const xp = lesson.xp ?? 10;
   const replay = progress.isComplete(id);
 
+  const items = lesson.steps.map((step) => ({ key: `${id}:${step.id}`, step, color: track.color }));
+  if (lesson.objective) {
+    items.unshift({
+      key: `${id}:__intro`, color: track.color,
+      step: { type: 'intro', id: '__intro', title: lesson.title, objective: lesson.objective, minutes: lesson.minutes, confidence: lesson.confidence, stepCount: lesson.steps.length },
+    });
+  }
+
   runSession(root, {
     mode: 'lesson',
-    items: lesson.steps.map((step) => ({ key: `${id}:${step.id}`, step, color: track.color })),
+    items,
     onExit: () => go(`/unit/${encodeURIComponent(unit.id)}`),
     onDone: ({ graded, correct }) => {
       progress.completeLesson(id, xp);
@@ -28,6 +36,7 @@ export function renderLesson(root, { id }) {
           ['First try', graded ? `${Math.round((correct / graded) * 100)}%` : '—'],
           ['Day streak', progress.streak()],
         ],
+        sources: lesson.sources,
         button: 'Continue',
         onContinue: () => go(unitJustDone ? `/?fired=${encodeURIComponent(unit.id)}` : `/unit/${encodeURIComponent(unit.id)}?fired=${encodeURIComponent(id)}`),
       });

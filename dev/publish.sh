@@ -11,6 +11,12 @@ if [ -z "$(git status --porcelain --untracked-files=all)" ]; then
   exit 0
 fi
 
+# Never publish broken lessons.
+if ! sh dev/check.sh; then
+  echo "Not published: fix the problems above first."
+  exit 1
+fi
+
 # Lessons are always fetched fresh, and docs/dev tools never reach the phone,
 # so only app code changes need a new version.
 if git status --porcelain --untracked-files=all | awk '{print $NF}' | grep -qvE '^(content/|dev/|.*\.md$|\.gitignore$)'; then

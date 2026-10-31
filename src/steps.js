@@ -9,7 +9,7 @@ import { h, md, icon, shuffle, flagBadge } from './ui.js';
 import { imageUrl } from './content.js';
 
 export function createStep(step, ctx) {
-  const build = { concept, mcq, troubleshoot, predict, match, order }[step.type];
+  const build = { intro, concept, mcq, troubleshoot, predict, match, order }[step.type];
   return build(step, ctx);
 }
 
@@ -17,6 +17,21 @@ const letter = (i) => String.fromCharCode(65 + i);
 const kind = (text) => h('p', { class: 'kind' }, text);
 const prompt = (text) => h('h2', { class: 'prompt' }, text);
 const sameSet = (a, b) => a.length === b.length && a.every((x) => b.includes(x));
+
+// Not in lesson files: the player adds this first, from the lesson's own
+// title, objective and confidence.
+function intro(s) {
+  const conf = { high: 'Well established', medium: 'Mostly established', low: 'Still uncertain' }[s.confidence];
+  return {
+    interactive: false,
+    el: [
+      kind(`${s.minutes ? `${s.minutes} min · ` : ''}${s.stepCount} steps`),
+      h('h2', { class: 'concept-title' }, s.title),
+      h('div', { class: 'objective' }, h('p', { class: 'objective-label' }, 'By the end you can'), md(s.objective, 'prose')),
+      conf ? h('p', { class: 'small muted' }, `Confidence: ${conf}`) : null,
+    ],
+  };
+}
 
 function concept(s) {
   let figure = null;

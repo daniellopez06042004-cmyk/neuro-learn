@@ -103,6 +103,29 @@ export const progress = {
   forget(key) { delete state.review[key]; save(); },
 
   reset() { state = empty(); save(); },
+
+  // ---- Backup: a small JSON file you keep in Files/iCloud.
+  exportData() {
+    return { app: 'neurolearn', format: 1, exportedAt: new Date().toISOString(), progress: state, settings: settings._s };
+  },
+
+  // Returns a short description of the backup, or throws if it isn't one.
+  describeBackup(data) {
+    if (data?.app !== 'neurolearn' || !data.progress || typeof data.progress.completed !== 'object' || typeof data.progress.review !== 'object') {
+      throw new Error("That file isn't a Neuro Learn backup.");
+    }
+    const p = data.progress;
+    const xp = Object.values(p.completed).reduce((s, c) => s + (c.xp || 0), 0) + (p.bonusXp || 0);
+    const n = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+    return `${n(Object.keys(p.completed).length, 'lesson')}, ${xp} xp, ${n(Object.keys(p.review).length, 'review question')}, saved ${String(data.exportedAt).slice(0, 10)}`;
+  },
+
+  importData(data) {
+    this.describeBackup(data);
+    state = { ...empty(), ...data.progress };
+    save();
+    if (data.settings) { settings._s = { ...settings._s, ...data.settings }; write(SETTINGS_KEY, settings._s); }
+  },
 };
 
 export const settings = {
