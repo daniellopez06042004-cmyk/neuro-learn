@@ -1,12 +1,16 @@
-// Focus-mode player: one step per screen, a spike-train progress trace on top,
-// and a feedback sheet after each answer. Used for lessons and for review.
+// Focus-mode player: one step per screen, a living-membrane progress trace on
+// top, and a feedback sheet after each answer. Used for lessons and review.
+// To move on, swipe left: dragging charges the neuron, and crossing
+// threshold fires you to the next step (the Continue button does the same).
 
 import { h, md, icon, flagBadge, trackStyle } from './ui.js';
 import { createStep } from './steps.js';
+import { createTrace } from './trace.js';
 import { progress } from './progress.js';
 import { onLeave } from './router.js';
 
 const PRAISE = ['Correct', 'Nice', 'Exactly', 'Spot on'];
+const FIRE_AT = 0.33; // drag this fraction of the screen width to fire
 
 /**
  * items: [{ key: "lessonId:stepId", step, color }]
@@ -14,20 +18,29 @@ const PRAISE = ['Correct', 'Nice', 'Exactly', 'Spot on'];
  */
 export function runSession(root, { items, mode, onExit, onDone }) {
   const queue = items.map((it) => ({ ...it, retry: false }));
-  const results = []; // 'ok' | 'miss' | 'read', one per finished position
   let pos = 0, graded = 0, correct = 0, finished = false;
-  let primary = null; // the button Enter should press
+  let primary = null;       // the button Enter should press
+  let canAdvance = false;   // true once Continue is on screen
+  let pendingRead = false;  // concept card: its spike fires on the way out
+  let advancing = false;
 
   const ac = new AbortController();
+  const { signal } = ac;
   onLeave(() => ac.abort());
+  // Tells the updater not to reload mid-lesson (see app.js).
+  document.body.dataset.inSession = '1';
+  signal.addEventListener('abort', () => delete document.body.dataset.inSession);
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && primary && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement)) {
+    if (e.key === 'ArrowLeft' && canAdvance && !(e.target instanceof HTMLTextAreaElement)) {
+      e.preventDefault();
+      advance();
+    } else if (e.key === 'Enter' && primary && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement)) {
       e.preventDefault();
       primary.click();
     }
-  }, { signal: ac.signal });
+  }, { signal });
 
-  const trace = h('div', { class: 'trace-host', style: 'flex:1' });
+  const traceHost = h('div', { class: 'trace-host' });
   const stage = h('div', { class: 'stage' });
   const dock = h('div', { class: 'dock' });
   const shell = h('div', { class: 'player' },
@@ -40,28 +53,11 @@ export function runSession(root, { items, mode, onExit, onDone }) {
           onExit();
         },
       }, icon('x')),
-      trace),
+      traceHost),
     stage, dock);
   root.replaceChildren(shell);
-
-  // --- progress trace: each finished step leaves a spike (or a dip for a miss)
-  function drawTrace(animateLast) {
-    const W = Math.max(180, Math.round(trace.clientWidth || 280)), H = 40, base = 24;
-    const seg = W / queue.length;
-    const parts = results.map((r, i) => {
-      const x0 = i * seg, xs = x0 + seg * 0.55;
-      const shape = r === 'miss'
-        ? `L${xs} ${base} L${xs + 3} ${base - 3} L${xs + 7} ${H - 2} L${xs + 13} ${base}`
-        : r === 'read'
-          ? `L${xs} ${base} L${xs + 3} ${base - 11} L${xs + 6} ${base + 3} L${xs + 9} ${base}`
-          : `L${xs} ${base} L${xs + 3} 3 L${xs + 7} ${base + 6} L${xs + 11} ${base}`;
-      const cls = `done${r === 'miss' ? ' miss' : ''}${animateLast && i === results.length - 1 ? ' new' : ''}`;
-      return `<path class="${cls}" d="M${x0} ${base} ${shape} L${(i + 1) * seg} ${base}"/>`;
-    }).join('');
-    const headX = Math.min(W - 3, results.length * seg);
-    trace.innerHTML = `<svg class="trace" viewBox="0 0 ${W} ${H}" role="img" aria-label="Step ${Math.min(pos + 1, queue.length)} of ${queue.length}">
-      <path class="base" d="M0 ${base} L${W} ${base}"/>${parts}<circle class="head" cx="${headX}" cy="${base}" r="4"/></svg>`;
-  }
+  shell.setAttribute('style', trackStyle(queue[0].color));
+  const trace = createTrace(traceHost, signal);
 
   function setDock(...kids) {
     dock.className = 'dock';
@@ -71,15 +67,21 @@ export function runSession(root, { items, mode, onExit, onDone }) {
   function showStep() {
     const item = queue[pos];
     shell.setAttribute('style', trackStyle(item.color));
+    trace.refreshColors();
+    trace.setTotal(queue.length, pos + 1);
     const ctl = createStep(item.step, { autoCheck: () => check(ctl, item) });
     stage.replaceChildren(h('div', { class: 'stage-inner' }, ctl.el));
     stage.scrollTop = 0;
-    drawTrace(false);
+    stage.className = 'stage fire-in';
+    stage.style.removeProperty('--dx');
 
     if (!ctl.interactive) {
-      primary = h('button', { class: 'btn', onclick: () => { results.push('read'); drawTrace(true); next(); } }, 'Continue');
-      setDock(primary);
+      pendingRead = true;
+      canAdvance = true;
+      primary = h('button', { class: 'btn', onclick: advance }, 'Continue');
+      setDock(primary, swipeHint());
     } else {
+      canAdvance = false;
       const hint = h('p', { class: 'hint-msg', role: 'alert' });
       primary = h('button', { class: 'btn', onclick: () => check(ctl, item, hint) }, 'Check');
       setDock(hint, primary);
@@ -109,8 +111,8 @@ export function runSession(root, { items, mode, onExit, onDone }) {
       progress.recordAnswer(item.key, ok);
       if (!ok && mode === 'lesson') queue.push({ ...item, retry: true });
     }
-    results.push(ok ? 'ok' : 'miss');
-    drawTrace(true);
+    trace.setTotal(queue.length, pos + 1);
+    trace.push(ok ? 'ok' : 'miss');
   }
 
   function feedback(item, r) {
@@ -127,14 +129,16 @@ export function runSession(root, { items, mode, onExit, onDone }) {
       s.followUp ? [h('h3', null, 'Think about it'), md(s.followUp)] : null,
       s.flag ? flagBadge(s.flag) : null,
       !r.ok && mode === 'lesson' && !item.retry ? h('p', { class: 'small muted', style: 'margin-top:10px' }, "You'll see this one again at the end.") : null);
-    sheet(r.ok ? 'good' : 'miss', h('p', { class: 'verdict' }, icon(r.ok ? 'check' : 'x'), verdict), body,
-      primary = h('button', { class: `btn ${r.ok ? 'ok' : 'bad'}`, onclick: next }, 'Continue'));
+    primary = h('button', { class: `btn ${r.ok ? 'ok' : 'bad'}`, onclick: advance }, 'Continue');
+    canAdvance = true;
+    sheet(r.ok ? 'good' : 'miss', h('p', { class: 'verdict' }, icon(r.ok ? 'check' : 'x'), verdict), body, primary, swipeHint());
   }
 
   function selfGrade(item, r) {
     const s = item.step;
-    const choose = (ok) => { grade(item, ok); next(); };
+    const choose = (ok) => { grade(item, ok); advance(); };
     primary = null;
+    canAdvance = false;
     sheet('neutral', h('p', { class: 'verdict' }, 'Compare with what happens'),
       h('div', { class: 'body' },
         h('h3', null, 'You predicted'), h('p', { class: 'your-guess' }, r.guess),
@@ -148,20 +152,87 @@ export function runSession(root, { items, mode, onExit, onDone }) {
   function sheet(tone, ...kids) {
     dock.className = `dock sheet ${tone}`;
     dock.replaceChildren(...kids);
-    if (primary) dock.append(h('p', { class: 'swipe', 'aria-hidden': 'true' }, 'or swipe up'));
     dock.querySelector('.verdict')?.setAttribute('tabindex', '-1');
     dock.querySelector('.verdict')?.focus({ preventScroll: true });
   }
 
-  // Swipe up anywhere to continue once feedback is showing.
-  let startY = null;
-  shell.addEventListener('touchstart', (e) => { startY = e.touches[0].clientY; }, { passive: true, signal: ac.signal });
-  shell.addEventListener('touchend', (e) => {
-    if (startY == null) return;
-    const dy = e.changedTouches[0].clientY - startY;
-    startY = null;
-    if (dy < -70 && dock.classList.contains('sheet') && primary && !stage.contains(e.target)) primary.click();
-  }, { passive: true, signal: ac.signal });
+  function swipeHint() {
+    return h('p', { class: 'swipe', 'aria-hidden': 'true' }, h('span', { class: 'nudge' }, '←'), h('span', { class: 'swipe-text' }, ' Swipe left to continue'));
+  }
+
+  // ---- Charge and fire: drag left to charge the neuron, past threshold fires.
+  let drag = null;
+  const fireDistance = () => shell.clientWidth * FIRE_AT;
+
+  shell.addEventListener('pointerdown', (e) => {
+    if (advancing || e.button > 0 || e.target.closest('.player-top, textarea')) return;
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, active: false };
+  }, { signal });
+
+  shell.addEventListener('pointermove', (e) => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!drag.active) {
+      if (Math.abs(dy) > 14 && Math.abs(dy) > Math.abs(dx)) { drag = null; return; } // a scroll
+      if (Math.abs(dx) < 12) return;
+      if (!canAdvance) {
+        if (dx < -40) { answerFirst(); drag = null; }
+        return;
+      }
+      drag.active = true;
+      shell.setPointerCapture(e.pointerId);
+      stage.className = 'stage dragging';
+    }
+    drag.dx = dx < 0 ? dx : dx * 0.15;
+    const p = -drag.dx / fireDistance();
+    stage.style.transform = `translateX(${drag.dx * 0.5}px)`;
+    trace.setCharge(p);
+    const armed = p >= 1;
+    if (armed !== dock.classList.contains('armed')) {
+      dock.classList.toggle('armed', armed);
+      const t = dock.querySelector('.swipe-text');
+      if (t) t.textContent = armed ? ' Release to fire' : ' Swipe left to continue';
+    }
+  }, { signal });
+
+  const endDrag = () => {
+    const d = drag;
+    drag = null;
+    if (!d?.active) return;
+    if (-d.dx >= fireDistance()) return advance(d.dx * 0.5);
+    stage.className = 'stage spring';
+    stage.style.transform = '';
+    trace.setCharge(0);
+    dock.classList.remove('armed');
+    const t = dock.querySelector('.swipe-text');
+    if (t) t.textContent = ' Swipe left to continue';
+  };
+  shell.addEventListener('pointerup', endDrag, { signal });
+  shell.addEventListener('pointercancel', endDrag, { signal });
+
+  function answerFirst() {
+    stage.className = 'stage';
+    void stage.offsetWidth;
+    stage.className = 'stage shake';
+    const hint = dock.querySelector('.hint-msg');
+    if (hint) { hint.textContent = 'Answer first, then swipe'; hint.hidden = false; }
+  }
+
+  function advance(fromX = 0) {
+    if (advancing || !canAdvance && !pendingRead && primary) return;
+    advancing = true;
+    canAdvance = false;
+    if (pendingRead) { pendingRead = false; trace.push('read'); }
+    trace.fire();
+    stage.style.transform = '';
+    stage.style.setProperty('--dx', `${fromX}px`);
+    stage.className = 'stage fire-out';
+    dock.classList.add('leaving');
+    let done = false;
+    const go = () => { if (done) return; done = true; advancing = false; next(); };
+    stage.addEventListener('animationend', go, { once: true });
+    setTimeout(go, 600); // in case the animation never runs
+  }
 
   function next() {
     pos++;

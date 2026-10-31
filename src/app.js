@@ -19,7 +19,27 @@ fallback(() => go('/', { replace: true }));
 // Offline caching is off while developing so edits show up on reload.
 // Add ?sw to the URL to test it locally anyway.
 if ('serviceWorker' in navigator && (!isDev || location.search.includes('sw'))) {
-  navigator.serviceWorker.register('./sw.js').catch(() => {});
+  navigator.serviceWorker.register('./sw.js').then((reg) => {
+    // Phones keep home-screen apps alive in the background, so look for a
+    // new version every time the app comes back to the front.
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') reg.update().catch(() => {});
+    });
+  }).catch(() => {});
+
+  // When a new version takes over, reload into it — right away, or as soon
+  // as you finish the lesson or review you're in.
+  let hadController = Boolean(navigator.serviceWorker.controller);
+  let updateReady = false;
+  const reloadIfIdle = () => {
+    if (updateReady && !document.body.dataset.inSession) location.reload();
+  };
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadController) { hadController = true; return; } // first install, nothing to refresh
+    updateReady = true;
+    reloadIfIdle();
+  });
+  window.addEventListener('hashchange', reloadIfIdle);
 }
 
 try {

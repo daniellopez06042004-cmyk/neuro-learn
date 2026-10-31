@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v1';
+const VERSION = 'v3';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -25,6 +25,7 @@ const SHELL = [
   './src/map.js',
   './src/steps.js',
   './src/player.js',
+  './src/trace.js',
   './src/views/home.js',
   './src/views/unit.js',
   './src/views/lesson.js',
@@ -36,7 +37,8 @@ const SHELL = [
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const shell = await caches.open(SHELL_CACHE);
-    await shell.addAll(SHELL);
+    // cache: 'reload' skips the browser's HTTP cache so a new version is really new.
+    await shell.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' })));
     // Pre-cache every lesson listed in course.json so it all works offline.
     const content = await caches.open(CONTENT_CACHE);
     try {
