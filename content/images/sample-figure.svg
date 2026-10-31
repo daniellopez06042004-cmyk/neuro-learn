@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" font-family="-apple-system, sans-serif" font-size="14">
+  <rect width="320" height="140" rx="12" fill="#efede6"/>
+  <g fill="#ffffff" stroke="#888780" stroke-width="1.5">
+    <rect x="20" y="40" width="80" height="60" rx="8"/>
+    <rect x="120" y="40" width="80" height="60" rx="8"/>
+    <rect x="220" y="40" width="80" height="60" rx="8"/>
+  </g>
+  <g fill="#5f5e5a" text-anchor="middle">
+    <text x="60" y="75">Box 1</text>
+    <text x="160" y="75">Box 2</text>
+    <text x="260" y="75">Box 3</text>
+  </g>
+</svg>

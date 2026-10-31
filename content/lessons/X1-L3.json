@@ -1,0 +1,30 @@
+{
+  "id": "X1-L3",
+  "unitId": "X1",
+  "title": "Sample: a card with a figure",
+  "minutes": 1,
+  "xp": 5,
+  "objective": "Placeholder objective. Shows an image on a concept card and an 'uncertain' flag.",
+  "tags": ["demo"],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Placeholder figure card",
+      "body": "Images live in `content/images/`. Point to one with `\"image\": \"images/sample-figure.svg\"`, or use `{ \"src\": ..., \"alt\": ..., \"caption\": ... }` to add alt text and a caption.",
+      "image": { "src": "images/sample-figure.svg", "alt": "Placeholder figure: three labeled boxes", "caption": "Fig. 1 — placeholder caption" }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Placeholder: how many boxes were in the figure?",
+      "options": ["Two", "Three", "Four"],
+      "answer": [1],
+      "explanation": "Placeholder explanation.",
+      "flag": { "level": "uncertain", "note": "Placeholder: this is how an 'uncertain' flag looks." }
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Demo lesson — delete with the X track."
+}

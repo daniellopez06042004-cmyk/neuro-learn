@@ -1,0 +1,107 @@
+// Small DOM helpers shared by every screen. No framework: h() builds elements.
+
+export function h(tag, props, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(props || {})) {
+    if (v == null || v === false) continue;
+    if (k === 'class') el.className = v;
+    else if (k === 'html') el.innerHTML = v;
+    else if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2).toLowerCase(), v);
+    else el.setAttribute(k, v === true ? '' : v);
+  }
+  for (const kid of kids.flat(Infinity)) {
+    if (kid == null || kid === false) continue;
+    el.append(kid instanceof Node ? kid : String(kid));
+  }
+  return el;
+}
+
+export function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs.
+export function md(text, cls = 'md') {
+  const inline = (s) => esc(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
+  const blocks = String(text ?? '').trim().split(/\n\s*\n/);
+  const isItem = (l) => /^\s*[-•]\s+/.test(l);
+  const html = blocks.map((b) => {
+    // Split each block into runs of plain lines and runs of "- " list items.
+    const runs = [];
+    for (const l of b.split('\n')) {
+      const kind = isItem(l) ? 'ul' : 'p';
+      if (runs.at(-1)?.kind === kind) runs.at(-1).lines.push(l);
+      else runs.push({ kind, lines: [l] });
+    }
+    return runs.map(({ kind, lines }) => kind === 'ul'
+      ? '<ul>' + lines.map((l) => `<li>${inline(l.replace(/^\s*[-•]\s+/, ''))}</li>`).join('') + '</ul>'
+      : `<p>${lines.map(inline).join('<br>')}</p>`).join('');
+  }).join('');
+  return h('div', { class: cls, html });
+}
+
+const PATHS = {
+  x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  check: '<path d="M5 12.5l4.5 4.5L19 7"/>',
+  back: '<path d="M15 5l-7 7 7 7"/>',
+  bolt: '<path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z"/>',
+  lock: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+  alert: '<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17v.5"/>',
+  review: '<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/>',
+  sliders: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/>',
+  share: '<path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/>',
+  star: '<path d="M12 4l2.5 5.2 5.5.7-4 3.9 1 5.6L12 16.8 7 19.4l1-5.6-4-3.9 5.5-.7z"/>',
+  dots: '<circle cx="6" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="18" cy="12" r="1"/>',
+};
+
+export function icon(name, label) {
+  const svg = `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" ${label ? `role="img" aria-label="${esc(label)}"` : 'aria-hidden="true"'}>${PATHS[name] || ''}</svg>`;
+  const t = document.createElement('template');
+  t.innerHTML = svg;
+  return t.content.firstChild;
+}
+
+export function svg(markup) {
+  const t = document.createElement('template');
+  t.innerHTML = markup.trim();
+  return t.content.firstChild;
+}
+
+// Pick readable text (white or near-black) for a fill color.
+export function onColor(hex) {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex || '');
+  if (!m) return '#ffffff';
+  const n = parseInt(m[1], 16);
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((c) => {
+    c /= 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return lum > 0.4 ? '#1c1c1b' : '#ffffff';
+}
+
+export function trackStyle(color) {
+  return `--track:${color};--on-track:${onColor(color)}`;
+}
+
+export function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+export function flagBadge(flag) {
+  if (!flag) return null;
+  const label = { uncertain: 'Uncertain', debated: 'Debated', simplified: 'Simplified' }[flag.level] || 'Note';
+  return h('details', { class: 'flag-box' },
+    h('summary', null, h('span', { class: 'flag' }, icon('alert'), label)),
+    flag.note ? h('p', null, flag.note) : null);
+}
+
+export const isDev = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) || new URLSearchParams(location.search).has('dev');
