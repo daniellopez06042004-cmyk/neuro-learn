@@ -1,5 +1,5 @@
 import { h, icon, svg, trackStyle } from '../ui.js';
-import { content, unitStats, unitUnlocked, dueCountForUnit } from '../content.js';
+import { content, unitStats, unitUnlocked, dueCountForUnit, blockingPrereqs } from '../content.js';
 import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
 import { go } from '../router.js';
@@ -54,7 +54,9 @@ function installTip() {
 
 export function renderHome(root, params) {
   const tracks = content.tracks;
-  let current = tracks.find((t) => t.id === settings.get('track')) || tracks[0];
+  // Your last track, else the first one that has lessons to play.
+  let current = tracks.find((t) => t.id === settings.get('track'))
+    || tracks.find((t) => t.units.some((u) => unitStats(u).total)) || tracks[0];
 
   const mapHost = h('div');
   const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Tracks' });
@@ -119,7 +121,7 @@ function neuralMap(track, firedUnit) {
     if (!unit.lessons.length || (!stats.total && open)) { state = 'empty'; sub = 'No lessons yet'; }
     else if (!open) {
       state = 'locked';
-      sub = `Needs ${unit.prereqs.filter((p) => !unitStats(content.units.get(p)?.unit || { lessons: [] }).complete).join(', ')}`;
+      sub = `Needs ${blockingPrereqs(unit).join(', ')}`;
     }
     else if (stats.complete) { state = 'done'; sub = 'Done'; }
     else { state = unit === firstOpen ? 'next' : 'open'; sub = `${stats.done}/${stats.total} lessons`; }

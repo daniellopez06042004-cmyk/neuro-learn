@@ -538,3 +538,10 @@ button.term { font: inherit; color: inherit; background: none; border: 0; paddin
 .pulse-why { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 12px 0 4px; }
 .pulse-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
 .pulse-tags span { font-size: 12px; background: var(--surface-2); border-radius: 6px; padding: 2px 8px; color: var(--muted); }
+
+/* ---------- Visuals on steps ---------- */
+.visual { margin: 0 0 16px; }
+.visual img, .visual video { display: block; width: 100%; height: auto; max-height: 46dvh; object-fit: contain; border-radius: 14px; background: var(--surface); }
+.visual-frame { display: block; width: 100%; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.visual figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+.visual-fallback { font-size: 15px; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 12px; padding: 12px; margin: 0; }

@@ -102,11 +102,14 @@ export function unitStats(unit) {
   return { total: ready.length, done: done.length, complete: ready.length > 0 && done.length === ready.length };
 }
 
+// A prereq with no written lessons yet can't be finished, so it doesn't block.
 export function unitUnlocked(unit) {
   if (settings.get('unlockAll')) return true;
   return unit.prereqs.every((p) => {
     const u = content.units.get(p)?.unit;
-    return !u || unitStats(u).complete;
+    if (!u) return true;
+    const stats = unitStats(u);
+    return stats.total === 0 || stats.complete;
   });
 }
 
@@ -119,6 +122,16 @@ export function lessonUnlocked(unit, lessonId) {
     if (playable(id) && !progress.isComplete(id)) return false;
   }
   return true;
+}
+
+// Prereqs still standing between you and this unit.
+export function blockingPrereqs(unit) {
+  return unit.prereqs.filter((p) => {
+    const u = content.units.get(p)?.unit;
+    if (!u) return false;
+    const stats = unitStats(u);
+    return stats.total > 0 && !stats.complete;
+  });
 }
 
 export function nextLessonIn(unit) {

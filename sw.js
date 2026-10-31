@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v7';
+const VERSION = 'v8';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -63,7 +63,16 @@ self.addEventListener('install', (event) => {
         await Promise.all(ids.map(async (id) => {
           const url = `content/lessons/${encodeURIComponent(id)}.json`;
           const r = await fetch(url, { cache: 'no-cache' }).catch(() => null);
-          if (r && r.ok) await content.put(url, r);
+          if (!r || !r.ok) return;
+          await content.put(url, r.clone());
+          // ...and the diagrams, videos and widgets the lesson shows.
+          const lesson = await r.json().catch(() => null);
+          const assets = (lesson?.steps || []).flatMap((st) => [st.visual?.src, typeof st.image === 'string' ? st.image : st.image?.src])
+            .filter((src) => typeof src === 'string' && !/^(https?:)?\/\//.test(src));
+          await Promise.all(assets.map(async (src) => {
+            const a = await fetch(`content/${src}`).catch(() => null);
+            if (a && a.ok) await content.put(`content/${src}`, a);
+          }));
         }));
       }
     } catch { /* offline during install — the app will cache as it loads */ }

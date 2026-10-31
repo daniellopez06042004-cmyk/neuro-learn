@@ -1,0 +1,94 @@
+{
+  "id": "C4-L3",
+  "unitId": "C4",
+  "title": "Retrograde access: inject the terminals, reach the cell bodies",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain retrograde viral labeling (AAV2-retro) and why it's the natural way to access organ-innervating sensory neurons.",
+  "tags": [
+    "retrograde",
+    "AAV-retro",
+    "projection",
+    "DRG"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The anatomy problem",
+      "body": "A [[DRG]] sensory neuron is [[pseudounipolar]]: its cell body sits in the ganglion, but one axon branch runs all the way out to the organ (the pancreas, the colon). You can't easily inject the scattered cell bodies that happen to innervate one organ. But you CAN inject the organ — where their terminals are.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Retrograde transport does the sorting",
+      "body": "A **[[retrograde]]** [[AAV]] (e.g. **AAV2-retro**) is taken up at **axon terminals** and transported **back along the axon to the cell body**, where it expresses. Inject it into the organ, and only neurons whose terminals are there get labeled. The virus uses the neuron's own transport machinery to find the right cell bodies for you.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/aav-retrograde.svg",
+        "alt": "AAV injected at organ nerve terminals is transported back along the axon to the DRG cell body, which then lights up.",
+        "caption": "Retrograde AAV: injected at the terminals, expressed in the cell body."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why is a retrograde AAV injected into the pancreas a good way to access pancreas-innervating DRG neurons?",
+      "options": [
+        "It infects every cell in the body",
+        "It's taken up at terminals in the pancreas and carried back to the cell bodies of exactly the neurons that innervate it",
+        "It only works in the brain",
+        "It avoids the need to inject anywhere"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Retrograde uptake selects for neurons whose terminals are at the injection site — anatomical specificity by connectivity, not just by marker."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "How the colon paper used it",
+      "body": "The Wolfson/Ginty colon study injected a retrograde virus (AAV2-retro carrying a recombinase) to sparsely access colon-projecting DRG afferents, then traced their endings. Your pancreas plan is the same idea: retrograde access from the organ, combined with a [[Cre]] line, to get the right neurons.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You inject AAV2-retro-[[Flp|FlpO]] into the pancreas of a mouse that also carries a Flp-dependent [[DREADD]].",
+      "prompt": "Where should the DREADD end up?",
+      "options": [
+        "In all pancreatic cells",
+        "In the DRG (and possibly vagal) neurons whose terminals are in the pancreas",
+        "Only in the spinal cord",
+        "Nowhere"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Retrograde transport carries the FlpO back to the cell bodies of neurons innervating the pancreas; the Flp-dependent DREADD then switches on there. Layering a Cre line on top (intersection) can further restrict it to the sensory subtype you want.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Tervo DGR, et al. A Designer AAV Variant Permits Efficient Retrograde Access to Projection Neurons. Neuron 92:372-382 (2016).",
+      "doi": "10.1016/j.neuron.2016.09.021",
+      "url": "https://doi.org/10.1016/j.neuron.2016.09.021",
+      "verified": true,
+      "note": "The AAV2-retro paper. DOI confirmed via Crossref."
+    },
+    {
+      "citation": "Wolfson RL, et al. DRG afferents... distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Retrograde viral access from the organ to DRG afferents — the template for the pancreas plan."
+    }
+  ],
+  "reviewNotes": "Central lesson for Dan's project; carries the first paired animation."
+}

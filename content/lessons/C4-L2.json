@@ -1,0 +1,82 @@
+{
+  "id": "C4-L2",
+  "unitId": "C4",
+  "title": "Serotypes, tropism, and promoters",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how AAV serotype sets which cells get infected, and what a promoter adds on top.",
+  "tags": [
+    "serotype",
+    "tropism",
+    "promoter",
+    "AAV"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Serotype = the virus's outer shell",
+      "body": "[[AAV]] comes in different **serotypes** (AAV1, 2, 5, 8, 9, PHP.eB, retro…). The [[serotype]] is the capsid — the protein coat — and it determines **[[tropism]]**: which cells the virus enters efficiently, and whether it spreads or stays local. Picking a serotype is picking which cells (and route) you'll hit.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Promoter = a second layer of control",
+      "body": "Inside the virus, a **promoter** drives the payload. A broad promoter (CAG, hSyn for neurons) expresses in many cells the virus enters; a cell-type-specific promoter narrows it further. So specificity can come from **serotype (entry) + promoter (expression) + [[Cre]]-dependence (the switch)** — stacked together.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each component to the specificity it provides.",
+      "pairs": [
+        [
+          "Serotype (capsid)",
+          "Which cells the virus enters / its route"
+        ],
+        [
+          "Promoter",
+          "Which entered cells actually express the payload"
+        ],
+        [
+          "Cre-dependence (DIO)",
+          "Restricts expression to Cre+ cells"
+        ],
+        [
+          "Injection site",
+          "The anatomical location targeted"
+        ]
+      ],
+      "explanation": "Real experiments stack these: route + entry + expression + genetic switch + location."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "You inject an AAV and get strong expression — but in the wrong cell types near your target.",
+      "prompt": "Which change is most likely to fix the cell-type specificity?",
+      "options": [
+        "Use more virus",
+        "Switch to a serotype/promoter with better tropism for your target, and/or make the payload Cre-dependent in a cell-type Cre line",
+        "Inject faster",
+        "Use a dimmer reporter"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Off-target expression is a tropism/promoter/switch problem. More virus makes it worse. Narrow entry (serotype), expression (promoter), or add a Cre-dependent switch.",
+      "followUp": "Titer and volume affect how MUCH and how FAR, not which cell types."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Tervo DGR, et al. A Designer AAV Variant Permits Efficient Retrograde Access to Projection Neurons. Neuron 92:372-382 (2016).",
+      "doi": "10.1016/j.neuron.2016.09.021",
+      "url": "https://doi.org/10.1016/j.neuron.2016.09.021",
+      "verified": true,
+      "note": "Shows how a capsid variant changes tropism/route (retrograde). DOI confirmed via Crossref."
+    }
+  ],
+  "reviewNotes": "Tropism vs. promoter vs. switch is the key mental model; leads into retrograde."
+}

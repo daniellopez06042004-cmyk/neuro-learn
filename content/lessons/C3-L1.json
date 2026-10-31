@@ -1,0 +1,74 @@
+{
+  "id": "C3-L1",
+  "unitId": "C3",
+  "title": "A second system: Flp and FRT",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain that Flp/FRT is a second, independent recombinase system, and why having two matters.",
+  "tags": [
+    "Flp",
+    "FRT",
+    "recombinase",
+    "intersectional"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Cre has a cousin",
+      "body": "**[[Flp]]** is a second recombinase. It works just like [[Cre]], but recognizes **[[FRT]]** sites instead of [[loxP]]. Flp ignores loxP; Cre ignores FRT. They are **independent** — two separate pairs of scissors that don't interfere with each other.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Will Flp act on a floxed (loxP-flanked) STOP cassette?",
+      "options": [
+        "Yes, Flp cuts any recombinase site",
+        "No — Flp only recognizes FRT sites",
+        "Only with tamoxifen",
+        "Only during development"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Flp is specific to FRT; Cre is specific to loxP. Their independence is the whole point — it lets you run two genetic 'conditions' at once."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Why two systems?",
+      "body": "With two independent recombinases, you can require **two conditions at once** before a payload turns on. That's the key to solving the specificity problem when no single marker is clean enough — the subject of the next lesson. (There are FlpER versions too, for timing, just like [[CreER]].)",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "A payload is built so it needs BOTH Cre AND Flp to turn on. A cell has Cre but no Flp.",
+      "prompt": "Does the payload turn on?",
+      "options": [
+        "Yes",
+        "No — it needs both",
+        "Only partially",
+        "Only with tamoxifen"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "No. Requiring both recombinases makes an AND-gate: only cells with Cre AND Flp express the payload. A cell with just one stays off. This is '[[intersectional genetics]]' — next lesson.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Recombinase systems (Cre/lox, Flp/FRT) are standard genetic tools; see Qi et al. 2024 for intersectional DRG applications.",
+      "doi": "10.1016/j.cell.2024.02.006",
+      "url": "https://doi.org/10.1016/j.cell.2024.02.006",
+      "verified": true,
+      "note": "Mechanism is textbook (T); Qi 2024 shows intersectional use in DRG."
+    }
+  ],
+  "reviewNotes": "Short setup lesson for the AND-gate concept."
+}

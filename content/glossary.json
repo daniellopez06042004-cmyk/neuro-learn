@@ -1,16 +1,36 @@
 {
-  "schemaVersion": "0.1",
   "terms": [
-    {
-      "term": "Example term",
-      "aliases": ["sample term"],
-      "definition": "Placeholder definition. Replace these entries with your own terms; lessons link to them with [[Example term]].",
-      "track": "X"
-    },
-    {
-      "term": "Placeholder",
-      "definition": "Another placeholder entry so the glossary screen has something to show. Delete it once real terms exist.",
-      "track": "X"
-    }
+    { "term": "DRG", "aliases": ["dorsal root ganglion", "dorsal root ganglia"], "definition": "Clusters of sensory-neuron cell bodies beside the spinal cord. Each neuron sends one branch to the body (skin, gut, organs) and another into the spinal cord.", "track": "A" },
+    { "term": "pseudounipolar", "aliases": [], "definition": "The shape of a DRG sensory neuron: a single process leaves the cell body and splits — one branch to the periphery, one to the spinal cord.", "track": "A" },
+    { "term": "dorsal horn", "aliases": [], "definition": "The sensory-input region of the spinal cord's grey matter, where DRG afferents terminate and are sorted by type.", "track": "A" },
+    { "term": "nociceptor", "aliases": ["nociceptors"], "definition": "A sensory neuron that detects noxious (potentially harmful) stimuli and can signal pain.", "track": "A" },
+    { "term": "LTMR", "aliases": ["low-threshold mechanoreceptor", "low-threshold mechanoreceptors"], "definition": "Low-threshold mechanoreceptor — a sensory neuron that fires to light mechanical force.", "track": "A" },
+    { "term": "HTMR", "aliases": ["high-threshold mechanoreceptor", "high-threshold mechanoreceptors"], "definition": "High-threshold mechanoreceptor — a sensory neuron that fires only to strong mechanical force, as in painful distension.", "track": "A" },
+    { "term": "Piezo2", "aliases": [], "definition": "A mechanically gated ion channel that opens when the membrane is stretched; key for touch and for sensing gut and visceral distension.", "track": "A" },
+    { "term": "TRPV1", "aliases": [], "definition": "A sensory ion channel activated by heat and capsaicin; marks many nociceptors and is often used to target them.", "track": "A" },
+    { "term": "enteric nervous system", "aliases": ["ENS"], "definition": "The gut's own intrinsic network of neurons in the bowel wall, controlling motility and secretion and interacting with extrinsic afferents.", "track": "B" },
+    { "term": "Cre", "aliases": [], "definition": "A recombinase enzyme that cuts DNA at loxP sites. Driven from a cell-type promoter, it switches on a floxed payload only in those cells.", "track": "C" },
+    { "term": "loxP", "aliases": ["floxed"], "definition": "A 34-bp DNA tag that Cre recognizes. DNA flanked by two loxP sites is 'floxed'; Cre excises or inverts the sequence between them.", "track": "C" },
+    { "term": "CreER", "aliases": ["CreERT2"], "definition": "A version of Cre held inactive in the cytoplasm until the drug tamoxifen is given, so recombination happens only when (and where) you choose.", "track": "C" },
+    { "term": "tamoxifen", "aliases": [], "definition": "A drug that lets CreER enter the nucleus and recombine DNA. Dose sets how many cells are labeled — low dose gives sparse, single-cell labeling.", "track": "C" },
+    { "term": "Flp", "aliases": ["FlpO"], "definition": "A second recombinase, independent of Cre, that acts at FRT sites. Using Cre and Flp together lets you require two conditions at once.", "track": "C" },
+    { "term": "FRT", "aliases": [], "definition": "The DNA site the Flp recombinase recognizes — the Flp equivalent of loxP.", "track": "C" },
+    { "term": "intersectional genetics", "aliases": ["intersectional"], "definition": "Targeting only cells that meet two criteria at once (e.g. Cre AND Flp), to isolate a population no single marker captures cleanly.", "track": "C" },
+    { "term": "reporter", "aliases": [], "definition": "A payload such as a fluorophore (tdTomato, GFP) switched on by Cre to mark and visualize specific cells.", "track": "C" },
+    { "term": "DREADD", "aliases": ["DREADDs"], "definition": "Designer Receptor Exclusively Activated by a Designer Drug — an engineered GPCR that ignores its natural ligand and responds only to an otherwise-inert drug, letting you turn neurons up or down.", "track": "C" },
+    { "term": "hM3Dq", "aliases": [], "definition": "An excitatory DREADD. It couples to Gq and drives a neuron toward firing when the actuator is given.", "track": "C" },
+    { "term": "hM4Di", "aliases": [], "definition": "An inhibitory DREADD. It couples to Gi/o and silences a neuron when the actuator is given.", "track": "C" },
+    { "term": "GPCR", "aliases": ["G-protein-coupled receptor"], "definition": "G-protein-coupled receptor — a membrane receptor that signals through intracellular G proteins. DREADDs are engineered GPCRs.", "track": "C" },
+    { "term": "chemogenetics", "aliases": [], "definition": "Controlling specific cells with an engineered receptor plus a designer drug (e.g. DREADDs), giving slow, minutes-scale control of activity.", "track": "C" },
+    { "term": "CNO", "aliases": ["clozapine-N-oxide"], "definition": "The original DREADD actuator. Once assumed inert, it is partly back-converted to clozapine, which has its own effects.", "track": "C" },
+    { "term": "clozapine", "aliases": [], "definition": "An antipsychotic with many receptor targets. CNO converts to it in the body, so it can cause effects not due to the DREADD.", "track": "C" },
+    { "term": "DCZ", "aliases": ["deschloroclozapine"], "definition": "A newer DREADD actuator, more potent and selective than CNO and effective at much lower doses.", "track": "C" },
+    { "term": "actuator", "aliases": [], "definition": "The drug that activates a DREADD (CNO or DCZ). It is given systemically but only affects cells expressing the DREADD.", "track": "C" },
+    { "term": "c-Fos", "aliases": [], "definition": "An immediate-early gene whose protein rises in recently active neurons, used to confirm that a manipulation actually drove firing.", "track": "C" },
+    { "term": "AAV", "aliases": ["adeno-associated virus"], "definition": "Adeno-associated virus — the standard non-pathogenic vector for delivering a payload (reporter, sensor, DREADD) to chosen cells by injection.", "track": "C" },
+    { "term": "serotype", "aliases": [], "definition": "The capsid (outer-shell) variant of an AAV, which sets which cells it enters and whether it travels along axons.", "track": "C" },
+    { "term": "tropism", "aliases": [], "definition": "Which cell types a virus efficiently infects, determined largely by its serotype.", "track": "C" },
+    { "term": "retrograde", "aliases": ["AAV2-retro"], "definition": "Transport from axon terminals back toward the cell body. A retrograde AAV injected in an organ labels the neurons that project there.", "track": "C" },
+    { "term": "DIO", "aliases": ["FLEX"], "definition": "A Cre-dependent viral design (also called FLEX): the payload is inverted until Cre flips it on, so it expresses only in Cre+ cells.", "track": "C" }
   ]
 }

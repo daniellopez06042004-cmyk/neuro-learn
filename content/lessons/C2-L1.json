@@ -1,0 +1,87 @@
+{
+  "id": "C2-L1",
+  "unitId": "C2",
+  "title": "The specificity problem, and the Cre/lox trick",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why labeling or manipulating one cell type is hard, and how Cre recombinase + loxP solves it.",
+  "tags": [
+    "Cre",
+    "loxP",
+    "specificity",
+    "mouse-genetics"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The whole game: change one cell type, not the whole mouse",
+      "body": "Almost every question in the lab starts the same way: *these* neurons — not their neighbors, not the rest of the body. Mouse genetics is how you get that specificity. If you can't restrict a label or a manipulation to one population, you can't attribute anything you see to it.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Cre = scissors, loxP = 'cut here' marks",
+      "body": "**[[Cre]]** is an enzyme (a recombinase) that recognizes short 34-bp DNA tags called **[[loxP]]** sites. When two loxP sites point the same way, Cre **excises** the DNA between them. DNA flanked by loxP is said to be **'floxed'** (flanked-by-loxP).\n\nMental model: Cre is scissors; loxP sites are the dotted 'cut here' lines.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/cre-lox.svg",
+        "alt": "Cre cuts at the two loxP sites flanking a STOP cassette; the STOP is excised and the downstream payload gene switches on.",
+        "caption": "Cre cuts at loxP → STOP removed → the gene switches on."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What does Cre do when it finds two loxP sites in the same orientation?",
+      "options": [
+        "Deletes the DNA between them",
+        "Copies the DNA between them",
+        "Mutates a single base",
+        "Silences the whole chromosome"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Same-orientation loxP sites → excision of the intervening DNA. (If the loxP sites are inverted, Cre flips the sequence instead — that's the basis of [[DIO]]/FLEX viral tools, later.)"
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Two mice make it specific",
+      "body": "Specificity comes from a **two-part system**:\n\n- **Driver line** — `Gene-Cre`: Cre is made only in cells that normally express `Gene` (e.g. *Bmpr1b-Cre* → Cre only in Bmpr1b+ neurons).\n- **Responder line** — a payload (a fluorophore, a [[DREADD]], a toxin) sits behind a **floxed STOP** cassette, silent until Cre removes the STOP.\n\nCross them, and only the cells that make Cre switch the payload on.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You cross Bmpr1b-Cre with a floxed-STOP-tdTomato [[reporter]]. In the offspring, which cells glow red?",
+      "prompt": "Predict the outcome.",
+      "options": [
+        "All cells in the mouse",
+        "Only Bmpr1b-expressing cells",
+        "No cells — you need a drug too",
+        "Only cells that divide"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Only Bmpr1b+ cells make Cre, so only they delete the STOP and express tdTomato. Everything else stays dark. That restriction — one gene's expression pattern defining the labeled cells — is the core of the whole toolkit.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Cre/lox is standard molecular genetics; see Principles of Neural Science (Kandel et al.) for background.",
+      "doi": "",
+      "url": "",
+      "verified": true,
+      "note": "Textbook-level (T). No primary citation needed."
+    }
+  ],
+  "reviewNotes": "Foundational. Inverted-loxP (flip) is previewed here and reused in C3/C5 DIO tools."
+}

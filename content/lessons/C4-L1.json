@@ -1,0 +1,73 @@
+{
+  "id": "C4-L1",
+  "unitId": "C4",
+  "title": "Why viruses? AAV as a delivery truck",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain what AAV delivers, and why injecting a virus complements bred-in mouse genetics.",
+  "tags": [
+    "AAV",
+    "delivery",
+    "viral-tools"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Genetics defines the cell; the virus delivers the cargo",
+      "body": "Bred-in alleles are powerful but fixed — the payload is everywhere the driver fires, from birth. Often you want to deliver a tool **to a specific place, at a specific time, in an adult**. That's what a virus does: you inject it where you want expression.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "AAV: the workhorse vector",
+      "body": "**Adeno-associated virus ([[AAV]])** is the standard delivery vehicle in neuroscience. It's small, doesn't cause disease, and gives long-lasting expression without integrating much into the genome. You load it with your payload ([[reporter]], GCaMP, a [[DREADD]]) and inject it. Its cargo capacity is limited (~4.7 kb), which shapes what fits.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What's the main advantage of delivering a tool by AAV injection rather than breeding it in?",
+      "options": [
+        "It never needs controls",
+        "Spatial and temporal control — you choose where and when it's expressed",
+        "It changes the mouse's genome permanently in every cell",
+        "It removes the need for a Cre line"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Injection gives you control of location (where you put the needle) and timing (when you inject). It often works WITH a [[Cre]] line, not instead of one (lesson C4-L4)."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You want to express a DREADD only in neurons innervating the pancreas, in adult mice.",
+      "prompt": "Which approach fits best?",
+      "options": [
+        "A bred-in allele expressed from birth everywhere the marker is on",
+        "Inject an AAV carrying the DREADD so expression is localized and adult-timed",
+        "No delivery method needed",
+        "A drug alone"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Viral injection lets you target the pancreas pathway in adults. Combined with a Cre line and a Cre-dependent AAV (C4-L4), you get both cell-type AND spatial/temporal specificity — exactly your project's setup.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents... distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Uses AAV injection (including retrograde) to access colon-projecting DRG neurons."
+    }
+  ],
+  "reviewNotes": "Sets up serotype, retrograde, and Cre-dependent viral payloads."
+}

@@ -1,0 +1,121 @@
+{
+  "id": "C5-L3",
+  "unitId": "C5",
+  "title": "The actuator question: CNO vs. DCZ",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain why CNO is not truly inert, and why many labs now use deschloroclozapine (DCZ) or careful CNO controls.",
+  "tags": [
+    "CNO",
+    "clozapine",
+    "DCZ",
+    "actuator",
+    "confound"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The drug was supposed to be inert",
+      "body": "The original [[DREADD]] [[actuator]], **[[CNO|clozapine-N-oxide]] (CNO)**, was chosen because it was thought to be biologically inert — no effect except through the DREADD. For years that assumption went mostly unchallenged.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "The catch: CNO converts back to clozapine",
+      "body": "A key finding: **CNO is reverse-metabolized to [[clozapine]]** in the body. Clozapine readily crosses the blood–brain barrier and binds many endogenous receptors. Work from Michael Michaelides and colleagues argued that clozapine — not CNO itself — is the molecule that actually reaches and activates the DREADD, and that it can cause **off-target behavioral effects on its own**.",
+      "flag": {
+        "level": "debated",
+        "note": "The magnitude of the CNO/clozapine confound depends on dose and species; the fix (controls + better actuators) is widely accepted."
+      },
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/cno-clozapine.svg",
+        "alt": "CNO back-converts to clozapine, which crosses the blood-brain barrier and binds off-target neurons, producing an effect not caused by the DREADD.",
+        "caption": "CNO → clozapine → crosses the BBB → off-target effect."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why does the CNO→clozapine conversion threaten an experiment?",
+      "options": [
+        "Clozapine is inert so it dilutes the dose",
+        "Clozapine has its own CNS effects, so a 'drug-only' change might not be due to your DREADD",
+        "It makes the DREADD stop working",
+        "It only matters in cell culture"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "If the actuator itself alters behavior, you can't cleanly attribute an effect to your neurons. That's exactly why a DREADD-free + actuator control is essential (next lesson)."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Two fixes",
+      "body": "**1) Control for the drug.** Give the same actuator to DREADD-free animals; any effect there is the drug's own.\n\n**2) Use a better actuator.** **Deschloroclozapine ([[DCZ]])** is more potent and selective for DREADDs, works at much lower doses, and has less off-target activity than CNO — reducing (not eliminating) the confound. Many labs have moved to DCZ or to low-dose CNO with strict controls.",
+      "flag": null
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s5",
+      "scenario": "A labmate reports a strong behavioral change after giving a high dose of CNO to their [[hM4Di]] mice. They have no DREADD-free group.",
+      "prompt": "What is the most important gap?",
+      "options": [
+        "They didn't measure body temperature",
+        "Without a DREADD-free + CNO group, the effect could be the drug (via clozapine), not the silenced neurons",
+        "CNO cannot activate hM4Di",
+        "They should have used more mice only"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "High-dose CNO maximizes back-conversion to clozapine. The missing control is the one that would rule out a drug-only explanation. Lower dose, DCZ, and the right controls all address this.",
+      "followUp": "How would you redesign it? (Add DREADD-free + actuator controls; switch to DCZ at a low validated dose; include a DREADD+ vehicle group.)"
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "You run DREADD-free mice and give them the actuator alone. You see a measurable change in your behavioral readout.",
+      "prompt": "What does this tell you?",
+      "options": [
+        "Your neurons caused the effect",
+        "The actuator has its own effect; your DREADD result is confounded until you account for it",
+        "The DREADD is working perfectly"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "A signal in the DREADD-free + actuator group is the actuator's own footprint. You must subtract/account for it — or lower the dose / switch actuator — before claiming your neurons did anything.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Gomez JL, et al. Chemogenetics revealed: DREADD occupancy and activation via converted clozapine. Science 357:503-507 (2017).",
+      "doi": "10.1126/science.aan2475",
+      "url": "https://doi.org/10.1126/science.aan2475",
+      "verified": true,
+      "note": "Showed clozapine (from CNO) is the actuator reaching the DREADD. DOI confirmed via Crossref this session."
+    },
+    {
+      "citation": "MacLaren DAA, et al. Clozapine N-oxide administration produces behavioral effects in Long-Evans rats: implications for designing DREADD experiments. eNeuro 3 (2016).",
+      "doi": "10.1523/ENEURO.0219-16.2016",
+      "url": "https://doi.org/10.1523/ENEURO.0219-16.2016",
+      "verified": true,
+      "note": "Reverse-metabolism / behavioral-effect evidence. DOI confirmed via Crossref this session (also PMC5832819)."
+    },
+    {
+      "citation": "Nagai Y, et al. Deschloroclozapine, a potent and selective chemogenetic actuator. Nat Neurosci 23:1157-1167 (2020).",
+      "doi": "10.1038/s41593-020-0661-3",
+      "url": "https://doi.org/10.1038/s41593-020-0661-3",
+      "verified": true,
+      "note": "DCZ actuator — the current preferred alternative to CNO."
+    }
+  ],
+  "reviewNotes": "This is the lesson most tied to current practice. CNO-confound is real but its size is debated — flagged accordingly."
+}

@@ -1,5 +1,5 @@
 import { h, icon, trackStyle } from '../ui.js';
-import { content, unitLessons, unitStats, unitUnlocked, lessonUnlocked, nextLessonIn } from '../content.js';
+import { content, unitLessons, unitStats, unitUnlocked, lessonUnlocked, nextLessonIn, blockingPrereqs } from '../content.js';
 import { progress } from '../progress.js';
 import { go } from '../router.js';
 import { statsBar } from './home.js';
@@ -49,7 +49,7 @@ export function renderUnit(root, { id, fired }) {
       h('h2', null, unit.title),
       unit.summary ? h('p', null, unit.summary) : null,
       h('p', { class: 'small', style: 'margin-top:8px' }, `${stats.done} of ${stats.total} written lessons done`)),
-    !open ? h('div', { class: 'banner' }, icon('lock'), h('p', null, `Finish ${unit.prereqs.join(' and ')} to unlock this unit.`)) : null,
+    !open ? h('div', { class: 'banner' }, icon('lock'), h('p', null, `Finish ${blockingPrereqs(unit).join(' and ')} to unlock this unit.`)) : null,
     unit.lessons.length
       ? h('ol', { class: 'chain' }, rows)
       : h('p', { class: 'muted' }, 'No lessons yet. Add lesson ids to this unit in course.json.'),

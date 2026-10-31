@@ -1,0 +1,93 @@
+{
+  "id": "C2-L3",
+  "unitId": "C2",
+  "title": "Timing control: CreER and tamoxifen",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain how CreER + tamoxifen restricts recombination in time, and how tamoxifen dose controls how many cells are labeled (sparse labeling).",
+  "tags": [
+    "CreER",
+    "tamoxifen",
+    "sparse-labeling",
+    "timing"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Why plain Cre isn't enough",
+      "body": "Plain [[Cre]] fires whenever the driver gene is on — including during development, labeling more cells than you want (the gotcha from last lesson). You often want to choose **when** recombination happens. That's what **[[CreER]]** is for.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "How CreER works",
+      "body": "**CreER** fuses Cre to a modified estrogen receptor that traps it **inert in the cytoplasm**. It does nothing until you give **[[tamoxifen]]**, which lets CreER enter the nucleus for a short window and recombine. No tamoxifen → no recombination. (You'll see `CreER` and `CreERT2`; CreERT2 is just an improved version.)",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/creer-tamoxifen.svg",
+        "alt": "CreER sits inert in the cytoplasm until tamoxifen is added, then enters the nucleus and recombines the DNA to switch the gene on.",
+        "caption": "No tamoxifen → CreER stays out · + tamoxifen → it enters the nucleus and recombines."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "You want to label a marker's cells in the ADULT and avoid developmental expression. What do you do?",
+      "options": [
+        "Use plain Cre",
+        "Use CreER and give tamoxifen in adulthood",
+        "Use a brighter reporter",
+        "Inject the reporter directly"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "CreER + adult tamoxifen opens the recombination window only when you choose, so cells that expressed the gene only during development aren't captured."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The dose trick: sparse labeling",
+      "body": "Tamoxifen dose controls **how many** cells recombine. A **low** dose recombines only a few scattered cells — letting you trace **single neurons** and their endings without a tangle of overlapping labels. This is exactly how the colon paper traced individual [[DRG]] afferent endings (counting wrappings per ending). More tamoxifen → more cells; less → sparser.",
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/tamoxifen-dose.html",
+        "alt": "Interactive: a slider sets tamoxifen dose; a field of DRG neurons goes from a few labeled cells (sparse, traceable) to most labeled (dense, overlapping).",
+        "caption": "Drag the dose: sparse (traceable) → dense (overlapping)."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You want to measure the branching of individual Bmpr1b+ colon afferent endings. You have a Bmpr1b-CreER; [[reporter]] mouse.",
+      "prompt": "What tamoxifen strategy fits?",
+      "options": [
+        "A high dose to label everything",
+        "A low dose so only a few isolated neurons are labeled",
+        "No tamoxifen",
+        "Tamoxifen during embryogenesis only"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Low-dose tamoxifen gives sparse, isolated labeling — so each traced ending clearly belongs to one neuron. High-dose would label so many that endings overlap and single-cell morphology is unmeasurable.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents that mediate physiologic and pathologic mechanosensation from the distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Used low-dose-tamoxifen sparse CreER labeling to trace single afferent endings."
+    }
+  ],
+  "reviewNotes": "Sparse labeling is a recurring technique; links directly to the lab's methods."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "C3-L2",
+  "unitId": "C3",
+  "title": "Intersectional genetics: the AND-gate",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain how requiring Cre AND Flp restricts expression to one population, and how the colon paper used it to exclude non-DRG neurons.",
+  "tags": [
+    "intersectional",
+    "AND-gate",
+    "specificity",
+    "colon"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The problem one marker can't solve",
+      "body": "A marker like *Calca* (CGRP) is expressed in the [[DRG]] neurons you want — **and** in enteric, sympathetic, or nodose neurons you don't. One [[Cre]] line alone can't separate them. You need a second criterion.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Require two features at once",
+      "body": "Use a payload that needs **both** Cre and [[Flp]]. Drive **Cre** from one feature (your molecular marker) and **Flp** from another (e.g. a gene expressed in DRG but not the unwanted populations). Only cells that are **both** — marker-positive AND DRG — light up. It's a Venn-diagram intersection instead of a single hunt for the perfect gene.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/intersection.svg",
+        "alt": "Three neurons: Cre-only and Flp-only stay off; only the neuron with both Cre and Flp switches the payload on.",
+        "caption": "AND-gate: only the Cre + Flp neuron expresses the payload."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Marker X is in your DRG neurons but also in nearby sympathetic neurons. You add a Flp driver active in DRG but not sympathetic neurons, and a Cre+Flp-dependent payload. What expresses the payload?",
+      "options": [
+        "All marker-X cells",
+        "Only marker-X cells that are also DRG (Cre AND Flp)",
+        "Only sympathetic neurons",
+        "Nothing"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "The AND-gate keeps only the overlap: marker-positive AND DRG. The sympathetic cells have Cre but not Flp, so they stay off."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "Your single Cre line (a broad sensory marker) labels DRG neurons but also enteric neurons in the gut wall, confounding a colon experiment.",
+      "prompt": "What's the cleanest fix?",
+      "options": [
+        "Give less tamoxifen",
+        "Add an intersection: a second (Flp) driver that's on in DRG but off in enteric neurons, with a Cre+Flp-dependent payload",
+        "Use a brighter reporter",
+        "Switch the payload from GFP to tdTomato"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "This is exactly the colon paper's strategy: [[intersectional genetics|intersectional]] (and subtractive) genetics to isolate DRG afferents from enteric, sympathetic, and nodose neurons that share markers. Dose and [[reporter]] color don't fix a specificity problem.",
+      "followUp": "Retrograde viral labeling from the organ (C4) can add anatomical specificity on top of genetic specificity."
+    },
+    {
+      "type": "concept",
+      "id": "s5",
+      "title": "Why this is the lab's default move",
+      "body": "Almost every specificity question gets answered by **composing features** rather than finding one magic marker. Markers are leaky; intersections are sharp. When you read a Wolfson/Ginty methods section, expect Cre + Flp combinations doing this work.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Exact driver/allele combinations are in each paper's methods — check there before quoting specific lines."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents that mediate physiologic and pathologic mechanosensation from the distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Used intersectional/subtractive genetics to exclude enteric, sympathetic, and nodose neurons."
+    },
+    {
+      "citation": "Qi L, et al. A mouse DRG genetic toolkit... Cell 187:1508-1526 (2024).",
+      "doi": "10.1016/j.cell.2024.02.006",
+      "url": "https://doi.org/10.1016/j.cell.2024.02.006",
+      "verified": true,
+      "note": "Systematic intersectional DRG toolkit."
+    }
+  ],
+  "reviewNotes": "Core concept lesson; directly reflects the lab's practice."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "C3-L4",
+  "unitId": "C3",
+  "title": "Decode it: reading the genetics of a figure",
+  "minutes": 5,
+  "xp": 20,
+  "objective": "Apply a 6-question checklist to decode the mouse genetics in a real paper figure.",
+  "tags": [
+    "applied",
+    "figure-reading",
+    "checklist"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The 6 questions",
+      "body": "For any mouse-genetics figure, ask in order:\n1. **Which cells are defined?** ([[Cre]]/[[Flp]] driver?)\n2. **Developmental or adult?** (plain Cre vs. [[CreER]] + [[tamoxifen]]; dose?)\n3. **One feature or an intersection?** (single Cre vs. Cre+Flp AND/subtraction)\n4. **What's the payload?** ([[reporter]] / sensor / [[actuator]] / ablation)\n5. **Bred-in or viral?** (knock-in allele vs. [[AAV]]-[[DIO]]/fDIO, injected where?)\n6. **Controls?** (Cre-negative littermates, no-tamoxifen, payload-without-driver)",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Put the 6 decoding questions in the order you'd ask them.",
+      "items": [
+        "Which cells are defined (driver)?",
+        "Developmental or adult (Cre vs CreER)?",
+        "One feature or an intersection?",
+        "What is the payload?",
+        "Bred-in or viral (and injected where)?",
+        "What are the controls?"
+      ],
+      "explanation": "Define the cells first, then timing, then specificity strategy, then what's done to them, then delivery, then controls."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "A figure legend reads: 'Bmpr1b-CreER mice given low-dose tamoxifen at P21, crossed to a Cre-dependent tdTomato reporter; sparse single-neuron tracing of colon endings.'",
+      "prompt": "Which decoding answers are correct?",
+      "options": [
+        "Cells: Bmpr1b+; adult (CreER + tamoxifen); single feature; reporter payload; bred-in; sparse by low dose",
+        "Cells: all DRG; developmental; intersection; ablation payload; viral",
+        "Cells: Bmpr1b+; developmental plain Cre; actuator payload",
+        "Cells: nodose; adult; subtraction; sensor payload"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Driver = Bmpr1b (one feature); CreER + tamoxifen at P21 = adult-timed; low dose = sparse; tdTomato = reporter; bred-in reporter. That's the colon paper's single-neuron tracing approach.",
+      "followUp": "Notice what's NOT here: no Flp, so no intersection in this particular panel."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "The same paper elsewhere uses a Cre+Flp-dependent ablation tool. Reading question #3 (one feature or intersection?), what does that tell you?",
+      "options": [
+        "It's a single-marker experiment",
+        "It's intersectional — two drivers gate the ablation for tighter specificity",
+        "It uses no drivers",
+        "It's a reporter experiment"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "A Cre+Flp-dependent payload is an AND-gate: two features must coincide. For an ablation (testing necessity), that tightness matters — you don't want to kill off-target cells.",
+      "followUp": "You've now decoded both a simple and an [[intersectional genetics|intersectional]] panel from the same paper."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents that mediate physiologic and pathologic mechanosensation from the distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Open this paper's Figure 1 and methods to practice the checklist on real panels."
+    }
+  ],
+  "reviewNotes": "Capstone of the mouse-genetics arc; practice on the lab's own figures."
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viral targeting composer</title>
+<style>
+  :root{ --bg:#f5f7fb;--card:#fff;--ink:#131722;--muted:#5b6472;--accent:#5B8DEF;--line:#e6e9f0;--chip:#eef2fb;--good:#1a9b6c;--bad:#d6455b;--off:#c9d0dc;--on:#e0607a; }
+  @media (prefers-color-scheme:dark){ :root{ --bg:#0f1420;--card:#171d2b;--ink:#eef1f7;--muted:#9aa4b5;--accent:#6f9bff;--line:#283040;--chip:#1e2740;--good:#35c58b;--bad:#ff6f88;--off:#2b3346;--on:#ff6f88; } }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:16px}
+  .wrap{width:100%;max-width:440px}
+  .kick{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:19px;margin:.3em 0 .2em}.lead{font-size:14px;color:var(--muted);margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .ctrl{margin-bottom:12px}.ctrl .q{font-size:13px;font-weight:700;margin-bottom:6px}
+  .opts{display:flex;gap:8px}
+  .opts button{flex:1;padding:9px;border:1.5px solid var(--line);border-radius:10px;background:var(--chip);color:var(--ink);font-size:12.5px;font-weight:600;cursor:pointer}
+  .opts button.sel{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 25%,transparent)}
+  .pop{margin:14px 0 4px;display:flex;flex-direction:column;gap:8px}
+  .cellrow{display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--chip)}
+  .dot{width:18px;height:18px;border-radius:50%;background:var(--off);flex:none;transition:.18s}
+  .dot.on{background:var(--on);box-shadow:0 0 0 3px color-mix(in srgb,var(--on) 30%,transparent)}
+  .cellrow .nm{font-size:13px}.cellrow .tag{margin-left:auto;font-size:11px;font-weight:700;color:var(--muted)}
+  .cellrow.on .tag{color:var(--on)}
+  .readout{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--chip);border:1px solid var(--line)}
+  .verdict{font-weight:700}.verdict.good{color:var(--good)}.verdict.bad{color:var(--bad)}
+  .explain{font-size:13px;color:var(--muted);margin-top:6px}
+  .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kick">C4 · Lesson 4 · Interactive</div>
+  <h1>Compose a viral targeting strategy</h1>
+  <p class="lead">Choose a route, a payload switch, and a mouse line. See which cells end up carrying the DREADD.</p>
+
+  <div class="card">
+    <div class="ctrl"><div class="q">1 · Route</div><div class="opts" id="route">
+      <button data-v="retro" class="sel">Retrograde from pancreas</button>
+      <button data-v="local">Local DRG injection</button>
+    </div></div>
+    <div class="ctrl"><div class="q">2 · Payload switch</div><div class="opts" id="switch">
+      <button data-v="none" class="sel">Non-conditional</button>
+      <button data-v="dio">Cre-dependent (DIO)</button>
+    </div></div>
+    <div class="ctrl"><div class="q">3 · Mouse line</div><div class="opts" id="mouse">
+      <button data-v="wt" class="sel">Wild-type</button>
+      <button data-v="cre">Sensory-subtype Cre</button>
+    </div></div>
+
+    <div class="pop" id="pop">
+      <div class="cellrow" data-id="proj_sub"><span class="dot"></span><span class="nm">Pancreas-projecting sensory neuron <b>(your target)</b></span><span class="tag">—</span></div>
+      <div class="cellrow" data-id="proj_other"><span class="dot"></span><span class="nm">Pancreas-projecting, other cell type</span><span class="tag">—</span></div>
+      <div class="cellrow" data-id="nonproj_sub"><span class="dot"></span><span class="nm">Sensory neuron NOT projecting to pancreas</span><span class="tag">—</span></div>
+      <div class="cellrow" data-id="local_other"><span class="dot"></span><span class="nm">Non-sensory cell near the DRG</span><span class="tag">—</span></div>
+    </div>
+
+    <div class="readout"><div class="verdict" id="verdict"></div><div class="explain" id="explain"></div></div>
+  </div>
+  <p class="cap">The sharpest targeting = retrograde (connectivity) + DIO (Cre switch) + a sensory-subtype Cre line.</p>
+</div>
+<script>
+(function(){
+  var route='retro',sw='none',mouse='wt';
+  function wire(id,set){document.querySelectorAll('#'+id+' button').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('#'+id+' button').forEach(function(x){x.classList.remove('sel');});
+    b.classList.add('sel');set(b.dataset.v);render();};});}
+  wire('route',function(v){route=v;});wire('switch',function(v){sw=v;});wire('mouse',function(v){mouse=v;});
+  var rows={};document.querySelectorAll('.cellrow').forEach(function(r){rows[r.dataset.id]=r;});
+  var verdict=document.getElementById('verdict'),explain=document.getElementById('explain');
+
+  function labeled(id){
+    // Step 1: does the virus physically reach this cell?
+    var reached;
+    if(route==='retro'){ reached = (id==='proj_sub'||id==='proj_other'); }      // only cells projecting to pancreas
+    else { reached = (id==='proj_sub'||id==='nonproj_sub'||id==='local_other'); } // local: everything near the DRG
+    if(!reached) return false;
+    // Step 2: does the switch allow expression here?
+    if(sw==='none') return true;                         // expresses in any reached cell
+    // DIO: needs Cre. Cre is only in sensory subtype, and only if a Cre line is used.
+    var isSub = (id==='proj_sub'||id==='nonproj_sub');
+    return mouse==='cre' && isSub;
+  }
+  function render(){
+    var hits=[],target=false,offtarget=false;
+    Object.keys(rows).forEach(function(id){
+      var on=labeled(id);rows[id].classList.toggle('on',on);
+      rows[id].querySelector('.dot').classList.toggle('on',on);
+      rows[id].querySelector('.tag').textContent=on?'DREADD':'—';
+      if(on){hits.push(id); if(id==='proj_sub')target=true; else offtarget=true;}
+    });
+    if(target&&!offtarget){
+      verdict.textContent='✓ Clean — only your target neurons';verdict.className='verdict good';
+      explain.textContent='Retrograde selects pancreas-projecting neurons, and the DIO switch + Cre line restricts expression to the sensory subtype. That intersection is exactly what you want.';
+    } else if(target&&offtarget){
+      verdict.textContent='⚠ Hits your target, but also off-target cells';verdict.className='verdict bad';
+      explain.textContent='Your neurons are included, but so are others. Add specificity: use retrograde (route) AND a Cre-dependent (DIO) payload in a sensory-subtype Cre line.';
+    } else if(!target&&hits.length){
+      verdict.textContent='✗ Misses your target';verdict.className='verdict bad';
+      explain.textContent='This combination expresses somewhere, but not in your pancreas-projecting sensory neurons. Check that the route reaches them and the switch permits expression there.';
+    } else {
+      verdict.textContent='Nothing expresses';verdict.className='verdict';
+      explain.textContent='A DIO payload needs Cre. With a wild-type mouse there is no Cre to flip it on, so nothing expresses — add a Cre line or use a non-conditional payload.';
+    }
+  }
+  render();
+})();
+</script>
+</body>
+</html>

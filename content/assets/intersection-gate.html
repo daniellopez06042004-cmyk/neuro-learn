@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intersectional logic</title>
+<style>
+  :root{ --bg:#f5f7fb;--card:#fff;--ink:#131722;--muted:#5b6472;--accent:#5B8DEF;--line:#e6e9f0;--chip:#eef2fb;--good:#1a9b6c;--off:#c9d0dc;--cre:#5B8DEF;--flp:#b06ad6; }
+  @media (prefers-color-scheme:dark){ :root{ --bg:#0f1420;--card:#171d2b;--ink:#eef1f7;--muted:#9aa4b5;--accent:#6f9bff;--line:#283040;--chip:#1e2740;--good:#35c58b;--off:#2b3346;--cre:#6f9bff;--flp:#c084e0; } }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:16px}
+  .wrap{width:100%;max-width:440px}
+  .kick{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:19px;margin:.3em 0 .2em}.lead{font-size:14px;color:var(--muted);margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .mode{display:flex;gap:8px;margin-bottom:14px}
+  .mode button{flex:1;padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--chip);color:var(--ink);font-weight:600;font-size:13px;cursor:pointer}
+  .mode button.sel{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 25%,transparent)}
+  .cellwrap{display:flex;flex-direction:column;align-items:center;margin:8px 0 14px}
+  .cell{width:130px;height:130px;border-radius:50%;background:var(--off);border:3px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.2s;position:relative}
+  .cell.on{background:var(--good);border-color:var(--good);box-shadow:0 0 0 6px color-mix(in srgb,var(--good) 25%,transparent)}
+  .cell .state{font-weight:800;color:#fff;font-size:15px}
+  .cell .state.offtxt{color:var(--muted)}
+  .badges{display:flex;gap:8px;margin-top:10px}
+  .b{font-size:12px;font-weight:700;padding:5px 10px;border-radius:99px;background:var(--chip);border:1px solid var(--line);color:var(--muted)}
+  .b.cre.active{background:var(--cre);color:#fff;border-color:var(--cre)}
+  .b.flp.active{background:var(--flp);color:#fff;border-color:var(--flp)}
+  .toggles{display:flex;gap:10px}
+  .toggles button{flex:1;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:var(--chip);color:var(--ink);font-weight:700;cursor:pointer}
+  .toggles button.on.cre{border-color:var(--cre);color:var(--cre)} .toggles button.on.flp{border-color:var(--flp);color:var(--flp)}
+  .explain{font-size:13px;color:var(--muted);margin-top:14px;min-height:40px}
+  .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kick">C3 · Lesson 3 · Interactive</div>
+  <h1>Compose the specificity logic</h1>
+  <p class="lead">Pick a strategy, then switch Cre and Flp on or off in the cell. See when the payload expresses.</p>
+
+  <div class="card">
+    <div class="mode">
+      <button id="mAnd" class="sel">Cre AND Flp<br><span style="font-weight:400;font-size:11px">intersection</span></button>
+      <button id="mSub">Cre ON / Flp OFF<br><span style="font-weight:400;font-size:11px">subtraction</span></button>
+    </div>
+
+    <div class="cellwrap">
+      <div class="cell" id="cell"><span class="state offtxt" id="state">off</span></div>
+      <div class="badges">
+        <span class="b cre" id="bCre">Cre</span>
+        <span class="b flp" id="bFlp">Flp</span>
+      </div>
+    </div>
+
+    <div class="toggles">
+      <button class="cre" id="tCre">Cre: off</button>
+      <button class="flp" id="tFlp">Flp: off</button>
+    </div>
+
+    <div class="explain" id="explain"></div>
+  </div>
+  <p class="cap">AND-gate keeps the overlap; subtraction removes the Flp cells from a Cre population.</p>
+</div>
+<script>
+(function(){
+  var mAnd=document.getElementById('mAnd'),mSub=document.getElementById('mSub'),
+      tCre=document.getElementById('tCre'),tFlp=document.getElementById('tFlp'),
+      cell=document.getElementById('cell'),state=document.getElementById('state'),
+      bCre=document.getElementById('bCre'),bFlp=document.getElementById('bFlp'),
+      explain=document.getElementById('explain');
+  var mode='and',cre=false,flp=false;
+  mAnd.onclick=function(){mode='and';mAnd.classList.add('sel');mSub.classList.remove('sel');render();};
+  mSub.onclick=function(){mode='sub';mSub.classList.add('sel');mAnd.classList.remove('sel');render();};
+  tCre.onclick=function(){cre=!cre;render();};
+  tFlp.onclick=function(){flp=!flp;render();};
+  function render(){
+    tCre.textContent='Cre: '+(cre?'on':'off');tCre.classList.toggle('on',cre);
+    tFlp.textContent='Flp: '+(flp?'on':'off');tFlp.classList.toggle('on',flp);
+    bCre.classList.toggle('active',cre);bFlp.classList.toggle('active',flp);
+    var on = mode==='and' ? (cre&&flp) : (cre&&!flp);
+    cell.classList.toggle('on',on);
+    state.textContent=on?'ON':'off';
+    state.className='state'+(on?'':' offtxt');
+    if(mode==='and'){
+      explain.textContent = on
+        ? 'Both Cre and Flp are present, so the AND-gate opens — the payload expresses. This is how you keep ONLY the cells that are marker-positive AND in the right population (e.g. DRG, not enteric).'
+        : (cre||flp ? 'Only one recombinase is present. An AND-gate needs both, so the payload stays off — exactly how off-target cells with just one feature are excluded.'
+                    : 'Neither recombinase — nothing happens.');
+    } else {
+      explain.textContent = on
+        ? 'Cre turns it on and Flp is absent, so it stays on. Subtraction keeps the Cre cells that are NOT in the Flp group.'
+        : (flp&&cre ? 'Flp is present, which switches the payload back OFF — this cell is subtracted out of the Cre population.'
+                    : (flp? 'Flp present but no Cre — nothing to turn on.' : 'No Cre — nothing to turn on.'));
+    }
+  }
+  render();
+})();
+</script>
+</body>
+</html>

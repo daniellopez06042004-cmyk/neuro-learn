@@ -1,0 +1,98 @@
+{
+  "id": "C2-L2",
+  "unitId": "C2",
+  "title": "Reading a genotype",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Decode genotype shorthand: driver, floxed-STOP/LSL, reporter locus, and what cells will be labeled.",
+  "tags": [
+    "genotype",
+    "LSL",
+    "reporter",
+    "Rosa26"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The shorthand",
+      "body": "A genotype is just driver + responder written together, separated by semicolons. Example:\n\n**`Bmpr1b-Cre; Rosa26^LSL-tdTomato`**\n\n- `Bmpr1b-Cre` → the driver ([[Cre]] where Bmpr1b is expressed).\n- `Rosa26^LSL-tdTomato` → a tdTomato [[reporter]] at the **Rosa26** locus (a 'safe harbor' that expresses broadly), behind an **LSL**.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "LSL = Lox-STOP-Lox = floxed STOP",
+      "body": "**LSL** means a STOP cassette flanked by [[loxP]] sites. It blocks expression of whatever follows until Cre deletes it. 'LSL', 'floxed-STOP', and 'loxP-STOP-loxP' all mean the same thing. So `Rosa26^LSL-tdTomato` is silent everywhere **except** where Cre has acted.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each piece of shorthand to what it means.",
+      "pairs": [
+        [
+          "Gene-Cre",
+          "Cre made wherever that gene is expressed"
+        ],
+        [
+          "LSL / floxed-STOP",
+          "Expression blocked until Cre removes the STOP"
+        ],
+        [
+          "Rosa26",
+          "Safe-harbor locus used to park reporters/tools"
+        ],
+        [
+          "tdTomato",
+          "The payload — here, a red fluorophore"
+        ]
+      ],
+      "explanation": "Driver decides WHERE; the floxed STOP decides that the payload is OFF until Cre; the locus is just where the payload lives."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "In `TH-CreER; Rosa26^LSL-GCaMP6f`, what will express the calcium sensor GCaMP6f (after Cre is active)?",
+      "options": [
+        "All Rosa26-expressing cells",
+        "TH-expressing cells only",
+        "No cells",
+        "Only cells given tamoxifen, regardless of TH"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "The driver (TH-[[CreER]]) restricts Cre to TH+ cells; the LSL keeps GCaMP6f off until Cre removes the STOP there. (The 'ER' + [[tamoxifen]] part — timing — is the next lesson.)"
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s5",
+      "scenario": "A reporter cross labels far MORE cells than the marker gene is expressed in adults.",
+      "prompt": "What's the most likely explanation?",
+      "options": [
+        "The reporter is broken",
+        "Plain Cre also fired during development, when the gene was expressed more broadly",
+        "Too little tamoxifen",
+        "The Rosa26 locus is silent"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Plain (constitutive) Cre records any cell that EVER expressed the gene, including transient developmental expression. The fix — restricting Cre to a chosen time window — is exactly what CreER gives you (next lesson).",
+      "followUp": "This is why 'lineage' labeling (all cells that ever expressed X) differs from 'adult' labeling."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Qi L, et al. A mouse DRG genetic toolkit reveals morphological and physiological diversity of somatosensory neuron subtypes. Cell 187:1508-1526 (2024).",
+      "doi": "10.1016/j.cell.2024.02.006",
+      "url": "https://doi.org/10.1016/j.cell.2024.02.006",
+      "verified": true,
+      "note": "Good real-world example of reporter/driver lines across DRG subtypes."
+    }
+  ],
+  "reviewNotes": "The developmental-expression gotcha motivates C2-L3."
+}

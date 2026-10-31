@@ -1,0 +1,81 @@
+{
+  "id": "C2-L4",
+  "unitId": "C2",
+  "title": "What you put behind the switch: payloads",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Match the four payload families (reporters, sensors, actuators, ablation) to the question each one answers.",
+  "tags": [
+    "payloads",
+    "reporters",
+    "GCaMP",
+    "ablation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The driver picks the cell; the payload picks what you do to it",
+      "body": "Once [[Cre]] defines the cell, a Cre-dependent payload decides the experiment. Four families cover most work:\n\n- **Reporter** (tdTomato, GFP) — *see* the cells and their endings.\n- **Sensor** (GCaMP) — *watch* them fire (calcium).\n- **Actuator** (ChR2/optogenetics; [[hM3Dq]]/[[hM4Di]] [[DREADD|DREADDs]]) — *drive or silence* them.\n- **Ablation** (diphtheria-toxin receptor + DTX; Cre/[[Flp]]-dependent Caspase3) — *delete* them to test necessity.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each payload to the question it answers.",
+      "pairs": [
+        [
+          "tdTomato / GFP",
+          "Where are these cells and their endings?"
+        ],
+        [
+          "GCaMP",
+          "When do these cells fire?"
+        ],
+        [
+          "hM3Dq / hM4Di",
+          "What happens if I drive or silence them?"
+        ],
+        [
+          "DTR + DTX / Caspase3",
+          "Are they necessary (delete them)?"
+        ]
+      ],
+      "explanation": "Look, watch, drive, delete — the four verbs of a mouse-genetics experiment."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "You want to test whether a colon afferent subtype is NECESSARY for a high-force distension behavior. Which payload?",
+      "options": [
+        "A reporter (tdTomato)",
+        "A calcium sensor (GCaMP)",
+        "An ablation tool (DTR+DTX or Caspase3)",
+        "A brighter GFP"
+      ],
+      "answer": [
+        2
+      ],
+      "multi": false,
+      "explanation": "Necessity = remove the cells and see if the behavior is lost. Ablation tools do that. (Silencing with hM4Di is a reversible alternative — covered in C5.)"
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Bred-in vs. delivered by virus",
+      "body": "A payload can be **bred in** (a knock-in allele, like the Rosa26 reporters) or **delivered by [[AAV]]**. Cre-dependent viral payloads are written **[[DIO]]** or **FLEX** (double-[[loxP|floxed]] inverted ORF) — same on/off logic, but injected where you want it. This is the bridge to the viral-tools and DREADD units (C4, C5).",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents... distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Uses reporters, GCaMP imaging, optogenetic actuators, and ablation — all four payload families."
+    }
+  ],
+  "reviewNotes": "Sets up C4 (viral/DIO) and C5 (DREADDs)."
+}

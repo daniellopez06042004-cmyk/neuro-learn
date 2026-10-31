@@ -1,0 +1,117 @@
+{
+  "id": "C5-L5",
+  "unitId": "C5",
+  "title": "Designing your pancreas DREADD experiment",
+  "minutes": 5,
+  "xp": 20,
+  "objective": "Assemble the pieces — Cre line, Cre-dependent AAV-DREADD, actuator, controls, readout — into a coherent pancreas experiment, using the colon paper as the template.",
+  "tags": [
+    "pancreas",
+    "project",
+    "AAV",
+    "DIO",
+    "design"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The template you're copying",
+      "body": "The Wolfson/Ginty 2023 colon paper defined organ-innervating [[DRG]] subtypes, then manipulated them (optogenetics, ablation) to prove function. Your project swaps the readout organ to the **pancreas** and the manipulation to **[[DREADD|DREADDs]]**. Same logic: define the neurons → deliver a [[Cre]]-dependent tool → manipulate → measure.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Exact pancreas-innervating DRG subtypes/levels are less established than the colon's — confirm with the lab and primary literature."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Cre-dependent delivery: DIO/FLEX",
+      "body": "You put the DREADD behind a **Cre-dependent switch** so only your Cre+ neurons express it. The viral version is written **[[AAV]]-[[DIO]]-[[hM3Dq]]** (or -[[hM4Di]]) — 'DIO/FLEX' = double-[[loxP|floxed]] inverted ORF, flipped into the sense orientation only by Cre. Inject the AAV so it reaches pancreas-innervating sensory neurons, in a mouse whose Cre marks those neurons.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s3",
+      "prompt": "Put the experiment in a sensible order.",
+      "items": [
+        "Choose a Cre line that marks pancreas-innervating sensory neurons",
+        "Inject Cre-dependent AAV-DIO-DREADD to target those neurons",
+        "Wait for expression; confirm it's in the right cells (reporter)",
+        "Run a manipulation check (recording/c-Fos) that the DREADD works",
+        "Give actuator vs. vehicle with the needed control groups",
+        "Measure the physiological/behavioral readout",
+        "Analyze against controls"
+      ],
+      "explanation": "Specificity (Cre + Cre-dependent virus) is set before you ever give a drug; validation precedes interpretation."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Your Cre line also labels some non-sensory cells near the pancreas. What's the cleanest fix, given the lab's toolkit?",
+      "options": [
+        "Give more actuator",
+        "Use intersectional genetics (Cre + Flp) so only sensory-and-pancreas neurons get the DREADD",
+        "Ignore it",
+        "Switch from hM3Dq to hM4Di"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "This is the specificity problem from C3. An intersection (e.g., a sensory-neuron [[Flp]] driver AND your Cre) restricts expression to the cells you actually mean. A [[retrograde]] AAV from the pancreas can add anatomical specificity too."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s5",
+      "scenario": "After injection, your [[reporter]] shows DREADD expression is sparse and weak in the target neurons.",
+      "prompt": "Which is the LEAST likely culprit to check first?",
+      "options": [
+        "AAV serotype/tropism not ideal for these neurons",
+        "Titer too low or too little volume delivered",
+        "Not enough time for expression before testing",
+        "The actuator was the wrong one"
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Expression level is set before any [[actuator]] is given — [[serotype]], titer/volume, and expression time are the usual suspects. Actuator choice affects whether the DREADD fires, not how much DREADD is present.",
+      "followUp": "Revisit serotype (retrograde vs. local), titer, injection coordinates/volume, and the expression interval."
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "You silence pancreas-innervating sensory neurons (hM4Di + actuator) during a glucose tolerance test, with all control groups in place.",
+      "prompt": "What's the honest set of outcomes to prepare for?",
+      "options": [
+        "Only a positive result is possible",
+        "Glucose handling could change, not change, or change only in a subset — and a validated null is still informative",
+        "The mice will not survive",
+        "The actuator guarantees an effect"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "With a confirmed manipulation and proper controls, any outcome is interpretable: an effect supports a role; a validated null says these neurons aren't necessary for this readout under these conditions. That's a real result, not a failure — which is why the manipulation check in L4 matters so much.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, et al. DRG afferents that mediate physiologic and pathologic mechanosensation from the distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "The lab's foundational paper and the template for the define-then-manipulate design. Full text read this session."
+    },
+    {
+      "citation": "Wolfson RL. Spinal sensory innervation of the intestine. Curr Opin Neurobiol 90:102973 (2025).",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Wolfson's 2025 review — best further reading for the field context and open questions. Full text read this session."
+    }
+  ],
+  "reviewNotes": "Confidence marked 'medium' because pancreas-specific DRG targeting details should be confirmed with the lab; the experimental logic is solid and sourced."
+}

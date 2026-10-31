@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DREADD control grid</title>
+<style>
+  :root{ --bg:#f5f7fb;--card:#fff;--ink:#131722;--muted:#5b6472;--accent:#5B8DEF;--line:#e6e9f0;--chip:#eef2fb;--good:#1a9b6c;--bad:#d6455b;--warn:#b7791f; }
+  @media (prefers-color-scheme:dark){ :root{ --bg:#0f1420;--card:#171d2b;--ink:#eef1f7;--muted:#9aa4b5;--accent:#6f9bff;--line:#283040;--chip:#1e2740;--good:#35c58b;--bad:#ff6f88;--warn:#e0b050; } }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:16px}
+  .wrap{width:100%;max-width:440px}
+  .kick{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+  h1{font-size:19px;margin:.3em 0 .2em}.lead{font-size:14px;color:var(--muted);margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .toggles{display:flex;flex-direction:column;gap:10px}
+  .tg{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--chip)}
+  .tg b{font-size:14px}.tg .sub{font-size:12px;color:var(--muted)}
+  .sw{position:relative;width:52px;height:30px;flex:none;border-radius:99px;background:#c3ccda;cursor:pointer;transition:.18s;border:none}
+  .sw.on{background:var(--accent)} .sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:.18s}
+  .sw.on::after{transform:translateX(22px)}
+  @media (prefers-color-scheme:dark){ .sw{background:#3a4356} }
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 4px}
+  .q{padding:10px;border:1.5px solid var(--line);border-radius:10px;font-size:12px;opacity:.5;transition:.15s}
+  .q.active{opacity:1;border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 25%,transparent)}
+  .q .role{font-weight:700;font-size:12px} .q .eff{margin-top:4px}
+  .readout{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--chip);border:1px solid var(--line)}
+  .verdict{font-weight:700} .verdict.good{color:var(--good)} .verdict.bad{color:var(--bad)} .verdict.warn{color:var(--warn)}
+  .explain{font-size:13px;color:var(--muted);margin-top:6px}
+  .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kick">C5 · Lesson 4 · Interactive</div>
+  <h1>Build the DREADD control grid</h1>
+  <p class="lead">Flip the switches. An effect counts as "caused by your neurons" only when the controls rule out every other explanation.</p>
+
+  <div class="card">
+    <div class="toggles">
+      <div class="tg"><div><b>DREADD expressed?</b><div class="sub">hM3Dq in your neurons</div></div><button class="sw" id="dreadd" aria-pressed="false"></button></div>
+      <div class="tg"><div><b>Actuator given?</b><div class="sub">CNO / DCZ</div></div><button class="sw" id="act" aria-pressed="false"></button></div>
+      <div class="tg"><div><b>Actuator has off-target effect?</b><div class="sub">e.g. CNO→clozapine at high dose</div></div><button class="sw" id="offt" aria-pressed="false"></button></div>
+    </div>
+
+    <div class="grid" id="grid">
+      <div class="q" data-k="11"><div class="role">DREADD+ / actuator+</div><div class="eff">experimental group</div></div>
+      <div class="q" data-k="10"><div class="role">DREADD+ / vehicle</div><div class="eff">tests for leak</div></div>
+      <div class="q" data-k="01"><div class="role">DREADD− / actuator+</div><div class="eff">tests actuator</div></div>
+      <div class="q" data-k="00"><div class="role">DREADD− / vehicle</div><div class="eff">baseline</div></div>
+    </div>
+
+    <div class="readout">
+      <div class="verdict" id="verdict"></div>
+      <div class="explain" id="explain"></div>
+    </div>
+  </div>
+  <p class="cap">The only clean "your neurons did it" is DREADD+ and actuator+ — with the other three quadrants showing no effect.</p>
+</div>
+<script>
+(function(){
+  var d=document.getElementById('dreadd'),a=document.getElementById('act'),o=document.getElementById('offt'),
+      verdict=document.getElementById('verdict'),explain=document.getElementById('explain'),
+      qs={};document.querySelectorAll('.q').forEach(function(e){qs[e.dataset.k]=e;});
+  function st(btn){return btn.classList.contains('on');}
+  function toggle(btn){btn.classList.toggle('on');btn.setAttribute('aria-pressed',st(btn));render();}
+  [d,a,o].forEach(function(b){b.addEventListener('click',function(){toggle(b);});});
+  function render(){
+    var D=st(d),A=st(a),O=st(o);
+    var key=(D?'1':'0')+(A?'1':'0');
+    Object.keys(qs).forEach(function(k){qs[k].classList.toggle('active',k===key);});
+    // does the neuron show an effect?
+    var realEffect = D && A;                 // genuine DREADD effect
+    var spurious   = !D && A && O;           // actuator off-target with no DREADD
+    if (D && A){
+      verdict.textContent='✓ Experimental group — neuron activated';
+      verdict.className='verdict good';
+      explain.textContent='The DREADD is present and the actuator is on. This effect is interpretable ONLY because your three control quadrants (leak, actuator, baseline) show no effect.';
+    } else if (D && !A){
+      verdict.textContent='Leak control — should be silent';
+      verdict.className='verdict';
+      explain.textContent='DREADD present but no drug. If you see an effect here, the DREADD is leaky/constitutively active — a confound.';
+    } else if (!D && A){
+      if (O){ verdict.textContent='⚠ Actuator-only effect detected!'; verdict.className='verdict bad';
+        explain.textContent='No DREADD, yet the actuator produced an effect (e.g. CNO→clozapine). Without this control you would wrongly credit your neurons. Lower the dose or switch to DCZ.'; }
+      else { verdict.textContent='Actuator control — silent (good)'; verdict.className='verdict good';
+        explain.textContent='No DREADD, actuator on, no effect — the actuator is clean at this dose. This is the control that catches the CNO→clozapine confound.'; }
+    } else {
+      verdict.textContent='Baseline — no manipulation';
+      verdict.className='verdict';
+      explain.textContent='Neither DREADD nor drug. This is your reference for everything else.';
+    }
+  }
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{
+  "id": "C4-L4",
+  "unitId": "C4",
+  "title": "Cre-dependent viral payloads: DIO and fDIO",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain how DIO/FLEX makes a viral payload Cre-dependent, and how combining it with a Cre line adds a cell-type switch to viral delivery.",
+  "tags": [
+    "DIO",
+    "FLEX",
+    "fDIO",
+    "Cre-dependent"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Make the virus obey Cre",
+      "body": "You can build a viral payload that's **off until [[Cre]] acts** — just like a bred-in [[loxP|floxed]]-STOP, but delivered by [[AAV]]. The common design is **[[DIO]]** (a.k.a. **FLEX**): the payload is inverted and flanked by loxP sites, so **Cre flips it into the correct orientation** to be expressed. No Cre in that cell → it stays inverted → silent.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/targeting-funnel.svg",
+        "alt": "Three filters — retrograde route, DIO switch, and a subtype Cre line — narrow a mixed population down to the single target neuron.",
+        "caption": "Each layer of specificity removes off-target cells, leaving your target."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Two switches, two recombinases",
+      "body": "- **AAV-DIO-<payload>** → turns on only in **Cre+** cells.\n- **AAV-fDIO-<payload>** → the [[Flp]] version, on only in **Flp+** cells.\n\nSo you can bring the same [[intersectional genetics|intersectional]] logic from C3 into viral delivery: a DIO virus in a cell-type Cre line expresses only where the virus went AND the cell is Cre+.",
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/targeting-composer.html",
+        "alt": "Interactive: choose route (retrograde vs local), payload switch (non-conditional vs DIO), and mouse line, then see which cell populations express the DREADD.",
+        "caption": "Compose route + switch + Cre line — see which cells get the DREADD."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "You inject AAV-DIO-[[hM3Dq]] broadly, but into a TrkB-Cre mouse. Where does the [[DREADD]] express?",
+      "options": [
+        "Every cell the virus entered",
+        "Only TrkB-Cre+ cells that the virus entered",
+        "Only non-neuronal cells",
+        "Nowhere — DIO blocks all expression"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "DIO needs Cre to flip it on. So expression = (virus got in) AND (cell is Cre+). The Cre line adds cell-type specificity to the spatial specificity of the injection."
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each tool to its 'on' condition.",
+      "pairs": [
+        [
+          "AAV-DIO-X",
+          "On in Cre+ cells the virus entered"
+        ],
+        [
+          "AAV-fDIO-X",
+          "On in Flp+ cells the virus entered"
+        ],
+        [
+          "AAV2-retro-Cre",
+          "Delivers Cre to cells projecting to the injection site"
+        ],
+        [
+          "Non-conditional AAV-X",
+          "On in any cell the virus entered (with the promoter)"
+        ]
+      ],
+      "explanation": "Mixing these — e.g. [[retrograde]] Cre from the organ + a DIO-DREADD in the [[DRG]] — is how you compose precise access."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "Plan: AAV2-retro-Cre injected into the pancreas + AAV-DIO-[[hM4Di]] injected into (or expressed in) the DRG.",
+      "prompt": "Which neurons end up with the silencing DREADD?",
+      "options": [
+        "All DRG neurons",
+        "DRG neurons that project to the pancreas (they got retrograde Cre) and also received the DIO virus",
+        "Only pancreatic acinar cells",
+        "None"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Retrograde Cre marks the pancreas-projecting neurons; the DIO-hM4Di turns on only where Cre is present. The intersection = pancreas-projecting DRG neurons carrying the DREADD. This is a clean, composable targeting strategy for your project.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Saunders A, et al. Novel recombinant adeno-associated viruses for Cre activated and inactivated transgene expression in neurons. Front Neural Circuits 6:47 (2012).",
+      "doi": "10.3389/fncir.2012.00047",
+      "url": "https://doi.org/10.3389/fncir.2012.00047",
+      "verified": true,
+      "note": "Cre-activated/inactivated AAV designs. DOI confirmed via Crossref."
+    },
+    {
+      "citation": "Tervo DGR, et al. A Designer AAV Variant Permits Efficient Retrograde Access to Projection Neurons. Neuron 92:372-382 (2016).",
+      "doi": "10.1016/j.neuron.2016.09.021",
+      "url": "https://doi.org/10.1016/j.neuron.2016.09.021",
+      "verified": true,
+      "note": "Retrograde delivery of recombinases."
+    }
+  ],
+  "reviewNotes": "Combines C3 intersection logic with viral delivery; directly scaffolds Capstone E3."
+}

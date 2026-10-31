@@ -23,7 +23,7 @@ Save it as `lessons/<lesson-id>.json`. The file name must match the lesson's `"i
 }
 ```
 
-The six step types are `concept`, `mcq`, `match`, `troubleshoot`, `predict` and `order`. The three demo lessons in `lessons/X1-L*.json` use every one of them, so copy from those.
+The six step types are `concept`, `mcq`, `match`, `troubleshoot`, `predict` and `order`. The C2–C5 lessons use every one of them, so copy from those.
 
 Rules the app checks:
 
@@ -38,7 +38,13 @@ Rules the app checks:
 
 Text fields support light formatting: `**bold**`, `*italic*`, `` `code` ``, a blank line for a new paragraph, and lines starting with `- ` for a list.
 
-**Images:** put the file in `images/` and set the concept step's `"image"` to `"images/my-figure.png"`. You can also use `{ "src": "images/my-figure.png", "alt": "what it shows", "caption": "Fig. 1 — …" }`.
+**Visuals:** any step can have a `"visual"`, shown above the step: `{ "type": "svg-anim", "src": "assets/cre-lox.svg", "alt": "what it shows", "caption": "…" }`. Files go in `assets/`. Types:
+- `svg-anim`, `svg`, `image` and `gif` are shown as pictures (animated SVGs play on their own)
+- `mp4` plays muted on a loop
+- `interactive` is a self-contained HTML widget, run in a sealed frame that sizes itself to its content (no storage, no access to the app)
+- `lottie` isn't supported yet and shows the `alt` text instead
+
+`alt` is required. The check makes sure every file exists, and the app saves each lesson's visuals for offline use.
 
 ## 2. List it in course.json
 
@@ -98,10 +104,6 @@ Recent papers, newest first, with a "New" tag on ones you haven't seen. Only add
 ```
 
 `whyItMatters`, `track` and `tags` are optional.
-
-## When you're done with the demo
-
-Delete the `"X"` track from `course.json` and the `lessons/X1-*.json` files. Also delete `images/sample-figure.svg` if no lesson uses it.
 
 ## Checking for mistakes
 

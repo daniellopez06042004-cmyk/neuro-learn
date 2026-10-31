@@ -1,0 +1,107 @@
+{
+  "id": "C5-L2",
+  "unitId": "C5",
+  "title": "The two workhorses: hM3Dq and hM4Di",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Choose between hM3Dq and hM4Di based on whether you want to excite or silence, and explain the G-protein mechanism of each.",
+  "tags": [
+    "hM3Dq",
+    "hM4Di",
+    "Gq",
+    "Gi",
+    "excitation",
+    "inhibition"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two receptors, opposite jobs",
+      "body": "Most experiments use one of two [[DREADD|DREADDs]]:\n\n- **[[hM3Dq]]** — couples to **Gq**. Activation drives the cell toward **firing** (excitatory).\n- **[[hM4Di]]** — couples to **Gi/o**. Activation **silences** the cell (inhibitory).\n\nSame drug can be used for both; the receptor decides the direction.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/dreadd-excite-silence.svg",
+        "alt": "The same drug is applied to two neurons; the hM3Dq neuron fires more while the hM4Di neuron goes quiet.",
+        "caption": "Same drug, opposite effect — hM3Dq excites, hM4Di silences."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Why Gq excites",
+      "body": "**hM3Dq → Gq → phospholipase C → IP₃/DAG and intracellular Ca²⁺ release**, with depolarizing effects that raise excitability. In practice, activating hM3Dq makes neurons more likely to fire, which is why it's used to drive a population and read out the behavioral or physiological consequence.",
+      "flag": {
+        "level": "simplified",
+        "note": "The exact downstream currents vary by cell type; 'Gq → more excitable' is the working summary."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Why Gi silences",
+      "body": "**hM4Di → Gi/o** does two useful things: it **inhibits adenylyl cyclase** and, importantly, activates **GIRK potassium channels** (hyperpolarizing the cell) and **suppresses neurotransmitter release at the terminal**. So hM4Di can both quiet the cell body and dampen its output.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each DREADD to its mechanism and effect.",
+      "pairs": [
+        [
+          "hM3Dq",
+          "Gq-coupled → raises excitability → neurons fire more"
+        ],
+        [
+          "hM4Di",
+          "Gi/o-coupled → GIRK/K⁺ + less release → neurons silenced"
+        ]
+      ],
+      "explanation": "Direction of the effect is set by which G protein the engineered receptor recruits."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Your hypothesis is that pancreas-innervating sensory neurons SUPPRESS insulin release. You want to test necessity by shutting those neurons down during a glucose challenge. Which DREADD fits?",
+      "options": [
+        "hM3Dq",
+        "hM4Di",
+        "Neither — you need optogenetics",
+        "Both at once"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "To remove the neurons' contribution (a loss-of-function / necessity test), you silence them — hM4Di. hM3Dq would instead test sufficiency by driving them."
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "You express hM3Dq in a neuron population and give the [[actuator]]. To confirm the neurons were actually driven, you stain for the immediate-early gene [[c-Fos]].",
+      "prompt": "What do you predict in the DREADD-expressing neurons vs. neighbors?",
+      "options": [
+        "More c-Fos in DREADD+ neurons than neighbors",
+        "Less c-Fos in DREADD+ neurons",
+        "c-Fos everywhere equally"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "c-Fos rises in recently-active neurons, so hM3Dq+ cells should show more than non-expressing neighbors. This is a common way to confirm the activation DREADD fired (a 'manipulation check' — more in C5-L5).",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Roth BL. DREADDs for Neuroscientists. Neuron 89:683-694 (2016).",
+      "doi": "10.1016/j.neuron.2016.01.040",
+      "url": "https://doi.org/10.1016/j.neuron.2016.01.040",
+      "verified": true,
+      "note": "Widely-cited primer and the best single further-reading link for this lesson. DOI confirmed via Crossref this session."
+    }
+  ],
+  "reviewNotes": "Gq/Gi mechanisms are textbook (T). Roth 2016 primer DOI confirmed — good further reading."
+}

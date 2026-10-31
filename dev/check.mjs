@@ -28,6 +28,13 @@ if (course.missing || course.error) {
         if (lesson.error) { problems.push(lesson.error); continue; }
         written++;
         problems.push(...validateLesson(lesson.data, id, u.id));
+        // Visuals and images must point at real files.
+        for (const st of lesson.data.steps || []) {
+          for (const src of [st?.visual?.src, typeof st?.image === 'string' ? st.image : st?.image?.src]) {
+            if (typeof src !== 'string' || /^(https?:)?\/\//.test(src)) continue;
+            try { read(`content/${src}`); } catch { problems.push(`lessons/${id}.json › ${st.id}: "${src}" isn't in content/`); }
+          }
+        }
       }
     }
   }

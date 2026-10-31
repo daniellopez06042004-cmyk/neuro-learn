@@ -1,0 +1,88 @@
+{
+  "id": "C5-L1",
+  "unitId": "C5",
+  "title": "What chemogenetics actually is",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain what a DREADD is and why a 'designer receptor + designer drug' lets you control one cell type remotely.",
+  "tags": [
+    "chemogenetics",
+    "DREADD",
+    "GPCR"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The goal: a remote control for one cell type",
+      "body": "You've genetically defined a set of neurons ([[Cre]]/[[Flp]] — see C2/C3). Now you want to **turn them up or down in a living animal** and watch what changes. Chemogenetics does this with a drug: put an engineered receptor only in your cells, give a systemic compound, and only those cells respond.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "DREADD = Designer Receptor Exclusively Activated by a Designer Drug",
+      "body": "A [[DREADD]] is a **[[GPCR|G-protein-coupled receptor]] (GPCR) engineered so it ignores its natural ligand and instead responds only to an otherwise-inert drug**. The classic ones are mutated human muscarinic receptors. Because the drug is (meant to be) biologically inert on its own, cells *without* the DREADD shouldn't care that it's there.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What makes a DREADD 'exclusive' to your cells of interest?",
+      "options": [
+        "The drug is injected directly into those cells",
+        "Only cells engineered to express the DREADD can respond to the otherwise-inert drug",
+        "The drug only exists inside neurons",
+        "The receptor is destroyed in all other cells"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Specificity comes from expression, not from where the drug goes. The drug is given systemically and reaches everything; only DREADD-expressing cells transduce it into a signal."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why is it useful that a DREADD is a GPCR rather than an ion channel?",
+      "options": [
+        "GPCRs act through the cell's own second-messenger machinery, nudging excitability over minutes",
+        "GPCRs are faster than light",
+        "GPCRs cannot be made specific",
+        "Ion channels can't be expressed in neurons"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "DREADDs recruit endogenous G-protein pathways, giving slower, sustained, more physiological modulation over minutes-to-hours — the opposite end of the timescale from optogenetics' millisecond control. That trade-off (next lessons) is the whole reason to pick one tool over the other."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You give the DREADD drug to a mouse that was NEVER given the virus/allele to express the DREADD.",
+      "prompt": "What should happen to your target neurons, if the tool is behaving ideally?",
+      "options": [
+        "They should be strongly activated",
+        "Nothing — no DREADD means no designer response",
+        "They should die"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Ideally, nothing — that's the entire premise of an 'inert' drug. This is also why a DREADD-free animal given the drug is a required control (lesson C5-L4): it tests whether the drug does anything on its own.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Armbruster BN, Li X, Pausch MH, Herlitze S, Roth BL. Evolving the lock to fit the key to create a family of GPCRs potently activated by an inert ligand. PNAS 104:5163-5168 (2007).",
+      "doi": "10.1073/pnas.0700293104",
+      "url": "https://doi.org/10.1073/pnas.0700293104",
+      "verified": true,
+      "note": "Original DREADD paper. DOI confirmed via Crossref this session."
+    }
+  ],
+  "reviewNotes": "Armbruster DOI confirmed via Crossref. Teaching content is textbook-level and also stands on its own."
+}

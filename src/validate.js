@@ -5,6 +5,7 @@ import { CIRCUIT_KEYS } from './circuits-data.js';
 
 const STEP_TYPES = ['concept', 'mcq', 'match', 'troubleshoot', 'predict', 'order'];
 const FLAG_LEVELS = ['uncertain', 'debated', 'simplified'];
+export const VISUAL_TYPES = ['svg-anim', 'svg', 'gif', 'image', 'lottie', 'mp4', 'interactive'];
 
 const isStr = (v) => typeof v === 'string' && v.trim().length > 0;
 const isArr = Array.isArray;
@@ -98,6 +99,12 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
       if (typeof s.flag !== 'object' || !FLAG_LEVELS.includes(s.flag.level)) at(w, `"flag.level" must be one of: ${FLAG_LEVELS.join(', ')}`);
     }
     if (s.difficulty != null && ![1, 2, 3].includes(s.difficulty)) at(w, '"difficulty" must be 1, 2 or 3');
+    if (s.visual != null) {
+      const v = s.visual;
+      if (typeof v !== 'object' || !VISUAL_TYPES.includes(v.type)) at(w, `"visual.type" must be one of: ${VISUAL_TYPES.join(', ')}`);
+      if (!isStr(v?.src)) at(w, '"visual.src" is missing (a path like "assets/cre-lox.svg")');
+      if (!isStr(v?.alt)) at(w, '"visual.alt" is missing (describe what the visual shows)');
+    }
 
     const checkChoices = () => {
       need('prompt', isStr(s.prompt));

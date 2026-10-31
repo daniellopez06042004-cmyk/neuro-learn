@@ -10,7 +10,44 @@ import { imageUrl } from './content.js';
 
 export function createStep(step, ctx) {
   const build = { intro, concept, mcq, troubleshoot, predict, match, order }[step.type];
-  return build(step, ctx);
+  const ctl = build(step, ctx);
+  if (step.visual) ctl.el = [visual(step.visual), ...ctl.el]; // shown above the step
+  return ctl;
+}
+
+// ---------- visuals (lesson-format.md: "visual" on any step) ----------
+
+function visual(v) {
+  const src = imageUrl(v.src);
+  let media;
+  if (v.type === 'interactive') media = widget(v, src);
+  else if (v.type === 'mp4') media = h('video', { src, muted: true, loop: true, autoplay: true, playsinline: true, 'aria-label': v.alt });
+  else if (v.type === 'lottie') media = h('p', { class: 'visual-fallback' }, v.alt); // no animation player bundled
+  else media = h('img', { src, alt: v.alt || '', loading: 'lazy' }); // svg, svg-anim, gif, image
+  if (media.tagName === 'VIDEO') media.muted = true; // iOS only autoplays muted video
+  return h('figure', { class: `visual visual-${v.type}` }, media, v.caption ? h('figcaption', null, v.caption) : null);
+}
+
+// An interactive HTML widget, in a sandboxed frame (scripts only: no storage,
+// no access to the app). A tiny script added to it reports its height so the
+// frame fits the content exactly.
+function widget(v, src) {
+  const frame = h('iframe', { class: 'visual-frame', title: v.alt || 'Interactive', sandbox: 'allow-scripts', style: 'height:360px' });
+  const id = Math.random().toString(36).slice(2);
+  const onMessage = (e) => {
+    if (!frame.isConnected && frame.dataset.loaded) { window.removeEventListener('message', onMessage); return; }
+    if (e.source === frame.contentWindow && e.data?.nlFrame === id) frame.style.height = `${Math.min(Math.max(e.data.h, 120), 1000)}px`;
+  };
+  window.addEventListener('message', onMessage);
+  fetch(src).then((r) => (r.ok ? r.text() : Promise.reject(new Error(r.status)))).then((html) => {
+    const probe = `<script>(()=>{const s=()=>parent.postMessage({nlFrame:${JSON.stringify(id)},h:Math.ceil(document.documentElement.getBoundingClientRect().height)},'*');new ResizeObserver(s).observe(document.documentElement);addEventListener('load',s);s();})();<\/script>`;
+    frame.srcdoc = /<\/body>/i.test(html) ? html.replace(/<\/body>/i, `${probe}</body>`) : html + probe;
+    frame.dataset.loaded = '1';
+  }).catch(() => {
+    window.removeEventListener('message', onMessage);
+    frame.replaceWith(h('p', { class: 'visual-fallback' }, `${v.alt} (Couldn’t load this interactive. Open it once while online.)`));
+  });
+  return frame;
 }
 
 const letter = (i) => String.fromCharCode(65 + i);

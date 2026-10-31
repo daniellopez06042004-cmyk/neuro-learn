@@ -1,0 +1,89 @@
+{
+  "id": "C4-L5",
+  "unitId": "C4",
+  "title": "Designing delivery for pancreas afferents",
+  "minutes": 5,
+  "xp": 20,
+  "objective": "Assemble route, serotype, switch, titer/volume, and expression time into a delivery plan, and troubleshoot weak expression.",
+  "tags": [
+    "pancreas",
+    "design",
+    "titer",
+    "troubleshooting"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Five delivery decisions",
+      "body": "For any viral experiment, decide:\n1. **Route** — [[retrograde]] from the organ, or local injection?\n2. **Serotype** — [[tropism]] that fits the route and target.\n3. **Switch** — non-conditional, [[DIO]] ([[Cre]]), or fDIO ([[Flp]])?\n4. **Titer & volume** — how much, how far.\n5. **Expression time** — how long before you test.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the delivery workflow for a pancreas [[DREADD]] experiment.",
+      "items": [
+        "Choose route (e.g. retrograde from pancreas) and serotype",
+        "Choose the switch (DIO/fDIO) to match your Cre/Flp line",
+        "Set titer and injection volume",
+        "Inject into the pancreas",
+        "Wait the expression interval",
+        "Confirm expression in the right cells (reporter) before any experiment"
+      ],
+      "explanation": "Plan specificity (route + switch) first; dose and timing are execution; validation gates everything downstream."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "Two weeks after injection, DREADD/[[reporter]] expression is sparse and weak in your target neurons.",
+      "prompt": "Which is LEAST likely to be the cause?",
+      "options": [
+        "Serotype/route not efficient for these neurons",
+        "Titer too low or volume too small",
+        "Not enough expression time yet",
+        "The actuator (CNO/DCZ) was the wrong choice"
+      ],
+      "answer": [
+        3
+      ],
+      "explanation": "Expression level is set before any [[actuator]] is given — it depends on [[serotype]]/route, titer/volume, and time. The actuator only matters once the DREADD is expressed (that's C5).",
+      "followUp": "Check serotype choice, raise titer/volume within safe limits, extend the expression interval, and re-confirm with a reporter."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You get good, specific expression in pancreas-projecting [[DRG]] neurons and confirm it with a reporter.",
+      "prompt": "What's the right next step before drawing any biological conclusion?",
+      "options": [
+        "Publish immediately",
+        "Run the manipulation check and the full control set (from C5) before interpreting any effect",
+        "Increase the virus 10x",
+        "Skip controls since expression looks clean"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Clean expression is necessary but not sufficient. You still need the manipulation check (did the DREADD actually fire/silence?) and the DREADD-vs-actuator control grid from C5 before attributing any readout to these neurons.",
+      "freeText": false
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Tervo DGR, et al. A Designer AAV Variant Permits Efficient Retrograde Access to Projection Neurons. Neuron 92:372-382 (2016).",
+      "doi": "10.1016/j.neuron.2016.09.021",
+      "url": "https://doi.org/10.1016/j.neuron.2016.09.021",
+      "verified": true,
+      "note": "Retrograde route selection."
+    },
+    {
+      "citation": "Wolfson RL, et al. DRG afferents... distal colon. Cell 186:3368-3385 (2023).",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Worked example of organ-to-DRG viral access."
+    }
+  ],
+  "reviewNotes": "Confidence 'medium': pancreas-specific serotype/coordinates should be confirmed with the lab; the decision framework is solid. Hands off directly to C5 and Capstone E3."
+}
