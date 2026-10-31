@@ -59,6 +59,21 @@ You can list ids before their files exist. Those lessons show as "Not written ye
 
 The current prereqs come from the "suggested starting points" in the curriculum (D1 → D2 → D3, C2 → C3 → C4 → C5, and the capstone after C5 and D6). Edit `"prereqs"` in `course.json` to change them.
 
+## Your circuit
+
+The circuit screen draws each track as a real neural pathway, with the track's units placed along it in course order (the direction the signal travels). Pick a track's pathway with `"circuit"` in `course.json`:
+
+| `"circuit"` | Pathway |
+|---|---|
+| `somatosensory` | Receptor → DRG → dorsal horn → spinal cord → brainstem → thalamus → S1 → insula |
+| `inflammatory-reflex` | Spleen → vagal afferent → nodose ganglion → NTS → hypothalamus → DMV → vagal efferent → spleen |
+| `basal-ganglia` | Cortex → striatum → GPe → STN → GPi → thalamus → cortex |
+| `spinal-reflex` | Skin → DRG → dorsal horn → interneuron → ventral horn → muscle |
+| `pancreas-afferent` | Pancreas → splanchnic afferent → DRG → dorsal horn |
+| `cerebellar` | Pontine nuclei → mossy fibers → granule cells → Purkinje cells → deep nuclei → thalamus |
+
+A track without `"circuit"` gets the next unused one. Order the units so they follow the pathway, if you can. To add a new pathway, add an entry to `src/circuits-data.js`.
+
 ## When you're done with the demo
 
 Delete the `"X"` track from `course.json` and the `lessons/X1-*.json` files. Also delete `images/sample-figure.svg` if no lesson uses it.

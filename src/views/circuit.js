@@ -13,8 +13,9 @@ export function renderCircuitView(root) {
       [['Wired', `${summary.wired}/${summary.total}`], ['Myelinated', summary.myelinated], ['Status', summary.complete ? 'Complete' : 'Growing']]
         .map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k)))),
     h('p', { class: 'small muted', style: 'margin:14px 0' },
-      'Each unit is a neuron in its track’s brain region. Finishing a lesson grows a dendrite. Keep reviewing until its questions reach the top memory boxes and the axons thicken and myelinate. Master everything and signals run through the whole circuit.'),
-    h('ul', { class: 'legend' }, trackProgress().map(({ track, wired, total }) =>
-      h('li', null, h('span', { class: 'dot', style: `background:${track.color}` }), h('span', { class: 'name' }, track.title),
+      'Each track is a real neural pathway, and each unit is a neuron along it, in the order the signal travels. Finishing a lesson grows a dendrite. Keep reviewing until its questions reach the top memory boxes and the axons thicken and myelinate. Master everything and signals run through every pathway.'),
+    h('ul', { class: 'legend' }, trackProgress().map(({ track, circuit, wired, total }) =>
+      h('li', null, h('span', { class: 'dot', style: `background:${track.color}` }),
+        h('span', { class: 'name' }, track.title, h('span', { class: 'circuit-name' }, circuit.name), h('span', { class: 'circuit-path' }, circuit.path)),
         h('span', { class: 'muted small' }, total ? `${wired}/${total} wired` : 'no lessons yet'))))));
 }

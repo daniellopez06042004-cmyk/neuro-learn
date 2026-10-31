@@ -1,6 +1,8 @@
 // Checks course.json and lesson files against lesson-format.md (v0.1).
 // Every function returns a list of human-readable problems; empty = valid.
 
+import { CIRCUIT_KEYS } from './circuits-data.js';
+
 const STEP_TYPES = ['concept', 'mcq', 'match', 'troubleshoot', 'predict', 'order'];
 const FLAG_LEVELS = ['uncertain', 'debated', 'simplified'];
 
@@ -23,6 +25,7 @@ export function validateCourse(course) {
     else trackIds.add(t.id);
     if (!isStr(t?.title)) at(w, '"title" is missing');
     if (t?.color != null && !/^#[0-9a-fA-F]{6}$/.test(t.color)) at(w, `"color" should look like "#5B8DEF", got ${JSON.stringify(t.color)}`);
+    if (t?.circuit != null && !CIRCUIT_KEYS.includes(t.circuit)) at(w, `"circuit" must be one of: ${CIRCUIT_KEYS.join(', ')}`);
     if (!isArr(t?.units)) { at(w, '"units" must be a list'); return; }
     t.units.forEach((u, ui) => {
       const uw = `${w} › units[${ui}]${u?.id ? ` (${u.id})` : ''}`;

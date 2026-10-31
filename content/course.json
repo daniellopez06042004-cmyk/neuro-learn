@@ -6,6 +6,7 @@
       "id": "X",
       "title": "App demo (delete me)",
       "color": "#97C459",
+      "circuit": "cerebellar",
       "units": [
         {
           "id": "X1",
@@ -27,6 +28,7 @@
       "id": "A",
       "title": "Sensory Neuroscience",
       "color": "#1D9E75",
+      "circuit": "somatosensory",
       "units": [
         { "id": "A1", "title": "The Logic of Sensing", "summary": "Receptors, transduction, encoding; labeled-line vs. population coding.", "prereqs": [], "lessons": [] },
         { "id": "A2", "title": "Biophysics Refresher", "summary": "Receptor potentials, driving force, how channel kinetics/threshold shape firing.", "prereqs": [], "lessons": [] },
@@ -44,6 +46,7 @@
       "id": "B",
       "title": "Neuroimmune Interactions",
       "color": "#D4537E",
+      "circuit": "inflammatory-reflex",
       "units": [
         { "id": "B1", "title": "Innate immunity", "prereqs": [], "lessons": [] },
         { "id": "B2", "title": "Adaptive essentials", "prereqs": [], "lessons": [] },
@@ -60,6 +63,7 @@
       "id": "C",
       "title": "Lab Techniques",
       "color": "#5B8DEF",
+      "circuit": "basal-ganglia",
       "units": [
         { "id": "C1", "title": "Thinking Like an Experimentalist", "summary": "Controls, biological vs. technical replicates, blinding, basic stats.", "prereqs": [], "lessons": [] },
         { "id": "C2", "title": "Mouse Genetics I — The Logic", "summary": "What Cre/lox, Flp/FRT, reporters and CreER actually do, and how to read a cross.", "prereqs": [], "lessons": [] },
@@ -79,6 +83,7 @@
       "id": "D",
       "title": "Core Anatomy & Physiology",
       "color": "#7F77DD",
+      "circuit": "spinal-reflex",
       "units": [
         { "id": "D1", "title": "Organizing the Nervous System", "summary": "CNS vs. PNS, afferent vs. efferent, somatic vs. autonomic, ganglia vs. nuclei.", "prereqs": [], "lessons": [] },
         { "id": "D2", "title": "The Autonomic Nervous System", "summary": "Sympathetic vs. parasympathetic, pre-/postganglionic wiring, and why \"sensory\" and \"autonomic\" are not the same axis.", "prereqs": ["D1"], "lessons": [] },
@@ -94,6 +99,7 @@
       "id": "E",
       "title": "Capstone: Pancreas DREADD Project",
       "color": "#D85A30",
+      "circuit": "pancreas-afferent",
       "units": [
         { "id": "E", "title": "Your Pancreas DREADD Project", "summary": "Each lesson walks one real decision in the experiment, using the colon paper as the worked example.", "prereqs": ["C5", "D6"], "lessons": [] }
       ]
