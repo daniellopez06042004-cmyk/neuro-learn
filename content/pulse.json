@@ -1,4 +1,58 @@
 {
   "schemaVersion": "0.1",
-  "items": []
+  "items": [
+    {
+      "id": "2025-10-enteric-drg-pathway",
+      "date": "2025-10-23",
+      "title": "A gut-local pathway where enteric neurons relay to DRG sensory neurons",
+      "citation": "Wang et al., 2026, Neuron",
+      "doi": "10.1016/j.neuron.2025.09.035",
+      "verified": true,
+      "summary": "Reports an enteric-to-DRG sensory pathway in the mouse gut that contributes to interoception and visceral pain — enteric nervous system neurons relaying signals to spinal (DRG) afferents, rather than DRG endings sensing the gut wall alone.",
+      "whyItMatters": "Squarely your lab's territory: it adds an enteric→DRG link to the gut-sensing story, and cites the Wolfson 2023 colon paper. A fresh model for how DRG afferents fit into gut circuits.",
+      "track": "A",
+      "tags": [
+        "interoception",
+        "DRG",
+        "enteric-nervous-system",
+        "visceral-pain"
+      ]
+    },
+    {
+      "id": "2025-10-gut-brain-sensory-nerves",
+      "date": "2025-10-28",
+      "title": "A current map of the sensory nerves connecting gut to brain",
+      "citation": "Spencer, Hibberd & Hu, 2026, Nature Reviews Gastroenterology & Hepatology",
+      "doi": "10.1038/s41575-025-01132-1",
+      "verified": true,
+      "summary": "A review of the extrinsic sensory nerves that innervate the GI tract — vagal and spinal (DRG) afferents — covering their ending types and the mechanisms that activate them.",
+      "whyItMatters": "A up-to-date orientation to the vagal-vs-DRG sensory landscape your lab works in, and a dense source of recent references.",
+      "track": "A",
+      "tags": [
+        "gut-brain",
+        "vagal",
+        "DRG",
+        "review",
+        "mechanosensation"
+      ]
+    },
+    {
+      "id": "2026-07-drg-sensory-immune-organ",
+      "date": "2026-07-08",
+      "title": "Reframing the DRG as a sensory-immune organ, not a passive relay",
+      "citation": "Roger et al., 2026, Annual Review of Neuroscience",
+      "doi": "10.1146/annurev-neuro-102124-034329",
+      "verified": true,
+      "summary": "Argues the dorsal root ganglion is a specialized sensory-immune organ: a macrophage-guarded blood-DRG barrier, neuron-glia microdomains that set sensory gain, and immune signaling that shapes pain and recovery.",
+      "whyItMatters": "Bridges your sensory and neuroimmune interests — the ganglion you study is also an immune compartment, directly relevant to inflammation and pain models.",
+      "track": "B",
+      "tags": [
+        "DRG",
+        "neuroimmune",
+        "satellite-glia",
+        "macrophages",
+        "pain"
+      ]
+    }
+  ]
 }
