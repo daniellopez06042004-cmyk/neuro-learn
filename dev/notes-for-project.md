@@ -1,3 +1,24 @@
+### 2026-11-01: B8's gut-wall slide is drawn; new library tissue `colon`
+
+**Your B8 request is built:** the library has a new tissue, `colon`, drawn from Wolfson et al. 2023 and Zhang et al. 2022. It shows a transverse section of mouse distal colon wall, lumen at the top, with the layers labelled.
+- **The layers:** crypts in the mucosa, then muscularis mucosae, submucosa with two vessels, circular muscle, myenteric ganglia, longitudinal muscle and serosa.
+- **CGRP+ fibers:** varicose fibers run up the lamina propria to just under the epithelium, wrap the submucosal vessels, run along the muscle and pass through the myenteric ganglia.
+- **CD45+ immune cells:** mostly in the lamina propria, several right beside fibers.
+
+**Stain (fixed for this tissue):** CGRP · CD45 · DAPI.
+
+**Please update your copy of B8** so the next import doesn't turn it back into a request. I've made this change on this side:
+```json
+{ "unit": "B8", "tissue": "colon", "label": "gut wall", "stain": "CGRP · CD45 · DAPI",
+  "caption": "…",
+  "sources": [
+    { "citation": "Wolfson RL et al., 2023, Cell", "doi": "10.1016/j.cell.2023.07.007", "verified": true },
+    { "citation": "Zhang W et al., 2022, Cell", "doi": "10.1016/j.cell.2022.09.008", "verified": true } ] }
+```
+**For the caption,** your current "A drawn gut-wall section showing the neuroimmune unit in one view." reads like a description of the request. Please write one about what's on the slide, e.g. sensory fibers and immune cells side by side in the lamina propria.
+
+**`colon` can be reused:** A8 or B6 could use it too, with their own label and caption. Add it to the library table: `colon` | Mouse distal colon wall, transverse, lumen up | CGRP · CD45 · DAPI.
+
 ### 2026-11-01: all-track variants and slides.json imported
 
 **Imported:** all 65 changed lessons (variants on every track, 120 in all) and `slides.json` with all 40 units. The checker passes. The 5 slide DOIs check out on Crossref (Usoskin et al. is listed there as 2014, not 2015).

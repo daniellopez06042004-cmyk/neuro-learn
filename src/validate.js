@@ -224,7 +224,7 @@ export function validateGlossary(glossary) {
 
 // content/slides.json: one specimen slide per unit for the slide box. What each
 // slide shows is the Project's call; the app can only draw these tissues.
-export const TISSUES = ['brain-coronal', 'drg', 'cord', 'nerve', 'islet', 'microglia', 'rnascope', 'cortex-if'];
+export const TISSUES = ['brain-coronal', 'drg', 'cord', 'nerve', 'islet', 'microglia', 'rnascope', 'cortex-if', 'colon'];
 
 export function validateSlides(data) {
   const errs = [];

@@ -295,7 +295,68 @@ function cortexIf() {
     svg: `<rect width="100" height="60" fill="#020302"/>` + noise(r, 140, '#334433', .45) + `<g ${SCREEN}>${b}</g><g ${SCREEN}>${red}</g><g ${SCREEN}>${g}</g>` + T(96, 11.5, 'layer 1', '#B4B2A9', 'end') };
 }
 
-const DRAW = { drg, cord, nerve, islet, microglia, rnascope, 'cortex-if': cortexIf };
+// ---------- mouse distal colon wall, transverse, CGRP + CD45 + DAPI, lumen at the top: crypts lined by basal
+// columnar nuclei (gaps for goblet cells) with thin lamina propria between them; muscularis mucosae; loose submucosa
+// with vessels; circular muscle (nuclei cut lengthwise), myenteric ganglia, longitudinal muscle (nuclei cut across),
+// serosa. CGRP+ extrinsic afferents: varicose fibers up the lamina propria to just under the surface, around
+// submucosal vessels, along the muscle and through the myenteric ganglia. CD45+ immune cells mostly in the lamina
+// propria, some right beside fibers. Refs: Wolfson 2023 (10.1016/j.cell.2023.07.007), Zhang 2022 (10.1016/j.cell.2022.09.008). ----------
+function colon() {
+  const r = rnd(31), wv = (x) => Math.sin(x * .05 + 1) * .9, S = 8.5, xs = Array.from({ length: 12 }, (_, i) => 3 + i * S);
+  const Y = { surf: 6.5, crypt: 28.2, mm: 29.9, sub: 31.1, circ: 36.2, plex: 45.2, lon: 47.7, ser: 49.9 };
+  let auto = '', b = '', g = '', m = '';
+  const band = (y0, y1, fill) => `<path d="M0 ${f(y0 + wv(0))} ${Array.from({ length: 21 }, (_, i) => `L${i * 5} ${f(y0 + wv(i * 5))}`).join(' ')} L100 ${f(y1 + wv(100))} ${Array.from({ length: 21 }, (_, i) => `L${100 - i * 5} ${f(y1 + wv(100 - i * 5))}`).join(' ')}Z" fill="${fill}"/>`;
+  auto += band(Y.surf, Y.crypt + 1.6, 'rgba(46,60,70,.38)') + band(Y.circ, Y.plex, 'rgba(52,56,64,.45)') + band(Y.lon, Y.ser + .6, 'rgba(52,56,64,.4)');
+  const nuc = (x, y, rx, ry, rot, a = .8) => { b += ell(x, y + wv(x), rx, ry, rot, rgba('#4f74ff', a)) + ell(x - rx * .2, y + wv(x) - ry * .2, rx * .4, ry * .4, rot, rgba('#a8bcff', a * .6)); };
+  // crypts: dark lumen and goblet gaps cut into the epithelium, nuclei along the basement membrane
+  xs.forEach((cx) => {
+    auto += `<path d="M${cx} ${f(Y.surf + wv(cx))} L${cx} ${f(Y.crypt - 1.4 + wv(cx))}" stroke="#020302" stroke-width=".9"/>`;
+    for (let y = Y.surf + 2.6; y < Y.crypt - 1.6; y += 1.15) [-1, 1].forEach((s) => {
+      if (r() < .24) { auto += ell(cx + s * 1.1, y + .3 + wv(cx), .65, .5, 0, '#020302'); return; }
+      nuc(cx + s * 2.05, y + (r() - .5) * .3, .75, .34, (r() - .5) * 14);
+    });
+    for (let k = 0; k <= 6; k++) { const a = k / 6 * Math.PI; nuc(cx + Math.cos(a) * 2.05, Y.crypt - 1.6 + Math.sin(a) * 1.9, .7, .34, a * 57.3); }
+  });
+  for (let x = .8; x < 100; x += .95) if (xs.every((cx) => Math.abs(x - cx) > .7)) nuc(x, Y.surf + 1, .3, .65, (r() - .5) * 10, .7);
+  // lamina propria: scattered stromal nuclei and CD45+ cells (membrane ring around a round nucleus)
+  const imm = (x, y, k = 1) => { const R = .95 + r() * .3, yy = y + wv(x); g += C(x, yy, R * 1.35, rgba('#3cff6a', .12 * k)) + C(x, yy, R, rgba('#3cff6a', .62 * k)) + C(x, yy, R * .68, '#020302'); b += C(x + (r() - .5) * .2, yy, R * .62, rgba('#4f74ff', .85)); };
+  const lp = (x) => xs.some((cx) => Math.abs(x - cx - S / 2) < 1.25);
+  pack(r, 34, (x, y) => (lp(x) && y > Y.surf + 2.5 && y < Y.crypt) || (y > Y.crypt + .6 && y < Y.mm - .3), .45, .6, .5, 5000, [0, Y.surf, 100, Y.mm], 1).forEach((c) => nuc(c.x, c.y, .5, .38, r() * 180, .6));
+  xs.slice(0, -1).forEach((cx, i) => { [.25, .55, .8].forEach((t, k) => { if ((i + k) % 3 !== 1 || r() < .3) imm(cx + S / 2 + (r() - .5) * .5, Y.surf + 3 + t * (Y.crypt - Y.surf - 3)); }); });
+  [[9, Y.crypt + 1.4], [44, Y.crypt + 1.3], [79, Y.crypt + 1.5], [24, Y.sub + 2.6], [61, Y.sub + 3.6]].forEach(([x, y]) => imm(x, y, .9));
+  // muscularis mucosae, submucosa with two vessels, circular muscle, myenteric ganglia, longitudinal muscle, serosa
+  for (let x = 1; x < 100; x += 2.3 + r()) nuc(x, Y.mm + .7, 1.1, .2, (r() - .5) * 6, .7);
+  const ves = [[31, Y.sub + 2.8, 3.3, 1.7], [73, Y.sub + 2.4, 2.2, 1.2]];
+  ves.forEach(([x, y, rx, ry]) => { auto += ell(x, y + wv(x), rx, ry, 0, '#020302'); for (let k = 0; k < 9; k++) { const a = k / 9 * 6.283; nuc(x + Math.cos(a) * (rx + .3), y + Math.sin(a) * (ry + .3), .7, .22, a * 57.3 + 90, .7); } });
+  for (let i = 0; i < 12; i++) { const x = r() * 100; if (ves.every(([vx, , rx]) => Math.abs(x - vx) > rx + 1.5)) nuc(x, Y.sub + 1 + r() * 4, .9, .25, (r() - .5) * 30, .55); }
+  for (let y = Y.circ + .8; y < Y.plex - .4; y += .95) for (let x = r() * 3; x < 100; x += 2.6 + r() * 1.6) nuc(x, y + (r() - .5) * .3, 1.15, .22, (r() - .5) * 5, .7);
+  const gang = [[12, 4.2], [39, 3.4], [64, 4.6], [90, 3.6]];
+  auto += band(Y.plex + .6, Y.plex + 1.2, 'rgba(70,70,80,.35)');
+  gang.forEach(([x, rx]) => { auto += ell(x, Y.plex + .9 + wv(x), rx, 1.5, 0, 'rgba(80,80,96,.6)'); for (let k = 0; k < Math.round(rx); k++) nuc(x - rx * .6 + k * rx * .45, Y.plex + .9 + (r() - .5) * .5, .62, .52, 0, .5); nuc(x - rx * .8, Y.plex + .3, .35, .25, 0, .9); nuc(x + rx * .75, Y.plex + 1.5, .35, .25, 0, .9); });
+  for (let x = r(); x < 100; x += .85 + r() * .5) nuc(x, Y.lon + .4 + r() * 1.6, .32, .28, 0, .75);
+  for (let x = 2; x < 100; x += 6 + r() * 3) nuc(x, Y.ser + .4, 1.3, .18, 0, .7);
+  // CGRP: thin varicose fibers (a smooth path plus beads)
+  const fiber = (P, a = 1) => {
+    const Q = P.map(([x, y]) => [x, y + wv(x)]);
+    let d = `M${f(Q[0][0])} ${f(Q[0][1])}`;
+    for (let i = 1; i < Q.length; i++) { const [x0, y0] = Q[i - 1], [x1, y1] = Q[i]; d += ` Q${f((x0 + x1) / 2 + (r() - .5) * .8)} ${f((y0 + y1) / 2 + (r() - .5) * .8)} ${f(x1)} ${f(y1)}`; }
+    m += `<path d="${d}" stroke="${rgba('#ff5aa0', .45 * a)}" stroke-width=".22" fill="none"/>`;
+    for (let i = 1; i < Q.length; i++) { const [x0, y0] = Q[i - 1], [x1, y1] = Q[i], n = Math.floor(Math.hypot(x1 - x0, y1 - y0) / 1.1); for (let k = 0; k < n; k++) { const t = (k + r() * .6) / n; m += C(x0 + (x1 - x0) * t, y0 + (y1 - y0) * t, .2 + r() * .14, rgba('#ff7ab8', .95 * a)); } }
+  };
+  [0, 1, 3, 4, 6, 8, 9].forEach((i) => { const x = xs[i] + S / 2; fiber([[x + .3, Y.sub + .5], [x - .2, Y.crypt + 1], [x + .25, Y.crypt - 6], [x - .3, Y.surf + 9], [x + .1, Y.surf + 3.4], [x + (i % 2 ? 2.8 : -2.8), Y.surf + 2.6]]); });
+  fiber([[0, Y.sub + 1.2], [14, Y.sub + 1.6], [27, Y.sub + .9], [44, Y.sub + 1.5], [60, Y.sub + 1], [82, Y.sub + 1.7], [100, Y.sub + 1.1]], .8);
+  ves.forEach(([x, y, rx, ry]) => { const P = []; for (let k = 0; k <= 14; k++) { const a = k / 12 * 6.283; P.push([x + Math.cos(a) * (rx + .9), y + Math.sin(a) * (ry + .8)]); } fiber(P); });
+  [[Y.circ + 3, 6, 47], [Y.circ + 7.5, 52, 97]].forEach(([y, x0, x1]) => fiber([[x0, y], [(x0 * 2 + x1) / 3, y + .4], [(x0 + x1 * 2) / 3, y - .3], [x1, y + .2]], .75));
+  [[20, 0], [57, 1]].forEach(([x]) => fiber([[x, Y.sub + 1.5], [x + 1, Y.circ + 4], [x - .5, Y.plex + 1]]));
+  fiber([[0, Y.plex + .9], ...gang.flatMap(([x, rx]) => [[x - rx, Y.plex + .4], [x, Y.plex + 1.5], [x + rx, Y.plex + .5]]), [100, Y.plex + 1]], 1);
+  gang.forEach(([x, rx]) => { for (let k = 0; k < 12; k++) m += C(x + (r() - .5) * rx * 1.7, Y.plex + .9 + wv(x) + (r() - .5) * 2, .24 + r() * .12, rgba('#ff7ab8', .9)); });
+  const lab = (y, s) => `<text x="99" y="${f(y)}" font-size="2.6" font-family="-apple-system,system-ui,sans-serif" font-weight="600" fill="#B4B2A9" text-anchor="end" stroke="#020302" stroke-width=".7" paint-order="stroke">${s}</text>`;
+  return { bg: '#020302', channels: ['CGRP', 'CD45', 'DAPI'], colors: ['#ff5aa0', '#3cff6a', '#7f9cff'], scale: [10, '50 µm'], labelY: 4.4,
+    svg: `<rect width="100" height="60" fill="#020302"/>` + noise(r, 140, '#334433', .45) + `<g ${SCREEN}>${auto}</g><g ${SCREEN}>${b}</g><g ${SCREEN}>${g}</g><g ${SCREEN}>${m}</g>`
+      + lab(4.4, 'lumen') + lab(18.5, 'mucosa') + lab(34.8, 'submucosa') + lab(41.6, 'muscle') };
+}
+
+const DRAW = { drg, cord, nerve, islet, microglia, rnascope, 'cortex-if': cortexIf, colon };
 
 // The section under the microscope. mode: 'stain' or 'atlas' (brain-coronal only).
 // Returns { bg, svg } for a 100×60 viewBox, with channel names and a scale bar.
@@ -320,7 +381,7 @@ export function scopeView(unitId, slide, atlas, mode = 'stain', accent) {
 // clear, Nissl/LFB ones violet and blue, semithin ones tiny dark-blue dots, several per slide. ----------
 export const FROST = { A: '#8fd18b', B: '#f4a6c4', C: '#8fc0ea', D: '#f6e27a', E: '#f7b26b' };
 const HAND = 'font-family="Bradley Hand,Segoe Print,Marker Felt,cursive"';
-const FLUOR = new Set(['drg', 'islet', 'microglia', 'rnascope', 'cortex-if']);
+const FLUOR = new Set(['drg', 'islet', 'microglia', 'rnascope', 'cortex-if', 'colon']);
 const ghost = 'rgba(232,226,212,.32)';
 function sections(slide, atlas) {
   const t = slide?.tissue;
@@ -330,6 +391,7 @@ function sections(slide, atlas) {
   else if (t === 'nerve') [[38, 28], [62, 32]].forEach(([x, y]) => { s += C(x, y, 2.2, '#2c3170') + C(x + .4, y - .4, 1.2, '#4a4f98'); });
   else if (t === 'drg') [16, 38, 60, 82].forEach((x, i) => { const y = 30 + (i % 2 ? 2 : -2); s += ell(x, y, 7, 4.6, -8 + i * 5, ghost) + `<path d="M${x - 7} ${y} l-6 -1" stroke="${ghost}" stroke-width="2"/>`; });
   else if (t === 'islet') [20, 50, 80].forEach((x, i) => { s += `<path d="M${x - 10} 28 Q${x - 6} ${18 + i * 2} ${x + 1} 21 Q${x + 11} 19 ${x + 10} 30 Q${x + 9} 41 ${x} 39 Q${x - 11} ${42 - i} ${x - 10} 28Z" fill="${ghost}"/>`; });
+  else if (t === 'colon') [20, 50, 80].forEach((x, i) => { const y = 30 + (i % 2 ? 2 : -2); s += ell(x, y, 10, 8.5, i * 20, 'none', `stroke="${ghost}" stroke-width="2.6"`) + ell(x, y, 7.2, 5.8, i * 20, 'none', 'stroke="rgba(232,226,212,.16)" stroke-width="1.2"'); });
   else if (t) [17, 50, 83].forEach((x) => { s += ell(x, 30, 12, 9, 0, ghost) + ell(x - 4, 27, 3, 2, 0, 'rgba(232,226,212,.18)') + ell(x + 4, 27, 3, 2, 0, 'rgba(232,226,212,.18)'); });
   return s;
 }
@@ -343,7 +405,7 @@ export function slideSVG(unitId, slide, atlas, big = false) {
 <rect x=".5" y=".5" width="149" height="49" rx=".8" fill="rgba(214,232,226,.16)" stroke="#cfe6df" stroke-opacity=".75"/>
 <rect x="1.2" y="1.2" width="147.6" height="47.6" rx=".5" fill="none" stroke="rgba(255,255,255,.18)" stroke-width=".5"/>
 <rect x="1.5" y="1.5" width="38" height="47" fill="${fr}"/>${grain}
-${txt(big ? 14 : 22, big ? 9 : 11, unitId)}${big ? txt(25, 6, lines[0]) + txt(33, 6, lines[1]) : txt(35, 7.5, lines[0])}
+${txt(big ? 14 : 22, big ? 9 : 11, unitId)}${big ? txt(25, Math.min(6, 62 / (lines[0]?.length || 1)), lines[0]) + txt(33, Math.min(6, 62 / (lines[1]?.length || 1)), lines[1]) : txt(35, 7.5, lines[0])}
 ${slide ? `<svg x="44" y="4" width="102" height="42" viewBox="0 0 100 60">${sections(slide, atlas)}</svg>
 <rect x="44" y="3" width="102" height="44" fill="rgba(255,255,255,.03)" stroke="rgba(235,245,250,.55)" stroke-width=".45"/>
 <rect x="43.3" y="2.3" width="103.4" height="45.4" fill="none" stroke="rgba(235,245,250,.12)" stroke-width="1.2"/>

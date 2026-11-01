@@ -160,18 +160,20 @@
     },
     {
       "unit": "B8",
-      "tissue": "request",
+      "tissue": "colon",
       "label": "gut wall",
       "caption": "A drawn gut-wall section showing the neuroimmune unit in one view.",
-      "wish": "Mouse colon wall cross-section: CGRP+ extrinsic afferent endings in the mucosa and muscle layers, beside lamina-propria immune cells; immunofluorescence, mouse.",
-      "references": [
+      "stain": "CGRP · CD45 · DAPI",
+      "sources": [
         {
-          "citation": "Wolfson RL et al., 2023, Cell (whole-mount colon afferent endings)",
-          "doi": "10.1016/j.cell.2023.07.007"
+          "citation": "Wolfson RL et al., 2023, Cell",
+          "doi": "10.1016/j.cell.2023.07.007",
+          "verified": true
         },
         {
-          "citation": "Zhang W et al., 2022, Cell (gut-innervating nociceptors among mucosal immune cells)",
-          "doi": "10.1016/j.cell.2022.09.008"
+          "citation": "Zhang W et al., 2022, Cell",
+          "doi": "10.1016/j.cell.2022.09.008",
+          "verified": true
         }
       ]
     },
