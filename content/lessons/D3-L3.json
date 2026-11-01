@@ -5,11 +5,7 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Describe the pseudounipolar shape of a DRG neuron and why it suits organ-to-cord signalling.",
-  "tags": [
-    "DRG",
-    "pseudounipolar",
-    "morphology"
-  ],
+  "tags": ["DRG", "pseudounipolar", "morphology"],
   "confidence": "high",
   "steps": [
     {
@@ -17,7 +13,8 @@
       "id": "s1",
       "title": "One stem that splits in two",
       "body": "A [[DRG]] neuron is **[[pseudounipolar]]**: a single process leaves the cell body and immediately forks into two branches —\n\n- a **peripheral** branch running out to the body (skin, colon, pancreas),\n- a **central** branch running into the spinal cord [[dorsal horn]].\n\nThe cell body sits off to the side in the ganglion, not between the two ends.",
-      "flag": null
+      "flag": null,
+      "visual": { "type": "svg-anim", "src": "assets/pseudounipolar-neuron.svg", "alt": "A pseudounipolar DRG neuron: the cell body sits off to the side on a short stem that forks into a peripheral branch to an organ and a central branch into the dorsal horn; a signal travels from the organ up past the fork into the cord.", "caption": "One stem forks to periphery and cord; the cell body sits off to the side." }
     },
     {
       "type": "mcq",
@@ -29,9 +26,7 @@
         "It means the neuron has no axon",
         "It prevents any central projection"
       ],
-      "answer": [
-        1
-      ],
+      "answer": [1],
       "multi": false,
       "explanation": "Because the peripheral branch connects to the cell body, a retrograde virus injected into the pancreas travels back and labels exactly the neurons innervating it (the C4 logic)."
     },
@@ -46,9 +41,7 @@
         "Ending → ventral root → muscle",
         "It stays in the organ"
       ],
-      "answer": [
-        0
-      ],
+      "answer": [0],
       "reveal": "The signal travels along the peripheral branch, past the DRG cell body, down the central branch, and into the spinal cord dorsal horn — where the next lesson picks up the central side.",
       "freeText": false
     }

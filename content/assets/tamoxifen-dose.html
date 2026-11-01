@@ -1,111 +1,41 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tamoxifen dose → labeling density</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  :root{
-    --bg:#f5f7fb; --card:#fff; --ink:#131722; --muted:#5b6472; --accent:#5B8DEF;
-    --line:#e6e9f0; --chip:#eef2fb; --off:#c9d0dc; --on:#e0607a; --good:#1a9b6c; --bad:#d6455b;
-  }
-  @media (prefers-color-scheme:dark){ :root{
-    --bg:#0f1420; --card:#171d2b; --ink:#eef1f7; --muted:#9aa4b5; --accent:#6f9bff;
-    --line:#283040; --chip:#1e2740; --off:#2b3346; --on:#ff6f88; --good:#35c58b; --bad:#ff6f88;
-  }}
-  *{box-sizing:border-box} html,body{margin:0}
-  body{background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:16px}
-  .wrap{width:100%;max-width:430px}
-  .kick{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-  h1{font-size:19px;margin:.3em 0 .2em}
-  .lead{font-size:14px;color:var(--muted);margin:0 0 14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
-  .ganglion{background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-bottom:14px}
-  .n{width:100%;aspect-ratio:1;border-radius:50%;background:var(--off);transition:background .18s ease, box-shadow .18s ease, transform .18s ease}
-  .n.on{background:var(--on);box-shadow:0 0 0 2px color-mix(in srgb,var(--on) 35%,transparent);transform:scale(1.06)}
-  .row{display:flex;align-items:center;gap:12px;margin:10px 0 4px}
-  .row label{font-weight:600;font-size:14px;white-space:nowrap}
-  input[type=range]{flex:1;accent-color:var(--accent);height:28px}
-  .scale{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:-2px}
-  .readout{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--chip);border:1px solid var(--line)}
-  .pct{font-size:22px;font-weight:800}
-  .verdict{font-weight:700;margin-top:4px}
-  .verdict.good{color:var(--good)} .verdict.mid{color:var(--accent)} .verdict.bad{color:var(--bad)}
-  .explain{font-size:13px;color:var(--muted);margin-top:6px}
-  .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
-</style>
-</head>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;--off:#d8d6cd;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;--off:#3a3a37;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:15px}
+  .field{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin-bottom:16px}
+  .n{width:100%;aspect-ratio:1;border-radius:50%;background:var(--off);transition:.15s}
+  .n.on{background:var(--track)}
+  .row{display:flex;align-items:center;gap:12px;min-height:44px}
+  label{font-weight:600;white-space:nowrap}
+  input[type=range]{flex:1;height:44px;accent-color:var(--track)}
+  .readout{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
+  .pct{font-size:20px;font-weight:800}
+  .verdict{font-weight:700;margin-top:3px} .verdict.good{color:var(--ok)} .verdict.warn{color:var(--warn)} .verdict.bad{color:var(--bad)}
+</style></head>
 <body>
-<div class="wrap">
-  <div class="kick">C2 · Lesson 3 · Interactive</div>
-  <h1>Tamoxifen dose sets labeling density</h1>
-  <p class="lead">CreER only recombines when tamoxifen is present — and how <em>much</em> you give sets how many neurons light up. Drag the dose.</p>
-
-  <div class="card">
-    <div class="ganglion" id="field" aria-label="A field of DRG neurons; labeled ones are colored."></div>
-
-    <div class="row">
-      <label for="dose">Tamoxifen</label>
-      <input id="dose" type="range" min="0" max="100" value="12" step="1" aria-label="Tamoxifen dose">
-    </div>
-    <div class="scale"><span>none</span><span>low dose</span><span>high dose</span></div>
-
-    <div class="readout">
-      <div class="pct"><span id="pct">4</span>% of neurons labeled</div>
-      <div class="verdict" id="verdict"></div>
-      <div class="explain" id="explain"></div>
-    </div>
-  </div>
-  <p class="cap">Low dose → sparse, isolated neurons you can trace one-by-one. High dose → dense, overlapping labels.</p>
-</div>
-
+  <div class="field" id="field" aria-label="DRG neurons; labelled ones are filled"></div>
+  <div class="row"><label for="dose">Tamoxifen dose</label><input id="dose" type="range" min="0" max="100" value="14" aria-label="Tamoxifen dose"></div>
+  <div class="readout"><div class="pct"><span id="pct">4</span>% labelled</div><div class="verdict" id="verdict"></div></div>
 <script>
 (function(){
-  var N = 100, field = document.getElementById('field');
-  // deterministic per-neuron threshold so dots light up progressively & stably
-  function rng(seed){ return function(){ seed = (seed*1664525 + 1013904223) % 4294967296; return seed/4294967296; }; }
-  var r = rng(20260401), thresh = [];
-  var dots = [];
-  for (var i=0;i<N;i++){
-    thresh.push(r());
-    var d = document.createElement('span'); d.className='n'; field.appendChild(d); dots.push(d);
-  }
-  var dose = document.getElementById('dose'),
-      pct = document.getElementById('pct'),
-      verdict = document.getElementById('verdict'),
-      explain = document.getElementById('explain');
-
-  function frac(v){ return Math.pow(v/100, 1.15) * 0.92; } // monotonic dose→recombination
-
+  var N=40,field=document.getElementById('field'),dots=[],th=[],seed=20260401;
+  function r(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296;}
+  for(var i=0;i<N;i++){th.push(r());var d=document.createElement('span');d.className='n';field.appendChild(d);dots.push(d);}
+  var dose=document.getElementById('dose'),pct=document.getElementById('pct'),verdict=document.getElementById('verdict');
+  function frac(v){return Math.pow(v/100,1.15)*0.92;}
   function render(){
-    var f = frac(+dose.value), count=0;
-    for (var i=0;i<N;i++){
-      var on = thresh[i] < f;
-      dots[i].classList.toggle('on', on);
-      if(on) count++;
-    }
-    pct.textContent = count;
-    if (count === 0){
-      verdict.textContent = 'No recombination';
-      verdict.className = 'verdict';
-      explain.textContent = 'Without tamoxifen, CreER stays inert in the cytoplasm — nothing is labeled.';
-    } else if (count <= 10){
-      verdict.textContent = '✓ Sparse — single-neuron tracing possible';
-      verdict.className = 'verdict good';
-      explain.textContent = 'Labeled cells are isolated, so each traced ending clearly belongs to one neuron. This is how the colon paper measured single-afferent morphology.';
-    } else if (count <= 40){
-      verdict.textContent = 'Moderate — some overlap';
-      verdict.className = 'verdict mid';
-      explain.textContent = 'Good for population-level labeling, but neighboring endings start to overlap — single-cell tracing gets ambiguous.';
-    } else {
-      verdict.textContent = '✗ Dense — can’t isolate single neurons';
-      verdict.className = 'verdict bad';
-      explain.textContent = 'Great if you want to label the whole population, but endings tangle together — you can no longer follow one neuron’s branches.';
-    }
+    var f=frac(+dose.value),c=0;
+    for(var i=0;i<N;i++){var on=th[i]<f;dots[i].classList.toggle('on',on);if(on)c++;}
+    var p=Math.round(c/N*100);pct.textContent=p;
+    if(c===0){verdict.textContent='No recombination';verdict.className='verdict';}
+    else if(p<=12){verdict.textContent='✓ sparse — single neurons traceable';verdict.className='verdict good';}
+    else if(p<=45){verdict.textContent='moderate — some overlap';verdict.className='verdict warn';}
+    else{verdict.textContent='✕ dense — endings overlap';verdict.className='verdict bad';}
   }
-  dose.addEventListener('input', render);
-  render();
+  dose.addEventListener('input',render);render();
 })();
 </script>
-</body>
-</html>
+</body></html>

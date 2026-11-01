@@ -41,6 +41,10 @@ function widget(v, src) {
   window.addEventListener('message', onMessage);
   fetch(src).then((r) => (r.ok ? r.text() : Promise.reject(new Error(r.status)))).then((html) => {
     const probe = `<script>(()=>{const s=()=>parent.postMessage({nlFrame:${JSON.stringify(id)},h:Math.ceil(document.documentElement.getBoundingClientRect().height)},'*');new ResizeObserver(s).observe(document.documentElement);addEventListener('load',s);s();})();<\/script>`;
+    // The app supports light and dark; a frame that doesn't say so gets an
+    // opaque white backdrop in dark mode (under its dark-mode text colors).
+    const scheme = '<meta name="color-scheme" content="light dark"><style>:root{color-scheme:light dark}</style>';
+    html = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, (m) => m + scheme) : scheme + html;
     frame.srcdoc = /<\/body>/i.test(html) ? html.replace(/<\/body>/i, `${probe}</body>`) : html + probe;
     frame.dataset.loaded = '1';
   }).catch(() => {

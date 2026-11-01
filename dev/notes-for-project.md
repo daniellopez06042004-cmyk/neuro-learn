@@ -1,20 +1,29 @@
-### 2026-10-31: C1 + D1–D3 batch imported (17 lessons, glossary now 57 terms)
+### 2026-10-31: visual redesign reviewed on a phone (dark and light)
 
-**Diffs to your files** (please apply to your copies):
-- `lessons/D3-L3.json` › `s1` › `visual`: `{ "type": "svg-anim", "src": "assets/aav-retrograde.svg", … }` → removed (the whole `visual` key).
-  - Why: that animation draws a single line from the pancreas to the DRG cell body, with AAV2-retro and hM4Di labels. It has no forked T-shaped stem and no central branch into the cord, so it contradicts what D3-L3 teaches, and the alt text described things that aren't drawn.
-  - Ask: could you make a dedicated `assets/pseudounipolar-neuron.svg`? The cell body sits in the DRG on a short stem, which forks into a peripheral branch out to an organ and a central branch into the dorsal horn. Ideally a signal travels from the periphery straight past the cell body into the cord. Then add it back to D3-L3 `s1`.
+**Overall: a huge improvement.** Every label is readable now, everything sits on the app's surfaces in both themes, and widgets went from 830–884px tall down to 225–372px. `intersection` and `control-grid-anim` are excellent as they are, and the new `pseudounipolar-neuron` works well in D3-L3. I reviewed each animation by freezing it at its start, middle and end.
 
-**Changed on the app side to match how you write:**
-- **Glossary link order:** you write `[[term|shown words]]` (wiki-style, for example `[[loxP|floxed]]`). The app's spec said the reverse, so since the C2–C5 import, 15 links like that were showing the term instead of your words. Now fixed: the app reads term-first, and if only the second half is a glossary term it reads it the other way round. Keep writing exactly as you have been.
-- **Category matching:** `match` steps may now repeat right-hand items (D1-L2's afferent/efferent sort). Left-hand items must still all be different.
+**Your questions:**
+1. **`offset-path`:** it renders and animates correctly in the app. Safari supports it on iOS 16 and later, so keep it. In fact, use it in `aav-retrograde` too (see below). If Dan sees a still dot on his phone, we'll switch to SMIL.
+2. **"On" color:** agreed. Use the track color for "on" or "active", and reserve green for ✓ checks. That's now the house rule.
 
-**Checked:** all 17 lessons pass; no sources in this batch (textbook-level, as you noted); the C1-L5 `simplified` and D3-L4 `uncertain` flags show as intended; all 57 glossary terms are in and every `[[link]]` resolves.
+**Fixes, one line each** (no files of yours were changed on this side):
+- `cre-lox.svg` › end state: two loxP triangles remain → **one**. Cre excision leaves a single loxP behind; the other goes with the excised STOP. This one is a science fix.
+- `aav-retrograde.svg` › virus particles: they `translateY(-150px)` straight up from x≈168, but the axon runs diagonally from (180,300) to the fork at (150,150). So they leave the axon and stop about 18px to the side, never reaching the cell body. Animate them along the branch path with `offset-path` and end at the soma (116,150).
+- `aav-retrograde.svg` › labels: the tissue ellipse has no "pancreas" label → add one. "· expresses" has a stray leading "· ". "inject AAV2-retro" sits on top of the virus at the terminal → move it beside it.
+- `creer-tamoxifen.svg` › end state ("+ tamoxifen: on"): the reporter stays pale and no tamoxifen is visible → light the reporter in the track color with an "ON" badge and show tamoxifen bound to CreER. The CreER pill also sits over the DNA line, so nudge it off.
+- `cno-clozapine.svg` › end state: the clozapine dot stops on the "blood–brain barrier" label and covers it → end it beside the neuron, or move the label to the left end of the dashed line. The word "clozapine" overflows its circle → make it a pill.
+- `pseudounipolar-neuron.svg` › "to organ" overlaps the organ ellipse → move it to the side and label the organ itself (for example "colon / pancreas").
+- `targeting-funnel.svg` › the top row of dots and the "24" overlap the funnel walls → inset the first row and put all the counts outside the walls.
+- `dreadd-excite-silence.svg` › the "fires" label overlaps the spike trace → move it below or to the left.
+- `tamoxifen-dose.html` › the range input is 18px tall → give it `min-height: 44px` (the thumb can stay small visually).
+- Widgets › selected options: I couldn't see a ✓ on the selected chips in `targeting-composer` → please add one, as the guide asks.
 
-**Next, in order:** D6 (GI & pancreas anatomy), then the capstone unit E (it unlocks after C5 and D6), then the new D3-L3 diagram whenever it suits.
+**Changed in the app for you:** widgets now get `color-scheme: light dark` added automatically. Without it, dark mode painted a white backdrop behind your transparent widgets, under light text, so selected options became invisible. It's fixed for all four. The guide now asks you to include the line too.
+
+**Still to come:** D6, then the capstone unit E.
 
 ### Earlier (all resolved)
 
-- C4-L3 flag: both copies match.
-- "sensory-immune organ": confirmed against the abstract; your wording stands.
-- Unit snippets, whole-file glossary and Field Pulse handoffs all work as you're doing them.
+- C1 + D1–D3 imported; the D3-L3 diagram is now in place.
+- Glossary links read `[[term|shown]]`; match steps may repeat right-hand items for sorting.
+- The C4-L3 flag and the "sensory-immune organ" wording are settled.
