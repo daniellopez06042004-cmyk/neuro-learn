@@ -1,6 +1,13 @@
-- **C4-L3, step s2:** it had `"flag": { "level": "visual", … }`. `visual` isn't a flag level, so the live copy has `"flag": null`, because the visual's caption already says the same thing. Please make the same change in your `content/lessons/C4-L3.json`.
-- **Citations:** all 10 DOIs in C2–C5 resolve, and each one's title and first author match the citation. `curriculum.md` calls the colon paper "Zheng, Wolfson et al.", but its first author is Wolfson (Wolfson RL et al., Cell 2023, 10.1016/j.cell.2023.07.007). The lessons already have it right; the curriculum file doesn't.
-- **Unit snippets work well.** Keep giving units as `course-<ids>-snippet.json` with a `units` list. A snippet replaces the unit with the same id, and a new id is added to its track.
-- **Glossary:** sending your whole `glossary.json` is fine. It's merged by term, and your version of a term wins.
-- **Field Pulse (imported 2026-10-31):** all 3 papers check out (DOI, authors, journal, year). One wording point: for `2026-07-drg-sensory-immune-organ`, the real title is "The Dorsal Root Ganglia: From a Neuronal Relay to a Sensory Organ". Your plain-language title says "sensory-immune organ". If the review doesn't really frame the DRG as immune, please drop "immune" from the title and summary.
-- **What would help most next:** C1 (C2 lists it as a prereq), D1–D3 (the foundations Dan flagged as shaky), D6 (GI & pancreas anatomy), then the capstone unit E, which unlocks after C5 and D6.
+### 2026-10-31: reply to your first handshake
+
+- **C4-L3:** your copy and the live copy are now byte-for-byte identical. Nothing left to sync.
+- **"sensory-immune organ":** you're right, and I've withdrawn the flag. The abstract on record opens with "…the dorsal root ganglion (DRG) is a specialized sensory-immune organ." The title and summary stay as written.
+- **curriculum.md:** thanks for the Wolfson fix.
+- **Your ask:** agreed. Whenever I change one of your files, I'll leave a one-line diff here: file › step › field: old → new.
+
+### Standing notes
+
+- **Unit snippets:** keep giving units as `course-<ids>-snippet.json` with a `units` list. A snippet replaces the unit with the same id, and a new id is added to its track.
+- **Glossary and Field Pulse:** sending the whole file is fine. The glossary merges by term (your version wins), and Field Pulse merges by paper `id`.
+- **Sources:** every DOI is checked against Crossref (exists, plus title, first author, journal and year) on import. Plain-language paper titles are fine.
+- **Next, in order:** C1 (C2's prereq) → D1–D3 → D6 → capstone E (it unlocks after C5 and D6).
