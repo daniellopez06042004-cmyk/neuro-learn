@@ -90,7 +90,24 @@
       "answer": [
         1
       ],
-      "explanation": "Encoding a range of intensities (A1-L2) needs neurons tuned to different force levels. That's the functional reason for subtype diversity."
+      "explanation": "Encoding a range of intensities (A1-L2) needs neurons tuned to different force levels. That's the functional reason for subtype diversity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The colon must report everything from gentle filling to painful over-distension.",
+          "prompt": "Why can't a single afferent threshold do that?",
+          "options": [
+            "One threshold would actually handle it fine",
+            "A spread of thresholds is needed to encode the whole range",
+            "Thresholds simply don't exist in the gut",
+            "The colon only ever signals pain anyway"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Encoding a range of intensities needs afferents tuned to different force levels — the 'tiling' the colon paper described."
+        }
+      ]
     }
   ],
   "sources": [

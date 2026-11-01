@@ -47,7 +47,24 @@
       "answer": [
         1
       ],
-      "explanation": "Directly mechanically gated channels skip the slow biochemical relays, so touch can be signaled almost instantly, fast enough to adjust grip in real time."
+      "explanation": "Directly mechanically gated channels skip the slow biochemical relays, so touch can be signaled almost instantly, fast enough to adjust grip in real time.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Touch has to be signaled fast enough to adjust your grip as an object starts to slip.",
+          "prompt": "How does a mechanically gated channel manage that speed?",
+          "options": [
+            "Through a slow amplifying enzyme cascade",
+            "Force opens the channel directly, with no messenger relay",
+            "By first waiting for calcium from internal stores",
+            "By converting the force into light"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Direct mechanical gating skips biochemical relays, so force becomes current almost instantly."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -63,7 +80,23 @@
       "answer": [
         1
       ],
-      "reveal": "A channel that opens to membrane stretch in an isolated patch is intrinsically mechanosensitive. That experiment is exactly how Piezo channels were pinned down (next lesson)."
+      "reveal": "A channel that opens to membrane stretch in an isolated patch is probably intrinsically mechanosensitive. The strongest proof is the purified channel opening in an artificial lipid membrane, later shown for Piezo1 (next lesson).",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You stretch an isolated membrane patch holding a candidate channel and record current. This suggests the channel is…",
+          "options": [
+            "Active only within a whole animal",
+            "Intrinsically mechanosensitive — opened by tension itself",
+            "A heat-gated channel",
+            "Dependent on added capsaicin"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Current from stretch alone, with no other cells or messengers, points to intrinsic mechanosensitivity. The strongest proof is the purified channel opening in an artificial lipid membrane, later shown for Piezo1."
+        }
+      ]
     }
   ],
   "sources": [],

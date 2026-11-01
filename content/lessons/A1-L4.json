@@ -39,10 +39,10 @@
           "setup": "On a strict labeled-line view, each line carries one fixed quality.",
           "prompt": "So activating the 'heat line' with capsaicin should feel like…",
           "options": [
-            "Cooling, much like menthol does",
+            "Cooling, in much the same way that menthol does",
             "Heat or burning, however the line was triggered",
-            "Gentle brushing or light touch",
-            "Nothing noticeable at all"
+            "Gentle brushing, like a light touch on the skin",
+            "Nothing noticeable happening at all"
           ],
           "answer": [
             1

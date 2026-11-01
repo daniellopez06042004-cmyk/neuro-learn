@@ -66,7 +66,24 @@
       "answer": [
         1
       ],
-      "explanation": "CGRP plus TRPV1 is the classic peptidergic-nociceptor combination. Co-staining is how subtypes are identified in tissue."
+      "explanation": "CGRP plus TRPV1 is the classic peptidergic-nociceptor combination. Co-staining is how subtypes are identified in tissue.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A DRG neuron stains positive for both CGRP and TRPV1.",
+          "prompt": "What type is it most likely to be?",
+          "options": [
+            "A large Aβ low-threshold touch neuron",
+            "A peptidergic nociceptor",
+            "A cold-only sensing neuron",
+            "Not a neuron at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "CGRP + TRPV1 is the classic peptidergic-nociceptor combination — co-staining is how subtypes are identified in tissue."
+        }
+      ]
     }
   ],
   "sources": [

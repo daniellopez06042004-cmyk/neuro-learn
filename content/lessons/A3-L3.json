@@ -68,7 +68,23 @@
       "answer": [
         1
       ],
-      "reveal": "If TRPA1 is the mustard-oil receptor, removing it should abolish the response. This is the standard logic for testing whether a channel is *necessary*."
+      "reveal": "If TRPA1 is the mustard-oil receptor, removing it should abolish the response. This is the standard logic for testing whether a channel is *necessary*.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Mustard oil opens TRPA1. In a TRPA1-knockout mouse, the response to mustard oil should be…",
+          "options": [
+            "Normal, since other channels fully cover it",
+            "Largely absent, if TRPA1 is truly its receptor",
+            "Replaced by a distinct cooling sensation",
+            "Stronger than in a wild-type mouse"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Removing the receptor should abolish the response — the standard necessity test for a candidate channel."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -87,7 +103,24 @@
       "flag": {
         "level": "simplified",
         "note": "Expression patterns differ across visceral afferent subtypes and organs."
-      }
+      },
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A gut afferent co-expresses TRPV1 and TRPA1.",
+          "prompt": "What kind of signals is it best tuned to detect?",
+          "options": [
+            "Only gentle stretch of the gut wall",
+            "Chemical and inflammatory danger, like acid and irritants",
+            "Only cold temperatures in the lumen",
+            "Only the sugar content of a meal"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "That TRP combination points to acid/irritant/inflammatory sensing — central to colitis and visceral pain."
+        }
+      ]
     }
   ],
   "sources": [

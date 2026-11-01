@@ -46,7 +46,24 @@
       "answer": [
         1
       ],
-      "explanation": "The membrane is far from E_Na (+60 mV), so there's a large inward driving force. Na⁺ rushes in and pulls the voltage toward E_Na."
+      "explanation": "The membrane is far from E_Na (+60 mV), so there's a large inward driving force. Na⁺ rushes in and pulls the voltage toward E_Na.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A neuron rests at −65 mV and you open a Na⁺-permeable channel.",
+          "prompt": "Which way does Na⁺ move, and what happens to the voltage?",
+          "options": [
+            "Out of the cell; the membrane hyperpolarizes",
+            "Into the cell; the membrane depolarizes toward +60 mV",
+            "It doesn't move, since Na⁺ is already at equilibrium",
+            "Into the cell, yet the membrane hyperpolarizes"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "At −65 mV the membrane is far from E_Na (+60 mV), so there's a large inward driving force: Na⁺ enters and Vm climbs."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -61,7 +78,24 @@
       "answer": [
         1
       ],
-      "explanation": "Vm is fairly close to E_K, so the driving force is modest and outward. Opening K⁺ channels stabilizes or hyperpolarizes the cell. That's how many inhibitory signals, and hM4Di (via GIRK channels), quiet neurons."
+      "explanation": "Vm is fairly close to E_K, so the driving force is modest and outward. Opening K⁺ channels stabilizes or hyperpolarizes the cell. That's how many inhibitory signals, and hM4Di (via GIRK channels), quiet neurons.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The same neuron sits at −65 mV, but now you open a K⁺ channel.",
+          "prompt": "What happens to the membrane?",
+          "options": [
+            "A large inward K⁺ current depolarizes the cell",
+            "A small outward K⁺ current nudges it toward −90 mV",
+            "The cell reaches threshold and fires a spike",
+            "Nothing moves, since K⁺ is fixed at −65 mV"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Vm is near E_K (−90 mV), so the driving force is small and outward: opening K⁺ channels stabilizes or hyperpolarizes the cell."
+        }
+      ]
     },
     {
       "type": "match",

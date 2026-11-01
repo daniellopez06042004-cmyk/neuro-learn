@@ -55,7 +55,24 @@
       "answer": [
         1
       ],
-      "explanation": "Clustering shows molecular groupings, not function, location or wiring. Those require the manipulations the rest of the curriculum teaches (C12 covers what UMAPs can and can't say)."
+      "explanation": "Clustering shows molecular groupings, not function, location or wiring. Those require the manipulations the rest of the curriculum teaches (C12 covers what UMAPs can and can't say).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A paper shows a UMAP with 12 DRG clusters.",
+          "prompt": "On its own, what does that plot establish?",
+          "options": [
+            "Exactly what job each cluster performs",
+            "That neurons group by expression — but not their function",
+            "The conduction speed of each cluster",
+            "Where each cluster sends its axons"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Clustering shows molecular groups only; function, wiring and speed all need genetic and physiological follow-up."
+        }
+      ]
     }
   ],
   "sources": [

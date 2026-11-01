@@ -78,7 +78,24 @@
       "answer": [
         1
       ],
-      "explanation": "Saltatory conduction: myelin reduces leak and capacitance, so the signal hops from node to node. This is why myelinated Aβ fibers conduct far faster than unmyelinated C fibers (A5)."
+      "explanation": "Saltatory conduction: myelin reduces leak and capacitance, so the signal hops from node to node. This is why myelinated Aβ fibers conduct far faster than unmyelinated C fibers (A5).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Compare a myelinated Aβ axon and an unmyelinated C axon.",
+          "prompt": "Which carries its spike faster, and why?",
+          "options": [
+            "The C fiber, because it is thinner",
+            "The Aβ fiber, because myelin lets spikes jump node to node",
+            "Neither; they conduct at the same speed",
+            "The Aβ fiber, because it lacks sodium channels"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Myelin insulates the axon so the signal leaps between nodes (saltatory conduction) — far faster than continuous conduction in a bare C fiber. (Aβ axons are also thicker, which helps, but myelin is the main reason.)"
+        }
+      ]
     },
     {
       "type": "predict",
@@ -94,7 +111,23 @@
       "answer": [
         1
       ],
-      "reveal": "If the transduction current persists, the receptor potential persists, and so does firing. Channel kinetics translate directly into coding."
+      "reveal": "If the transduction current persists, the receptor potential persists, and so does firing. Channel kinetics translate directly into coding.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A mutation makes Piezo2 inactivate much more slowly. A normally rapidly adapting touch neuron will now…",
+          "options": [
+            "Stop responding to touch altogether",
+            "Keep firing during sustained force, more slowly-adapting",
+            "Start responding to heat instead of force",
+            "Fire in exactly the same way as before"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "If the transduction current persists, so do the receptor potential and the firing — channel kinetics set how fast a neuron adapts."
+        }
+      ]
     }
   ],
   "sources": [],

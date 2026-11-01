@@ -57,7 +57,24 @@
       "answer": [
         1
       ],
-      "explanation": "Visceral innervation is dominated by thin fibers. That matches the vague, slow quality of gut sensation (A1-L3)."
+      "explanation": "Visceral innervation is dominated by thin fibers. That matches the vague, slow quality of gut sensation (A1-L3).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Most gut and pancreas sensation arrives slowly.",
+          "prompt": "Which fiber type best fits that?",
+          "options": [
+            "They are thick, myelinated Aβ fibers",
+            "They are mostly thin, unmyelinated C fibers",
+            "They are the fastest axons in the body",
+            "They carry no sensory signal at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Slow, vague visceral sensation fits thin, unmyelinated C fibers — the dominant visceral afferent class."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -73,7 +90,23 @@
       "answer": [
         1
       ],
-      "reveal": "Conduction class and what a neuron responds to are related but not identical. The colon paper measured both speed and force threshold for each subtype, rather than assuming one from the other."
+      "reveal": "Conduction class and what a neuron responds to are related but not identical. The colon paper measured both speed and force threshold for each subtype, rather than assuming one from the other.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You record a fast, myelinated afferent. Before labeling it a 'touch' fiber, you should check…",
+          "options": [
+            "Which dye color was used to fill it",
+            "What stimuli actually drive it, since speed isn't modality",
+            "How old the recorded mouse was",
+            "Only the temperature of the room"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Conduction class and modality are separate axes; some fast fibers are high-threshold. The colon paper measured both for each subtype."
+        }
+      ]
     }
   ],
   "sources": [

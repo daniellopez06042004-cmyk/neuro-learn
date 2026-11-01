@@ -52,7 +52,23 @@
       "flag": {
         "level": "simplified",
         "note": "Peptide release at endings depends on neuron type and stimulus."
-      }
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Ca²⁺ enters a nociceptor ending through a TRP channel. Beyond carrying charge, what can that Ca²⁺ do?",
+          "options": [
+            "Nothing; Ca²⁺ only ever carries current",
+            "Act as a second messenger, e.g. triggering peptide release",
+            "Permanently block the ending's Nav channels",
+            "Convert the sensory ending into a motor terminal"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Ca²⁺ is also an intracellular signal; in nociceptor endings it can drive CGRP/substance P release — the ending senses and signals outward at once."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -67,7 +83,24 @@
       "answer": [
         0
       ],
-      "explanation": "The graded part is the receptor potential. Once threshold is crossed, each spike is stereotyped; intensity is carried by how often spikes occur."
+      "explanation": "The graded part is the receptor potential. Once threshold is crossed, each spike is stereotyped; intensity is carried by how often spikes occur.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You double the force pressing on a sensory ending.",
+          "prompt": "What happens to each action potential the neuron fires?",
+          "options": [
+            "Each spike grows to about double its height",
+            "Spikes stay the same size; the firing rate rises",
+            "Each spike shrinks to about half its height",
+            "The neuron stops firing action potentials"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Spikes are all-or-none: intensity is carried by rate, not amplitude. Only the graded receptor potential scales with force."
+        }
+      ]
     },
     {
       "type": "order",

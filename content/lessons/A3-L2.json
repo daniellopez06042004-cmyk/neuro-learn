@@ -32,7 +32,24 @@
       "answer": [
         1
       ],
-      "explanation": "Same channel, same neurons, same 'line' to the brain. Chili feels hot because it activates the heat detector (the labeled-line logic from A1-L4)."
+      "explanation": "Same channel, same neurons, same 'line' to the brain. Chili feels hot because it activates the heat detector (the labeled-line logic from A1-L4).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Capsaicin and noxious heat both open TRPV1 on the same neurons.",
+          "prompt": "So eating chili feels like…",
+          "options": [
+            "Cold, in the way menthol does",
+            "Burning heat, because the heat channel is opened",
+            "A gentle brushing touch",
+            "Nothing in particular"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Activating the heat detector any way reads as heat — the labeled-line logic behind why chili 'burns.'"
+        }
+      ]
     },
     {
       "type": "concept",
@@ -58,7 +75,23 @@
       "flag": {
         "level": "simplified",
         "note": "Knockouts kept some response to strong heat, so other heat detectors also contribute."
-      }
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "After paw inflammation, wild-type mice become hypersensitive to warmth. TRPV1-knockout mice mostly do not. This shows TRPV1 is…",
+          "options": [
+            "Unrelated to heat sensation",
+            "Key to inflammatory heat hypersensitivity",
+            "The only heat sensor there is",
+            "A channel for touch, not heat"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Losing the inflammatory heat hypersensitivity in the knockout points to TRPV1 sensitization as the mechanism — though some noxious-heat response remains via other sensors."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -73,7 +106,24 @@
       "answer": [
         1
       ],
-      "explanation": "TRPV1 marks a broad nociceptor population, which is why Trpv1-Cre lines are common; A3-L4 covers the caveats."
+      "explanation": "TRPV1 marks a broad nociceptor population, which is why Trpv1-Cre lines are common; A3-L4 covers the caveats.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You need genetic access to many nociceptors at once.",
+          "prompt": "Why is a Trpv1-driven Cre line a reasonable choice?",
+          "options": [
+            "Because TRPV1 is expressed by every neuron in the body",
+            "Because a broad set of nociceptors express TRPV1",
+            "Because TRPV1 is unique to one colon neuron",
+            "Because TRPV1 is never expressed in sensory neurons"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "TRPV1 marks a large nociceptor population, handy for access — though the developmental-lineage caveat (A3-L4) still applies."
+        }
+      ]
     }
   ],
   "sources": [

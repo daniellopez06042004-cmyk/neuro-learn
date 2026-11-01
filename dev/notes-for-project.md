@@ -1,3 +1,39 @@
+### 2026-11-01: Track A variants imported
+
+**Imported:** all 20 changed lessons (A1–A5 variants plus your fixes to A1-L1, A1-L4 and C1-L5). The fixes check out.
+
+**One fix made on this side, please apply it to your copy:** `A1-L3` › `s3` is a concept card but had a variant ("Where are two-point touch receptive fields largest and most sparse?"). Concept cards can't have variants, so the checker blocked publishing. It's the same idea as `s2` (two-point discrimination), so I **moved it onto `s2` as a second variant**. Unchanged otherwise.
+
+**An independent review of all 33 variants: 25 fine, 8 fixed on this side.** Please copy these into your files:
+- `A1-L1` › `s4` › `variants[0]` › `setup` → "The skin above a pure touch (Aβ) ending is gently warmed by a heat lamp (warm, not hot). Nothing touches or moves the skin." **My earlier suggestion was wrong:** moving air bends hairs, and hair-follicle Aβ endings fire to exactly that.
+- `A4-L2` › `s3`: loss plus rescue shows a gene is *necessary*, not *sufficient*. Sufficiency needs the gene added to cells that never had the current, which is how Piezo1 was shown in HEK cells.
+  - base `options[1]` → "That gene is necessary for this current in these cells"
+  - `variants[0]` › `options[1]` → "The gene is necessary for this current"
+  - `variants[0]` › `reveal` → "Loss plus rescue shows the gene is necessary for the current, and the rescue rules out an off-target effect. (Showing it's sufficient takes one more step: adding the gene to cells that never had the current.) This logic identified Piezo."
+- `A4-L1` › `s4`: a stretched patch can still carry cytoskeleton, so it *suggests* intrinsic mechanosensitivity. The proof is the purified channel in an artificial bilayer, shown for Piezo1. Piezo itself was found by a knockdown screen, not by patch stretch.
+  - base `reveal` → "A channel that opens to membrane stretch in an isolated patch is probably intrinsically mechanosensitive. The strongest proof is the purified channel opening in an artificial lipid membrane, later shown for Piezo1 (next lesson)."
+  - `variants[0]` › `prompt`: "This shows" → "This suggests"
+  - `variants[0]` › `explanation` → "Current from stretch alone, with no other cells or messengers, points to intrinsic mechanosensitivity. The strongest proof is the purified channel opening in an artificial lipid membrane, later shown for Piezo1."
+- `A4-L1` › `s3` › `variants[0]` › `setup` → "Touch has to be signaled fast enough to adjust your grip as an object starts to slip." ("well under a millisecond" overstated it.)
+- `A1-L2` › `s5` › `variants[0]` › `options[1]` → "Its firing rate climbs steadily as pressure rises". The old wording "(rate coding)" named the concept being tested, which gave the answer away.
+- `A3-L4` › `s3` › `variants[0]`: distractors lengthened. Avoid "dose" here, since CNO dose is a real concern.
+  - `options[0]` → "Which fluorophore the reporter used, and how bright it was"
+  - `options[2]` → "How many years the authors have worked with mice"
+  - `options[3]` → "Which solvent the actuator was dissolved in"
+- `A2-L4` › `s4` › `variants[0]`: Aβ axons are also thicker, and length doesn't affect speed.
+  - `setup` → "Compare a myelinated Aβ axon and an unmyelinated C axon."
+  - `reveal`: append "(Aβ axons are also thicker, which helps, but myelin is the main reason.)"
+- `A5-L1` › `s3` › `variants[0]`: being poorly localized comes from sparse, convergent innervation (A1-L3), not from fiber type.
+  - `setup` → "Most gut and pancreas sensation arrives slowly."
+  - `prompt` → "Which fiber type best fits that?"
+
+**Length tells remain in three variants** (the correct option is 22–24 characters longer than any distractor), and their distractors are throwaways that make the answer obvious ("Which dye color was used", "Only …"). Please rewrite the distractors as plausible, length-matched statements like you did for the base questions:
+- `A3-L3` › `s5` › `variants[0]` (correct: "Chemical and inflammatory danger, like acid and irritants")
+- `A4-L1` › `s4` › `variants[0]` (correct: "Intrinsically mechanosensitive — opened by tension itself")
+- `A5-L1` › `s4` › `variants[0]` (correct: "What stimuli actually drive it, since speed isn't modality")
+
+Please run the same length-tell audit on variants for B, C and D before sending them.
+
 ### 2026-11-01: new request: one microscope slide per unit (the slide box)
 
 Dan approved a **slide box**: finishing a unit earns a specimen slide that drops into a lab slide box, and tapping it shows the section under the microscope with a caption. The app side draws the slides; **you decide what each unit's slide shows**, because that's content. Please write `content/slides.json` with one entry for each of the 40 units (A1–A10, B1–B9, C1–C12, D1–D8, E).

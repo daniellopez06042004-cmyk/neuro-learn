@@ -43,7 +43,24 @@
       "answer": [
         1
       ],
-      "explanation": "Non-selective cation current reverses near 0 mV. At rest there's a strong inward driving force, so the ending depolarizes toward threshold (A2-L2)."
+      "explanation": "Non-selective cation current reverses near 0 mV. At rest there's a strong inward driving force, so the ending depolarizes toward threshold (A2-L2).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A TRP channel opens in a sensory ending resting at −65 mV.",
+          "prompt": "What is the immediate electrical effect?",
+          "options": [
+            "K⁺ leaves and the ending hyperpolarizes",
+            "Net cation influx depolarizes the ending",
+            "Cl⁻ enters and the voltage is unchanged",
+            "The ending is silenced"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "TRPs are non-selective cation channels that reverse near 0 mV; at rest that is a net inward, depolarizing current."
+        }
+      ]
     },
     {
       "type": "concept",

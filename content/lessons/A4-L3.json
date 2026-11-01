@@ -42,7 +42,24 @@
       "answer": [
         0
       ],
-      "explanation": "Reasoning from a channel's known role to a new tissue is a standard move. Piezo2's touch role made it the obvious candidate for mechanosensation in the gut."
+      "explanation": "Reasoning from a channel's known role to a new tissue is a standard move. Piezo2's touch role made it the obvious candidate for mechanosensation in the gut.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Piezo2 is the main light-touch transducer in skin, and the gut is full of stretch.",
+          "prompt": "Why is Piezo2 a natural candidate to study in gut afferents?",
+          "options": [
+            "Because it is a heat channel for gut temperature",
+            "Because a known force transducer likely senses gut stretch too",
+            "Because it works only in skin and nowhere else",
+            "Because the gut has no mechanical forces at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Reasoning from a channel's known role to a new tissue is standard — and Piezo2 does shape gastrointestinal transit."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -62,7 +79,23 @@
       "flag": {
         "level": "uncertain",
         "note": "Cell-type-specific contributions to transit are still being resolved."
-      }
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Disrupting sensory Piezo2 changes gut transit. The careful conclusion is that Piezo2 is…",
+          "options": [
+            "Proven to be the direct stretch sensor driving transit",
+            "Needed for normal transit; exact cells and role still need mapping",
+            "Shown to be the gut's only stretch sensor",
+            "Acting purely through a vagal route"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A phenotype shows necessity, not the full mechanism — which cells, and whether it's the direct transducer, are separate questions."
+        }
+      ]
     },
     {
       "type": "concept",

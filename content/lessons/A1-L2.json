@@ -103,7 +103,24 @@
       "answer": [
         1
       ],
-      "explanation": "More pressure, bigger receptor potential, higher firing rate. That is rate coding. Visceral mechanoreceptors are routinely characterized by these pressure–response curves."
+      "explanation": "More pressure, bigger receptor potential, higher firing rate. That is rate coding. Visceral mechanoreceptors are routinely characterized by these pressure–response curves.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You slowly inflate a small balloon in the colon and record one afferent.",
+          "prompt": "As the pressure rises, what happens to its firing?",
+          "options": [
+            "It fires at a fixed rate no matter the pressure",
+            "Its firing rate climbs steadily as pressure rises",
+            "It fires once, then stays silent regardless of pressure",
+            "It gradually stops firing as pressure increases"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "One neuron signals intensity by how fast it fires — rate coding. Pressure–response curves like this are how visceral mechanoreceptors are characterized."
+        }
+      ]
     }
   ],
   "sources": [],

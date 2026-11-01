@@ -49,7 +49,24 @@
       "answer": [
         1
       ],
-      "explanation": "Lineage marking can widen the targeted population far beyond adult TRPV1-positive neurons, which changes how you read the result (C2 logic)."
+      "explanation": "Lineage marking can widen the targeted population far beyond adult TRPV1-positive neurons, which changes how you read the result (C2 logic).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A paper silences 'TRPV1 neurons' using Trpv1-Cre with hM4Di.",
+          "prompt": "What should you check first before trusting the targeting?",
+          "options": [
+            "Which fluorophore the reporter used, and how bright it was",
+            "Which neurons the line marks in adults vs. its developmental lineage",
+            "How many years the authors have worked with mice",
+            "Which solvent the actuator was dissolved in"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Trpv1-Cre marks the developmental lineage, often broader than adult TRPV1⁺ cells — verify with RNAscope, CreER, or an intersection."
+        }
+      ]
     },
     {
       "type": "concept",

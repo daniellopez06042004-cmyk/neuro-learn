@@ -32,7 +32,37 @@
       "answer": [
         2
       ],
-      "reveal": "The back has large, sparse receptive fields, so two points close together land in the same field and feel like one. Fingertips, lips and tongue have the smallest fields."
+      "reveal": "The back has large, sparse receptive fields, so two points close together land in the same field and feel like one. Fingertips, lips and tongue have the smallest fields.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Two-point discrimination is finest (smallest distance still felt as two) where receptive fields are…",
+          "options": [
+            "Large and widely spaced",
+            "Small and densely packed",
+            "Absent altogether",
+            "All exactly the same size"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Fine spatial resolution comes from small, dense receptive fields (fingertip, lips, tongue); large sparse fields (the back) blur two points into one."
+        },
+        {
+          "type": "mcq",
+          "prompt": "Where are two-point touch receptive fields largest and most sparse?",
+          "options": [
+            "The pad of the fingertip",
+            "The middle of the back",
+            "The surface of the lips",
+            "The very tip of the tongue"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Large, sparse fields (the back) merge two nearby points into one; fingertips, lips and tongue have tiny dense fields and fine spatial resolution."
+        }
+      ]
     },
     {
       "type": "concept",

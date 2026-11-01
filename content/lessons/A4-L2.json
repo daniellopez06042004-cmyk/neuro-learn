@@ -30,14 +30,31 @@
       "prompt": "A cell line makes a poking-activated current. You remove one gene and the current vanishes; add the gene back and it returns. What can you conclude?",
       "options": [
         "The gene is unrelated to the current you happened to measure",
-        "That gene is necessary and sufficient for the current in these cells",
+        "That gene is necessary for this current in these cells",
         "The cells have simply died, which is why the current disappeared",
         "The effect holds only in neurons, not in this kind of cell line"
       ],
       "answer": [
         1
       ],
-      "explanation": "Loss plus rescue is strong evidence that a gene encodes (or is essential for) the current. This is the logic that identified Piezo channels."
+      "explanation": "Loss plus rescue is strong evidence that a gene encodes (or is essential for) the current. This is the logic that identified Piezo channels.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Knock out a gene and a poking-evoked current vanishes; restore the gene and the current returns.",
+          "prompt": "What does this establish?",
+          "options": [
+            "The gene is unrelated to the current",
+            "The gene is necessary for this current",
+            "The cells have simply died",
+            "The current requires neurons specifically"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Loss plus rescue shows the gene is necessary for the current, and the rescue rules out an off-target effect. (Showing it's sufficient takes one more step: adding the gene to cells that never had the current.) This logic identified Piezo."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -53,7 +70,23 @@
       "answer": [
         1
       ],
-      "reveal": "A conditional knockout in sensory neurons isolates Piezo2's role there. That experiment showed light touch collapses without it."
+      "reveal": "A conditional knockout in sensory neurons isolates Piezo2's role there. That experiment showed light touch collapses without it.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To test whether Piezo2 carries light touch in the skin, the cleanest experiment is to…",
+          "options": [
+            "Over-express TRPV1 and watch for touch changes",
+            "Conditionally delete Piezo2 in sensory neurons and test touch",
+            "Apply capsaicin to the paw and score withdrawal",
+            "Record from skeletal muscle fibers"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A sensory-neuron conditional knockout isolates Piezo2's role there; light touch collapses without it."
+        }
+      ]
     }
   ],
   "sources": [

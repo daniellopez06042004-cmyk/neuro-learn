@@ -79,7 +79,23 @@
       "answer": [
         1
       ],
-      "reveal": "A lower effective threshold means smaller receptor potentials are enough to fire. That is one mechanism of peripheral sensitization (A9), and why inflamed tissue hurts to the touch."
+      "reveal": "A lower effective threshold means smaller receptor potentials are enough to fire. That is one mechanism of peripheral sensitization (A9), and why inflamed tissue hurts to the touch.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Inflammation shifts a nociceptor's Nav channels so they open at more negative voltages. The neuron becomes…",
+          "options": [
+            "Less excitable, since spikes are harder to trigger",
+            "More excitable, since weaker stimuli now reach threshold",
+            "Unchanged in its excitability",
+            "Permanently unable to fire at all"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A lower effective threshold means smaller receptor potentials fire the cell — peripheral sensitization, why inflamed tissue is tender."
+        }
+      ]
     }
   ],
   "sources": [],

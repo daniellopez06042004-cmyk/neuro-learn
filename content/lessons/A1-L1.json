@@ -55,7 +55,7 @@
       "variants": [
         {
           "type": "predict",
-          "setup": "Warm (not hot) air flows gently over the skin above a pure touch (Aβ) ending, with no change in pressure.",
+          "setup": "The skin above a pure touch (Aβ) ending is gently warmed by a heat lamp (warm, not hot). Nothing touches or moves the skin.",
           "prompt": "What does that ending do?",
           "options": [
             "Fires briskly, treating the warmth as a strong stimulus",
