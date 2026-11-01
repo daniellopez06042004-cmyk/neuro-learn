@@ -1,0 +1,115 @@
+{
+  "id": "D6-L3",
+  "unitId": "D6",
+  "title": "The pancreas: two organs in one",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish the exocrine and endocrine pancreas and match each islet cell type to its hormone.",
+  "tags": [
+    "pancreas",
+    "exocrine",
+    "endocrine",
+    "islets"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Exocrine: the digestive factory",
+      "body": "Most of the pancreas is **[[exocrine]]**: it secretes into ducts, not blood.\n\n- **[[acinar cell|Acinar cells]]**, clustered in grape-like acini, make digestive enzymes: proteases such as trypsinogen, plus amylase and lipase.\n- **Duct cells** add a bicarbonate-rich fluid.\n\nThe mix drains through the pancreatic duct into the [[duodenum]].",
+      "visual": {
+        "type": "svg",
+        "src": "assets/pancreas-acinus-islet.svg",
+        "alt": "Left: an exocrine acinus, a ring of acinar cells full of enzyme granules draining into a duct toward the duodenum. Right: an endocrine islet of beta cells in the core and alpha and delta cells at the rim, with a capillary carrying hormones into the blood.",
+        "caption": "Exocrine acinus (left) secretes into a duct; an endocrine islet (right) secretes into blood. The islet shown is mouse-style, with beta cells in the core."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Endocrine: the islets",
+      "body": "Scattered through that tissue are the **[[islet|islets of Langerhans]]**. They make up only about 1–2% of the pancreas, and they are **[[endocrine]]**: their hormones go straight into the blood.\n\n- **[[beta cell|β cells]]** → insulin\n- **[[alpha cell|α cells]]** → glucagon\n- **δ cells** → somatostatin\n- **PP cells** → pancreatic polypeptide"
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each pancreatic cell to what it releases.",
+      "pairs": [
+        [
+          "β cell",
+          "Insulin"
+        ],
+        [
+          "α cell",
+          "Glucagon"
+        ],
+        [
+          "δ cell",
+          "Somatostatin"
+        ],
+        [
+          "Acinar cell",
+          "Digestive enzymes"
+        ],
+        [
+          "Duct cell",
+          "Bicarbonate-rich fluid"
+        ]
+      ],
+      "explanation": "Islet cells release hormones into the blood; acinar and duct cells release digestive juice into ducts."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "What makes a gland *exocrine* rather than *endocrine*?",
+      "options": [
+        "Exocrine glands are larger",
+        "Exocrine glands secrete into ducts or onto a surface; endocrine glands secrete into the blood",
+        "Exocrine glands are under nervous control; endocrine glands aren't",
+        "Exocrine glands only make proteins"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The definition is about *where* the product goes: a duct (exocrine) or the bloodstream (endocrine). The pancreas does both, from different cells."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Acinar cells make proteases as inactive [[zymogen|zymogens]] (trypsinogen rather than trypsin). Why?",
+      "options": [
+        "Inactive enzymes travel faster",
+        "So the pancreas doesn't digest itself; they're activated only once they reach the duodenum",
+        "Active enzymes can't be stored",
+        "Zymogens are cheaper to make"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Trypsinogen is switched on in the duodenum (by the gut enzyme enteropeptidase), and trypsin then activates the other enzymes. When activation happens too early, inside the pancreas, the gland injures itself. That is a central idea in pancreatitis."
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "In type 1 diabetes, the immune system destroys β cells while the acinar tissue is largely spared.",
+      "prompt": "What do you expect?",
+      "options": [
+        "Digestion fails, blood glucose is normal",
+        "Blood glucose rises because there's no insulin, while digestive enzyme output is largely kept",
+        "Both fail completely",
+        "Nothing changes, because α cells take over"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Losing β cells removes insulin, so blood glucose climbs. The exocrine factory, about 98% of the organ, keeps making enzymes. The two halves of the pancreas can fail independently.",
+      "flag": {
+        "level": "simplified",
+        "note": "Exocrine function can also be reduced in diabetes; the point here is that the two compartments are distinct."
+      }
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. New asset pancreas-acinus-islet.svg (static, mouse-style islet architecture noted in caption)."
+}

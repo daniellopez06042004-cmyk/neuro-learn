@@ -1,0 +1,97 @@
+{
+  "id": "D6-L5",
+  "unitId": "D6",
+  "title": "How the pancreas is wired",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Describe the pancreas's parasympathetic, sympathetic, vagal sensory and spinal (DRG) sensory innervation, and where your project fits.",
+  "tags": [
+    "pancreas",
+    "innervation",
+    "drg",
+    "autonomic",
+    "project"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Motor wiring: two autonomic inputs",
+      "body": "- **[[parasympathetic|Parasympathetic]]:** vagal [[preganglionic]] fibers synapse on small ganglia *inside* the pancreas. The postganglionic neurons promote enzyme and insulin secretion.\n- **[[sympathetic|Sympathetic]]:** postganglionic fibers come from the [[celiac ganglion]] (and superior mesenteric ganglion) and travel along blood vessels. Overall they restrain insulin, favor glucagon and constrict vessels.",
+      "flag": {
+        "level": "simplified",
+        "note": "Net autonomic effects depend on context, transmitter and receptor subtype; this is the textbook summary."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each input to its typical effect.",
+      "pairs": [
+        [
+          "Vagal (parasympathetic) motor",
+          "Promotes enzyme and insulin secretion"
+        ],
+        [
+          "Sympathetic motor",
+          "Restrains insulin, favors glucagon"
+        ],
+        [
+          "Spinal (DRG) sensory",
+          "Carries signals such as pancreatic pain to the spinal cord"
+        ],
+        [
+          "Vagal (nodose) sensory",
+          "Carries signals to the brainstem"
+        ]
+      ],
+      "explanation": "Two motor inputs (from the brain and spinal cord out to the organ) and two sensory routes (from the organ back in). Sensing and controlling are separate fiber populations, as in D2."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Sensory wiring: two routes in",
+      "body": "Like other abdominal organs, the pancreas sends sensory fibers back along two routes:\n\n- **Vagal afferents**, with cell bodies in the [[nodose ganglion]], projecting to the brainstem.\n- **Spinal afferents**, with cell bodies in thoracic [[DRG]], travelling in the [[splanchnic nerve|splanchnic nerves]] and passing *through* the celiac ganglion on the way.\n\nSpinal afferents are thought to carry much of the pain of pancreatitis, and many look [[nociceptor]]-like.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Exact molecular identities and proportions of pancreatic spinal afferents vary across studies and species; confirm with the lab's primary literature."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A pancreatic spinal afferent passes through the celiac ganglion. Does it synapse there?",
+      "options": [
+        "Yes, every afferent synapses in the celiac ganglion",
+        "No. It's a pseudounipolar DRG neuron; its axon passes through and its cell body is in the DRG",
+        "Yes, onto vagal neurons",
+        "It has no cell body"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The celiac ganglion is a sympathetic relay for *motor* fibers. Sensory fibers just pass through it on the way to their [[pseudounipolar]] cell bodies in the DRG (D3). This is why retrograde tracing from the pancreas labels DRG cell bodies."
+    },
+    {
+      "type": "concept",
+      "id": "s5",
+      "title": "Where your project sits",
+      "body": "Beyond pain, what do pancreatic DRG afferents *do*? Do they shape islet hormone release, exocrine secretion, or the local immune state?\n\nThese are open questions. They're exactly what turning those neurons on or off with [[DREADD|DREADDs]] (C5), in neurons reached retrogradely from the pancreas (C4), can test. The capstone (E) walks through that experiment step by step.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Non-nociceptive functions of pancreatic spinal afferents are an active research area."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "You express [[hM3Dq]] in pancreas-projecting DRG neurons and give the actuator.",
+      "prompt": "Name two readouts you could measure to see whether activating them changes pancreas function, and one control you'd need.",
+      "freeText": true,
+      "reveal": "Possible readouts: blood glucose and insulin/glucagon levels; pancreatic enzyme output; [[c-Fos]] in the dorsal horn to confirm the neurons fired; local immune-cell changes; pain-like behavior.\n\nKey control: actuator given to mice *without* the DREADD, to rule out off-target drug effects (C5). Capstone lessons E4–E5 go deeper."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium: textbook innervation plus flagged uncertainty about afferent identity and function. Bridges C4/C5 to capstone E."
+}

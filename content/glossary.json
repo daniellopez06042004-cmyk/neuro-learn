@@ -389,6 +389,151 @@
       ],
       "definition": "The major parasympathetic nerve; its sensory (nodose) branch carries much interoceptive information from internal organs.",
       "track": "D"
+    },
+    {
+      "term": "duodenum",
+      "aliases": [
+        "duodenal"
+      ],
+      "definition": "The first part of the small intestine, just after the stomach; bile and pancreatic juice empty into it.",
+      "track": "D"
+    },
+    {
+      "term": "mucosa",
+      "aliases": [
+        "mucosal"
+      ],
+      "definition": "The innermost layer of the gut wall: the lining epithelium, the lamina propria beneath it, and a thin muscle sheet.",
+      "track": "D"
+    },
+    {
+      "term": "lamina propria",
+      "aliases": [],
+      "definition": "Connective tissue just under the gut epithelium, rich in immune cells and sensory nerve endings.",
+      "track": "D"
+    },
+    {
+      "term": "submucosa",
+      "aliases": [],
+      "definition": "The gut-wall layer under the mucosa, with blood vessels and the submucosal plexus.",
+      "track": "D"
+    },
+    {
+      "term": "muscularis externa",
+      "aliases": [],
+      "definition": "The gut's main muscle coat: an inner circular and outer longitudinal layer, with the myenteric plexus between them.",
+      "track": "D"
+    },
+    {
+      "term": "myenteric plexus",
+      "aliases": [
+        "Auerbach's plexus"
+      ],
+      "definition": "The enteric nerve network between the gut's two muscle layers; it mainly controls motility.",
+      "track": "D"
+    },
+    {
+      "term": "submucosal plexus",
+      "aliases": [
+        "Meissner's plexus"
+      ],
+      "definition": "The enteric nerve network in the submucosa; it mainly controls secretion and local blood flow.",
+      "track": "D"
+    },
+    {
+      "term": "exocrine",
+      "aliases": [
+        "exocrine pancreas"
+      ],
+      "definition": "Secreting into a duct or onto a surface rather than into the blood. Most of the pancreas is exocrine.",
+      "track": "D"
+    },
+    {
+      "term": "endocrine",
+      "aliases": [
+        "endocrine pancreas"
+      ],
+      "definition": "Secreting hormones directly into the blood. The pancreatic islets are the endocrine part of the pancreas.",
+      "track": "D"
+    },
+    {
+      "term": "acinar cell",
+      "aliases": [
+        "acinar cells",
+        "acinus",
+        "acini"
+      ],
+      "definition": "A pancreatic exocrine cell, clustered in grape-like acini, that makes digestive enzymes.",
+      "track": "D"
+    },
+    {
+      "term": "zymogen",
+      "aliases": [
+        "zymogens"
+      ],
+      "definition": "An inactive enzyme precursor (such as trypsinogen) that is switched on only after it leaves the cell, so the pancreas doesn't digest itself.",
+      "track": "D"
+    },
+    {
+      "term": "islet",
+      "aliases": [
+        "islets",
+        "islets of Langerhans",
+        "pancreatic islet"
+      ],
+      "definition": "A small cluster of endocrine cells in the pancreas that releases insulin, glucagon and other hormones into the blood.",
+      "track": "D"
+    },
+    {
+      "term": "beta cell",
+      "aliases": [
+        "beta cells",
+        "β cell",
+        "β cells"
+      ],
+      "definition": "The islet cell that makes insulin.",
+      "track": "D"
+    },
+    {
+      "term": "alpha cell",
+      "aliases": [
+        "alpha cells",
+        "α cell",
+        "α cells"
+      ],
+      "definition": "The islet cell that makes glucagon.",
+      "track": "D"
+    },
+    {
+      "term": "secretin",
+      "aliases": [],
+      "definition": "A duodenal hormone released by acid; it tells pancreatic duct cells to secrete bicarbonate.",
+      "track": "D"
+    },
+    {
+      "term": "CCK",
+      "aliases": [
+        "cholecystokinin"
+      ],
+      "definition": "A duodenal hormone released by fats and proteins; it drives pancreatic enzyme secretion and gallbladder contraction.",
+      "track": "D"
+    },
+    {
+      "term": "celiac ganglion",
+      "aliases": [
+        "coeliac ganglion"
+      ],
+      "definition": "A sympathetic (prevertebral) ganglion near the celiac artery that sends postganglionic fibers to upper abdominal organs, including the pancreas.",
+      "track": "D"
+    },
+    {
+      "term": "splanchnic nerve",
+      "aliases": [
+        "splanchnic nerves",
+        "splanchnic"
+      ],
+      "definition": "Nerves linking the thoracic/lumbar spinal cord to abdominal organs; they carry sympathetic preganglionic fibers out and spinal (DRG) sensory fibers back.",
+      "track": "D"
     }
   ]
 }

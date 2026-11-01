@@ -1,0 +1,103 @@
+{
+  "id": "D6-L2",
+  "unitId": "D6",
+  "title": "Layers of the gut wall",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Name the four layers of the gut wall and say which enteric plexus controls motility and which controls secretion.",
+  "tags": [
+    "gut-wall",
+    "enteric-nervous-system",
+    "anatomy"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Four layers, inside out",
+      "body": "Cut the gut crosswise and the wall has the same plan almost everywhere:\n\n1. **[[mucosa]]:** the lining epithelium, the [[lamina propria]] under it, and a thin muscle sheet\n2. **[[submucosa]]:** connective tissue, blood vessels, and the [[submucosal plexus]]\n3. **[[muscularis externa]]:** inner circular and outer longitudinal muscle, with the [[myenteric plexus]] between them\n4. **serosa:** the thin outer covering",
+      "visual": {
+        "type": "svg",
+        "src": "assets/gut-wall-layers.svg",
+        "alt": "Cross-section of the gut wall from the lumen outward: mucosa with villi, submucosa containing the submucosal plexus, circular muscle, the myenteric plexus, longitudinal muscle, and the serosa.",
+        "caption": "The gut wall, lumen at the top. The two enteric plexuses (colored) sit in the submucosa and between the two muscle layers."
+      }
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the layers from the lumen outward.",
+      "items": [
+        "Mucosa",
+        "Submucosa",
+        "Circular muscle",
+        "Longitudinal muscle",
+        "Serosa"
+      ],
+      "explanation": "Mucosa lines the lumen, the submucosa supports it, then the two muscle layers of the muscularis externa (circular inside, longitudinal outside), and finally the serosa."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Two plexuses, two jobs",
+      "body": "The [[enteric nervous system]] lives in two networks in the wall:\n\n- **Myenteric plexus**, between the muscle layers, mainly controls **motility** (the contractions that move contents along).\n- **Submucosal plexus**, closer to the lining, mainly controls **secretion** and local **blood flow**.\n\nTogether they can run reflexes like peristalsis even when cut off from the brain.",
+      "flag": {
+        "level": "simplified",
+        "note": "The division of labor is a useful rule of thumb; the two plexuses are interconnected and their roles overlap."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each structure to what it mainly does.",
+      "pairs": [
+        [
+          "Myenteric plexus",
+          "Controls motility"
+        ],
+        [
+          "Submucosal plexus",
+          "Controls secretion and local blood flow"
+        ],
+        [
+          "Muscularis externa",
+          "Contracts to mix and propel contents"
+        ],
+        [
+          "Mucosa",
+          "Absorbs and forms the barrier"
+        ]
+      ],
+      "explanation": "The plexus sitting between the muscle layers drives the muscle; the one near the lining governs what the lining secretes and how much blood it gets."
+    },
+    {
+      "type": "concept",
+      "id": "s5",
+      "title": "Where sensing and immunity meet",
+      "body": "The lamina propria, just under the epithelium, is packed with immune cells such as macrophages, mast cells and lymphocytes. Extrinsic sensory endings from [[DRG]] and [[nodose ganglion|nodose]] neurons reach the mucosa, the muscle layers and the serosa.\n\nSo a sensory ending in the mucosa sits right next to immune cells. That is the physical basis for the neuroimmune crosstalk in Track B.",
+      "flag": {
+        "level": "simplified",
+        "note": "Ending density and location differ between gut regions, species and afferent types."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s6",
+      "setup": "You image a colon section where DRG afferent fibers carry a reporter. Many labeled fibers run in a thin sheet sandwiched between the two muscle layers.",
+      "prompt": "Which structure are they running alongside?",
+      "options": [
+        "The submucosal plexus",
+        "The myenteric plexus",
+        "The lamina propria",
+        "The serosa"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "The myenteric plexus sits between the circular and longitudinal muscle. Spinal afferents often travel through and branch near it. Knowing the layers lets you say *where* in the wall a signal is, not just that it's there."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. New asset gut-wall-layers.svg (static). Links forward to Track B."
+}

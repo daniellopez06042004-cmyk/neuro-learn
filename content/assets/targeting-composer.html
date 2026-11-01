@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--track:#5B8DEF;--off:#d8d6cd;}
   @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--track:#7ea6f5;--off:#3a3a37;}}
@@ -8,6 +8,7 @@
   .q{font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 5px}
   .opts{display:flex;gap:8px}
   .opts button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;font-size:13px}
+  .opts button.sel::before,.seg button.sel::before{content:"✓ ";font-weight:800;}
   .opts button.sel{border-color:var(--track);background:color-mix(in srgb,var(--track) 16%,transparent)}
   .cells{margin-top:12px;display:flex;flex-direction:column;gap:6px}
   .cell{display:flex;align-items:center;gap:10px;font-size:13px}

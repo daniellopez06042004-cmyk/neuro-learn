@@ -336,9 +336,17 @@
         {
           "id": "D6",
           "title": "GI & Pancreas Anatomy/Physiology",
-          "summary": "Layers of the gut wall, the pancreas (exocrine acini/ducts vs. endocrine islets), and what each is sensed for.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "The gut as one tube, the layers of the gut wall and its two enteric plexuses, the exocrine vs endocrine pancreas, how a meal drives pancreatic secretion, and how the pancreas is innervated.",
+          "prereqs": [
+            "D3"
+          ],
+          "lessons": [
+            "D6-L1",
+            "D6-L2",
+            "D6-L3",
+            "D6-L4",
+            "D6-L5"
+          ]
         },
         {
           "id": "D7",

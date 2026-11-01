@@ -1,0 +1,93 @@
+{
+  "id": "D6-L4",
+  "unitId": "D6",
+  "title": "After a meal: telling the pancreas to secrete",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how secretin and CCK link a meal in the duodenum to pancreatic secretion, and why the mouse–human difference matters.",
+  "tags": [
+    "pancreas",
+    "physiology",
+    "secretin",
+    "cck"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Three phases",
+      "body": "Pancreatic secretion ramps up in three overlapping phases:\n\n- **Cephalic:** the sight, smell and taste of food drive secretion via the [[vagus nerve]].\n- **Gastric:** food stretching the stomach adds more.\n- **Intestinal:** chyme arriving in the [[duodenum]] gives the biggest push, mostly through gut hormones."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Two hormones from the duodenum",
+      "body": "- **[[secretin|Secretin]]:** acid entering the duodenum triggers its release from S cells. It tells **duct cells** to pour out bicarbonate, which neutralizes the acid.\n- **[[CCK]]:** fats and proteins trigger its release from I cells. It drives **enzyme secretion** from acini and squeezes the gallbladder to add bile.\n\nWhat arrives in the duodenum decides what the pancreas sends back."
+    },
+    {
+      "type": "order",
+      "id": "s3",
+      "prompt": "Order the acid-neutralizing loop.",
+      "items": [
+        "Acidic chyme enters the duodenum",
+        "S cells release secretin into the blood",
+        "Secretin reaches pancreatic duct cells",
+        "Duct cells secrete bicarbonate",
+        "Duodenal acid is neutralized"
+      ],
+      "explanation": "A classic negative-feedback loop. Neutralizing the acid removes the trigger, so secretin release falls."
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each trigger to the hormone it releases.",
+      "pairs": [
+        [
+          "Acid in the duodenum",
+          "Secretin"
+        ],
+        [
+          "Fat and protein in the duodenum",
+          "CCK"
+        ],
+        [
+          "Rising blood glucose",
+          "Insulin"
+        ],
+        [
+          "Falling blood glucose",
+          "Glucagon"
+        ]
+      ],
+      "explanation": "Secretin and CCK come from the gut and drive the exocrine pancreas. Insulin and glucagon come from the islets and manage blood glucose."
+    },
+    {
+      "type": "concept",
+      "id": "s5",
+      "title": "Mouse ≠ human here",
+      "body": "In rodents, acinar cells carry CCK receptors and respond to CCK directly. In humans, much of CCK's effect on the pancreas is thought to run through a **vagal reflex** instead: CCK activates vagal sensory endings, and vagal motor fibers then drive the acini.\n\nThe same hormone can reach the same cells by different routes in different species.",
+      "flag": {
+        "level": "debated",
+        "note": "The relative importance of direct versus vagally mediated CCK action in humans is still discussed; the rodent–human difference in acinar CCK responsiveness is widely reported."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s6",
+      "prompt": "A mouse study shows a CCK-driven effect on acinar secretion. What's the careful conclusion?",
+      "options": [
+        "It definitely works the same way in humans",
+        "It shows the mouse pathway; in humans the route may differ, so check before generalizing",
+        "Mouse data are useless for pancreas biology",
+        "CCK doesn't act on the pancreas"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Mouse work is powerful, but here the wiring itself differs between species. State findings for the species you studied and flag translation as an open question. That habit will matter in your own pancreas experiments."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium because of the debated species difference in CCK action (flagged). Otherwise textbook-level."
+}

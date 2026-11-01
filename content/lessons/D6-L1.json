@@ -1,0 +1,83 @@
+{
+  "id": "D6-L1",
+  "unitId": "D6",
+  "title": "The gut is one long tube",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Trace food through the GI tract in order and name where the pancreas empties into it.",
+  "tags": [
+    "gi-tract",
+    "anatomy",
+    "pancreas"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "One tube, many stops",
+      "body": "The digestive tract is a single continuous tube:\n\n- mouth → esophagus → stomach\n- **small intestine**: [[duodenum]] → jejunum → ileum\n- **large intestine** (colon) → rectum\n\nAccessory organs pour secretions in from the side. The liver (via the gallbladder) adds bile, and the **pancreas** adds digestive enzymes and bicarbonate. Both empty into the duodenum, the first stretch of small intestine."
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Put the stops in the order food passes through them.",
+      "items": [
+        "Esophagus",
+        "Stomach",
+        "Duodenum",
+        "Jejunum",
+        "Ileum",
+        "Colon"
+      ],
+      "explanation": "Esophagus → stomach → the three parts of the small intestine (duodenum, jejunum, ileum) → colon. The duodenum comes first in the small intestine, which is why pancreatic juice and bile can act on food as soon as it leaves the stomach."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Each stretch has a job",
+      "body": "- **Stomach:** stores, grinds and acidifies.\n- **Small intestine:** finishes digestion and absorbs most nutrients.\n- **Colon:** absorbs water and houses most gut microbes.\n\nThe pancreas sits behind the stomach, its head tucked into the C-shaped curve of the duodenum. The lab's colon work and your pancreas project are two stops on this same tube. Both are innervated by [[DRG]] and [[vagus nerve|vagal]] sensory neurons."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Where do pancreatic secretions enter the gut?",
+      "options": [
+        "Stomach",
+        "Duodenum",
+        "Ileum",
+        "Colon"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The pancreatic duct empties into the duodenum, usually alongside the bile duct. Enzymes and bicarbonate arrive right where acidic stomach contents enter the small intestine."
+    },
+    {
+      "type": "match",
+      "id": "s5",
+      "prompt": "Match each segment to its main job.",
+      "pairs": [
+        [
+          "Stomach",
+          "Store, grind and acidify food"
+        ],
+        [
+          "Small intestine",
+          "Finish digestion, absorb nutrients"
+        ],
+        [
+          "Colon",
+          "Absorb water, host most microbes"
+        ],
+        [
+          "Pancreas",
+          "Add enzymes and bicarbonate"
+        ]
+      ],
+      "explanation": "A rough division of labor along the tube. The pancreas isn't part of the tube itself; it's an accessory gland that empties into it."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. Sets up D6-L2 (wall layers) and D6-L3 (pancreas)."
+}
