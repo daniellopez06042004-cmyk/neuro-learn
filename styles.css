@@ -549,3 +549,50 @@ svg.circuit { display: block; width: 100%; height: auto; overflow: visible; }
 .visual-frame { display: block; width: 100%; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
 .visual figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
 .visual-fallback { font-size: 15px; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 12px; padding: 12px; margin: 0; }
+
+/* ---------- Slide box (views/slidebox.js) ----------
+   A lab slide box in the app's own neutrals (charcoal in dark mode, warm white
+   in light), with a cork floor, the inventory card inside the lid, and slides
+   standing edge-on in grooves. Slides themselves are drawn by src/slides.js. */
+.slidebox { --plastic: var(--surface-2); --plastic-edge: var(--line); --plastic-deep: color-mix(in srgb, var(--surface-2) 82%, #000); }
+.sb-wrap { position: relative; padding: 4px 16px 32px; max-width: 520px; margin: 0 auto; touch-action: pan-y; }
+.sb-body { position: relative; }
+.sb-lid { border-radius: 12px 12px 4px 4px; background: var(--plastic); padding: 9px; box-shadow: inset 0 0 0 2px var(--plastic-edge); }
+.sb-card { border-radius: 3px; background: #fbfbf8; color: #1d2440; padding: 6px 9px 7px; font-size: 11px; }
+.sb-card-hd { display: flex; justify-content: space-between; letter-spacing: 0.06em; font-weight: 700; color: #2a3a6a; border-bottom: 1px solid #9fb0d6; padding-bottom: 2px; }
+.sb-card-fields { display: flex; gap: 12px; color: #5a6688; margin: 3px 0 2px; }
+.sb-card b, .sb-inv i { font: 400 14px "Bradley Hand", "Segoe Print", "Marker Felt", cursive; color: #1d2a7a; }
+.sb-inv { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
+.sb-inv div { display: flex; gap: 6px; align-items: baseline; border-bottom: 1px solid #d5ddef; height: 18px; color: #8a93ad; overflow: hidden; white-space: nowrap; }
+.sb-hinge { height: 6px; margin: 0 34px; background: var(--plastic-deep); border-radius: 0 0 3px 3px; }
+.sb-box { margin-top: 3px; border-radius: 6px 6px 14px 14px; background: var(--plastic); padding: 9px 7px 13px; box-shadow: inset 0 0 0 2px var(--plastic-edge), inset 0 -6px 0 var(--plastic-deep); }
+.sb-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.sb-col { border-radius: 3px; padding: 5px 0 4px; background: #c9a574 radial-gradient(#a07a4e 0.7px, transparent 1px) 0 0 / 5px 5px; }
+.sb-slot { height: 14px; display: flex; align-items: flex-end; }
+.sb-rim { width: 30px; flex: none; text-align: right; padding-right: 5px; font-size: 11px; font-weight: 600; line-height: 14px; color: var(--muted); background: var(--plastic); }
+.sb-rim.hot { color: var(--warn-line); }
+.sb-groove { flex: 1; height: 14px; position: relative; border-bottom: 1.5px solid rgba(40, 25, 10, 0.4); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.18); }
+.sb-s3 { position: absolute; left: 2px; right: 2px; bottom: 0; height: 0; perspective: 420px; }
+.sb-face { position: absolute; left: 0; right: 0; bottom: 0; aspect-ratio: 3 / 1; transform-origin: 50% 100%; transform: rotateX(80deg); cursor: grab; }
+.sb-face svg, .sb-fly svg, .sb-big svg, .sb-newcard-slide svg { display: block; width: 100%; height: 100%; }
+.sb-face:focus-visible { outline: 2px solid var(--track); outline-offset: 2px; }
+.sb-hint { text-align: center; margin: 12px 0 0; }
+.sb-fly { position: absolute; left: 0; top: 0; transform-origin: 0 0; perspective: 700px; z-index: 20; pointer-events: none; }
+.sb-fly-face { width: 100%; height: 100%; transform-origin: 50% 100%; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45)); }
+.sb-big, .sb-spot { aspect-ratio: 3 / 1; margin: 4px 0 14px; background: #1b1b1a; border-radius: 10px; padding: 6px; box-sizing: content-box; width: calc(100% - 12px); }
+.sb-label { margin: 0 2px 6px; }
+.sb-scope { border-radius: 14px; overflow: hidden; }
+.sb-scope svg { display: block; width: 100%; }
+.sb-modes { margin-top: 8px; }
+.sb-info { margin-top: 12px; }
+.sb-info h2 { font-family: var(--serif); font-size: 21px; margin: 2px 0 6px; }
+.sb-info p { margin: 6px 0 0; line-height: 1.45; }
+.sb-sources { margin: 8px 0 0; padding-left: 18px; font-size: 14px; }
+.sb-info + .btn { margin-top: 12px; }
+.sb-earn { position: absolute; left: 0; right: 0; top: 0; min-height: 250px; padding: 18px 8px 26px; text-align: center; background: linear-gradient(var(--bg) 82%, transparent); display: flex; flex-direction: column; align-items: center; z-index: 10; }
+.sb-earn h2 { font-family: var(--serif); font-size: 22px; margin: 4px 0 0; }
+.sb-new { display: block; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sb-spot { margin: 12px 0; }
+.sb-newcard { display: block; width: 100%; margin: 0 0 18px; padding: 12px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--text); text-align: center; }
+.sb-newcard-slide { display: block; aspect-ratio: 3 / 1; margin: 8px 0; background: #1b1b1a; border-radius: 6px; padding: 4px; }
+.sb-newcard-go { font-weight: 600; color: var(--track-text); }

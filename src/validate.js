@@ -221,3 +221,38 @@ export function validateGlossary(glossary) {
   });
   return errs;
 }
+
+// content/slides.json: one specimen slide per unit for the slide box. What each
+// slide shows is the Project's call; the app can only draw these tissues.
+export const TISSUES = ['brain-coronal', 'drg', 'cord', 'nerve', 'islet', 'microglia', 'rnascope', 'cortex-if'];
+
+export function validateSlides(data) {
+  const errs = [];
+  const at = (where, msg) => errs.push(`slides.json › ${where}: ${msg}`);
+  if (!data || !isArr(data.slides)) return ['slides.json › "slides" must be a list (it can be empty)'];
+  const seen = new Set();
+  data.slides.forEach((s, i) => {
+    const w = `slides[${i}]${s?.unit ? ` (${s.unit})` : ''}`;
+    if (!isStr(s?.unit)) at(w, '"unit" is missing');
+    else if (seen.has(s.unit)) at(w, `a second slide for unit "${s.unit}" (one per unit)`);
+    else seen.add(s.unit);
+    if (s?.tissue === 'request') {
+      if (!isStr(s.wish)) at(w, 'a "request" needs a "wish": what the section should show');
+      if (!isArr(s.references) || !s.references.length) at(w, 'a "request" needs "references": 1–2 published figures to draw from');
+      return;
+    }
+    if (!TISSUES.includes(s?.tissue)) at(w, `"tissue" must be one of ${TISSUES.join(', ')} (or "request")`);
+    if (!isStr(s?.label)) at(w, '"label" is missing (what\'s written on the frosted end)');
+    else if (s.label.length > 12) at(w, `"label" is ${s.label.length} characters; keep it to 12 or fewer`);
+    if (!isStr(s?.stain)) at(w, '"stain" is missing');
+    if (!isStr(s?.caption)) at(w, '"caption" is missing');
+    if (s?.tissue === 'brain-coronal' && !(isArr(s.atlas?.regions) && s.atlas.regions.length && s.atlas.regions.every(isStr))) {
+      at(w, '"atlas": { "regions": [...] } needs at least one Allen acronym');
+    }
+    if (s?.sources !== undefined) {
+      if (!isArr(s.sources)) at(w, '"sources" must be a list');
+      else s.sources.forEach((src, k) => { if (!isStr(src?.citation)) at(`${w} › sources[${k}]`, '"citation" is missing'); });
+    }
+  });
+  return errs;
+}

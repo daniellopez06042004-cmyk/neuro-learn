@@ -305,10 +305,11 @@ function sourceList(sources) {
       s.note ? h('span', { class: 'note' }, s.note) : null))));
 }
 
-export function finishScreen(root, { color, title, stats, button, onContinue, highlightUnit, newLesson, sources }) {
+export function finishScreen(root, { color, title, stats, button, onContinue, highlightUnit, newLesson, sources, top }) {
   const { el, summary } = renderCircuit({ highlightUnit, newLesson });
   root.replaceChildren(h('div', { class: 'finish', style: trackStyle(color) },
     h('div', { class: 'center' },
+      top,
       h('a', { class: 'circuit-link', href: '#/circuit', 'aria-label': 'Open your circuit' }, el),
       h('p', { class: 'circuit-caption' }, summary.complete
         ? 'Circuit complete. Every neuron is wired and myelinated.'

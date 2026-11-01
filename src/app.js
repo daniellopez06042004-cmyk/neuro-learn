@@ -1,4 +1,4 @@
-import { loadContent, content } from './content.js';
+import { loadContent, content, syncSlides } from './content.js';
 import { isDev, setTermLookup } from './ui.js';
 import { route, fallback, start, go } from './router.js';
 import { renderHome } from './views/home.js';
@@ -12,6 +12,7 @@ import { renderStats } from './views/stats.js';
 import { updateBadge } from './badge.js';
 import { renderGlossary, showTerm } from './views/glossary.js';
 import { renderPulse } from './views/pulse.js';
+import { renderSlideBox } from './views/slidebox.js';
 
 route('/', renderHome);
 route('/unit/:id', renderUnit);
@@ -23,6 +24,7 @@ route('/circuit', renderCircuitView);
 route('/progress', renderStats);
 route('/glossary', renderGlossary);
 route('/pulse', renderPulse);
+route('/slides', renderSlideBox);
 fallback(() => go('/', { replace: true }));
 
 // Glossary terms ([[term]] in lesson text) open a definition sheet anywhere,
@@ -66,6 +68,7 @@ if ('serviceWorker' in navigator && (!isDev || location.search.includes('sw'))) 
 
 try {
   await loadContent();
+  syncSlides(); // units finished before the slide box existed earn their slides quietly
   setTermLookup((name) => content.glossary.has(name.toLowerCase()));
   for (const e of content.errors) console.error('[content]', e);
   // Fail loudly while developing: open straight to the list of problems.

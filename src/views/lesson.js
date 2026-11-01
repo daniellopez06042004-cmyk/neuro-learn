@@ -1,4 +1,5 @@
-import { content, playable, unitStats, lessonTrack } from '../content.js';
+import { content, playable, unitStats, lessonTrack, syncSlides } from '../content.js';
+import { newSlideCard, slideBoxReady } from './slidebox.js';
 import { progress } from '../progress.js';
 import { runSession, finishScreen } from '../player.js';
 import { go } from '../router.js';
@@ -27,6 +28,7 @@ export function renderLesson(root, { id }) {
     onExit: () => go(`/unit/${encodeURIComponent(unit.id)}`),
     onDone: ({ graded, correct }) => {
       progress.completeLesson(id, xp);
+      const newSlide = syncSlides().includes(unit.id) && slideBoxReady();
       const unitJustDone = !wasUnitComplete && unitStats(unit).complete;
       finishScreen(root, {
         color: track.color,
@@ -39,6 +41,7 @@ export function renderLesson(root, { id }) {
           ['Day streak', progress.streak()],
         ],
         sources: lesson.sources,
+        top: newSlide ? newSlideCard(unit.id) : null,
         button: 'Continue',
         onContinue: () => go(unitJustDone ? `/?fired=${encodeURIComponent(unit.id)}` : `/unit/${encodeURIComponent(unit.id)}?fired=${encodeURIComponent(id)}`),
       });

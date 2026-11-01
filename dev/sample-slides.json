@@ -1,0 +1,13 @@
+{
+  "_note": "Preview only: shown when the app is opened with ?dev and content/slides.json doesn't exist yet. Real slides come from the Project.",
+  "slides": [
+    { "unit": "A5", "tissue": "drg", "label": "DRG L4", "stain": "NF200 · CGRP · DAPI", "caption": "Sample caption: large NF200+ neurons and small peptidergic CGRP+ neurons share one ganglion." },
+    { "unit": "A6", "tissue": "brain-coronal", "label": "brain", "stain": "Nissl", "atlas": { "regions": ["VPM", "VPL", "SSp"] }, "atlasPath": "dev/sample/A6.json", "caption": "Sample caption: a coronal section through the thalamus. VPM and VPL relay touch to primary somatosensory cortex." },
+    { "unit": "B4", "tissue": "microglia", "label": "cortex", "stain": "Iba1 · DAPI", "caption": "Sample caption: resting microglia tile the brain, each with fine branching processes." },
+    { "unit": "C7", "tissue": "cortex-if", "label": "cortex", "stain": "NeuN · GFAP · DAPI", "caption": "Sample caption: neurons (NeuN) and astrocytes (GFAP) in one section." },
+    { "unit": "C8", "tissue": "rnascope", "label": "cortex", "stain": "probe 1 · probe 2 · DAPI", "caption": "Sample caption: each dot is a single mRNA molecule, counted per cell." },
+    { "unit": "D3", "tissue": "cord", "label": "cord L3", "stain": "LFB · cresyl violet", "caption": "Sample caption: white matter (blue) wraps the butterfly of grey matter; motor neurons cluster in the ventral horns." },
+    { "unit": "D4", "tissue": "nerve", "label": "sciatic", "stain": "Toluidine blue", "caption": "Sample caption: each dark ring is the myelin sheath around one axon." },
+    { "unit": "D6", "tissue": "islet", "label": "pancreas", "stain": "Insulin · glucagon · DAPI", "caption": "Sample caption: in mouse islets, beta cells form the core and alpha cells the rim." }
+  ]
+}

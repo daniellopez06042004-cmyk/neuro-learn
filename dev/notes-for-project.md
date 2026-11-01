@@ -1,3 +1,59 @@
+### 2026-11-01: new request: one microscope slide per unit (the slide box)
+
+Dan approved a **slide box**: finishing a unit earns a specimen slide that drops into a lab slide box, and tapping it shows the section under the microscope with a caption. The app side draws the slides; **you decide what each unit's slide shows**, because that's content. Please write `content/slides.json` with one entry for each of the 40 units (A1–A10, B1–B9, C1–C12, D1–D8, E).
+
+```json
+{
+  "slides": [
+    {
+      "unit": "A5",
+      "tissue": "drg",
+      "label": "DRG L4",
+      "stain": "NF200 · CGRP · DAPI",
+      "caption": "Large NF200+ neurons and small peptidergic CGRP+ neurons share one ganglion.",
+      "sources": [{ "citation": "…", "doi": "…", "verified": true }]
+    },
+    {
+      "unit": "A6",
+      "tissue": "brain-coronal",
+      "label": "brain",
+      "stain": "Nissl",
+      "atlas": { "regions": ["VPM", "VPL", "SSp"] },
+      "caption": "…"
+    }
+  ]
+}
+```
+
+**Fields:**
+- `tissue`: pick one from the library below. The checker rejects anything else.
+- `label`: what's handwritten on the frosted end, **12 characters or fewer** (e.g. "DRG L4", "cord L3", "sciatic").
+- `stain`: must describe what the drawing shows; see the library. For `rnascope` you choose the two probe names (e.g. "Trpv1 · Calca · DAPI").
+- `caption`: 1–2 plain sentences, true for the drawing, tied to the unit's big idea. No invented numbers.
+- `sources`: optional but preferred; same rules as lessons (only `verified: true` after you've checked the DOI).
+- `atlas` (only for `brain-coronal`): `regions` are **Allen Mouse Brain Atlas acronyms** (e.g. "VPM", "SSp", "NTS", "AP", "PVH", "CEA"). The app side finds the Allen section that contains them and highlights them, credited to the Allen Institute.
+
+**The tissue library (what the app can draw today):**
+
+| `tissue` | What's drawn | Stain (fixed) |
+|---|---|---|
+| `brain-coronal` | Real Allen atlas coronal section, any level; your `regions` highlighted | Nissl (plus an "atlas colours" toggle) |
+| `drg` | DRG, longitudinal, with its root | NF200 · CGRP · DAPI |
+| `cord` | Lumbar spinal cord, transverse (outline traced from the Allen Spinal Cord Atlas) | Luxol fast blue · cresyl violet |
+| `nerve` | Sciatic nerve, semithin cross-section, fascicle edge | Toluidine blue |
+| `islet` | Pancreatic islet with surrounding acini | Insulin · glucagon · DAPI |
+| `microglia` | Cortex microglia | Iba1 · DAPI |
+| `rnascope` | Cells with single-mRNA dots, two probes | your two probes · DAPI |
+| `cortex-if` | Cortex from the pia down | NeuN · GFAP · DAPI |
+
+**If a unit needs something the library doesn't have** (likely candidates: skin with nerve endings, gut wall with the enteric plexus, lymph node or spleen, nodose/vagal ganglion, sympathetic ganglion, vagus nerve), use `"tissue": "request"` and add:
+- `"wish"`: one sentence on what the section should show, the stain and the species. Mouse preferred.
+- `"references"`: 1–2 published figures to draw from (DOI or PMC link plus figure number).
+
+The app side will draw it from those references, add it to the library and tell you here. Reusing a library tissue is fine when it fits: a nodose ganglion could use `drg` with a different `label` and caption.
+
+**Until a unit has an entry**, its slide is still earned but shows a blank label. Send all 40 in one file when ready; partial batches are fine too.
+
 ### 2026-11-01: distractor rewrite + all 3 app requests are live
 
 **Your three requests are built, tested and live:**

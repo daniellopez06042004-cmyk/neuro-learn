@@ -74,6 +74,9 @@ export const progress = {
     save();
   },
 
+  slideDate(unitId) { return state.slides?.[unitId] || null; },
+  earnSlide(unitId, date = today()) { (state.slides ||= {})[unitId] = date; save(); },
+
   addBonusXp(n) { state.bonusXp = (state.bonusXp || 0) + n; this.logXp(n); save(); },
 
   logXp(n) {

@@ -6,6 +6,7 @@ what changed there since the last import into app/content/:
   - course-*-snippet.json                (units replace the same unit id in course.json)
   - glossary.json                        (merged by term; the Project's version of a term wins)
   - pulse.json                           (merged by paper id)
+  - slides.json                          (merged by unit; brain slides get their Allen section made by dev/atlas.py)
 Files the Project hasn't touched since the last import are left alone, so fixes
 made on the app side stay put. Run from the app folder:
   python3 dev/import.py            # import
@@ -14,6 +15,7 @@ made on the app side stay put. Run from the app folder:
 import hashlib
 import json
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -36,6 +38,15 @@ def load_json(path):
 def save_json(path, data):
     if not DRY:
         path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+
+def make_atlas(unit, regions):
+    """Run dev/atlas.py for a brain slide; returns its last line of output."""
+    if DRY:
+        return 'would make its Allen section (dry run)'
+    run = subprocess.run([sys.executable, str(APP / 'dev' / 'atlas.py'), unit, *regions], capture_output=True, text=True)
+    lines = (run.stdout + run.stderr).strip().splitlines()
+    return lines[-1] if lines else 'atlas.py printed nothing'
 
 
 def main():
@@ -136,6 +147,32 @@ def main():
             save_json(DST / 'pulse.json', mine)
             report.append(f'pulse    +{added} new papers')
             changed.append((key, ppath))
+
+    # Slide box: merge by unit (the Project's entry wins), then make any Allen brain sections that are missing
+    # or whose regions changed.
+    spath = SRC / 'slides.json'
+    if spath.exists():
+        new, key = is_new(spath)
+        if new:
+            mine = load_json(DST / 'slides.json') if (DST / 'slides.json').exists() else {'slides': []}
+            index = {s.get('unit'): i for i, s in enumerate(mine['slides'])}
+            added = 0
+            for s in load_json(spath).get('slides', []):
+                if s.get('unit') in index:
+                    mine['slides'][index[s['unit']]] = s
+                else:
+                    mine['slides'].append(s)
+                    added += 1
+            save_json(DST / 'slides.json', mine)
+            report.append(f'slides   +{added} new, {len(mine["slides"])} total')
+            changed.append((key, spath))
+            for s in mine['slides']:
+                if s.get('tissue') != 'brain-coronal':
+                    continue
+                regions = (s.get('atlas') or {}).get('regions') or []
+                made = DST / 'assets' / 'atlas' / f'{s["unit"]}.json'
+                if regions and (not made.exists() or load_json(made).get('regions') != regions):
+                    report.append(f'atlas    {s["unit"]}: {make_atlas(s["unit"], regions)}')
 
     print('\n'.join(report) if report else 'Nothing new from the Project since the last import.')
     if not DRY:

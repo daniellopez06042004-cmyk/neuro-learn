@@ -3,7 +3,7 @@
 // engine; prints problems and exits non-zero if there are any.
 // Extra arguments are the lesson files on disk, so unlisted files get noticed.
 
-import { validateCourse, validateLesson, validatePulse, validateGlossary } from '../src/validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides } from '../src/validate.js';
 
 const problems = [], notes = [];
 
@@ -90,6 +90,20 @@ if (course.missing || course.error) {
     problems.push(...validateGlossary(glossary.data));
     for (const t of glossary.data.terms || []) for (const n of [t.term, ...(t.aliases || [])]) if (typeof n === 'string') known.add(n.toLowerCase());
   }
+  // slides.json: one slide per unit; brain sections need their Allen data (dev/atlas.py).
+  const slides = readJson('content/slides.json');
+  if (slides.error) problems.push(slides.error);
+  else if (slides.data) {
+    problems.push(...validateSlides(slides.data));
+    const units = new Set((course.data.tracks || []).flatMap((t) => (t.units || []).map((u) => u.id)));
+    for (const s of slides.data.slides || []) {
+      if (s?.unit && !units.has(s.unit)) problems.push(`slides.json › ${s.unit}: no unit with that id in course.json`);
+      if (s?.tissue === 'brain-coronal' && s.unit && readJson(`content/assets/atlas/${s.unit}.json`).missing) {
+        problems.push(`slides.json › ${s.unit}: its Allen section hasn't been made yet; run: python3 dev/atlas.py ${s.unit} ${(s.atlas?.regions || []).join(' ')}`);
+      }
+      if (s?.tissue === 'request') notes.push(`slides.json › ${s?.unit}: requests a new tissue ("${s.wish}"); draw it and add it to TISSUES.`);
+    }
+  }
   // [[term]] links in lessons should point at glossary entries.
   for (const id of listed) {
     let text;
@@ -99,7 +113,7 @@ if (course.missing || course.error) {
       if (!sides.some((x) => known.has(x.toLowerCase()))) notes.push(`lessons/${id}.json links [[${m[1]}${m[2] ? `|${m[2]}` : ''}]], but neither side is in glossary.json yet.`);
     }
   }
-  print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json and glossary.json.`);
+  print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json, glossary.json and slides.json.`);
 }
 
 for (const n of notes) print(`Note: ${n}`);

@@ -1,4 +1,5 @@
 import { h, icon, svg, trackStyle } from '../ui.js';
+import { slideBoxReady } from './slidebox.js';
 import { content, unitStats, unitUnlocked, dueCountForUnit, blockingPrereqs } from '../content.js';
 import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
@@ -38,7 +39,8 @@ function shortcuts() {
   return h('nav', { class: 'shortcuts', 'aria-label': 'More' },
     h('a', { class: 'pill', href: '#/pulse' }, 'Field Pulse', unread ? h('span', { class: 'badge' }, `${unread} new`) : null),
     h('a', { class: 'pill', href: '#/glossary' }, 'Glossary'),
-    h('a', { class: 'pill', href: '#/progress' }, 'Progress'));
+    h('a', { class: 'pill', href: '#/progress' }, 'Progress'),
+    slideBoxReady() ? h('a', { class: 'pill', href: '#/slides' }, 'Slide box') : null);
 }
 
 function installTip() {

@@ -1,7 +1,7 @@
 // Loads course.json and every lesson it lists, validates them, and answers
 // questions like "is this unit unlocked?" that need both content and progress.
 
-import { validateCourse, validateLesson, validatePulse, validateGlossary } from './validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides } from './validate.js';
 import { progress, settings } from './progress.js';
 
 const CONTENT = 'content/';
@@ -14,6 +14,7 @@ export const content = {
   tracks: [],
   pulse: [],           // Field Pulse papers, newest first
   glossary: new Map(), // lower-case term or alias -> { term, aliases, definition, track }
+  slides: new Map(),   // unitId -> its slides.json entry (what the unit's specimen slide shows)
 };
 
 export async function loadContent() {
@@ -49,7 +50,14 @@ export async function loadContent() {
   jobs.push(loadOptional('glossary.json', validateGlossary, (d) => {
     for (const t of d.terms) for (const name of [t.term, ...(t.aliases || [])]) content.glossary.set(name.toLowerCase(), t);
   }));
+  jobs.push(loadOptional('slides.json', validateSlides, (d) => {
+    for (const s of d.slides) content.slides.set(s.unit, s);
+  }));
   await Promise.all(jobs);
+  // ?dev with no slides.json yet: preview the slide box with the sample slides.
+  if (!content.slides.size && new URLSearchParams(location.search).has('dev')) {
+    try { for (const s of (await (await fetch('dev/sample-slides.json')).json()).slides) content.slides.set(s.unit, s); } catch { /* no samples */ }
+  }
   return content;
 }
 
@@ -100,6 +108,20 @@ export function unitStats(unit) {
   const ready = unit.lessons.filter(playable);
   const done = ready.filter((id) => progress.isComplete(id));
   return { total: ready.length, done: done.length, complete: ready.length > 0 && done.length === ready.length };
+}
+
+// Slides: a unit's slide is earned the first time the unit is complete, and kept
+// even if lessons are added later. Returns the units that just earned one.
+// Backfilled slides are dated by the unit's last finished lesson.
+export function syncSlides() {
+  const fresh = [];
+  for (const { unit } of content.units.values()) {
+    if (progress.slideDate(unit.id) || !unitStats(unit).complete) continue;
+    const dates = unit.lessons.map((id) => progress.state.completed[id]?.date).filter(Boolean).sort();
+    progress.earnSlide(unit.id, dates.at(-1));
+    fresh.push(unit.id);
+  }
+  return fresh;
 }
 
 // A prereq with no written lessons yet can't be finished, so it doesn't block.
