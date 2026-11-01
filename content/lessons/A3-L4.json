@@ -28,6 +28,12 @@
       "flag": {
         "level": "uncertain",
         "note": "How broadly Trpv1-Cre marks neurons depends on the specific line and reporter; check the characterization for the line you use."
+      },
+      "visual": {
+        "type": "svg",
+        "src": "assets/trpv1-lineage.svg",
+        "alt": "Two columns of the same DRG neurons. In development, three express Trpv1 and are permanently marked by Trpv1-Cre (a star). In the adult only one still expresses TRPV1, yet three still carry the reporter, so reporter-positive exceeds TRPV1-positive.",
+        "caption": "A Cre line marks every cell that ever expressed the gene, not just those expressing it now."
       }
     },
     {

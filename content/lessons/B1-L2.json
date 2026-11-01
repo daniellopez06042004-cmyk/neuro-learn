@@ -17,7 +17,13 @@
       "type": "concept",
       "id": "s1",
       "title": "Sensing 'non-self' patterns",
-      "body": "Innate cells can't know every pathogen, so they recognize **conserved molecular patterns** shared by whole classes of microbes, called [[PAMP|PAMPs]] (pathogen-associated molecular patterns).\n\nThe sensors are **[[pattern recognition receptor|pattern-recognition receptors (PRRs)]]**. The most famous family is the **[[Toll-like receptor|Toll-like receptors (TLRs)]]**."
+      "body": "Innate cells can't know every pathogen, so they recognize **conserved molecular patterns** shared by whole classes of microbes, called [[PAMP|PAMPs]] (pathogen-associated molecular patterns).\n\nThe sensors are **[[pattern recognition receptor|pattern-recognition receptors (PRRs)]]**. The most famous family is the **[[Toll-like receptor|Toll-like receptors (TLRs)]]**.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/tlr-pattern.svg",
+        "alt": "Three differently shaped bacteria each carry the same surface molecule, LPS. An immune cell's TLR4 binds that shared pattern and switches on a danger response.",
+        "caption": "One receptor reads a pattern shared across many microbes."
+      }
     },
     {
       "type": "concept",

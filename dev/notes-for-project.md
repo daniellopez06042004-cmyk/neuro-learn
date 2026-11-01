@@ -1,22 +1,26 @@
-### 2026-11-01: A1–A5 + B1–B4 imported (31 lessons, 10 visuals, glossary now 123)
+### 2026-11-01: 3 fixes + 4 new visuals imported and reviewed
 
-**Checked and live:**
-- All 31 lessons pass, and every one of their 149 steps renders and grades in the app. All 75 glossary links in them resolve, and `RNAscope` is now defined (A3-L4 and A5-L3 use it).
-- **All 20 DOIs** match Crossref on first author and year (Caterina 1997/2000, McKemy 2002, Jordt 2004, Bautista 2007, Coste 2010, Ranade 2014, Servin-Vences 2023, Usoskin, Sharma, Abraira & Ginty, Lemaitre, Poltorak, Nimmerjahn, Ginhoux, Stevens, Schafer, and the Wolfson and Qi papers). Nicely sourced. One small thing: Usoskin et al. is online in 2014 and in print in 2015, and you cite 2015, which is correct for print.
-- Prereqs work: A2←A1, A3/A4←A2, A5←A3+A4, B2–B4←B1.
-- **Visuals:** all 10 pass both lint rules, and I reviewed each one on a phone, frozen at several points. **Excellent:** `fiber-classes` (Aβ arrives first, then Aδ, then C), `threshold-tiling`, `clonal-selection`, `antigen-presentation` (MHC I → cytotoxic, MHC II → helper), `trp-gating`, `piezo-gating`, `inflammatory-soup`, and `action-potential` (it labels each phase as it happens).
+**All three fixes confirmed on a phone (frozen at the end of the loop):**
+- `jak-stat.svg`: the STAT dimer now sits inside the nucleus, labeled, next to "target gene ON", and the reduced-motion block shows the same end state. That was the point of the diagram, and it lands now.
+- `microglia-pruning.svg`: the labels are clear of the microglion.
+- `action-potential.svg`: "threshold" is off the spike.
 
-**Fixes (one line each; I haven't changed any of your files):**
-- `jak-stat.svg` › the key step doesn't show. The moving STAT (`.statMove`) does travel into the nucleus (y 150 → 250), but it fades to opacity 0 by about 70% of the loop. Meanwhile a static "STAT" square stays in the cytoplasm the whole time. So the final hold shows STAT apparently stuck outside while the gene is "ON", and the reduced-motion version (`opacity:0`) hides it entirely. Fix: keep the STAT (ideally drawn as a dimer) **visible inside the nucleus**, next to "target gene ON", through the end hold and in reduced motion. Dim or remove the static cytoplasm copy once it has moved.
-- `microglia-pruning.svg` › end state: the microglion circle sits on top of the "weak synapse / complement tag" labels. Move the labels up or left, or stop the microglion slightly lower.
-- `action-potential.svg` › the "threshold" label sits on the falling limb of the spike. Move it to the left end of the dashed line.
+**New visuals, all live and scientifically sound:**
+- `driving-force.svg` (A2-L1): E_Na ≈ +60 and E_K ≈ −90 around a −70 rest. A long inward Na⁺ arrow and a short outward K⁺ arrow makes the driving-force idea easy to see.
+- `graded-potential.svg` (A2-L2): graded amplitudes, and only the largest crosses threshold and fires. Clear.
+- `trpv1-lineage.svg` (A3-L4): developing vs. adult, with more reporter⁺ than TRPV1⁺-now. Exactly the lineage caveat.
+- `tlr-pattern.svg` (B1-L2): one shared LPS pattern, TLR4 detects it, and the cell responds.
 
-**Your question:** `offset-path` works in `fiber-classes`, `jak-stat` (the motion itself is fine), `trp-gating` and `piezo-gating`.
+**Two optional polish points** (not blocking; fix whenever you're next in these files):
+- `graded-potential.svg` › the "graded receptor potentials" label crosses the middle ("larger") bump. Lift it above the bumps or move it to the left.
+- `driving-force.svg` › "E_Na" and "E_K" show a literal underscore. Use a subscript, for example `E<tspan baseline-shift="sub" font-size="11">Na</tspan>` (11px is fine for a subscript).
 
-**Next:** the capstone unit E (it unlocks after C5 + D6, both live). After that, more A/B visuals. The most visual-hungry lessons with nothing yet are A2-L1 (the resting potential and driving force), A2-L2 (graded receptor potentials), A3-L4 (TRPs as tools and in the gut), and B1-L2 (TLR pattern recognition).
+**Lessons:** A2-L1, A2-L2, A3-L4 and B1-L2 only gained their `visual`. Nothing else changed, and every step renders.
+
+**Next:** the capstone unit E. It's unlocked now (C5 and D6 are both live), and it's the part closest to Dan's actual pancreas DREADD work.
 
 ### Earlier (all resolved)
 
-- D6 and all visual fixes are live; the two SVG lint rules are in the checker.
-- Visual redesign done; dark-mode widget backdrop fixed in the app.
+- Tracks A (A1–A5) and B (B1–B4): 31 lessons live, all 20 DOIs verified.
+- D6 and the visual redesign are live; the two SVG lint rules are in the checker; the dark-mode widget backdrop is fixed in the app.
 - Glossary links read `[[term|shown]]`; match steps can repeat right-hand items.
