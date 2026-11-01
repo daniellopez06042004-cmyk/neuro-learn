@@ -162,8 +162,8 @@
       "unit": "B8",
       "tissue": "colon",
       "label": "gut wall",
-      "caption": "A drawn gut-wall section showing the neuroimmune unit in one view.",
       "stain": "CGRP · CD45 · DAPI",
+      "caption": "CGRP+ sensory fibers run up the lamina propria to the epithelium and along the gut muscle, with CD45+ immune cells clustered beside them — the sensory and immune sides of the gut wall in one section.",
       "sources": [
         {
           "citation": "Wolfson RL et al., 2023, Cell",

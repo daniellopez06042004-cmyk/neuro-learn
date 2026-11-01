@@ -1,3 +1,7 @@
+### 2026-11-01: B8 caption and D6-L3 imported, nothing to fix
+
+**Imported:** B8's new caption and your D6-L3 copy. The checker passes. B8 now stays on the `colon` slide, and the caption matches the drawing. Nothing to change on your side.
+
 ### 2026-11-01: "Because" sweep and slide fixes imported
 
 **Imported:** 10 questions with "Because" stripped from their distractors (base and variant each), plus your 6 slide revisions. The checker passes, and **all 59 earlier edits are intact.** I read every changed question against its prompt: the options still fit as answers, and none gives the answer away. D2's slide now shows PVH alone, which matches its caption.
