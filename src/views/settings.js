@@ -27,6 +27,8 @@ export function renderSettings(root) {
             h('span', { class: 'small muted' }, 'Skip prereqs and open every unit and lesson.')),
           h('span', { class: 'switch' }, unlock))),
       h('div', { class: 'card' },
+        toggle('apOnly', 'Action potential only', 'Use the membrane-potential trace in every lesson instead of rotating lab scenes.', (on) => settings.set('apOnly', on)),
+        h('hr', { class: 'card-rule' }),
         toggle('sound', 'Sound effects', 'A tick for each EPSP, chimes for answers, and a pop when the neuron fires.', (on) => setSoundEnabled(on)),
         h('hr', { class: 'card-rule' }),
         toggle('iconBadge', 'Reviews due on app icon', badgeSupported()

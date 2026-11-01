@@ -5,7 +5,7 @@
 
 import { h, md, inline, icon, flagBadge, trackStyle } from './ui.js';
 import { createStep, pickVariant } from './steps.js';
-import { createTrace } from './trace.js';
+import { createScene } from './themes.js';
 import { light, fire } from './haptics.js';
 import { sounds } from './sound.js';
 import { progress } from './progress.js';
@@ -18,8 +18,9 @@ const FIRE_AT = 0.33; // drag this fraction of the screen width to fire
 /**
  * items: [{ key: "lessonId:stepId", step, color }]
  * mode:  'lesson' re-asks a missed question once at the end; 'review' doesn't.
+ * theme: which progress scene sits on top (themes.js); 'ap' is the membrane potential.
  */
-export function runSession(root, { items, mode, onExit, onDone }) {
+export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) {
   const queue = items.map((it) => ({ ...it, retry: false }));
   let pos = 0, graded = 0, correct = 0, misses = 0, finished = false;
   let primary = null;       // the button Enter should press
@@ -60,7 +61,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     stage, dock);
   root.replaceChildren(shell);
   shell.setAttribute('style', trackStyle(queue[0].color));
-  const trace = createTrace(traceHost, signal);
+  const trace = createScene(theme, traceHost, signal);
 
   function setDock(...kids) {
     dock.className = 'dock';
@@ -265,7 +266,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     stage.style.transform = '';
     shell.classList.add('firing');
     await trace.finale({
-      onPeak: (at) => {
+      onPeak: (at, [title, sub] = ['Threshold reached', 'The neuron fired']) => {
         fire();
         sounds.fire();
         const host = traceHost.getBoundingClientRect(), box = shell.getBoundingClientRect();
@@ -273,7 +274,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
         const fx = h('div', { class: 'fx', style: `--x:${x};--y:${y}`, 'aria-hidden': 'true' },
           h('div', { class: 'fx-flash' }), h('div', { class: 'fx-wave' }),
           h('div', { class: 'fx-ring' }), h('div', { class: 'fx-ring r2' }), h('div', { class: 'fx-ring r3' }));
-        shell.append(fx, h('p', { class: 'fx-label', role: 'status' }, 'Threshold reached', h('span', null, 'The neuron fired')));
+        shell.append(fx, h('p', { class: 'fx-label', role: 'status' }, title, h('span', null, sub)));
         shell.classList.add('jolt');
       },
     });

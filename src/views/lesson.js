@@ -2,6 +2,7 @@ import { content, playable, unitStats, lessonTrack } from '../content.js';
 import { progress } from '../progress.js';
 import { runSession, finishScreen } from '../player.js';
 import { go } from '../router.js';
+import { themeFor } from '../themes.js';
 
 export function renderLesson(root, { id }) {
   if (!playable(id)) return go('/', { replace: true });
@@ -21,6 +22,7 @@ export function renderLesson(root, { id }) {
 
   runSession(root, {
     mode: 'lesson',
+    theme: themeFor(id),
     items,
     onExit: () => go(`/unit/${encodeURIComponent(unit.id)}`),
     onDone: ({ graded, correct }) => {

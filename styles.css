@@ -269,6 +269,8 @@ details.flag-box p { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 .player-top { display: flex; align-items: flex-start; gap: 6px; padding: 0 10px 0 6px; }
 .trace-host { flex: 1; min-width: 0; height: 44px; transition: height 420ms cubic-bezier(.2,.9,.3,1); }
 .trace-host.expanded { height: 172px; }
+.trace-host.scene { height: 64px; }
+.trace-host.scene.expanded { height: 300px; }
 
 /* the finale: threshold reached, the neuron fires */
 .player.firing .stage, .player.firing .dock { opacity: 0; transition: opacity 280ms ease; pointer-events: none; }
