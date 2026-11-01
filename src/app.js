@@ -25,11 +25,18 @@ route('/glossary', renderGlossary);
 route('/pulse', renderPulse);
 fallback(() => go('/', { replace: true }));
 
-// Glossary terms ([[term]] in lesson text) open a definition sheet anywhere.
-document.addEventListener('click', (e) => {
+// Glossary terms ([[term]] in lesson text) open a definition sheet anywhere,
+// except in a question that hasn't been answered yet: there a tap on a term
+// just counts as a tap on the answer around it.
+const openTerm = (e) => {
   const term = e.target.closest('.term');
-  if (term) { e.preventDefault(); showTerm(term.dataset.term, term); }
-});
+  if (!term || term.closest('[data-terms-locked]')) return;
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  showTerm(term.dataset.term, term);
+};
+document.addEventListener('click', openTerm);
+document.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') openTerm(e); });
 
 // Offline caching is off while developing so edits show up on reload.
 // Add ?sw to the URL to test it locally anyway.

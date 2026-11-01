@@ -519,7 +519,9 @@ svg.circuit { display: block; width: 100%; height: auto; overflow: visible; }
 .shortcuts::-webkit-scrollbar { display: none; }
 .pill { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-size: 14px; font-weight: 600; }
 .pill .badge { background: var(--warn-line); color: #1c1c1b; border-radius: 999px; font-size: 11px; padding: 1px 7px; }
-button.term { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted var(--track); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.term { cursor: pointer; text-decoration: underline dotted var(--track); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* Inside an unanswered question a term is just text; it lights up once answered. */
+[data-terms-locked] .term { cursor: inherit; text-decoration-color: var(--line-strong); text-decoration-thickness: 1px; }
 .term-sheet { position: fixed; inset: 0; z-index: 50; display: flex; align-items: flex-end; justify-content: center; background: rgb(0 0 0 / 0.45); animation: fadein 160ms ease; }
 .term-card { width: 100%; max-width: 560px; background: var(--surface); border-radius: 20px 20px 0 0; padding: 14px 20px calc(var(--safe-bottom) + 20px); animation: rise 240ms cubic-bezier(.2,.9,.3,1.1); }
 .term-head { display: flex; align-items: center; justify-content: space-between; margin: 0 0 6px; }

@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Describe the two-neuron autonomic motor chain and where it synapses.",
-  "tags": ["autonomic", "preganglionic", "postganglionic"],
+  "tags": [
+    "autonomic",
+    "preganglionic",
+    "postganglionic"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -32,12 +36,14 @@
       "id": "s3",
       "prompt": "These autonomic ganglia hold cell bodies of MOTOR (efferent) neurons. How does that differ from the DRG?",
       "options": [
-        "It doesn't — they're identical",
-        "The DRG holds SENSORY (afferent) cell bodies, not autonomic motor ones",
-        "The DRG holds postganglionic motor neurons",
-        "Autonomic ganglia are in the CNS"
+        "It doesn't differ; the two kinds of ganglia are identical",
+        "The DRG holds sensory (afferent) cell bodies, not motor ones",
+        "The DRG holds postganglionic autonomic motor neurons",
+        "Autonomic ganglia sit inside the CNS, unlike the DRG"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Both are PNS ganglia, but they do opposite jobs: autonomic ganglia relay motor output; the DRG houses sensory (afferent) cell bodies. Same word, different direction of information."
     }

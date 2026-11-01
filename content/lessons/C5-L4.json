@@ -67,10 +67,10 @@
       "id": "s4",
       "prompt": "You see an effect in DREADD+ / actuator AND the same-sized effect in DREADD− / actuator. What's the correct conclusion?",
       "options": [
-        "Your neurons drove the effect",
-        "The effect is the actuator's, not your neurons' — you cannot claim a neuronal effect",
-        "The DREADD is extra strong",
-        "You need more animals to see the difference"
+        "Your neurons must have driven the observed effect",
+        "The effect is the actuator's, not your neurons' own",
+        "The DREADD must be unusually strong in these mice",
+        "You just need more animals to reveal the difference"
       ],
       "answer": [
         1
@@ -91,10 +91,10 @@
       "scenario": "Your hM4Di pancreas experiment shows NO change in the readout after the actuator. Reviewers ask whether the silencing even worked.",
       "prompt": "What evidence best answers them?",
       "options": [
-        "A photo of the mice",
-        "Ex vivo or in vivo recording / calcium imaging showing the DREADD+ neurons were actually suppressed by the actuator",
-        "The genotype PCR",
-        "A longer behavioral video"
+        "A clear photograph of the mice taken before and after",
+        "Imaging or recording showing the DREADD+ neurons were suppressed",
+        "The genotyping PCR that confirms the DREADD allele is present",
+        "A longer video recording of the behavioral session"
       ],
       "answer": [
         1

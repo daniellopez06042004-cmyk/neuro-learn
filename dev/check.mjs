@@ -59,7 +59,8 @@ if (course.missing || course.error) {
         written++;
         problems.push(...validateLesson(lesson.data, id, u.id));
         // Visuals and images must point at real files.
-        for (const st of lesson.data.steps || []) {
+        const withVariants = (lesson.data.steps || []).flatMap((x) => [x, ...(Array.isArray(x?.variants) ? x.variants.map((v) => ({ ...v, id: x.id })) : [])]);
+        for (const st of withVariants) {
           for (const src of [st?.visual?.src, typeof st?.image === 'string' ? st.image : st?.image?.src]) {
             if (typeof src !== 'string' || /^(https?:)?\/\//.test(src)) continue;
             let text;

@@ -29,10 +29,10 @@
       "id": "s3",
       "prompt": "A cell line makes a poking-activated current. You remove one gene and the current vanishes; add the gene back and it returns. What can you conclude?",
       "options": [
-        "The gene is unrelated",
-        "That gene is necessary and sufficient for the mechanically activated current in these cells",
-        "The cells are dead",
-        "It only works in neurons"
+        "The gene is unrelated to the current you happened to measure",
+        "That gene is necessary and sufficient for the current in these cells",
+        "The cells have simply died, which is why the current disappeared",
+        "The effect holds only in neurons, not in this kind of cell line"
       ],
       "answer": [
         1
@@ -45,10 +45,10 @@
       "setup": "You want to test whether Piezo2 carries gentle touch in the skin.",
       "prompt": "What's the cleanest genetic experiment?",
       "options": [
-        "Overexpress TRPV1",
-        "Conditionally delete Piezo2 in sensory neurons and test light-touch responses",
-        "Give capsaicin",
-        "Record from muscle"
+        "Over-express TRPV1 and check whether touch sensitivity rises",
+        "Conditionally delete Piezo2 in sensory neurons and test light touch",
+        "Apply capsaicin to the skin and measure the withdrawal response",
+        "Record from skeletal muscle fibers rather than from the skin"
       ],
       "answer": [
         1

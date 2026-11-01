@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Decode the location-based names anatomists use for clusters of cell bodies and bundles of axons.",
-  "tags": ["vocabulary", "ganglion", "nucleus"],
+  "tags": [
+    "vocabulary",
+    "ganglion",
+    "nucleus"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -20,10 +24,22 @@
       "id": "s2",
       "prompt": "Match each term to what it is.",
       "pairs": [
-        ["Ganglion", "Cell-body cluster in the PNS"],
-        ["Nucleus", "Cell-body cluster in the CNS"],
-        ["Nerve", "Axon bundle in the PNS"],
-        ["Tract", "Axon bundle in the CNS"]
+        [
+          "Ganglion",
+          "Cell-body cluster in the PNS"
+        ],
+        [
+          "Nucleus",
+          "Cell-body cluster in the CNS"
+        ],
+        [
+          "Nerve",
+          "Axon bundle in the PNS"
+        ],
+        [
+          "Tract",
+          "Axon bundle in the CNS"
+        ]
       ],
       "explanation": "The PNS/CNS split renames the same structures. 'Dorsal root ganglion' is a PNS cell-body cluster; 'nodose ganglion' is another."
     },
@@ -32,12 +48,14 @@
       "id": "s3",
       "prompt": "You read 'nodose ganglion' in a paper. What does the word 'ganglion' immediately tell you?",
       "options": [
-        "It's a bundle of axons in the brain",
-        "It's a cluster of neuronal cell bodies in the PNS",
-        "It's part of the spinal cord",
-        "It's a type of glial cell"
+        "That it's a bundle of axons traveling within the brain",
+        "That it's a cluster of neuronal cell bodies out in the PNS",
+        "That it's a specific part of the spinal cord itself",
+        "That it's a particular type of glial support cell"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "'Ganglion' = PNS cell bodies. The [[nodose ganglion]] holds vagal sensory cell bodies — the vagal counterpart of the DRG, which you'll meet in D2."
     }

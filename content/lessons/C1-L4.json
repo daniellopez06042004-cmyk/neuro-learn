@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Explain how blinding and randomization prevent bias from shaping a result.",
-  "tags": ["blinding", "randomization", "bias"],
+  "tags": [
+    "blinding",
+    "randomization",
+    "bias"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -32,7 +36,9 @@
         "Raw sequencing read counts",
         "A balance weighing samples"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Hand-scoring is subjective, so the scorer's expectation can bias it — exactly where blinding pays off. Fully automated, objective readouts are less vulnerable (though blinding still helps downstream analysis choices)."
     },
@@ -42,12 +48,14 @@
       "setup": "You process all vehicle mice in week 1 and all [[actuator]] mice in week 2, unblinded.",
       "prompt": "Why is the result hard to interpret even if it's 'significant'?",
       "options": [
-        "Treatment is confounded with week/batch, and unblinded scoring can add bias",
-        "There's no problem; the weeks are replicates",
-        "You used too many mice",
-        "The actuator can't work across two weeks"
+        "There's no problem; the two weeks act as independent replicates",
+        "Treatment is confounded with week/batch, and unblinded scoring adds bias",
+        "You simply used too many mice, which inflates the significance",
+        "The actuator cannot possibly work across two different weeks"
       ],
-      "answer": [0],
+      "answer": [
+        1
+      ],
       "reveal": "Any week-to-week difference (reagents, health, your technique) is now baked into the 'treatment' effect, and unblinded scoring can nudge it further. Interleave groups within each session and blind the scorer.",
       "freeText": false
     }

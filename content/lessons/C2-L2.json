@@ -73,10 +73,10 @@
       "scenario": "A reporter cross labels far MORE cells than the marker gene is expressed in adults.",
       "prompt": "What's the most likely explanation?",
       "options": [
-        "The reporter is broken",
-        "Plain Cre also fired during development, when the gene was expressed more broadly",
-        "Too little tamoxifen",
-        "The Rosa26 locus is silent"
+        "The reporter allele itself is broken and mislabels random cells",
+        "Plain Cre also fired in development, when the gene was broader",
+        "Too little tamoxifen was given to restrict the labeling",
+        "The Rosa26 reporter locus is silent in these neurons"
       ],
       "answer": [
         1

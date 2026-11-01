@@ -33,10 +33,10 @@
       "id": "s3",
       "prompt": "How do cytokines mostly differ from classic hormones?",
       "options": [
-        "Cytokines travel the whole body like hormones always do",
-        "Cytokines usually act locally and transiently, coordinating nearby cells, though some do reach the circulation",
-        "Cytokines are DNA",
-        "Cytokines are not proteins"
+        "Cytokines always travel the whole body, exactly as hormones do",
+        "Cytokines usually act locally and briefly, though some reach the blood",
+        "Cytokines are made of DNA rather than of protein like hormones",
+        "Cytokines are not proteins and so cannot bind to cell receptors"
       ],
       "answer": [
         1
@@ -73,10 +73,10 @@
       "setup": "A cytokine is released at a wound and a nearby cell changes its behavior, but a distant identical cell does not.",
       "prompt": "Why the difference?",
       "options": [
-        "Distance and receptor availability: local cells get enough signal and express the receptor",
-        "Cytokines never work",
-        "The distant cell is dead",
-        "Cytokines only act on neurons"
+        "Local concentration and receptors: nearby cells get enough signal",
+        "Because cytokines never actually act on any target cell at all",
+        "Because the distant cell has already died and cannot respond",
+        "Because cytokines are able to act only on neurons, never other cells"
       ],
       "answer": [
         0

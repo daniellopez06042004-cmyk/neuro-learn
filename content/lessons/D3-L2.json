@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Place the DRG on the dorsal root and explain the clean sensory/motor separation at the roots.",
-  "tags": ["dorsal-root", "ventral-root", "DRG"],
+  "tags": [
+    "dorsal-root",
+    "ventral-root",
+    "DRG"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -27,9 +31,18 @@
       "id": "s3",
       "prompt": "Match each root/structure to its function.",
       "pairs": [
-        ["Dorsal root", "Sensory input to the cord"],
-        ["Ventral root", "Motor output from the cord"],
-        ["DRG", "Sensory cell bodies, on the dorsal root"]
+        [
+          "Dorsal root",
+          "Sensory input to the cord"
+        ],
+        [
+          "Ventral root",
+          "Motor output from the cord"
+        ],
+        [
+          "DRG",
+          "Sensory cell bodies, on the dorsal root"
+        ]
       ],
       "explanation": "Dorsal = sensory in (with the DRG); ventral = motor out. If you know a neuron's cell body is in the DRG, you already know it's sensory."
     },
@@ -39,12 +52,14 @@
       "setup": "You cut a single dorsal root (leaving the ventral root intact).",
       "prompt": "What is lost?",
       "options": [
-        "Motor output to that segment's muscles",
-        "Sensory input from that segment's territory",
-        "Both equally",
-        "Nothing"
+        "Motor output to that segment's muscles is lost",
+        "Sensory input from that segment's territory is lost",
+        "Both motor and sensory are lost in equal measure",
+        "Nothing is lost; the ventral root compensates fully"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "reveal": "Cutting the dorsal root removes sensory input for that segment while motor output (ventral root) is spared — the classic demonstration that the roots are functionally separate.",
       "freeText": false
     }

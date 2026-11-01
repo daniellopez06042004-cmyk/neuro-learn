@@ -35,10 +35,10 @@
       "id": "s3",
       "prompt": "Why does opening a TRP channel excite a sensory neuron at rest?",
       "options": [
-        "It lets K⁺ out",
-        "It's a non-selective cation channel, so the net current at −65 mV is inward and depolarizing",
-        "It lets Cl⁻ in",
-        "It closes Na⁺ channels"
+        "It lets K⁺ leave the cell, which drives the membrane downward",
+        "It passes cations non-selectively, so net current at rest is inward",
+        "It admits Cl⁻, and that chloride current depolarizes the ending",
+        "It closes nearby Na⁺ channels, which paradoxically excites the cell"
       ],
       "answer": [
         1

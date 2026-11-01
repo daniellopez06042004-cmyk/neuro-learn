@@ -57,10 +57,10 @@
       "scenario": "You inject an AAV and get strong expression — but in the wrong cell types near your target.",
       "prompt": "Which change is most likely to fix the cell-type specificity?",
       "options": [
-        "Use more virus",
-        "Switch to a serotype/promoter with better tropism for your target, and/or make the payload Cre-dependent in a cell-type Cre line",
-        "Inject faster",
-        "Use a dimmer reporter"
+        "Inject a much larger total amount of the very same virus",
+        "Use a serotype with better tropism, or a Cre-dependent payload",
+        "Inject the virus more quickly so it reaches more cells",
+        "Use a dimmer reporter so the off-target cells are less visible"
       ],
       "answer": [
         1

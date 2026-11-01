@@ -88,11 +88,32 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
   const seen = new Set();
   lesson.steps.forEach((s, i) => {
     const w = `steps[${i}]${s?.id ? ` (${s.id}${s.type ? `, ${s.type}` : ''})` : ''}`;
-    const need = (field, ok, msg) => { if (!ok) at(w, msg || `"${field}" is missing`); };
     if (!s || typeof s !== 'object') { at(w, 'is not an object'); return; }
     if (!isStr(s.id)) at(w, '"id" is missing');
     else if (seen.has(s.id)) at(w, `duplicate step id "${s.id}" (ids must be unique in a lesson)`);
     else seen.add(s.id);
+    checkStep(s, w);
+
+    // Variants: other versions of the same question, shown on retries and in
+    // review. Each is a whole step body without its own id (it shares the
+    // base step's id, so review history stays one item).
+    if (s.variants != null) {
+      if (!isArr(s.variants) || !s.variants.length) { at(w, '"variants" must be a non-empty list of step bodies'); return; }
+      if (s.type === 'concept') at(w, 'a concept card can\'t have variants (only questions can)');
+      s.variants.forEach((v, j) => {
+        const vw = `${w} › variants[${j}]${v?.type ? ` (${v.type})` : ''}`;
+        if (!v || typeof v !== 'object' || isArr(v)) { at(vw, 'is not an object'); return; }
+        if (v.id != null) at(vw, 'variants don\'t have their own "id" (they share the step\'s id)');
+        if (v.variants != null) at(vw, 'a variant can\'t have its own variants');
+        if (v.type === 'concept') at(vw, 'a variant must be a question, not a concept card');
+        checkStep(v, vw);
+      });
+    }
+  });
+  return errs;
+
+  function checkStep(s, w) {
+    const need = (field, ok, msg) => { if (!ok) at(w, msg || `"${field}" is missing`); };
     if (!STEP_TYPES.includes(s.type)) { at(w, `unknown "type" ${JSON.stringify(s.type)} (use one of: ${STEP_TYPES.join(', ')})`); return; }
 
     if (s.flag != null) {
@@ -157,8 +178,7 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
         else if (new Set(s.items).size !== s.items.length) at(w, '"items" must all be different');
         break;
     }
-  });
-  return errs;
+  }
 }
 
 // content/pulse.json: recent papers, each with a checked DOI.

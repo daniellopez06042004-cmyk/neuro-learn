@@ -5,7 +5,12 @@
   "minutes": 5,
   "xp": 10,
   "objective": "Match common lab controls to the specific false result each one guards against.",
-  "tags": ["controls", "western-blot", "immunofluorescence", "qPCR"],
+  "tags": [
+    "controls",
+    "western-blot",
+    "immunofluorescence",
+    "qPCR"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -20,10 +25,22 @@
       "id": "s2",
       "prompt": "Match each control to the false result it rules out.",
       "pairs": [
-        ["Loading control", "Unequal protein loaded per lane"],
-        ["Secondary-only", "Non-specific secondary-antibody binding"],
-        ["No-RT control", "Signal from contaminating genomic DNA"],
-        ["Vehicle control", "An effect from the carrier, not the drug"]
+        [
+          "Loading control",
+          "Unequal protein loaded per lane"
+        ],
+        [
+          "Secondary-only",
+          "Non-specific secondary-antibody binding"
+        ],
+        [
+          "No-RT control",
+          "Signal from contaminating genomic DNA"
+        ],
+        [
+          "Vehicle control",
+          "An effect from the carrier, not the drug"
+        ]
       ],
       "explanation": "Each control isolates one alternative explanation. A missing control leaves that explanation wide open."
     },
@@ -37,7 +54,9 @@
         "No-RT control",
         "A positive-control tissue"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Secondary-only reproduces everything except the primary antibody. If it's blank, your signal depends on the primary — i.e. it's real. If it also glows, the secondary is binding non-specifically."
     },
@@ -45,15 +64,36 @@
       "type": "troubleshoot",
       "id": "s4",
       "scenario": "A western blot shows a strong band in every lane, including the knockout.",
-      "data": { "kind": "table", "rows": [["Lane", "Genotype", "Band?"], ["1", "WT", "Yes"], ["2", "KO", "Yes"]] },
+      "data": {
+        "kind": "table",
+        "rows": [
+          [
+            "Lane",
+            "Genotype",
+            "Band?"
+          ],
+          [
+            "1",
+            "WT",
+            "Yes"
+          ],
+          [
+            "2",
+            "KO",
+            "Yes"
+          ]
+        ]
+      },
       "prompt": "What's the most likely explanation?",
       "options": [
-        "The antibody is non-specific or detects a cross-reactive protein",
-        "Too little protein was loaded",
-        "The transfer failed",
-        "The wrong secondary was used"
+        "The antibody is non-specific or hits a cross-reactive protein",
+        "Too little protein was loaded in the knockout lane",
+        "The transfer step failed for the knockout sample only",
+        "The wrong secondary antibody was used on that lane"
       ],
-      "answer": [0],
+      "answer": [
+        0
+      ],
       "explanation": "Too little protein or a failed transfer would *remove* bands, not add them. A band that persists in a knockout — which lacks the target — points to a non-specific antibody. The KO is acting as the ideal negative control.",
       "followUp": "Confirm with a second antibody to a different epitope, or a peptide-block."
     }

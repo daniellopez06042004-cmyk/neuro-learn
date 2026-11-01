@@ -42,10 +42,10 @@
       "id": "s3",
       "prompt": "Why does the CNO→clozapine conversion threaten an experiment?",
       "options": [
-        "Clozapine is inert so it dilutes the dose",
-        "Clozapine has its own CNS effects, so a 'drug-only' change might not be due to your DREADD",
-        "It makes the DREADD stop working",
-        "It only matters in cell culture"
+        "Clozapine is inert, so it only dilutes the effective dose of CNO",
+        "Clozapine has its own CNS effects, so a drug-only change may mislead",
+        "The conversion makes the DREADD receptor itself stop working",
+        "It matters only in cell culture, never in a living animal"
       ],
       "answer": [
         1
@@ -66,10 +66,10 @@
       "scenario": "A labmate reports a strong behavioral change after giving a high dose of CNO to their [[hM4Di]] mice. They have no DREADD-free group.",
       "prompt": "What is the most important gap?",
       "options": [
-        "They didn't measure body temperature",
-        "Without a DREADD-free + CNO group, the effect could be the drug (via clozapine), not the silenced neurons",
-        "CNO cannot activate hM4Di",
-        "They should have used more mice only"
+        "They forgot to measure the animals' core body temperature",
+        "No DREADD-free + CNO group, so the effect could be the drug",
+        "CNO is completely unable to activate the hM4Di receptor",
+        "They should simply have used a much larger number of mice"
       ],
       "answer": [
         1
@@ -83,9 +83,9 @@
       "setup": "You run DREADD-free mice and give them the actuator alone. You see a measurable change in your behavioral readout.",
       "prompt": "What does this tell you?",
       "options": [
-        "Your neurons caused the effect",
-        "The actuator has its own effect; your DREADD result is confounded until you account for it",
-        "The DREADD is working perfectly"
+        "Your neurons must clearly have caused the observed effect",
+        "The actuator has its own effect, so the result is confounded",
+        "The DREADD is working exactly as intended in this case"
       ],
       "answer": [
         1

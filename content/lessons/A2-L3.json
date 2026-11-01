@@ -71,10 +71,10 @@
       "setup": "Inflammation shifts nociceptor Nav channels so they open at slightly more negative voltages.",
       "prompt": "What happens to the neuron's excitability?",
       "options": [
-        "Decreases",
-        "Increases: threshold is effectively lower, so weaker stimuli trigger spikes",
-        "No change",
-        "The neuron can no longer fire"
+        "Excitability decreases, because the shift makes spikes harder to trigger",
+        "Excitability increases: the effective threshold drops, so weak stimuli fire it",
+        "No change, since a shift that small cannot affect the firing threshold",
+        "The neuron can no longer fire, since its Nav channels stay inactivated"
       ],
       "answer": [
         1

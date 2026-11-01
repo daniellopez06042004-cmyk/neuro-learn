@@ -57,10 +57,10 @@
       "setup": "You get good, specific expression in pancreas-projecting [[DRG]] neurons and confirm it with a reporter.",
       "prompt": "What's the right next step before drawing any biological conclusion?",
       "options": [
-        "Publish immediately",
-        "Run the manipulation check and the full control set (from C5) before interpreting any effect",
-        "Increase the virus 10x",
-        "Skip controls since expression looks clean"
+        "Publish the result right away while the expression still looks clean",
+        "Run the manipulation check and full control set before interpreting it",
+        "Increase the injected virus tenfold and simply repeat the run",
+        "Skip the control groups, since expression already looks clean"
       ],
       "answer": [
         1

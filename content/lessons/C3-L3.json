@@ -51,10 +51,10 @@
       "setup": "A broad Cre line labels [[DRG]] + nodose neurons. You add a Flp driver active only in nodose neurons, using a Cre-on/Flp-off payload.",
       "prompt": "Which neurons keep the payload?",
       "options": [
-        "DRG + nodose",
-        "DRG only (nodose subtracted out)",
-        "Nodose only",
-        "Neither"
+        "Both DRG and nodose neurons keep the payload",
+        "Only DRG neurons; the nodose cells are subtracted out",
+        "Only the nodose neurons retain the payload here",
+        "Neither population ends up keeping the payload"
       ],
       "answer": [
         1
@@ -67,10 +67,10 @@
       "id": "s4",
       "prompt": "When is subtraction (Cre-on/Flp-off) a better choice than an AND-gate?",
       "options": [
-        "When you have a clean marker for the cells you want to EXCLUDE",
-        "When you have no Flp lines at all",
-        "When the reporter is too dim",
-        "When you want to label everything"
+        "When you have a clean marker for the cells you want to exclude",
+        "When you have no Flp driver lines available at all",
+        "When the reporter signal is simply too dim to see",
+        "When your goal is actually to label every cell broadly"
       ],
       "answer": [
         0

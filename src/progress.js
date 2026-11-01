@@ -103,12 +103,13 @@ export const progress = {
   },
 
   // key = "lessonId:stepId"
-  recordAnswer(key, correct) {
+  // variant: which version of the question was shown, so review can show a different one
+  recordAnswer(key, correct, variant = 0) {
     const prev = state.review[key];
     const box = correct ? Math.min(MAX_BOX, (prev?.box || 0) + 1) : 1;
     // A miss is due again right away so it shows up in today's review.
     const due = correct ? addDays(today(), BOX_DAYS[box]) : today();
-    state.review[key] = { box, due };
+    state.review[key] = { box, due, v: variant };
     save();
   },
 

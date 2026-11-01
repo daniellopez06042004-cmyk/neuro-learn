@@ -24,15 +24,32 @@
       "id": "s2",
       "prompt": "Capsaicin (chili) activates the same neurons as painful heat. What does a labeled-line view predict?",
       "options": [
-        "Capsaicin should feel cold",
-        "Capsaicin should feel hot or burning, because it activates the 'heat line'",
-        "Capsaicin should feel like touch",
-        "Capsaicin should feel like nothing"
+        "It should feel cold, since capsaicin and cold share one pathway",
+        "It should feel hot or burning, because it drives the heat line",
+        "It should feel like light touch carried on those same afferents",
+        "It should feel like nothing, since chili is not an adequate stimulus"
       ],
       "answer": [
         1
       ],
-      "explanation": "If the line carries the label, any way of activating it feels like that quality. That's exactly why chili 'burns' even though nothing is hot."
+      "explanation": "If the line carries the label, any way of activating it feels like that quality. That's exactly why chili 'burns' even though nothing is hot.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "On a strict labeled-line view, each line carries one fixed quality.",
+          "prompt": "So activating the 'heat line' with capsaicin should feel like…",
+          "options": [
+            "Cooling, much like menthol does",
+            "Heat or burning, however the line was triggered",
+            "Gentle brushing or light touch",
+            "Nothing noticeable at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "A labeled line carries its quality regardless of how it's activated — which is exactly why chili 'burns.'"
+        }
+      ]
     },
     {
       "type": "concept",

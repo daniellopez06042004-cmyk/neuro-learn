@@ -69,10 +69,10 @@
       "setup": "A mouse is engineered to lack all T and B cells but keeps innate immunity.",
       "prompt": "What do you expect on first exposure to a common microbe?",
       "options": [
-        "No response at all",
-        "An initial innate response (inflammation, phagocytes), but poor specific/long-term immunity",
-        "Perfect immunity",
-        "Only antibody production"
+        "No response at all, since every arm of immunity has been removed",
+        "An early innate response, but weak specific and long-term immunity",
+        "Perfect immunity, as the innate system fully compensates for the loss",
+        "Only antibody production, with no inflammation or phagocyte activity"
       ],
       "answer": [
         1

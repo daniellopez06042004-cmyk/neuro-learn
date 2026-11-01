@@ -31,10 +31,10 @@
       "id": "s3",
       "prompt": "What's the main advantage of delivering a tool by AAV injection rather than breeding it in?",
       "options": [
-        "It never needs controls",
-        "Spatial and temporal control — you choose where and when it's expressed",
-        "It changes the mouse's genome permanently in every cell",
-        "It removes the need for a Cre line"
+        "It removes any need to run experimental control groups",
+        "Spatial and temporal control: you pick where and when it expresses",
+        "It permanently rewrites the genome of every cell in the body",
+        "It completely does away with the need for any Cre line"
       ],
       "answer": [
         1
@@ -49,9 +49,9 @@
       "prompt": "Which approach fits best?",
       "options": [
         "A bred-in allele expressed from birth everywhere the marker is on",
-        "Inject an AAV carrying the DREADD so expression is localized and adult-timed",
-        "No delivery method needed",
-        "A drug alone"
+        "Inject an AAV with the DREADD so expression is local and adult-timed",
+        "No delivery method is needed; the DREADD appears on its own",
+        "Give a drug alone and skip expressing any DREADD at all"
       ],
       "answer": [
         1

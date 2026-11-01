@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Distinguish the somatic and autonomic divisions and say what each controls.",
-  "tags": ["somatic", "autonomic", "divisions"],
+  "tags": [
+    "somatic",
+    "autonomic",
+    "divisions"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -19,8 +23,15 @@
       "type": "mcq",
       "id": "s2",
       "prompt": "Contraction of the gut's smooth muscle during digestion is governed by which division?",
-      "options": ["Somatic", "Autonomic", "Neither", "Only the enteric system, independent of both"],
-      "answer": [1],
+      "options": [
+        "Somatic",
+        "Autonomic",
+        "Neither",
+        "Only the enteric system, independent of both"
+      ],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Smooth muscle and glands are autonomic territory (with heavy local control by the gut's own enteric system). Skeletal muscle you move on purpose is somatic."
     },
@@ -29,12 +40,14 @@
       "id": "s3",
       "prompt": "A sensory neuron reporting painful distension from the colon — which division does its SENSORY signal belong to?",
       "options": [
-        "Somatic, cleanly",
-        "It's a visceral (interior) afferent — related to autonomic targets but sensory, a point the next unit untangles",
-        "Autonomic motor",
-        "It isn't a neuron"
+        "Somatic sensation, cleanly and without any ambiguity",
+        "A visceral afferent: autonomic-related but still sensory",
+        "Autonomic motor output directed to the colon wall",
+        "It isn't carried by a neuron at all, strictly speaking"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Visceral sensation is its own thing: the signal comes from autonomic-innervated organs but is carried by sensory (afferent) neurons. D2 separates 'autonomic = motor output' from 'visceral afferents = sensory'."
     }

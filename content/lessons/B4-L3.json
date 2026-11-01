@@ -40,10 +40,10 @@
       "id": "s3",
       "prompt": "Pruning is described as activity-dependent. What does that mean?",
       "options": [
-        "All synapses are removed equally",
-        "Less-active synapses are preferentially tagged and removed, so activity helps decide what stays",
-        "Only the strongest synapses are removed",
-        "Activity has no role"
+        "That all synapses are removed equally, regardless of their activity",
+        "That less-active synapses are preferentially tagged and then removed",
+        "That only the strongest, most-active synapses get pruned away",
+        "That activity plays no role in deciding which synapses survive"
       ],
       "answer": [
         1
@@ -55,10 +55,10 @@
       "id": "s4",
       "prompt": "How is complement-mediated pruning like antibody opsonization (B2-L3)?",
       "options": [
-        "Both edit DNA",
-        "Both work by tagging a target so a phagocyte engulfs it",
-        "Both make antibodies",
-        "They are unrelated"
+        "Both work by editing the DNA of the target they act on",
+        "Both tag a target so that a phagocyte then engulfs it",
+        "Both produce antibodies that circulate and bind their target",
+        "They are unrelated processes that only look superficially similar"
       ],
       "answer": [
         1
@@ -71,10 +71,10 @@
       "setup": "In a mouse lacking a complement component needed for tagging, what might you expect in developing circuits?",
       "prompt": "Choose the best prediction.",
       "options": [
-        "More aggressive pruning",
-        "Reduced pruning, so excess synapses may persist",
-        "No synapses form",
-        "Neurons die immediately"
+        "More aggressive pruning, stripping away even active synapses",
+        "Reduced pruning, so surplus synapses may linger in the circuit",
+        "No synapses form at all in the developing circuit",
+        "Neurons die immediately once the component is removed"
       ],
       "answer": [
         1

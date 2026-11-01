@@ -77,10 +77,10 @@
       "id": "s6",
       "prompt": "A mouse study shows a CCK-driven effect on acinar secretion. What's the careful conclusion?",
       "options": [
-        "It definitely works the same way in humans",
-        "It shows the mouse pathway; in humans the route may differ, so check before generalizing",
-        "Mouse data are useless for pancreas biology",
-        "CCK doesn't act on the pancreas"
+        "It definitely works the exact same way in humans too",
+        "It shows the mouse pathway; the human route may differ, so check",
+        "Mouse data are essentially useless for pancreas biology",
+        "It shows that CCK does not act on the pancreas at all"
       ],
       "answer": [
         1

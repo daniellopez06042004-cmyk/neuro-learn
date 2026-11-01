@@ -34,10 +34,10 @@
       "id": "s3",
       "prompt": "Why look for Piezo2 in gut afferents at all?",
       "options": [
-        "It's the known light-touch transducer, so it's a strong candidate for sensing gut stretch",
-        "It's a heat channel",
-        "It only works in skin",
-        "Guts have no mechanical forces"
+        "It's the known light-touch transducer, a strong candidate for gut stretch",
+        "It's mainly a heat-sensing channel, so it should report gut temperature",
+        "It is known to work only in skin, which makes the gut a useful contrast",
+        "The gut has no mechanical forces, so any result there would surprise us"
       ],
       "answer": [
         0
@@ -50,10 +50,10 @@
       "setup": "A mouse has Piezo2 disrupted in sensory neurons and shows altered gut transit.",
       "prompt": "Does that prove sensory Piezo2 directly senses the stretch that drives transit?",
       "options": [
-        "Yes, definitively",
-        "No: it shows Piezo2 is needed for normal transit, but the exact cells and whether it's the direct stretch sensor need further mapping",
-        "It proves the gut has no other sensors",
-        "It proves a vagal mechanism only"
+        "Yes, it proves sensory Piezo2 is the direct sensor of that stretch",
+        "No: it shows Piezo2 is needed, but the exact cells and role need mapping",
+        "Yes, and it also proves the gut has no other stretch sensors at all",
+        "No, because it actually proves a purely vagal mechanism instead"
       ],
       "answer": [
         1

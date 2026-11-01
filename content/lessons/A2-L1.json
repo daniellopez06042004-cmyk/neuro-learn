@@ -38,10 +38,10 @@
       "id": "s3",
       "prompt": "A neuron sits at −65 mV. A Na⁺ channel opens. What happens?",
       "options": [
-        "Na⁺ flows out and the cell hyperpolarizes",
-        "Na⁺ flows in and the cell depolarizes toward +60 mV",
-        "Nothing, because Na⁺ is at equilibrium",
-        "K⁺ flows in"
+        "Na⁺ flows outward and the cell hyperpolarizes toward its equilibrium",
+        "Na⁺ flows inward and the cell depolarizes toward E_Na, about +60 mV",
+        "Nothing moves, because Na⁺ already sits at equilibrium at −65 mV",
+        "K⁺ rushes in through the open channel and the cell depolarizes"
       ],
       "answer": [
         1
@@ -53,10 +53,10 @@
       "id": "s4",
       "prompt": "Same neuron at −65 mV. A K⁺ channel opens. What happens?",
       "options": [
-        "Large depolarization",
-        "Small outward K⁺ current that nudges the cell toward −90 mV (hyperpolarization)",
-        "K⁺ flows in",
-        "The cell fires"
+        "A large depolarization, as K⁺ rushes inward down its gradient",
+        "A small outward K⁺ current that nudges the cell toward −90 mV",
+        "K⁺ flows inward, pulling the membrane upward toward 0 mV",
+        "The cell reaches threshold and fires a full action potential"
       ],
       "answer": [
         1

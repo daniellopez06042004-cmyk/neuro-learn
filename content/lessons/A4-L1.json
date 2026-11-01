@@ -39,10 +39,10 @@
       "id": "s3",
       "prompt": "Why is mechanotransduction necessarily fast?",
       "options": [
-        "Force travels slower than light",
-        "The channel is opened directly by force, with no second-messenger relay in between",
-        "It uses a slow enzyme cascade",
-        "It waits for calcium from stores"
+        "Because mechanical force itself travels faster than light does",
+        "The channel is opened directly by force, with no messenger relay between",
+        "It runs through a slow enzyme cascade that then amplifies the signal",
+        "It waits for calcium to be released from internal stores first"
       ],
       "answer": [
         1
@@ -55,10 +55,10 @@
       "setup": "You stretch a patch of membrane containing a mechanically activated channel in a dish, with no other cells around.",
       "prompt": "Do you expect current?",
       "options": [
-        "No, it needs a whole animal",
-        "Yes: if the channel is intrinsically mechanosensitive, membrane tension alone can open it",
-        "Only if you add capsaicin",
-        "Only in the dark"
+        "No; a channel needs a whole animal to show any mechanical response",
+        "Yes: if it's intrinsically mechanosensitive, membrane tension alone opens it",
+        "Only if capsaicin is added to the patch alongside the applied stretch",
+        "Only in darkness, since light would interfere with the recording"
       ],
       "answer": [
         1

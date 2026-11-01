@@ -13,7 +13,8 @@ function liveItems(keys) {
   const items = [];
   for (const key of keys) {
     const found = findStep(key);
-    if (found) items.push({ key, step: found.step, color: found.color });
+    // Show a different version than last time (base by default), if it has variants.
+    if (found) items.push({ key, step: found.step, color: found.color, avoid: progress.state.review[key]?.v ?? 0 });
     else progress.forget(key); // the question was removed or renamed in the content
   }
   return items;

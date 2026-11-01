@@ -38,10 +38,10 @@
       "id": "s3",
       "prompt": "Marker X is in your DRG neurons but also in nearby sympathetic neurons. You add a Flp driver active in DRG but not sympathetic neurons, and a Cre+Flp-dependent payload. What expresses the payload?",
       "options": [
-        "All marker-X cells",
-        "Only marker-X cells that are also DRG (Cre AND Flp)",
-        "Only sympathetic neurons",
-        "Nothing"
+        "Every marker-X cell, in both DRG and sympathetic neurons",
+        "Only marker-X cells that are also DRG (Cre AND Flp present)",
+        "Only the sympathetic neurons, since Flp overrides Cre there",
+        "No cells at all, because the two drivers cancel each other"
       ],
       "answer": [
         1
@@ -55,10 +55,10 @@
       "scenario": "Your single Cre line (a broad sensory marker) labels DRG neurons but also enteric neurons in the gut wall, confounding a colon experiment.",
       "prompt": "What's the cleanest fix?",
       "options": [
-        "Give less tamoxifen",
-        "Add an intersection: a second (Flp) driver that's on in DRG but off in enteric neurons, with a Cre+Flp-dependent payload",
-        "Use a brighter reporter",
-        "Switch the payload from GFP to tdTomato"
+        "Give less tamoxifen so fewer enteric neurons get labeled",
+        "Add a Flp driver on in DRG, off in enteric, with a Cre+Flp payload",
+        "Switch to a brighter reporter so DRG cells stand out more",
+        "Change the payload from GFP to tdTomato for better contrast"
       ],
       "answer": [
         1

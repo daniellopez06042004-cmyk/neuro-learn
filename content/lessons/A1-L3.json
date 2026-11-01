@@ -49,30 +49,63 @@
       "id": "s4",
       "prompt": "Why can't you point to exactly where in your colon a cramp is?",
       "options": [
-        "The colon has no sensory neurons",
-        "Visceral afferents are sparse with large receptive fields and converge onto spinal neurons shared with skin",
-        "Pain signals from the colon travel only by the vagus",
-        "The colon's neurons fire too fast to localize"
+        "The colon has essentially no sensory neurons of its own to report with",
+        "Visceral afferents are sparse, with large fields that converge with skin input",
+        "Colon pain travels only by the vagus, which carries no spatial information",
+        "Colon afferents fire too fast for the cord to resolve their position"
       ],
       "answer": [
         1
       ],
-      "explanation": "Sparse innervation, large receptive fields and convergence together blur location. That makes visceral pain hard to localize and prone to referral."
+      "explanation": "Sparse innervation, large receptive fields and convergence together blur location. That makes visceral pain hard to localize and prone to referral.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A patient reports a cramp 'somewhere in my belly' but can't point to where.",
+          "prompt": "What best explains the vagueness?",
+          "options": [
+            "Belly organs send no pain signals to the cord at all",
+            "Sparse visceral afferents with large fields converge with skin input",
+            "The sensation is purely emotional rather than sensory",
+            "Only fast Aβ fibers carry it, and they blur the location"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Few afferents, large receptive fields, and convergence onto shared spinal levels make visceral pain poorly localized and prone to referral."
+        }
+      ]
     },
     {
       "type": "mcq",
       "id": "s5",
       "prompt": "You want to map the receptive field of a single colon-innervating DRG neuron. What do you need to vary?",
       "options": [
-        "Only the stimulus intensity",
-        "The location of a punctate stimulus across the colon wall while recording that neuron",
-        "The mouse's age",
-        "The dye color"
+        "Vary only the stimulus intensity while holding the probe in one spot",
+        "Move a small punctate stimulus across the colon wall while recording the cell",
+        "Vary the mouse's age across a cohort and average the responses together",
+        "Vary the fluorophore color used to label that neuron's ending"
       ],
       "answer": [
         1
       ],
-      "explanation": "A receptive field is defined by location: you move a small probe around and note where the neuron responds. This is how single-afferent ending territories are characterized."
+      "explanation": "A receptive field is defined by location: you move a small probe around and note where the neuron responds. This is how single-afferent ending territories are characterized.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To find a single colon afferent's receptive field, the key thing to vary is…",
+          "options": [
+            "How bright the labeling dye on the fiber is",
+            "Where on the colon wall a small probe is applied",
+            "The age of the mouse you are recording from",
+            "How long each individual recording session lasts"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A receptive field is defined by location: move a punctate stimulus around and note where the cell responds."
+        }
+      ]
     }
   ],
   "sources": [],

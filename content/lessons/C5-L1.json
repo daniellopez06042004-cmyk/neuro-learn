@@ -31,10 +31,10 @@
       "id": "s3",
       "prompt": "What makes a DREADD 'exclusive' to your cells of interest?",
       "options": [
-        "The drug is injected directly into those cells",
-        "Only cells engineered to express the DREADD can respond to the otherwise-inert drug",
-        "The drug only exists inside neurons",
-        "The receptor is destroyed in all other cells"
+        "The drug is injected directly into only those cells",
+        "Only cells engineered with the DREADD respond to the drug",
+        "The drug exists only inside neurons and nowhere else",
+        "The receptor is destroyed in every other cell type"
       ],
       "answer": [
         1
@@ -47,10 +47,10 @@
       "id": "s4",
       "prompt": "Why is it useful that a DREADD is a GPCR rather than an ion channel?",
       "options": [
-        "GPCRs act through the cell's own second-messenger machinery, nudging excitability over minutes",
-        "GPCRs are faster than light",
-        "GPCRs cannot be made specific",
-        "Ion channels can't be expressed in neurons"
+        "GPCRs work through the cell's own second messengers, over minutes",
+        "GPCRs signal faster than the speed of light in the cell",
+        "GPCRs can never be engineered to be cell-type specific",
+        "Ion channels simply cannot be expressed in living neurons"
       ],
       "answer": [
         0
@@ -64,9 +64,9 @@
       "setup": "You give the DREADD drug to a mouse that was NEVER given the virus/allele to express the DREADD.",
       "prompt": "What should happen to your target neurons, if the tool is behaving ideally?",
       "options": [
-        "They should be strongly activated",
-        "Nothing — no DREADD means no designer response",
-        "They should die"
+        "They should be strongly and reliably activated by the drug",
+        "Nothing should happen: no DREADD means no designer response",
+        "They should be driven so hard that the cells die"
       ],
       "answer": [
         1

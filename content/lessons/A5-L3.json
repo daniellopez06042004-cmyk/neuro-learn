@@ -58,10 +58,10 @@
       "id": "s4",
       "prompt": "A figure shows a neuron positive for both CGRP and TRPV1. What's the reasonable read?",
       "options": [
-        "It's not a neuron",
-        "It's likely a peptidergic nociceptor",
-        "It must be an Aβ touch neuron",
-        "It senses only cold"
+        "It is probably not a neuron at all, given that marker pair",
+        "It's most likely a peptidergic nociceptor of the classic type",
+        "It must be a large Aβ low-threshold mechanoreceptor for touch",
+        "It is a neuron tuned to sense only cold temperatures"
       ],
       "answer": [
         1

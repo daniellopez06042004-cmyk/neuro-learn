@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Describe how the spinal cord is segmented and how spinal nerves leave it.",
-  "tags": ["spinal-cord", "segments", "spinal-nerve"],
+  "tags": [
+    "spinal-cord",
+    "segments",
+    "spinal-nerve"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -27,12 +31,14 @@
       "id": "s3",
       "prompt": "A spinal nerve carries which fibers?",
       "options": [
-        "Only sensory",
-        "Only motor",
-        "Both — it's mixed, formed where dorsal (sensory) and ventral (motor) roots join",
-        "Neither; it's a tract"
+        "Only sensory fibers, carrying signals inward",
+        "Only motor fibers, carrying commands outward",
+        "Both: it's mixed, where dorsal and ventral roots join",
+        "Neither; a spinal nerve is actually a CNS tract"
       ],
-      "answer": [2],
+      "answer": [
+        2
+      ],
       "multi": false,
       "explanation": "The dorsal and ventral roots merge into a mixed spinal nerve. Upstream of the merge, the roots are cleanly separated by function — which the next lesson uses."
     }

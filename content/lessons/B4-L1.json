@@ -34,10 +34,10 @@
       "id": "s3",
       "prompt": "Why does the CNS need its own resident immune cells rather than relying on blood-borne ones?",
       "options": [
-        "Blood cells are too small",
-        "The blood-brain barrier limits immune-cell entry, so a resident surveillance system is needed",
-        "Neurons are immune cells",
-        "The brain has no immune needs"
+        "Because blood-borne immune cells are simply too small to be useful",
+        "The blood-brain barrier limits entry, so resident surveillance is needed",
+        "Because neurons themselves already act as the brain's immune cells",
+        "Because the brain has no immune needs and never faces infection"
       ],
       "answer": [
         1
@@ -65,10 +65,10 @@
       "setup": "A researcher labels blood cells and finds that, in a healthy adult brain, almost none of the microglia carry the label.",
       "prompt": "What does that suggest about microglial maintenance?",
       "options": [
-        "Microglia come fresh from blood daily",
-        "Microglia are largely self-renewing residents, not continuously replaced from blood",
-        "Microglia are neurons",
-        "The label failed"
+        "That microglia are replaced fresh from the blood every single day",
+        "That microglia are largely self-renewing residents, not blood-replaced",
+        "That microglia are actually neurons rather than immune cells",
+        "That the labeling method simply failed to work in this experiment"
       ],
       "answer": [
         1

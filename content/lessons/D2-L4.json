@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Place the vagus nerve and the enteric nervous system in the gut-sensing picture.",
-  "tags": ["vagus", "enteric-nervous-system", "gut-brain"],
+  "tags": [
+    "vagus",
+    "enteric-nervous-system",
+    "gut-brain"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -19,8 +23,15 @@
       "type": "mcq",
       "id": "s2",
       "prompt": "Which system can coordinate basic gut motility even without input from the brain?",
-      "options": ["The vagus alone", "The enteric nervous system", "The DRG", "The sympathetic chain"],
-      "answer": [1],
+      "options": [
+        "The vagus alone",
+        "The enteric nervous system",
+        "The DRG",
+        "The sympathetic chain"
+      ],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "The enteric nervous system is often called the gut's 'second brain' because its local circuits can drive motility reflexes autonomously — then extrinsic nerves modulate and report on it."
     },
@@ -30,12 +41,14 @@
       "setup": "Recent work describes an enteric-to-DRG pathway: enteric neurons relaying signals to spinal (DRG) afferents (see Field Pulse).",
       "prompt": "Why is that noteworthy?",
       "options": [
-        "It shows the DRG is part of the CNS",
-        "It means DRG afferents may not only sense the gut wall directly, but also receive relayed input from the enteric system",
-        "It proves the vagus is unnecessary",
-        "It has nothing to do with sensing"
+        "It shows that the DRG is actually a part of the CNS after all",
+        "DRG afferents may get relayed enteric input, not only sense directly",
+        "It proves that the vagus nerve is entirely unnecessary here",
+        "It has nothing at all to do with how the gut is sensed"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "reveal": "It adds a layer: the gut's own neurons can feed the spinal (DRG) sensory line, not just the wall mechanics. A fresh wrinkle in exactly your lab's circuit — and why the three systems here are worth keeping distinct.",
       "freeText": false
     }

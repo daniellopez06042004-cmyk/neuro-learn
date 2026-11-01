@@ -41,10 +41,10 @@
       "id": "s3",
       "prompt": "A paper says it used `Trpv1-Cre` with hM4Di to quiet TRPV1 neurons. What's your first question?",
       "options": [
-        "What color was the reporter?",
-        "Which neurons does this Cre line actually mark in adults: only TRPV1-positive cells, or a broader lineage?",
-        "How old were the authors?",
-        "Was the actuator dissolved in water?"
+        "What fluorescent color was chosen for the reporter protein?",
+        "In adults, which neurons does the line actually mark?",
+        "How many years of experience did the authors have with mice?",
+        "What solvent was the actuator dissolved in before injection?"
       ],
       "answer": [
         1

@@ -60,10 +60,10 @@
       "setup": "You apply mustard oil to the skin of a TRPA1-knockout mouse.",
       "prompt": "What do you expect?",
       "options": [
-        "Normal pain behavior",
-        "Little or no response to mustard oil",
-        "A cooling sensation",
-        "Increased touch sensitivity"
+        "A normal pain response, since other channels fully cover mustard oil",
+        "Little or no response to mustard oil, if TRPA1 is truly its receptor",
+        "A cooling sensation, because losing TRPA1 unmasks the cold pathway",
+        "Heightened touch sensitivity across the treated patch of skin"
       ],
       "answer": [
         1
@@ -75,10 +75,10 @@
       "id": "s5",
       "prompt": "Many gut-innervating nociceptors express TRPV1 and TRPA1. What does that suggest they detect?",
       "options": [
-        "Only light stretch",
-        "Chemical and inflammatory danger signals, such as acidity and reactive irritants",
-        "Only cold",
-        "Only nutrients"
+        "Only gentle mechanical stretch of the gut wall as it fills",
+        "Chemical and inflammatory danger signals, such as acid and irritants",
+        "Only cold temperatures in the material passing through the gut",
+        "Only the nutrient and sugar content of a passing meal"
       ],
       "answer": [
         1

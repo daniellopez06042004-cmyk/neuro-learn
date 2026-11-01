@@ -77,10 +77,10 @@
       },
       "prompt": "What does strain B show?",
       "options": [
-        "LPS is harmless",
-        "TLR4 is required to sense LPS and trigger the response",
-        "Cytokines don't exist",
-        "Strain B has no immune cells"
+        "That LPS is actually harmless and never triggers inflammation",
+        "That TLR4 is required to sense LPS and trigger the response",
+        "That inflammatory cytokines do not exist in this mouse strain",
+        "That strain B has no immune cells of any kind to respond"
       ],
       "answer": [
         1
@@ -93,10 +93,10 @@
       "id": "s5",
       "prompt": "Why is TLR4 relevant to neuroscience?",
       "options": [
-        "It isn't",
-        "TLRs are also expressed by glia and some neurons, so the nervous system can directly sense microbial and danger signals",
-        "It only works in plants",
-        "It blocks action potentials"
+        "It isn't relevant; TLRs act only in blood-borne immune cells",
+        "Glia and some neurons also carry TLRs, so the CNS can sense danger",
+        "Because TLR4 functions only in plants, not in any mammalian tissue",
+        "Because TLR4 directly blocks action potentials in nearby neurons"
       ],
       "answer": [
         1

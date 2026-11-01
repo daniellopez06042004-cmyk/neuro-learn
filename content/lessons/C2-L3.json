@@ -38,10 +38,10 @@
       "id": "s3",
       "prompt": "You want to label a marker's cells in the ADULT and avoid developmental expression. What do you do?",
       "options": [
-        "Use plain Cre",
-        "Use CreER and give tamoxifen in adulthood",
-        "Use a brighter reporter",
-        "Inject the reporter directly"
+        "Use plain Cre and accept whatever it happens to label",
+        "Use CreER and give tamoxifen only in adulthood",
+        "Use a brighter reporter to pick out the adult cells",
+        "Inject the reporter protein directly into the tissue"
       ],
       "answer": [
         1
@@ -68,10 +68,10 @@
       "setup": "You want to measure the branching of individual Bmpr1b+ colon afferent endings. You have a Bmpr1b-CreER; [[reporter]] mouse.",
       "prompt": "What tamoxifen strategy fits?",
       "options": [
-        "A high dose to label everything",
-        "A low dose so only a few isolated neurons are labeled",
-        "No tamoxifen",
-        "Tamoxifen during embryogenesis only"
+        "A high dose of tamoxifen to label essentially everything",
+        "A low dose so that only a few isolated neurons are labeled",
+        "No tamoxifen at all, relying on background recombination",
+        "Tamoxifen given only during embryonic development"
       ],
       "answer": [
         1

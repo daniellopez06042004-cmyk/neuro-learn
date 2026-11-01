@@ -105,6 +105,7 @@ def main():
     w('## What the app supports')
     w('')
     w('- **Step types:** concept, mcq (`multi` for several answers), troubleshoot (optional `data.kind: "table"`), predict (choices, or `freeText` with self-grading), match (right-hand items may repeat, for sorting into categories), order.')
+    w('- **Questions:** options are shuffled on every showing (Both/Neither/All of/None of stay last), so the length and position of the right answer must not give it away. `[[term]]` links work inside questions but only become tappable after answering. Any question can carry `"variants"` (other versions, no `id` of their own, any question type), and retries and reviews rotate through them.')
     w('- **Lesson extras:** `objective` becomes an intro card ("By the end you can…"); `confidence` (high/medium/low) shows on it; `sources` show on the finish screen as DOI links (verified only).')
     w('- **Flags:** `uncertain`, `debated` or `simplified` only, with a `note`. Anything else fails the check.')
     w('- **Visuals (`visual` on any step, shown above it):** `svg-anim`, `svg`, `image`, `gif` (shown as a picture); `mp4` (muted, looping); `interactive` (an HTML file run in a sandboxed frame: scripts only, no storage, no network, auto-sized to its content, so don\'t use `100vh`). `lottie` is **not supported yet** (only the alt text shows). `alt` is required, and files go in `content/assets/`.')

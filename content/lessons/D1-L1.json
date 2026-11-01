@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Separate the central and peripheral nervous systems and place the DRG correctly.",
-  "tags": ["anatomy", "CNS", "PNS"],
+  "tags": [
+    "anatomy",
+    "CNS",
+    "PNS"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -26,8 +30,15 @@
       "type": "mcq",
       "id": "s3",
       "prompt": "Which structure is part of the CNS?",
-      "options": ["The dorsal root ganglion", "The spinal cord", "The sciatic nerve", "The vagus nerve"],
-      "answer": [1],
+      "options": [
+        "The dorsal root ganglion",
+        "The spinal cord",
+        "The sciatic nerve",
+        "The vagus nerve"
+      ],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "The spinal cord (with the brain) is the CNS. Ganglia and named nerves — including the DRG, sciatic, and vagus — are PNS."
     },
@@ -36,12 +47,14 @@
       "id": "s4",
       "prompt": "Why does the CNS/PNS distinction matter for your work?",
       "options": [
-        "It doesn't — it's just naming",
-        "PNS neurons like DRG cells are accessible from the body (organ injections, nerve recordings) in ways CNS neurons aren't",
-        "The CNS has no neurons",
-        "The PNS can't be studied in mice"
+        "It doesn't really matter; the distinction is just a naming convention",
+        "PNS neurons like DRG cells are reachable from the body, unlike CNS ones",
+        "Because the central nervous system contains no neurons of its own",
+        "Because the peripheral nervous system can't be studied in live mice"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Because DRG afferents are peripheral, you can reach them from the organ they innervate — the basis for retrograde labeling and the pancreas injections in your project."
     }

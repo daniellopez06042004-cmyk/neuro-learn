@@ -70,10 +70,10 @@
       "id": "s5",
       "prompt": "Tissue-resident macrophages are important for neuroscience partly because…",
       "options": [
-        "They conduct action potentials",
-        "Specialized macrophage-like cells reside in nervous tissue (e.g. microglia in the CNS) and near peripheral nerves and ganglia",
-        "They replace neurons",
-        "They only exist in blood"
+        "Because resident macrophages themselves conduct action potentials",
+        "Macrophage-like cells reside in nervous tissue, e.g. microglia",
+        "Because they divide to replace neurons lost to injury or disease",
+        "Because macrophages are found only in blood, never within tissue"
       ],
       "answer": [
         1

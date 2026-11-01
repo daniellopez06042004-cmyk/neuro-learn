@@ -43,10 +43,10 @@
       "id": "s3",
       "prompt": "Why does a cytokine signal typically change which genes a cell expresses?",
       "options": [
-        "Because it edits DNA directly",
-        "Because the pathway ends by activating transcription factors (like STATs) that turn genes on or off",
-        "Because it kills the nucleus",
-        "It doesn't; cytokines act only electrically"
+        "Because the cytokine itself enters the nucleus and edits the DNA",
+        "Because the pathway ends by switching on transcription factors like STATs",
+        "Because the signal kills the nucleus, changing what the cell makes",
+        "It doesn't; cytokines act only through fast electrical signals"
       ],
       "answer": [
         1
@@ -69,10 +69,10 @@
       "setup": "A drug blocks JAK enzymes.",
       "prompt": "What happens to signaling by cytokines that use JAK-STAT?",
       "options": [
-        "Unchanged",
-        "Blunted: STATs aren't activated, so the downstream gene program doesn't turn on",
-        "Amplified",
-        "Converted to an electrical signal"
+        "Signaling is unchanged, since JAK is not part of this pathway",
+        "Blunted: STATs aren't activated, so the gene program stays off",
+        "Amplified, because blocking JAK releases the STATs downstream",
+        "Converted into an electrical signal the neuron can propagate"
       ],
       "answer": [
         1

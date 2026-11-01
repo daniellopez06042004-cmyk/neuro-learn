@@ -5,7 +5,10 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Distinguish positive and negative controls by the failure each one rules out.",
-  "tags": ["controls", "experimental-design"],
+  "tags": [
+    "controls",
+    "experimental-design"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -28,11 +31,13 @@
       "prompt": "Your immunostain shows no signal in any sample. Which control tells you whether the staining *could* have worked at all?",
       "options": [
         "A tissue known to express the target (positive control)",
-        "Secondary-antibody-only (negative control)",
-        "An unstained slide",
-        "The DAPI channel"
+        "A secondary-antibody-only slide (negative control)",
+        "An unstained slide carried through the same buffers",
+        "The DAPI nuclear channel on the same section"
       ],
-      "answer": [0],
+      "answer": [
+        0
+      ],
       "multi": false,
       "explanation": "A known-positive tissue tests whether the whole assay can produce signal. If even it is blank, the protocol failed — so 'no signal' in your samples tells you nothing yet. Secondary-only guards against false positives, not false negatives."
     },
@@ -42,12 +47,14 @@
       "setup": "You give the DREADD [[actuator]] to mice that were never given the virus to express the [[DREADD]], and measure your behavioral readout.",
       "prompt": "What is this group's job?",
       "options": [
-        "It's the experimental group",
-        "It's a negative control — any effect here is the drug's own, not your neurons'",
-        "It's a positive control",
-        "It has no purpose"
+        "It's the experimental group that tests your hypothesis directly",
+        "A negative control: any effect here is the drug's own, not neurons'",
+        "It's a positive control, confirming the assay can detect an effect",
+        "It has no real purpose and could be dropped from the design"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "reveal": "A DREADD-free + actuator group is a negative control: it isolates whether the actuator does anything on its own (the CNO→clozapine problem from C5). If it shows an effect, your DREADD result is confounded.",
       "freeText": false
     }

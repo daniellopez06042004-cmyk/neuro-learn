@@ -60,10 +60,10 @@
       "id": "s4",
       "prompt": "A virus infects a skin cell. How can the immune system tell that cell is infected?",
       "options": [
-        "It can't",
-        "The infected cell displays viral peptides on MHC class I, which cytotoxic T cells recognize",
-        "Antibodies enter the cell",
-        "Neutrophils read its DNA"
+        "It can't be detected until the cell bursts and releases the virus",
+        "It shows viral peptides on MHC class I, which cytotoxic T cells read",
+        "Antibodies slip inside the cell and bind the virus within it",
+        "Neutrophils read the cell's DNA to detect the viral infection"
       ],
       "answer": [
         1
@@ -75,10 +75,10 @@
       "id": "s5",
       "prompt": "Why does the term 'MHC' also come up in transplant rejection?",
       "options": [
-        "It doesn't",
-        "MHC molecules differ between individuals, so T cells can recognize foreign MHC on transplanted tissue",
-        "MHC is a drug",
-        "MHC only matters in mice"
+        "It doesn't; MHC has no bearing on transplanted tissue at all",
+        "MHC differs between individuals, so T cells see foreign MHC on a graft",
+        "MHC is a drug given to patients to prevent organ rejection",
+        "MHC matters only in laboratory mice, not in human transplants"
       ],
       "answer": [
         1

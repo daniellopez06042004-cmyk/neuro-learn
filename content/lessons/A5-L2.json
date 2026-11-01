@@ -82,10 +82,10 @@
       "id": "s4",
       "prompt": "Why can't a single threshold serve the whole colon?",
       "options": [
-        "It could, easily",
-        "A single threshold couldn't distinguish normal filling from dangerous over-distension; a spread of thresholds encodes the full range",
-        "Thresholds don't exist in viscera",
-        "The colon only feels pain"
+        "A single threshold would actually serve the colon perfectly well",
+        "One threshold can't separate normal filling from harmful over-distension",
+        "Thresholds are a skin concept and don't exist in visceral afferents",
+        "Because the colon is only ever able to signal pain, nothing else"
       ],
       "answer": [
         1

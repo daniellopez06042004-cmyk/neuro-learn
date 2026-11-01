@@ -40,10 +40,10 @@
       "setup": "Calcium enters through a TRP channel along with Na⁺.",
       "prompt": "Besides depolarizing the ending, what else might that Ca²⁺ do?",
       "options": [
-        "Nothing, because Ca²⁺ is just a charge carrier",
-        "Act as an intracellular signal, for example triggering neuropeptide release from the ending",
-        "Block all action potentials",
-        "Hyperpolarize the cell"
+        "Nothing further, since Ca²⁺ only carries charge like any cation",
+        "Act as a signal inside the cell, e.g. triggering peptide release",
+        "Block the ending's action potentials by closing its Nav channels",
+        "Hyperpolarize the cell by directly activating calcium pumps"
       ],
       "answer": [
         1
@@ -59,10 +59,10 @@
       "id": "s4",
       "prompt": "Why does doubling stimulus strength not double the size of each action potential?",
       "options": [
-        "Action potentials are all-or-none; stronger stimuli change firing *rate*, not spike size",
-        "The membrane saturates at 0 mV",
-        "Because K⁺ channels open first",
-        "Stronger stimuli close the channels"
+        "Spikes are all-or-none; a bigger stimulus speeds firing, not spike size",
+        "The spike saturates because the membrane cannot climb past about 0 mV",
+        "Voltage-gated K⁺ channels open first and cap how large a spike grows",
+        "A stronger stimulus begins to close the transduction channels"
       ],
       "answer": [
         0

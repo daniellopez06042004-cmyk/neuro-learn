@@ -59,10 +59,10 @@
       "id": "s4",
       "prompt": "Why is the adaptive response slow the first time but fast the second?",
       "options": [
-        "The body forgets between exposures",
-        "First time, rare matching lymphocytes must be found and expanded; afterward, memory cells are already present and abundant",
-        "Antibodies decay instantly",
-        "The innate system blocks it"
+        "The body forgets the pathogen entirely between the two exposures",
+        "First time, rare matching clones must be found and grown; later, memory waits",
+        "Because antibodies made the first time decay away almost instantly",
+        "Because the innate system actively blocks the first adaptive response"
       ],
       "answer": [
         1

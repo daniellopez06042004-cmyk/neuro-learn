@@ -5,7 +5,12 @@
   "minutes": 5,
   "xp": 10,
   "objective": "Explain dermatomes and that visceral organs map to particular spinal levels, including the gut and pancreas.",
-  "tags": ["dermatome", "spinal-levels", "viscera", "pancreas"],
+  "tags": [
+    "dermatome",
+    "spinal-levels",
+    "viscera",
+    "pancreas"
+  ],
   "confidence": "medium",
   "steps": [
     {
@@ -20,19 +25,24 @@
       "id": "s2",
       "title": "Viscera map to levels too",
       "body": "Internal organs also connect to particular spinal levels. Spinal ([[DRG]]) afferents from abdominal organs largely enter at **thoracic and upper-lumbar** levels (via splanchnic nerves), with pelvic organs adding **lumbosacral** input. This is partly why visceral pain is felt in broad, referred regions rather than a sharp spot.",
-      "flag": { "level": "uncertain", "note": "Exact level ranges vary by organ and species; treat specific numbers as approximate and confirm for the pancreas with the lab/primary literature." }
+      "flag": {
+        "level": "uncertain",
+        "note": "Exact level ranges vary by organ and species; treat specific numbers as approximate and confirm for the pancreas with the lab/primary literature."
+      }
     },
     {
       "type": "mcq",
       "id": "s3",
       "prompt": "Why is visceral pain usually felt as a vague, broad region rather than a precise point?",
       "options": [
-        "Organs have no sensory innervation",
-        "Visceral afferents are sparse and converge onto spinal levels shared with skin, so the brain localizes them poorly",
-        "The pain is imaginary",
-        "Only the vagus carries it, and the vagus can't localize"
+        "Because internal organs have essentially no sensory innervation at all",
+        "Visceral afferents are sparse and converge with skin, blurring location",
+        "Because that visceral pain is imaginary rather than genuinely real",
+        "Only the vagus carries it, and the vagus is unable to localize"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Sparse visceral innervation plus convergence onto the same dorsal-horn levels as somatic input makes precise localization impossible — the basis of referred pain."
     },
@@ -42,12 +52,14 @@
       "setup": "For your pancreas project, you need the DRG levels whose neurons innervate the pancreas.",
       "prompt": "What's the right way to pin those down?",
       "options": [
-        "Assume they're the same as the colon",
-        "Retrograde-label from the pancreas and see which DRG light up, and check the lab's primary literature — don't guess exact levels",
-        "They must be cervical",
-        "Levels don't matter for viral injection"
+        "Just assume they are the same spinal levels as the colon afferents",
+        "Retrograde-label from the pancreas and check the literature, don't guess",
+        "They must be cervical, since the pancreas sits in the upper body",
+        "The exact levels simply don't matter for a viral injection"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "reveal": "Retrograde labeling from the organ reveals the actual levels empirically (C4), rather than assuming. Pancreatic spinal afferents are generally thoracic/splanchnic, but confirm the specific levels for your line and prep before planning injections.",
       "freeText": false
     }

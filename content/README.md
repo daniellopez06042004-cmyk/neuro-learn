@@ -25,6 +25,12 @@ Save it as `lessons/<lesson-id>.json`. The file name must match the lesson's `"i
 
 The six step types are `concept`, `mcq`, `match`, `troubleshoot`, `predict` and `order`. The C2–C5 lessons use every one of them, so copy from those.
 
+How the app presents questions:
+
+- Answer options are **shuffled every time** a question appears, so position never gives anything away. Options starting with "Both", "Neither", "All of" or "None of" stay at the bottom. Write every option as a full, plausible statement, with the right answer no longer than the others.
+- `[[term]]` links work in prompts, options, matching tiles and ordering items too. In a question they only become tappable **after** the learner answers, so a definition can't give the answer away. In concept cards they work straight away.
+- **Variants:** any question step can carry `"variants": [ … ]`, a list of other versions of the same question. Each one is a complete step body **without an `id`** (it can even be a different type, like a `predict` version of an `mcq`). The first time, the app shows the base step. A retry after a miss, and each review, shows a different version than last time. All versions share the step's id, so they count as one item in review.
+
 Rules the app checks:
 
 - `id` matches the file name, and `unitId` matches the unit that lists the lesson in `course.json`.

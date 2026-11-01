@@ -51,10 +51,10 @@
       "id": "s4",
       "prompt": "Your Cre line also labels some non-sensory cells near the pancreas. What's the cleanest fix, given the lab's toolkit?",
       "options": [
-        "Give more actuator",
-        "Use intersectional genetics (Cre + Flp) so only sensory-and-pancreas neurons get the DREADD",
-        "Ignore it",
-        "Switch from hM3Dq to hM4Di"
+        "Give a considerably larger dose of the actuator drug",
+        "Use Cre+Flp intersection so only sensory pancreas neurons get it",
+        "Ignore it, since those extra labeled cells probably don't matter",
+        "Switch the DREADD payload from hM3Dq over to hM4Di"
       ],
       "answer": [
         1
@@ -85,10 +85,10 @@
       "setup": "You silence pancreas-innervating sensory neurons (hM4Di + actuator) during a glucose tolerance test, with all control groups in place.",
       "prompt": "What's the honest set of outcomes to prepare for?",
       "options": [
-        "Only a positive result is possible",
-        "Glucose handling could change, not change, or change only in a subset — and a validated null is still informative",
-        "The mice will not survive",
-        "The actuator guarantees an effect"
+        "Only a clearly positive result is even possible in this design",
+        "Glucose handling could change, not change, or shift in a subset",
+        "The mice will simply not survive the manipulation at all",
+        "The actuator guarantees that you will see a real effect"
       ],
       "answer": [
         1

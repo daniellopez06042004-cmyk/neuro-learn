@@ -38,10 +38,10 @@
       "id": "s3",
       "prompt": "Why is a retrograde AAV injected into the pancreas a good way to access pancreas-innervating DRG neurons?",
       "options": [
-        "It infects every cell in the body",
-        "It's taken up at terminals in the pancreas and carried back to the cell bodies of exactly the neurons that innervate it",
-        "It only works in the brain",
-        "It avoids the need to inject anywhere"
+        "Because it enters every cell in the body indiscriminately once injected",
+        "It's taken up at pancreatic terminals and carried to those cell bodies",
+        "Because a retrograde virus can only ever work inside the brain",
+        "Because it removes any need to inject the virus anywhere at all"
       ],
       "answer": [
         1
@@ -62,10 +62,10 @@
       "setup": "You inject AAV2-retro-[[Flp|FlpO]] into the pancreas of a mouse that also carries a Flp-dependent [[DREADD]].",
       "prompt": "Where should the DREADD end up?",
       "options": [
-        "In all pancreatic cells",
-        "In the DRG (and possibly vagal) neurons whose terminals are in the pancreas",
-        "Only in the spinal cord",
-        "Nowhere"
+        "In all the pancreatic cells located near the injection site",
+        "In the DRG (and maybe vagal) neurons with terminals in the pancreas",
+        "Only in the spinal cord, well away from the injection site",
+        "Nowhere at all, since retrograde virus expresses no payload"
       ],
       "answer": [
         1

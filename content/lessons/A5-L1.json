@@ -49,10 +49,10 @@
       "id": "s3",
       "prompt": "Why do most visceral (gut, pancreas) sensations travel in slow C fibers?",
       "options": [
-        "The viscera have only C fibers by rule",
-        "Visceral afferents are largely thin, unmyelinated C fibers, which also fits why visceral sensation is slow and poorly localized",
-        "C fibers are the fastest",
-        "The brain ignores Aβ input"
+        "By a strict rule, the viscera are permitted to have only C fibers",
+        "Visceral afferents are mostly thin, unmyelinated C fibers, hence slow",
+        "Because C fibers are in fact the fastest-conducting class of axon",
+        "Because the brain simply ignores the Aβ input from the viscera"
       ],
       "answer": [
         1
@@ -65,10 +65,10 @@
       "setup": "You record conduction velocity to classify an afferent, and get a fast, myelinated response.",
       "prompt": "Before calling it 'touch,' what else should you check?",
       "options": [
-        "Nothing, speed is enough",
-        "What stimuli actually drive it, since some fast fibers are high-threshold; speed and modality are separate axes",
-        "Its color",
-        "The room temperature only"
+        "Nothing further; conduction speed alone is enough to call it touch",
+        "What stimuli actually drive it, since speed and modality are separate",
+        "The color of the dye used to fill and label the recorded fiber",
+        "Only the temperature of the room during the recording session"
       ],
       "answer": [
         1

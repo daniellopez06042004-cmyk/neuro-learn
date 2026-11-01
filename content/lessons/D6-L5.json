@@ -63,10 +63,10 @@
       "id": "s4",
       "prompt": "A pancreatic spinal afferent passes through the celiac ganglion. Does it synapse there?",
       "options": [
-        "Yes, every afferent synapses in the celiac ganglion",
-        "No. It's a pseudounipolar DRG neuron; its axon passes through and its cell body is in the DRG",
-        "Yes, onto vagal neurons",
-        "It has no cell body"
+        "Yes; every such afferent synapses within the celiac ganglion",
+        "No; it's pseudounipolar, so the axon passes through to the DRG body",
+        "Yes; it synapses there directly onto the vagal neurons",
+        "No; this particular afferent has no cell body anywhere"
       ],
       "answer": [
         1

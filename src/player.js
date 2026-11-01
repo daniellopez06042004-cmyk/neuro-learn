@@ -3,8 +3,8 @@
 // To move on, swipe left: dragging charges the next EPSP, and releasing past
 // the line lands it. The last one reaches threshold and the neuron fires.
 
-import { h, md, icon, flagBadge, trackStyle } from './ui.js';
-import { createStep } from './steps.js';
+import { h, md, inline, icon, flagBadge, trackStyle } from './ui.js';
+import { createStep, pickVariant } from './steps.js';
 import { createTrace } from './trace.js';
 import { light, fire } from './haptics.js';
 import { sounds } from './sound.js';
@@ -37,7 +37,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     if (e.key === 'ArrowLeft' && canAdvance && !(e.target instanceof HTMLTextAreaElement)) {
       e.preventDefault();
       advance();
-    } else if (e.key === 'Enter' && primary && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement)) {
+    } else if (e.key === 'Enter' && primary && !(e.target instanceof HTMLTextAreaElement) && !(e.target instanceof HTMLButtonElement) && !e.target.closest?.('.term')) {
       e.preventDefault();
       primary.click();
     }
@@ -72,8 +72,15 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     shell.setAttribute('style', trackStyle(item.color));
     trace.refreshColors();
     trace.layout(queue.length, misses, pos + 1);
-    const ctl = createStep(item.step, { autoCheck: () => check(ctl, item) });
-    stage.replaceChildren(h('div', { class: 'stage-inner' }, ctl.el));
+    // Which version of the question to show (see pickVariant): the base the
+    // first time, a different one on a retry or in review.
+    const picked = pickVariant(item.step, item.avoid);
+    item.shown = picked.index;
+    item.current = picked.step;
+    const ctl = createStep(item.current, { autoCheck: () => check(ctl, item) });
+    // In a question, glossary terms stay inert until it's answered, so a
+    // definition can't give the answer away (app.js checks this attribute).
+    stage.replaceChildren(h('div', { class: 'stage-inner', 'data-terms-locked': ctl.interactive ? '' : null }, ctl.el));
     stage.scrollTop = 0;
     stage.className = 'stage fire-in';
     stage.style.removeProperty('--dx');
@@ -102,6 +109,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
       return;
     }
     ctl.lock();
+    stage.querySelector('[data-terms-locked]')?.removeAttribute('data-terms-locked');
     if (r.selfGrade) return selfGrade(item, r);
     grade(item, r.ok);
     feedback(item, r);
@@ -115,8 +123,8 @@ export function runSession(root, { items, mode, onExit, onDone }) {
     if (!item.retry) {
       graded++;
       if (ok) correct++;
-      progress.recordAnswer(item.key, ok);
-      if (!ok && mode === 'lesson') queue.push({ ...item, retry: true });
+      progress.recordAnswer(item.key, ok, item.shown);
+      if (!ok && mode === 'lesson') queue.push({ ...item, retry: true, avoid: item.shown });
     }
     (ok ? sounds.right : sounds.wrong)();
     if (!ok) {
@@ -128,13 +136,13 @@ export function runSession(root, { items, mode, onExit, onDone }) {
   }
 
   function feedback(item, r) {
-    const s = item.step;
+    const s = item.current;
     const isPredict = s.type === 'predict';
     const verdict = r.ok
       ? (isPredict ? 'Good prediction' : PRAISE[Math.floor(Math.random() * PRAISE.length)])
       : (isPredict ? "That's not what happens" : 'Not quite');
     const body = h('div', { class: 'body' },
-      !r.ok && r.answerText ? h('p', { class: 'answer' }, h('span', { class: 'sr-only' }, 'Correct answer: '), ...r.answerText.split('\n').flatMap((l, i) => (i ? [h('br'), l] : [l]))) : null,
+      !r.ok && r.answerText ? h('p', { class: 'answer' }, h('span', { class: 'sr-only' }, 'Correct answer: '), ...r.answerText.split('\n').flatMap((l, i) => (i ? [h('br'), inline(l)] : [inline(l)]))) : null,
       r.note ? h('p', { class: 'small muted' }, r.note) : null,
       isPredict ? h('h3', null, 'What happens') : null,
       md(isPredict ? s.reveal : s.explanation),
@@ -147,7 +155,7 @@ export function runSession(root, { items, mode, onExit, onDone }) {
   }
 
   function selfGrade(item, r) {
-    const s = item.step;
+    const s = item.current;
     const choose = (ok) => { grade(item, ok); advance(); };
     primary = null;
     canAdvance = false;

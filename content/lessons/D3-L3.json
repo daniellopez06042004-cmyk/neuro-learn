@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Describe the pseudounipolar shape of a DRG neuron and why it suits organ-to-cord signalling.",
-  "tags": ["DRG", "pseudounipolar", "morphology"],
+  "tags": [
+    "DRG",
+    "pseudounipolar",
+    "morphology"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -14,19 +18,26 @@
       "title": "One stem that splits in two",
       "body": "A [[DRG]] neuron is **[[pseudounipolar]]**: a single process leaves the cell body and immediately forks into two branches —\n\n- a **peripheral** branch running out to the body (skin, colon, pancreas),\n- a **central** branch running into the spinal cord [[dorsal horn]].\n\nThe cell body sits off to the side in the ganglion, not between the two ends.",
       "flag": null,
-      "visual": { "type": "svg-anim", "src": "assets/pseudounipolar-neuron.svg", "alt": "A pseudounipolar DRG neuron: the cell body sits off to the side on a short stem that forks into a peripheral branch to an organ and a central branch into the dorsal horn; a signal travels from the organ up past the fork into the cord.", "caption": "One stem forks to periphery and cord; the cell body sits off to the side." }
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/pseudounipolar-neuron.svg",
+        "alt": "A pseudounipolar DRG neuron: the cell body sits off to the side on a short stem that forks into a peripheral branch to an organ and a central branch into the dorsal horn; a signal travels from the organ up past the fork into the cord.",
+        "caption": "One stem forks to periphery and cord; the cell body sits off to the side."
+      }
     },
     {
       "type": "mcq",
       "id": "s2",
       "prompt": "Why is the pseudounipolar shape convenient for your experiments?",
       "options": [
-        "The cell body must be injected directly",
-        "A signal (or a retrograde virus) from the peripheral ending can reach the cell body, letting you access organ-specific neurons from the organ",
-        "It means the neuron has no axon",
-        "It prevents any central projection"
+        "Because the cell body itself has to be injected directly",
+        "A virus from the ending reaches the cell body, giving organ access",
+        "Because it means the neuron effectively has no axon at all",
+        "Because it blocks the neuron from ever projecting centrally"
       ],
-      "answer": [1],
+      "answer": [
+        1
+      ],
       "multi": false,
       "explanation": "Because the peripheral branch connects to the cell body, a retrograde virus injected into the pancreas travels back and labels exactly the neurons innervating it (the C4 logic)."
     },
@@ -36,12 +47,14 @@
       "setup": "A sensory signal is generated at the peripheral ending in the colon.",
       "prompt": "What path does it take to reach the CNS?",
       "options": [
-        "Peripheral ending → through/past the cell body → central branch → dorsal horn",
-        "Straight from the ending into the brain, skipping the cord",
-        "Ending → ventral root → muscle",
-        "It stays in the organ"
+        "Peripheral ending → past the cell body → central branch → cord",
+        "Straight from the ending into the brain, skipping the cord entirely",
+        "Ending → ventral root → out to the muscle it controls",
+        "It stays within the organ and never reaches the CNS"
       ],
-      "answer": [0],
+      "answer": [
+        0
+      ],
       "reveal": "The signal travels along the peripheral branch, past the DRG cell body, down the central branch, and into the spinal cord dorsal horn — where the next lesson picks up the central side.",
       "freeText": false
     }

@@ -47,10 +47,10 @@
       "id": "s4",
       "prompt": "A UMAP plot shows 12 DRG clusters. What can it tell you on its own?",
       "options": [
-        "Exactly what each cluster does",
-        "That neurons differ in expression and fall into groups, but not their function, which needs genetic and physiological follow-up",
-        "The conduction speed of each",
-        "Where each projects"
+        "Exactly what job each of the twelve clusters carries out",
+        "That neurons differ in expression and group, but not their function",
+        "The conduction velocity of every neuron within each cluster",
+        "Where each cluster's neurons send their axons in the body"
       ],
       "answer": [
         1

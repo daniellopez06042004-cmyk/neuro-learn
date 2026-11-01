@@ -49,10 +49,10 @@
       "id": "s3",
       "prompt": "You want to test whether a colon afferent subtype is NECESSARY for a high-force distension behavior. Which payload?",
       "options": [
-        "A reporter (tdTomato)",
-        "A calcium sensor (GCaMP)",
-        "An ablation tool (DTR+DTX or Caspase3)",
-        "A brighter GFP"
+        "A reporter such as tdTomato to visualize the neurons",
+        "A calcium sensor such as GCaMP to watch their activity",
+        "An ablation tool (DTR+DTX or Caspase3) to remove them",
+        "A brighter GFP variant for clearer imaging of them"
       ],
       "answer": [
         2

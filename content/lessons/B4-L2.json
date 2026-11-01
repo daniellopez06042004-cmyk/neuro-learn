@@ -33,10 +33,10 @@
       "id": "s3",
       "prompt": "What did live two-photon imaging reveal about 'resting' microglia?",
       "options": [
-        "They never move",
-        "Their processes are constantly moving and sampling the tissue",
-        "They are neurons in disguise",
-        "They only exist after injury"
+        "That resting microglia never move at all under normal conditions",
+        "That their processes constantly move and sample the surrounding tissue",
+        "That microglia are really neurons that have been mislabeled",
+        "That microglia appear in the brain only after an injury occurs"
       ],
       "answer": [
         1
@@ -49,10 +49,10 @@
       "setup": "You injure a tiny spot in the cortex and watch nearby microglia live.",
       "prompt": "What do you expect their processes to do?",
       "options": [
-        "Retract away from the injury",
-        "Rapidly extend toward the injury site",
-        "Freeze in place",
-        "Turn into neurons"
+        "Retract away from the injury and leave the area undefended",
+        "Rapidly extend toward the injury site to wall it off",
+        "Freeze completely in place and stop moving altogether",
+        "Transform into new neurons to replace the damaged tissue"
       ],
       "answer": [
         1
@@ -64,10 +64,10 @@
       "id": "s5",
       "prompt": "Why has the 'M1 vs M2' label for microglia fallen out of favor?",
       "options": [
-        "Microglia don't activate at all",
-        "Real microglia show a spectrum of states rather than two discrete ones",
-        "There are exactly three states",
-        "The terms were never used"
+        "Because microglia turn out not to activate under any condition",
+        "Because real microglia show a spectrum of states, not just two",
+        "Because there are actually exactly three defined microglial states",
+        "Because the M1 and M2 terms were in truth never used by anyone"
       ],
       "answer": [
         1

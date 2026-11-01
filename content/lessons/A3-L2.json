@@ -24,10 +24,10 @@
       "id": "s2",
       "prompt": "What did finding TRPV1 explain about eating chili peppers?",
       "options": [
-        "Capsaicin damages tissue directly",
-        "Capsaicin opens the same channel painful heat opens, so the brain reads it as burning",
-        "Capsaicin activates touch neurons",
-        "Capsaicin blocks cold receptors"
+        "Capsaicin chemically burns and damages the tissue it touches",
+        "Capsaicin opens the same channel heat does, so it reads as burning",
+        "Capsaicin activates touch afferents, which the brain misreads as heat",
+        "Capsaicin blocks cold receptors, and losing cold feels like heat"
       ],
       "answer": [
         1
@@ -65,10 +65,10 @@
       "id": "s5",
       "prompt": "Why is TRPV1 a useful genetic handle for reaching many nociceptors?",
       "options": [
-        "It's expressed in every neuron",
-        "A large set of nociceptors express TRPV1, so a Trpv1-based line can target them (with the lineage caveats in A3-L4)",
-        "It's found only in muscle",
-        "It's not useful at all"
+        "Because TRPV1 is expressed by essentially every neuron in the body",
+        "Many nociceptors express TRPV1, so a Trpv1 line can target them",
+        "Because TRPV1 is found only in muscle, which gives very clean access",
+        "It isn't a useful handle; TRPV1 is never used to target neurons"
       ],
       "answer": [
         1

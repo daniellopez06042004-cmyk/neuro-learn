@@ -25,16 +25,30 @@ export function esc(s) {
 let isTerm = () => false;
 export function setTermLookup(fn) { isTerm = fn; }
 
+// A span (not a button) so terms can sit inside answer buttons and tiles.
+// app.js opens the definition on tap; inside a question it stays locked
+// until the learner has answered (see [data-terms-locked]).
 function termLink(a, b) {
   const [term, shown] = !b || isTerm(a.trim()) || !isTerm(b.trim()) ? [a, b || a] : [b, a];
-  return `<button type="button" class="term" data-term="${term.trim()}">${shown}</button>`;
+  return `<span class="term" role="button" tabindex="0" data-term="${term.trim()}">${shown}</span>`;
 }
+const linkTerms = (escaped) => escaped.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => termLink(a, b));
+
+// One line of question text (prompt, option, tile) with its glossary links.
+export function inline(text, tag = 'span') {
+  return h(tag, { html: linkTerms(esc(text)) });
+}
+
+// Text with the [[…]] markup removed, for places that need plain words.
+export const plain = (text) => String(text ?? '').replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => {
+  const [, shown] = !b || isTerm(a.trim()) || !isTerm(b.trim()) ? [a, b || a] : [b, a];
+  return shown;
+});
 
 // Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs,
 // and glossary links (above).
 export function md(text, cls = 'md') {
-  const inline = (s) => esc(s)
-    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => termLink(a, b))
+  const inline = (s) => linkTerms(esc(s))
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');

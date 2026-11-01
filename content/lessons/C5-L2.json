@@ -83,9 +83,9 @@
       "setup": "You express hM3Dq in a neuron population and give the [[actuator]]. To confirm the neurons were actually driven, you stain for the immediate-early gene [[c-Fos]].",
       "prompt": "What do you predict in the DREADD-expressing neurons vs. neighbors?",
       "options": [
-        "More c-Fos in DREADD+ neurons than neighbors",
-        "Less c-Fos in DREADD+ neurons",
-        "c-Fos everywhere equally"
+        "More c-Fos in the DREADD+ neurons than in their neighbors",
+        "Less c-Fos in the DREADD+ neurons than in their neighbors",
+        "Equal c-Fos everywhere, in DREADD+ cells and neighbors alike"
       ],
       "answer": [
         0

@@ -5,8 +5,22 @@
 //                  { notReady: "message" } or { selfGrade: true, guess }
 //   lock()       — freezes the step and marks right/wrong after checking
 
-import { h, md, icon, shuffle, flagBadge } from './ui.js';
+import { h, md, inline, plain, icon, shuffle, flagBadge } from './ui.js';
 import { imageUrl } from './content.js';
+
+// A step with "variants" is one question in several versions (they share its
+// id, so review history is one item). Show the base version first; on a
+// retry or in review, show a different one than last time.
+export function pickVariant(step, avoid = null) {
+  const versions = [step, ...(step.variants || [])];
+  if (versions.length === 1) return { step, index: 0 };
+  let index = 0;
+  if (avoid != null) {
+    const others = versions.map((_, i) => i).filter((i) => i !== avoid);
+    index = others[Math.floor(Math.random() * others.length)];
+  }
+  return { step: index === 0 ? step : { ...versions[index], id: step.id }, index };
+}
 
 export function createStep(step, ctx) {
   const build = { intro, concept, mcq, troubleshoot, predict, match, order }[step.type];
@@ -56,7 +70,7 @@ function widget(v, src) {
 
 const letter = (i) => String.fromCharCode(65 + i);
 const kind = (text) => h('p', { class: 'kind' }, text);
-const prompt = (text) => h('h2', { class: 'prompt' }, text);
+const prompt = (text) => { const el = inline(text, 'h2'); el.className = 'prompt'; return el; };
 const sameSet = (a, b) => a.length === b.length && a.every((x) => b.includes(x));
 
 // Not in lesson files: the player adds this first, from the lesson's own
@@ -88,10 +102,21 @@ function concept(s) {
   };
 }
 
+// Options are shuffled every time a question appears, so neither position nor
+// a remembered layout gives the answer away. "Both…", "Neither…", "All of…"
+// and "None of…" stay at the bottom, where people expect them. Everything
+// outside this function uses the original option indexes.
+const PINNED = /^\s*(both|neither|all of|none of)\b/i;
+function displayOrder(options) {
+  const idx = options.map((_, i) => i);
+  return [...shuffle(idx.filter((i) => !PINNED.test(plain(options[i])))), ...idx.filter((i) => PINNED.test(plain(options[i])))];
+}
+
 function choiceList(options, multi) {
   const sel = new Set();
   let locked = false;
-  const btns = options.map((opt, i) => h('button', {
+  const order = displayOrder(options); // display position -> original index
+  const btns = order.map((i, pos) => h('button', {
     class: `choice${multi ? ' multi' : ''}`,
     role: multi ? 'checkbox' : 'radio',
     'aria-checked': 'false',
@@ -99,17 +124,20 @@ function choiceList(options, multi) {
       if (locked) return;
       if (multi) sel.has(i) ? sel.delete(i) : sel.add(i);
       else { sel.clear(); sel.add(i); }
-      btns.forEach((b, j) => b.setAttribute('aria-checked', String(sel.has(j))));
+      btns.forEach((b, p) => b.setAttribute('aria-checked', String(sel.has(order[p]))));
     },
-  }, h('span', { class: 'key', 'aria-hidden': 'true' }, letter(i)), h('span', { class: 'txt' }, opt), h('span', { class: 'mark' })));
+  }, h('span', { class: 'key', 'aria-hidden': 'true' }, letter(pos)), inline(options[i], 'span'), h('span', { class: 'mark' })));
+  btns.forEach((b) => b.lastElementChild.previousElementSibling.classList.add('txt'));
   const el = h('div', { class: 'choices', role: multi ? 'group' : 'radiogroup' }, btns);
   return {
     el,
     selected: () => [...sel].sort((a, b) => a - b),
+    letterOf: (i) => letter(order.indexOf(i)),
     lock(answer) {
       locked = true;
       el.classList.add('locked');
-      btns.forEach((b, i) => {
+      btns.forEach((b, pos) => {
+        const i = order[pos];
         const right = answer.includes(i), picked = sel.has(i);
         b.classList.toggle('right', right);
         b.classList.toggle('wrong', picked && !right);
@@ -126,7 +154,8 @@ function choiceList(options, multi) {
 function gradeChoices(s, list) {
   const picked = list.selected();
   if (!picked.length) return { notReady: s.multi ? 'Pick at least one answer first' : 'Pick an answer first' };
-  return { ok: sameSet(picked, s.answer), answerText: s.answer.map((i) => `${letter(i)}. ${s.options[i]}`).join('\n') };
+  const shown = [...s.answer].sort((a, b) => list.letterOf(a).localeCompare(list.letterOf(b)));
+  return { ok: sameSet(picked, s.answer), answerText: shown.map((i) => `${list.letterOf(i)}. ${s.options[i]}`).join('\n') };
 }
 
 function mcq(s) {
@@ -197,7 +226,7 @@ function match(s, ctx) {
       sync();
       if (pickL != null && pickR != null) tryPair();
     },
-  }, text);
+  }, inline(text));
   const L = lefts.map((t, i) => tile(t, 'L', i));
   const R = rights.map((t, i) => tile(t, 'R', i));
   const sync = () => {
@@ -242,14 +271,14 @@ function order(s) {
     slots.replaceChildren(...(placed.length
       ? placed.map((idx, pos) => h('button', {
         class: 'tile', 'data-pos': pos,
-        'aria-label': `Position ${pos + 1}: ${s.items[idx]}. Tap to remove.`,
+        'aria-label': `Position ${pos + 1}: ${plain(s.items[idx])}. Tap to remove.`,
         onclick: () => { if (locked) return; placed.splice(pos, 1); bank.push(idx); draw(); },
-      }, h('span', { class: 'n' }, pos + 1), h('span', null, s.items[idx])))
+      }, h('span', { class: 'n' }, pos + 1), inline(s.items[idx])))
       : [h('div', { class: 'hint' }, 'Tap the steps below in order')]));
     bankEl.replaceChildren(...bank.map((idx) => h('button', {
       class: 'tile',
       onclick: () => { if (locked) return; bank = bank.filter((b) => b !== idx); placed.push(idx); draw(); },
-    }, s.items[idx])));
+    }, inline(s.items[idx]))));
   };
   draw();
 

@@ -39,10 +39,10 @@
       "scenario": "A figure legend reads: 'Bmpr1b-CreER mice given low-dose tamoxifen at P21, crossed to a Cre-dependent tdTomato reporter; sparse single-neuron tracing of colon endings.'",
       "prompt": "Which decoding answers are correct?",
       "options": [
-        "Cells: Bmpr1b+; adult (CreER + tamoxifen); single feature; reporter payload; bred-in; sparse by low dose",
-        "Cells: all DRG; developmental; intersection; ablation payload; viral",
-        "Cells: Bmpr1b+; developmental plain Cre; actuator payload",
-        "Cells: nodose; adult; subtraction; sensor payload"
+        "Bmpr1b+; adult (CreER+tamoxifen); single feature; reporter; bred-in; sparse by low dose",
+        "All DRG cells; developmental plain Cre; intersection; ablation payload; viral delivery",
+        "Bmpr1b+; developmental plain Cre; intersectional; actuator payload; viral delivery",
+        "Nodose cells; adult CreER; subtraction design; calcium-sensor payload; bred-in"
       ],
       "answer": [
         0
@@ -55,10 +55,10 @@
       "id": "s4",
       "prompt": "The same paper elsewhere uses a Cre+Flp-dependent ablation tool. Reading question #3 (one feature or intersection?), what does that tell you?",
       "options": [
-        "It's a single-marker experiment",
-        "It's intersectional — two drivers gate the ablation for tighter specificity",
-        "It uses no drivers",
-        "It's a reporter experiment"
+        "It's a single-marker experiment using just one driver",
+        "It's intersectional: two drivers gate the ablation for specificity",
+        "It uses no drivers at all, expressing the tool everywhere",
+        "It's only a reporter experiment, with no manipulation"
       ],
       "answer": [
         1

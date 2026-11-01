@@ -43,15 +43,32 @@
       "id": "s4",
       "prompt": "Why does a touch neuron ignore a warm surface?",
       "options": [
-        "It's insulated from heat",
-        "It lacks the heat-gated channels, so warming doesn't open anything in its ending",
-        "Heat blocks its action potentials",
-        "The brain filters the signal out"
+        "Warmth opens its channels, but the brain filters out signals from touch fibers",
+        "It lacks heat-gated channels, so warming opens nothing in its ending",
+        "Its myelin sheath insulates the nerve ending from the surrounding warmth",
+        "Heat closes its sodium channels, so it transduces but can never spike"
       ],
       "answer": [
         1
       ],
-      "explanation": "Selectivity starts at transduction. Without a heat-gated channel, warmth produces no receptor potential, so nothing gets encoded."
+      "explanation": "Selectivity starts at transduction. Without a heat-gated channel, warmth produces no receptor potential, so nothing gets encoded.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Warm (not hot) air flows gently over the skin above a pure touch (Aβ) ending, with no change in pressure.",
+          "prompt": "What does that ending do?",
+          "options": [
+            "Fires briskly, treating the warmth as a strong stimulus",
+            "Stays silent; it has no heat-gated channels to open",
+            "Fires a single spike and then adapts to the warmth",
+            "Depolarizes slowly but never reaches its threshold"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Selectivity is set at transduction: no heat channel, no receptor potential, no firing. (Pressing on that skin *would* fire it — but that's force, not heat.)"
+        }
+      ]
     },
     {
       "type": "predict",
@@ -59,15 +76,31 @@
       "setup": "A drug blocks voltage-gated sodium channels along the axon but leaves the channels in the nerve ending alone. You press on the skin.",
       "prompt": "What happens?",
       "options": [
-        "No receptor potential forms",
-        "A receptor potential forms at the ending, but no spikes reach the cord",
-        "Spikes reach the cord as normal",
-        "The neuron fires continuously"
+        "No receptor potential forms, since the ending can no longer depolarize",
+        "A receptor potential still forms, but no spikes travel to the spinal cord",
+        "Spikes reach the cord normally, because transduction is left untouched",
+        "The ending fires continuously, since blocking Nav removes a brake"
       ],
       "answer": [
         1
       ],
-      "reveal": "Transduction still works, so the ending depolarizes. Without sodium channels, though, no action potential can be generated or conducted, so the CNS hears nothing. This is how local anesthetics like lidocaine work."
+      "reveal": "Transduction still works, so the ending depolarizes. Without sodium channels, though, no action potential can be generated or conducted, so the CNS hears nothing. This is how local anesthetics like lidocaine work.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Lidocaine blocks the voltage-gated Na⁺ channels along a sensory axon. You pinch the skin, but nothing is felt. Why?",
+          "options": [
+            "The pinch no longer deforms the nerve ending at all",
+            "The ending still transduces, but blocked Nav stops spikes traveling",
+            "The brain actively suppresses the incoming pinch signal",
+            "The receptor potential reverses in sign and cancels itself"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Transduction (the receptor potential) is intact; with Nav blocked, no action potential forms or propagates, so the CNS hears nothing."
+        }
+      ]
     }
   ],
   "sources": [],

@@ -60,10 +60,10 @@
       "id": "s4",
       "prompt": "Inflamed skin hurts when gently touched (normally painless). At the receptor level, what changed?",
       "options": [
-        "Touch neurons were deleted",
-        "Inflammatory mediators lowered the firing threshold of sensory endings, so gentle stimuli now trigger firing",
-        "The skin grew new bones",
-        "The brain stopped working"
+        "The skin's touch neurons were deleted during the inflammation",
+        "Inflammatory mediators lowered the endings' threshold to gentle touch",
+        "The inflamed skin grew new bone that presses on the nerves",
+        "The brain stopped working and now misreads every signal as pain"
       ],
       "answer": [
         1
