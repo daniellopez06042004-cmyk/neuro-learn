@@ -111,7 +111,7 @@ def main():
     w('- **Text formatting:** `**bold**`, `*italic*`, `` `code` ``, `- ` lists, blank-line paragraphs, `[[term]]` / `[[term|shown words]]` glossary links (term first, wiki-style).')
     w('- **The circuit picture:** each track is a real pathway, and units sit along it in course order. Finishing lessons grows dendrites; reviewing to the top boxes myelinates axons.')
     w('- **Review:** every answered question goes into spaced repetition (Leitner boxes 1–5). Misses come back at the end of the lesson and in daily review.')
-    w('- **Phone first:** keep visuals legible at 375px wide and correct in dark mode.')
+    w('- **Visuals:** follow `VISUAL-GUIDE.md` in this folder: a 360-wide `viewBox` drawn 1:1, labels 14px or more, a transparent background, the app\'s color tokens in both themes, a house neuron style, a reduced-motion fallback, and widgets 520px tall or less with no header.')
     w('')
 
     # Sync between the Project's folder and what's live.
