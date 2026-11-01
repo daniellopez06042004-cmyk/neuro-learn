@@ -153,7 +153,8 @@ def main():
     w('')
     body = theirs.read_text(encoding='utf-8') if theirs.exists() else ''
     body = re.sub(r'<!--.*?-->', '', body, flags=re.S)
-    body = body.split('Add new notes at the top, with the date.', 1)[-1].strip()
+    body = body.split('Add new notes at the top, with the date.', 1)[-1]
+    body = re.sub(r'^\s*# Notes for the app side\s*\n', '', body).strip()  # its own title
     w(body or '_None yet._')
     w('')
 
