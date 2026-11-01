@@ -11,37 +11,70 @@
         {
           "id": "A1",
           "title": "The Logic of Sensing",
-          "summary": "Receptors, transduction, encoding; labeled-line vs. population coding.",
+          "summary": "Transduction, receptor potentials and encoding; receptive fields; labeled-line vs population coding.",
           "prereqs": [],
-          "lessons": []
+          "lessons": [
+            "A1-L1",
+            "A1-L2",
+            "A1-L3",
+            "A1-L4"
+          ]
         },
         {
           "id": "A2",
           "title": "Biophysics Refresher",
-          "summary": "Receptor potentials, driving force, how channel kinetics/threshold shape firing.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Resting potential and driving force, graded receptor potentials, threshold and the Nav channel, and how channel kinetics shape firing.",
+          "prereqs": [
+            "A1"
+          ],
+          "lessons": [
+            "A2-L1",
+            "A2-L2",
+            "A2-L3",
+            "A2-L4"
+          ]
         },
         {
           "id": "A3",
           "title": "TRP Channels",
-          "summary": "TRPV1/TRPA1/TRPM8 structure and gating; chili, wasabi, menthol.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "The TRP family and the three you hear about most: TRPV1 (heat/capsaicin), TRPM8 (cold/menthol), TRPA1 (irritants), plus TRPs as genetic tools in the gut.",
+          "prereqs": [
+            "A2"
+          ],
+          "lessons": [
+            "A3-L1",
+            "A3-L2",
+            "A3-L3",
+            "A3-L4"
+          ]
         },
         {
           "id": "A4",
           "title": "Mechanotransduction",
-          "summary": "Piezo1/Piezo2: how membrane force opens a channel, touch to visceral stretch.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "How force opens a channel, the discovery of Piezo1/Piezo2, and Piezo2's role in touch and gut mechanosensation.",
+          "prereqs": [
+            "A2"
+          ],
+          "lessons": [
+            "A4-L1",
+            "A4-L2",
+            "A4-L3"
+          ]
         },
         {
           "id": "A5",
           "title": "Who's Who in the DRG",
-          "summary": "Aβ/Aδ/C fibers, LTMR vs. HTMR, peptidergic vs. non-peptidergic, molecular subtypes (TrkB, TH, Bmpr1b, Sstr2, Calca…).",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Fiber classes (Aβ/Aδ/C), LTMRs vs HTMRs and threshold tiling, classic markers, and the transcriptomic subtype era.",
+          "prereqs": [
+            "A3",
+            "A4"
+          ],
+          "lessons": [
+            "A5-L1",
+            "A5-L2",
+            "A5-L3",
+            "A5-L4"
+          ]
         },
         {
           "id": "A6",
@@ -88,27 +121,53 @@
       "units": [
         {
           "id": "B1",
-          "title": "Innate immunity",
+          "title": "Innate Immunity",
+          "summary": "Innate vs adaptive; pattern-recognition receptors and TLR4; the cellular first responders.",
           "prereqs": [],
-          "lessons": []
+          "lessons": [
+            "B1-L1",
+            "B1-L2",
+            "B1-L3"
+          ]
         },
         {
           "id": "B2",
-          "title": "Adaptive essentials",
-          "prereqs": [],
-          "lessons": []
+          "title": "Adaptive Essentials",
+          "summary": "T and B cells, clonal selection and memory; antigen presentation and MHC; antibodies and their effector actions.",
+          "prereqs": [
+            "B1"
+          ],
+          "lessons": [
+            "B2-L1",
+            "B2-L2",
+            "B2-L3"
+          ]
         },
         {
           "id": "B3",
-          "title": "Cytokines & signaling",
-          "prereqs": [],
-          "lessons": []
+          "title": "Cytokines & Signaling",
+          "summary": "What cytokines are, JAK-STAT signaling into the cell, and inflammation as a coordinated program that reaches sensory neurons.",
+          "prereqs": [
+            "B1"
+          ],
+          "lessons": [
+            "B3-L1",
+            "B3-L2",
+            "B3-L3"
+          ]
         },
         {
           "id": "B4",
           "title": "Microglia",
-          "prereqs": [],
-          "lessons": []
+          "summary": "The brain's resident immune cells and their origin, surveillance and activation, and how they sculpt circuits by pruning synapses.",
+          "prereqs": [
+            "B1"
+          ],
+          "lessons": [
+            "B4-L1",
+            "B4-L2",
+            "B4-L3"
+          ]
         },
         {
           "id": "B5",

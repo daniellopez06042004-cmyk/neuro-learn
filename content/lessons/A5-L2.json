@@ -1,0 +1,106 @@
+{
+  "id": "A5-L2",
+  "unitId": "A5",
+  "title": "LTMRs and HTMRs: threshold defines the job",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish low- and high-threshold mechanoreceptors and relate threshold to function.",
+  "tags": [
+    "drg",
+    "ltmr",
+    "htmr",
+    "threshold"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sorted by how hard you must push",
+      "body": "A key axis is **threshold**, the force needed to make a neuron fire:\n\n- **[[LTMR|Low-threshold mechanoreceptors (LTMRs)]]** fire to gentle touch. They tell you about textures, stroking and vibration.\n- **[[HTMR|High-threshold mechanoreceptors (HTMRs)]]** fire only to strong, potentially damaging force. Many are nociceptors."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Threshold tiling in an organ",
+      "body": "An organ isn't covered by one kind of sensor. Different afferents have different thresholds, so together they report force across a wide range, from gentle filling to painful distension.\n\nThe colon paper described exactly this: subtypes with a spread of force thresholds 'tiling' the mechanical range of the distal colon.",
+      "flag": {
+        "level": "simplified",
+        "note": "Threshold is one of several properties (ending type, speed, molecular identity) that define a subtype."
+      },
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/threshold-tiling.svg",
+        "alt": "A rising force sweeps upward while three afferents switch on in turn: a low-threshold one at gentle force, a mid-threshold one at moderate force, and a high-threshold one only at strong force.",
+        "caption": "Afferents with different thresholds together tile gentle-to-strong force."
+      }
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "You record three colon afferents while slowly raising distension pressure.",
+      "data": {
+        "kind": "table",
+        "rows": [
+          [
+            "Afferent",
+            "Starts firing at",
+            "Likely class"
+          ],
+          [
+            "1",
+            "Low (gentle filling)",
+            "?"
+          ],
+          [
+            "2",
+            "Low, sustained",
+            "?"
+          ],
+          [
+            "3",
+            "High (painful range)",
+            "?"
+          ]
+        ]
+      },
+      "prompt": "Which is most likely an HTMR / nociceptor?",
+      "options": [
+        "Afferent 1",
+        "Afferent 2",
+        "Afferent 3",
+        "None"
+      ],
+      "answer": [
+        2
+      ],
+      "explanation": "Firing only in the high-pressure, potentially harmful range is the HTMR/nociceptor signature. Low-threshold afferents report ordinary filling.",
+      "followUp": "This tiling is why one organ needs several DRG subtypes rather than one."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why can't a single threshold serve the whole colon?",
+      "options": [
+        "It could, easily",
+        "A single threshold couldn't distinguish normal filling from dangerous over-distension; a spread of thresholds encodes the full range",
+        "Thresholds don't exist in viscera",
+        "The colon only feels pain"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Encoding a range of intensities (A1-L2) needs neurons tuned to different force levels. That's the functional reason for subtype diversity."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Five genetically defined DRG subtypes innervate the distal colon with distinct endings and force thresholds."
+    }
+  ],
+  "reviewNotes": "One V source (colon paper)."
+}

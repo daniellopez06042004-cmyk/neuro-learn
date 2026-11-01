@@ -1,0 +1,64 @@
+{
+  "id": "A1-L4",
+  "unitId": "A1",
+  "title": "Labeled lines vs population codes",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Compare labeled-line and population coding and explain why genetically defined subtypes let you test them.",
+  "tags": [
+    "sensing",
+    "coding",
+    "theory",
+    "genetics"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two ideas about how 'what' is coded",
+      "body": "- **[[labeled line|Labeled line]]:** each neuron type reports one quality. Activate the 'cold line' and you feel cold, however you activated it.\n- **[[population coding|Population coding]]:** quality is read from the *pattern* across many neuron types. No single type means 'cold' on its own.\n\nReal systems seem to use some of both."
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Capsaicin (chili) activates the same neurons as painful heat. What does a labeled-line view predict?",
+      "options": [
+        "Capsaicin should feel cold",
+        "Capsaicin should feel hot or burning, because it activates the 'heat line'",
+        "Capsaicin should feel like touch",
+        "Capsaicin should feel like nothing"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "If the line carries the label, any way of activating it feels like that quality. That's exactly why chili 'burns' even though nothing is hot."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Where it gets messy",
+      "body": "Many neurons are **polymodal**. For example, many [[nociceptor|nociceptors]] respond to heat, chemicals and strong force. And some sensations, such as wetness, have no dedicated receptor at all; they seem to come from combinations of touch and cooling inputs.\n\nSo the field now asks *how much* each quality relies on dedicated lines versus patterns.",
+      "flag": {
+        "level": "debated",
+        "note": "The balance between labeled-line and population coding differs by modality and is still argued, especially for itch and pain."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why the lab cares",
+      "body": "If you can genetically isolate one subtype, you can **test** labeled-line ideas directly: turn only that subtype on or off and see what the animal feels or does.\n\nThat is the logic of the colon paper and of your DREADD project. Activate or silence one defined population ([[DREADD|DREADDs]], C5) and ask what changes."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "Suppose you activate one genetically defined DRG subtype with a DREADD and the mouse guards its abdomen.",
+      "prompt": "Does that prove a strict labeled line for visceral pain? Why or why not?",
+      "freeText": true,
+      "reveal": "Not on its own. It shows that activating this subtype is *sufficient* to cause pain-like behavior. It doesn't show that the subtype is the *only* route (silencing it and finding pain still present would argue against a strict line), and artificial activation may recruit patterns that never occur naturally. You need both gain- and loss-of-function results to make the case."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium due to an actively debated topic (flagged). Bridges to C5 and capstone E."
+}

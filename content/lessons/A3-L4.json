@@ -1,0 +1,77 @@
+{
+  "id": "A3-L4",
+  "unitId": "A3",
+  "title": "TRPs as tools and in the gut",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Evaluate how TRP channels are used to target or manipulate neurons, and the caveats of each approach.",
+  "tags": [
+    "trp",
+    "tools",
+    "trpv1-cre",
+    "gut",
+    "project"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Three ways labs use TRPV1",
+      "body": "- **Genetic access:** `Trpv1-Cre` mice drive reporters, [[DREADD|DREADDs]] or other payloads in TRPV1-lineage neurons.\n- **Pharmacology:** TRPV1 agonists or antagonists probe the channel's role in a behavior.\n- **Marker:** TRPV1 expression helps identify a subset of [[nociceptor|nociceptors]]."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "The lineage caveat",
+      "body": "A Cre line marks every cell that **ever** expressed the gene, including during development. `Trpv1` is expressed broadly in developing [[DRG]] neurons, so `Trpv1-Cre` can mark **many more** neurons than express TRPV1 in the adult.\n\nThe fix: check the marked population ([[RNAscope]], C8), or use a [[CreER]] (C2) or an [[intersectional genetics|intersectional]] strategy (C3).",
+      "flag": {
+        "level": "uncertain",
+        "note": "How broadly Trpv1-Cre marks neurons depends on the specific line and reporter; check the characterization for the line you use."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A paper says it used `Trpv1-Cre` with hM4Di to quiet TRPV1 neurons. What's your first question?",
+      "options": [
+        "What color was the reporter?",
+        "Which neurons does this Cre line actually mark in adults: only TRPV1-positive cells, or a broader lineage?",
+        "How old were the authors?",
+        "Was the actuator dissolved in water?"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Lineage marking can widen the targeted population far beyond adult TRPV1-positive neurons, which changes how you read the result (C2 logic)."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "TRPV1 neurons and the gut",
+      "body": "TRPV1-positive afferents richly innervate the gut. The 2025 review of spinal gut innervation notes that chemogenetically quieting TRPV1-positive neurons lowers inflammation-driven visceral hypersensitivity. That is one reason [[DREADD|DREADDs]] are an accepted tool in this subfield, and part of the rationale for your pancreas project.",
+      "flag": {
+        "level": "simplified",
+        "note": "The exact afferent subtypes and organs involved vary; see the review and primary papers."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You plan to use a Cre line to express a DREADD in a 'TRPV1' population and study the pancreas.",
+      "prompt": "Name one specificity check you'd run before trusting the targeting.",
+      "freeText": true,
+      "reveal": "Options: RNAscope or antibody staining to see which cells carry the reporter in the adult pancreas-projecting population; a CreER line with timed tamoxifen to avoid developmental lineage; an intersectional Cre+Flp design to restrict to the subtype you want; retrograde labeling from the pancreas to confirm the marked cells actually project there. Any one shows you're testing the neurons you think you are."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Review of spinal (DRG) sensory innervation of the intestine and open questions."
+    }
+  ],
+  "reviewNotes": "Confidence medium: lineage breadth and subtype specifics flagged. Links to C2/C3/C8 and capstone."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "A4-L2",
+  "unitId": "A4",
+  "title": "Discovering Piezo1 and Piezo2",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe how Piezo channels were identified and why Piezo2 is central to touch and gut mechanosensation.",
+  "tags": [
+    "mechanotransduction",
+    "piezo",
+    "discovery"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A screen for a touch channel",
+      "body": "In 2010 the Patapoutian lab found a cell line that made currents when poked, then knocked down candidate genes one by one until the current disappeared. The gene was **Piezo1**; a relative, **[[Piezo2]]**, turned up in sensory neurons.\n\nBoth are large channels that open directly to mechanical force, the long-sought mechanotransducers."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Piezo2 carries light touch",
+      "body": "Mice lacking Piezo2 in sensory neurons (2014) lost most of their response to gentle touch. Piezo2 is now considered the **major transducer of innocuous touch** in mammals, part of the work recognized by the 2021 Nobel Prize (A3-L1)."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A cell line makes a poking-activated current. You remove one gene and the current vanishes; add the gene back and it returns. What can you conclude?",
+      "options": [
+        "The gene is unrelated",
+        "That gene is necessary and sufficient for the mechanically activated current in these cells",
+        "The cells are dead",
+        "It only works in neurons"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Loss plus rescue is strong evidence that a gene encodes (or is essential for) the current. This is the logic that identified Piezo channels."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You want to test whether Piezo2 carries gentle touch in the skin.",
+      "prompt": "What's the cleanest genetic experiment?",
+      "options": [
+        "Overexpress TRPV1",
+        "Conditionally delete Piezo2 in sensory neurons and test light-touch responses",
+        "Give capsaicin",
+        "Record from muscle"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "A conditional knockout in sensory neurons isolates Piezo2's role there. That experiment showed light touch collapses without it."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Coste B et al., 2010, Science",
+      "doi": "10.1126/science.1193270",
+      "url": "https://doi.org/10.1126/science.1193270",
+      "verified": true,
+      "note": "Discovery of Piezo1 and Piezo2 mechanically activated channels."
+    },
+    {
+      "citation": "Ranade SS et al., 2014, Nature",
+      "doi": "10.1038/nature13980",
+      "url": "https://doi.org/10.1038/nature13980",
+      "verified": true,
+      "note": "Piezo2 is the major transducer of light touch in mice."
+    }
+  ],
+  "reviewNotes": "Two V sources."
+}

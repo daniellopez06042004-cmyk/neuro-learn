@@ -1,0 +1,87 @@
+{
+  "id": "A2-L3",
+  "unitId": "A2",
+  "title": "Threshold and the sodium channel",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how voltage-gated sodium channels create threshold and why Nav1.7 and Nav1.8 matter for pain.",
+  "tags": [
+    "biophysics",
+    "action-potential",
+    "sodium-channel",
+    "pain"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The positive-feedback switch",
+      "body": "**[[voltage-gated sodium channel|Voltage-gated Na⁺ channels]]** (Nav) open when the membrane depolarizes. Their opening lets Na⁺ in, which depolarizes the membrane further and opens more of them.\n\n**[[threshold|Threshold]]** is the voltage where this loop becomes self-sustaining and an action potential takes off.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/action-potential.svg",
+        "alt": "A voltage-versus-time trace of one action potential: it rests near −70 mV, a stimulus reaches the −55 mV threshold, sodium flows in and the voltage spikes to about +30 mV, then potassium flows out and it falls back past rest before recovering.",
+        "caption": "Na⁺ in drives the upstroke; K⁺ out brings it back down."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Inactivation and the refractory period",
+      "body": "Within about a millisecond Nav channels **inactivate**: they close and can't reopen until the membrane repolarizes. Meanwhile, voltage-gated K⁺ channels repolarize the cell.\n\nInactivation causes the **[[refractory period]]**. It caps maximum firing rate and makes spikes travel one way."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Nav1.7 and Nav1.8: the pain channels",
+      "body": "DRG neurons express several Nav subtypes:\n\n- **[[Nav1.7]]** amplifies small depolarizations toward threshold. People with loss-of-function mutations in its gene (*SCN9A*) are born unable to feel pain; gain-of-function mutations cause severe pain disorders.\n- **[[Nav1.8]]** is enriched in nociceptors and is resistant to the toxin TTX. Its Cre line (`Scn10a-Cre`, often called Nav1.8-Cre) is a widely used way to target many nociceptors.",
+      "flag": {
+        "level": "simplified",
+        "note": "Nav1.8-Cre labels a broad population that includes more than nociceptors; check specificity for your tissue."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each to its role.",
+      "pairs": [
+        [
+          "Nav activation",
+          "Positive feedback that creates threshold"
+        ],
+        [
+          "Nav inactivation",
+          "Refractory period"
+        ],
+        [
+          "Nav1.7",
+          "Sets pain sensitivity; loss means no pain"
+        ],
+        [
+          "Nav1.8",
+          "TTX-resistant channel enriched in nociceptors"
+        ]
+      ],
+      "explanation": "These are the core facts behind both pain biology and some of the most common sensory-neuron Cre lines."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "Inflammation shifts nociceptor Nav channels so they open at slightly more negative voltages.",
+      "prompt": "What happens to the neuron's excitability?",
+      "options": [
+        "Decreases",
+        "Increases: threshold is effectively lower, so weaker stimuli trigger spikes",
+        "No change",
+        "The neuron can no longer fire"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "A lower effective threshold means smaller receptor potentials are enough to fire. That is one mechanism of peripheral sensitization (A9), and why inflamed tissue hurts to the touch."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. Nav1.8-Cre caveat flagged."
+}

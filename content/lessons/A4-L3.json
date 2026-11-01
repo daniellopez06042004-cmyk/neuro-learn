@@ -1,0 +1,91 @@
+{
+  "id": "A4-L3",
+  "unitId": "A4",
+  "title": "Piezo2 beyond the skin: the gut",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain evidence that Piezo2 contributes to gut mechanosensation and transit.",
+  "tags": [
+    "mechanotransduction",
+    "piezo2",
+    "gut",
+    "interoception"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The gut is full of stretch",
+      "body": "Food distends the stomach and intestine, and the gut wall contracts to move contents along. Sensing that stretch is essential for normal digestion and for the feeling of fullness.\n\nSo it would be surprising if the body's main touch channel, Piezo2, had no role inside the gut."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Piezo2 shapes gastrointestinal transit",
+      "body": "A 2023 study found that **PIEZO2 in somatosensory neurons helps control gastrointestinal transit**: disrupting it changed how the gut moved contents along.\n\nPiezo2 is also expressed in specialized gut epithelial cells and in vagal and spinal afferents, placing it at several points in gut mechanosensing.",
+      "flag": {
+        "level": "simplified",
+        "note": "Piezo2's contributions differ across cell types and gut regions; see the paper for specifics."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why look for Piezo2 in gut afferents at all?",
+      "options": [
+        "It's the known light-touch transducer, so it's a strong candidate for sensing gut stretch",
+        "It's a heat channel",
+        "It only works in skin",
+        "Guts have no mechanical forces"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Reasoning from a channel's known role to a new tissue is a standard move. Piezo2's touch role made it the obvious candidate for mechanosensation in the gut."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "A mouse has Piezo2 disrupted in sensory neurons and shows altered gut transit.",
+      "prompt": "Does that prove sensory Piezo2 directly senses the stretch that drives transit?",
+      "options": [
+        "Yes, definitively",
+        "No: it shows Piezo2 is needed for normal transit, but the exact cells and whether it's the direct stretch sensor need further mapping",
+        "It proves the gut has no other sensors",
+        "It proves a vagal mechanism only"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "A phenotype shows necessity, not the full mechanism. Which cells, which afferents and whether Piezo2 is the direct transducer are separate questions, the kind the lab's subtype-level tools are built to answer.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Cell-type-specific contributions to transit are still being resolved."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s5",
+      "title": "Why this matters for your work",
+      "body": "The colon paper measured **force thresholds** of DRG subtypes: how much stretch each one needs to fire. Piezo channels are a big part of why those thresholds differ.\n\nWhen you manipulate pancreas afferents, their mechanical tuning, set partly by channels like Piezo2, is part of what defines each subtype."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Servin-Vences MR et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.006",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.006",
+      "verified": true,
+      "note": "PIEZO2 in sensory neurons controls gastrointestinal transit."
+    },
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Five genetically defined DRG subtypes innervate the distal colon with distinct endings and force thresholds."
+    }
+  ],
+  "reviewNotes": "Confidence medium: cell-type specifics flagged. Two V sources."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "A1-L1",
+  "unitId": "A1",
+  "title": "From stimulus to spike",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Trace how a physical stimulus becomes action potentials travelling to the spinal cord.",
+  "tags": [
+    "sensing",
+    "transduction",
+    "basics"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Every sense does the same three things",
+      "body": "A sensory neuron has one job: turn something physical into the brain's currency, electrical spikes.\n\n1. **[[transduction|Transduction]]:** a stimulus (force, heat, a chemical) opens ion channels in the nerve ending.\n2. **[[receptor potential|Receptor potential]]:** ions flow and the ending depolarizes. The bigger the stimulus, the bigger this graded change.\n3. **Encoding:** if the receptor potential crosses [[threshold]], the neuron fires [[action potential|action potentials]] that travel to the CNS."
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Put the steps in order for a [[DRG]] neuron sensing a pinch.",
+      "items": [
+        "Force deforms the nerve ending",
+        "Mechanically activated channels open",
+        "Cations flow in; receptor potential builds",
+        "Membrane crosses threshold",
+        "Action potentials fire",
+        "Spikes reach the spinal cord"
+      ],
+      "explanation": "Stimulus → channel → graded receptor potential → threshold → all-or-none spikes → CNS. The same chain works for heat or chemicals; only the channel at the start changes."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Each neuron has a favorite stimulus",
+      "body": "Each sensory neuron responds best to one kind of energy, its **[[adequate stimulus]]**. Touch neurons respond to gentle force, cold neurons to cooling, [[nociceptor|nociceptors]] to stimuli intense enough to threaten damage.\n\nThe channels a neuron expresses largely set its favorite stimulus. That's why A3 (TRP channels) and A4 (Piezo channels) matter so much."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why does a touch neuron ignore a warm surface?",
+      "options": [
+        "It's insulated from heat",
+        "It lacks the heat-gated channels, so warming doesn't open anything in its ending",
+        "Heat blocks its action potentials",
+        "The brain filters the signal out"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Selectivity starts at transduction. Without a heat-gated channel, warmth produces no receptor potential, so nothing gets encoded."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A drug blocks voltage-gated sodium channels along the axon but leaves the channels in the nerve ending alone. You press on the skin.",
+      "prompt": "What happens?",
+      "options": [
+        "No receptor potential forms",
+        "A receptor potential forms at the ending, but no spikes reach the cord",
+        "Spikes reach the cord as normal",
+        "The neuron fires continuously"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Transduction still works, so the ending depolarizes. Without sodium channels, though, no action potential can be generated or conducted, so the CNS hears nothing. This is how local anesthetics like lidocaine work."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level (Kandel). No sources needed."
+}

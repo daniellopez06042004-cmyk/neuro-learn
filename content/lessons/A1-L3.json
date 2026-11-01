@@ -1,0 +1,80 @@
+{
+  "id": "A1-L3",
+  "unitId": "A1",
+  "title": "Receptive fields: where, and how precisely",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain receptive fields and why skin is mapped precisely while internal organs are not.",
+  "tags": [
+    "sensing",
+    "receptive-field",
+    "viscera"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Each neuron 'owns' a patch",
+      "body": "A neuron's **[[receptive field]]** is the region where a stimulus can change its firing. On the fingertip, touch receptive fields are tiny and densely packed. On the back, they are large and sparse.\n\nSmall fields plus high density means fine spatial detail. That's why you can read Braille with a fingertip but not with your back."
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "setup": "In a two-point test, you touch the skin with two points and ask whether the person feels one or two.",
+      "prompt": "Where will two points need to be farthest apart to feel like two?",
+      "options": [
+        "Fingertip",
+        "Lips",
+        "Middle of the back",
+        "Tongue tip"
+      ],
+      "answer": [
+        2
+      ],
+      "reveal": "The back has large, sparse receptive fields, so two points close together land in the same field and feel like one. Fingertips, lips and tongue have the smallest fields."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Organs are mapped coarsely",
+      "body": "Internal organs get far fewer sensory fibers than skin. Each visceral afferent typically covers a large territory, and their signals [[converge]] in the cord with input from the skin (D3, D5).\n\nThe result is poor localization: gut sensations feel vague and spread out, and are sometimes referred to the body wall.",
+      "flag": {
+        "level": "simplified",
+        "note": "Visceral receptive fields vary by organ and afferent type; the point is the contrast with skin."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why can't you point to exactly where in your colon a cramp is?",
+      "options": [
+        "The colon has no sensory neurons",
+        "Visceral afferents are sparse with large receptive fields and converge onto spinal neurons shared with skin",
+        "Pain signals from the colon travel only by the vagus",
+        "The colon's neurons fire too fast to localize"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Sparse innervation, large receptive fields and convergence together blur location. That makes visceral pain hard to localize and prone to referral."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "You want to map the receptive field of a single colon-innervating DRG neuron. What do you need to vary?",
+      "options": [
+        "Only the stimulus intensity",
+        "The location of a punctate stimulus across the colon wall while recording that neuron",
+        "The mouse's age",
+        "The dye color"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A receptive field is defined by location: you move a small probe around and note where the neuron responds. This is how single-afferent ending territories are characterized."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. 'converge' links to new glossary term convergence."
+}

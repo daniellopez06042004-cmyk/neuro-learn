@@ -1,0 +1,82 @@
+{
+  "id": "A2-L2",
+  "unitId": "A2",
+  "title": "Receptor potentials are graded",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why sensory transduction channels depolarize neurons and why receptor potentials are graded.",
+  "tags": [
+    "biophysics",
+    "receptor-potential",
+    "transduction"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Transduction channels are cation channels",
+      "body": "Most sensory transduction channels, including the TRPs (A3) and Piezos (A4), are **non-selective cation channels**. They let Na⁺, K⁺ and Ca²⁺ through. Their combined current reverses near **0 mV**.\n\nAt rest (−65 mV), that means a net **inward** current: the ending depolarizes."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Graded, not all-or-none",
+      "body": "A **[[receptor potential]]** scales with the stimulus. A gentle push opens a few channels and gives a small depolarization; a harder push opens more channels and gives a bigger one.\n\nReceptor potentials also spread passively and fade with distance. So spikes start close to the ending, in a **spike initiation zone**, where voltage-gated Na⁺ channels take over.",
+      "flag": {
+        "level": "simplified",
+        "note": "In DRG neurons, the exact site where spikes start can vary by subtype and ending type."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "Calcium enters through a TRP channel along with Na⁺.",
+      "prompt": "Besides depolarizing the ending, what else might that Ca²⁺ do?",
+      "options": [
+        "Nothing, because Ca²⁺ is just a charge carrier",
+        "Act as an intracellular signal, for example triggering neuropeptide release from the ending",
+        "Block all action potentials",
+        "Hyperpolarize the cell"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Ca²⁺ is also a second messenger. In nociceptor endings it can trigger release of peptides like CGRP and substance P into the tissue. Sensory endings don't just sense; they also signal outward (B6).",
+      "flag": {
+        "level": "simplified",
+        "note": "Peptide release at endings depends on neuron type and stimulus."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why does doubling stimulus strength not double the size of each action potential?",
+      "options": [
+        "Action potentials are all-or-none; stronger stimuli change firing *rate*, not spike size",
+        "The membrane saturates at 0 mV",
+        "Because K⁺ channels open first",
+        "Stronger stimuli close the channels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The graded part is the receptor potential. Once threshold is crossed, each spike is stereotyped; intensity is carried by how often spikes occur."
+    },
+    {
+      "type": "order",
+      "id": "s5",
+      "prompt": "Order the events at a sensory ending.",
+      "items": [
+        "Stimulus opens cation channels",
+        "Inward current depolarizes the ending",
+        "Depolarization spreads to the spike initiation zone",
+        "Voltage-gated Na⁺ channels open",
+        "Action potential propagates"
+      ],
+      "explanation": "Transduction gives a graded current, which spreads to where Nav channels convert it into all-or-none spikes."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level."
+}

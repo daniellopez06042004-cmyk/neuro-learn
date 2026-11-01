@@ -1,0 +1,111 @@
+{
+  "id": "A1-L2",
+  "unitId": "A1",
+  "title": "Coding how strong and how long",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how firing rate, recruitment and adaptation encode stimulus intensity and duration.",
+  "tags": [
+    "sensing",
+    "coding",
+    "adaptation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Spikes are all-or-none, so how is 'stronger' coded?",
+      "body": "An action potential is always the same size. So a sensory neuron signals intensity in other ways:\n\n- **Firing rate:** a stronger stimulus means a bigger receptor potential, which means faster firing (**[[rate coding]]**).\n- **Recruitment:** a stronger stimulus crosses the thresholds of more neurons, including higher-threshold ones."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Fast and slow adapters",
+      "body": "Hold a constant stimulus and neurons differ in how long they keep firing. This is **[[adaptation]]**.\n\n- **Rapidly adapting (RA):** fire at onset (and often offset), then go quiet. They signal *change*, like vibration or something slipping.\n- **Slowly adapting (SA):** keep firing while the stimulus lasts. They signal *sustained* pressure or stretch.\n\nTogether they report both *that* something changed and *how long* it lasted."
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each code to what it tells the brain.",
+      "pairs": [
+        [
+          "Firing rate of one neuron",
+          "How intense the stimulus is"
+        ],
+        [
+          "Recruiting higher-threshold neurons",
+          "Stimulus has become strong"
+        ],
+        [
+          "Rapidly adapting response",
+          "Something changed or moved"
+        ],
+        [
+          "Slowly adapting response",
+          "The stimulus is still there"
+        ]
+      ],
+      "explanation": "Intensity is coded by rate and recruitment; time course is coded by which neurons adapt and how fast."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "You record two DRG neurons while a probe holds steady pressure on the skin for 2 seconds.",
+      "data": {
+        "kind": "table",
+        "rows": [
+          [
+            "Time window",
+            "Neuron 1 (spikes)",
+            "Neuron 2 (spikes)"
+          ],
+          [
+            "0–0.1 s (onset)",
+            "6",
+            "8"
+          ],
+          [
+            "0.1–2.0 s (hold)",
+            "0",
+            "31"
+          ],
+          [
+            "2.0–2.1 s (release)",
+            "4",
+            "0"
+          ]
+        ]
+      },
+      "prompt": "How would you classify them?",
+      "options": [
+        "Both slowly adapting",
+        "Neuron 1 rapidly adapting, Neuron 2 slowly adapting",
+        "Neuron 1 slowly adapting, Neuron 2 rapidly adapting",
+        "Both rapidly adapting"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Neuron 1 fires only at onset and release, the RA signature. Neuron 2 keeps firing through the hold: SA.",
+      "followUp": "In the colon paper, distension-evoked responses were classified the same way, so this skill transfers directly to visceral recordings."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "A visceral afferent fires faster and faster as you increase colon distension pressure. Which coding strategy is it using?",
+      "options": [
+        "Labeled line only",
+        "Rate coding",
+        "Adaptation",
+        "Population silence"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "More pressure, bigger receptor potential, higher firing rate. That is rate coding. Visceral mechanoreceptors are routinely characterized by these pressure–response curves."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level."
+}

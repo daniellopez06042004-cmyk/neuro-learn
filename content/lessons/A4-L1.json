@@ -1,0 +1,71 @@
+{
+  "id": "A4-L1",
+  "unitId": "A4",
+  "title": "How force opens a channel",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how mechanically gated channels convert membrane force into current.",
+  "tags": [
+    "mechanotransduction",
+    "piezo",
+    "biophysics"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sensing touch is a physics problem",
+      "body": "Light, heat and chemicals carry energy a channel can catch. Force is harder: a touch neuron has to turn a *mechanical* push into an ionic current in under a millisecond.\n\nThe answer is **[[mechanically activated channel|mechanically activated channels]]**: ion channels that open when the membrane around them is stretched or deformed."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Force-from-lipid, force-from-filament",
+      "body": "Two broad ideas for how force reaches the channel:\n\n- **Force-from-lipid:** tension in the membrane itself bends the channel open. [[Piezo2]] works largely this way.\n- **Force-from-filament:** the channel is tethered to the cytoskeleton or matrix, and movement pulls it open.\n\nEither way, the gate responds to mechanical stress, not voltage or a ligand.",
+      "flag": {
+        "level": "simplified",
+        "note": "Real endings may combine both mechanisms; details are still being worked out."
+      },
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/piezo-gating.svg",
+        "alt": "A push creates tension in the membrane, which bends a Piezo channel open; cations then flow from outside into the cell.",
+        "caption": "Membrane tension bends the channel open — force becomes current directly."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why is mechanotransduction necessarily fast?",
+      "options": [
+        "Force travels slower than light",
+        "The channel is opened directly by force, with no second-messenger relay in between",
+        "It uses a slow enzyme cascade",
+        "It waits for calcium from stores"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Directly mechanically gated channels skip the slow biochemical relays, so touch can be signaled almost instantly, fast enough to adjust grip in real time."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You stretch a patch of membrane containing a mechanically activated channel in a dish, with no other cells around.",
+      "prompt": "Do you expect current?",
+      "options": [
+        "No, it needs a whole animal",
+        "Yes: if the channel is intrinsically mechanosensitive, membrane tension alone can open it",
+        "Only if you add capsaicin",
+        "Only in the dark"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "A channel that opens to membrane stretch in an isolated patch is intrinsically mechanosensitive. That experiment is exactly how Piezo channels were pinned down (next lesson)."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level."
+}

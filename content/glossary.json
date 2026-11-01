@@ -534,6 +534,395 @@
       ],
       "definition": "Nerves linking the thoracic/lumbar spinal cord to abdominal organs; they carry sympathetic preganglionic fibers out and spinal (DRG) sensory fibers back.",
       "track": "D"
+    },
+    {
+      "term": "transduction",
+      "aliases": [
+        "transduce"
+      ],
+      "definition": "Converting a physical stimulus (force, heat, a chemical) into an electrical change in a sensory neuron.",
+      "track": "A"
+    },
+    {
+      "term": "receptor potential",
+      "aliases": [],
+      "definition": "The graded voltage change produced at a sensory ending when transduction channels open; if big enough it triggers action potentials.",
+      "track": "A"
+    },
+    {
+      "term": "threshold",
+      "aliases": [],
+      "definition": "The membrane voltage at which a neuron fires an action potential; also, the stimulus strength needed to make a sensory neuron respond.",
+      "track": "A"
+    },
+    {
+      "term": "action potential",
+      "aliases": [
+        "action potentials",
+        "spike",
+        "spikes"
+      ],
+      "definition": "The all-or-none electrical impulse a neuron sends down its axon.",
+      "track": "A"
+    },
+    {
+      "term": "adequate stimulus",
+      "aliases": [],
+      "definition": "The kind of stimulus a given sensory neuron responds to best, set largely by the channels it expresses.",
+      "track": "A"
+    },
+    {
+      "term": "rate coding",
+      "aliases": [],
+      "definition": "Signaling stimulus intensity by how fast a neuron fires.",
+      "track": "A"
+    },
+    {
+      "term": "population coding",
+      "aliases": [],
+      "definition": "Reading a stimulus quality from the pattern of activity across many neurons rather than from one type alone.",
+      "track": "A"
+    },
+    {
+      "term": "adaptation",
+      "aliases": [
+        "adapting",
+        "rapidly adapting",
+        "slowly adapting"
+      ],
+      "definition": "The decline in a neuron's firing during a sustained stimulus; rapidly adapting neurons signal change, slowly adapting ones signal duration.",
+      "track": "A"
+    },
+    {
+      "term": "receptive field",
+      "aliases": [
+        "receptive fields"
+      ],
+      "definition": "The region where a stimulus can change a sensory neuron's firing; small, dense fields give fine spatial detail.",
+      "track": "A"
+    },
+    {
+      "term": "converge",
+      "aliases": [
+        "convergence",
+        "converges"
+      ],
+      "definition": "When several inputs funnel onto the same downstream neuron; convergence of visceral and skin afferents blurs where visceral sensation is felt.",
+      "track": "A"
+    },
+    {
+      "term": "labeled line",
+      "aliases": [
+        "labeled-line"
+      ],
+      "definition": "The idea that each sensory neuron type reports one quality, so activating it any way produces that sensation.",
+      "track": "A"
+    },
+    {
+      "term": "resting membrane potential",
+      "aliases": [
+        "resting potential"
+      ],
+      "definition": "The steady negative voltage inside a neuron at rest, roughly −60 to −70 mV.",
+      "track": "A"
+    },
+    {
+      "term": "equilibrium potential",
+      "aliases": [
+        "equilibrium potentials"
+      ],
+      "definition": "The voltage at which an ion's chemical and electrical forces balance, so there is no net flow of that ion.",
+      "track": "A"
+    },
+    {
+      "term": "driving force",
+      "aliases": [],
+      "definition": "How far the membrane voltage is from an ion's equilibrium potential (Vm − E_ion); it sets the size and direction of current when channels open.",
+      "track": "A"
+    },
+    {
+      "term": "voltage-gated sodium channel",
+      "aliases": [
+        "voltage-gated sodium channels",
+        "Nav",
+        "Nav channel",
+        "Nav channels"
+      ],
+      "definition": "A channel that opens on depolarization and lets Na⁺ in; its positive feedback creates the action-potential threshold.",
+      "track": "A"
+    },
+    {
+      "term": "Nav1.7",
+      "aliases": [
+        "SCN9A"
+      ],
+      "definition": "A voltage-gated sodium channel that amplifies small depolarizations in sensory neurons; loss-of-function causes inability to feel pain.",
+      "track": "A"
+    },
+    {
+      "term": "Nav1.8",
+      "aliases": [
+        "Scn10a",
+        "Nav1.8-Cre"
+      ],
+      "definition": "A TTX-resistant voltage-gated sodium channel enriched in nociceptors; its Cre line is a common way to target them.",
+      "track": "A"
+    },
+    {
+      "term": "refractory period",
+      "aliases": [],
+      "definition": "The brief time after an action potential when a neuron can't readily fire again, because sodium channels are inactivated.",
+      "track": "A"
+    },
+    {
+      "term": "myelination",
+      "aliases": [
+        "myelin",
+        "myelinated",
+        "unmyelinated"
+      ],
+      "definition": "The insulating sheath around some axons that speeds conduction by letting spikes jump between gaps (nodes).",
+      "track": "A"
+    },
+    {
+      "term": "capsaicin",
+      "aliases": [],
+      "definition": "The pungent compound in chili peppers; it activates TRPV1, which is why chili feels hot.",
+      "track": "A"
+    },
+    {
+      "term": "TRPM8",
+      "aliases": [],
+      "definition": "A TRP channel opened by cooling and menthol; the principal detector of environmental cold.",
+      "track": "A"
+    },
+    {
+      "term": "TRPA1",
+      "aliases": [
+        "ANKTM1"
+      ],
+      "definition": "A TRP channel opened by mustard oil and many reactive irritants; a broad chemical-danger sensor often co-expressed with TRPV1.",
+      "track": "A"
+    },
+    {
+      "term": "mechanically activated channel",
+      "aliases": [
+        "mechanically activated channels",
+        "mechanosensitive channel"
+      ],
+      "definition": "An ion channel that opens in response to mechanical force on the membrane, the basis of touch and stretch sensing.",
+      "track": "A"
+    },
+    {
+      "term": "single-cell RNA sequencing",
+      "aliases": [
+        "single-cell RNA-seq",
+        "scRNA-seq"
+      ],
+      "definition": "Measuring the genes expressed in each individual cell, used to group neurons into molecular subtypes.",
+      "track": "A"
+    },
+    {
+      "term": "innate immunity",
+      "aliases": [
+        "innate"
+      ],
+      "definition": "The fast, general arm of immunity that uses prebuilt sensors and has no lasting memory.",
+      "track": "B"
+    },
+    {
+      "term": "adaptive immunity",
+      "aliases": [
+        "adaptive"
+      ],
+      "definition": "The slower, highly specific arm of immunity that remembers past encounters; T and B cells.",
+      "track": "B"
+    },
+    {
+      "term": "PAMP",
+      "aliases": [
+        "PAMPs",
+        "pathogen-associated molecular pattern",
+        "pathogen-associated molecular patterns"
+      ],
+      "definition": "A conserved molecular pattern shared by classes of microbes that innate sensors recognize.",
+      "track": "B"
+    },
+    {
+      "term": "pattern recognition receptor",
+      "aliases": [
+        "pattern-recognition receptor",
+        "pattern recognition receptors",
+        "PRR",
+        "PRRs"
+      ],
+      "definition": "An innate immune sensor that detects conserved microbial patterns (PAMPs).",
+      "track": "B"
+    },
+    {
+      "term": "Toll-like receptor",
+      "aliases": [
+        "Toll-like receptors",
+        "TLR",
+        "TLRs",
+        "Toll"
+      ],
+      "definition": "A major family of pattern-recognition receptors; different TLRs detect different microbial molecules.",
+      "track": "B"
+    },
+    {
+      "term": "TLR4",
+      "aliases": [],
+      "definition": "The Toll-like receptor that senses bacterial LPS.",
+      "track": "B"
+    },
+    {
+      "term": "macrophage",
+      "aliases": [
+        "macrophages"
+      ],
+      "definition": "A resident innate immune cell that engulfs microbes and debris and releases cytokines.",
+      "track": "B"
+    },
+    {
+      "term": "neutrophil",
+      "aliases": [
+        "neutrophils"
+      ],
+      "definition": "An abundant, short-lived innate immune cell that floods into tissue first during infection.",
+      "track": "B"
+    },
+    {
+      "term": "dendritic cell",
+      "aliases": [
+        "dendritic cells"
+      ],
+      "definition": "An innate cell that engulfs material and presents it to T cells, bridging innate and adaptive immunity.",
+      "track": "B"
+    },
+    {
+      "term": "phagocytosis",
+      "aliases": [
+        "phagocyte",
+        "phagocytes",
+        "phagocytic"
+      ],
+      "definition": "The engulfing of microbes or debris by an immune cell.",
+      "track": "B"
+    },
+    {
+      "term": "lymphocyte",
+      "aliases": [
+        "lymphocytes"
+      ],
+      "definition": "An adaptive immune cell (T cell or B cell), each carrying one specific receptor.",
+      "track": "B"
+    },
+    {
+      "term": "T cell",
+      "aliases": [
+        "T cells"
+      ],
+      "definition": "An adaptive lymphocyte; helper T cells coordinate responses and cytotoxic T cells kill infected cells.",
+      "track": "B"
+    },
+    {
+      "term": "B cell",
+      "aliases": [
+        "B cells"
+      ],
+      "definition": "An adaptive lymphocyte that makes antibodies.",
+      "track": "B"
+    },
+    {
+      "term": "memory cell",
+      "aliases": [
+        "memory cells"
+      ],
+      "definition": "A long-lived lymphocyte left after an infection that makes the next response faster and stronger.",
+      "track": "B"
+    },
+    {
+      "term": "antibody",
+      "aliases": [
+        "antibodies",
+        "immunoglobulin"
+      ],
+      "definition": "A Y-shaped protein made by B cells that binds one specific target; its variable tips choose the target and its stem selects the effector action.",
+      "track": "B"
+    },
+    {
+      "term": "antigen",
+      "aliases": [
+        "antigens"
+      ],
+      "definition": "The specific molecule or fragment that an antibody or lymphocyte receptor recognizes.",
+      "track": "B"
+    },
+    {
+      "term": "MHC",
+      "aliases": [
+        "major histocompatibility complex"
+      ],
+      "definition": "Surface molecules that display peptide fragments so T cells can inspect what is inside or engulfed by a cell.",
+      "track": "B"
+    },
+    {
+      "term": "antigen-presenting cell",
+      "aliases": [
+        "antigen-presenting cells"
+      ],
+      "definition": "A cell that displays engulfed antigen on MHC to activate T cells; dendritic cells are the professionals.",
+      "track": "B"
+    },
+    {
+      "term": "cytokine",
+      "aliases": [
+        "cytokines"
+      ],
+      "definition": "A small signaling protein immune cells release to coordinate responses, usually acting locally and briefly.",
+      "track": "B"
+    },
+    {
+      "term": "JAK-STAT",
+      "aliases": [
+        "JAK/STAT"
+      ],
+      "definition": "A common signaling pathway where a cytokine receptor activates JAK enzymes, which activate STAT transcription factors that change gene expression.",
+      "track": "B"
+    },
+    {
+      "term": "microglia",
+      "aliases": [
+        "microglion",
+        "microglial"
+      ],
+      "definition": "The brain's resident innate immune cells, a self-renewing macrophage-like population that surveys tissue and shapes circuits.",
+      "track": "B"
+    },
+    {
+      "term": "complement",
+      "aliases": [
+        "complement system"
+      ],
+      "definition": "A cascade of immune proteins that tags or lyses targets; it also tags synapses for microglial pruning.",
+      "track": "B"
+    },
+    {
+      "term": "synaptic pruning",
+      "aliases": [
+        "pruning"
+      ],
+      "definition": "The removal of excess or weak synapses during development, carried out largely by microglia.",
+      "track": "B"
+    },
+    {
+      "term": "RNAscope",
+      "aliases": [
+        "in situ hybridization"
+      ],
+      "definition": "A probe-based method that detects specific mRNA molecules in tissue, used to confirm which cells express a marker gene.",
+      "track": "C"
     }
   ]
 }

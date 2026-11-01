@@ -1,0 +1,86 @@
+{
+  "id": "B1-L3",
+  "unitId": "B1",
+  "title": "The cellular first responders",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Identify the main innate immune cells and what each does in an early response.",
+  "tags": [
+    "immunology",
+    "innate",
+    "cells",
+    "phagocyte"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The front line",
+      "body": "Key innate cells:\n\n- **[[Macrophage|Macrophages]]:** resident in every tissue; engulf microbes and debris ([[phagocytosis]]) and raise the alarm.\n- **[[Neutrophil|Neutrophils]]:** abundant, short-lived; flood in first from the blood.\n- **[[Dendritic cell|Dendritic cells]]:** engulf material and then *present* it to T cells, bridging to adaptive immunity (B2).\n- **Mast cells:** sit near surfaces and vessels; release histamine and other mediators fast."
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each innate cell to its signature job.",
+      "pairs": [
+        [
+          "Macrophage",
+          "Resident engulfer and alarm-raiser"
+        ],
+        [
+          "Neutrophil",
+          "First mass responder from the blood"
+        ],
+        [
+          "Dendritic cell",
+          "Presents antigen to T cells"
+        ],
+        [
+          "Mast cell",
+          "Rapid release of histamine near surfaces"
+        ]
+      ],
+      "explanation": "Each cell has a specialty, but all share the innate traits: fast and general."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Phagocytosis and the alarm",
+      "body": "A macrophage that engulfs a microbe also releases **[[cytokine|cytokines]]** (B3), signaling proteins that recruit more cells and produce the classic signs of inflammation: redness, heat, swelling, pain.\n\nThat last one, pain, is partly produced by inflammatory mediators acting on sensory endings (A9), which is where immunology meets your field directly."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "A tissue is infected. Which innate cells arrive in large numbers first from the bloodstream?",
+      "prompt": "Choose the best answer.",
+      "options": [
+        "T cells",
+        "Neutrophils",
+        "B cells",
+        "Red blood cells"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Neutrophils are the classic early mass responders recruited from blood. Resident macrophages are already present; lymphocytes (T/B) act later and are adaptive."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Tissue-resident macrophages are important for neuroscience partly because…",
+      "options": [
+        "They conduct action potentials",
+        "Specialized macrophage-like cells reside in nervous tissue (e.g. microglia in the CNS) and near peripheral nerves and ganglia",
+        "They replace neurons",
+        "They only exist in blood"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The CNS has its own resident macrophage-like cells, microglia (B4), and macrophages also sit around peripheral ganglia like the DRG, a point the field increasingly emphasizes."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level."
+}

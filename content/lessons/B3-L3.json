@@ -1,0 +1,84 @@
+{
+  "id": "B3-L3",
+  "unitId": "B3",
+  "title": "Inflammation as a coordinated program",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain inflammation as a cytokine-coordinated program and how it reaches sensory neurons.",
+  "tags": [
+    "immunology",
+    "inflammation",
+    "cytokines",
+    "pain"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The classic signs, explained",
+      "body": "Inflammation's four classic signs, redness, heat, swelling and pain, come from a coordinated program:\n\n- vessels dilate and leak (redness, heat, swelling)\n- cells are recruited by chemokines\n- mediators sensitize nerve endings (pain)\n\nCytokines (B3-L1) orchestrate the timing and the cast."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "The inflammatory soup meets the nerve ending",
+      "body": "Damaged and immune cells release a mix, protons, ATP, bradykinin, prostaglandins, cytokines, often called the 'inflammatory soup.'\n\nMany of these act on receptors on sensory endings, lowering their threshold so they fire to weaker stimuli. That's **peripheral sensitization** (A9), the link between an immune event and a change in what you feel.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/inflammatory-soup.svg",
+        "alt": "A sensory nerve ending surrounded by inflammatory mediators (protons, ATP, prostaglandins, cytokines); its firing threshold drops and it fires more spikes to the same stimulus.",
+        "caption": "Mediators lower the ending's threshold, so a gentle stimulus now fires it."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each inflammatory feature to its cause.",
+      "pairs": [
+        [
+          "Redness and heat",
+          "Vessel dilation and increased blood flow"
+        ],
+        [
+          "Swelling",
+          "Leaky vessels let fluid into tissue"
+        ],
+        [
+          "Cell recruitment",
+          "Chemokines attract immune cells"
+        ],
+        [
+          "Pain and tenderness",
+          "Mediators sensitize sensory endings"
+        ]
+      ],
+      "explanation": "Each cardinal sign maps onto a specific cellular event, and the pain sign is literally neuroimmune."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Inflamed skin hurts when gently touched (normally painless). At the receptor level, what changed?",
+      "options": [
+        "Touch neurons were deleted",
+        "Inflammatory mediators lowered the firing threshold of sensory endings, so gentle stimuli now trigger firing",
+        "The skin grew new bones",
+        "The brain stopped working"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Lowered thresholds mean normally sub-threshold stimuli now fire the neuron, producing tenderness (allodynia). This is sensitization driven by immune mediators (A9)."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You think a specific cytokine drives the tenderness in an inflamed tissue.",
+      "prompt": "Sketch one experiment to test whether that cytokine is necessary.",
+      "freeText": true,
+      "reveal": "Options: block the cytokine or its receptor (neutralizing antibody, receptor antagonist, or genetic knockout) and test whether tenderness is reduced; conversely, apply the cytokine alone and see if it produces tenderness (sufficiency). Necessity + sufficiency together make the strongest case, the same logic as the sensory knockout/activation experiments in Track A."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium. Textbook-level; bridges to A9 and B7."
+}

@@ -1,0 +1,85 @@
+{
+  "id": "B1-L1",
+  "unitId": "B1",
+  "title": "Two arms of immunity",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Contrast innate and adaptive immunity by speed, specificity and memory.",
+  "tags": [
+    "immunology",
+    "innate",
+    "adaptive"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Fast and general vs slow and specific",
+      "body": "The immune system has two cooperating arms:\n\n- **[[innate immunity|Innate]]:** fast (minutes to hours), uses prebuilt general-purpose sensors, no lasting memory. First responders.\n- **[[adaptive immunity|Adaptive]]:** slow the first time (days), exquisitely specific, and remembers. T and B cells (B2).\n\nInnate buys time and then instructs the adaptive response."
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each feature to the right arm.",
+      "pairs": [
+        [
+          "Responds in minutes to hours",
+          "Innate"
+        ],
+        [
+          "Takes days on first exposure",
+          "Adaptive"
+        ],
+        [
+          "Remembers a specific pathogen",
+          "Adaptive"
+        ],
+        [
+          "Uses prebuilt general sensors",
+          "Innate"
+        ]
+      ],
+      "explanation": "Speed and generality vs specificity and memory is the core contrast; everything else in immunology hangs off it."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Why neuroscientists care",
+      "body": "Nervous and immune systems talk constantly. Sensory neurons can detect the same danger signals innate immune cells detect, and immune cells respond to neurotransmitters and neuropeptides.\n\nTrack B builds the immunology you need to read that crosstalk, which is central to the gut and to inflammation-driven changes in sensation (A9)."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A splinter gets infected within an hour, with redness and swelling before any antibody appears. Which arm is acting?",
+      "options": [
+        "Adaptive",
+        "Innate",
+        "Neither",
+        "Only the nervous system"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Fast, non-specific inflammation with no antibodies yet is the innate response. Antibodies (adaptive) take days on first exposure."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A mouse is engineered to lack all T and B cells but keeps innate immunity.",
+      "prompt": "What do you expect on first exposure to a common microbe?",
+      "options": [
+        "No response at all",
+        "An initial innate response (inflammation, phagocytes), but poor specific/long-term immunity",
+        "Perfect immunity",
+        "Only antibody production"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Innate defenses still work, so there's an early response, but without adaptive cells the animal can't mount specific, memory-based immunity. This is roughly the situation in some immunodeficient mouse strains."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level (Janeway's)."
+}

@@ -1,0 +1,89 @@
+{
+  "id": "A5-L1",
+  "unitId": "A5",
+  "title": "Fiber classes: Aβ, Aδ, C",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Classify sensory fibers by diameter, myelination and conduction speed, and link each class to a sensation.",
+  "tags": [
+    "drg",
+    "fibers",
+    "conduction"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Three main cables",
+      "body": "Sensory axons sort into three classes by size and [[myelination|myelin]]:\n\n- **Aβ:** large, myelinated, fast. Mostly gentle touch and vibration.\n- **Aδ:** thin, lightly myelinated, medium speed. Sharp 'first' pain and cool.\n- **C:** unmyelinated, slow. Burning 'second' pain, warmth, itch, and most visceral sensation.\n\nBigger and myelinated means faster (A2-L4).",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/fiber-classes.svg",
+        "alt": "Three sensory axons stacked: a thick heavily myelinated Aβ fiber, a thin lightly myelinated Aδ fiber, and an unmyelinated C fiber. The same signal reaches the far end first on Aβ, then Aδ, and last on C.",
+        "caption": "Same stimulus, three speeds: Aβ fastest, C slowest."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each fiber class to a typical role.",
+      "pairs": [
+        [
+          "Aβ",
+          "Light touch and vibration"
+        ],
+        [
+          "Aδ",
+          "Sharp, fast 'first' pain"
+        ],
+        [
+          "C",
+          "Slow, burning 'second' pain and most visceral signals"
+        ]
+      ],
+      "explanation": "Stub your toe and you feel the sharp Aδ pain first, then the slower C-fiber ache, a direct readout of conduction speed."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why do most visceral (gut, pancreas) sensations travel in slow C fibers?",
+      "options": [
+        "The viscera have only C fibers by rule",
+        "Visceral afferents are largely thin, unmyelinated C fibers, which also fits why visceral sensation is slow and poorly localized",
+        "C fibers are the fastest",
+        "The brain ignores Aβ input"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Visceral innervation is dominated by thin fibers. That matches the vague, slow quality of gut sensation (A1-L3)."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You record conduction velocity to classify an afferent, and get a fast, myelinated response.",
+      "prompt": "Before calling it 'touch,' what else should you check?",
+      "options": [
+        "Nothing, speed is enough",
+        "What stimuli actually drive it, since some fast fibers are high-threshold; speed and modality are separate axes",
+        "Its color",
+        "The room temperature only"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Conduction class and what a neuron responds to are related but not identical. The colon paper measured both speed and force threshold for each subtype, rather than assuming one from the other."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Abraira VE & Ginty DD, 2013, Neuron",
+      "doi": "10.1016/j.neuron.2013.07.051",
+      "url": "https://doi.org/10.1016/j.neuron.2013.07.051",
+      "verified": true,
+      "note": "Review of LTMR subtypes, their endings and properties."
+    }
+  ],
+  "reviewNotes": "One V review source."
+}

@@ -1,0 +1,117 @@
+{
+  "id": "A3-L3",
+  "unitId": "A3",
+  "title": "TRPM8 and TRPA1: cold and irritants",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish TRPM8 and TRPA1 and describe the evidence for their roles.",
+  "tags": [
+    "trp",
+    "trpm8",
+    "trpa1",
+    "cold",
+    "irritants"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "TRPM8: menthol and cool",
+      "body": "**[[TRPM8]]** was identified (2002) as a channel opened by **cooling** and **menthol**. That's why mint feels cool.\n\nMice lacking TRPM8 (2007) had strongly reduced responses to cool temperatures, making it the principal detector of environmental cold."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "TRPA1: the irritant detector",
+      "body": "**[[TRPA1]]** is opened by **mustard oil** (the pungent compound in wasabi and horseradish), shown in 2004. It also responds to many reactive irritants and inflammatory byproducts that chemically modify the channel.\n\nThink of TRPA1 as a broad chemical-danger sensor, often found alongside [[TRPV1]] in [[nociceptor|nociceptors]].",
+      "flag": {
+        "level": "debated",
+        "note": "Whether TRPA1 is a physiological noxious-cold sensor has been argued for years; its role in irritant and inflammatory pain is better established."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match the compound to the channel it opens.",
+      "pairs": [
+        [
+          "Capsaicin",
+          "TRPV1"
+        ],
+        [
+          "Menthol",
+          "TRPM8"
+        ],
+        [
+          "Mustard oil",
+          "TRPA1"
+        ],
+        [
+          "Noxious heat",
+          "TRPV1 (among others)"
+        ]
+      ],
+      "explanation": "Plant compounds made these channels easy to find: each one became a molecular key for its lock."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You apply mustard oil to the skin of a TRPA1-knockout mouse.",
+      "prompt": "What do you expect?",
+      "options": [
+        "Normal pain behavior",
+        "Little or no response to mustard oil",
+        "A cooling sensation",
+        "Increased touch sensitivity"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "If TRPA1 is the mustard-oil receptor, removing it should abolish the response. This is the standard logic for testing whether a channel is *necessary*."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Many gut-innervating nociceptors express TRPV1 and TRPA1. What does that suggest they detect?",
+      "options": [
+        "Only light stretch",
+        "Chemical and inflammatory danger signals, such as acidity and reactive irritants",
+        "Only cold",
+        "Only nutrients"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "TRP expression hints at what an afferent is tuned for. In the gut that means acid, irritants and inflammatory mediators, which is why these channels recur in colitis and visceral pain models (A9).",
+      "flag": {
+        "level": "simplified",
+        "note": "Expression patterns differ across visceral afferent subtypes and organs."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "McKemy DD et al., 2002, Nature",
+      "doi": "10.1038/nature719",
+      "url": "https://doi.org/10.1038/nature719",
+      "verified": true,
+      "note": "Identification of TRPM8 as a cold/menthol receptor."
+    },
+    {
+      "citation": "Bautista DM et al., 2007, Nature",
+      "doi": "10.1038/nature05910",
+      "url": "https://doi.org/10.1038/nature05910",
+      "verified": true,
+      "note": "TRPM8 is the principal detector of environmental cold."
+    },
+    {
+      "citation": "Jordt SE et al., 2004, Nature",
+      "doi": "10.1038/nature02282",
+      "url": "https://doi.org/10.1038/nature02282",
+      "verified": true,
+      "note": "Mustard oil excites sensory fibers through TRPA1 (ANKTM1)."
+    }
+  ],
+  "reviewNotes": "Confidence medium: TRPA1 cold role flagged debated. Three V sources."
+}

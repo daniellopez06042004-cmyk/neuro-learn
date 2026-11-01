@@ -1,0 +1,122 @@
+{
+  "id": "B1-L2",
+  "unitId": "B1",
+  "title": "Pattern recognition: TLRs",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how pattern-recognition receptors detect conserved microbial molecules, using TLR4 as the example.",
+  "tags": [
+    "immunology",
+    "innate",
+    "tlr",
+    "pamp"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sensing 'non-self' patterns",
+      "body": "Innate cells can't know every pathogen, so they recognize **conserved molecular patterns** shared by whole classes of microbes, called [[PAMP|PAMPs]] (pathogen-associated molecular patterns).\n\nThe sensors are **[[pattern recognition receptor|pattern-recognition receptors (PRRs)]]**. The most famous family is the **[[Toll-like receptor|Toll-like receptors (TLRs)]]**."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "From flies to mammals",
+      "body": "The Toll gene was first found controlling development and then antifungal defense in *Drosophila* (1996). Mammals turned out to have a whole family of Toll-*like* receptors.\n\nA landmark result (1998): mouse strains that couldn't respond to bacterial **LPS** (a molecule in Gram-negative bacterial walls) carried mutations in **[[TLR4]]**. That pinned TLR4 as the LPS sensor."
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each sensor to what it detects.",
+      "pairs": [
+        [
+          "TLR4",
+          "LPS (Gram-negative bacterial wall)"
+        ],
+        [
+          "PRRs in general",
+          "Conserved microbial patterns (PAMPs)"
+        ],
+        [
+          "Innate cells",
+          "Rapid, general danger response"
+        ]
+      ],
+      "explanation": "PRRs read molecular 'barcodes' of microbial classes, which is how a prebuilt system covers pathogens it has never seen."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "Two mouse strains are injected with LPS. You measure an inflammatory cytokine response.",
+      "data": {
+        "kind": "table",
+        "rows": [
+          [
+            "Strain",
+            "Tlr4 gene",
+            "Response to LPS"
+          ],
+          [
+            "A",
+            "Normal",
+            "Strong"
+          ],
+          [
+            "B",
+            "Mutated",
+            "Absent"
+          ]
+        ]
+      },
+      "prompt": "What does strain B show?",
+      "options": [
+        "LPS is harmless",
+        "TLR4 is required to sense LPS and trigger the response",
+        "Cytokines don't exist",
+        "Strain B has no immune cells"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Losing the response when the gene is mutated is loss-of-function evidence that TLR4 is the LPS sensor, the same necessity logic used throughout the sensory lessons.",
+      "followUp": "This is a direct parallel to knockout logic in A3/A4: break the candidate, lose the response."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Why is TLR4 relevant to neuroscience?",
+      "options": [
+        "It isn't",
+        "TLRs are also expressed by glia and some neurons, so the nervous system can directly sense microbial and danger signals",
+        "It only works in plants",
+        "It blocks action potentials"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "PRR signaling in glia and neurons is one route by which infection and tissue damage change neural activity, a recurring theme in neuroimmunology (B4–B7).",
+      "flag": {
+        "level": "simplified",
+        "note": "Which neural cells express which TLRs, and to what effect, is an active and nuanced area."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Lemaitre B et al., 1996, Cell",
+      "doi": "10.1016/S0092-8674(00)80172-5",
+      "url": "https://doi.org/10.1016/S0092-8674(00)80172-5",
+      "verified": true,
+      "note": "Toll controls the antifungal response in Drosophila."
+    },
+    {
+      "citation": "Poltorak A et al., 1998, Science",
+      "doi": "10.1126/science.282.5396.2085",
+      "url": "https://doi.org/10.1126/science.282.5396.2085",
+      "verified": true,
+      "note": "LPS-unresponsive mouse strains carry Tlr4 mutations: TLR4 senses LPS."
+    }
+  ],
+  "reviewNotes": "Two V sources."
+}

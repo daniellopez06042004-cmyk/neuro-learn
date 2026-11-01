@@ -1,0 +1,77 @@
+{
+  "id": "A3-L1",
+  "unitId": "A3",
+  "title": "Meet the TRP family",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe what TRP channels are and why they make good sensory detectors.",
+  "tags": [
+    "trp",
+    "ion-channels",
+    "transduction"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A family named after a fly mutant",
+      "body": "**TRP** stands for *transient receptor potential*, after a fruit-fly mutant whose light response faded too quickly. Mammals have roughly 28 TRP channels in several subfamilies (TRPV, TRPM, TRPA and others).\n\nEach channel is built from **four subunits** around a central pore, and most are non-selective cation channels, so opening them depolarizes the cell (A2)."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Built to be polymodal",
+      "body": "Many sensory TRPs respond to several kinds of input:\n\n- **temperature** (hot or cold)\n- **chemicals**, including natural compounds from plants\n- **signals from inflammation**\n\nThat makes them ideal detectors at nerve endings, and ideal targets for anything that changes how sensitive those endings are.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/trp-gating.svg",
+        "alt": "A TRP channel in the membrane. Heat and capsaicin act on it, the pore opens, and sodium and calcium ions flow from outside into the cell.",
+        "caption": "One channel, several triggers: opening it lets cations in and depolarizes the cell."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why does opening a TRP channel excite a sensory neuron at rest?",
+      "options": [
+        "It lets K⁺ out",
+        "It's a non-selective cation channel, so the net current at −65 mV is inward and depolarizing",
+        "It lets Cl⁻ in",
+        "It closes Na⁺ channels"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Non-selective cation current reverses near 0 mV. At rest there's a strong inward driving force, so the ending depolarizes toward threshold (A2-L2)."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "A Nobel-winning story",
+      "body": "In 2021 David Julius and Ardem Patapoutian shared the Nobel Prize in Physiology or Medicine for discovering receptors for temperature and touch: TRP channels for heat and cold, and the [[Piezo2|Piezo]] channels for force (A4).\n\nThe next lessons cover the three TRPs you'll hear about most: **[[TRPV1]]**, **[[TRPM8]]** and **[[TRPA1]]**."
+    },
+    {
+      "type": "match",
+      "id": "s5",
+      "prompt": "Match each TRP to its best-known trigger.",
+      "pairs": [
+        [
+          "TRPV1",
+          "Chili (capsaicin) and painful heat"
+        ],
+        [
+          "TRPM8",
+          "Menthol and cooling"
+        ],
+        [
+          "TRPA1",
+          "Mustard oil and wasabi"
+        ]
+      ],
+      "explanation": "Plants evolved compounds that act on these channels, which is why spicy, minty and pungent foods produce sensations of heat, cold and irritation."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level overview; discoveries cited in A3-L2/L3."
+}

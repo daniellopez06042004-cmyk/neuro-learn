@@ -1,0 +1,91 @@
+{
+  "id": "B2-L1",
+  "unitId": "B2",
+  "title": "T cells and B cells",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Distinguish T and B cell roles and explain clonal selection and memory.",
+  "tags": [
+    "immunology",
+    "adaptive",
+    "lymphocytes"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two lymphocyte lineages",
+      "body": "Adaptive immunity runs on **[[lymphocyte|lymphocytes]]**:\n\n- **[[B cell|B cells]]** make **[[antibody|antibodies]]**: secreted proteins that bind a specific target.\n- **[[T cell|T cells]]** come in types: **helper T cells** coordinate other cells; **cytotoxic T cells** kill infected cells.\n\nEach lymphocyte carries one receptor with one specificity."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Clonal selection and memory",
+      "body": "You carry a huge repertoire of lymphocytes, each with a different receptor, made by shuffling gene segments. When one happens to match an invader, it is selected and **multiplies** (clonal expansion).\n\nSome offspring become **[[memory cell|memory cells]]** that persist, which is why the second exposure is faster and stronger, and how vaccines work.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/clonal-selection.svg",
+        "alt": "A row of lymphocytes with differently shaped receptors; an antigen matches one, which is selected and multiplies into many effector clones plus a long-lived memory cell.",
+        "caption": "The matching cell is selected and expands into clones plus memory."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each cell to its job.",
+      "pairs": [
+        [
+          "B cell",
+          "Makes antibodies"
+        ],
+        [
+          "Helper T cell",
+          "Coordinates the immune response"
+        ],
+        [
+          "Cytotoxic T cell",
+          "Kills infected cells"
+        ],
+        [
+          "Memory cell",
+          "Faster response on re-exposure"
+        ]
+      ],
+      "explanation": "Specificity plus memory is what the adaptive arm adds on top of innate defenses (B1)."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why is the adaptive response slow the first time but fast the second?",
+      "options": [
+        "The body forgets between exposures",
+        "First time, rare matching lymphocytes must be found and expanded; afterward, memory cells are already present and abundant",
+        "Antibodies decay instantly",
+        "The innate system blocks it"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Finding and expanding the right clone takes days. Pre-existing memory cells skip most of that on re-exposure, the basis of immunological memory and vaccination."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A mouse is exposed to a new antigen, then re-exposed weeks later.",
+      "prompt": "How does the antibody response to the second exposure compare to the first?",
+      "options": [
+        "Weaker and slower",
+        "Faster and stronger",
+        "Identical",
+        "Absent"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Memory B cells make the recall response faster and larger. That difference is the signature of adaptive memory."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level (Janeway's)."
+}

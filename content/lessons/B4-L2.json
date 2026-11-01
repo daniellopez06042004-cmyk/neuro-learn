@@ -1,0 +1,88 @@
+{
+  "id": "B4-L2",
+  "unitId": "B4",
+  "title": "Surveillance and activation",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how resting microglia survey tissue and what 'activation' means.",
+  "tags": [
+    "microglia",
+    "surveillance",
+    "activation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "'Resting' is a misnomer",
+      "body": "Two-photon imaging in living brain (2005) showed that so-called resting microglia are anything but: they constantly extend and retract fine processes, sampling their surroundings.\n\nA better word is **surveilling**. Each microglion patrols its own territory, checking for trouble."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Activation changes shape and behavior",
+      "body": "When microglia detect damage or danger signals (via PRRs like TLRs, B1-L2), they **activate**: they retract their fine processes, take on a more amoeboid shape, move toward the problem, and release cytokines.\n\nActivation isn't a single switch, though; microglia adopt many states depending on the signal.",
+      "flag": {
+        "level": "debated",
+        "note": "The old 'M1/M2' two-state model of microglial activation is now considered too simple; microglia show a spectrum of states."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What did live two-photon imaging reveal about 'resting' microglia?",
+      "options": [
+        "They never move",
+        "Their processes are constantly moving and sampling the tissue",
+        "They are neurons in disguise",
+        "They only exist after injury"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Constant process motility redefined resting microglia as active surveillants, a landmark use of in vivo imaging (a technique revisited in C9/C11)."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You injure a tiny spot in the cortex and watch nearby microglia live.",
+      "prompt": "What do you expect their processes to do?",
+      "options": [
+        "Retract away from the injury",
+        "Rapidly extend toward the injury site",
+        "Freeze in place",
+        "Turn into neurons"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Microglial processes rapidly converge on a local injury, walling it off and responding, one of the first behaviors seen with in vivo imaging."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Why has the 'M1 vs M2' label for microglia fallen out of favor?",
+      "options": [
+        "Microglia don't activate at all",
+        "Real microglia show a spectrum of states rather than two discrete ones",
+        "There are exactly three states",
+        "The terms were never used"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Transcriptomic work shows many context-dependent states, so a clean two-category model oversimplifies, a caution worth carrying into any 'activated vs resting' claim."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Nimmerjahn A et al., 2005, Science",
+      "doi": "10.1126/science.1110647",
+      "url": "https://doi.org/10.1126/science.1110647",
+      "verified": true,
+      "note": "In vivo imaging: 'resting' microglia constantly survey the brain."
+    }
+  ],
+  "reviewNotes": "Confidence high overall; M1/M2 caveat flagged debated. One V source."
+}

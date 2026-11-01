@@ -1,0 +1,87 @@
+{
+  "id": "A2-L1",
+  "unitId": "A2",
+  "title": "Resting potential and driving force",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Use equilibrium potentials and driving force to predict which way ions move across a neuron's membrane.",
+  "tags": [
+    "biophysics",
+    "membrane-potential"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The battery at rest",
+      "body": "A neuron at rest sits around **−60 to −70 mV** inside relative to outside. This **[[resting membrane potential]]** exists because:\n\n- pumps keep K⁺ high inside and Na⁺ high outside, and\n- at rest the membrane is mostly permeable to K⁺, which leaks out and leaves the inside negative."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Each ion has a target voltage",
+      "body": "An ion's **[[equilibrium potential]]** is the voltage at which its chemical push and electrical pull balance out. Approximate values:\n\n- **E_K ≈ −90 mV**\n- **E_Na ≈ +60 mV**\n\nThe **[[driving force]]** on an ion is the distance between where the membrane *is* and where that ion *wants* it to be: **Vm − E_ion**. The bigger the gap, the harder ions flow when channels open.",
+      "flag": {
+        "level": "simplified",
+        "note": "Exact values depend on the ion concentrations in a given cell and preparation."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A neuron sits at −65 mV. A Na⁺ channel opens. What happens?",
+      "options": [
+        "Na⁺ flows out and the cell hyperpolarizes",
+        "Na⁺ flows in and the cell depolarizes toward +60 mV",
+        "Nothing, because Na⁺ is at equilibrium",
+        "K⁺ flows in"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The membrane is far from E_Na (+60 mV), so there's a large inward driving force. Na⁺ rushes in and pulls the voltage toward E_Na."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Same neuron at −65 mV. A K⁺ channel opens. What happens?",
+      "options": [
+        "Large depolarization",
+        "Small outward K⁺ current that nudges the cell toward −90 mV (hyperpolarization)",
+        "K⁺ flows in",
+        "The cell fires"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Vm is fairly close to E_K, so the driving force is modest and outward. Opening K⁺ channels stabilizes or hyperpolarizes the cell. That's how many inhibitory signals, and hM4Di (via GIRK channels), quiet neurons."
+    },
+    {
+      "type": "match",
+      "id": "s5",
+      "prompt": "Match each condition to the result.",
+      "pairs": [
+        [
+          "Open Na⁺ channels at rest",
+          "Depolarization"
+        ],
+        [
+          "Open K⁺ channels at rest",
+          "Hyperpolarization"
+        ],
+        [
+          "Vm equals E_ion",
+          "No net flow of that ion"
+        ],
+        [
+          "Larger Vm − E_ion gap",
+          "Larger current when channels open"
+        ]
+      ],
+      "explanation": "Direction comes from the sign of Vm − E_ion; size comes from how big that gap is and how many channels are open."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. hM4Di–GIRK link connects to C5."
+}

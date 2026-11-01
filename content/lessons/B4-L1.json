@@ -1,0 +1,89 @@
+{
+  "id": "B4-L1",
+  "unitId": "B4",
+  "title": "The brain's resident immune cells",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe microglia, their unusual origin, and why the CNS has its own immune cells.",
+  "tags": [
+    "microglia",
+    "cns",
+    "innate",
+    "glia"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Immune cells that live in the brain",
+      "body": "The CNS sits behind the blood-brain barrier, so it keeps its own resident immune cells: **[[microglia]]**. They are the brain's main innate immune cell, a specialized macrophage-like population (B1-L3).\n\nThey monitor the tissue, respond to damage and infection, and shape circuits in development."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "An unusual origin",
+      "body": "Most immune cells come from bone marrow in adulthood. Microglia are different: fate-mapping (2010) showed they arise from **primitive (yolk-sac) macrophages** early in development and then largely **self-renew** in place.\n\nSo microglia are a long-lived, brain-resident lineage, not constantly replaced from the blood.",
+      "flag": {
+        "level": "simplified",
+        "note": "Under some injury/disease conditions, blood-derived cells can also enter the CNS; the resident population is yolk-sac-derived."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why does the CNS need its own resident immune cells rather than relying on blood-borne ones?",
+      "options": [
+        "Blood cells are too small",
+        "The blood-brain barrier limits immune-cell entry, so a resident surveillance system is needed",
+        "Neurons are immune cells",
+        "The brain has no immune needs"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The barrier that protects the CNS also limits routine immune access, so a built-in resident population (microglia) handles surveillance and first response."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Microglia are often described as the CNS counterpart of which peripheral cell?",
+      "options": [
+        "Neutrophils",
+        "Macrophages",
+        "B cells",
+        "Red blood cells"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Microglia are macrophage-like: resident, phagocytic, innate. The parallel helps you transfer macrophage logic (B1-L3) into the brain."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A researcher labels blood cells and finds that, in a healthy adult brain, almost none of the microglia carry the label.",
+      "prompt": "What does that suggest about microglial maintenance?",
+      "options": [
+        "Microglia come fresh from blood daily",
+        "Microglia are largely self-renewing residents, not continuously replaced from blood",
+        "Microglia are neurons",
+        "The label failed"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Little blood-cell contribution in the healthy adult fits a self-renewing resident population, consistent with the yolk-sac origin story."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Ginhoux F et al., 2010, Science",
+      "doi": "10.1126/science.1194637",
+      "url": "https://doi.org/10.1126/science.1194637",
+      "verified": true,
+      "note": "Fate mapping: adult microglia derive from primitive (yolk-sac) macrophages."
+    }
+  ],
+  "reviewNotes": "One V source."
+}

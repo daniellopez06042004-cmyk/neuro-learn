@@ -1,0 +1,85 @@
+{
+  "id": "B3-L2",
+  "unitId": "B3",
+  "title": "Signaling into the cell",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Describe how a cytokine binding its receptor changes gene expression, using the JAK-STAT idea.",
+  "tags": [
+    "immunology",
+    "cytokines",
+    "signaling",
+    "jak-stat"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "From surface to nucleus",
+      "body": "A cytokine can't enter the cell, so the message is relayed:\n\n1. Cytokine binds its **receptor** on the surface.\n2. The receptor's inside changes shape and activates signaling proteins.\n3. A signal reaches the nucleus and switches **genes** on or off.\n\nMany cytokines use the **[[JAK-STAT]]** pathway: receptor-associated JAK enzymes tag STAT proteins, which travel to the nucleus and turn on genes.",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/jak-stat.svg",
+        "alt": "A cytokine binds its surface receptor; the receptor-associated JAK enzymes become active and tag STAT proteins, which travel into the nucleus and switch on a target gene.",
+        "caption": "Cytokine → receptor → JAK → STAT → gene on."
+      }
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order a JAK-STAT signal.",
+      "items": [
+        "Cytokine binds its receptor",
+        "Receptor-associated JAKs become active",
+        "JAKs modify STAT proteins",
+        "STATs move to the nucleus",
+        "Target genes switch on"
+      ],
+      "explanation": "Surface binding → enzyme activation → STAT modification → nuclear entry → gene changes. Many immune drugs ('JAK inhibitors') block an early step of exactly this chain."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why does a cytokine signal typically change which genes a cell expresses?",
+      "options": [
+        "Because it edits DNA directly",
+        "Because the pathway ends by activating transcription factors (like STATs) that turn genes on or off",
+        "Because it kills the nucleus",
+        "It doesn't; cytokines act only electrically"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The endpoint of these pathways is transcription-factor activity. That's how a brief surface signal produces a lasting change in what a cell makes."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why this matters for neurons",
+      "body": "Neurons and glia also carry cytokine receptors. Cytokines like IL-1β, IL-6 and TNF can change neuronal excitability and gene expression.\n\nThat is one molecular route by which inflammation alters sensation, part of the basis for inflammatory and visceral hypersensitivity (A9, B7).",
+      "flag": {
+        "level": "simplified",
+        "note": "Specific cytokine effects on specific neurons vary; this is the general principle."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A drug blocks JAK enzymes.",
+      "prompt": "What happens to signaling by cytokines that use JAK-STAT?",
+      "options": [
+        "Unchanged",
+        "Blunted: STATs aren't activated, so the downstream gene program doesn't turn on",
+        "Amplified",
+        "Converted to an electrical signal"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Block an early relay and the whole chain stalls. JAK inhibitors are used clinically in inflammatory disease for exactly this reason."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium: simplifications flagged. Textbook-level."
+}

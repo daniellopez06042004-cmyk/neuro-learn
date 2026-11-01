@@ -1,0 +1,89 @@
+{
+  "id": "A5-L3",
+  "unitId": "A5",
+  "title": "Peptidergic vs non-peptidergic, and markers",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Describe classic molecular divisions of DRG neurons and the markers used to label them.",
+  "tags": [
+    "drg",
+    "markers",
+    "nociceptor",
+    "molecular"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "An older two-bin split",
+      "body": "Before sequencing, nociceptors were split into two groups:\n\n- **Peptidergic:** release neuropeptides like **CGRP** and **substance P**; many express [[TRPV1]]. Important for neurogenic inflammation (B6).\n- **Non-peptidergic:** bind the marker IB4; often depend on the factor GDNF.\n\nUseful, but a coarse picture."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Markers you'll see on slides",
+      "body": "Common DRG markers and roughly what they tag:\n\n- **CGRP (Calca):** peptidergic nociceptors\n- **TRPV1:** heat/chemical nociceptors\n- **NF200:** large myelinated (often Aβ/Aδ) neurons\n- **TH, TrkB, Bmpr1b, Sstr2:** among the subtypes the colon paper used for the gut\n\nMarkers are how you *recognize* a subtype in tissue ([[RNAscope]], antibodies; C7–C8).",
+      "flag": {
+        "level": "simplified",
+        "note": "Marker-to-function mapping is approximate; many markers overlap across subtypes."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each marker to what it broadly labels.",
+      "pairs": [
+        [
+          "CGRP",
+          "Peptidergic nociceptors"
+        ],
+        [
+          "TRPV1",
+          "Heat/chemical nociceptors"
+        ],
+        [
+          "NF200",
+          "Large myelinated neurons"
+        ],
+        [
+          "TH / TrkB / Bmpr1b",
+          "Gut-innervating DRG subtypes (colon paper)"
+        ]
+      ],
+      "explanation": "Knowing the marker vocabulary lets you read a methods section and know which neurons a study actually targeted."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A figure shows a neuron positive for both CGRP and TRPV1. What's the reasonable read?",
+      "options": [
+        "It's not a neuron",
+        "It's likely a peptidergic nociceptor",
+        "It must be an Aβ touch neuron",
+        "It senses only cold"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "CGRP plus TRPV1 is the classic peptidergic-nociceptor combination. Co-staining is how subtypes are identified in tissue."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Abraira VE & Ginty DD, 2013, Neuron",
+      "doi": "10.1016/j.neuron.2013.07.051",
+      "url": "https://doi.org/10.1016/j.neuron.2013.07.051",
+      "verified": true,
+      "note": "Review of LTMR subtypes, their endings and properties."
+    },
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Five genetically defined DRG subtypes innervate the distal colon with distinct endings and force thresholds."
+    }
+  ],
+  "reviewNotes": "Confidence medium: marker mapping simplified. Two V sources."
+}

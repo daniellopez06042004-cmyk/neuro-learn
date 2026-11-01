@@ -1,0 +1,86 @@
+{
+  "id": "B2-L3",
+  "unitId": "B2",
+  "title": "Antibodies and effector actions",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe what antibodies are and the main ways they neutralize or mark targets.",
+  "tags": [
+    "immunology",
+    "adaptive",
+    "antibody",
+    "effector"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "One molecule, two ends",
+      "body": "An **[[antibody]]** (immunoglobulin) is Y-shaped. The tips vary enormously and bind one specific target ([[antigen]]); the stem is constant and tells other immune components what to do.\n\nThis is the same molecule you exploit at the bench: antibodies are the core reagent of immunostaining (C7)."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Three jobs",
+      "body": "Antibodies act in three main ways:\n\n- **Neutralization:** coat a toxin or virus so it can't work.\n- **Opsonization:** tag a microbe so phagocytes engulf it more readily.\n- **Complement activation:** trigger a protein cascade that marks or punches holes in microbes.\n\nThe variable tips choose the target; the constant stem selects which of these happens."
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each antibody action to its effect.",
+      "pairs": [
+        [
+          "Neutralization",
+          "Blocks a toxin or virus from acting"
+        ],
+        [
+          "Opsonization",
+          "Marks a microbe for phagocytes"
+        ],
+        [
+          "Complement activation",
+          "Protein cascade that marks/lyses microbes"
+        ],
+        [
+          "Variable region",
+          "Binds the specific antigen"
+        ]
+      ],
+      "explanation": "Specificity (variable tips) plus a menu of effector actions (constant stem) is what makes antibodies so versatile, at the bench and in the body."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "In immunofluorescence (C7), you use a primary antibody against your protein and a labeled secondary antibody against the primary. Which antibody property makes this work?",
+      "options": [
+        "Antibodies glow naturally",
+        "An antibody binds a specific target (primary→your protein; secondary→the primary's constant region)",
+        "Antibodies are enzymes",
+        "Antibodies cut DNA"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Specific binding is the whole basis of staining: the primary finds your protein, the secondary finds the primary and carries the label. Antibody biology is bench biology."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "You want to confirm a microbe is being tagged for phagocytosis, not just neutralized.",
+      "prompt": "Which action are you testing for?",
+      "options": [
+        "Neutralization",
+        "Opsonization",
+        "Nothing measurable",
+        "Memory"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Opsonization is specifically the 'tag for eating' function. Distinguishing it from neutralization means asking whether phagocytes engulf the tagged target more readily."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level. Ties antibody biology to C7 immunostaining."
+}

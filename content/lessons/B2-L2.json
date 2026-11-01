@@ -1,0 +1,95 @@
+{
+  "id": "B2-L2",
+  "unitId": "B2",
+  "title": "Antigen presentation and MHC",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how MHC molecules present antigen so T cells can recognize infection.",
+  "tags": [
+    "immunology",
+    "adaptive",
+    "mhc",
+    "antigen"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "T cells read fragments, not whole microbes",
+      "body": "A T cell can't see a whole pathogen. It sees short peptide fragments held up by **[[MHC]]** (major histocompatibility complex) molecules on cell surfaces.\n\n- **MHC class I** is on almost all cells and shows samples of what's *inside* (so cytotoxic T cells can spot infected cells).\n- **MHC class II** is on professional [[antigen-presenting cell|antigen-presenting cells]] and shows what they've *engulfed* (to helper T cells).",
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/antigen-presentation.svg",
+        "alt": "Top: an infected cell shows an internal peptide on MHC class I to a cytotoxic T cell. Bottom: a dendritic cell shows an engulfed fragment on MHC class II to a helper T cell. The T-cell receptor reads the peptide held in each MHC groove.",
+        "caption": "MHC I shows internal peptides; MHC II shows engulfed ones."
+      }
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each to its role.",
+      "pairs": [
+        [
+          "MHC class I",
+          "Displays internal peptides to cytotoxic T cells"
+        ],
+        [
+          "MHC class II",
+          "Displays engulfed peptides to helper T cells"
+        ],
+        [
+          "Dendritic cell",
+          "Professional antigen-presenting cell"
+        ],
+        [
+          "T-cell receptor",
+          "Reads peptide + MHC"
+        ]
+      ],
+      "explanation": "Presentation is how the adaptive system inspects cells from the inside out, and how innate cells (which do the engulfing and presenting) hand off to adaptive ones."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "The bridge from innate to adaptive",
+      "body": "A [[dendritic cell]] engulfs microbes in a tissue, travels to a lymph node, and presents the fragments on MHC class II to helper T cells. That handoff is what *starts* most adaptive responses.\n\nSo innate sensing (B1) and adaptive specificity (B2) are physically linked by antigen presentation."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A virus infects a skin cell. How can the immune system tell that cell is infected?",
+      "options": [
+        "It can't",
+        "The infected cell displays viral peptides on MHC class I, which cytotoxic T cells recognize",
+        "Antibodies enter the cell",
+        "Neutrophils read its DNA"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "MHC class I shows internal (including viral) peptides, letting cytotoxic T cells detect and kill infected cells, surveillance from the inside."
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Why does the term 'MHC' also come up in transplant rejection?",
+      "options": [
+        "It doesn't",
+        "MHC molecules differ between individuals, so T cells can recognize foreign MHC on transplanted tissue",
+        "MHC is a drug",
+        "MHC only matters in mice"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The 'histocompatibility' in the name is literal: MHC differences drive transplant rejection, which is how these molecules were first discovered.",
+      "flag": {
+        "level": "simplified",
+        "note": "Transplant immunology is more complex; this is the core reason MHC matters there."
+      }
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium: simplifications flagged. Textbook-level."
+}

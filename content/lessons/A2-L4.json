@@ -1,0 +1,102 @@
+{
+  "id": "A2-L4",
+  "unitId": "A2",
+  "title": "Channel kinetics shape firing",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Predict how channel inactivation and potassium currents shape a neuron's firing pattern.",
+  "tags": [
+    "biophysics",
+    "adaptation",
+    "kinetics"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Why some neurons adapt fast",
+      "body": "A1 introduced RA and SA neurons. Part of the difference is the transduction channel itself. A channel that **inactivates quickly** under sustained force passes current only briefly, so the neuron reports change and then falls silent.\n\nPiezo2 currents inactivate rapidly, which fits its role in many rapidly adapting touch neurons (A4).",
+      "flag": {
+        "level": "simplified",
+        "note": "Adaptation also depends on ending structure (e.g. capsules around endings) and on K⁺ and Nav channels."
+      }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "K⁺ channels set the rhythm",
+      "body": "Several K⁺ currents shape firing. Some activate slowly during a burst and progressively slow it (spike-frequency adaptation). Others set how quickly the neuron recovers between spikes.\n\nChange the K⁺ channel mix and the same stimulus gives a different spike pattern."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "Two DRG neurons get the same 1-second current step in a patch-clamp recording.",
+      "data": {
+        "kind": "table",
+        "rows": [
+          [
+            "Neuron",
+            "Spikes in 1 s",
+            "Pattern"
+          ],
+          [
+            "A",
+            "1",
+            "One spike at step onset"
+          ],
+          [
+            "B",
+            "18",
+            "Sustained, slowly slowing"
+          ]
+        ]
+      },
+      "prompt": "Which explanation best fits neuron A?",
+      "options": [
+        "It's dead",
+        "It has strong, fast-acting K⁺ currents and/or rapid Nav inactivation, making it fire once at onset",
+        "It has no Na⁺ channels",
+        "The step was too small"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Single-spike ('phasic') firing to a sustained step usually reflects intrinsic properties such as strong K⁺ currents or rapid Nav inactivation. Neuron B's slowing train is classic spike-frequency adaptation.",
+      "followUp": "Firing pattern under current injection is one of the fingerprints used to classify DRG neuron types in culture (C11)."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Myelin speeds conduction mainly because it…",
+      "options": [
+        "Adds more sodium channels along the whole axon",
+        "Insulates the axon so spikes jump between gaps (nodes), skipping most of the membrane",
+        "Makes axons thinner",
+        "Prevents inactivation"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Saltatory conduction: myelin reduces leak and capacitance, so the signal hops from node to node. This is why myelinated Aβ fibers conduct far faster than unmyelinated C fibers (A5)."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A toxin slows Piezo2 inactivation, so its current lasts as long as the force does.",
+      "prompt": "What would you expect from a normally rapidly adapting touch neuron?",
+      "options": [
+        "It stops responding entirely",
+        "It fires for longer during sustained force, behaving more like a slowly adapting neuron",
+        "It becomes heat sensitive",
+        "Nothing changes"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "If the transduction current persists, the receptor potential persists, and so does firing. Channel kinetics translate directly into coding."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence medium: adaptation mechanisms simplified (flagged). Textbook-level."
+}

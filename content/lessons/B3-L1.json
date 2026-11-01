@@ -1,0 +1,89 @@
+{
+  "id": "B3-L1",
+  "unitId": "B3",
+  "title": "What cytokines are",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Define cytokines and explain how they coordinate immune responses over short distances.",
+  "tags": [
+    "immunology",
+    "cytokines",
+    "signaling"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The immune system's text messages",
+      "body": "**[[cytokine|Cytokines]]** are small signaling proteins that immune (and other) cells release to talk to one another. A cell secretes a cytokine; nearby cells with the matching receptor respond.\n\nThey usually act **locally** and **briefly**, over short distances, which keeps a response focused where it's needed."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Families you'll meet",
+      "body": "- **Interleukins (IL-):** a large numbered family (IL-1, IL-6, IL-17…), many pro-inflammatory.\n- **TNF (tumor necrosis factor):** a central driver of inflammation.\n- **Interferons:** especially important against viruses.\n- **Chemokines:** cytokines that specifically attract cells (chemotaxis).\n\nThe same cytokine can do different things depending on context and target.",
+      "flag": {
+        "level": "simplified",
+        "note": "Cytokine actions are highly context-dependent; the same molecule can be pro- or anti-inflammatory."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "How do cytokines mostly differ from classic hormones?",
+      "options": [
+        "Cytokines travel the whole body like hormones always do",
+        "Cytokines usually act locally and transiently, coordinating nearby cells, though some do reach the circulation",
+        "Cytokines are DNA",
+        "Cytokines are not proteins"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The default picture is local, short-range signaling, though in strong responses some cytokines spill into the blood and cause body-wide effects like fever."
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each to its role.",
+      "pairs": [
+        [
+          "Interleukins",
+          "Numbered immune signaling family"
+        ],
+        [
+          "TNF",
+          "Central pro-inflammatory driver"
+        ],
+        [
+          "Interferons",
+          "Antiviral signaling"
+        ],
+        [
+          "Chemokines",
+          "Attract cells to a site"
+        ]
+      ],
+      "explanation": "You don't need every cytokine memorized, just the families and that they're the coordinating language of immunity."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "A cytokine is released at a wound and a nearby cell changes its behavior, but a distant identical cell does not.",
+      "prompt": "Why the difference?",
+      "options": [
+        "Distance and receptor availability: local cells get enough signal and express the receptor",
+        "Cytokines never work",
+        "The distant cell is dead",
+        "Cytokines only act on neurons"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Local concentration falls with distance, and only cells with the right receptor respond. That's how cytokines keep an immune response spatially focused."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Textbook-level."
+}

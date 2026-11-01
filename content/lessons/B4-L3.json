@@ -1,0 +1,106 @@
+{
+  "id": "B4-L3",
+  "unitId": "B4",
+  "title": "Microglia sculpt circuits",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how microglia prune synapses during development and why that matters beyond immunity.",
+  "tags": [
+    "microglia",
+    "synaptic-pruning",
+    "development",
+    "complement"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Immune cells that shape wiring",
+      "body": "Microglia don't just defend; they help **build** circuits. During development, many extra synapses form and the weaker ones are removed. Microglia carry out much of that removal, **[[synaptic pruning]]**, by engulfing synaptic material.\n\nSo an immune cell is a sculptor of neural circuits."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Borrowing a tagging system",
+      "body": "How do microglia know which synapses to remove? One mechanism reuses the immune **[[complement]]** system: complement proteins (like C1q and C3) tag less-active synapses, and microglia engulf the tagged ones (2007, 2012).\n\nIt's the opsonization idea from B2-L3, 'tag, then eat,' applied to synapses instead of microbes.",
+      "flag": {
+        "level": "simplified",
+        "note": "Complement-mediated pruning is one important mechanism among several; its role varies by region and stage."
+      },
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/microglia-pruning.svg",
+        "alt": "A neuron with two synapses: the weaker one is tagged with complement protein, and a microglial cell extends a process and engulfs it, while the active untagged synapse remains.",
+        "caption": "Complement tags the weak synapse; the microglion engulfs it."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Pruning is described as activity-dependent. What does that mean?",
+      "options": [
+        "All synapses are removed equally",
+        "Less-active synapses are preferentially tagged and removed, so activity helps decide what stays",
+        "Only the strongest synapses are removed",
+        "Activity has no role"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "'Use it or lose it': weaker, less-active synapses are more likely to be tagged and pruned, refining circuits based on activity."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "How is complement-mediated pruning like antibody opsonization (B2-L3)?",
+      "options": [
+        "Both edit DNA",
+        "Both work by tagging a target so a phagocyte engulfs it",
+        "Both make antibodies",
+        "They are unrelated"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Same logic, different target: a molecular tag marks the item (microbe or synapse) and a phagocyte (macrophage or microglion) removes it. Immunology concepts recur in neuroscience."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "In a mouse lacking a complement component needed for tagging, what might you expect in developing circuits?",
+      "prompt": "Choose the best prediction.",
+      "options": [
+        "More aggressive pruning",
+        "Reduced pruning, so excess synapses may persist",
+        "No synapses form",
+        "Neurons die immediately"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Lose the tag and the 'eat me' signal weakens, so pruning is reduced and surplus synapses can linger, the loss-of-function test of the pruning model.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Phenotypes depend on the specific component, region and developmental stage."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Stevens B et al., 2007, Cell",
+      "doi": "10.1016/j.cell.2007.10.036",
+      "url": "https://doi.org/10.1016/j.cell.2007.10.036",
+      "verified": true,
+      "note": "The classical complement cascade mediates CNS synapse elimination."
+    },
+    {
+      "citation": "Schafer DP et al., 2012, Neuron",
+      "doi": "10.1016/j.neuron.2012.03.026",
+      "url": "https://doi.org/10.1016/j.neuron.2012.03.026",
+      "verified": true,
+      "note": "Microglia prune synapses in an activity- and complement-dependent way."
+    }
+  ],
+  "reviewNotes": "Confidence medium: pruning simplifications flagged. Two V sources."
+}

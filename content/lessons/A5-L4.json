@@ -1,0 +1,85 @@
+{
+  "id": "A5-L4",
+  "unitId": "A5",
+  "title": "The transcriptomic era",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how single-cell RNA sequencing redefined DRG neuron subtypes and what that enables.",
+  "tags": [
+    "drg",
+    "scrnaseq",
+    "subtypes",
+    "atlas"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Letting the cells sort themselves",
+      "body": "Instead of a few preset markers, **[[single-cell RNA sequencing]]** (A5 forward; C12 in depth) measures thousands of genes per neuron and groups cells by their whole expression profile.\n\nApplied to DRG (first in 2015), this revealed on the order of a dozen or more molecularly distinct neuron types, more than the old bins."
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "From catalog to control",
+      "body": "An atlas is only a parts list. The payoff comes when each type gets a **genetic handle**, a Cre or Flp line, so you can label, record from, or manipulate it.\n\nRecent toolkits (2024) provide exactly these handles for many DRG types, which is what makes subtype-specific DREADD experiments feasible.",
+      "flag": {
+        "level": "simplified",
+        "note": "Cluster number and boundaries depend on method and analysis choices (C12)."
+      }
+    },
+    {
+      "type": "order",
+      "id": "s3",
+      "prompt": "Order the modern workflow from discovery to manipulation.",
+      "items": [
+        "Single-cell RNA-seq finds molecular subtypes",
+        "Pick marker genes for a subtype of interest",
+        "Make or obtain a Cre/Flp line for those genes",
+        "Express a reporter or DREADD in that subtype",
+        "Test the subtype's function"
+      ],
+      "explanation": "Sequencing defines the parts; genetic lines turn a cluster on a plot into neurons you can actually switch on or off, the backbone of the colon paper and your project."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A UMAP plot shows 12 DRG clusters. What can it tell you on its own?",
+      "options": [
+        "Exactly what each cluster does",
+        "That neurons differ in expression and fall into groups, but not their function, which needs genetic and physiological follow-up",
+        "The conduction speed of each",
+        "Where each projects"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Clustering shows molecular groupings, not function, location or wiring. Those require the manipulations the rest of the curriculum teaches (C12 covers what UMAPs can and can't say)."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Usoskin D et al., 2015, Nat Neurosci",
+      "doi": "10.1038/nn.3881",
+      "url": "https://doi.org/10.1038/nn.3881",
+      "verified": true,
+      "note": "Single-cell RNA-seq classification of DRG neuron types."
+    },
+    {
+      "citation": "Sharma N et al., 2020, Nature",
+      "doi": "10.1038/s41586-019-1900-1",
+      "url": "https://doi.org/10.1038/s41586-019-1900-1",
+      "verified": true,
+      "note": "How transcriptional identity of somatosensory neuron types emerges in development."
+    },
+    {
+      "citation": "Qi L et al., 2024, Cell",
+      "doi": "10.1016/j.cell.2024.02.006",
+      "url": "https://doi.org/10.1016/j.cell.2024.02.006",
+      "verified": true,
+      "note": "A mouse genetic toolkit giving access to DRG neuron subtypes."
+    }
+  ],
+  "reviewNotes": "Confidence medium: clustering caveats flagged. Three V sources."
+}

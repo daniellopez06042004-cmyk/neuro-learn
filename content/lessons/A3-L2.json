@@ -1,0 +1,96 @@
+{
+  "id": "A3-L2",
+  "unitId": "A3",
+  "title": "TRPV1: the capsaicin and heat receptor",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how TRPV1 was identified, what activates it, and what knockout mice revealed about its role.",
+  "tags": [
+    "trp",
+    "trpv1",
+    "heat",
+    "pain"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Found by asking 'what does chili bind?'",
+      "body": "In 1997 the Julius lab screened a sensory-neuron cDNA library for a gene that would make ordinary cells respond to **[[capsaicin]]**, the compound in chili. The gene encoded **[[TRPV1]]**.\n\nIt was also opened by **noxious heat** (above roughly 43 °C) and by **acid**, showing one channel could detect a chemical, a temperature and tissue acidity."
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What did finding TRPV1 explain about eating chili peppers?",
+      "options": [
+        "Capsaicin damages tissue directly",
+        "Capsaicin opens the same channel painful heat opens, so the brain reads it as burning",
+        "Capsaicin activates touch neurons",
+        "Capsaicin blocks cold receptors"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Same channel, same neurons, same 'line' to the brain. Chili feels hot because it activates the heat detector (the labeled-line logic from A1-L4)."
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Knockouts: what TRPV1 is needed for",
+      "body": "Mice without TRPV1 (2000) ignored capsaicin and had reduced responses to strong heat. Most strikingly, they largely failed to develop **heat hypersensitivity after inflammation**.\n\nSo TRPV1 matters most when tissue is inflamed: inflammatory signals sensitize it, lowering its heat threshold so normally warm temperatures begin to hurt (A9)."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You inflame a mouse's paw. In wild-type mice, warm (not hot) stimuli now cause withdrawal.",
+      "prompt": "What do you predict for TRPV1-knockout mice?",
+      "options": [
+        "Same hypersensitivity",
+        "Much less heat hypersensitivity",
+        "They become cold-sensitive instead",
+        "They feel no touch"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "The knockout mice largely lack inflammatory heat hypersensitivity, pointing to TRPV1 sensitization as a key mechanism.",
+      "flag": {
+        "level": "simplified",
+        "note": "Knockouts kept some response to strong heat, so other heat detectors also contribute."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "prompt": "Why is TRPV1 a useful genetic handle for reaching many nociceptors?",
+      "options": [
+        "It's expressed in every neuron",
+        "A large set of nociceptors express TRPV1, so a Trpv1-based line can target them (with the lineage caveats in A3-L4)",
+        "It's found only in muscle",
+        "It's not useful at all"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "TRPV1 marks a broad nociceptor population, which is why Trpv1-Cre lines are common; A3-L4 covers the caveats."
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Caterina MJ et al., 1997, Nature",
+      "doi": "10.1038/39807",
+      "url": "https://doi.org/10.1038/39807",
+      "verified": true,
+      "note": "Cloning of TRPV1, the capsaicin receptor activated by heat."
+    },
+    {
+      "citation": "Caterina MJ et al., 2000, Science",
+      "doi": "10.1126/science.288.5464.306",
+      "url": "https://doi.org/10.1126/science.288.5464.306",
+      "verified": true,
+      "note": "TRPV1 knockout mice: impaired heat and inflammatory pain."
+    }
+  ],
+  "reviewNotes": "Two V sources."
+}
