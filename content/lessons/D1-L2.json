@@ -55,7 +55,23 @@
         1
       ],
       "reveal": "Classically afferent (it reports inward), but many sensory neurons also have local efferent-like actions — e.g. CGRP release shaping inflammation. Your lab's neurons blur the clean afferent/efferent line, which is part of what makes them interesting.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A DRG sensory neuron carries signals toward the CNS but can also release peptides at its peripheral ending. It is…",
+          "options": [
+            "Purely afferent, carrying signals only toward the CNS",
+            "Both: mainly afferent, but it can also act locally at its periphery",
+            "Purely efferent, carrying commands only out to the periphery",
+            "Neither afferent nor efferent in any meaningful sense"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Primarily afferent, yet its peripheral peptide release (e.g. CGRP) is an efferent-like local action (B6)."
+        }
+      ]
     }
   ],
   "sources": [],

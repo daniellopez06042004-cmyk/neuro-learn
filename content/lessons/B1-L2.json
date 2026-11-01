@@ -95,8 +95,8 @@
       "options": [
         "It isn't relevant; TLRs act only in blood-borne immune cells",
         "Glia and some neurons also carry TLRs, so the CNS can sense danger",
-        "Because TLR4 functions only in plants, not in any mammalian tissue",
-        "Because TLR4 directly blocks action potentials in nearby neurons"
+        "TLR4 functions only in plants, not in any mammalian tissue",
+        "TLR4 directly blocks action potentials in nearby neurons"
       ],
       "answer": [
         1
@@ -105,7 +105,24 @@
       "flag": {
         "level": "simplified",
         "note": "Which neural cells express which TLRs, and to what effect, is an active and nuanced area."
-      }
+      },
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "TLR4 is best known on macrophages, where it detects bacterial LPS.",
+          "prompt": "Why does TLR4 also matter for the nervous system?",
+          "options": [
+            "It isn't relevant; TLRs act only in blood-borne immune cells",
+            "Glia and some neurons also carry TLRs, so the CNS can sense danger",
+            "TLR4 functions only in plants, not in any mammalian tissue",
+            "TLR4 directly blocks action potentials in nearby neurons"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "PRR signaling in glia and neurons is one route by which infection and damage change neural activity (B4–B7)."
+        }
+      ]
     }
   ],
   "sources": [

@@ -46,16 +46,16 @@
       "variants": [
         {
           "type": "predict",
-          "setup": "Piezo2 is the main light-touch transducer in skin, and the gut is full of stretch.",
+          "setup": "The gut wall is stretched constantly as its contents move through it.",
           "prompt": "Why is Piezo2 a natural candidate to study in gut afferents?",
           "options": [
-            "Because it is a heat channel for gut temperature",
-            "Because a known force transducer likely senses gut stretch too",
-            "Because it works only in skin and nowhere else",
-            "Because the gut has no mechanical forces at all"
+            "It's the known light-touch transducer, a strong candidate for gut stretch",
+            "It's mainly a heat-sensing channel, so it should report gut temperature",
+            "It is known to work only in skin, which makes the gut a useful contrast",
+            "The gut has no mechanical forces, so any result there would surprise us"
           ],
           "answer": [
-            1
+            0
           ],
           "reveal": "Reasoning from a channel's known role to a new tissue is standard — and Piezo2 does shape gastrointestinal transit."
         }
@@ -83,12 +83,12 @@
       "variants": [
         {
           "type": "mcq",
-          "prompt": "Disrupting sensory Piezo2 changes gut transit. The careful conclusion is that Piezo2 is…",
+          "prompt": "Disrupting sensory Piezo2 changes gut transit. Does that prove sensory Piezo2 directly senses the stretch that drives transit?",
           "options": [
-            "Proven to be the direct stretch sensor driving transit",
-            "Needed for normal transit; exact cells and role still need mapping",
-            "Shown to be the gut's only stretch sensor",
-            "Acting purely through a vagal route"
+            "Yes, it proves sensory Piezo2 is the direct sensor of that stretch",
+            "No: it shows Piezo2 is needed, but the exact cells and role need mapping",
+            "Yes, and it also proves the gut has no other stretch sensors at all",
+            "No, because it actually proves a purely vagal mechanism instead"
           ],
           "answer": [
             1

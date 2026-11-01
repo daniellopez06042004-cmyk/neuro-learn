@@ -47,7 +47,24 @@
         0
       ],
       "multi": false,
-      "explanation": "Same-orientation loxP sites → excision of the intervening DNA. (If the loxP sites are inverted, Cre flips the sequence instead — that's the basis of [[DIO]]/FLEX viral tools, later.)"
+      "explanation": "Same-orientation loxP sites → excision of the intervening DNA. (If the loxP sites are inverted, Cre flips the sequence instead — that's the basis of [[DIO]]/FLEX viral tools, later.)",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Cre finds two loxP sites in the same orientation flanking a STOP cassette.",
+          "prompt": "What does Cre do?",
+          "options": [
+            "Inverts the DNA between them",
+            "Deletes the DNA between them",
+            "Duplicates the DNA between them",
+            "Leaves them untouched"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Same-orientation loxP leads to excision (deletion); opposite-orientation loxP would invert the DNA instead."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -71,7 +88,23 @@
         1
       ],
       "reveal": "Only Bmpr1b+ cells make Cre, so only they delete the STOP and express tdTomato. Everything else stays dark. That restriction — one gene's expression pattern defining the labeled cells — is the core of the whole toolkit.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "In a Bmpr1b-Cre mouse carrying a floxed-STOP reporter, which cells light up?",
+          "options": [
+            "All DRG neurons",
+            "Only Bmpr1b-expressing cells",
+            "Only non-neuronal cells",
+            "No cells at all"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Cre is made only where the Bmpr1b promoter is active, so only those cells recombine and express the reporter."
+        }
+      ]
     }
   ],
   "sources": [

@@ -36,13 +36,13 @@
       "variants": [
         {
           "type": "predict",
-          "setup": "Capsaicin and noxious heat both open TRPV1 on the same neurons.",
-          "prompt": "So eating chili feels like…",
+          "setup": "Capsaicin, the active compound in chili peppers, opens TRPV1 on nociceptors.",
+          "prompt": "Why does eating chili feel hot?",
           "options": [
-            "Cold, in the way menthol does",
-            "Burning heat, because the heat channel is opened",
-            "A gentle brushing touch",
-            "Nothing in particular"
+            "Capsaicin chemically burns and damages the tissue it touches",
+            "Capsaicin opens the same channel heat does, so it reads as burning",
+            "Capsaicin activates touch afferents, which the brain misreads as heat",
+            "Capsaicin blocks cold receptors, and losing cold feels like heat"
           ],
           "answer": [
             1
@@ -79,12 +79,12 @@
       "variants": [
         {
           "type": "mcq",
-          "prompt": "After paw inflammation, wild-type mice become hypersensitive to warmth. TRPV1-knockout mice mostly do not. This shows TRPV1 is…",
+          "prompt": "After paw inflammation, wild-type mice withdraw from merely warm stimuli. How do TRPV1-knockout mice respond after the same inflammation?",
           "options": [
-            "Unrelated to heat sensation",
-            "Key to inflammatory heat hypersensitivity",
-            "The only heat sensor there is",
-            "A channel for touch, not heat"
+            "Same hypersensitivity",
+            "Much less heat hypersensitivity",
+            "They become cold-sensitive instead",
+            "They feel no touch"
           ],
           "answer": [
             1
@@ -98,9 +98,9 @@
       "id": "s5",
       "prompt": "Why is TRPV1 a useful genetic handle for reaching many nociceptors?",
       "options": [
-        "Because TRPV1 is expressed by essentially every neuron in the body",
+        "TRPV1 is expressed by essentially every neuron in the body",
         "Many nociceptors express TRPV1, so a Trpv1 line can target them",
-        "Because TRPV1 is found only in muscle, which gives very clean access",
+        "TRPV1 is found only in muscle, which gives very clean access",
         "It isn't a useful handle; TRPV1 is never used to target neurons"
       ],
       "answer": [

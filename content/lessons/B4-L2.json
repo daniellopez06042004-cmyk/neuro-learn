@@ -41,7 +41,24 @@
       "answer": [
         1
       ],
-      "explanation": "Constant process motility redefined resting microglia as active surveillants, a landmark use of in vivo imaging (a technique revisited in C9/C11)."
+      "explanation": "Constant process motility redefined resting microglia as active surveillants, a landmark use of in vivo imaging (a technique revisited in C9/C11).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Live two-photon imaging watched 'resting' microglia in the intact brain.",
+          "prompt": "What did it reveal?",
+          "options": [
+            "That resting microglia never move at all under normal conditions",
+            "That their processes constantly move and sample the surrounding tissue",
+            "That microglia are really neurons that have been mislabeled",
+            "That microglia appear in the brain only after an injury occurs"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Constant process motility redefined resting microglia as active surveillants — each one patrols its own territory."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -57,7 +74,23 @@
       "answer": [
         1
       ],
-      "reveal": "Microglial processes rapidly converge on a local injury, walling it off and responding, one of the first behaviors seen with in vivo imaging."
+      "reveal": "Microglial processes rapidly converge on a local injury, walling it off and responding, one of the first behaviors seen with in vivo imaging.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You make a tiny injury in the cortex and watch nearby microglia live. Their processes…",
+          "options": [
+            "Retract away from the injury",
+            "Rapidly extend toward the injury site",
+            "Freeze in place and stop moving",
+            "Turn into new neurons"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Microglial processes rapidly converge on a local injury to wall it off — one of the first behaviors seen with in vivo imaging."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -72,7 +105,24 @@
       "answer": [
         1
       ],
-      "explanation": "Transcriptomic work shows many context-dependent states, so a clean two-category model oversimplifies, a caution worth carrying into any 'activated vs resting' claim."
+      "explanation": "Transcriptomic work shows many context-dependent states, so a clean two-category model oversimplifies, a caution worth carrying into any 'activated vs resting' claim.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The old model split activated microglia into just 'M1' and 'M2'.",
+          "prompt": "Why has that label fallen out of favor?",
+          "options": [
+            "Because microglia turn out not to activate under any condition",
+            "Because real microglia show a spectrum of states, not just two",
+            "Because there are actually exactly three defined microglial states",
+            "Because the M1 and M2 terms were in truth never used by anyone"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Transcriptomics shows many context-dependent states, so a clean two-category model oversimplifies."
+        }
+      ]
     }
   ],
   "sources": [

@@ -60,7 +60,23 @@
         1
       ],
       "reveal": "Cre turns it on in both; Flp turns it off in nodose; DRG remains. Subtraction is the right tool when you can define the UNWANTED group more cleanly than the wanted one.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Cre is on in DRG and nodose; Flp is on only in nodose; the payload is Cre-on/Flp-off. Which neurons keep it?",
+          "options": [
+            "Both DRG and nodose neurons keep the payload",
+            "Only DRG neurons; the nodose cells are subtracted out",
+            "Only the nodose neurons retain the payload here",
+            "Neither population ends up keeping the payload"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Flp-off subtraction removes the Flp+ (nodose) cells, leaving the DRG neurons."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -76,7 +92,24 @@
         0
       ],
       "multi": false,
-      "explanation": "If the unwanted population has the cleaner driver, it's easier to remove it than to positively define the wanted set. Choose the strategy by which group you can target most cleanly."
+      "explanation": "If the unwanted population has the cleaner driver, it's easier to remove it than to positively define the wanted set. Choose the strategy by which group you can target most cleanly.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You're choosing between an AND-gate and Cre-on/Flp-off subtraction.",
+          "prompt": "When is subtraction the better choice?",
+          "options": [
+            "When you have a clean marker for the cells you want to exclude",
+            "When you have no Flp driver lines available at all",
+            "When the reporter signal is simply too dim to see",
+            "When your goal is actually to label every cell broadly"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Subtraction shines when you can cleanly mark the unwanted population and remove it."
+        }
+      ]
     }
   ],
   "sources": [

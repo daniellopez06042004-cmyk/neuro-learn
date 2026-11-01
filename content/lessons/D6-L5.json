@@ -71,7 +71,24 @@
       "answer": [
         1
       ],
-      "explanation": "The celiac ganglion is a sympathetic relay for *motor* fibers. Sensory fibers just pass through it on the way to their [[pseudounipolar]] cell bodies in the DRG (D3). This is why retrograde tracing from the pancreas labels DRG cell bodies."
+      "explanation": "The celiac ganglion is a sympathetic relay for *motor* fibers. Sensory fibers pass through it on the way to their [[pseudounipolar]] cell bodies in the DRG (D3); some give off collaterals there, but their signal isn't relayed through it. This is why retrograde tracing from the pancreas labels DRG cell bodies.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A pancreatic spinal afferent passes through the celiac ganglion.",
+          "prompt": "Does it synapse there?",
+          "options": [
+            "Yes; every such afferent synapses within the celiac ganglion",
+            "No; it's pseudounipolar, so the axon passes through to the DRG body",
+            "Yes; it synapses there directly onto the vagal neurons",
+            "No; this particular afferent has no cell body anywhere"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The celiac ganglion is a sympathetic motor relay. Sensory fibers pass through it to their DRG cell bodies; some give off collaterals there, but their signal isn't relayed through it."
+        }
+      ]
     },
     {
       "type": "concept",

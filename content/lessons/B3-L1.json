@@ -41,7 +41,24 @@
       "answer": [
         1
       ],
-      "explanation": "The default picture is local, short-range signaling, though in strong responses some cytokines spill into the blood and cause body-wide effects like fever."
+      "explanation": "The default picture is local, short-range signaling, though in strong responses some cytokines spill into the blood and cause body-wide effects like fever.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Hormones like insulin travel in the blood to act on distant organs. Immune cells also secrete signaling molecules called cytokines.",
+          "prompt": "How do cytokines mostly differ from classic hormones?",
+          "options": [
+            "Cytokines always travel the whole body, exactly as hormones do",
+            "Cytokines usually act locally and briefly, though some reach the blood",
+            "Cytokines are made of DNA rather than of protein like hormones",
+            "Cytokines are not proteins and so cannot bind to cell receptors"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The default picture is local, short-range signaling; in strong responses some spill into the blood and cause body-wide effects like fever."
+        }
+      ]
     },
     {
       "type": "match",
@@ -74,14 +91,30 @@
       "prompt": "Why the difference?",
       "options": [
         "Local concentration and receptors: nearby cells get enough signal",
-        "Because cytokines never actually act on any target cell at all",
-        "Because the distant cell has already died and cannot respond",
-        "Because cytokines are able to act only on neurons, never other cells"
+        "Cytokines never actually act on any target cell at all",
+        "The distant cell has already died and cannot respond",
+        "Cytokines can act only on neurons, never on other cells"
       ],
       "answer": [
         0
       ],
-      "reveal": "Local concentration falls with distance, and only cells with the right receptor respond. That's how cytokines keep an immune response spatially focused."
+      "reveal": "Local concentration falls with distance, and only cells with the right receptor respond. That's how cytokines keep an immune response spatially focused.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Why does a cytokine act on a nearby cell but not on a distant, identical one?",
+          "options": [
+            "Local concentration and receptors: nearby cells get enough signal",
+            "Cytokines never actually act on any target cell at all",
+            "The distant cell has already died and cannot respond",
+            "Cytokines can act only on neurons, never on other cells"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Concentration falls with distance and only cells with the receptor respond — that is how cytokines keep a response spatially focused."
+        }
+      ]
     }
   ],
   "sources": [],

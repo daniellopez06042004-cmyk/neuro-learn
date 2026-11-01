@@ -34,15 +34,32 @@
       "id": "s3",
       "prompt": "Why does the CNS need its own resident immune cells rather than relying on blood-borne ones?",
       "options": [
-        "Because blood-borne immune cells are simply too small to be useful",
+        "Blood-borne immune cells are simply too small to be useful",
         "The blood-brain barrier limits entry, so resident surveillance is needed",
-        "Because neurons themselves already act as the brain's immune cells",
-        "Because the brain has no immune needs and never faces infection"
+        "Neurons themselves already act as the brain's immune cells",
+        "The brain has no immune needs and never faces infection"
       ],
       "answer": [
         1
       ],
-      "explanation": "The barrier that protects the CNS also limits routine immune access, so a built-in resident population (microglia) handles surveillance and first response."
+      "explanation": "The barrier that protects the CNS also limits routine immune access, so a built-in resident population (microglia) handles surveillance and first response.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Most tissues are patrolled by immune cells that arrive from the blood.",
+          "prompt": "Why does the CNS keep its own resident immune cells instead?",
+          "options": [
+            "Blood-borne immune cells are simply too small to be useful",
+            "The blood-brain barrier limits entry, so resident surveillance is needed",
+            "Neurons themselves already act as the brain's immune cells",
+            "The brain has no immune needs and never faces infection"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The barrier that protects the CNS also limits routine immune access, so microglia handle surveillance and first response."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -57,7 +74,24 @@
       "answer": [
         1
       ],
-      "explanation": "Microglia are macrophage-like: resident, phagocytic, innate. The parallel helps you transfer macrophage logic (B1-L3) into the brain."
+      "explanation": "Microglia are macrophage-like: resident, phagocytic, innate. The parallel helps you transfer macrophage logic (B1-L3) into the brain.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Microglia are resident, phagocytic, innate cells of the CNS.",
+          "prompt": "Which peripheral cell are they the counterpart of?",
+          "options": [
+            "Neutrophils",
+            "Macrophages",
+            "B cells",
+            "Red blood cells"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Microglia are macrophage-like, which lets you carry macrophage logic (B1-L3) into the brain."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -73,7 +107,23 @@
       "answer": [
         1
       ],
-      "reveal": "Little blood-cell contribution in the healthy adult fits a self-renewing resident population, consistent with the yolk-sac origin story."
+      "reveal": "Little blood-cell contribution in the healthy adult fits a self-renewing resident population, consistent with the yolk-sac origin story.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "In a healthy adult brain, almost no microglia carry a blood-cell label. What does that imply?",
+          "options": [
+            "That microglia are replaced fresh from the blood every single day",
+            "That microglia are largely self-renewing residents, not blood-replaced",
+            "That microglia are actually neurons rather than immune cells",
+            "That the labeling method simply failed to work in this experiment"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Little blood-cell contribution fits a self-renewing resident population, consistent with the yolk-sac origin story."
+        }
+      ]
     }
   ],
   "sources": [

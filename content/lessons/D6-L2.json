@@ -84,7 +84,7 @@
     {
       "type": "predict",
       "id": "s6",
-      "setup": "You image a colon section where DRG afferent fibers carry a reporter. Many labeled fibers run in a thin sheet sandwiched between the two muscle layers.",
+      "setup": "You image a colon section where DRG afferent fibers carry a reporter. Many labeled fibers run in a thin sheet sandwiched between the inner circular and outer longitudinal muscle layers.",
       "prompt": "Which structure are they running alongside?",
       "options": [
         "The submucosal plexus",
@@ -95,7 +95,23 @@
       "answer": [
         1
       ],
-      "reveal": "The myenteric plexus sits between the circular and longitudinal muscle. Spinal afferents often travel through and branch near it. Knowing the layers lets you say *where* in the wall a signal is, not just that it's there."
+      "reveal": "The myenteric plexus sits between the circular and longitudinal muscle. Spinal afferents often travel through and branch near it. Knowing the layers lets you say *where* in the wall a signal is, not just that it's there.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "DRG afferent fibers run in a thin sheet sandwiched between the inner circular and outer longitudinal muscle layers of the gut wall. Which structure are they alongside?",
+          "options": [
+            "The submucosal plexus",
+            "The myenteric plexus",
+            "The lamina propria",
+            "The serosa"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The myenteric plexus sits between the circular and longitudinal muscle; spinal afferents often travel and branch near it."
+        }
+      ]
     }
   ],
   "sources": [],

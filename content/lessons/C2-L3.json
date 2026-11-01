@@ -47,7 +47,24 @@
         1
       ],
       "multi": false,
-      "explanation": "CreER + adult tamoxifen opens the recombination window only when you choose, so cells that expressed the gene only during development aren't captured."
+      "explanation": "CreER + adult tamoxifen opens the recombination window only when you choose, so cells that expressed the gene only during development aren't captured.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You want to label a marker's cells in the adult and avoid developmental expression.",
+          "prompt": "What do you do?",
+          "options": [
+            "Use plain Cre and accept whatever it happens to label",
+            "Use CreER and give tamoxifen only in adulthood",
+            "Use a brighter reporter to pick out the adult cells",
+            "Inject the reporter protein directly into the tissue"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "CreER stays inactive until tamoxifen, so dosing adults captures adult expression and skips the developmental lineage."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -77,7 +94,23 @@
         1
       ],
       "reveal": "Low-dose tamoxifen gives sparse, isolated labeling — so each traced ending clearly belongs to one neuron. High-dose would label so many that endings overlap and single-cell morphology is unmeasurable.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You want to measure the branching of individual labeled afferent endings. What tamoxifen strategy fits?",
+          "options": [
+            "A high dose of tamoxifen to label essentially everything",
+            "A low dose so that only a few isolated neurons are labeled",
+            "No tamoxifen at all, relying on background recombination",
+            "Tamoxifen given only during embryonic development"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Low-dose tamoxifen gives sparse, mosaic recombination — ideal for resolving single neurons."
+        }
+      ]
     }
   ],
   "sources": [

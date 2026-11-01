@@ -1,0 +1,358 @@
+{
+  "slides": [
+    {
+      "unit": "A1",
+      "tissue": "drg",
+      "label": "DRG",
+      "caption": "A sensory ganglion: the first step in sensing, where a physical stimulus becomes spikes bound for the cord.",
+      "stain": "NF200 · CGRP · DAPI"
+    },
+    {
+      "unit": "A2",
+      "tissue": "nerve",
+      "label": "sciatic",
+      "caption": "Myelinated axons in cross-section; fiber diameter and myelin set how fast each one conducts.",
+      "stain": "Toluidine blue"
+    },
+    {
+      "unit": "A3",
+      "tissue": "rnascope",
+      "label": "TRP ISH",
+      "caption": "Only subsets of DRG neurons carry TRP channels — the detectors for heat and chemical irritants.",
+      "stain": "Trpv1 · Trpa1 · DAPI"
+    },
+    {
+      "unit": "A4",
+      "tissue": "rnascope",
+      "label": "Piezo2 ISH",
+      "caption": "Piezo2 marks mechanosensory neurons; Calca marks peptidergic ones — different cells, different jobs.",
+      "stain": "Piezo2 · Calca · DAPI"
+    },
+    {
+      "unit": "A5",
+      "tissue": "drg",
+      "label": "DRG L4",
+      "caption": "Large NF200+ neurons and small peptidergic CGRP+ neurons share one ganglion.",
+      "stain": "NF200 · CGRP · DAPI",
+      "sources": [
+        {
+          "citation": "Wolfson RL et al., 2023, Cell",
+          "doi": "10.1016/j.cell.2023.07.007",
+          "verified": true
+        },
+        {
+          "citation": "Usoskin D et al., 2015, Nat Neurosci",
+          "doi": "10.1038/nn.3881",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "unit": "A6",
+      "tissue": "brain-coronal",
+      "label": "thalamus",
+      "caption": "The ascending somatosensory relay: thalamus (VPL/VPM) hands off to primary cortex (SSp).",
+      "stain": "Nissl",
+      "atlas": {
+        "regions": [
+          "VPL",
+          "VPM",
+          "SSp"
+        ]
+      }
+    },
+    {
+      "unit": "A7",
+      "tissue": "brain-coronal",
+      "label": "brainstem",
+      "caption": "Vagal interoceptive afferents end in the NTS, beside the area postrema — the brain's visceral inbox.",
+      "stain": "Nissl",
+      "atlas": {
+        "regions": [
+          "NTS",
+          "AP"
+        ]
+      }
+    },
+    {
+      "unit": "A8",
+      "tissue": "islet",
+      "label": "islet",
+      "caption": "Extrinsic afferents sense internal organs like the pancreas — endocrine islet set in exocrine acini.",
+      "stain": "Insulin · glucagon · DAPI"
+    },
+    {
+      "unit": "A9",
+      "tissue": "rnascope",
+      "label": "Fos ISH",
+      "caption": "After inflammation, c-Fos marks activated TRPV1+ nociceptors — a snapshot of sensitization.",
+      "stain": "Fos · Trpv1 · DAPI"
+    },
+    {
+      "unit": "A10",
+      "tissue": "rnascope",
+      "label": "DRG atlas",
+      "caption": "Molecular markers split DRG neurons into subtypes — the transcriptomic map the field now builds on.",
+      "stain": "Bmpr1b · Sstr2 · DAPI",
+      "sources": [
+        {
+          "citation": "Qi L et al., 2024, Cell",
+          "doi": "10.1016/j.cell.2024.02.006",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "unit": "B1",
+      "tissue": "rnascope",
+      "label": "innate ISH",
+      "caption": "Innate first responders, read by marker mRNA: macrophages (Lyz2) and neutrophils (S100a8).",
+      "stain": "Lyz2 · S100a8 · DAPI"
+    },
+    {
+      "unit": "B2",
+      "tissue": "rnascope",
+      "label": "T/B ISH",
+      "caption": "The adaptive lymphocytes side by side: T cells (Cd3e) and B cells (Cd19).",
+      "stain": "Cd3e · Cd19 · DAPI"
+    },
+    {
+      "unit": "B3",
+      "tissue": "rnascope",
+      "label": "cytokine ISH",
+      "caption": "Cells caught making pro-inflammatory cytokines — the immune system's short-range signals.",
+      "stain": "Il6 · Tnf · DAPI"
+    },
+    {
+      "unit": "B4",
+      "tissue": "microglia",
+      "label": "cortex Iba1",
+      "caption": "Iba1+ microglia tiling the cortex, each surveying its own territory.",
+      "stain": "Iba1 · DAPI"
+    },
+    {
+      "unit": "B5",
+      "tissue": "cortex-if",
+      "label": "cortex GFAP",
+      "caption": "Reactive astrocytes (GFAP) among neurons (NeuN) — the glial signature of CNS neuroinflammation.",
+      "stain": "NeuN · GFAP · DAPI"
+    },
+    {
+      "unit": "B6",
+      "tissue": "rnascope",
+      "label": "CGRP axis",
+      "caption": "A neuron-to-immune signal: nociceptor CGRP (Calca) acting on RAMP1+ target cells.",
+      "stain": "Calca · Ramp1 · DAPI",
+      "sources": [
+        {
+          "citation": "Yang D et al., 2022, Cell",
+          "doi": "10.1016/j.cell.2022.09.024",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "unit": "B7",
+      "tissue": "rnascope",
+      "label": "DRG cyto-R",
+      "caption": "Sensory neurons carry cytokine receptors (Il6ra, Tnfrsf1a), so immune signals can change their firing.",
+      "stain": "Il6ra · Tnfrsf1a · DAPI"
+    },
+    {
+      "unit": "B8",
+      "tissue": "request",
+      "label": "gut wall",
+      "caption": "A drawn gut-wall section showing the neuroimmune unit in one view.",
+      "wish": "Mouse colon wall cross-section: CGRP+ extrinsic afferent endings in the mucosa and muscle layers, beside lamina-propria immune cells; immunofluorescence, mouse.",
+      "references": [
+        {
+          "citation": "Wolfson RL et al., 2023, Cell (whole-mount colon afferent endings)",
+          "doi": "10.1016/j.cell.2023.07.007"
+        },
+        {
+          "citation": "Zhang W et al., 2022, Cell (gut-innervating nociceptors among mucosal immune cells)",
+          "doi": "10.1016/j.cell.2022.09.008"
+        }
+      ]
+    },
+    {
+      "unit": "B9",
+      "tissue": "brain-coronal",
+      "label": "brainstem",
+      "caption": "The vagal inflammatory reflex hub: sensory NTS beside the dorsal motor nucleus of the vagus (DMX).",
+      "stain": "Nissl",
+      "atlas": {
+        "regions": [
+          "NTS",
+          "DMX"
+        ]
+      }
+    },
+    {
+      "unit": "C1",
+      "tissue": "cortex-if",
+      "label": "control",
+      "caption": "Every stain needs controls: a positive tissue proves it can work, a secondary-only slide catches false signal.",
+      "stain": "NeuN · GFAP · DAPI"
+    },
+    {
+      "unit": "C2",
+      "tissue": "rnascope",
+      "label": "Cre ISH",
+      "caption": "A Cre reporter reads out genetics: the tdTomato transgene appears only in Bmpr1b-lineage cells.",
+      "stain": "Bmpr1b · tdTomato · DAPI"
+    },
+    {
+      "unit": "C3",
+      "tissue": "rnascope",
+      "label": "intersect",
+      "caption": "Intersectional logic: expression is restricted to cells positive for two drivers at once.",
+      "stain": "Bmpr1b · Th · DAPI"
+    },
+    {
+      "unit": "C4",
+      "tissue": "rnascope",
+      "label": "retro ISH",
+      "caption": "A retrograde AAV from an organ labels (tdTomato) the DRG neurons that innervate it.",
+      "stain": "tdTomato · Calca · DAPI"
+    },
+    {
+      "unit": "C5",
+      "tissue": "rnascope",
+      "label": "DREADD ISH",
+      "caption": "A manipulation check: c-Fos confirms the DREADD-expressing neurons actually changed their firing.",
+      "stain": "hM4Di · Fos · DAPI"
+    },
+    {
+      "unit": "C6",
+      "tissue": "cord",
+      "label": "cord",
+      "caption": "Good perfusion, fixation and sectioning are what give clean, interpretable morphology.",
+      "stain": "Luxol fast blue · cresyl violet"
+    },
+    {
+      "unit": "C7",
+      "tissue": "cortex-if",
+      "label": "cortex IF",
+      "caption": "Primary and secondary antibodies label specific proteins (NeuN, GFAP); DAPI marks every nucleus.",
+      "stain": "NeuN · GFAP · DAPI"
+    },
+    {
+      "unit": "C8",
+      "tissue": "rnascope",
+      "label": "RNAscope",
+      "caption": "Probe-based single-molecule dots show exactly which cells express a gene.",
+      "stain": "Trpv1 · Calca · DAPI"
+    },
+    {
+      "unit": "C9",
+      "tissue": "microglia",
+      "label": "confocal",
+      "caption": "Confocal microscopy resolves fine microglial processes — the basis for honest quantification.",
+      "stain": "Iba1 · DAPI"
+    },
+    {
+      "unit": "C10",
+      "tissue": "rnascope",
+      "label": "reference",
+      "caption": "Measuring RNA needs reference genes (Actb, Gapdh) to normalize against.",
+      "stain": "Actb · Gapdh · DAPI"
+    },
+    {
+      "unit": "C11",
+      "tissue": "drg",
+      "label": "DRG culture",
+      "caption": "Dissociated DRG neurons — the preparation behind calcium imaging of live sensory cells.",
+      "stain": "NF200 · CGRP · DAPI"
+    },
+    {
+      "unit": "C12",
+      "tissue": "rnascope",
+      "label": "scRNAseq",
+      "caption": "Sequencing defines clusters; in-situ probes (Sstr2, Adra2a) validate them back in the tissue.",
+      "stain": "Sstr2 · Adra2a · DAPI"
+    },
+    {
+      "unit": "D1",
+      "tissue": "brain-coronal",
+      "label": "brain",
+      "caption": "The CNS, shown here as brain (cortex and hippocampus); the PNS lies everywhere outside it.",
+      "stain": "Nissl",
+      "atlas": {
+        "regions": [
+          "Isocortex",
+          "HPF"
+        ]
+      }
+    },
+    {
+      "unit": "D2",
+      "tissue": "brain-coronal",
+      "label": "autonomic",
+      "caption": "Central autonomic command: the hypothalamic PVH and the vagal motor nucleus (DMX).",
+      "stain": "Nissl",
+      "atlas": {
+        "regions": [
+          "PVH",
+          "DMX"
+        ]
+      }
+    },
+    {
+      "unit": "D3",
+      "tissue": "cord",
+      "label": "cord L4",
+      "caption": "Transverse cord: the dorsal horn takes sensory input, the ventral horn sends motor output.",
+      "stain": "Luxol fast blue · cresyl violet"
+    },
+    {
+      "unit": "D4",
+      "tissue": "nerve",
+      "label": "sciatic",
+      "caption": "A peripheral nerve bundles fast myelinated and slow unmyelinated axons together in fascicles.",
+      "stain": "Toluidine blue"
+    },
+    {
+      "unit": "D5",
+      "tissue": "drg",
+      "label": "DRG",
+      "caption": "One ganglion, two worlds: the DRG carries both somatic and visceral afferents to the cord.",
+      "stain": "NF200 · CGRP · DAPI"
+    },
+    {
+      "unit": "D6",
+      "tissue": "islet",
+      "label": "islet",
+      "caption": "Two organs in one: an endocrine islet set within the exocrine, enzyme-making acini.",
+      "stain": "Insulin · glucagon · DAPI"
+    },
+    {
+      "unit": "D7",
+      "tissue": "islet",
+      "label": "islet α/β",
+      "caption": "The islet sets blood glucose: β cells make insulin, α cells make glucagon.",
+      "stain": "Insulin · glucagon · DAPI"
+    },
+    {
+      "unit": "D8",
+      "tissue": "cord",
+      "label": "reflex arc",
+      "caption": "The spinal cord closes the reflex arc — sensory in through the dorsal root, motor out through the ventral.",
+      "stain": "Luxol fast blue · cresyl violet"
+    },
+    {
+      "unit": "E",
+      "tissue": "rnascope",
+      "label": "pancreas DRG",
+      "caption": "Your project in one slide: retrogradely-labeled, DREADD-bearing pancreas-innervating DRG neurons.",
+      "stain": "tdTomato · hM4Di · DAPI",
+      "sources": [
+        {
+          "citation": "Wolfson RL et al., 2023, Cell",
+          "doi": "10.1016/j.cell.2023.07.007",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

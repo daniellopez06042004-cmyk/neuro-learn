@@ -76,7 +76,24 @@
         1
       ],
       "multi": false,
-      "explanation": "If the DREADD-free group shows the same change, the actuator alone explains it. Your neuronal manipulation added nothing detectable on top."
+      "explanation": "If the DREADD-free group shows the same change, the actuator alone explains it. Your neuronal manipulation added nothing detectable on top.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You see an effect in DREADD+ / actuator — but the same-sized effect in DREADD− / actuator.",
+          "prompt": "What's the correct conclusion?",
+          "options": [
+            "Your neurons must have driven the observed effect",
+            "The effect is the actuator's, not your neurons' own",
+            "The DREADD must be unusually strong in these mice",
+            "You just need more animals to reveal the difference"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "An equal effect without the DREADD means the actuator, not your neurons, is responsible."
+        }
+      ]
     },
     {
       "type": "concept",

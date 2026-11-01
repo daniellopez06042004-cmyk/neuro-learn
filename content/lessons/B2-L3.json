@@ -55,14 +55,31 @@
       "prompt": "In immunofluorescence (C7), you use a primary antibody against your protein and a labeled secondary antibody against the primary. Which antibody property makes this work?",
       "options": [
         "Antibodies glow on their own once applied to the tissue section",
-        "An antibody binds one specific target: primary→protein, secondary→it",
+        "An antibody binds one specific target: primary→protein, secondary→primary",
         "Antibodies act as enzymes that chemically develop the stain",
         "Antibodies cut the DNA of the labeled cells to mark them"
       ],
       "answer": [
         1
       ],
-      "explanation": "Specific binding is the whole basis of staining: the primary finds your protein, the secondary finds the primary and carries the label. Antibody biology is bench biology."
+      "explanation": "Specific binding is the whole basis of staining: the primary finds your protein, the secondary finds the primary and carries the label. Antibody biology is bench biology.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "In immunofluorescence, a primary antibody targets your protein and a labeled secondary targets the primary.",
+          "prompt": "Which antibody property makes this work?",
+          "options": [
+            "Antibodies glow on their own once applied to the tissue section",
+            "An antibody binds one specific target: primary→protein, secondary→primary",
+            "Antibodies act as enzymes that chemically develop the stain",
+            "Antibodies cut the DNA of the labeled cells to mark them"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Specific binding is the whole basis of staining: the primary finds your protein, the secondary finds the primary and carries the label."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -78,7 +95,23 @@
       "answer": [
         1
       ],
-      "reveal": "Opsonization is specifically the 'tag for eating' function. Distinguishing it from neutralization means asking whether phagocytes engulf the tagged target more readily."
+      "reveal": "Opsonization is specifically the 'tag for eating' function. Distinguishing it from neutralization means asking whether phagocytes engulf the tagged target more readily.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You want to confirm a microbe is being tagged so phagocytes engulf it more readily. Which antibody action is that?",
+          "options": [
+            "Neutralization",
+            "Opsonization",
+            "Complement lysis only",
+            "Memory formation"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Opsonization is the 'tag for eating' function — distinct from neutralization (blocking a toxin or virus) or direct complement lysis."
+        }
+      ]
     }
   ],
   "sources": [],

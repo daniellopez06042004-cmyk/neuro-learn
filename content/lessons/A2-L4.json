@@ -68,7 +68,7 @@
     {
       "type": "mcq",
       "id": "s4",
-      "prompt": "Myelin speeds conduction mainly because it…",
+      "prompt": "Why does myelin speed conduction?",
       "options": [
         "It adds extra sodium channels evenly along the whole axon length",
         "It insulates the axon so spikes jump between nodes, skipping most membrane",
@@ -83,12 +83,12 @@
         {
           "type": "predict",
           "setup": "Compare a myelinated Aβ axon and an unmyelinated C axon.",
-          "prompt": "Which carries its spike faster, and why?",
+          "prompt": "The myelinated Aβ axon conducts much faster. What is the main way myelin speeds it up?",
           "options": [
-            "The C fiber, because it is thinner",
-            "The Aβ fiber, because myelin lets spikes jump node to node",
-            "Neither; they conduct at the same speed",
-            "The Aβ fiber, because it lacks sodium channels"
+            "It adds extra sodium channels evenly along the whole axon length",
+            "It insulates the axon so spikes jump between nodes, skipping most membrane",
+            "It makes the axon thinner, which on its own speeds the signal up",
+            "It prevents Nav inactivation, so the spike never needs to reset"
           ],
           "answer": [
             1
@@ -115,12 +115,12 @@
       "variants": [
         {
           "type": "mcq",
-          "prompt": "A mutation makes Piezo2 inactivate much more slowly. A normally rapidly adapting touch neuron will now…",
+          "prompt": "A mutation makes Piezo2 inactivate much more slowly. What happens to a normally rapidly adapting touch neuron?",
           "options": [
-            "Stop responding to touch altogether",
-            "Keep firing during sustained force, more slowly-adapting",
-            "Start responding to heat instead of force",
-            "Fire in exactly the same way as before"
+            "It stops responding to force entirely once inactivation is slowed",
+            "It fires for longer under sustained force, acting more slowly-adapting",
+            "It switches over to detecting heat instead of mechanical force",
+            "Nothing changes, since inactivation speed does not affect firing"
           ],
           "answer": [
             1

@@ -63,22 +63,55 @@
       "answer": [
         1
       ],
-      "reveal": "Neutrophils are the classic early mass responders recruited from blood. Resident macrophages are already present; lymphocytes (T/B) act later and are adaptive."
+      "reveal": "Neutrophils are the classic early mass responders recruited from blood. Resident macrophages are already present; lymphocytes (T/B) act later and are adaptive.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Hours into a tissue infection, which cells have flooded in from the blood in the largest numbers?",
+          "options": [
+            "T cells",
+            "Neutrophils",
+            "B cells",
+            "Red blood cells"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Neutrophils are the classic early mass responders from blood; resident macrophages are already present, and lymphocytes act later."
+        }
+      ]
     },
     {
       "type": "mcq",
       "id": "s5",
       "prompt": "Tissue-resident macrophages are important for neuroscience partly because…",
       "options": [
-        "Because resident macrophages themselves conduct action potentials",
+        "Resident macrophages themselves conduct action potentials",
         "Macrophage-like cells reside in nervous tissue, e.g. microglia",
-        "Because they divide to replace neurons lost to injury or disease",
-        "Because macrophages are found only in blood, never within tissue"
+        "They divide to replace neurons lost to injury or disease",
+        "Macrophages are found only in blood, never within tissue"
       ],
       "answer": [
         1
       ],
-      "explanation": "The CNS has its own resident macrophage-like cells, microglia (B4), and macrophages also sit around peripheral ganglia like the DRG, a point the field increasingly emphasizes."
+      "explanation": "The CNS has its own resident macrophage-like cells, microglia (B4), and macrophages also sit around peripheral ganglia like the DRG, a point the field increasingly emphasizes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Macrophages are usually taught as resident cells of the gut, lung, liver and skin.",
+          "prompt": "Why are resident macrophages also relevant to neuroscience?",
+          "options": [
+            "Resident macrophages themselves conduct action potentials",
+            "Macrophage-like cells reside in nervous tissue, e.g. microglia",
+            "They divide to replace neurons lost to injury or disease",
+            "Macrophages are found only in blood, never within tissue"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The CNS has microglia, and macrophages also sit around peripheral ganglia like the DRG — a growing focus of the field."
+        }
+      ]
     }
   ],
   "sources": [],

@@ -60,8 +60,24 @@
       "answer": [
         1
       ],
-      "reveal": "Cutting the dorsal root removes sensory input for that segment while motor output (ventral root) is spared — the classic demonstration that the roots are functionally separate.",
-      "freeText": false
+      "reveal": "Cutting the dorsal root removes that root's sensory input (overlap from neighboring roots can mask the loss) while motor output (ventral root) is spared — the classic demonstration that the roots are functionally separate.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A dorsal root is cut at one segment. What is lost?",
+          "options": [
+            "Motor output to that segment's muscles",
+            "Sensory input from that segment's territory",
+            "Both motor and sensory equally",
+            "Nothing; the ventral root compensates"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The dorsal root is sensory; cutting it removes that root's sensory input (overlap from neighboring roots can mask the loss), while ventral (motor) output remains."
+        }
+      ]
     }
   ],
   "sources": [],

@@ -85,7 +85,24 @@
       "answer": [
         1
       ],
-      "explanation": "Mouse work is powerful, but here the wiring itself differs between species. State findings for the species you studied and flag translation as an open question. That habit will matter in your own pancreas experiments."
+      "explanation": "Mouse work is powerful, but here the wiring may differ between species: CCK acts directly on rodent acinar cells, while in humans its effect is thought to be largely vagally mediated (debated). State findings for the species you studied and flag translation as an open question. That habit will matter in your own pancreas experiments.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A mouse study shows a CCK-driven effect on acinar secretion.",
+          "prompt": "What's the careful conclusion?",
+          "options": [
+            "It definitely works the exact same way in humans too",
+            "It shows the mouse pathway; the human route may differ, so check",
+            "Mouse data are essentially useless for pancreas biology",
+            "It shows that CCK does not act on the pancreas at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "CCK acts directly on rodent acinar cells, but in humans its effect is thought to be largely vagally mediated (this is debated), so state findings for the species you studied."
+        }
+      ]
     }
   ],
   "sources": [],

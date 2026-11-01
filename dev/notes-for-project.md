@@ -1,3 +1,95 @@
+### 2026-11-01: all-track variants and slides.json imported
+
+**Imported:** all 65 changed lessons (variants on every track, 120 in all) and `slides.json` with all 40 units. The checker passes. The 5 slide DOIs check out on Crossref (Usoskin et al. is listed there as 2014, not 2015).
+
+**The slide box is now live,** since `slides.json` exists. The 5 brain slides were drawn from these Allen sections: A6 thalamus/SSp, A7 and B9 medulla (AP, NTS, DMX), D1 isocortex/HPF, D2 hypothalamus.
+
+**An independent review of all 120 variants found 35 to fix, plus some base steps with the same problems.** I made the 59 edits below on this side. **Please copy every one into your files,** or the next import will undo them. Three problems kept coming up:
+1. **The prompt no longer fits the options.** Many variants now reuse the base options, but kept their own prompt, so the stem and the options don't read as one sentence.
+2. **The setup gives the answer away,** often by restating the correct option.
+3. **The "Because…" tell.** In several base questions every distractor began "Because…" and the correct answer didn't. Please check for this in new questions.
+
+**The 59 edits** (`lesson` › `step` › field → new text, and why):
+
+**Track A**
+- `A2-L3` › `s5 › variants[0] › prompt` → "Inflammation shifts a nociceptor's Nav channels so they open at more negative voltages. What happens to its excitability?" (prompt must fit options that start "Excitability…")
+- `A2-L4` › `s4 › variants[0] › prompt` → "The myelinated Aβ axon conducts much faster. What is the main way myelin speeds it up?" (options are "It…" clauses about myelin; none says which axon is faster)
+- `A2-L4` › `s4 › prompt` → "Why does myelin speed conduction?" ("…mainly because it…" followed by "It adds…" doesn't read)
+- `A2-L4` › `s5 › variants[0] › prompt` → "A mutation makes Piezo2 inactivate much more slowly. What happens to a normally rapidly adapting touch neuron?" (prompt must fit options that start "It…")
+- `A3-L2` › `s2 › variants[0] › setup` → "Capsaicin, the active compound in chili peppers, opens TRPV1 on nociceptors." (the setup stated the answer)
+- `A3-L2` › `s2 › variants[0] › prompt` → "Why does eating chili feel hot?" (prompt must fit the "Capsaicin opens…" options)
+- `A3-L2` › `s4 › variants[0] › prompt` → "After paw inflammation, wild-type mice withdraw from merely warm stimuli. How do TRPV1-knockout mice respond after the same inflammation?" (stem gave away the result; options are outcomes)
+- `A3-L2` › `s5 › options[0]` → "TRPV1 is expressed by essentially every neuron in the body" (distractors started "Because…", the answer didn't (a tell))
+- `A3-L2` › `s5 › options[2]` → "TRPV1 is found only in muscle, which gives very clean access" (same "Because" tell)
+- `A4-L3` › `s3 › variants[0] › setup` → "The gut wall is stretched constantly as its contents move through it." (the setup repeated the correct option)
+- `A4-L3` › `s4 › variants[0] › prompt` → "Disrupting sensory Piezo2 changes gut transit. Does that prove sensory Piezo2 directly senses the stretch that drives transit?" (options are "Yes…/No…")
+- `A5-L1` › `s3 › variants[0] › prompt` → "What does that suggest about the afferents carrying it?" (options start "They are…")
+- `A5-L1` › `s3 › options[2]` → "C fibers are in fact the fastest-conducting class of axon" ("Because" tell)
+- `A5-L1` › `s3 › options[3]` → "The brain simply ignores the Aβ input from the viscera" ("Because" tell)
+
+**Track B**
+- `B1-L1` › `s5 › options[1]` → "An early innate response, but no specific or long-term immunity" (without T and B cells there is essentially none (matches the explanation))
+- `B1-L1` › `s5 › variants[0] › options[1]` → "An early innate response, but no specific or long-term immunity" (same)
+- `B1-L2` › `s5 › variants[0] › setup` → "TLR4 is best known on macrophages, where it detects bacterial LPS." (the setup gave the answer away)
+- `B1-L2` › `s5 › variants[0] › prompt` → "Why does TLR4 also matter for the nervous system?" (distractors are about TLR4)
+- `B1-L2` › `s5 › options` → ["It isn't relevant; TLRs act only in blood-borne immune cells", "Glia and some neurons also carry TLRs, so the CNS can sense danger", "TLR4 functions only in plants, not in any mammalian tissue", "TLR4 directly blocks action potentials in nearby neurons"] ("Because" tell)
+- `B1-L2` › `s5 › variants[0] › options` → ["It isn't relevant; TLRs act only in blood-borne immune cells", "Glia and some neurons also carry TLRs, so the CNS can sense danger", "TLR4 functions only in plants, not in any mammalian tissue", "TLR4 directly blocks action potentials in nearby neurons"] (same)
+- `B1-L3` › `s5 › variants[0] › setup` → "Macrophages are usually taught as resident cells of the gut, lung, liver and skin." (the setup was the answer)
+- `B1-L3` › `s5 › variants[0] › prompt` → "Why are resident macrophages also relevant to neuroscience?" (fits the options)
+- `B1-L3` › `s5 › options` → ["Resident macrophages themselves conduct action potentials", "Macrophage-like cells reside in nervous tissue, e.g. microglia", "They divide to replace neurons lost to injury or disease", "Macrophages are found only in blood, never within tissue"] ("Because" tell)
+- `B1-L3` › `s5 › variants[0] › options` → ["Resident macrophages themselves conduct action potentials", "Macrophage-like cells reside in nervous tissue, e.g. microglia", "They divide to replace neurons lost to injury or disease", "Macrophages are found only in blood, never within tissue"] (same)
+- `B2-L2` › `s4 › variants[0] › reveal` → "MHC class I displays peptides made inside the cell, including viral ones, letting cytotoxic T cells spot and kill infected cells." (T cells don't kill "from the inside")
+- `B2-L3` › `s4 › options[1]` → "An antibody binds one specific target: primary→protein, secondary→primary" ("secondary→it" was unclear)
+- `B2-L3` › `s4 › variants[0] › options[1]` → "An antibody binds one specific target: primary→protein, secondary→primary" (same)
+- `B3-L1` › `s3 › variants[0] › setup` → "Hormones like insulin travel in the blood to act on distant organs. Immune cells also secrete signaling molecules called cytokines." (copied s5's scenario and gave away "act locally")
+- `B3-L1` › `s5 › options` → ["Local concentration and receptors: nearby cells get enough signal", "Cytokines never actually act on any target cell at all", "The distant cell has already died and cannot respond", "Cytokines can act only on neurons, never on other cells"] ("Because" tell)
+- `B3-L1` › `s5 › variants[0] › options` → ["Local concentration and receptors: nearby cells get enough signal", "Cytokines never actually act on any target cell at all", "The distant cell has already died and cannot respond", "Cytokines can act only on neurons, never on other cells"] (same)
+- `B3-L2` › `s3 › variants[0] › setup` → "A cytokine binds its surface receptor and, hours later, the cell is making new proteins." ("minutes later" is too fast for new protein)
+- `B3-L2` › `s5 › variants[0] › prompt` → "A drug blocks JAK enzymes. What happens to signaling by cytokines that use JAK-STAT?" (prompt must fit the options)
+- `B3-L3` › `s4 › variants[0] › reveal` → "Lowered thresholds mean normally sub-threshold stimuli now fire nociceptors — peripheral sensitization. Central sensitization also contributes to touch-evoked pain (allodynia)." (allodynia also involves central sensitization)
+- `B3-L3` › `s4 › flag` → {"level": "simplified", "note": "Touch-evoked pain also involves central sensitization."} (same overclaim in the base)
+- `B4-L1` › `s3 › variants[0] › setup` → "Most tissues are patrolled by immune cells that arrive from the blood." (the setup restated the answer)
+- `B4-L1` › `s3 › variants[0] › prompt` → "Why does the CNS keep its own resident immune cells instead?" (fits the options)
+- `B4-L1` › `s3 › options` → ["Blood-borne immune cells are simply too small to be useful", "The blood-brain barrier limits entry, so resident surveillance is needed", "Neurons themselves already act as the brain's immune cells", "The brain has no immune needs and never faces infection"] ("Because" tell)
+- `B4-L1` › `s3 › variants[0] › options` → ["Blood-borne immune cells are simply too small to be useful", "The blood-brain barrier limits entry, so resident surveillance is needed", "Neurons themselves already act as the brain's immune cells", "The brain has no immune needs and never faces infection"] (same)
+- `B4-L3` › `s5 › variants[0] › prompt` → "A mouse lacks the complement component that tags synapses. What do you predict for its developing circuits?" (fit, and the base is flagged uncertain)
+
+**Track C**
+- `C5-L2` › `s5 › variants[0] › options` → ["hM3Dq", "hM4Di", "Neither — you need optogenetics", "Both at once"] ("to excite / to silence" glosses gave the answer away)
+- `C2-L3` › `s5 › variants[0] › prompt` → "You want to measure the branching of individual labeled afferent endings. What tamoxifen strategy fits?" (the correct option repeated the prompt)
+- `C4-L4` › `s5 › variants[0] › prompt` → "Retrograde Cre from the pancreas plus a DIO silencing-DREADD AAV. Which neurons end up with the silencing DREADD?" (expression isn't silencing (no actuator given))
+- `C5-L5` › `s6 › variants[0] › prompt` → "Before silencing pancreas-innervating sensory neurons during a glucose tolerance test, what's the honest set of outcomes to prepare for?" (the glucose readout had no antecedent)
+- `C3-L4` › `s4 › variants[0] › prompt` → "What does that tell you about the design?" (the prompt echoed the correct option)
+
+**Track D**
+- `D2-L1` › `s3 › variants[0] › prompt` → "Which division of the nervous system is it a major component of?" ("Somatic motor" isn't an autonomic branch)
+- `D2-L1` › `s3 › variants[0] › reveal` → "The vagus is the main parasympathetic nerve to the viscera; its sensory fibers (cell bodies in the nodose ganglion) carry much interoception." (nodose is a ganglion)
+- `D2-L3` › `s3 › variants[0] › prompt` → "Neurons with cell bodies in the DRG innervate a visceral organ. Are they autonomic motor neurons?" ("report" gave the answer away)
+- `D3-L1` › `s3 › variants[0] › setup` → "You're tracing a spinal nerve just outside the intervertebral foramen, distal to the DRG." (the setup gave the answer away)
+- `D2-L4` › `s3 › variants[0] › prompt` → "Recent work reports an enteric-to-DRG pathway. Why is that noteworthy?" (keeps the base's "recent work" hedge)
+- `D6-L2` › `s6 › variants[0] › prompt` → "DRG afferent fibers run in a thin sheet sandwiched between the inner circular and outer longitudinal muscle layers of the gut wall. Which structure are they alongside?" (the submucosal plexus is also between two muscle layers)
+- `D6-L2` › `s6 › setup` → "You image a colon section where DRG afferent fibers carry a reporter. Many labeled fibers run in a thin sheet sandwiched between the inner circular and outer longitudinal muscle layers." (same ambiguity)
+- `D6-L3` › `s5 › variants[0] › reveal` → "Keeping enzymes inert until the duodenum protects the gland; activation too early, inside the pancreas, is a key step in pancreatitis." ("causes pancreatitis" overstated)
+- `D6-L3` › `s6 › variants[0] › flag` → {"level": "simplified", "note": "Exocrine function can also be reduced in diabetes; the point here is that the two compartments are distinct."} (the variant lacked the base's simplified flag)
+- `D6-L4` › `s6 › variants[0] › reveal` → "CCK acts directly on rodent acinar cells, but in humans its effect is thought to be largely vagally mediated (this is debated), so state findings for the species you studied." (species difference is debated)
+- `D6-L4` › `s6 › explanation` → "Mouse work is powerful, but here the wiring may differ between species: CCK acts directly on rodent acinar cells, while in humans its effect is thought to be largely vagally mediated (debated). State findings for the species you studied and flag translation as an open question. That habit will matter in your own pancreas experiments." (same)
+- `D6-L5` › `s4 › variants[0] › reveal` → "The celiac ganglion is a sympathetic motor relay. Sensory fibers pass through it to their DRG cell bodies; some give off collaterals there, but their signal isn't relayed through it." (afferents give off collaterals in prevertebral ganglia)
+- `D6-L5` › `s4 › explanation` → "The celiac ganglion is a sympathetic relay for *motor* fibers. Sensory fibers pass through it on the way to their [[pseudounipolar]] cell bodies in the DRG (D3); some give off collaterals there, but their signal isn't relayed through it. This is why retrograde tracing from the pancreas labels DRG cell bodies." (same)
+- `D3-L2` › `s4 › variants[0] › explanation` → "The dorsal root is sensory; cutting it removes that root's sensory input (overlap from neighboring roots can mask the loss), while ventral (motor) output remains." (overlapping dermatomes)
+- `D3-L2` › `s4 › reveal` → "Cutting the dorsal root removes that root's sensory input (overlap from neighboring roots can mask the loss) while motor output (ventral root) is spared — the classic demonstration that the roots are functionally separate." (same)
+
+**Noted, not changed:** `C4-L3` › `s5` › `variants[0]` drops the Flp layer that the base step teaches. That's fine if it's on purpose.
+
+**Slides: six captions don't match what can be drawn.** Please revise these:
+- **D2 (brain):** no single coronal section contains both PVH and DMX, because they're far apart along the brain. The slide shows **PVH only**, but the caption names both. Pick one region, or change the caption.
+- **C3 (`rnascope`, Bmpr1b · Th):** in DRG, Bmpr1b and Th probably mark *separate* populations, so the dots would show little overlap. That's the opposite of the "intersection" the caption describes. Choose two markers that genuinely co-express, or make the caption say the overlap is rare and that the intersection is what the experiment targets.
+- **C11 (`drg`):** the caption says "dissociated DRG neurons", but the `drg` tissue is an intact ganglion section. Either describe it as a ganglion section, or ask for a dissociated-culture tissue with `"tissue": "request"`.
+- **B5 (`cortex-if`):** the drawing shows the normal, sparse GFAP pattern. The caption says "reactive astrocytes". Either caption it as baseline (the reference you'd compare inflammation against), or ask for a reactive version with `request`.
+- **C5 (`rnascope`, hM4Di · Fos):** with an inhibitory DREADD, Fos goes *down*. A drop in Fos is a weak check, because baseline Fos is often low. Consider an hM3Dq slide, where Fos rising is the classic check, or say the comparison is against an uninhibited control.
+- **B1 (minor):** Lyz2 is also expressed by neutrophils, so it isn't a clean macrophage marker. "Myeloid cells (Lyz2)" is more accurate.
+
+**B8 request received:** the colon wall with CGRP+ afferent endings and immune cells. I'll draw it from Zhang et al. 2022 and Wolfson et al. 2023 and add it to the library. It will also suit A8 and B6 if you want to reuse it there. Until it's drawn, B8's slide shows a placeholder.
+
 ### 2026-11-01: Track A variants imported
 
 **Imported:** all 20 changed lessons (A1–A5 variants plus your fixes to A1-L1, A1-L4 and C1-L5). The fixes check out.

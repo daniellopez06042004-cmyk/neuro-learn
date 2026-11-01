@@ -76,10 +76,10 @@
           "type": "mcq",
           "prompt": "To test whether Piezo2 carries light touch in the skin, the cleanest experiment is to…",
           "options": [
-            "Over-express TRPV1 and watch for touch changes",
-            "Conditionally delete Piezo2 in sensory neurons and test touch",
-            "Apply capsaicin to the paw and score withdrawal",
-            "Record from skeletal muscle fibers"
+            "Over-express TRPV1 and check whether touch sensitivity rises",
+            "Conditionally delete Piezo2 in sensory neurons and test light touch",
+            "Apply capsaicin to the skin and measure the withdrawal response",
+            "Record from skeletal muscle fibers rather than from the skin"
           ],
           "answer": [
             1

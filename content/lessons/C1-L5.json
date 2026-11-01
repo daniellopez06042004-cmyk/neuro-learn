@@ -43,7 +43,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Large n (here, cells) drives p down even for trivial effects, and counting cells instead of mice is pseudoreplication (C1-L3). Judge the 2% effect size and the biological n (2), not the p alone."
+      "explanation": "Large n (here, cells) drives p down even for trivial effects, and counting cells instead of mice is pseudoreplication (C1-L3). Judge the 2% effect size and the biological n (2), not the p alone.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A paper reports p = 0.001 for a 2% difference, n = 400 cells from 2 mice.",
+          "prompt": "What is the biggest concern?",
+          "options": [
+            "The p-value is simply too small to be trusted in any analysis",
+            "It's 'significant' largely because cells were counted as n; real n is 2",
+            "A 2% difference is always biologically meaningless by definition",
+            "Nothing is wrong: p < 0.05, so the finding is statistically solid"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Counting cells as n (pseudoreplication) inflates significance; the biological n is 2 mice."
+        }
+      ]
     },
     {
       "type": "match",
@@ -80,7 +97,23 @@
         1
       ],
       "reveal": "Non-overlapping SEM bars loosely suggest a difference but don't prove one (and overlapping bars don't prove no difference). Rely on the stated test, the effect size, and the biological n — not eyeballing bars.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Two groups' SEM error bars don't overlap. Does that guarantee a significant difference?",
+          "options": [
+            "Yes, non-overlapping SEM bars always guarantee significance",
+            "No; non-overlapping SEM is only a hint — you still need the test",
+            "Only when the sample size is greater than one hundred cells",
+            "Only when the bars shown are standard deviation, not SEM"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Non-overlapping SEM is a rough cue, not a test; you still need the actual statistic and the effect size."
+        }
+      ]
     }
   ],
   "sources": [],

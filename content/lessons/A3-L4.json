@@ -56,10 +56,10 @@
           "setup": "A paper silences 'TRPV1 neurons' using Trpv1-Cre with hM4Di.",
           "prompt": "What should you check first before trusting the targeting?",
           "options": [
-            "Which fluorophore the reporter used, and how bright it was",
-            "Which neurons the line marks in adults vs. its developmental lineage",
-            "How many years the authors have worked with mice",
-            "Which solvent the actuator was dissolved in"
+            "What fluorescent color was chosen for the reporter protein?",
+            "In adults, which neurons does the line actually mark?",
+            "How many years of experience did the authors have with mice?",
+            "What solvent was the actuator dissolved in before injection?"
           ],
           "answer": [
             1

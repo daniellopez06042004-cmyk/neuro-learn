@@ -60,7 +60,24 @@
         1
       ],
       "multi": false,
-      "explanation": "This is the specificity problem from C3. An intersection (e.g., a sensory-neuron [[Flp]] driver AND your Cre) restricts expression to the cells you actually mean. A [[retrograde]] AAV from the pancreas can add anatomical specificity too."
+      "explanation": "This is the specificity problem from C3. An intersection (e.g., a sensory-neuron [[Flp]] driver AND your Cre) restricts expression to the cells you actually mean. A [[retrograde]] AAV from the pancreas can add anatomical specificity too.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your Cre line also labels some non-sensory cells near the pancreas.",
+          "prompt": "What's the cleanest fix, given the lab's toolkit?",
+          "options": [
+            "Give a considerably larger dose of the actuator drug",
+            "Use Cre+Flp intersection so only sensory pancreas neurons get it",
+            "Ignore it, since those extra labeled cells probably don't matter",
+            "Switch the DREADD payload from hM3Dq over to hM4Di"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "An intersection restricts expression to cells with both drivers, excluding the off-target non-sensory cells."
+        }
+      ]
     },
     {
       "type": "troubleshoot",
@@ -94,7 +111,23 @@
         1
       ],
       "reveal": "With a confirmed manipulation and proper controls, any outcome is interpretable: an effect supports a role; a validated null says these neurons aren't necessary for this readout under these conditions. That's a real result, not a failure — which is why the manipulation check in L4 matters so much.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Before silencing pancreas-innervating sensory neurons during a glucose tolerance test, what's the honest set of outcomes to prepare for?",
+          "options": [
+            "Only a clearly positive result is even possible in this design",
+            "Glucose handling could change, not change, or shift in a subset",
+            "The mice will simply not survive the manipulation at all",
+            "The actuator guarantees that you will see a real effect"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Good design anticipates every outcome; a well-controlled null result is still a real finding."
+        }
+      ]
     }
   ],
   "sources": [

@@ -33,7 +33,24 @@
         1
       ],
       "multi": false,
-      "explanation": "The enteric nervous system is often called the gut's 'second brain' because its local circuits can drive motility reflexes autonomously — then extrinsic nerves modulate and report on it."
+      "explanation": "The enteric nervous system is often called the gut's 'second brain' because its local circuits can drive motility reflexes autonomously — then extrinsic nerves modulate and report on it.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A length of gut can still coordinate basic motility after being cut off from the brain and cord.",
+          "prompt": "Which system does that?",
+          "options": [
+            "The sympathetic chain",
+            "The enteric nervous system",
+            "The somatic motor system",
+            "The dorsal columns"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The enteric nervous system runs local reflexes like peristalsis on its own — the gut's 'second brain.'"
+        }
+      ]
     },
     {
       "type": "predict",
@@ -50,7 +67,23 @@
         1
       ],
       "reveal": "It adds a layer: the gut's own neurons can feed the spinal (DRG) sensory line, not just the wall mechanics. A fresh wrinkle in exactly your lab's circuit — and why the three systems here are worth keeping distinct.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Recent work reports an enteric-to-DRG pathway. Why is that noteworthy?",
+          "options": [
+            "It shows that the DRG is actually a part of the CNS after all",
+            "DRG afferents may get relayed enteric input, not only sense directly",
+            "It proves that the vagus nerve is entirely unnecessary here",
+            "It has nothing at all to do with how the gut is sensed"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A relay means gut sensing isn't only direct — an active question the Field Pulse enteric-DRG paper raises."
+        }
+      ]
     }
   ],
   "sources": [],

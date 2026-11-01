@@ -90,10 +90,10 @@
           "type": "mcq",
           "prompt": "Lidocaine blocks the voltage-gated Na⁺ channels along a sensory axon. You pinch the skin, but nothing is felt. Why?",
           "options": [
-            "The pinch no longer deforms the nerve ending at all",
-            "The ending still transduces, but blocked Nav stops spikes traveling",
-            "The brain actively suppresses the incoming pinch signal",
-            "The receptor potential reverses in sign and cancels itself"
+            "No receptor potential forms, since the ending can no longer depolarize",
+            "A receptor potential still forms, but no spikes travel to the spinal cord",
+            "Spikes reach the cord normally, because transduction is left untouched",
+            "The ending fires continuously, since blocking Nav removes a brake"
           ],
           "answer": [
             1

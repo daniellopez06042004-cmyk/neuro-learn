@@ -75,7 +75,24 @@
         1
       ],
       "multi": false,
-      "explanation": "To remove the neurons' contribution (a loss-of-function / necessity test), you silence them — hM4Di. hM3Dq would instead test sufficiency by driving them."
+      "explanation": "To remove the neurons' contribution (a loss-of-function / necessity test), you silence them — hM4Di. hM3Dq would instead test sufficiency by driving them.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You hypothesize that pancreas-innervating sensory neurons suppress insulin release, and you'll test it by removing their activity.",
+          "prompt": "Which DREADD fits?",
+          "options": [
+            "hM3Dq",
+            "hM4Di",
+            "Neither — you need optogenetics",
+            "Both at once"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "To test a suppressive role by loss-of-function, silence the neurons with hM4Di and watch insulin."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -91,7 +108,23 @@
         0
       ],
       "reveal": "c-Fos rises in recently-active neurons, so hM3Dq+ cells should show more than non-expressing neighbors. This is a common way to confirm the activation DREADD fired (a 'manipulation check' — more in C5-L5).",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "After exciting DREADD+ neurons, how should c-Fos compare in DREADD+ cells versus their neighbors?",
+          "options": [
+            "More c-Fos in the DREADD+ neurons",
+            "Less c-Fos in the DREADD+ neurons",
+            "Equal c-Fos everywhere",
+            "No c-Fos anywhere"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "c-Fos marks recently active neurons, so an excitatory DREADD should raise it selectively in DREADD+ cells — a manipulation check."
+        }
+      ]
     }
   ],
   "sources": [

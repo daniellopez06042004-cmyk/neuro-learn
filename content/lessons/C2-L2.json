@@ -65,7 +65,24 @@
         1
       ],
       "multi": false,
-      "explanation": "The driver (TH-[[CreER]]) restricts Cre to TH+ cells; the LSL keeps GCaMP6f off until Cre removes the STOP there. (The 'ER' + [[tamoxifen]] part — timing — is the next lesson.)"
+      "explanation": "The driver (TH-[[CreER]]) restricts Cre to TH+ cells; the LSL keeps GCaMP6f off until Cre removes the STOP there. (The 'ER' + [[tamoxifen]] part — timing — is the next lesson.)",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A TH-CreER; Rosa26-LSL-GCaMP6f mouse is given tamoxifen in adulthood.",
+          "prompt": "Which cells will express the GCaMP6f sensor?",
+          "options": [
+            "All Rosa26-expressing cells",
+            "TH-expressing cells only",
+            "No cells",
+            "Only cells given tamoxifen, regardless of TH"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "CreER needs both the TH promoter and tamoxifen, so GCaMP turns on only in TH cells active when tamoxifen was given."
+        }
+      ]
     },
     {
       "type": "troubleshoot",

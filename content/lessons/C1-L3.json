@@ -33,7 +33,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Triplicate wells are technical replicates of one animal — they measure pipetting noise, not biology. With one mouse per group, biological n = 1, and no p-value can support a claim about mice."
+      "explanation": "Triplicate wells are technical replicates of one animal — they measure pipetting noise, not biology. With one mouse per group, biological n = 1, and no p-value can support a claim about mice.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You run qPCR on cDNA from one mouse in triplicate wells, versus one control mouse, and get p < 0.01.",
+          "prompt": "What is your biological n per group?",
+          "options": [
+            "3 per group",
+            "1 per group",
+            "6 per group",
+            "9 per group"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Triplicate wells are technical replicates of one animal; the biological n is 1 per group — the stats are on noise, not biology."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -50,7 +67,23 @@
         1
       ],
       "reveal": "Three mice = biological n of 3. Imaging each twice is technical replication — average it to reduce noise, but it doesn't increase your biological n. Claims about 'what silencing does in mice' rest on the 3.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Three mice per group, each imaged twice. What is n, and what do the duplicate images give you?",
+          "options": [
+            "n = 6; the duplicate images add biological power to the study",
+            "n = 3; the duplicate images are technical replicates that cut noise",
+            "n = 2; the mice themselves count as technical replicates",
+            "n = 1; only the pooled measurement really counts here"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Biological n is the number of animals (3); repeat images reduce measurement noise but add no biological n."
+        }
+      ]
     },
     {
       "type": "troubleshoot",

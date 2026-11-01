@@ -97,10 +97,10 @@
           "setup": "The colon must report everything from gentle filling to painful over-distension.",
           "prompt": "Why can't a single afferent threshold do that?",
           "options": [
-            "One threshold would actually handle it fine",
-            "A spread of thresholds is needed to encode the whole range",
-            "Thresholds simply don't exist in the gut",
-            "The colon only ever signals pain anyway"
+            "A single threshold would actually serve the colon perfectly well",
+            "One threshold can't separate normal filling from harmful over-distension",
+            "Thresholds are a skin concept and don't exist in visceral afferents",
+            "Because the colon is only ever able to signal pain, nothing else"
           ],
           "answer": [
             1

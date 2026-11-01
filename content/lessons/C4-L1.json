@@ -40,7 +40,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Injection gives you control of location (where you put the needle) and timing (when you inject). It often works WITH a [[Cre]] line, not instead of one (lesson C4-L4)."
+      "explanation": "Injection gives you control of location (where you put the needle) and timing (when you inject). It often works WITH a [[Cre]] line, not instead of one (lesson C4-L4).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You can breed a tool in, or deliver it by AAV injection.",
+          "prompt": "What's the main advantage of the AAV route?",
+          "options": [
+            "It removes any need to run experimental control groups",
+            "Spatial and temporal control: you pick where and when it expresses",
+            "It permanently rewrites the genome of every cell in the body",
+            "It completely does away with the need for any Cre line"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Injecting an AAV lets you choose the site and the age of expression — control a from-birth bred-in allele can't give."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -57,7 +74,23 @@
         1
       ],
       "reveal": "Viral injection lets you target the pancreas pathway in adults. Combined with a Cre line and a Cre-dependent AAV (C4-L4), you get both cell-type AND spatial/temporal specificity — exactly your project's setup.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You want a DREADD expressed only near the pancreas and only in adulthood. Best approach?",
+          "options": [
+            "A bred-in allele expressed from birth everywhere the marker is on",
+            "Inject an AAV with the DREADD so expression is local and adult-timed",
+            "No delivery method is needed; the DREADD appears on its own",
+            "Give a drug alone and skip expressing any DREADD at all"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "AAV injection gives the spatial and temporal control a from-birth bred-in allele lacks."
+        }
+      ]
     }
   ],
   "sources": [

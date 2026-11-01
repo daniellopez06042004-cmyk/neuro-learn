@@ -39,7 +39,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Because the peripheral branch connects to the cell body, a retrograde virus injected into the pancreas travels back and labels exactly the neurons innervating it (the C4 logic)."
+      "explanation": "Because the peripheral branch connects to the cell body, a retrograde virus injected into the pancreas travels back and labels exactly the neurons innervating it (the C4 logic).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A DRG neuron is pseudounipolar: a peripheral branch and a central branch share one stem from the cell body.",
+          "prompt": "Why is that shape convenient for your experiments?",
+          "options": [
+            "Because the cell body itself has to be injected directly",
+            "A virus from the ending reaches the cell body, giving organ access",
+            "Because it means the neuron effectively has no axon at all",
+            "Because it blocks the neuron from ever projecting centrally"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Retrograde uptake at the organ travels to the shared cell body — how you access organ-specific neurons from the organ."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -56,7 +73,23 @@
         0
       ],
       "reveal": "The signal travels along the peripheral branch, past the DRG cell body, down the central branch, and into the spinal cord dorsal horn — where the next lesson picks up the central side.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "What path does a DRG sensory signal take to reach the CNS?",
+          "options": [
+            "Peripheral ending → past the cell body → central branch → cord",
+            "Straight from the ending into the brain, skipping the cord entirely",
+            "Ending → ventral root → out to the muscle it controls",
+            "It stays within the organ and never reaches the CNS"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The signal runs from the peripheral ending, past the off-to-the-side cell body, up the central branch into the dorsal horn."
+        }
+      ]
     }
   ],
   "sources": [],

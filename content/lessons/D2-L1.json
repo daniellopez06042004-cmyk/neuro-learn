@@ -5,7 +5,11 @@
   "minutes": 4,
   "xp": 10,
   "objective": "Contrast the sympathetic and parasympathetic branches by their roles and outflow.",
-  "tags": ["autonomic", "sympathetic", "parasympathetic"],
+  "tags": [
+    "autonomic",
+    "sympathetic",
+    "parasympathetic"
+  ],
   "confidence": "high",
   "steps": [
     {
@@ -20,9 +24,18 @@
       "id": "s2",
       "prompt": "Match the branch to its lean.",
       "pairs": [
-        ["Sympathetic", "Mobilize — faster heart, slowed digestion"],
-        ["Parasympathetic", "Rest & digest — promotes gut activity"],
-        ["Both", "Most organs receive dual innervation"]
+        [
+          "Sympathetic",
+          "Mobilize — faster heart, slowed digestion"
+        ],
+        [
+          "Parasympathetic",
+          "Rest & digest — promotes gut activity"
+        ],
+        [
+          "Both",
+          "Most organs receive dual innervation"
+        ]
       ],
       "explanation": "They're not strictly on/off opposites, but the 'mobilize vs restore' framing captures the usual balance."
     },
@@ -30,10 +43,34 @@
       "type": "mcq",
       "id": "s3",
       "prompt": "The vagus nerve is a major component of which branch?",
-      "options": ["Sympathetic", "Parasympathetic", "Somatic", "Neither"],
-      "answer": [1],
+      "options": [
+        "Sympathetic",
+        "Parasympathetic",
+        "Somatic",
+        "Neither"
+      ],
+      "answer": [
+        1
+      ],
       "multi": false,
-      "explanation": "The vagus is the body's main parasympathetic nerve. (Its SENSORY fibers, with cell bodies in the nodose ganglion, are a separate story — covered in D2-L3.)"
+      "explanation": "The vagus is the body's main parasympathetic nerve. (Its SENSORY fibers, with cell bodies in the nodose ganglion, are a separate story — covered in D2-L3.)",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The vagus nerve is a major visceral nerve.",
+          "prompt": "Which division of the nervous system is it a major component of?",
+          "options": [
+            "Sympathetic",
+            "Parasympathetic",
+            "Somatic motor",
+            "Enteric only"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The vagus is the main parasympathetic nerve to the viscera; its sensory fibers (cell bodies in the nodose ganglion) carry much interoception."
+        }
+      ]
     }
   ],
   "sources": [],

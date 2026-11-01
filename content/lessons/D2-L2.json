@@ -45,7 +45,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Both are PNS ganglia, but they do opposite jobs: autonomic ganglia relay motor output; the DRG houses sensory (afferent) cell bodies. Same word, different direction of information."
+      "explanation": "Both are PNS ganglia, but they do opposite jobs: autonomic ganglia relay motor output; the DRG houses sensory (afferent) cell bodies. Same word, different direction of information.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Autonomic ganglia hold the cell bodies of motor (efferent) neurons.",
+          "prompt": "How does the DRG differ?",
+          "options": [
+            "It doesn't differ; the two kinds of ganglia are identical",
+            "The DRG holds sensory (afferent) cell bodies, not motor ones",
+            "The DRG holds postganglionic autonomic motor neurons",
+            "Autonomic ganglia sit inside the CNS, unlike the DRG"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The DRG is a sensory ganglion; autonomic ganglia are motor relays — same word 'ganglion,' different job."
+        }
+      ]
     }
   ],
   "sources": [],

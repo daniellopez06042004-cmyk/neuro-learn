@@ -39,7 +39,24 @@
         0
       ],
       "multi": false,
-      "explanation": "A known-positive tissue tests whether the whole assay can produce signal. If even it is blank, the protocol failed — so 'no signal' in your samples tells you nothing yet. Secondary-only guards against false positives, not false negatives."
+      "explanation": "A known-positive tissue tests whether the whole assay can produce signal. If even it is blank, the protocol failed — so 'no signal' in your samples tells you nothing yet. Secondary-only guards against false positives, not false negatives.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your immunostain shows no signal in any sample.",
+          "prompt": "Which control tells you whether the staining could have worked at all?",
+          "options": [
+            "A tissue known to express the target (positive control)",
+            "A secondary-antibody-only slide (negative control)",
+            "An unstained slide carried through the same buffers",
+            "The DAPI nuclear channel on the same section"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "A positive control (tissue that should stain) separates 'the technique failed' from 'the target is truly absent.'"
+        }
+      ]
     },
     {
       "type": "predict",
@@ -56,7 +73,23 @@
         1
       ],
       "reveal": "A DREADD-free + actuator group is a negative control: it isolates whether the actuator does anything on its own (the CNO→clozapine problem from C5). If it shows an effect, your DREADD result is confounded.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A group receives the actuator but carries no DREADD. What is its job?",
+          "options": [
+            "It's the experimental group that tests your hypothesis directly",
+            "A negative control: any effect here is the drug's own, not neurons'",
+            "It's a positive control, confirming the assay can detect an effect",
+            "It has no real purpose and could be dropped from the design"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "The DREADD-free + actuator group isolates drug-only effects (e.g. CNO→clozapine), so a true neuronal effect can be claimed."
+        }
+      ]
     }
   ],
   "sources": [],

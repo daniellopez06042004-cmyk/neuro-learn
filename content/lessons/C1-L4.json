@@ -40,7 +40,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Hand-scoring is subjective, so the scorer's expectation can bias it — exactly where blinding pays off. Fully automated, objective readouts are less vulnerable (though blinding still helps downstream analysis choices)."
+      "explanation": "Hand-scoring is subjective, so the scorer's expectation can bias it — exactly where blinding pays off. Fully automated, objective readouts are less vulnerable (though blinding still helps downstream analysis choices).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You're deciding where blinding matters most in a study.",
+          "prompt": "Which readout benefits most from a blinded scorer?",
+          "options": [
+            "An automated plate-reader absorbance",
+            "Hand-scored pain behaviors from video",
+            "A machine-counted cell tally",
+            "Raw qPCR Ct values"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Subjective, human-scored measures are the most bias-prone; automated numeric readouts are far less so."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -57,7 +74,23 @@
         1
       ],
       "reveal": "Any week-to-week difference (reagents, health, your technique) is now baked into the 'treatment' effect, and unblinded scoring can nudge it further. Interleave groups within each session and blind the scorer.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Treated mice ran in week 1, controls in week 2, and scoring wasn't blinded. Why is even a 'significant' result hard to interpret?",
+          "options": [
+            "There's no problem; the two weeks act as independent replicates",
+            "Treatment is confounded with week/batch, and unblinded scoring adds bias",
+            "You simply used too many mice, which inflates the significance",
+            "The actuator cannot possibly work across two different weeks"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "You can't separate the treatment from the week/batch, and unblinded scoring can skew it — confounds, not biology."
+        }
+      ]
     }
   ],
   "sources": [],

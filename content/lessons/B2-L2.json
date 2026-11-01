@@ -68,7 +68,24 @@
       "answer": [
         1
       ],
-      "explanation": "MHC class I shows internal (including viral) peptides, letting cytotoxic T cells detect and kill infected cells, surveillance from the inside."
+      "explanation": "MHC class I shows internal (including viral) peptides, letting cytotoxic T cells detect and kill infected cells, surveillance from the inside.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A virus is replicating inside a skin cell.",
+          "prompt": "How can the immune system tell that cell is infected?",
+          "options": [
+            "It can't be detected until the cell bursts and releases the virus",
+            "It shows viral peptides on MHC class I, which cytotoxic T cells read",
+            "Antibodies slip inside the cell and bind the virus within it",
+            "Neutrophils read the cell's DNA to detect the viral infection"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "MHC class I displays peptides made inside the cell, including viral ones, letting cytotoxic T cells spot and kill infected cells."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -87,7 +104,24 @@
       "flag": {
         "level": "simplified",
         "note": "Transplant immunology is more complex; this is the core reason MHC matters there."
-      }
+      },
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Transplanted tissue is often rejected by the recipient's T cells.",
+          "prompt": "What about MHC explains this?",
+          "options": [
+            "It doesn't; MHC has no bearing on transplanted tissue at all",
+            "MHC differs between individuals, so T cells see foreign MHC on a graft",
+            "MHC is a drug given to patients to prevent organ rejection",
+            "MHC matters only in laboratory mice, not in human transplants"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The 'histocompatibility' in MHC is literal — MHC differences drive rejection, which is how these molecules were discovered."
+        }
+      ]
     }
   ],
   "sources": [],

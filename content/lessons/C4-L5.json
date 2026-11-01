@@ -66,7 +66,23 @@
         1
       ],
       "reveal": "Clean expression is necessary but not sufficient. You still need the manipulation check (did the DREADD actually fire/silence?) and the DREADD-vs-actuator control grid from C5 before attributing any readout to these neurons.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Expression looks clean. What's the right next step before drawing any biological conclusion?",
+          "options": [
+            "Publish the result right away while the expression still looks clean",
+            "Run the manipulation check and full control set before interpreting it",
+            "Increase the injected virus tenfold and simply repeat the run",
+            "Skip the control groups, since expression already looks clean"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Confirm the DREADD actually fired and run the control set before interpreting any effect."
+        }
+      ]
     }
   ],
   "sources": [

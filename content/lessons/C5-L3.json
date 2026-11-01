@@ -51,7 +51,24 @@
         1
       ],
       "multi": false,
-      "explanation": "If the actuator itself alters behavior, you can't cleanly attribute an effect to your neurons. That's exactly why a DREADD-free + actuator control is essential (next lesson)."
+      "explanation": "If the actuator itself alters behavior, you can't cleanly attribute an effect to your neurons. That's exactly why a DREADD-free + actuator control is essential (next lesson).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "CNO can back-convert to clozapine in the body.",
+          "prompt": "Why does that threaten a DREADD experiment?",
+          "options": [
+            "Clozapine is inert, so it only dilutes the effective dose of CNO",
+            "Clozapine has its own CNS effects, so a drug-only change may mislead",
+            "The conversion makes the DREADD receptor itself stop working",
+            "It matters only in cell culture, never in a living animal"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "If the actuator itself alters the brain, you can't attribute an effect to your neurons without a DREADD-free control."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -91,7 +108,22 @@
         1
       ],
       "reveal": "A signal in the DREADD-free + actuator group is the actuator's own footprint. You must subtract/account for it — or lower the dose / switch actuator — before claiming your neurons did anything.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "In a DREADD-free group, the actuator alone produces the same behavioral change. What does that tell you?",
+          "options": [
+            "Your neurons must clearly have caused the observed effect",
+            "The actuator has its own effect, so the result is confounded",
+            "The DREADD is working exactly as intended in this case"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "An actuator-alone effect means you can't credit your neurons until you account for it."
+        }
+      ]
     }
   ],
   "sources": [

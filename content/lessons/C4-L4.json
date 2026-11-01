@@ -53,7 +53,24 @@
         1
       ],
       "multi": false,
-      "explanation": "DIO needs Cre to flip it on. So expression = (virus got in) AND (cell is Cre+). The Cre line adds cell-type specificity to the spatial specificity of the injection."
+      "explanation": "DIO needs Cre to flip it on. So expression = (virus got in) AND (cell is Cre+). The Cre line adds cell-type specificity to the spatial specificity of the injection.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You inject AAV-DIO-hM3Dq broadly into a TrkB-Cre mouse.",
+          "prompt": "Where does the DREADD express?",
+          "options": [
+            "Every single cell that the virus managed to enter",
+            "Only the TrkB-Cre+ cells that the virus also entered",
+            "Only the non-neuronal cells around the injection site",
+            "Nowhere, because DIO blocks all expression entirely"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "DIO payloads need Cre to flip on, so expression is the intersection of 'virus reached it' and 'Cre+.'"
+        }
+      ]
     },
     {
       "type": "match",
@@ -94,7 +111,23 @@
         1
       ],
       "reveal": "Retrograde Cre marks the pancreas-projecting neurons; the DIO-hM4Di turns on only where Cre is present. The intersection = pancreas-projecting DRG neurons carrying the DREADD. This is a clean, composable targeting strategy for your project.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Retrograde Cre from the pancreas plus a DIO silencing-DREADD AAV. Which neurons end up with the silencing DREADD?",
+          "options": [
+            "All DRG neurons, regardless of where their axons project",
+            "DRG neurons projecting to pancreas that also received the DIO virus",
+            "Only the pancreatic acinar cells right near the injection",
+            "None at all; this two-part system cannot express anything"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Two requirements intersect: retrograde Cre (projects to pancreas) and the DIO virus being present."
+        }
+      ]
     }
   ],
   "sources": [

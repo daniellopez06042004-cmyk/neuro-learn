@@ -65,7 +65,24 @@
       ],
       "multi": false,
       "explanation": "A Cre+Flp-dependent payload is an AND-gate: two features must coincide. For an ablation (testing necessity), that tightness matters — you don't want to kill off-target cells.",
-      "followUp": "You've now decoded both a simple and an [[intersectional genetics|intersectional]] panel from the same paper."
+      "followUp": "You've now decoded both a simple and an [[intersectional genetics|intersectional]] panel from the same paper.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A paper uses a Cre+Flp-dependent ablation tool.",
+          "prompt": "What does that tell you about the design?",
+          "options": [
+            "It's a single-marker experiment using just one driver",
+            "It's intersectional: two drivers gate the ablation for specificity",
+            "It uses no drivers at all, expressing the tool everywhere",
+            "It's only a reporter experiment, with no manipulation"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Needing both Cre and Flp is the hallmark of an intersectional (AND-gated) strategy for tighter specificity."
+        }
+      ]
     }
   ],
   "sources": [

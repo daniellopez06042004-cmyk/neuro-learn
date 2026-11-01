@@ -94,10 +94,10 @@
           "setup": "A patient reports a cramp 'somewhere in my belly' but can't point to where.",
           "prompt": "What best explains the vagueness?",
           "options": [
-            "Belly organs send no pain signals to the cord at all",
-            "Sparse visceral afferents with large fields converge with skin input",
-            "The sensation is purely emotional rather than sensory",
-            "Only fast Aβ fibers carry it, and they blur the location"
+            "The colon has essentially no sensory neurons of its own to report with",
+            "Visceral afferents are sparse, with large fields that converge with skin input",
+            "Colon pain travels only by the vagus, which carries no spatial information",
+            "Colon afferents fire too fast for the cord to resolve their position"
           ],
           "answer": [
             1

@@ -33,7 +33,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Smooth muscle and glands are autonomic territory (with heavy local control by the gut's own enteric system). Skeletal muscle you move on purpose is somatic."
+      "explanation": "Smooth muscle and glands are autonomic territory (with heavy local control by the gut's own enteric system). Skeletal muscle you move on purpose is somatic.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "During digestion, the gut's smooth muscle contracts rhythmically.",
+          "prompt": "Which division governs that?",
+          "options": [
+            "Somatic",
+            "Autonomic",
+            "Neither; it is voluntary",
+            "The special senses"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Smooth-muscle and visceral control is autonomic; somatic motor drives skeletal muscle."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -49,7 +66,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Visceral sensation is its own thing: the signal comes from autonomic-innervated organs but is carried by sensory (afferent) neurons. D2 separates 'autonomic = motor output' from 'visceral afferents = sensory'."
+      "explanation": "Visceral sensation is its own thing: the signal comes from autonomic-innervated organs but is carried by sensory (afferent) neurons. D2 separates 'autonomic = motor output' from 'visceral afferents = sensory'.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A neuron reports painful distension from the colon.",
+          "prompt": "Which division does its sensory signal belong to?",
+          "options": [
+            "Somatic sensation, cleanly and without any ambiguity",
+            "A visceral afferent: autonomic-related but still sensory",
+            "Autonomic motor output directed to the colon wall",
+            "It isn't carried by a neuron at all, strictly speaking"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "It's a visceral (interior) afferent: related to autonomic targets but sensory — the next unit untangles this."
+        }
+      ]
     }
   ],
   "sources": [],

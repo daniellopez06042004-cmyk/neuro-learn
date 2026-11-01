@@ -44,7 +44,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Sparse visceral innervation plus convergence onto the same dorsal-horn levels as somatic input makes precise localization impossible — the basis of referred pain."
+      "explanation": "Sparse visceral innervation plus convergence onto the same dorsal-horn levels as somatic input makes precise localization impossible — the basis of referred pain.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Visceral pain is felt as a vague, broad region rather than a precise point.",
+          "prompt": "Why?",
+          "options": [
+            "Because internal organs have essentially no sensory innervation at all",
+            "Visceral afferents are sparse and converge with skin, blurring location",
+            "Because that visceral pain is imaginary rather than genuinely real",
+            "Only the vagus carries it, and the vagus is unable to localize"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Sparse innervation, large fields, and convergence with somatic input blur localization — the basis of referred pain."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -61,7 +78,23 @@
         1
       ],
       "reveal": "Retrograde labeling from the organ reveals the actual levels empirically (C4), rather than assuming. Pancreatic spinal afferents are generally thoracic/splanchnic, but confirm the specific levels for your line and prep before planning injections.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "You need the DRG levels that innervate the pancreas. What's the right way to pin them down?",
+          "options": [
+            "Just assume they are the same spinal levels as the colon afferents",
+            "Retrograde-label from the pancreas and check the literature, don't guess",
+            "They must be cervical, since the pancreas sits in the upper body",
+            "The exact levels simply don't matter for a viral injection"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Retrograde labeling reveals the actual levels empirically; don't guess, and confirm against the primary literature."
+        }
+      ]
     }
   ],
   "sources": [],

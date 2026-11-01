@@ -51,8 +51,8 @@
       "options": [
         "By a strict rule, the viscera are permitted to have only C fibers",
         "Visceral afferents are mostly thin, unmyelinated C fibers, hence slow",
-        "Because C fibers are in fact the fastest-conducting class of axon",
-        "Because the brain simply ignores the Aβ input from the viscera"
+        "C fibers are in fact the fastest-conducting class of axon",
+        "The brain simply ignores the Aβ input from the viscera"
       ],
       "answer": [
         1
@@ -62,7 +62,7 @@
         {
           "type": "predict",
           "setup": "Most gut and pancreas sensation arrives slowly.",
-          "prompt": "Which fiber type best fits that?",
+          "prompt": "What does that suggest about the afferents carrying it?",
           "options": [
             "They are thick, myelinated Aβ fibers",
             "They are mostly thin, unmyelinated C fibers",
@@ -96,10 +96,10 @@
           "type": "mcq",
           "prompt": "You record a fast, myelinated afferent. Before labeling it a 'touch' fiber, you should check…",
           "options": [
-            "Which dye color was used to fill it",
+            "Which dye was used to fill and label the fiber",
             "What stimuli actually drive it, since speed isn't modality",
-            "How old the recorded mouse was",
-            "Only the temperature of the room"
+            "How old the mouse was at the time of recording",
+            "The temperature of the recording chamber that day"
           ],
           "answer": [
             1

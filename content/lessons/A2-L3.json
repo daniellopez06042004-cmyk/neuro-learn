@@ -83,12 +83,12 @@
       "variants": [
         {
           "type": "mcq",
-          "prompt": "Inflammation shifts a nociceptor's Nav channels so they open at more negative voltages. The neuron becomes…",
+          "prompt": "Inflammation shifts a nociceptor's Nav channels so they open at more negative voltages. What happens to its excitability?",
           "options": [
-            "Less excitable, since spikes are harder to trigger",
-            "More excitable, since weaker stimuli now reach threshold",
-            "Unchanged in its excitability",
-            "Permanently unable to fire at all"
+            "Excitability decreases, because the shift makes spikes harder to trigger",
+            "Excitability increases: the effective threshold drops, so weak stimuli fire it",
+            "No change, since a shift that small cannot affect the firing threshold",
+            "The neuron can no longer fire, since its Nav channels stay inactivated"
           ],
           "answer": [
             1

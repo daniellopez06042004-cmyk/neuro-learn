@@ -67,7 +67,24 @@
       "answer": [
         1
       ],
-      "explanation": "Finding and expanding the right clone takes days. Pre-existing memory cells skip most of that on re-exposure, the basis of immunological memory and vaccination."
+      "explanation": "Finding and expanding the right clone takes days. Pre-existing memory cells skip most of that on re-exposure, the basis of immunological memory and vaccination.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The same antigen is met twice, a few weeks apart.",
+          "prompt": "Why is the second response faster than the first?",
+          "options": [
+            "The body forgets the pathogen entirely between the two exposures",
+            "First time, rare matching clones must be found and grown; later, memory waits",
+            "Because antibodies made the first time decay away almost instantly",
+            "Because the innate system actively blocks the first adaptive response"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Finding and expanding the right clone takes days the first time; pre-existing memory skips most of that on re-exposure."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -83,7 +100,23 @@
       "answer": [
         1
       ],
-      "reveal": "Memory B cells make the recall response faster and larger. That difference is the signature of adaptive memory."
+      "reveal": "Memory B cells make the recall response faster and larger. That difference is the signature of adaptive memory.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Compared with the first exposure, the antibody response to a second exposure of the same antigen is…",
+          "options": [
+            "Weaker and slower",
+            "Faster and stronger",
+            "Exactly the same",
+            "Completely absent"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Memory B cells make the recall response faster and larger — the signature of adaptive memory and the basis of vaccination."
+        }
+      ]
     }
   ],
   "sources": [],

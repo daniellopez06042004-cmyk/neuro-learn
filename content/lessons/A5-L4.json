@@ -62,10 +62,10 @@
           "setup": "A paper shows a UMAP with 12 DRG clusters.",
           "prompt": "On its own, what does that plot establish?",
           "options": [
-            "Exactly what job each cluster performs",
-            "That neurons group by expression — but not their function",
-            "The conduction speed of each cluster",
-            "Where each cluster sends its axons"
+            "Exactly what job each of the twelve clusters carries out",
+            "That neurons differ in expression and group, but not their function",
+            "The conduction velocity of every neuron within each cluster",
+            "Where each cluster's neurons send their axons in the body"
           ],
           "answer": [
             1

@@ -47,7 +47,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Retrograde uptake selects for neurons whose terminals are at the injection site — anatomical specificity by connectivity, not just by marker."
+      "explanation": "Retrograde uptake selects for neurons whose terminals are at the injection site — anatomical specificity by connectivity, not just by marker.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You inject a retrograde AAV into the pancreas.",
+          "prompt": "Why does this reach pancreas-innervating DRG neurons specifically?",
+          "options": [
+            "Because it enters every cell in the body indiscriminately once injected",
+            "It's taken up at pancreatic terminals and carried to those cell bodies",
+            "Because a retrograde virus can only ever work inside the brain",
+            "Because it removes any need to inject the virus anywhere at all"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Retrograde AAV enters axon terminals in the organ and travels to the cell bodies of exactly the neurons that innervate it."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -71,7 +88,23 @@
         1
       ],
       "reveal": "Retrograde transport carries the FlpO back to the cell bodies of neurons innervating the pancreas; the Flp-dependent DREADD then switches on there. Layering a Cre line on top (intersection) can further restrict it to the sensory subtype you want.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "After a retrograde DREADD AAV in the pancreas, where should the DREADD end up?",
+          "options": [
+            "In all the pancreatic cells located near the injection site",
+            "In the DRG (and maybe vagal) neurons with terminals in the pancreas",
+            "Only in the spinal cord, well away from the injection site",
+            "Nowhere at all, since retrograde virus expresses no payload"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Retrograde uptake carries the payload to the sensory cell bodies whose terminals were in the injected pancreas."
+        }
+      ]
     }
   ],
   "sources": [

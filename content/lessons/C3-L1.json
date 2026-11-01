@@ -34,7 +34,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Flp is specific to FRT; Cre is specific to loxP. Their independence is the whole point — it lets you run two genetic 'conditions' at once."
+      "explanation": "Flp is specific to FRT; Cre is specific to loxP. Their independence is the whole point — it lets you run two genetic 'conditions' at once.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your STOP cassette is flanked by loxP sites.",
+          "prompt": "Will Flp recombinase remove it?",
+          "options": [
+            "Yes, Flp cuts loxP too",
+            "No — Flp only recognizes FRT sites",
+            "Only if tamoxifen is added",
+            "Only inside the nucleus"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Each recombinase is site-specific: Cre↔loxP, Flp↔FRT. Flp ignores loxP sites."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -58,7 +75,23 @@
         1
       ],
       "reveal": "No. Requiring both recombinases makes an AND-gate: only cells with Cre AND Flp express the payload. A cell with just one stays off. This is '[[intersectional genetics]]' — next lesson.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A payload needs both Cre and Flp (an AND-gate). A cell has Cre but no Flp. Does it turn on?",
+          "options": [
+            "Yes",
+            "No — it needs both",
+            "Only partially",
+            "Only with tamoxifen"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "AND-gating requires both; a single recombinase leaves the payload off — the basis of intersectional specificity."
+        }
+      ]
     }
   ],
   "sources": [

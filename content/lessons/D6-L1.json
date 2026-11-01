@@ -51,7 +51,24 @@
       "answer": [
         1
       ],
-      "explanation": "The pancreatic duct empties into the duodenum, usually alongside the bile duct. Enzymes and bicarbonate arrive right where acidic stomach contents enter the small intestine."
+      "explanation": "The pancreatic duct empties into the duodenum, usually alongside the bile duct. Enzymes and bicarbonate arrive right where acidic stomach contents enter the small intestine.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The pancreatic duct drains digestive enzymes and bicarbonate.",
+          "prompt": "Where do they enter the gut?",
+          "options": [
+            "The stomach",
+            "The duodenum",
+            "The ileum",
+            "The colon"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The pancreatic duct empties into the duodenum, right where acidic stomach contents arrive."
+        }
+      ]
     },
     {
       "type": "match",

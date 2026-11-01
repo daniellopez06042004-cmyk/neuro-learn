@@ -58,10 +58,10 @@
           "type": "mcq",
           "prompt": "Ca²⁺ enters a nociceptor ending through a TRP channel. Beyond carrying charge, what can that Ca²⁺ do?",
           "options": [
-            "Nothing; Ca²⁺ only ever carries current",
-            "Act as a second messenger, e.g. triggering peptide release",
-            "Permanently block the ending's Nav channels",
-            "Convert the sensory ending into a motor terminal"
+            "Nothing further, since Ca²⁺ only carries charge like any cation",
+            "Act as a signal inside the cell, e.g. triggering peptide release",
+            "Block the ending's action potentials by closing its Nav channels",
+            "Hyperpolarize the cell by directly activating calcium pumps"
           ],
           "answer": [
             1

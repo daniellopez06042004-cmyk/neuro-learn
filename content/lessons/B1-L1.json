@@ -61,7 +61,24 @@
       "answer": [
         1
       ],
-      "explanation": "Fast, non-specific inflammation with no antibodies yet is the innate response. Antibodies (adaptive) take days on first exposure."
+      "explanation": "Fast, non-specific inflammation with no antibodies yet is the innate response. Antibodies (adaptive) take days on first exposure.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A cut turns red, warm and swollen within an hour — long before any antibody could be made.",
+          "prompt": "Which arm of immunity is responding?",
+          "options": [
+            "The adaptive arm",
+            "The innate arm",
+            "Neither arm has engaged yet",
+            "Only circulating memory cells"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Fast, non-specific inflammation with no antibodies yet is the innate response; adaptive antibodies take days on a first exposure."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -70,14 +87,30 @@
       "prompt": "What do you expect on first exposure to a common microbe?",
       "options": [
         "No response at all, since every arm of immunity has been removed",
-        "An early innate response, but weak specific and long-term immunity",
+        "An early innate response, but no specific or long-term immunity",
         "Perfect immunity, as the innate system fully compensates for the loss",
         "Only antibody production, with no inflammation or phagocyte activity"
       ],
       "answer": [
         1
       ],
-      "reveal": "Innate defenses still work, so there's an early response, but without adaptive cells the animal can't mount specific, memory-based immunity. This is roughly the situation in some immunodeficient mouse strains."
+      "reveal": "Innate defenses still work, so there's an early response, but without adaptive cells the animal can't mount specific, memory-based immunity. This is roughly the situation in some immunodeficient mouse strains.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A mouse lacking all T and B cells meets a common microbe for the first time. What happens?",
+          "options": [
+            "No response at all, since every arm of immunity has been removed",
+            "An early innate response, but no specific or long-term immunity",
+            "Perfect immunity, as the innate system fully compensates for the loss",
+            "Only antibody production, with no inflammation or phagocyte activity"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Innate defenses still fire, giving an early response; without adaptive cells there is no specific, memory-based immunity."
+        }
+      ]
     }
   ],
   "sources": [],

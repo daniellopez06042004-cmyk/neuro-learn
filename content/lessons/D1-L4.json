@@ -57,7 +57,24 @@
         1
       ],
       "multi": false,
-      "explanation": "'Ganglion' = PNS cell bodies. The [[nodose ganglion]] holds vagal sensory cell bodies — the vagal counterpart of the DRG, which you'll meet in D2."
+      "explanation": "'Ganglion' = PNS cell bodies. The [[nodose ganglion]] holds vagal sensory cell bodies — the vagal counterpart of the DRG, which you'll meet in D2.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You read 'nodose ganglion' in a paper.",
+          "prompt": "What does the word 'ganglion' immediately tell you?",
+          "options": [
+            "That it's a bundle of axons traveling within the brain",
+            "That it's a cluster of neuronal cell bodies out in the PNS",
+            "That it's a specific part of the spinal cord itself",
+            "That it's a particular type of glial support cell"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Ganglion = a cluster of neuronal cell bodies in the PNS (a 'nucleus' is the CNS equivalent)."
+        }
+      ]
     }
   ],
   "sources": [],

@@ -42,7 +42,23 @@
         1
       ],
       "reveal": "They're sensory. The organ is under autonomic motor control, but these DRG neurons only *report* from it. Keeping 'autonomic = motor out' vs 'visceral afferent = sensory in' straight is essential for reading this literature.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Neurons with cell bodies in the DRG innervate a visceral organ. Are they autonomic motor neurons?",
+          "options": [
+            "Yes, they are sympathetic motor neurons to the organ",
+            "No; they're sensory neurons that report from a visceral organ",
+            "Yes, they are parasympathetic motor neurons to the gut",
+            "No; they are skeletal motor neurons that drive muscle"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Sensing and autonomic motor control are separate populations; DRG visceral afferents are sensory."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -58,7 +74,24 @@
         1
       ],
       "multi": false,
-      "explanation": "The nodose ganglion holds vagal sensory cell bodies, as the DRG holds spinal sensory cell bodies. The division of labor between them (vagal = more proximal gut; DRG = throughout, denser distally) is a live research question."
+      "explanation": "The nodose ganglion holds vagal sensory cell bodies, as the DRG holds spinal sensory cell bodies. The division of labor between them (vagal = more proximal gut; DRG = throughout, denser distally) is a live research question.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The DRG holds the cell bodies of spinal visceral afferents.",
+          "prompt": "What's the vagal counterpart for visceral sensation?",
+          "options": [
+            "The celiac ganglion",
+            "The nodose ganglion",
+            "The dorsal horn",
+            "The sympathetic chain"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Vagal sensory cell bodies sit in the nodose ganglion, the vagal analog of the DRG."
+        }
+      ]
     }
   ],
   "sources": [],

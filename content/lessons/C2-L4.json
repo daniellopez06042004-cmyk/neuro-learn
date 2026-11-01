@@ -58,7 +58,24 @@
         2
       ],
       "multi": false,
-      "explanation": "Necessity = remove the cells and see if the behavior is lost. Ablation tools do that. (Silencing with hM4Di is a reversible alternative — covered in C5.)"
+      "explanation": "Necessity = remove the cells and see if the behavior is lost. Ablation tools do that. (Silencing with hM4Di is a reversible alternative — covered in C5.)",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You want to test whether a colon afferent subtype is necessary for a high-force distension behavior.",
+          "prompt": "Which payload fits?",
+          "options": [
+            "A reporter such as tdTomato",
+            "An ablation tool (DTR+DTX or Caspase3)",
+            "A calcium sensor such as GCaMP",
+            "A brighter GFP variant"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Necessity means remove the cells and see if the behavior fails — that's an ablation tool, not a reporter or sensor."
+        }
+      ]
     },
     {
       "type": "concept",

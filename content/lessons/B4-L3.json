@@ -48,7 +48,24 @@
       "answer": [
         1
       ],
-      "explanation": "'Use it or lose it': weaker, less-active synapses are more likely to be tagged and pruned, refining circuits based on activity."
+      "explanation": "'Use it or lose it': weaker, less-active synapses are more likely to be tagged and pruned, refining circuits based on activity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Developmental synaptic pruning is described as 'activity-dependent'.",
+          "prompt": "What does that mean?",
+          "options": [
+            "All synapses are removed equally, whatever their activity",
+            "Less-active synapses are preferentially tagged and removed",
+            "Only the strongest, most-active synapses are removed",
+            "Activity plays no role in what survives"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "'Use it or lose it': weaker, less-active synapses are more likely to be tagged and pruned, refining circuits by activity."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -63,7 +80,24 @@
       "answer": [
         1
       ],
-      "explanation": "Same logic, different target: a molecular tag marks the item (microbe or synapse) and a phagocyte (macrophage or microglion) removes it. Immunology concepts recur in neuroscience."
+      "explanation": "Same logic, different target: a molecular tag marks the item (microbe or synapse) and a phagocyte (macrophage or microglion) removes it. Immunology concepts recur in neuroscience.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Complement tags weak synapses; antibodies opsonize microbes.",
+          "prompt": "How are these two processes alike?",
+          "options": [
+            "Both edit the target's DNA",
+            "Both tag a target so a phagocyte engulfs it",
+            "Both produce circulating antibodies",
+            "They are unrelated and only look similar"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Same logic, different target: a molecular tag marks the item and a phagocyte (microglion or macrophage) removes it."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -83,7 +117,23 @@
       "flag": {
         "level": "uncertain",
         "note": "Phenotypes depend on the specific component, region and developmental stage."
-      }
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A mouse lacks the complement component that tags synapses. What do you predict for its developing circuits?",
+          "options": [
+            "More aggressive pruning, stripping away even active synapses",
+            "Reduced pruning, so surplus synapses may linger in the circuit",
+            "No synapses form at all in the developing circuit",
+            "Neurons die immediately once the component is removed"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Lose the 'eat me' tag and pruning weakens, so excess synapses persist — the loss-of-function test of the model."
+        }
+      ]
     }
   ],
   "sources": [

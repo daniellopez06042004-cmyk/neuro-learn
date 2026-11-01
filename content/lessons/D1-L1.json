@@ -40,7 +40,24 @@
         1
       ],
       "multi": false,
-      "explanation": "The spinal cord (with the brain) is the CNS. Ganglia and named nerves — including the DRG, sciatic, and vagus — are PNS."
+      "explanation": "The spinal cord (with the brain) is the CNS. Ganglia and named nerves — including the DRG, sciatic, and vagus — are PNS.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You're sorting structures into CNS versus PNS.",
+          "prompt": "Which of these belongs to the CNS?",
+          "options": [
+            "The dorsal root ganglion",
+            "The spinal cord",
+            "The sciatic nerve",
+            "The nodose ganglion"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The CNS is the brain and spinal cord; ganglia and peripheral nerves are PNS."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -56,7 +73,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Because DRG afferents are peripheral, you can reach them from the organ they innervate — the basis for retrograde labeling and the pancreas injections in your project."
+      "explanation": "Because DRG afferents are peripheral, you can reach them from the organ they innervate — the basis for retrograde labeling and the pancreas injections in your project.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your work targets DRG neurons.",
+          "prompt": "Why does the CNS/PNS distinction matter for that?",
+          "options": [
+            "It doesn't really matter; the distinction is just a naming convention",
+            "PNS neurons like DRG cells are reachable from the body, unlike CNS ones",
+            "Because the central nervous system contains no neurons of its own",
+            "Because the peripheral nervous system can't be studied in live mice"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "PNS location makes DRG neurons accessible via organ injections and nerve recordings in ways CNS neurons aren't."
+        }
+      ]
     }
   ],
   "sources": [],

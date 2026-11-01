@@ -51,7 +51,24 @@
       "answer": [
         1
       ],
-      "explanation": "The endpoint of these pathways is transcription-factor activity. That's how a brief surface signal produces a lasting change in what a cell makes."
+      "explanation": "The endpoint of these pathways is transcription-factor activity. That's how a brief surface signal produces a lasting change in what a cell makes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A cytokine binds its surface receptor and, hours later, the cell is making new proteins.",
+          "prompt": "Why does the signal change which genes are expressed?",
+          "options": [
+            "Because the cytokine itself enters the nucleus and edits the DNA",
+            "Because the pathway ends by switching on transcription factors like STATs",
+            "Because the signal kills the nucleus, changing what the cell makes",
+            "It doesn't; cytokines act only through fast electrical signals"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "These pathways end in transcription-factor activity, so a brief surface signal produces a lasting change in what the cell makes."
+        }
+      ]
     },
     {
       "type": "concept",
@@ -77,7 +94,23 @@
       "answer": [
         1
       ],
-      "reveal": "Block an early relay and the whole chain stalls. JAK inhibitors are used clinically in inflammatory disease for exactly this reason."
+      "reveal": "Block an early relay and the whole chain stalls. JAK inhibitors are used clinically in inflammatory disease for exactly this reason.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A drug blocks JAK enzymes. What happens to signaling by cytokines that use JAK-STAT?",
+          "options": [
+            "Signaling is unchanged, since JAK is not part of this pathway",
+            "Blunted: STATs aren't activated, so the gene program stays off",
+            "Amplified, because blocking JAK releases the STATs downstream",
+            "Converted into an electrical signal the neuron can propagate"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Blocking an early relay stalls the whole chain — the basis of the JAK inhibitors used in inflammatory disease."
+        }
+      ]
     }
   ],
   "sources": [],

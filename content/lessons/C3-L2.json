@@ -47,7 +47,24 @@
         1
       ],
       "multi": false,
-      "explanation": "The AND-gate keeps only the overlap: marker-positive AND DRG. The sympathetic cells have Cre but not Flp, so they stay off."
+      "explanation": "The AND-gate keeps only the overlap: marker-positive AND DRG. The sympathetic cells have Cre but not Flp, so they stay off.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Marker X is in your DRG neurons and in nearby sympathetic neurons. You add a Flp driver on in DRG but off in sympathetic, with a Cre+Flp payload.",
+          "prompt": "Which cells express it?",
+          "options": [
+            "Every marker-X cell, in both DRG and sympathetic neurons",
+            "Only marker-X cells that are also DRG (Cre AND Flp present)",
+            "Only the sympathetic neurons, since Flp overrides Cre there",
+            "No cells at all, because the two drivers cancel each other"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "The intersection keeps only cells with both drivers — marker-X AND DRG — excluding the sympathetic cells."
+        }
+      ]
     },
     {
       "type": "troubleshoot",

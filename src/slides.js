@@ -48,7 +48,7 @@ function centroids(atlas) {
   atlas.r.forEach(([, , fl, d]) => {
     if (!fl.startsWith('h')) return;
     const s = (sums[fl] ||= [0, 0, 0]);
-    d.replace(/(\d+),(\d+)/g, (_, x, y) => { s[0] += +x; s[1] += +y; s[2]++; });
+    d.replace(/(-?\d+),(-?\d+)/g, (_, x, y) => { s[0] += +x; s[1] += +y; s[2]++; });
   });
   return Object.entries(sums).map(([fl, [x, y, n]]) => ({ i: +fl.slice(1), x: x / n, y: y / n }));
 }
@@ -74,8 +74,9 @@ function brain(atlas, m, hl = '#1D9E75') {
   let out = `<g transform="translate(50,1) scale(${s})"><g id="${id}">${p}${hi}</g><use href="#${id}" transform="scale(-1,1)"/></g>`;
   if (m === 'stain' || m === 'atlas') {
     centroids(atlas).forEach((c, k) => {
-      const x = 50 + c.x * s, y = 1 + c.y * s, dy = k % 2 ? 4 : -4;
-      out += `<line x1="${f(x)}" y1="${f(y)}" x2="${f(x + 9)}" y2="${f(y + dy)}" stroke="#222" stroke-width=".3"/>` + T(f(x + 9.5), f(y + dy + (dy > 0 ? 2.6 : -.5)), atlas.regions[c.i], '#222');
+      const x = 50 + c.x * s, y = 1 + c.y * s, dy = k % 2 ? 4 : -4, name = atlas.regions[c.i];
+      const tx = Math.min(x + 9.5, 99 - name.length * 2.2); // keep long names (e.g. "Isocortex") inside the frame
+      out += `<line x1="${f(x)}" y1="${f(y)}" x2="${f(x + 9)}" y2="${f(y + dy)}" stroke="#222" stroke-width=".3"/>` + T(f(tx), f(y + dy + (dy > 0 ? 2.6 : -.5)), name, '#222');
     });
   }
   return out;

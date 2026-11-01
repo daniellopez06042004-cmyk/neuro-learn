@@ -40,7 +40,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Specificity comes from expression, not from where the drug goes. The drug is given systemically and reaches everything; only DREADD-expressing cells transduce it into a signal."
+      "explanation": "Specificity comes from expression, not from where the drug goes. The drug is given systemically and reaches everything; only DREADD-expressing cells transduce it into a signal.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A DREADD actuator is otherwise inert in the body.",
+          "prompt": "What makes the DREADD 'exclusive' to your cells of interest?",
+          "options": [
+            "The drug is injected directly into only those cells",
+            "Only cells engineered with the DREADD respond to the drug",
+            "The drug exists only inside neurons and nowhere else",
+            "The receptor is destroyed in every other cell type"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Exclusivity comes from expression: only DREADD+ cells can respond to an otherwise-inert actuator."
+        }
+      ]
     },
     {
       "type": "mcq",
@@ -56,7 +73,24 @@
         0
       ],
       "multi": false,
-      "explanation": "DREADDs recruit endogenous G-protein pathways, giving slower, sustained, more physiological modulation over minutes-to-hours — the opposite end of the timescale from optogenetics' millisecond control. That trade-off (next lessons) is the whole reason to pick one tool over the other."
+      "explanation": "DREADDs recruit endogenous G-protein pathways, giving slower, sustained, more physiological modulation over minutes-to-hours — the opposite end of the timescale from optogenetics' millisecond control. That trade-off (next lessons) is the whole reason to pick one tool over the other.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A DREADD is a GPCR rather than an ion channel.",
+          "prompt": "Why is that useful?",
+          "options": [
+            "GPCRs work through the cell's own second messengers, over minutes",
+            "GPCRs signal faster than the speed of light in the cell",
+            "GPCRs can never be engineered to be cell-type specific",
+            "Ion channels simply cannot be expressed in living neurons"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Using the cell's native GPCR machinery gives a sustained, physiological nudge rather than a blunt direct current."
+        }
+      ]
     },
     {
       "type": "predict",
@@ -72,7 +106,22 @@
         1
       ],
       "reveal": "Ideally, nothing — that's the entire premise of an 'inert' drug. This is also why a DREADD-free animal given the drug is a required control (lesson C5-L4): it tests whether the drug does anything on its own.",
-      "freeText": false
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "If the tool behaves ideally, what happens in cells with no DREADD when you give the actuator?",
+          "options": [
+            "They should be strongly and reliably activated by the drug",
+            "Nothing should happen: no DREADD means no designer response",
+            "They should be driven so hard that the cells die"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "An ideal actuator is inert without the DREADD, so non-expressing cells show no response — the basis of the control."
+        }
+      ]
     }
   ],
   "sources": [

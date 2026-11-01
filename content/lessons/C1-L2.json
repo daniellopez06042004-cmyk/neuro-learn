@@ -58,7 +58,24 @@
         1
       ],
       "multi": false,
-      "explanation": "Secondary-only reproduces everything except the primary antibody. If it's blank, your signal depends on the primary — i.e. it's real. If it also glows, the secondary is binding non-specifically."
+      "explanation": "Secondary-only reproduces everything except the primary antibody. If it's blank, your signal depends on the primary — i.e. it's real. If it also glows, the secondary is binding non-specifically.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your reporter stain looks positive, but you worry the signal is just the secondary antibody binding on its own.",
+          "prompt": "Which control settles it?",
+          "options": [
+            "Loading control",
+            "Secondary-only (no primary)",
+            "No-RT control",
+            "A positive-control tissue"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Secondary-only shows what the secondary does alone; real signal should require the primary antibody."
+        }
+      ]
     },
     {
       "type": "troubleshoot",

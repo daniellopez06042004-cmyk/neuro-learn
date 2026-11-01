@@ -158,6 +158,7 @@ def area(pts):
 
 def read_plate(pid, nodes, regions):
     svg = fetch(f'plate-{pid}.svg', f'{API}svg_download/{pid}?groups=28')
+    width = int(re.search(r'width="(\d+)"', svg).group(1))
     rows, hit = [], 0.0
     for sid, d in re.findall(r'<path[^>]*structure_id="(\d+)"[^>]*d="([^"]+)"', svg, re.S):
         sid = int(sid)
@@ -175,7 +176,7 @@ def read_plate(pid, nodes, regions):
                     hit += area(pts)
         if segs:
             rows.append((nodes[sid]['acr'], nodes[sid]['col'], flag, segs))
-    return rows, hit
+    return rows, hit, width
 
 
 def main(argv):
@@ -199,19 +200,21 @@ def main(argv):
     if plate is None:
         best = None
         for pid in plates():
-            rows, hit = read_plate(pid, nodes, regions)
+            rows, hit, width = read_plate(pid, nodes, regions)
             found = {int(f[1:]) for _, _, f, _ in rows if f.startswith('h')}
             score = (len(found), hit)   # cover as many of the regions as possible, then the most area
             if best is None or score > best[0]:
-                best = (score, pid, rows)
-        (count, _), plate, rows = best
+                best = (score, pid, rows, width)
+        (count, _), plate, rows, width = best
         if count < len(regions):
             print(f'Note: no single section contains all of {", ".join(regions)}; using the one with {count}.')
     else:
-        rows, _ = read_plate(plate, nodes, regions)
+        rows, _, width = read_plate(plate, nodes, regions)
+    # The plate is a hemisphere; its midline is the centre of the image (a few
+    # structures cross it slightly). x = 0 is the midline, which the app mirrors.
     xs = [x for *_, segs in rows for s in segs for x, _ in s]
     ys = [y for *_, segs in rows for s in segs for _, y in s]
-    mx, my = min(xs), min(ys)
+    mx, my = width / 2 * SCALE, min(ys)
     out = {
         'unit': unit, 'plate': plate, 'regions': regions,
         'w': round(max(xs) - mx), 'h': round(max(ys) - my),
