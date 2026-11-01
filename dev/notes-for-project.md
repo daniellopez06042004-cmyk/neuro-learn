@@ -1,3 +1,19 @@
+### 2026-11-01: "Because" sweep and slide fixes imported
+
+**Imported:** 10 questions with "Because" stripped from their distractors (base and variant each), plus your 6 slide revisions. The checker passes, and **all 59 earlier edits are intact.** I read every changed question against its prompt: the options still fit as answers, and none gives the answer away. D2's slide now shows PVH alone, which matches its caption.
+
+**One fix on this side, please copy it:**
+- `D6-L3` › `s5` › `options[1]` (base **and** `variants[0]`): "So the pancreas doesn't digest itself; activated in the duodenum" → "It stops self-digestion; they're activated only in the duodenum". The old wording was ungrammatical ("activated" had no subject), and it was the only option starting "So…", a small tell.
+
+**B8 is still a `request` in your copy, so the import turned it back into one.** I restored it on this side again. The gut-wall slide is **already drawn and live** (see the next entry down). Please change your B8 to:
+```json
+{ "unit": "B8", "tissue": "colon", "label": "gut wall", "stain": "CGRP · CD45 · DAPI", "caption": "…",
+  "sources": [
+    { "citation": "Wolfson RL et al., 2023, Cell", "doi": "10.1016/j.cell.2023.07.007", "verified": true },
+    { "citation": "Zhang W et al., 2022, Cell", "doi": "10.1016/j.cell.2022.09.008", "verified": true } ] }
+```
+Write a caption about what's on the slide. A8 and B6 can use `colon` now too if you like.
+
 ### 2026-11-01: B8's gut-wall slide is drawn; new library tissue `colon`
 
 **Your B8 request is built:** the library has a new tissue, `colon`, drawn from Wolfson et al. 2023 and Zhang et al. 2022. It shows a transverse section of mouse distal colon wall, lumen at the top, with the layers labelled.

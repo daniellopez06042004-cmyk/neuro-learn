@@ -35,9 +35,9 @@
       "id": "s3",
       "prompt": "Why is visceral pain usually felt as a vague, broad region rather than a precise point?",
       "options": [
-        "Because internal organs have essentially no sensory innervation at all",
+        "Internal organs have essentially no sensory innervation at all",
         "Visceral afferents are sparse and converge with skin, blurring location",
-        "Because that visceral pain is imaginary rather than genuinely real",
+        "That visceral pain is imaginary rather than genuinely real",
         "Only the vagus carries it, and the vagus is unable to localize"
       ],
       "answer": [
@@ -51,9 +51,9 @@
           "setup": "Visceral pain is felt as a vague, broad region rather than a precise point.",
           "prompt": "Why?",
           "options": [
-            "Because internal organs have essentially no sensory innervation at all",
+            "Internal organs have essentially no sensory innervation at all",
             "Visceral afferents are sparse and converge with skin, blurring location",
-            "Because that visceral pain is imaginary rather than genuinely real",
+            "That visceral pain is imaginary rather than genuinely real",
             "Only the vagus carries it, and the vagus is unable to localize"
           ],
           "answer": [

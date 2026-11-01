@@ -55,7 +55,7 @@
       "prompt": "In immunofluorescence (C7), you use a primary antibody against your protein and a labeled secondary antibody against the primary. Which antibody property makes this work?",
       "options": [
         "Antibodies glow on their own once applied to the tissue section",
-        "An antibody binds one specific target: primary→protein, secondary→primary",
+        "An antibody binds one target: primary→protein, secondary→primary",
         "Antibodies act as enzymes that chemically develop the stain",
         "Antibodies cut the DNA of the labeled cells to mark them"
       ],
@@ -70,7 +70,7 @@
           "prompt": "Which antibody property makes this work?",
           "options": [
             "Antibodies glow on their own once applied to the tissue section",
-            "An antibody binds one specific target: primary→protein, secondary→primary",
+            "An antibody binds one target: primary→protein, secondary→primary",
             "Antibodies act as enzymes that chemically develop the stain",
             "Antibodies cut the DNA of the labeled cells to mark them"
           ],

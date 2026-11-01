@@ -39,7 +39,7 @@
       "id": "s3",
       "prompt": "Why is mechanotransduction necessarily fast?",
       "options": [
-        "Because mechanical force itself travels faster than light does",
+        "Mechanical force itself travels faster than light does",
         "The channel is opened directly by force, with no messenger relay between",
         "It runs through a slow enzyme cascade that then amplifies the signal",
         "It waits for calcium to be released from internal stores first"
@@ -54,7 +54,7 @@
           "setup": "Touch has to be signaled fast enough to adjust your grip as an object starts to slip.",
           "prompt": "How does a mechanically gated channel manage that speed?",
           "options": [
-            "Because mechanical force itself travels faster than light does",
+            "Mechanical force itself travels faster than light does",
             "The channel is opened directly by force, with no messenger relay between",
             "It runs through a slow enzyme cascade that then amplifies the signal",
             "It waits for calcium to be released from internal stores first"

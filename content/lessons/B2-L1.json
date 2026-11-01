@@ -60,9 +60,9 @@
       "prompt": "Why is the adaptive response slow the first time but fast the second?",
       "options": [
         "The body forgets the pathogen entirely between the two exposures",
-        "First time, rare matching clones must be found and grown; later, memory waits",
-        "Because antibodies made the first time decay away almost instantly",
-        "Because the innate system actively blocks the first adaptive response"
+        "First time, rare matching clones are found and grown; later, memory waits",
+        "Antibodies from the first exposure decay away almost immediately",
+        "The innate system actively blocks the first adaptive response"
       ],
       "answer": [
         1
@@ -75,9 +75,9 @@
           "prompt": "Why is the second response faster than the first?",
           "options": [
             "The body forgets the pathogen entirely between the two exposures",
-            "First time, rare matching clones must be found and grown; later, memory waits",
-            "Because antibodies made the first time decay away almost instantly",
-            "Because the innate system actively blocks the first adaptive response"
+            "First time, rare matching clones are found and grown; later, memory waits",
+            "Antibodies from the first exposure decay away almost immediately",
+            "The innate system actively blocks the first adaptive response"
           ],
           "answer": [
             1

@@ -96,10 +96,10 @@
       "id": "s5",
       "prompt": "Acinar cells make proteases as inactive [[zymogen|zymogens]] (trypsinogen rather than trypsin). Why?",
       "options": [
-        "Because inactive enzymes travel faster through the pancreatic ducts",
-        "So the pancreas doesn't digest itself; they switch on in the duodenum",
-        "Because active enzymes simply cannot be stored inside the cell",
-        "Because zymogens are much cheaper for the cell to manufacture"
+        "Inactive enzymes travel faster through the pancreatic ducts",
+        "It stops self-digestion; they're activated only in the duodenum",
+        "Active enzymes simply cannot be stored inside the cell",
+        "Zymogens are much cheaper for the cell to manufacture"
       ],
       "answer": [
         1
@@ -111,10 +111,10 @@
           "setup": "Acinar cells make proteases as inactive zymogens (trypsinogen, not trypsin).",
           "prompt": "Why?",
           "options": [
-            "Because inactive enzymes travel faster through the pancreatic ducts",
-            "So the pancreas doesn't digest itself; they switch on in the duodenum",
-            "Because active enzymes simply cannot be stored inside the cell",
-            "Because zymogens are much cheaper for the cell to manufacture"
+            "Inactive enzymes travel faster through the pancreatic ducts",
+            "It stops self-digestion; they're activated only in the duodenum",
+            "Active enzymes simply cannot be stored inside the cell",
+            "Zymogens are much cheaper for the cell to manufacture"
           ],
           "answer": [
             1

@@ -30,10 +30,10 @@
       "id": "s2",
       "prompt": "Why is the pseudounipolar shape convenient for your experiments?",
       "options": [
-        "Because the cell body itself has to be injected directly",
-        "A virus from the ending reaches the cell body, giving organ access",
-        "Because it means the neuron effectively has no axon at all",
-        "Because it blocks the neuron from ever projecting centrally"
+        "The cell body itself has to be injected with the virus directly",
+        "A virus from the ending reaches the cell body for organ access",
+        "It means the neuron effectively has no axon of its own",
+        "It blocks the neuron from ever projecting into the cord"
       ],
       "answer": [
         1
@@ -46,10 +46,10 @@
           "setup": "A DRG neuron is pseudounipolar: a peripheral branch and a central branch share one stem from the cell body.",
           "prompt": "Why is that shape convenient for your experiments?",
           "options": [
-            "Because the cell body itself has to be injected directly",
-            "A virus from the ending reaches the cell body, giving organ access",
-            "Because it means the neuron effectively has no axon at all",
-            "Because it blocks the neuron from ever projecting centrally"
+            "The cell body itself has to be injected with the virus directly",
+            "A virus from the ending reaches the cell body for organ access",
+            "It means the neuron effectively has no axon of its own",
+            "It blocks the neuron from ever projecting into the cord"
           ],
           "answer": [
             1

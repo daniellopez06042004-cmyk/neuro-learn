@@ -106,7 +106,7 @@
       "unit": "B1",
       "tissue": "rnascope",
       "label": "innate ISH",
-      "caption": "Innate first responders, read by marker mRNA: macrophages (Lyz2) and neutrophils (S100a8).",
+      "caption": "Innate first responders, read by marker mRNA: myeloid cells (Lyz2) and neutrophils (S100a8).",
       "stain": "Lyz2 · S100a8 · DAPI"
     },
     {
@@ -134,7 +134,7 @@
       "unit": "B5",
       "tissue": "cortex-if",
       "label": "cortex GFAP",
-      "caption": "Reactive astrocytes (GFAP) among neurons (NeuN) — the glial signature of CNS neuroinflammation.",
+      "caption": "Resting cortex: sparse GFAP+ astrocytes among NeuN+ neurons — the baseline you compare neuroinflammation against.",
       "stain": "NeuN · GFAP · DAPI"
     },
     {
@@ -208,7 +208,7 @@
       "unit": "C3",
       "tissue": "rnascope",
       "label": "intersect",
-      "caption": "Intersectional logic: expression is restricted to cells positive for two drivers at once.",
+      "caption": "Two driver genes rarely mark the same DRG neuron; the few that express both are exactly what an intersection targets.",
       "stain": "Bmpr1b · Th · DAPI"
     },
     {
@@ -222,8 +222,8 @@
       "unit": "C5",
       "tissue": "rnascope",
       "label": "DREADD ISH",
-      "caption": "A manipulation check: c-Fos confirms the DREADD-expressing neurons actually changed their firing.",
-      "stain": "hM4Di · Fos · DAPI"
+      "caption": "A manipulation check: c-Fos rises in hM3Dq-expressing neurons after the actuator, confirming they fired.",
+      "stain": "hM3Dq · Fos · DAPI"
     },
     {
       "unit": "C6",
@@ -263,8 +263,8 @@
     {
       "unit": "C11",
       "tissue": "drg",
-      "label": "DRG culture",
-      "caption": "Dissociated DRG neurons — the preparation behind calcium imaging of live sensory cells.",
+      "label": "DRG",
+      "caption": "An intact sensory ganglion — the tissue you dissociate to image live DRG neurons.",
       "stain": "NF200 · CGRP · DAPI"
     },
     {
@@ -291,12 +291,11 @@
       "unit": "D2",
       "tissue": "brain-coronal",
       "label": "autonomic",
-      "caption": "Central autonomic command: the hypothalamic PVH and the vagal motor nucleus (DMX).",
+      "caption": "Central autonomic command in the hypothalamus: the paraventricular nucleus (PVH).",
       "stain": "Nissl",
       "atlas": {
         "regions": [
-          "PVH",
-          "DMX"
+          "PVH"
         ]
       }
     },

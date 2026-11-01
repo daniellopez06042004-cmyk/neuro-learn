@@ -38,10 +38,10 @@
       "id": "s3",
       "prompt": "Why is a retrograde AAV injected into the pancreas a good way to access pancreas-innervating DRG neurons?",
       "options": [
-        "Because it enters every cell in the body indiscriminately once injected",
-        "It's taken up at pancreatic terminals and carried to those cell bodies",
-        "Because a retrograde virus can only ever work inside the brain",
-        "Because it removes any need to inject the virus anywhere at all"
+        "It enters every cell in the body indiscriminately once injected",
+        "Taken up at pancreatic terminals, it's carried to those cell bodies",
+        "A retrograde virus can only ever work inside the brain",
+        "It removes any need to inject the virus anywhere at all"
       ],
       "answer": [
         1
@@ -54,10 +54,10 @@
           "setup": "You inject a retrograde AAV into the pancreas.",
           "prompt": "Why does this reach pancreas-innervating DRG neurons specifically?",
           "options": [
-            "Because it enters every cell in the body indiscriminately once injected",
-            "It's taken up at pancreatic terminals and carried to those cell bodies",
-            "Because a retrograde virus can only ever work inside the brain",
-            "Because it removes any need to inject the virus anywhere at all"
+            "It enters every cell in the body indiscriminately once injected",
+            "Taken up at pancreatic terminals, it's carried to those cell bodies",
+            "A retrograde virus can only ever work inside the brain",
+            "It removes any need to inject the virus anywhere at all"
           ],
           "answer": [
             1

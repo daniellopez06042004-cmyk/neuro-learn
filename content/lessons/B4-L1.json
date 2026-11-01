@@ -35,7 +35,7 @@
       "prompt": "Why does the CNS need its own resident immune cells rather than relying on blood-borne ones?",
       "options": [
         "Blood-borne immune cells are simply too small to be useful",
-        "The blood-brain barrier limits entry, so resident surveillance is needed",
+        "The blood-brain barrier limits entry, so resident cells are needed",
         "Neurons themselves already act as the brain's immune cells",
         "The brain has no immune needs and never faces infection"
       ],
@@ -50,7 +50,7 @@
           "prompt": "Why does the CNS keep its own resident immune cells instead?",
           "options": [
             "Blood-borne immune cells are simply too small to be useful",
-            "The blood-brain barrier limits entry, so resident surveillance is needed",
+            "The blood-brain barrier limits entry, so resident cells are needed",
             "Neurons themselves already act as the brain's immune cells",
             "The brain has no immune needs and never faces infection"
           ],
