@@ -1,0 +1,44 @@
+{
+  "id": "D1-L3",
+  "unitId": "D1",
+  "title": "Somatic vs autonomic",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Distinguish the somatic and autonomic divisions and say what each controls.",
+  "tags": ["somatic", "autonomic", "divisions"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Voluntary body vs involuntary interior",
+      "body": "A second axis splits function:\n\n- The **[[somatic nervous system]]** handles voluntary skeletal muscle and sensation from skin, muscle and joints — the 'outside' body.\n- The **[[autonomic nervous system]]** runs the involuntary interior: smooth muscle, glands, and the heart.\n\nMost of what your lab cares about — the gut, the pancreas — is interior, autonomic-adjacent territory.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Contraction of the gut's smooth muscle during digestion is governed by which division?",
+      "options": ["Somatic", "Autonomic", "Neither", "Only the enteric system, independent of both"],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Smooth muscle and glands are autonomic territory (with heavy local control by the gut's own enteric system). Skeletal muscle you move on purpose is somatic."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A sensory neuron reporting painful distension from the colon — which division does its SENSORY signal belong to?",
+      "options": [
+        "Somatic, cleanly",
+        "It's a visceral (interior) afferent — related to autonomic targets but sensory, a point the next unit untangles",
+        "Autonomic motor",
+        "It isn't a neuron"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Visceral sensation is its own thing: the signal comes from autonomic-innervated organs but is carried by sensory (afferent) neurons. D2 separates 'autonomic = motor output' from 'visceral afferents = sensory'."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Deliberately teases the sensory-vs-autonomic confusion resolved in D2-L3."
+}

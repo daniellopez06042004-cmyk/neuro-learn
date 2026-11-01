@@ -1,0 +1,57 @@
+{
+  "id": "C1-L1",
+  "unitId": "C1",
+  "title": "What a control is actually for",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Distinguish positive and negative controls by the failure each one rules out.",
+  "tags": ["controls", "experimental-design"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A result only means something next to a control",
+      "body": "A [[control]] is a comparison condition that holds everything constant except the one thing you're testing. Without it, you can't tell whether your result came from your manipulation or from something else entirely. Every strong experiment is really a *difference* between conditions.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Two jobs: catch false negatives vs false positives",
+      "body": "- A **[[positive control]]** asks: *could my assay detect the signal if it were there?* It's a sample known to work. If it fails, the experiment itself failed — your real negative result is meaningless.\n- A **[[negative control]]** asks: *would I see a signal even if the thing I'm testing weren't there?* If it lights up, something is non-specific.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Your immunostain shows no signal in any sample. Which control tells you whether the staining *could* have worked at all?",
+      "options": [
+        "A tissue known to express the target (positive control)",
+        "Secondary-antibody-only (negative control)",
+        "An unstained slide",
+        "The DAPI channel"
+      ],
+      "answer": [0],
+      "multi": false,
+      "explanation": "A known-positive tissue tests whether the whole assay can produce signal. If even it is blank, the protocol failed — so 'no signal' in your samples tells you nothing yet. Secondary-only guards against false positives, not false negatives."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You give the DREADD [[actuator]] to mice that were never given the virus to express the [[DREADD]], and measure your behavioral readout.",
+      "prompt": "What is this group's job?",
+      "options": [
+        "It's the experimental group",
+        "It's a negative control — any effect here is the drug's own, not your neurons'",
+        "It's a positive control",
+        "It has no purpose"
+      ],
+      "answer": [1],
+      "reveal": "A DREADD-free + actuator group is a negative control: it isolates whether the actuator does anything on its own (the CNO→clozapine problem from C5). If it shows an effect, your DREADD result is confounded.",
+      "freeText": false
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Foundational. Ties controls to the DREADD control grid in C5."
+}

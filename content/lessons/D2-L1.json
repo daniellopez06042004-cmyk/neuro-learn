@@ -1,0 +1,41 @@
+{
+  "id": "D2-L1",
+  "unitId": "D2",
+  "title": "Sympathetic vs parasympathetic",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Contrast the sympathetic and parasympathetic branches by their roles and outflow.",
+  "tags": ["autonomic", "sympathetic", "parasympathetic"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two branches, opposite leanings",
+      "body": "The [[autonomic nervous system]] has two motor branches:\n\n- **[[sympathetic]]** — mobilizes the body ('fight or flight'); outflow from thoracic and upper-lumbar cord.\n- **[[parasympathetic]]** — supports rest and digestion; outflow from the brainstem (including the [[vagus nerve]]) and sacral cord.\n\nMost organs get both and sit at a balance point between them.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match the branch to its lean.",
+      "pairs": [
+        ["Sympathetic", "Mobilize — faster heart, slowed digestion"],
+        ["Parasympathetic", "Rest & digest — promotes gut activity"],
+        ["Both", "Most organs receive dual innervation"]
+      ],
+      "explanation": "They're not strictly on/off opposites, but the 'mobilize vs restore' framing captures the usual balance."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "The vagus nerve is a major component of which branch?",
+      "options": ["Sympathetic", "Parasympathetic", "Somatic", "Neither"],
+      "answer": [1],
+      "multi": false,
+      "explanation": "The vagus is the body's main parasympathetic nerve. (Its SENSORY fibers, with cell bodies in the nodose ganglion, are a separate story — covered in D2-L3.)"
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Overview before the pre/post wiring and the sensory clarification."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "C1-L5",
+  "unitId": "C1",
+  "title": "Reading a p-value honestly",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "State what a p-value does and doesn't tell you, and read error bars with appropriate caution.",
+  "tags": ["statistics", "p-value", "error-bars"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "What a p-value is",
+      "body": "A **[[p-value]]** is the probability of seeing an effect at least this large *if there were truly no effect*. Small p means the data would be surprising under 'no effect'. That's all it is — a statement about surprise, computed against a null, on your sample.",
+      "flag": { "level": "simplified", "note": "Exact interpretation depends on the test and its assumptions; this is the working intuition, not a formal definition." }
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "What it does NOT tell you",
+      "body": "A small p-value does **not** mean:\n- the effect is large (significance ≠ size — a tiny effect can be 'significant' with huge n),\n- the effect is real or reproducible,\n- the probability the hypothesis is true.\n\nAlways ask for the **effect size** and the **biological n** alongside p.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A paper reports p = 0.001 for a 2% difference, n = 400 cells from 2 mice. What's the biggest concern?",
+      "options": [
+        "The p-value is too small to trust",
+        "A tiny effect is 'significant' partly because cells were counted as n (pseudoreplication); biological n is 2",
+        "2% is always meaningless",
+        "Nothing — p < 0.05, so it's solid"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Large n (here, cells) drives p down even for trivial effects, and counting cells instead of mice is pseudoreplication (C1-L3). Judge the 2% effect size and the biological n (2), not the p alone."
+    },
+    {
+      "type": "match",
+      "id": "s4",
+      "prompt": "Match each error bar to what it shows.",
+      "pairs": [
+        ["SD (standard deviation)", "Spread of the data points themselves"],
+        ["SEM (standard error)", "Uncertainty in the mean (shrinks with n)"],
+        ["95% CI", "Range the true mean plausibly falls in"]
+      ],
+      "explanation": "SEM looks tighter than SD just because of n, so a small SEM can hide big spread. Check which bar a figure uses before trusting how 'clean' it looks."
+    },
+    {
+      "type": "predict",
+      "id": "s5",
+      "setup": "Two groups' SEM bars don't overlap.",
+      "prompt": "Does that guarantee a significant difference?",
+      "options": [
+        "Yes, always",
+        "No — non-overlapping SEM is only a rough hint; you still need the actual test and effect size",
+        "Only if n > 100",
+        "Only for SD bars"
+      ],
+      "answer": [1],
+      "reveal": "Non-overlapping SEM bars loosely suggest a difference but don't prove one (and overlapping bars don't prove no difference). Rely on the stated test, the effect size, and the biological n — not eyeballing bars.",
+      "freeText": false
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Long lesson (15 xp). Significance vs size and SEM-vs-SD are the takeaways."
+}

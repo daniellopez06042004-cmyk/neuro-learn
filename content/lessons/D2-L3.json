@@ -1,0 +1,52 @@
+{
+  "id": "D2-L3",
+  "unitId": "D2",
+  "title": "The big untangle: autonomic is motor; visceral sensation is separate",
+  "minutes": 5,
+  "xp": 15,
+  "objective": "Explain why visceral sensory neurons are not 'autonomic' even though they report from autonomic-innervated organs.",
+  "tags": ["visceral-afferent", "autonomic", "DRG", "nodose"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A common confusion",
+      "body": "'[[autonomic nervous system|Autonomic]]' strictly means the **motor/efferent** output to organs. But organs also need to be *sensed* — and that sensing is done by **separate sensory ([[afferent]]) neurons**, not by the autonomic motor system. People lump them together because the axons often travel in the same nerves.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Where the visceral sensors live",
+      "body": "Visceral afferents come in two families by where their cell bodies sit:\n\n- **Spinal** visceral afferents — cell bodies in the **[[DRG]]**, entering the spinal cord.\n- **Vagal** visceral afferents — cell bodies in the **[[nodose ganglion]]**, entering the brainstem.\n\nNeither is 'autonomic' in the strict sense; both are sensory. Your lab works on the spinal (DRG) side.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A paper says 'we recorded visceral afferents from the colon with cell bodies in the DRG.'",
+      "prompt": "Are these autonomic motor neurons?",
+      "options": [
+        "Yes, they're sympathetic",
+        "No — they're sensory (afferent) neurons that happen to report from a visceral organ",
+        "Yes, they're parasympathetic",
+        "They're skeletal motor neurons"
+      ],
+      "answer": [1],
+      "reveal": "They're sensory. The organ is under autonomic motor control, but these DRG neurons only *report* from it. Keeping 'autonomic = motor out' vs 'visceral afferent = sensory in' straight is essential for reading this literature.",
+      "freeText": false
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "What's the vagal counterpart to the DRG for visceral sensation?",
+      "options": ["The sympathetic chain", "The nodose ganglion", "The ventral horn", "The enteric plexus"],
+      "answer": [1],
+      "multi": false,
+      "explanation": "The nodose ganglion holds vagal sensory cell bodies, as the DRG holds spinal sensory cell bodies. The division of labor between them (vagal = more proximal gut; DRG = throughout, denser distally) is a live research question."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "The conceptual crux of the D track for this lab; 15 xp."
+}

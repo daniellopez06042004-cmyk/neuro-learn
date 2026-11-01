@@ -38,6 +38,8 @@ Rules the app checks:
 
 Text fields support light formatting: `**bold**`, `*italic*`, `` `code` ``, a blank line for a new paragraph, and lines starting with `- ` for a list.
 
+`match` steps can also sort items into categories: repeat the same right-hand item (for example, two pairs that both end in `"Afferent"`). Left-hand items must all be different.
+
 **Visuals:** any step can have a `"visual"`, shown above the step: `{ "type": "svg-anim", "src": "assets/cre-lox.svg", "alt": "what it shows", "caption": "…" }`. Files go in `assets/`. Types:
 - `svg-anim`, `svg`, `image` and `gif` are shown as pictures (animated SVGs play on their own)
 - `mp4` plays muted on a loop
@@ -82,7 +84,7 @@ A track without `"circuit"` gets the next unused one. Order the units so they fo
 
 ## Glossary (`glossary.json`)
 
-Any lesson text can link a term with `[[DRG]]`, or `[[dorsal root ganglia|DRG]]` to show different words. Tapping it opens the definition without leaving the lesson. The glossary screen lists every term, with search.
+Any lesson text can link a term with `[[DRG]]`, or wiki-style `[[DRG|dorsal root ganglia]]` (term first, then the words to show). Tapping it opens the definition without leaving the lesson. The glossary screen lists every term, with search.
 
 ```json
 { "terms": [

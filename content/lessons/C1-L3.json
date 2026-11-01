@@ -1,0 +1,60 @@
+{
+  "id": "C1-L3",
+  "unitId": "C1",
+  "title": "Replicates: biological vs technical",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish biological from technical replicates and explain why only one supports a claim about biology.",
+  "tags": ["replicates", "n", "experimental-design"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two different kinds of 'repeat'",
+      "body": "- A **[[biological replicate]]** is an independent biological sample — a different animal, a separately prepared culture. It captures real variation between subjects.\n- A **[[technical replicate]]** is the same sample measured again — three qPCR wells from one cDNA prep. It captures measurement noise only.\n\nYour *n* for a biological claim is the number of biological replicates, not wells.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "You run qPCR on cDNA from ONE mouse, in triplicate wells, and get p < 0.01 vs a control mouse. What is your biological n?",
+      "options": ["3", "1 per group", "6", "It depends on the Ct values"],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Triplicate wells are technical replicates of one animal — they measure pipetting noise, not biology. With one mouse per group, biological n = 1, and no p-value can support a claim about mice."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You silence pancreas-projecting [[DRG]] neurons with [[hM4Di]] and measure glucose in 3 mice, imaging each mouse's tissue twice.",
+      "prompt": "What is your biological n, and what do the duplicate images give you?",
+      "options": [
+        "n = 6; the images add biological power",
+        "n = 3; the duplicate images are technical replicates that reduce measurement noise",
+        "n = 2; the mice are technical replicates",
+        "n = 1"
+      ],
+      "answer": [1],
+      "reveal": "Three mice = biological n of 3. Imaging each twice is technical replication — average it to reduce noise, but it doesn't increase your biological n. Claims about 'what silencing does in mice' rest on the 3.",
+      "freeText": false
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "A figure reports 'n = 9' from 3 mice with 3 slices each, and treats all 9 as independent.",
+      "prompt": "What's the statistical problem?",
+      "options": [
+        "Nothing — more data is always better",
+        "Pseudoreplication: slices from one mouse aren't independent, so n is really 3",
+        "The slices should be averaged into 9 groups",
+        "The mice are technical replicates"
+      ],
+      "answer": [1],
+      "explanation": "Counting non-independent sub-samples as independent is pseudoreplication. It fakes statistical power and shrinks p-values artificially. Average within each mouse, or use a model that nests slices within mice; the biological n stays 3.",
+      "followUp": "A common, honest fix: plot the per-mouse means (n = 3) and show individual slices as lighter points."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Pseudoreplication is the key trap; recurs in imaging (C6/C9) and qPCR (C10)."
+}

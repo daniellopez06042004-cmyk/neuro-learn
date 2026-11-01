@@ -104,11 +104,11 @@ def main():
 
     w('## What the app supports')
     w('')
-    w('- **Step types:** concept, mcq (`multi` for several answers), troubleshoot (optional `data.kind: "table"`), predict (choices, or `freeText` with self-grading), match, order.')
+    w('- **Step types:** concept, mcq (`multi` for several answers), troubleshoot (optional `data.kind: "table"`), predict (choices, or `freeText` with self-grading), match (right-hand items may repeat, for sorting into categories), order.')
     w('- **Lesson extras:** `objective` becomes an intro card ("By the end you can…"); `confidence` (high/medium/low) shows on it; `sources` show on the finish screen as DOI links (verified only).')
     w('- **Flags:** `uncertain`, `debated` or `simplified` only, with a `note`. Anything else fails the check.')
     w('- **Visuals (`visual` on any step, shown above it):** `svg-anim`, `svg`, `image`, `gif` (shown as a picture); `mp4` (muted, looping); `interactive` (an HTML file run in a sandboxed frame: scripts only, no storage, no network, auto-sized to its content, so don\'t use `100vh`). `lottie` is **not supported yet** (only the alt text shows). `alt` is required, and files go in `content/assets/`.')
-    w('- **Text formatting:** `**bold**`, `*italic*`, `` `code` ``, `- ` lists, blank-line paragraphs, `[[term]]` / `[[shown|term]]` glossary links.')
+    w('- **Text formatting:** `**bold**`, `*italic*`, `` `code` ``, `- ` lists, blank-line paragraphs, `[[term]]` / `[[term|shown words]]` glossary links (term first, wiki-style).')
     w('- **The circuit picture:** each track is a real pathway, and units sit along it in course order. Finishing lessons grows dendrites; reviewing to the top boxes myelinates axons.')
     w('- **Review:** every answered question goes into spaced repetition (Leitner boxes 1–5). Misses come back at the end of the lesson and in daily review.')
     w('- **Phone first:** keep visuals legible at 375px wide and correct in dark mode.')

@@ -145,8 +145,9 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
         if (!isArr(s.pairs) || s.pairs.length < 2 || !s.pairs.every((p) => isArr(p) && p.length === 2 && p.every(isStr))) {
           at(w, '"pairs" must be a list of at least 2 ["left", "right"] pairs');
         } else {
-          const rights = s.pairs.map((p) => p[1]), lefts = s.pairs.map((p) => p[0]);
-          if (new Set(rights).size !== rights.length || new Set(lefts).size !== lefts.length) at(w, 'every left and right item must be different');
+          // Right-hand items may repeat (sorting into categories); left-hand ones can't.
+          const lefts = s.pairs.map((p) => p[0]);
+          if (new Set(lefts).size !== lefts.length) at(w, 'every left-hand item must be different');
         }
         break;
       case 'order':

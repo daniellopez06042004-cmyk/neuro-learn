@@ -1,5 +1,5 @@
 import { loadContent, content } from './content.js';
-import { isDev } from './ui.js';
+import { isDev, setTermLookup } from './ui.js';
 import { route, fallback, start, go } from './router.js';
 import { renderHome } from './views/home.js';
 import { renderUnit } from './views/unit.js';
@@ -59,6 +59,7 @@ if ('serviceWorker' in navigator && (!isDev || location.search.includes('sw'))) 
 
 try {
   await loadContent();
+  setTermLookup((name) => content.glossary.has(name.toLowerCase()));
   for (const e of content.errors) console.error('[content]', e);
   // Fail loudly while developing: open straight to the list of problems.
   if (isDev && content.errors.length) history.replaceState(null, '', '#/errors');

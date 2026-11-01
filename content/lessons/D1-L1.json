@@ -1,0 +1,51 @@
+{
+  "id": "D1-L1",
+  "unitId": "D1",
+  "title": "CNS and PNS: the two halves",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Separate the central and peripheral nervous systems and place the DRG correctly.",
+  "tags": ["anatomy", "CNS", "PNS"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two compartments",
+      "body": "The nervous system splits into two:\n\n- **[[CNS]]** — the brain and spinal cord, where signals are integrated.\n- **[[PNS]]** — the nerves and [[ganglion|ganglia]] outside them that connect the CNS to the rest of the body.\n\nThe divide isn't just location; it changes the cell neighborhoods, the support cells, and the rules for regeneration.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Where the DRG sits",
+      "body": "The [[DRG]] is a **PNS** structure: a cluster of sensory cell bodies just outside the spinal cord. Its neurons straddle the border — one axon branch reaches far into the body (skin, gut, pancreas), the other enters the CNS at the spinal cord. That border-straddling is why the DRG is such a useful access point.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Which structure is part of the CNS?",
+      "options": ["The dorsal root ganglion", "The spinal cord", "The sciatic nerve", "The vagus nerve"],
+      "answer": [1],
+      "multi": false,
+      "explanation": "The spinal cord (with the brain) is the CNS. Ganglia and named nerves — including the DRG, sciatic, and vagus — are PNS."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why does the CNS/PNS distinction matter for your work?",
+      "options": [
+        "It doesn't — it's just naming",
+        "PNS neurons like DRG cells are accessible from the body (organ injections, nerve recordings) in ways CNS neurons aren't",
+        "The CNS has no neurons",
+        "The PNS can't be studied in mice"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Because DRG afferents are peripheral, you can reach them from the organ they innervate — the basis for retrograde labeling and the pancreas injections in your project."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Orients the whole D track; places the DRG for later lessons."
+}

@@ -20,11 +20,21 @@ export function esc(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+// Glossary links: [[term]] or, wiki-style, [[term|shown words]]. If only the
+// second half is a glossary term, it's read the other way round.
+let isTerm = () => false;
+export function setTermLookup(fn) { isTerm = fn; }
+
+function termLink(a, b) {
+  const [term, shown] = !b || isTerm(a.trim()) || !isTerm(b.trim()) ? [a, b || a] : [b, a];
+  return `<button type="button" class="term" data-term="${term.trim()}">${shown}</button>`;
+}
+
 // Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs,
-// and [[term]] or [[shown text|term]] for a tappable glossary term.
+// and glossary links (above).
 export function md(text, cls = 'md') {
   const inline = (s) => esc(s)
-    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, shown, term) => `<button type="button" class="term" data-term="${(term || shown).trim()}">${shown}</button>`)
+    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => termLink(a, b))
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');

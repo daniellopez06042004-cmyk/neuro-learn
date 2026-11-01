@@ -151,9 +151,15 @@
         {
           "id": "C1",
           "title": "Thinking Like an Experimentalist",
-          "summary": "Controls, biological vs. technical replicates, blinding, basic stats.",
+          "summary": "Controls, the control zoo, biological vs technical replicates, blinding & randomization, and reading a p-value honestly.",
           "prereqs": [],
-          "lessons": []
+          "lessons": [
+            "C1-L1",
+            "C1-L2",
+            "C1-L3",
+            "C1-L4",
+            "C1-L5"
+          ]
         },
         {
           "id": "C2",
@@ -276,27 +282,42 @@
         {
           "id": "D1",
           "title": "Organizing the Nervous System",
-          "summary": "CNS vs. PNS, afferent vs. efferent, somatic vs. autonomic, ganglia vs. nuclei.",
+          "summary": "CNS vs PNS, afferent vs efferent, somatic vs autonomic, and the ganglion/nucleus/nerve/tract vocabulary.",
           "prereqs": [],
-          "lessons": []
+          "lessons": [
+            "D1-L1",
+            "D1-L2",
+            "D1-L3",
+            "D1-L4"
+          ]
         },
         {
           "id": "D2",
           "title": "The Autonomic Nervous System",
-          "summary": "Sympathetic vs. parasympathetic, pre-/postganglionic wiring, and why \"sensory\" and \"autonomic\" are not the same axis.",
+          "summary": "Sympathetic vs parasympathetic, the two-neuron pre/postganglionic relay, why visceral sensation is separate from autonomic motor output, and the vagus + enteric nervous system.",
           "prereqs": [
             "D1"
           ],
-          "lessons": []
+          "lessons": [
+            "D2-L1",
+            "D2-L2",
+            "D2-L3",
+            "D2-L4"
+          ]
         },
         {
           "id": "D3",
           "title": "Spinal Cord & DRG Anatomy",
-          "summary": "Dermatomes, spinal levels, dorsal vs. ventral roots, where DRG cell bodies sit and where their two axon branches go.",
+          "summary": "Spinal segments and spinal nerves, dorsal vs ventral roots and where the DRG sits, the pseudounipolar DRG neuron, and dermatomes / visceral spinal levels.",
           "prereqs": [
             "D2"
           ],
-          "lessons": []
+          "lessons": [
+            "D3-L1",
+            "D3-L2",
+            "D3-L3",
+            "D3-L4"
+          ]
         },
         {
           "id": "D4",

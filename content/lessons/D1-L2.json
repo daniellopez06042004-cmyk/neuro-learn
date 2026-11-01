@@ -1,0 +1,47 @@
+{
+  "id": "D1-L2",
+  "unitId": "D1",
+  "title": "Which way is the information going?",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Classify neurons as afferent or efferent by the direction they carry information.",
+  "tags": ["afferent", "efferent", "sensory", "motor"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Toward vs away from the CNS",
+      "body": "One axis organizes everything downstream:\n\n- **[[afferent]]** = carrying information *toward* the CNS. Sensory neurons are afferent.\n- **[[efferent]]** = carrying commands *away* from the CNS to muscles and glands. Motor/output neurons are efferent.\n\nMemory hook: **A**fferent = **A**rriving; **E**fferent = **E**xiting.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each to afferent or efferent.",
+      "pairs": [
+        ["A DRG neuron sensing colon stretch", "Afferent (toward CNS)"],
+        ["A motor neuron contracting a muscle", "Efferent (away from CNS)"],
+        ["A neuron reporting pancreas state to the cord", "Afferent (toward CNS)"]
+      ],
+      "explanation": "Sensing = afferent; commanding = efferent. The DRG neurons you study are afferent — their job is to report the body's internal state inward."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A [[DRG]] neuron also releases neuropeptides from its peripheral ending to act on nearby tissue (an 'efferent' function of a sensory neuron).",
+      "prompt": "Is this neuron afferent, efferent, or both?",
+      "options": [
+        "Purely afferent",
+        "Both — primarily afferent, but it can also act locally at its periphery",
+        "Purely efferent",
+        "Neither"
+      ],
+      "answer": [1],
+      "reveal": "Classically afferent (it reports inward), but many sensory neurons also have local efferent-like actions — e.g. CGRP release shaping inflammation. Your lab's neurons blur the clean afferent/efferent line, which is part of what makes them interesting.",
+      "freeText": false
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Sets up the sensory-vs-autonomic clarification in D2-L3."
+}

@@ -1,0 +1,57 @@
+{
+  "id": "D3-L4",
+  "unitId": "D3",
+  "title": "Dermatomes, levels, and the viscera",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain dermatomes and that visceral organs map to particular spinal levels, including the gut and pancreas.",
+  "tags": ["dermatome", "spinal-levels", "viscera", "pancreas"],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Each level owns a strip of skin",
+      "body": "A **[[dermatome]]** is the patch of skin whose sensation is carried by one spinal segment. Stack the segments and the body's surface is mapped level by level. This is why a pinched root causes numbness in a predictable band — the segment predicts the territory.",
+      "flag": null
+    },
+    {
+      "type": "concept",
+      "id": "s2",
+      "title": "Viscera map to levels too",
+      "body": "Internal organs also connect to particular spinal levels. Spinal ([[DRG]]) afferents from abdominal organs largely enter at **thoracic and upper-lumbar** levels (via splanchnic nerves), with pelvic organs adding **lumbosacral** input. This is partly why visceral pain is felt in broad, referred regions rather than a sharp spot.",
+      "flag": { "level": "uncertain", "note": "Exact level ranges vary by organ and species; treat specific numbers as approximate and confirm for the pancreas with the lab/primary literature." }
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why is visceral pain usually felt as a vague, broad region rather than a precise point?",
+      "options": [
+        "Organs have no sensory innervation",
+        "Visceral afferents are sparse and converge onto spinal levels shared with skin, so the brain localizes them poorly",
+        "The pain is imaginary",
+        "Only the vagus carries it, and the vagus can't localize"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Sparse visceral innervation plus convergence onto the same dorsal-horn levels as somatic input makes precise localization impossible — the basis of referred pain."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "For your pancreas project, you need the DRG levels whose neurons innervate the pancreas.",
+      "prompt": "What's the right way to pin those down?",
+      "options": [
+        "Assume they're the same as the colon",
+        "Retrograde-label from the pancreas and see which DRG light up, and check the lab's primary literature — don't guess exact levels",
+        "They must be cervical",
+        "Levels don't matter for viral injection"
+      ],
+      "answer": [1],
+      "reveal": "Retrograde labeling from the organ reveals the actual levels empirically (C4), rather than assuming. Pancreatic spinal afferents are generally thoracic/splanchnic, but confirm the specific levels for your line and prep before planning injections.",
+      "freeText": false
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confidence 'medium' due to organ/species level variation; flagged. Hands off to A-track interoception and the capstone."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "D2-L2",
+  "unitId": "D2",
+  "title": "Two neurons in a row: pre- and postganglionic",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe the two-neuron autonomic motor chain and where it synapses.",
+  "tags": ["autonomic", "preganglionic", "postganglionic"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The autonomic motor path is a relay",
+      "body": "Unlike somatic motor neurons (one neuron from cord to muscle), autonomic output uses **two neurons in series**:\n\n- a **[[preganglionic]]** neuron from the CNS to a peripheral [[ganglion]],\n- a **[[postganglionic]]** neuron from that ganglion to the target organ.\n\nThe synapse between them, inside the ganglion, is a control and switching point.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the autonomic motor relay from CNS to organ.",
+      "items": [
+        "Preganglionic neuron leaves the CNS",
+        "Synapse inside a peripheral ganglion",
+        "Postganglionic neuron carries the signal onward",
+        "Target organ (smooth muscle / gland) responds"
+      ],
+      "explanation": "CNS → preganglionic → ganglion synapse → postganglionic → organ. The ganglion relay is unique to autonomic output."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "These autonomic ganglia hold cell bodies of MOTOR (efferent) neurons. How does that differ from the DRG?",
+      "options": [
+        "It doesn't — they're identical",
+        "The DRG holds SENSORY (afferent) cell bodies, not autonomic motor ones",
+        "The DRG holds postganglionic motor neurons",
+        "Autonomic ganglia are in the CNS"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Both are PNS ganglia, but they do opposite jobs: autonomic ganglia relay motor output; the DRG houses sensory (afferent) cell bodies. Same word, different direction of information."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Sets up the key clarification: ganglion ≠ sensory by default."
+}

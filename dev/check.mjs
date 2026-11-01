@@ -59,8 +59,8 @@ if (course.missing || course.error) {
     let text;
     try { text = read(`content/lessons/${id}.json`); } catch { continue; }
     for (const m of text.matchAll(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g)) {
-      const term = (m[2] || m[1]).trim();
-      if (!known.has(term.toLowerCase())) notes.push(`lessons/${id}.json links [[${term}]], which isn't in glossary.json yet.`);
+      const sides = [m[1], m[2]].filter(Boolean).map((x) => x.trim());
+      if (!sides.some((x) => known.has(x.toLowerCase()))) notes.push(`lessons/${id}.json links [[${m[1]}${m[2] ? `|${m[2]}` : ''}]], but neither side is in glossary.json yet.`);
     }
   }
   print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json and glossary.json.`);

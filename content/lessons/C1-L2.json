@@ -1,0 +1,63 @@
+{
+  "id": "C1-L2",
+  "unitId": "C1",
+  "title": "The control zoo",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Match common lab controls to the specific false result each one guards against.",
+  "tags": ["controls", "western-blot", "immunofluorescence", "qPCR"],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Most techniques have their own named controls",
+      "body": "Each method has controls tuned to its own ways of lying:\n\n- **Loading control** (western): a housekeeping protein, to check equal protein per lane.\n- **Secondary-only** (IF): omit the primary antibody, to catch non-specific secondary binding.\n- **No-RT** (qPCR): skip reverse transcriptase, to catch genomic-DNA contamination.\n- **[[vehicle control]]** (drugs): the carrier without the active compound.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each control to the false result it rules out.",
+      "pairs": [
+        ["Loading control", "Unequal protein loaded per lane"],
+        ["Secondary-only", "Non-specific secondary-antibody binding"],
+        ["No-RT control", "Signal from contaminating genomic DNA"],
+        ["Vehicle control", "An effect from the carrier, not the drug"]
+      ],
+      "explanation": "Each control isolates one alternative explanation. A missing control leaves that explanation wide open."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Your [[reporter]] stain looks positive, but you're worried the signal is just the secondary antibody sticking non-specifically. Which control settles it?",
+      "options": [
+        "Loading control",
+        "Secondary-only (no primary)",
+        "No-RT control",
+        "A positive-control tissue"
+      ],
+      "answer": [1],
+      "multi": false,
+      "explanation": "Secondary-only reproduces everything except the primary antibody. If it's blank, your signal depends on the primary — i.e. it's real. If it also glows, the secondary is binding non-specifically."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "A western blot shows a strong band in every lane, including the knockout.",
+      "data": { "kind": "table", "rows": [["Lane", "Genotype", "Band?"], ["1", "WT", "Yes"], ["2", "KO", "Yes"]] },
+      "prompt": "What's the most likely explanation?",
+      "options": [
+        "The antibody is non-specific or detects a cross-reactive protein",
+        "Too little protein was loaded",
+        "The transfer failed",
+        "The wrong secondary was used"
+      ],
+      "answer": [0],
+      "explanation": "Too little protein or a failed transfer would *remove* bands, not add them. A band that persists in a knockout — which lacks the target — points to a non-specific antibody. The KO is acting as the ideal negative control.",
+      "followUp": "Confirm with a second antibody to a different epitope, or a peptide-block."
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Pairs specialized controls with techniques covered in C7/C8/C10."
+}
