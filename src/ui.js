@@ -81,6 +81,9 @@ const PATHS = {
   share: '<path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/>',
   star: '<path d="M12 4l2.5 5.2 5.5.7-4 3.9 1 5.6L12 16.8 7 19.4l1-5.6-4-3.9 5.5-.7z"/>',
   neuron: '<circle cx="12" cy="12" r="3"/><path d="M12 9V3M9.6 13.8L5 19M14.4 13.8L19 19M15 12h6M3 10l6 1.5"/>',
+  book: '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19"/>',
+  pulse: '<path d="M3 12h4l2.5-6 5 12 2.5-6h4"/>',
+  slide: '<rect x="2.5" y="8" width="19" height="8" rx="1"/><path d="M8 8v8"/><circle cx="14.5" cy="12" r="1.6"/>',
   dots: '<circle cx="6" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="18" cy="12" r="1"/>',
 };
 

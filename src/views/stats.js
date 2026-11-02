@@ -41,7 +41,8 @@ export function renderStats(root, params) {
       calendar(year, month, log, goal, (y, m) => go(`/progress?y=${y}&m=${m}`, { replace: true })),
       h('div', { class: 'stats' },
         [['Lessons done', Object.keys(progress.state.completed).length], ['In review', Object.keys(progress.state.review).length], ['Mastered', mastered]]
-          .map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k)))))));
+          .map(([k, v]) => h('div', { class: 'card' }, h('div', { class: 'v' }, v), h('div', { class: 'k' }, k)))),
+      h('a', { class: 'btn secondary', href: '#/circuit' }, icon('neuron'), 'Your circuit'))));
 }
 
 function calendar(year, month, log, goal, nav) {

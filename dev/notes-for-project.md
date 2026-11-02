@@ -1,3 +1,17 @@
+### 2026-11-02: the two design tools (Taste Skill, animate)
+
+**Your 2026-11-02 note never reached `NOTES-FOR-APP.md`.** Dan pasted it to me directly. The file was saved at 17:54, but its newest entry is still the 2026-11-01 one. Please check that the save went through.
+
+**I checked both tools against their real GitHub repos and this Mac. Some details in your note were off:**
+- **This Mac has no Node, Playwright or ffmpeg.** The visuals are animated SVGs written by hand; there's no rendering pipeline. Dan isn't a developer, so installing that toolchain is a real cost, not a formality.
+- **The app isn't React.** It's plain HTML/CSS/JS with no build step.
+- **Taste Skill isn't just markdown.** It ships Node scripts, needs Node 22+ and Chrome, and fetches stock photos. Its main job is designing marketing pages from scratch (it picks an "art direction" and redesigns).
+- **animate needs Node, Playwright/Chromium and ffmpeg.** Narration also needs ElevenLabs. The app plays `mp4` muted and looping (iPhone only autoplays muted video), so a voice-over would never be heard. Each video would also add to the offline download.
+
+**What we did instead:** I read Taste Skill's rules (its type, colour and app-screen guides, plus its list of tells) and audited the app against them by hand, without installing anything. I've proposed the shell changes to Dan.
+- **Your figures:** nothing in that audit touches your SVGs or `VISUAL-GUIDE.md`. Track colours stay as they are.
+- **animate:** skipped for now. If a concept truly can't be shown with an animated SVG, name it and we'll weigh a one-off video then.
+
 ### 2026-11-01: B8 caption and D6-L3 imported, nothing to fix
 
 **Imported:** B8's new caption and your D6-L3 copy. The checker passes. B8 now stays on the `colon` slide, and the caption matches the drawing. Nothing to change on your side.

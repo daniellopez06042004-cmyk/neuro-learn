@@ -69,7 +69,8 @@ function widget(v, src) {
 }
 
 const letter = (i) => String.fromCharCode(65 + i);
-const kind = (text) => h('p', { class: 'kind' }, text);
+// A small grey line naming the task, left out when the prompt already says it.
+const kind = (text, prompt, word) => (word && word.test(prompt || '') ? null : h('p', { class: 'kind' }, text));
 const prompt = (text) => { const el = inline(text, 'h2'); el.className = 'prompt'; return el; };
 const sameSet = (a, b) => a.length === b.length && a.every((x) => b.includes(x));
 
@@ -162,7 +163,7 @@ function mcq(s) {
   const list = choiceList(s.options, s.multi);
   return {
     interactive: true,
-    el: [flagBadge(s.flag), kind(s.multi ? 'Pick all that apply' : 'Question'), prompt(s.prompt), list.el],
+    el: [flagBadge(s.flag), s.multi ? kind('Pick all that apply') : null, prompt(s.prompt), list.el],
     check: () => gradeChoices(s, list),
     lock: () => list.lock(s.answer),
   };
@@ -250,7 +251,7 @@ function match(s, ctx) {
 
   return {
     interactive: true,
-    el: [flagBadge(s.flag), kind('Match the pairs'), prompt(s.prompt),
+    el: [flagBadge(s.flag), kind('Match the pairs', s.prompt, /match|pair/i), prompt(s.prompt),
       h('div', { class: 'match' }, h('div', { class: 'col' }, L), h('div', { class: 'col' }, R))],
     check: () => matched < s.pairs.length
       ? { notReady: 'Match every pair first' }
@@ -284,7 +285,7 @@ function order(s) {
 
   return {
     interactive: true,
-    el: [flagBadge(s.flag), kind('Put in order'), prompt(s.prompt), slots, bankEl],
+    el: [flagBadge(s.flag), kind('Put in order', s.prompt, /order/i), prompt(s.prompt), slots, bankEl],
     check: () => placed.length < s.items.length
       ? { notReady: 'Place every step first' }
       : { ok: placed.every((v, i) => v === i), answerText: s.items.map((t, i) => `${i + 1}. ${t}`).join('\n') },

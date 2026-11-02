@@ -34,13 +34,15 @@ function backupTip() {
   return el;
 }
 
+// Field Pulse, Glossary and the slide box as icons in the top bar (Progress is the streak and xp counters;
+// Your circuit is on the progress screen).
 function shortcuts() {
   const unread = unreadPulse();
-  return h('nav', { class: 'shortcuts', 'aria-label': 'More' },
-    h('a', { class: 'pill', href: '#/pulse' }, 'Field Pulse', unread ? h('span', { class: 'badge' }, `${unread} new`) : null),
-    h('a', { class: 'pill', href: '#/glossary' }, 'Glossary'),
-    h('a', { class: 'pill', href: '#/progress' }, 'Progress'),
-    slideBoxReady() ? h('a', { class: 'pill', href: '#/slides' }, 'Slide box') : null);
+  return [
+    h('a', { class: 'icon-btn nav', href: '#/pulse', 'aria-label': `Field Pulse${unread ? `, ${unread} new` : ''}` }, icon('pulse'), unread ? h('span', { class: 'badge', 'aria-hidden': 'true' }, unread) : null),
+    h('a', { class: 'icon-btn nav', href: '#/glossary', 'aria-label': 'Glossary' }, icon('book')),
+    slideBoxReady() ? h('a', { class: 'icon-btn nav', href: '#/slides', 'aria-label': 'Slide box' }, icon('slide')) : null,
+  ];
 }
 
 function installTip() {
@@ -87,11 +89,10 @@ export function renderHome(root, params) {
       h('h1', { class: 'sr-only' }, content.course.title),
       ...statsBar(),
       h('span', { style: 'flex:1' }),
-      h('a', { class: 'icon-btn', href: '#/circuit', 'aria-label': 'Your circuit' }, icon('neuron')),
-      h('a', { class: 'icon-btn', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
+      ...shortcuts(),
+      h('a', { class: 'icon-btn nav', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
     backupTip(),
-    shortcuts(),
     chips,
     mapHost));
   drawChips();
