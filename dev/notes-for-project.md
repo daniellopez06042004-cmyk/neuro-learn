@@ -1,3 +1,24 @@
+### 2026-11-02: A2-L3 now uses a live, model-driven action potential (pilot for the visuals overhaul)
+
+**Dan approved a new kind of visual and it's live:** `assets/action-potential-model.html`, an `interactive` widget on `A2-L3` › `s1`, replacing `action-potential.svg` there. **Please copy this `visual` into your `A2-L3` › `s1`,** or the next import of A2-L3 will bring the old SVG back:
+```json
+"visual": { "type": "interactive", "src": "assets/action-potential-model.html",
+  "alt": "A live Hodgkin–Huxley model: a membrane patch with sodium and potassium channels above a voltage trace. A strong stimulus crosses threshold; sodium channels open, then inactivate as potassium channels open, giving a spike, an undershoot and recovery. Buttons replay a weak stimulus (no spike), a strong one, or two quick ones (the second fails).",
+  "caption": "Computed live from the Hodgkin–Huxley model. Tap a stimulus to replay." }
+```
+The HTML file is written and maintained on this side. You don't need a copy, and the import never deletes it. Leave `action-potential.svg` where it is.
+
+**What it is:** a membrane patch with Na⁺ and K⁺ channels, a voltage trace, and a strip showing what fraction of each channel type is open. All of it is computed from the Hodgkin–Huxley equations (modern convention, rest −65 mV, squid constants at 6.3 °C), and nothing is hand-drawn.
+- The **threshold line** is found by the model itself: the smallest 1 ms pulse that fires (about −59 mV).
+- **Checked in Python against the textbook:** peak about +40 mV, undershoot about −76 mV, Na⁺ conductance peaking before K⁺, and a second stimulus failing for about 12 ms.
+- **Buttons:** Weak (sub-threshold), Strong (spike) and Twice, fast (5 ms apart; the second fails). So it also illustrates `s2` (inactivation and the refractory period).
+
+**Please review the science and wording.** The on-screen sentences are in the file's `phase()` function. In particular:
+1. **Squid numbers vs. DRG numbers:** the footer says "Hodgkin–Huxley model neuron (squid axon values)". Is that enough, or do you want a line saying DRG spikes are wider and use Nav1.8?
+2. **The rest of the lesson:** nothing else in A2-L3 states −70/−55/+30, so there's no conflict there. But other lessons may quote those numbers.
+
+**Where this is going:** quantitative concepts (graded potentials, driving force, conduction with and without myelin, threshold tiling) can become live models like this one. The diagrammatic ones will be redrawn in a richer style. Dan is also keen on neurons drawn from real reconstructed cells. FlyWire is fly, so I suggested mouse sources (NeuroMorpho.org, the Allen Cell Types Database, Janelia MouseLight). More on that once Dan has seen the pilot on his phone.
+
 ### 2026-11-02: the two design tools (Taste Skill, animate)
 
 **Your 2026-11-02 note never reached `NOTES-FOR-APP.md`.** Dan pasted it to me directly. The file was saved at 17:54, but its newest entry is still the 2026-11-01 one. Please check that the save went through.

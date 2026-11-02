@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  The action potential, computed live from the Hodgkin–Huxley model (1952; modern sign convention,
+  rest −65 mV, squid-axon constants at 6.3 °C). Nothing on screen is hand-drawn: the voltage trace,
+  how open the Na⁺ and K⁺ channels are, the inactivation "ball", the ion flow and the threshold line
+  all come from the same simulation, so the timing and order of events are the model's, not an artist's.
+  Top: a patch of membrane with three Na⁺ channels (activation opens the pore, a ball-and-chain
+  inactivation gate plugs it) and three K⁺ channels. Middle: membrane voltage. Bottom: the fraction of
+  Na⁺ and K⁺ channels open. Buttons replay a weak stimulus (sub-threshold), a strong one (a spike) or
+  two strong ones 5 ms apart (the second fails: refractory period).
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--na:#1D9E75;--k:#ba7517;--lipid:#e8d9c4;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--na:#32c48f;--k:#ef9f27;--lipid:#4a4237;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  .seg{display:flex;gap:8px;margin:0 0 8px}
+  .seg button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 4px}
+  .seg button.sel{border-color:var(--na);background:color-mix(in srgb,var(--na) 16%,transparent)}
+  .seg button.sel::before{content:"✓ ";font-weight:800}
+  canvas{display:block;width:100%}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <div class="seg" role="radiogroup" aria-label="Stimulus">
+    <button data-run="weak" role="radio" aria-checked="false">Weak</button>
+    <button data-run="strong" role="radio" aria-checked="true" class="sel">Strong</button>
+    <button data-run="twice" role="radio" aria-checked="false">Twice, fast</button>
+  </div>
+  <canvas id="c" role="img" aria-label="A patch of membrane with sodium and potassium channels above a live voltage trace and a plot of how many of each channel are open."></canvas>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Hodgkin–Huxley model neuron (squid axon values)</p>
+<script>
+(function () {
+  // ---------- the model ----------
+  var DT = 0.01, T = 16, PULSE_AT = 2, PULSE_MS = 1, SECOND_AT = 7;
+  var ENA = 50, EK = -77, EL = -54.387, GNA = 120, GK = 36, GL = 0.3;
+  function rates(V) {
+    var x = V + 40, y = V + 55;
+    return [
+      Math.abs(x) < 1e-6 ? 1 : 0.1 * x / (1 - Math.exp(-x / 10)), 4 * Math.exp(-(V + 65) / 18),
+      0.07 * Math.exp(-(V + 65) / 20), 1 / (1 + Math.exp(-(V + 35) / 10)),
+      Math.abs(y) < 1e-6 ? 0.1 : 0.01 * y / (1 - Math.exp(-y / 10)), 0.125 * Math.exp(-(V + 65) / 80)];
+  }
+  // Runs T ms; pulses = [[start, amplitude µA/cm²], ...]. Returns one sample per 0.05 ms.
+  function simulate(pulses) {
+    var V = -65, r = rates(V), m = r[0] / (r[0] + r[1]), h = r[2] / (r[2] + r[3]), n = r[4] / (r[4] + r[5]);
+    var out = [], steps = Math.round(T / DT);
+    for (var i = 0; i <= steps; i++) {
+      var t = i * DT, I = 0;
+      for (var p = 0; p < pulses.length; p++) if (t >= pulses[p][0] && t < pulses[p][0] + PULSE_MS) I += pulses[p][1];
+      if (i % 5 === 0) out.push({ t: t, V: V, m: m, h: h, n: n, gna: GNA * m * m * m * h, gk: GK * n * n * n * n, I: I });
+      r = rates(V);
+      var dV = I - GNA * m * m * m * h * (V - ENA) - GK * n * n * n * n * (V - EK) - GL * (V - EL);
+      V += DT * dV;
+      m += DT * (r[0] * (1 - m) - r[1] * m); h += DT * (r[2] * (1 - h) - r[3] * h); n += DT * (r[4] * (1 - n) - r[5] * n);
+    }
+    return out;
+  }
+  var peak = function (run) { return run.reduce(function (a, s) { return Math.max(a, s.V); }, -99); };
+  // Threshold isn't typed in: find the smallest 1 ms pulse that fires, and the voltage it reaches.
+  var lo = 0, hi = 40;
+  for (var k = 0; k < 24; k++) { var mid = (lo + hi) / 2; if (peak(simulate([[PULSE_AT, mid]])) > 0) hi = mid; else lo = mid; }
+  var TH_AMP = hi, edge = simulate([[PULSE_AT, hi]]);
+  var TH_V = edge[Math.round((PULSE_AT + PULSE_MS) / 0.05)].V;
+  var RUNS = {
+    weak: simulate([[PULSE_AT, TH_AMP * 0.6]]),
+    strong: simulate([[PULSE_AT, TH_AMP * 2]]),
+    twice: simulate([[PULSE_AT, TH_AMP * 2], [SECOND_AT, TH_AMP * 2]])
+  };
+  var GNA_MAX = RUNS.strong.reduce(function (a, s) { return Math.max(a, s.gna); }, 0);
+  var GK_MAX = RUNS.strong.reduce(function (a, s) { return Math.max(a, s.gk); }, 0);
+  var M3_MAX = RUNS.strong.reduce(function (a, s) { return Math.max(a, s.m * s.m * s.m); }, 0);
+  var H_REST = RUNS.strong[0].h;
+
+  // ---------- what the readout says, from the model's state ----------
+  function phase(run, i, name) {
+    var s = run[i], t = s.t;
+    if (t < PULSE_AT) return 'At rest. A few K⁺ channels are open; Na⁺ channels are closed.';
+    if (name === 'weak') return s.I > 0 ? 'A weak stimulus nudges the voltage up…'
+      : 'Below threshold: K⁺ and leak currents win, and it settles back to rest. No spike.';
+    if (name === 'twice' && t >= SECOND_AT) return 'Second stimulus, 5 ms later: most Na⁺ channels are still inactivated, so no spike. This is the refractory period.';
+    if (s.I > 0) return 'A strong stimulus pushes the voltage past threshold…';
+    var rising = i + 1 < run.length && run[i + 1].V > s.V;
+    if (rising && s.V > TH_V) return 'Na⁺ channels open, Na⁺ rushes in, which opens more: the positive-feedback upstroke.';
+    if (s.V > -40 || (s.gk / GK_MAX > 0.5 && s.V > -60)) return 'Na⁺ channels inactivate (the ball plugs the pore) while K⁺ flows out and repolarizes.';
+    if (s.V < -66) return 'Undershoot: K⁺ channels close slowly, so the voltage dips below rest before recovering.';
+    return 'Back toward rest.';
+  }
+
+  // ---------- drawing ----------
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say');
+  var W = 0, H = 0, col = {};
+  function readColors() {
+    var cs = getComputedStyle(document.documentElement);
+    ['text', 'muted', 'line', 'line-strong', 'surface-2', 'na', 'k', 'lipid'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); });
+  }
+  function size() {
+    W = cv.clientWidth || 320; H = Math.round(Math.min(360, Math.max(300, W * 1.05)));
+    var d = window.devicePixelRatio || 1;
+    cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px';
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  var MEM_H = 112, PLOT_T = 0, PLOT_B = 0, G_T = 0, G_B = 0, PL = 40, PR = 0;
+  function layout() { PR = W - 6; PLOT_T = MEM_H + 22; PLOT_B = H - 78; G_T = H - 60; G_B = H - 6; }
+  var vy = function (V) { return PLOT_T + (40 - V) / (40 + 80) * (PLOT_B - PLOT_T); };
+  var tx = function (t) { return PL + t / T * (PR - PL); };
+  function label(s, x, y, c, align, weight) {
+    ctx.fillStyle = c; ctx.font = (weight || 600) + ' 13px -apple-system,system-ui,sans-serif';
+    ctx.textAlign = align || 'left'; ctx.fillText(s, x, y);
+  }
+
+  // Ions in flight: {x, y0, y1, p (0–1 progress), na: bool}
+  var ions = [];
+  var CH = [{ na: true, f: 0.14 }, { na: false, f: 0.30 }, { na: true, f: 0.46 }, { na: false, f: 0.62 }, { na: true, f: 0.78 }, { na: false, f: 0.94 }];
+  function membrane(s) {
+    var top = 34, bot = 80;
+    label('outside', 6, 16, col.muted, 'left', 400); label('inside', 6, MEM_H - 6, col.muted, 'left', 400);
+    label('Na⁺', W - 64, 16, col.na); label('K⁺', W - 8, 16, col.k, 'right');
+    // bilayer: two rows of heads with tails
+    ctx.fillStyle = col.lipid; ctx.fillRect(0, top + 4, W, bot - top - 8);
+    for (var x = 3; x < W; x += 7) {
+      ctx.fillStyle = col['line-strong'];
+      ctx.beginPath(); ctx.arc(x, top + 3, 3, 0, 6.283); ctx.fill();
+      ctx.beginPath(); ctx.arc(x, bot - 3, 3, 0, 6.283); ctx.fill();
+    }
+    CH.forEach(function (c) {
+      var x = c.f * W, open, color = c.na ? col.na : col.k;
+      if (c.na) open = Math.min(1, s.m * s.m * s.m / M3_MAX); else open = Math.min(1, s.gk / GK_MAX);
+      var gap = 2 + 7 * open, w = 11;
+      ctx.fillStyle = color;
+      roundRect(x - gap / 2 - w, top - 4, w, bot - top + 8, 5); roundRect(x + gap / 2, top - 4, w, bot - top + 8, 5);
+      if (c.na) { // inactivation ball on a chain, hanging inside; it swings into the pore as h falls
+        var inact = Math.max(0, Math.min(1, 1 - s.h / H_REST)), bx = x + 16 - 16 * inact, by = bot + 16 - 13 * inact;
+        ctx.strokeStyle = color; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(x + gap / 2 + w - 2, bot + 3); ctx.quadraticCurveTo(x + 18, bot + 14, bx, by); ctx.stroke();
+        ctx.beginPath(); ctx.arc(bx, by, 4.5, 0, 6.283); ctx.fill();
+      }
+    });
+    // current through each channel type sets how many ions set off this frame
+    var naFlux = s.gna * (ENA - s.V) / (GNA_MAX * 100), kFlux = s.gk * (s.V - EK) / (GK_MAX * 100);
+    CH.forEach(function (c) {
+      var f = c.na ? naFlux : kFlux;
+      if (Math.random() < f * 0.4) ions.push({ x: c.f * W, y0: c.na ? 22 : MEM_H - 16, y1: c.na ? MEM_H - 16 : 22, p: 0, na: c.na });
+    });
+    ions = ions.filter(function (o) { return o.p < 1; });
+    ions.forEach(function (o) {
+      o.p += 0.06;
+      ctx.globalAlpha = o.p < 0.8 ? 1 : (1 - o.p) * 5;
+      ctx.fillStyle = o.na ? col.na : col.k;
+      ctx.beginPath(); ctx.arc(o.x + Math.sin(o.p * 9) * 2, o.y0 + (o.y1 - o.y0) * o.p, 3, 0, 6.283); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+  function roundRect(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.fill(); }
+
+  function plots(run, upto) {
+    // axes, ticks and the threshold the model found
+    ctx.strokeStyle = col.line; ctx.lineWidth = 1;
+    [40, 0, -65].forEach(function (v) { ctx.beginPath(); ctx.moveTo(PL, vy(v)); ctx.lineTo(PR, vy(v)); ctx.stroke(); });
+    label('+40', PL - 6, vy(40) + 4, col.muted, 'right', 400); label('0', PL - 6, vy(0) + 4, col.muted, 'right', 400);
+    label('−65', PL - 6, vy(-65) + 4, col.muted, 'right', 400); label('mV', PL + 4, vy(40) + 15, col.muted, 'left', 400);
+    ctx.setLineDash([5, 4]); ctx.strokeStyle = col.k; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(PL, vy(TH_V)); ctx.lineTo(PR, vy(TH_V)); ctx.stroke(); ctx.setLineDash([]);
+    label('threshold', PR, vy(TH_V) - 5, col.k, 'right');
+    // stimulus marks under the trace
+    var stims = name === 'twice' ? [PULSE_AT, SECOND_AT] : [PULSE_AT];
+    stims.forEach(function (t0, j) {
+      if (run[upto].t < t0) return;
+      ctx.fillStyle = col.k; roundRect(tx(t0), PLOT_B + 3, tx(Math.min(t0 + PULSE_MS, run[upto].t)) - tx(t0) + 1, 6, 2);
+      if (!j) label('stimulus', tx(t0 + PULSE_MS) + 6, PLOT_B + 11, col.k, 'left', 400);
+    });
+    // voltage
+    ctx.strokeStyle = col.na; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.beginPath();
+    for (var i = 0; i <= upto; i++) { var s = run[i]; i ? ctx.lineTo(tx(s.t), vy(s.V)) : ctx.moveTo(tx(s.t), vy(s.V)); }
+    ctx.stroke();
+    var cur = run[upto]; ctx.fillStyle = col.na; ctx.beginPath(); ctx.arc(tx(cur.t), vy(cur.V), 4.5, 0, 6.283); ctx.fill();
+    // fraction of channels open
+    ctx.fillStyle = col['surface-2']; ctx.fillRect(PL, G_T, PR - PL, G_B - G_T);
+    [['gna', GNA_MAX, col.na], ['gk', GK_MAX, col.k]].forEach(function (g) {
+      ctx.strokeStyle = g[2]; ctx.lineWidth = 2.5; ctx.beginPath();
+      for (var i = 0; i <= upto; i++) { var s = run[i], y = G_B - 4 - Math.min(1, s[g[0]] / g[1]) * (G_B - G_T - 10); i ? ctx.lineTo(tx(s.t), y) : ctx.moveTo(tx(s.t), y); }
+      ctx.stroke();
+    });
+    label('open', PL - 6, G_T + 13, col.muted, 'right', 400);
+    label('Na⁺', PL + 6, G_T + 15, col.na); label('K⁺', PL + 36, G_T + 15, col.k);
+  }
+
+  // ---------- playback: 1 ms of model time takes 250 ms ----------
+  var name = 'strong', start = 0, holdUntil = 0, still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function frame(now) {
+    var run = RUNS[name], last = run.length - 1, i;
+    if (still) i = last;
+    else {
+      if (!start) start = now;
+      var ms = (now - start) / 250; i = Math.min(last, Math.round(ms / 0.05));
+      if (i === last && !holdUntil) holdUntil = now + 2200;
+      if (holdUntil && now > holdUntil) { start = now; holdUntil = 0; ions = []; i = 0; }
+    }
+    ctx.clearRect(0, 0, W, H);
+    membrane(run[i]); plots(run, i);
+    var text = still ? phase(run, name === 'strong' ? Math.round(4.2 / 0.05) : last, name) : phase(run, i, name);
+    if (say.textContent !== text) say.textContent = text;
+    if (!still) requestAnimationFrame(frame);
+  }
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.onclick = function () {
+      name = b.dataset.run; start = 0; holdUntil = 0; ions = [];
+      document.querySelectorAll('.seg button').forEach(function (x) { var on = x === b; x.classList.toggle('sel', on); x.setAttribute('aria-checked', String(on)); });
+      if (still) requestAnimationFrame(frame);
+    };
+  });
+  readColors(); size(); layout();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { readColors(); if (still) requestAnimationFrame(frame); });
+  addEventListener('resize', function () { size(); layout(); if (still) requestAnimationFrame(frame); });
+  requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

@@ -19,10 +19,10 @@
       "title": "The positive-feedback switch",
       "body": "**[[voltage-gated sodium channel|Voltage-gated Na⁺ channels]]** (Nav) open when the membrane depolarizes. Their opening lets Na⁺ in, which depolarizes the membrane further and opens more of them.\n\n**[[threshold|Threshold]]** is the voltage where this loop becomes self-sustaining and an action potential takes off.",
       "visual": {
-        "type": "svg-anim",
-        "src": "assets/action-potential.svg",
-        "alt": "A voltage-versus-time trace of one action potential: it rests near −70 mV, a stimulus reaches the −55 mV threshold, sodium flows in and the voltage spikes to about +30 mV, then potassium flows out and it falls back past rest before recovering.",
-        "caption": "Na⁺ in drives the upstroke; K⁺ out brings it back down."
+        "type": "interactive",
+        "src": "assets/action-potential-model.html",
+        "alt": "A live Hodgkin–Huxley model: a membrane patch with sodium and potassium channels above a voltage trace. A strong stimulus crosses threshold; sodium channels open, then inactivate as potassium channels open, giving a spike, an undershoot and recovery. Buttons replay a weak stimulus (no spike), a strong one, or two quick ones (the second fails).",
+        "caption": "Computed live from the Hodgkin–Huxley model. Tap a stimulus to replay."
       }
     },
     {
