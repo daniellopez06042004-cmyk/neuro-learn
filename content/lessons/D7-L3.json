@@ -1,0 +1,111 @@
+{
+  "id": "D7-L3",
+  "unitId": "D7",
+  "title": "When glucose control breaks: diabetes",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish type 1 and type 2 diabetes by their core defect.",
+  "tags": [
+    "diabetes",
+    "metabolism"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two ways the loop fails",
+      "body": "**[[diabetes|Diabetes]]** is chronically high blood glucose, but for different reasons:\n\n- **Type 1:** the immune system destroys **[[beta cell|β cells]]**, so there's little or no **[[insulin]]** (an autoimmune, neuroimmune-adjacent story).\n- **Type 2:** tissues become **resistant** to insulin; β cells can't keep up.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each diabetes type to its core defect.",
+      "pairs": [
+        [
+          "Type 1",
+          "β cells destroyed → little/no insulin"
+        ],
+        [
+          "Type 2",
+          "Tissues resist insulin → β cells overworked"
+        ]
+      ],
+      "explanation": "Type 1 is an insulin *supply* failure (β-cell loss); type 2 is an insulin *response* failure (resistance)."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "In type 1 diabetes the immune system destroys β cells but spares the exocrine acini.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Blood glucose rises with no insulin, while enzyme output is kept",
+        "Digestion fails but blood glucose stays perfectly normal",
+        "Both glucose control and digestion fail completely together"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Losing β cells removes insulin, so glucose climbs — while the ~98% exocrine pancreas keeps making enzymes. The two compartments can fail independently (D6).",
+      "freeText": false,
+      "flag": {
+        "level": "simplified",
+        "note": "Exocrine function can also be affected in diabetes; the point is that the compartments are distinct."
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Type 1 diabetes (β cells gone, acini spared) gives…",
+          "options": [
+            "High glucose, with enzyme output largely intact",
+            "Normal glucose, but digestion fails entirely",
+            "Total, simultaneous failure of both systems"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "No insulin raises glucose; exocrine enzymes continue.",
+          "flag": {
+            "level": "simplified",
+            "note": "Exocrine function can also be affected in diabetes; the compartments are nonetheless distinct."
+          }
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "What is the core problem in type 2 diabetes?",
+      "options": [
+        "Tissues respond poorly to insulin",
+        "The immune system destroys the β cells",
+        "The α cells stop making glucagon",
+        "The gut absorbs glucose far too quickly"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Type 2 begins with insulin resistance; β cells compensate until they can't, and glucose rises.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Someone has normal β cells but their tissues barely respond to insulin.",
+          "prompt": "Which type does this describe?",
+          "options": [
+            "Type 2 diabetes",
+            "Type 1 diabetes",
+            "Neither"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Poor tissue response with present β cells is the type 2 pattern (insulin resistance)."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "T1 vs T2 diabetes; ties to D6 compartments."
+}

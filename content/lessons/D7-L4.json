@@ -1,0 +1,105 @@
+{
+  "id": "D7-L4",
+  "unitId": "D7",
+  "title": "Why the lab cares about pancreas nerves",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect pancreatic innervation and interoception to metabolic control and the project.",
+  "tags": [
+    "pancreas",
+    "interoception"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The nervous system watches metabolism",
+      "body": "Metabolism isn't only hormones. **[[interoception]]** — the nervous system's sense of the body's internal state — lets the brain monitor and influence organs like the pancreas. Sensory nerves to the pancreas may help the body track and tune glucose handling; that is still being worked out.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What is interoception?",
+      "options": [
+        "The nervous system's sense of the body's internal state",
+        "The ordinary sense of touch felt on the skin surface",
+        "The sense of body position and limb movement",
+        "The brain's autonomic control of the organs"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Interoception is the afferent sensing of internal organs — the input side of autonomic and metabolic control.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The brain tracks how full the stomach is and how fast the heart beats.",
+          "prompt": "Which sense provides that?",
+          "options": [
+            "Interoception",
+            "Proprioception",
+            "Exteroception"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Interoception is the body's sense of its own internal state."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to test whether sensory neurons innervating the pancreas influence glucose handling.",
+      "prompt": "Which approach fits the lab's project?",
+      "options": [
+        "Silence those neurons with a DREADD and then measure glucose",
+        "Cut all nerves to the pancreas, then measure glucose",
+        "Feed the mice sugar and simply track their glucose"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Targeting pancreas afferents with a **[[DREADD]]** and watching glucose/physiology is exactly your capstone project — extending the colon playbook to a metabolic organ.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To test if pancreas sensory neurons affect metabolism, the lab would…",
+          "options": [
+            "Silence them with a DREADD and read out glucose",
+            "Cut all nerves to the pancreas, then read glucose",
+            "Feed the mice sugar and track their glucose"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "DREADD silencing with a metabolic readout isolates the neurons' role."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Where the tracks meet",
+      "body": "D7 (metabolism) + the sensory biology (Track A) + the tools (Track C) converge on the capstone: do pancreas-innervating sensory neurons shape glucose control? That's a frontier question — the pancreas isn't yet mapped the way the colon is.",
+      "flag": {
+        "level": "uncertain",
+        "note": "Sensory control of pancreatic/metabolic function is an active, unsettled research area."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Spinal sensory innervation of the intestine; interoceptive control of visceral organs."
+    }
+  ],
+  "reviewNotes": "Interoception + metabolism; capstone bridge."
+}

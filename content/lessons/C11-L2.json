@@ -1,0 +1,105 @@
+{
+  "id": "C11-L2",
+  "unitId": "C11",
+  "title": "Calcium imaging with GCaMP",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how GCaMP reports neural activity and why calcium is a proxy.",
+  "tags": [
+    "calcium-imaging",
+    "GCaMP"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Calcium as a stand-in for firing",
+      "body": "When a neuron fires, voltage-gated channels let **Ca²⁺** rush in. **[[GCaMP]]** is a protein that glows brighter when it binds calcium. So a rise in GCaMP fluorescence (**[[ΔF/F|ΔF/F]]**) reports that the neuron was active — an indirect but powerful readout.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What does a rise in GCaMP fluorescence indicate?",
+      "options": [
+        "Intracellular calcium rose, which usually reflects activity",
+        "The neuron simply took up more of the dye than before",
+        "The cell made more GCaMP protein during the recording",
+        "Calcium was pumped out of the cell, lighting the sensor"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "GCaMP brightens when calcium binds; calcium entry follows firing, so brightness tracks activity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A GCaMP-expressing neuron suddenly brightens.",
+          "prompt": "What most likely happened?",
+          "options": [
+            "It became active, so calcium rose inside it",
+            "It pumped calcium out, which lights the sensor",
+            "It made a sudden burst of new GCaMP protein"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "A fluorescence rise reflects calcium influx from activity."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You apply capsaicin to GCaMP+ cultured DRG neurons.",
+      "prompt": "What do you predict?",
+      "options": [
+        "All neurons brighten equally",
+        "Only TRPV1+ neurons brighten",
+        "Only large neurons brighten"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Capsaicin opens **[[TRPV1]]**, so only TRPV1-expressing neurons take up calcium and brighten — calcium imaging reads out which subtypes respond.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Capsaicin on GCaMP+ DRG culture brightens…",
+          "options": [
+            "Every neuron",
+            "Only TRPV1+ neurons",
+            "Only large neurons"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Only TRPV1+ cells respond to capsaicin with calcium influx."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Calcium is slow",
+      "body": "Calcium rises and falls more slowly than a spike, so GCaMP shows *that* and roughly *how much* a neuron fired, not the exact spike times. For millisecond timing you still need electrical recording.",
+      "flag": {
+        "level": "simplified",
+        "note": "GCaMP variants differ in speed/sensitivity; it reports calcium, an indirect proxy for spiking."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Chen TW et al., 2013, Nature",
+      "doi": "10.1038/nature12354",
+      "url": "https://doi.org/10.1038/nature12354",
+      "verified": true,
+      "note": "GCaMP6 genetically encoded calcium indicators for imaging activity."
+    }
+  ],
+  "reviewNotes": "GCaMP principle; capsaicin readout tie-in."
+}

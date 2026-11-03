@@ -1,0 +1,98 @@
+{
+  "id": "D4-L1",
+  "unitId": "D4",
+  "title": "Inside a peripheral nerve",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Name the connective-tissue layers of a peripheral nerve and explain that most nerves are mixed.",
+  "tags": [
+    "peripheral-nerve",
+    "anatomy"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A cable of cables",
+      "body": "A peripheral nerve is a bundle, wrapped in three sheaths:\n\n- **[[endoneurium]]** wraps each individual axon\n- **[[perineurium]]** binds axons into a **[[fascicle]]**\n- **[[epineurium]]** wraps the whole nerve\n\nMost nerves are **mixed**: sensory ([[afferent]]) and motor ([[efferent]]) axons travel together.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the nerve wrappings from the single axon outward.",
+      "items": [
+        "Endoneurium (around one axon)",
+        "Perineurium (around a fascicle)",
+        "Epineurium (around the whole nerve)"
+      ],
+      "explanation": "Endoneurium → perineurium → epineurium: innermost to outermost. The perineurium also forms a protective barrier around each fascicle."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A nerve is described as 'mixed'. What does that mean?",
+      "options": [
+        "It carries both sensory and motor axons together",
+        "It contains only unmyelinated axons",
+        "It belongs to the central nervous system",
+        "It carries both sympathetic and parasympathetic axons"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "A mixed nerve carries [[afferent]] (sensory) and [[efferent]] (motor) axons in the same bundle — so one cut can affect both.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A nerve contains both afferent and efferent axons.",
+          "prompt": "What is it called?",
+          "options": [
+            "A mixed nerve",
+            "A purely sensory nerve",
+            "A central tract"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Carrying both sensory and motor fibers makes it a mixed nerve."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "A mixed nerve to a limb is crushed.",
+      "prompt": "What do you predict for that limb?",
+      "options": [
+        "Only movement is affected, sensation is spared",
+        "Both sensation and movement can be lost in its territory",
+        "Only sensation is affected, movement is spared"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Because the nerve carries both afferent and efferent axons, a lesion can knock out sensation *and* movement in the area it serves.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Crushing a mixed nerve can impair…",
+          "options": [
+            "Both sensation and movement in its territory",
+            "Only sensation, with movement fully spared",
+            "Only movement, with sensation fully spared"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Mixed nerves carry sensory and motor axons, so both can be lost."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Nerve structure and mixed nerves; sets up conduction and lesions."
+}

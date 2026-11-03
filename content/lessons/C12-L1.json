@@ -1,0 +1,95 @@
+{
+  "id": "C12-L1",
+  "unitId": "C12",
+  "title": "Bulk vs single-cell RNA-seq",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain what single-cell RNA-seq reveals that bulk RNA-seq hides.",
+  "tags": [
+    "RNA-seq",
+    "transcriptomics"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Average vs per-cell",
+      "body": "**[[bulk RNA-seq|Bulk RNA-seq]]** grinds up tissue and reports the *average* expression across all cells. **[[single-cell RNA sequencing|Single-cell RNA-seq]]** measures each cell separately, so you can see distinct cell types and rare populations the average would blur together.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "A gene is sky-high in 5% of cells and absent in the rest. What does bulk RNA-seq show?",
+      "options": [
+        "A modest average that hides the real bimodal truth",
+        "A clear, sharp picture of just that 5% of cells",
+        "Nothing, since 5% is below bulk's detection limit",
+        "Each individual cell's value reported separately"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Bulk reports one blended number, so a striking minority pattern looks like a mild average. Single-cell would reveal the two populations.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A gene is very high in a rare subset, off elsewhere.",
+          "prompt": "What does bulk RNA-seq report?",
+          "options": [
+            "The rare subset clearly",
+            "A diluted average",
+            "Per-cell values"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Bulk averages over all cells, masking the rare high-expressers."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to discover new DRG subtypes defined by marker genes.",
+      "prompt": "Which approach fits?",
+      "options": [
+        "Bulk RNA-seq of whole ganglia",
+        "Single-cell RNA-seq",
+        "RNAscope for known markers"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Single-cell RNA-seq is how subtype schemes (like the DRG neuron classes) are discovered — each cell's profile lets you group them into types.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To find new cell subtypes by expression, use…",
+          "options": [
+            "Bulk RNA-seq",
+            "Single-cell RNA-seq",
+            "qPCR of one gene"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Per-cell profiles are what let you define subtypes."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Usoskin D et al., 2015, Nat Neurosci",
+      "doi": "10.1038/nn.3881",
+      "url": "https://doi.org/10.1038/nn.3881",
+      "verified": true,
+      "note": "Single-cell RNA-seq classification of DRG sensory neuron types."
+    }
+  ],
+  "reviewNotes": "Bulk vs single-cell; motivates subtype discovery."
+}

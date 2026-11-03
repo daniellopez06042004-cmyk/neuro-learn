@@ -1,0 +1,87 @@
+{
+  "id": "C11-L3",
+  "unitId": "C11",
+  "title": "Reading a calcium trace",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Interpret a calcium-imaging experiment including its controls.",
+  "tags": [
+    "calcium-imaging",
+    "interpretation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Responders and a final check",
+      "body": "A calcium experiment ends by asking: which neurons responded to each stimulus, and are the quiet ones actually alive? A high-**KCl** pulse at the end depolarizes *every* healthy neuron — a positive control that a non-responder was silent, not dead.",
+      "flag": null
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s2",
+      "scenario": "A neuron shows no response to capsaicin, and also no response to the final KCl pulse.",
+      "prompt": "What do you conclude about it?",
+      "options": [
+        "It's a capsaicin-insensitive but healthy neuron",
+        "It was probably unhealthy or dead — exclude it",
+        "It's TRPV1+ but desensitized to capsaicin"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "KCl should excite any living neuron. No KCl response means the cell was unhealthy — its capsaicin 'no' is uninterpretable, so exclude it.",
+      "followUp": "That's why KCl (or high-K⁺) goes at the end: it validates the silent cells.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "No capsaicin response AND no KCl response means the neuron is…",
+          "options": [
+            "Healthy but capsaicin-insensitive",
+            "Likely dead — exclude it",
+            "TRPV1+ but desensitized"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A dead cell can't respond to KCl; its silence isn't informative."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why include a KCl pulse at the end at all?",
+      "options": [
+        "As a positive control that the silent neurons are still alive",
+        "To pick out which of the neurons are the nociceptors",
+        "To reset every neuron to rest before the next trial",
+        "To wash the remaining capsaicin back out of the dish"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "KCl is the viability check — it separates 'truly unresponsive' from 'dead'.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You want to trust your non-responders.",
+          "prompt": "What control gives that?",
+          "options": [
+            "A final KCl pulse",
+            "A longer wash",
+            "More capsaicin"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "KCl confirms the silent neurons could have responded."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Calcium trace interpretation; KCl positive control."
+}

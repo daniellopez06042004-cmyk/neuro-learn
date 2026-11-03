@@ -1,0 +1,107 @@
+{
+  "id": "C10-L2",
+  "unitId": "C10",
+  "title": "ΔΔCt and reference genes",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain why qPCR needs a reference gene and how ΔΔCt normalizes.",
+  "tags": [
+    "qPCR",
+    "normalization"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "You loaded different amounts",
+      "body": "No two samples have exactly the same amount of cDNA. A **[[reference gene]]** (a gene assumed steady across your conditions, like *Actb* or *Gapdh*) acts as a yardstick: you compare your gene of interest *to it*, cancelling out loading differences.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the ΔΔCt calculation.",
+      "items": [
+        "Measure Ct of your gene and the reference, each sample",
+        "ΔCt = gene Ct − reference Ct (normalize loading)",
+        "ΔΔCt = treated ΔCt − control ΔCt (compare conditions)",
+        "Fold change = 2^(−ΔΔCt)"
+      ],
+      "explanation": "First normalize to the reference within a sample, then compare across conditions, then convert to fold change."
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "You loaded equal cDNA, yet your 'reference' gene's own Ct shifts a lot between control and treated groups.",
+      "prompt": "What's the problem?",
+      "options": [
+        "The reference isn't stable here, so normalization is invalid",
+        "Nothing, since ΔΔCt already cancels out any reference shift",
+        "The target primers are failing, not the reference gene itself"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A reference must be unchanged by your treatment. If it moves, every normalized value is distorted. Validate references per experiment (a MIQE point).",
+      "followUp": "Fix: test several candidate references and use ones stable in *your* conditions, ideally more than one.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A reference gene that changes with treatment is…",
+          "options": [
+            "Invalid — it ends up biasing the normalization",
+            "Fine, since ΔΔCt cancels out the change anyway",
+            "Fine, as long as every sample uses the same one"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "References must be stable across your conditions."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why normalize to a reference gene at all?",
+      "options": [
+        "To cancel out differences in the amount of input cDNA",
+        "To correct for primer efficiency differences between genes",
+        "To convert Ct values into absolute mRNA copy numbers",
+        "To remove genomic DNA contamination from the signal"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Normalization removes loading/input differences so a change reflects biology, not pipetting.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two samples had different cDNA input.",
+          "prompt": "What fixes that in the analysis?",
+          "options": [
+            "Normalizing the data to a stable reference gene",
+            "Running more cycles so both samples plateau",
+            "Comparing the raw target Ct values directly"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Dividing by a steady reference cancels input differences."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Bustin SA et al., 2009, Clin Chem",
+      "doi": "10.1373/clinchem.2008.112797",
+      "url": "https://doi.org/10.1373/clinchem.2008.112797",
+      "verified": true,
+      "note": "MIQE guidelines: rigorous qPCR, reference genes, reporting."
+    }
+  ],
+  "reviewNotes": "ΔΔCt and reference-gene validation."
+}

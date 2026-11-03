@@ -1,0 +1,95 @@
+{
+  "id": "C9-L3",
+  "unitId": "C9",
+  "title": "Resolution and the diffraction limit",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain what sets optical resolution and what it cannot do.",
+  "tags": [
+    "microscopy",
+    "resolution"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Light has a floor",
+      "body": "Two points closer than ~200–250 nm blur into one: the **[[diffraction limit]]**. Resolution improves with higher **[[numerical aperture|numerical aperture (NA)]]** and shorter wavelength, but ordinary light microscopy can't beat that floor — so 'they look like one dot' may just mean 'closer than the limit', not 'the same structure'.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Two labeled proteins sit 100 nm apart. On a standard confocal you see one dot. Why?",
+      "options": [
+        "They're below the diffraction limit, so they blur into one",
+        "They are, in fact, literally the very same protein",
+        "The excitation laser is simply far too weak to resolve",
+        "The sample must have drifted or moved during imaging"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "100 nm is under the ~200 nm limit, so they can't be separated by conventional light microscopy — not evidence they're identical.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two spots 100 nm apart look like one on a confocal.",
+          "prompt": "Does that prove they're the same structure?",
+          "options": [
+            "No — the two spots are below the resolution limit",
+            "Yes, you can conclude they are the same structure",
+            "Only when both of them are stained in the red channel"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Below the diffraction limit, separate things merge; you can't conclude they're identical."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Which change improves resolving power?",
+      "options": [
+        "A higher-NA objective paired with a shorter wavelength",
+        "More digital zoom or a higher-power eyepiece",
+        "Cutting and imaging a considerably thicker section",
+        "Opening up to a much bigger overall field of view"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Resolution scales with NA and inversely with wavelength. Brightness and field of view don't set resolving power.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You need to resolve finer detail.",
+          "prompt": "Best lever?",
+          "options": [
+            "Higher-NA objective with a shorter wavelength",
+            "Switching down to a lower magnification lens",
+            "Simply using a much longer camera exposure"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Higher NA and shorter wavelength tighten the resolution limit."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Beyond the limit",
+      "body": "Super-resolution methods (STORM, STED) break the diffraction floor with clever tricks, but they're specialized. For most tissue work, know the limit and don't over-interpret a single dot.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Diffraction limit; honest interpretation."
+}

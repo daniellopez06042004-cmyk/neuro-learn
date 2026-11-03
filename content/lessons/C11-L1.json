@@ -1,0 +1,87 @@
+{
+  "id": "C11-L1",
+  "unitId": "C11",
+  "title": "Getting DRG neurons into a dish",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why and how DRG neurons are dissociated into culture.",
+  "tags": [
+    "DRG",
+    "culture"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "One ganglion, many cells",
+      "body": "One common way to study single sensory neurons: dissect **[[DRG]]**, then use enzymes to make a **[[dissociated culture]]** — the ganglion broken into individual cell bodies in a dish. Now each neuron is accessible for calcium imaging or patch recording.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why dissociate the DRG instead of imaging it intact?",
+      "options": [
+        "To access and record from individual neuron cell bodies",
+        "To use GCaMP, which only works in cultured neurons",
+        "To make the sensory neurons divide and multiply again",
+        "To let the neurons regrow the axons cut during dissection"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Dissociation separates the tightly packed cell bodies so you can study and stimulate them one at a time.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You want to patch single DRG neurons and give every cell body direct drug access.",
+          "prompt": "Intact ganglion or dissociated culture?",
+          "options": [
+            "Intact ganglion",
+            "Dissociated culture",
+            "Neither works"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "A dish of separated cell bodies lets you image and stimulate each neuron individually."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "Culture makes DRG neurons easy to reach and image.",
+      "prompt": "What's a limitation of cultured DRG neurons?",
+      "options": [
+        "They lose their normal connections and tissue context",
+        "They keep dividing in culture, so their numbers drift",
+        "They can no longer fire an action potential at all"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Culture is powerful for access but artificial: the neuron is cut from its endings and partners, so some properties change. Pair it with in vivo work.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A caveat of dissociated DRG culture is that neurons…",
+          "options": [
+            "Stop firing action potentials",
+            "Lose connections and context",
+            "Keep dividing in the dish"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Removed from tissue, their context and some properties change."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "DRG dissociation; sets up calcium imaging."
+}

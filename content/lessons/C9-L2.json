@@ -1,0 +1,95 @@
+{
+  "id": "C9-L2",
+  "unitId": "C9",
+  "title": "Two-photon: going deep",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why two-photon excitation images deeper and localizes excitation.",
+  "tags": [
+    "microscopy",
+    "two-photon"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two low-energy photons, one event",
+      "body": "**[[two-photon microscopy|Two-photon]]** excites a fluorophore only where two infrared photons arrive almost simultaneously — which only happens at the tight focal point. Infrared light also scatters less in tissue, so two-photon reaches deeper and excites *only* the focal volume.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why does two-photon cause less out-of-focus damage than confocal?",
+      "options": [
+        "Excitation happens only right at the focal point",
+        "Its infrared photons each carry more energy",
+        "It scans faster, so each spot gets less light",
+        "Its confocal pinhole is substantially larger"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Only the focal volume gets enough photon density to excite, so planes above and below aren't bleached or damaged.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You focus a two-photon laser deep inside a thick sample.",
+          "prompt": "Where does it actually excite the dye?",
+          "options": [
+            "Throughout the beam path",
+            "Essentially only at the focal point",
+            "Only at the tissue surface"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Two-photon excitation is confined to the focus, sparing other planes."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to image calcium activity hundreds of microns deep in a living brain.",
+      "prompt": "Which fits best?",
+      "options": [
+        "Widefield",
+        "Two-photon",
+        "Confocal"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Infrared penetrates deeper with less scatter, and localized excitation suits living tissue — two-photon is the standard for deep in vivo imaging.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Deep in vivo calcium imaging usually uses…",
+          "options": [
+            "Two-photon",
+            "Widefield",
+            "Confocal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "IR depth + localized excitation make two-photon ideal in vivo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Denk W et al., 1990, Science",
+      "doi": "10.1126/science.2321027",
+      "url": "https://doi.org/10.1126/science.2321027",
+      "verified": true,
+      "note": "Introduced two-photon laser scanning microscopy."
+    }
+  ],
+  "reviewNotes": "Two-photon; forward-ref to calcium imaging in C11."
+}

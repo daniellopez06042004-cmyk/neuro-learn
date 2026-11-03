@@ -1,0 +1,103 @@
+{
+  "id": "D8-L4",
+  "unitId": "D8",
+  "title": "Interoceptive loops close the circuit",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how interoceptive afferents complete organ-regulating loops, linking the tracks.",
+  "tags": [
+    "interoception",
+    "reflex"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sensing is half the loop",
+      "body": "Every homeostatic reflex needs an afferent limb — the sensor. **[[interoception|Interoceptive]]** afferents (spinal/[[DRG]] and vagal/[[nodose ganglion|nodose]]) are that limb for the viscera. Without them, the brain loses its direct neural readout of the organ, and neural reflexes can't close the loop.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why are visceral afferents essential to organ reflexes?",
+      "options": [
+        "They form the afferent limb; the brain can't regulate what it can't sense",
+        "They act as the effector that physically moves and contracts the organ",
+        "They completely replace hormonal control of the organ all by themselves",
+        "They only matter during early development, never in the adult animal"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Regulation needs sensing. Visceral afferents report the organ's state so a reflex (or the brain) can respond — the input side of control.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You remove the sensory (afferent) limb of an organ reflex.",
+          "prompt": "What happens to the loop?",
+          "options": [
+            "It can no longer sense the variable, so regulation fails",
+            "Nothing changes, since the effector limb is still intact",
+            "The loop flips into positive feedback and runs away"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "With no afferent limb the loop is blind and can't correct — regulation fails."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "The vagal 'inflammatory reflex' (Track B) is an example of what?",
+      "options": [
+        "An interoceptive reflex: afferents sense inflammation and efferents dampen it",
+        "A purely hormonal loop: cytokines alone shut inflammation off",
+        "A somatic stretch reflex, much like the familiar knee-jerk",
+        "A positive-feedback loop: vagal output amplifies inflammation"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "It's a reflex arc where afferents sense immune signals and efferent [[vagus|vagal]] output modulates inflammation — sensing and response, closing the loop.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Afferents detect inflammation and vagal output then dampens it.",
+          "prompt": "What is this?",
+          "options": [
+            "An interoceptive reflex arc",
+            "A hormone acting alone",
+            "A somatic reflex"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Sensing inflammation and responding via the vagus is an interoceptive reflex arc."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why it all connects",
+      "body": "Sensory biology (A), neuroimmune loops (B), the tools (C), and this anatomy/physiology (D) all meet here: visceral afferents are the afferent limb of the loops that keep organs healthy — and the exact neurons the lab, and your project, aim to understand.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Spinal sensory innervation of the intestine; interoceptive control of visceral organs."
+    }
+  ],
+  "reviewNotes": "Interoceptive reflex loops; ties all tracks and the project together."
+}

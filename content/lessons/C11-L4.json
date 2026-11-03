@@ -1,0 +1,87 @@
+{
+  "id": "C11-L4",
+  "unitId": "C11",
+  "title": "In vivo recording and optotagging",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how optotagging identifies a genetically defined neuron electrically.",
+  "tags": [
+    "in-vivo",
+    "optotagging"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "An electrode can't read genotype",
+      "body": "An in vivo electrode records spikes but can't tell which molecular type fired. **[[optotagging|Optotagging]]** solves this: express an opsin (e.g. ChR2) in one **[[Cre]]**-defined type, then flash light — neurons that fire *locked to the light* are that genetic type. You've tagged identity onto an electrical recording.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "In optotagging, which neurons are the tagged type?",
+      "options": [
+        "Neurons that fire reliably, time-locked to each light flash",
+        "Neurons whose firing slowly ramps up over minutes of light",
+        "Neurons that fall silent during each of the light flashes",
+        "Neurons with the largest spikes once the light comes on"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Only opsin-expressing (Cre-defined) neurons fire right at the light pulse, so light-locked spikes reveal identity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You flash light on ChR2-expressing, Cre-defined neurons during recording.",
+          "prompt": "How do you spot the tagged type?",
+          "options": [
+            "Spikes that are tightly locked to the light pulses",
+            "Units whose firing creeps up seconds after light",
+            "Units that go quiet whenever the light is on"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Light-locked firing marks the opsin-expressing genetic type."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to know how one DRG subtype responds to colon distension in a living mouse.",
+      "prompt": "Which approach answers this?",
+      "options": [
+        "Tag that subtype with an opsin, then read its spikes during distension",
+        "Record every unit during distension, then sort the subtype by spike shape",
+        "Dissociate the ganglion and culture all of its neurons in a dish first"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Optotagging lets you pick out one genetically defined subtype's activity in vivo during a real stimulus — connecting molecular identity to function in the behaving animal.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Optotagging lets you link…",
+          "options": [
+            "A genetic subtype to its own in vivo firing",
+            "A subtype's mRNA profile to its axon targets",
+            "A neuron's soma size to its firing threshold"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "It assigns molecular identity to recorded activity in vivo."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Optotagging; identity + function in vivo."
+}

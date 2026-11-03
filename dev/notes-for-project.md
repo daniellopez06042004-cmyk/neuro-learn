@@ -1,3 +1,42 @@
+### 2026-11-02 (later): C6–C12 and D4–D8 are live, after an independent review (146 edits to copy)
+
+**Imported:** 44 lessons, 57 glossary terms and the 11 unit definitions. Your prereqs work as written. No new term collides with link rendering, and the checker passes. The map now places each unit under the units it depends on, so links don't cross.
+
+**1. Please copy these 45 lesson files from `app/content/lessons/` over yours, unchanged:** all 44 new lessons plus `D6-L2` (its gut-wall alt text, see 4). An independent review made **146 edits** in them. The full record, with old text, new text and the reason for each, is in `app/dev/review-C6-C12-D4-D8.md`. If you don't copy them, the next import will undo them.
+
+**The 19 science fixes:**
+- `C6-L2`: the mouse colon and pancreas are thin and immersion-fix well. The "thick organ fixes poorly by immersion" example is now the liver, and the s1 card argues from the brain.
+- `C6-L4` s1: tissue scatters light because lipids and proteins have a different refractive index from water.
+- `C7-L1` s3: antibodies raised against linear peptides usually *tolerate* fixation better, so that detail pointed the wrong way and was removed.
+- `C7-L3` s4: "secondary-only" and "no-primary" are the same control. The second is now knockout tissue.
+- `C7-L4` s4: mRNA in the same cells is independent *support* for an antibody stain, not confirmation (C8-L1 says the two can diverge).
+- `C8-L1` s2: DNA-FISH does read DNA, so "neither reads DNA" was wrong.
+- `C8-L2`: it is the *preamplifier* that needs both Z tails. One dot is one mRNA because about 20 ZZ pairs tile each transcript and their trees merge into one spot, not because each pair makes its own dot.
+- `C8-L3` s2 variant: DAPI marks the nucleus, not the cell border, and most dots are cytoplasmic.
+- `C10-L2` s3 and `C10-L4` s2: each had two defensible answers. A reference gene's Ct also shifts with unequal input, and a target can rise more than its loading control. The stems now rule those out.
+- `C11-L1` s1: dissociated culture is one common way to reach single DRG neurons, not the only one (intact-ganglion GCaMP imaging is routine).
+- `C11-L2` s2: GCaMP signal *usually reflects* activity. It is indirect, as the card says.
+- `D4-L2` s3: Aα fibers are faster than Aβ. Also, "fewer nodes" was a second defensible answer, so it now reads "fewer sodium channels at the nodes".
+- `D5-L1` s1: deep muscle and joint pain is dull and poorly localized, so "sharp and well-localized" now applies to skin only.
+- `D5-L2` s2 variant: some colon mucosal afferents do respond to light stroking.
+- `D7-L4` s1: sensory control of glucose is stated as settled, but s4 in the same lesson flags it as uncertain. It now reads "may help… still being worked out".
+- `D8-L2` s4: "much of physiology", not "nearly all", is built from reflex arcs (much regulation is hormonal or intrinsic).
+- `D8-L4` s1: without visceral afferents the brain loses its *direct neural* readout; hormones and enteric circuits still report.
+
+**What kept coming up, for future batches:**
+1. **Throwaway wrong answers (95 of the edits).** These are mostly in the short variants: "Neither", "Weigh the colon", "Pure coincidence", "The heart has no sensory neurons". Your length audit passes these, but nobody would pick them. Please write each distractor as a misconception a learner might actually hold.
+2. **Setups that state the answer (21).** For example, `D5-L3` s2's variant said cardiac afferents converge with left-arm afferents, then asked where heart pain is felt. A related tell: the correct option is the only one that mentions the cue word, such as "light" in the optotagging questions.
+
+**2. Please check one claim:** `C8-L4` s3 says the colon paper defines five DRG subtypes by TrkB, TH, Bmpr1b, Sstr2 and Adra2a. We couldn't confirm that list against Wolfson et al. 2023, and it mixes protein names (TrkB, TH) with gene symbols. Please check it against the paper and use gene symbols (Ntrk2, Th, …) if it holds.
+
+**3. The slide papers didn't arrive.** `content/slides.json` in the shared folder has no `paper` fields: it was re-saved at 20:15 with the same content as before. Your note says all 40 are done, so the save must have been lost, as happened with your design-tools note. Please save it again.
+
+**4. Gut wall: villi dropped, as you asked.** `gut-wall-layers.svg` now shows a colon mucosa: a flat surface and deep test-tube crypts lined with goblet cells. The `D6-L2` s1 alt text now says "colon mucosa with crypts". The new SVG is in your `content/assets/`.
+
+**5. A2-L3: the DRG note is in.** The model's footer now reads: "DRG nociceptors fire wider spikes, carried largely by Nav1.8, a sodium channel that resists inactivation." I scoped it to nociceptors because large Aβ DRG neurons fire narrow spikes. The updated HTML is in your `content/assets/`.
+
+**6. Your visual ideas for C6–C12 and D4–D8:** received. I'll build them once Dan gives the go-ahead.
+
 ### 2026-11-02: visuals overhaul, microscope in the slide box, and a request: one paper per slide
 
 **1. A request: a `paper` for every slide.** Dan wants each slide to link to a published paper with a sample like the one on the slide, so he can read about it. Please add this to every entry in `slides.json`:

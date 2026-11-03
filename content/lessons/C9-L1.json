@@ -1,0 +1,94 @@
+{
+  "id": "C9-L1",
+  "unitId": "C9",
+  "title": "Widefield vs confocal",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how a confocal pinhole produces optical sections.",
+  "tags": [
+    "microscopy",
+    "confocal"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The out-of-focus haze",
+      "body": "A **[[widefield microscopy|widefield]]** scope lights the whole sample, so light from above and below your focal plane blurs the image. A **[[confocal microscopy|confocal]]** adds a **pinhole** that blocks out-of-focus light, so only the in-focus plane reaches the detector — an *optical section*.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What does the confocal pinhole do?",
+      "options": [
+        "Blocks out-of-focus light to give a clean optical section",
+        "Makes the excitation laser substantially more powerful",
+        "Narrows the beam so only the focal plane gets excited",
+        "Filters the excitation light out of the emitted light"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "The pinhole rejects light from other planes, giving thin optical sections you can stack into 3D.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You switch from widefield to confocal on a thick section.",
+          "prompt": "What improves?",
+          "options": [
+            "Rejection of out-of-focus haze",
+            "The antibody's specificity",
+            "The fixation quality"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The pinhole removes out-of-focus blur, sharpening a thick sample."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You image a 50 µm section of densely labeled axons on a widefield scope and can't tell which axon is which.",
+      "prompt": "What do you predict confocal would do?",
+      "options": [
+        "Separate the planes so the axons become distinguishable",
+        "Brighten the axons, but they would still overlap",
+        "Sharpen only the surface; deeper axons stay hazy"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Optical sectioning separates overlapping structures by depth, so tangled axons resolve into distinct planes.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Tangled axons in a thick section image clearly on…",
+          "options": [
+            "Confocal, through its optical sectioning",
+            "Widefield, with the lamp turned up high",
+            "Neither scope can really help with this"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Confocal separates depths, untangling overlapping structures."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The cost",
+      "body": "Confocal scans point by point, so it's slower and the laser can bleach or photo-damage the sample. For thin, sparse samples, widefield may be faster and plenty. Match the tool to the question.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Confocal principle; optical sectioning."
+}

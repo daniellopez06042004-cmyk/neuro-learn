@@ -1,0 +1,94 @@
+{
+  "id": "C9-L4",
+  "unitId": "C9",
+  "title": "Honest image quantification",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Identify and avoid common biases in image quantification.",
+  "tags": [
+    "image-analysis",
+    "rigor"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The threshold is a decision",
+      "body": "Counting 'positive' cells means picking a brightness **threshold** — and nudging it changes your result. In **[[Fiji]]** (ImageJ) it's one slider. If you set it while watching your groups' outcomes, you can unconsciously push the data your way.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What's the honest way to set a counting threshold?",
+      "options": [
+        "Adjust it per image until the result looks right",
+        "Set one rule on blinded images, apply it to all",
+        "Set it on a treated image, then apply it to all",
+        "Set it separately for each group's brightness"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "A fixed, pre-set rule applied blind to condition prevents the threshold from encoding your expectations.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You'll quantify % positive cells across two groups.",
+          "prompt": "How do you keep it honest?",
+          "options": [
+            "Tune the threshold per image to taste",
+            "Blind the images and apply one fixed rule",
+            "Only analyze the clearest images"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Blinding plus one consistent rule removes experimenter bias from the count."
+        }
+      ]
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "A figure shows cells 'brighter' in the treated group — but it was imaged at higher laser power and its brightness was stretched more in software.",
+      "prompt": "What's wrong?",
+      "options": [
+        "Acquisition and display differ by group, so the comparison is invalid",
+        "Only the display stretch matters; laser power is a fair difference",
+        "Only the laser power matters; display stretch is just cosmetic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "To compare intensity, images must be acquired and displayed identically. Different settings make the 'difference' an artifact.",
+      "followUp": "Fix: identical acquisition settings, identical display scaling, and quantify raw values — not the stretched picture.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To compare brightness across groups, you must…",
+          "options": [
+            "Use identical acquisition and display settings",
+            "Match acquisition; display can differ by group",
+            "Match display; acquisition can differ by group"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Only matched settings make an intensity comparison valid."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Rules that protect you",
+      "body": "Blind the analysis to condition, set thresholds before you look at outcomes, apply one pipeline to every image, and report raw measurements. These are the same **[[control|controls]]** and **[[blinding]]** ideas from C1 — applied to pixels.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Image-analysis rigor; echoes C1."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "C10-L1",
+  "unitId": "C10",
+  "title": "RT-qPCR: counting mRNA by cycles",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how RT-qPCR turns mRNA amount into a cycle-threshold number.",
+  "tags": [
+    "qPCR",
+    "RNA"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "From mRNA to a number",
+      "body": "**[[RT-qPCR]]** first copies mRNA into cDNA (reverse transcription), then amplifies it, doubling each cycle. A dye reports product in real time. The **[[cycle threshold|cycle threshold (Ct)]]** is the cycle where signal crosses a line — **more starting mRNA → fewer cycles → lower Ct**.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Sample A has Ct = 20, sample B has Ct = 25 for the same gene. Which started with more mRNA?",
+      "options": [
+        "Sample B (higher Ct)",
+        "Sample A (lower Ct)",
+        "They are equal",
+        "Ct can't tell you"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Lower Ct = crossed threshold sooner = more template to begin with. Each cycle ≈ a doubling, so 5 cycles ≈ ~32×.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Gene X: Ct 20 in A, Ct 25 in B.",
+          "prompt": "Where is there more X mRNA?",
+          "options": [
+            "A",
+            "B",
+            "Equal"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Lower Ct means the template reached threshold sooner — more starting mRNA."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You forget the reverse-transcription step and run qPCR straight on RNA.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Little or no signal, since the polymerase needs a DNA template",
+        "Normal amplification, since the primers anneal to RNA too",
+        "A lower Ct, since RNA is more abundant than the cDNA copy"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "The polymerase amplifies DNA, not RNA. No cDNA, no product — which is also why a 'no-RT' control catches genomic DNA contamination.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Skip reverse transcription and qPCR the RNA directly. Result?",
+          "options": [
+            "Little or no signal, with no DNA template present",
+            "Normal curve, since the primers bind the RNA too",
+            "A lower Ct, since RNA outnumbers cDNA copies"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "qPCR needs a DNA template; RNA alone won't amplify."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Each cycle doubles",
+      "body": "Because amplification is exponential, small Ct differences are big fold-changes: ΔCt of 1 ≈ 2×, ΔCt of 3 ≈ 8×, ΔCt of 10 ≈ ~1000×. That sensitivity is the point — and the reason sloppy pipetting shows up loudly.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Bustin SA et al., 2009, Clin Chem",
+      "doi": "10.1373/clinchem.2008.112797",
+      "url": "https://doi.org/10.1373/clinchem.2008.112797",
+      "verified": true,
+      "note": "MIQE guidelines: rigorous qPCR, reference genes, reporting."
+    }
+  ],
+  "reviewNotes": "qPCR basics and Ct intuition."
+}

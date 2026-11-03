@@ -1,0 +1,102 @@
+{
+  "id": "C7-L2",
+  "unitId": "C7",
+  "title": "Indirect immunofluorescence",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain why indirect IF uses a primary and a labeled secondary antibody.",
+  "tags": [
+    "immunofluorescence",
+    "antibody"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two antibodies, one signal",
+      "body": "In indirect **[[immunofluorescence|IF]]**, an unlabeled **[[primary antibody]]** binds the target. Then a fluorescent **[[secondary antibody]]** binds the primary. The secondary is raised against the primary's *species* (e.g. anti-rabbit), so one labeled secondary works for any rabbit primary.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the steps of indirect IF.",
+      "items": [
+        "Fix the tissue",
+        "Permeabilize and block",
+        "Primary antibody",
+        "Wash",
+        "Fluorescent secondary antibody",
+        "Wash and add DAPI",
+        "Mount and image"
+      ],
+      "explanation": "Block before primary to cut background; wash between layers to remove unbound antibody; DAPI marks nuclei at the end."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why use a labeled *secondary* instead of just labeling the primary?",
+      "options": [
+        "Signal amplification: several secondaries bind one primary",
+        "It makes the overall staining protocol shorter and simpler",
+        "Secondaries are inherently more specific than primaries are",
+        "It removes the need for any washing steps in the protocol"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Several labeled secondaries can decorate one primary, amplifying signal — and one secondary serves many primaries of the same species.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You compare directly-labeled primary vs primary + labeled secondary.",
+          "prompt": "Which usually gives brighter signal?",
+          "options": [
+            "Directly-labeled primary",
+            "Primary plus labeled secondary",
+            "Identical brightness"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Multiple secondaries per primary amplify the signal, so indirect IF is usually brighter."
+        }
+      ]
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s4",
+      "scenario": "You stain for two rabbit primaries at once, using one anti-rabbit secondary.",
+      "prompt": "What's the problem?",
+      "options": [
+        "The secondary can't tell the two rabbit primaries apart",
+        "The two primaries will compete for each other's epitopes",
+        "The first primary will use up all of the secondary"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "One anti-rabbit secondary binds both rabbit primaries, so you can't separate the two targets. Use primaries from different species with species-matched secondaries.",
+      "followUp": "Fix: pick primaries raised in different hosts (e.g. rabbit + mouse + goat) and matching secondaries.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To stain two targets at once, your two primaries should be…",
+          "options": [
+            "From different host species, with matched secondaries",
+            "From the same host species, at different dilutions",
+            "From any species, as long as both are monoclonal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Different host species let species-specific secondaries separate the channels."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "IF mechanics and the multiplexing pitfall."
+}

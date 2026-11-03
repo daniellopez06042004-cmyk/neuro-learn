@@ -1,0 +1,119 @@
+{
+  "id": "D4-L2",
+  "unitId": "D4",
+  "title": "Myelin, nodes, and speed",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how myelination and axon diameter set conduction velocity.",
+  "tags": [
+    "myelin",
+    "conduction"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Jumping down the axon",
+      "body": "**[[myelin|Myelin]]** is an insulating wrap broken by gaps, the **[[node of Ranvier|nodes of Ranvier]]**. The [[action potential]] regenerates only at the nodes and 'jumps' between them — **[[saltatory conduction]]** — which is far faster than creeping along a bare membrane.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why does myelination speed up conduction?",
+      "options": [
+        "The signal regenerates only at nodes and jumps between them",
+        "Myelin studs the whole axon with extra sodium channels",
+        "Myelin makes the axon much thinner along its full length",
+        "It lets the axon skip its refractory period after a spike"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Saltatory conduction means the spike leaps node to node instead of propagating continuously, saving time at every stretch of membrane.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A myelinated and an unmyelinated axon of equal diameter fire.",
+          "prompt": "Which conducts faster?",
+          "options": [
+            "The myelinated axon",
+            "The unmyelinated axon",
+            "They are identical"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Saltatory conduction lets the myelinated axon jump node to node, conducting faster."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Besides myelin, what else raises **[[conduction velocity]]**?",
+      "options": [
+        "A larger axon diameter",
+        "A smaller axon diameter",
+        "Fewer sodium channels at the nodes",
+        "A colder axon"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Thicker axons conduct faster (less internal resistance). That's why large myelinated Aα and Aβ fibers are the fastest and thin unmyelinated C fibers the slowest.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two myelinated axons differ only in diameter.",
+          "prompt": "The thicker one conducts…",
+          "options": [
+            "Faster",
+            "Slower",
+            "At the same speed"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Larger diameter lowers internal resistance, so the thicker axon is faster."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "A disease strips myelin from a sensory nerve (demyelination).",
+      "prompt": "What do you predict?",
+      "options": [
+        "Slowed or blocked conduction and garbled sensation",
+        "Faster and noticeably cleaner conduction than before",
+        "No change at all, since the axons are still intact"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Without myelin the spike must crawl continuously or fails between the (now naked) stretches, so conduction slows or blocks — the basis of demyelinating sensory symptoms.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Demyelination of a sensory nerve tends to cause…",
+          "options": [
+            "Faster conduction",
+            "Slowed or blocked conduction",
+            "No change, since the axons stay intact"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Losing myelin removes saltatory conduction, slowing or blocking the signal."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Myelin/diameter → velocity; demyelination."
+}

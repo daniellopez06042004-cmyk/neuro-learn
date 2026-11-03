@@ -1,0 +1,95 @@
+{
+  "id": "C8-L1",
+  "unitId": "C8",
+  "title": "Why look at mRNA in place?",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain when in situ mRNA detection beats antibody staining.",
+  "tags": [
+    "RNAscope",
+    "in-situ"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sometimes you want the message, not the protein",
+      "body": "**[[in situ hybridization|In situ hybridization (ISH)]]** detects a specific **mRNA** right where it sits in the tissue. You reach for it when no good **[[antibody]]** exists, when you want to know which cells *transcribe* a gene, or to cross-check a protein stain with an independent readout.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What does in situ hybridization detect?",
+      "options": [
+        "A specific protein, by its shape",
+        "A specific mRNA, in its spatial location",
+        "The gene's DNA sequence only",
+        "Total RNA in each cell, not one gene"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "ISH detects mRNA in place. IF detects protein, not message.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "There's no reliable antibody for your marker, but you need to know which cells express it.",
+          "prompt": "Which method fits?",
+          "options": [
+            "In situ hybridization, detecting its mRNA directly",
+            "A western blot of the whole dissected tissue",
+            "qPCR on RNA from the whole dissected tissue"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "ISH detects the mRNA directly in the tissue when no antibody is trustworthy."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A gene's mRNA is clearly present by ISH, but antibody staining shows no protein. What's a plausible reason?",
+      "options": [
+        "mRNA can be present without much protein (regulation, timing)",
+        "The ISH probe is most likely binding genomic DNA instead",
+        "The cells must be dying, so their mRNA is piling up",
+        "The mRNA itself is blocking the antibody's epitope"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Transcription doesn't guarantee translation. mRNA and protein levels can diverge — a reason to check both.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Strong mRNA signal, weak protein signal for the same gene.",
+          "prompt": "Is this impossible?",
+          "options": [
+            "Yes, they must always match",
+            "No — mRNA and protein can diverge",
+            "Only in knockouts"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Post-transcriptional regulation and timing mean message and protein needn't track together."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The specificity problem ISH had",
+      "body": "Classic ISH probes were long and could stick non-specifically, giving noisy, hard-to-trust signal. The next lesson shows how **[[RNAscope]]** solved this with a clever probe design.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Motivates RNAscope; mRNA vs protein."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "C12-L4",
+  "unitId": "C12",
+  "title": "From clusters back to real neurons",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how transcriptomic subtypes connect to Cre lines and the lab's work.",
+  "tags": [
+    "RNA-seq",
+    "subtypes"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Closing the loop",
+      "body": "A transcriptomic subtype is only useful if you can *get at* it. The loop: sequencing proposes a marker → **[[RNAscope]]** confirms it in tissue → a **[[Cre]]** line (ideally intersectional, C3) built on that marker lets you label, record, or silence the subtype.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the path from data to manipulation.",
+      "items": [
+        "Single-cell RNA-seq proposes a subtype and marker",
+        "RNAscope confirms the marker in real neurons",
+        "A Cre (or Cre/Flp) line targets that marker",
+        "AAV delivers a tool (reporter, GCaMP, DREADD)",
+        "Record or manipulate the subtype"
+      ],
+      "explanation": "Each step turns a cluster into a handle you can actually grab in an experiment."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why isn't a sequencing cluster, by itself, enough to study a subtype's function?",
+      "options": [
+        "You still need a way to label and manipulate those cells in vivo",
+        "Clusters only count once a second dataset reproduces them",
+        "Function needs a protein readout, so run a western first",
+        "A marker gene's expression already tells you its function"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "A cluster is a description. Testing function needs genetic access — a marker you can build a Cre line and viral tools around.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You have a cluster and its marker gene.",
+          "prompt": "What's still needed to test its function?",
+          "options": [
+            "Genetic access — a Cre line and tools — to the cells",
+            "Just a larger single-cell dataset with more cells",
+            "Only RNAscope confirming the marker in the tissue"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "You need a handle — a Cre line and viral tools — to manipulate the subtype."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "This is your project's backbone",
+      "body": "Finding pancreas-innervating sensory subtypes, confirming their markers, and building genetic access to silence them with a **[[DREADD]]** is this exact loop — transcriptome to tool. Track C has walked each piece; the capstone puts them together.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Usoskin D et al., 2015, Nat Neurosci",
+      "doi": "10.1038/nn.3881",
+      "url": "https://doi.org/10.1038/nn.3881",
+      "verified": true,
+      "note": "Single-cell RNA-seq classification of DRG sensory neuron types."
+    }
+  ],
+  "reviewNotes": "Transcriptome→tool loop; capstone bridge."
+}

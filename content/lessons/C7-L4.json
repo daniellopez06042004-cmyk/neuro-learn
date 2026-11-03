@@ -1,0 +1,122 @@
+{
+  "id": "C7-L4",
+  "unitId": "C7",
+  "title": "How antibodies lie",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how to validate that an antibody stains its intended target.",
+  "tags": [
+    "antibody",
+    "validation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A pretty stain isn't proof",
+      "body": "A pretty stain doesn't prove the antibody hit the right protein. Antibodies cross-react, bind off-target proteins, and vary by lot. The gold standard: the signal **disappears in a knockout** (or knockdown) that lacks the target.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "setup": "An antibody gives the same strong stain in wild-type and in the target's knockout tissue.",
+      "prompt": "What do you conclude?",
+      "options": [
+        "The signal isn't the target — it's off-target or non-specific",
+        "This validates the antibody as clean and fully specific",
+        "The knockout must somehow still be expressing the protein"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "If the stain persists without the target, it isn't reporting the target. A validated antibody loses signal in the knockout.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A KO tissue stains as brightly as wild-type. The antibody is…",
+          "options": [
+            "Not reporting the target — it's off-target signal",
+            "Validated as specific and ready to trust fully",
+            "Only usable at a higher working dilution now"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Specific signal should vanish without the target."
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "prompt": "Match each validation approach to what it rules out.",
+      "pairs": [
+        [
+          "Knockout/knockdown",
+          "Signal isn't the target at all"
+        ],
+        [
+          "Second antibody to a different epitope",
+          "A single antibody's quirk"
+        ],
+        [
+          "Peptide block / preabsorption",
+          "Binding isn't via the intended epitope"
+        ]
+      ],
+      "explanation": "Converging evidence — KO, independent antibody, and blocking — builds trust no single test can."
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Why does the lab confirm marker expression with **[[RNAscope]]** as well as antibodies?",
+      "options": [
+        "An orthogonal method (mRNA) cross-checks the protein stain",
+        "RNAscope shows where the protein sits more precisely",
+        "RNAscope skips fixation, so epitopes can't be masked",
+        "RNAscope needs no experimental controls of its own"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Detecting the mRNA in the same cells is independent support that the antibody marks the right neurons — two methods, one answer.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "An antibody stain and RNAscope for the same marker agree.",
+          "prompt": "Why is that reassuring?",
+          "options": [
+            "Two independent methods converge on the same cells",
+            "It shows the antibody also binds the target's mRNA",
+            "It proves the protein is made at high levels there"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Independent methods agreeing is strong evidence the signal is real."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Uhlén M et al., 2016, Nature Methods",
+      "doi": "10.1038/nmeth.3995",
+      "url": "https://doi.org/10.1038/nmeth.3995",
+      "verified": true,
+      "note": "Proposal for rigorous antibody validation."
+    },
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Uses perfusion-fixed and whole-mount tissue to map colon DRG endings."
+    }
+  ],
+  "reviewNotes": "Antibody validation; ties to RNAscope cross-check in the lab."
+}

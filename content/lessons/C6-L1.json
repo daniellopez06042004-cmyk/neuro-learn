@@ -1,0 +1,94 @@
+{
+  "id": "C6-L1",
+  "unitId": "C6",
+  "title": "Why fix tissue?",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain what chemical fixation does and the trade-off between preservation and signal.",
+  "tags": [
+    "fixation",
+    "histology"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Fixation stops the clock",
+      "body": "The moment tissue leaves the body, enzymes start digesting it. **[[fixation|Fixation]]** halts that: **[[paraformaldehyde|paraformaldehyde (PFA)]]** forms methylene bridges that cross-link proteins, locking molecules in place and killing the enzymes that would destroy them.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What does PFA mainly do to tissue?",
+      "options": [
+        "Cross-links proteins so structure and molecules stay in place",
+        "Dissolves membrane lipids to render the whole sample transparent",
+        "Amplifies the tissue's mRNA so transcripts are easier to detect",
+        "Stains cell nuclei bright blue for counting under the microscope"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "PFA cross-links proteins. It doesn't clear, amplify or stain — those are separate steps.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You drop fresh tissue into PFA.",
+          "prompt": "What is PFA doing?",
+          "options": [
+            "Cross-linking proteins so structure and molecules stay put",
+            "Dissolving membrane lipids to render the sample transparent",
+            "Amplifying the tissue's mRNA so transcripts are easy to detect"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "PFA cross-links proteins into a fixed meshwork; clearing, amplification and staining come later."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A labmate leaves sections in PFA for three days instead of overnight.",
+      "prompt": "What do you predict for their antibody stain?",
+      "options": [
+        "Brighter signal, since more target is locked in place",
+        "Weak or absent signal, since the epitopes get masked",
+        "Normal signal, since PFA stops reacting after a few hours"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Over-fixation cross-links so densely that it buries the **[[epitope]]** an antibody needs. The fix: limit fixation time, or recover epitopes with antigen retrieval (C7).",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Sections sat in PFA for three days. The usual IF stain now looks weak. Why?",
+          "options": [
+            "Too little fixative reached the tissue",
+            "Over-fixation masked the epitopes",
+            "The secondary antibody expired"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Excess cross-linking buries epitopes; antigen retrieval or shorter fixation helps."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The trade-off",
+      "body": "Fixation is a balance. **Too little:** tissue degrades, morphology is mush. **Too much:** epitopes hide and signal drops. For RNA work (**[[RNAscope]]**), fixation and digestion are tuned yet again. The right protocol depends on what you want to detect.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Fixation fundamentals; sets up perfusion and antigen retrieval."
+}

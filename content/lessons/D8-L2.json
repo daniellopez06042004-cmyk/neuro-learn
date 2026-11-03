@@ -1,0 +1,76 @@
+{
+  "id": "D8-L2",
+  "unitId": "D8",
+  "title": "The reflex arc",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Trace the components of a reflex arc from receptor to effector.",
+  "tags": [
+    "reflex-arc",
+    "physiology"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The unit of physiology",
+      "body": "A **[[reflex arc]]** is the shortest sense-and-respond circuit: a **receptor** → an **[[afferent]]** (sensory) neuron → integration in the CNS → an **[[efferent]]** (motor) neuron → an **[[effector]]** (muscle or gland). The knee-jerk is the classic monosynaptic example.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the components of a reflex arc.",
+      "items": [
+        "Receptor detects a stimulus",
+        "Afferent neuron carries it to the CNS",
+        "CNS integrates the signal",
+        "Efferent neuron carries the command out",
+        "Effector (muscle/gland) responds"
+      ],
+      "explanation": "Receptor → afferent → CNS → efferent → effector. Some reflexes are monosynaptic (one synapse); most add interneurons."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "In the knee-jerk reflex, what are the afferent and efferent limbs?",
+      "options": [
+        "Afferent: a stretch sensor in; efferent: a motor neuron out to the muscle",
+        "Afferent: a motor neuron in; efferent: a stretch sensor out",
+        "Afferent: a pain fiber in; efferent: a motor neuron out to the muscle",
+        "Afferent: a stretch sensor in; efferent: an interneuron out to the muscle"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "A muscle-stretch receptor sends the afferent signal; a motor neuron forms the efferent limb back to the muscle, which contracts.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A tendon tap stretches the muscle and it contracts.",
+          "prompt": "Which limb carries the 'stretch detected' signal inward?",
+          "options": [
+            "The afferent (sensory) limb",
+            "The efferent (motor) limb",
+            "Both limbs equally"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The afferent limb carries the sensory signal in; the efferent limb drives the contraction out."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why the arc matters",
+      "body": "Much of physiology is built from reflex arcs, stacked and modulated — somatic (knee-jerk), autonomic (pupil, bladder), and interoceptive. Identify the receptor, the limbs, and the effector, and you can read almost any circuit.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Reflex arc components; foundation for autonomic/interoceptive reflexes."
+}

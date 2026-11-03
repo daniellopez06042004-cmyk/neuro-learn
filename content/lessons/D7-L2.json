@@ -1,0 +1,94 @@
+{
+  "id": "D7-L2",
+  "unitId": "D7",
+  "title": "Keeping blood glucose in range",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how insulin and glucagon keep blood glucose near a set point.",
+  "tags": [
+    "glucose",
+    "homeostasis"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two hormones, opposite jobs",
+      "body": "**[[blood glucose]]** is held in a narrow range by a push-pull pair:\n\n- After a meal, glucose rises → **[[insulin]]** tells liver, muscle and fat to take glucose up → glucose falls.\n- When fasting, glucose drops → **[[glucagon]]** tells the liver to release glucose → glucose rises.\n\nIt's a classic balancing loop around a **[[set point]]**.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Blood glucose rises after a meal. Which hormone responds, and what does it do?",
+      "options": [
+        "Insulin — drives glucose into cells, lowering it",
+        "Glucagon — releases more glucose, raising it",
+        "Somatostatin — boosts insulin release, lowering it",
+        "Glucagon — stores glucose as glycogen, lowering it"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "High glucose → β cells release insulin → tissues take up glucose → glucose returns toward the set point.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You've just eaten and blood glucose spikes.",
+          "prompt": "Which hormone brings it back down?",
+          "options": [
+            "Insulin",
+            "Glucagon",
+            "Somatostatin"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Insulin drives glucose uptake, lowering it back toward the set point."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A person hasn't eaten for 12 hours and blood glucose starts to fall.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Insulin rises to lower it further",
+        "Glucagon rises and the liver releases glucose",
+        "Nothing changes until the next meal"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Falling glucose triggers glucagon from α cells; the liver releases stored glucose, nudging it back up. The two hormones work against each other to hold the set point.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "During fasting, blood glucose is kept up mainly by…",
+          "options": [
+            "Insulin",
+            "Glucagon",
+            "Somatostatin"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Glucagon prompts hepatic glucose release during fasting."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "A feedback loop",
+      "body": "This is **[[negative feedback]]**: the output (glucose) feeds back to adjust the hormones that control it. The next unit (D8) makes this loop logic explicit — it's the backbone of physiology.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Glucose regulation as negative feedback; forward-ref to D8."
+}

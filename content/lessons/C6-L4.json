@@ -1,0 +1,105 @@
+{
+  "id": "C6-L4",
+  "unitId": "C6",
+  "title": "Tissue clearing: seeing in 3D",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain what tissue clearing does and when it beats thin sections.",
+  "tags": [
+    "clearing",
+    "imaging"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Why tissue is opaque",
+      "body": "Tissue scatters light because lipids and proteins bend light more than the water around them, so light bends at every membrane. **[[tissue clearing|Tissue clearing]]** (e.g. CLARITY, iDISCO) removes or index-matches those components so a whole block turns transparent — then you can image deep without slicing.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What is the main point of clearing a sample?",
+      "options": [
+        "To make a thick, intact sample transparent for 3D imaging",
+        "To fix the tissue far faster than paraformaldehyde can",
+        "To chemically amplify weak antibody signals in the tissue",
+        "To freeze tissue solid without forming damaging ice crystals"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Clearing matches refractive index so light passes through intact tissue, enabling 3D imaging of whole structures.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You clear an intact piece of tissue before imaging.",
+          "prompt": "What does clearing let you do?",
+          "options": [
+            "Image deep into an intact 3D sample",
+            "Image living tissue without fixing it",
+            "Count single mRNA dots without probes"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "A cleared block is transparent, so a confocal or light-sheet scope can image through its full depth."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to trace a single afferent's full arbor through a thick piece of gut wall.",
+      "prompt": "What do you predict clearing + 3D imaging buys you?",
+      "options": [
+        "A continuous 3D view of the whole arbor in a single sample",
+        "A sharper surface image, while deeper parts stay hazy",
+        "Brighter labeling, since clearing amplifies the fluorophore"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Clearing lets you image the intact arbor in 3D, avoiding the error-prone job of stitching it back together from serial sections.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Clearing a whole-mount tissue mainly helps you…",
+          "options": [
+            "Avoid stitching an arbor back from many thin sections",
+            "Fix the tissue noticeably faster than immersion would",
+            "Replace the need for any antibody or fluorescent label"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "You image the intact 3D structure directly instead of reconstructing it."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The catch",
+      "body": "Clearing is slower, needs compatible labels (some clearing chemistries quench fluorophores), and demands a scope that can image deep (confocal or light-sheet, C9). It's a tool for *whole-structure* questions, not every stain.",
+      "flag": {
+        "level": "simplified",
+        "note": "Many clearing methods exist (CLARITY, iDISCO, CUBIC…) with different chemistries and trade-offs."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Chung K et al., 2013, Nature",
+      "doi": "10.1038/nature12107",
+      "url": "https://doi.org/10.1038/nature12107",
+      "verified": true,
+      "note": "CLARITY tissue clearing for intact-tissue imaging."
+    }
+  ],
+  "reviewNotes": "Clearing overview; forward-ref to C9 microscopy."
+}

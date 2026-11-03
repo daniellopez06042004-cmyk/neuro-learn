@@ -1,0 +1,127 @@
+{
+  "id": "C8-L3",
+  "unitId": "C8",
+  "title": "Reading an RNAscope image",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Interpret multiplexed RNAscope dots to judge co-expression.",
+  "tags": [
+    "RNAscope",
+    "interpretation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Dots, channels, and nuclei",
+      "body": "Each gene gets its own color channel; each dot is roughly one transcript. **[[DAPI]]** marks nuclei so you can assign dots to cells. **Co-expression** means two colors of dots land inside the *same* cell outline — not just nearby.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Two probe colors both appear densely in one cell. What does that suggest?",
+      "options": [
+        "The two genes are co-expressed in that cell",
+        "The two genes are never expressed together",
+        "The two probes are binding the same mRNA",
+        "The probes cross-reacted with each other"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Both messages in one cell = co-expression — the basis for defining molecular subtypes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Red and green dots fill the same neuron, around a single DAPI nucleus.",
+          "prompt": "What does that indicate?",
+          "options": [
+            "Co-expression of both genes",
+            "Mutually exclusive expression",
+            "A staining artifact only"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Both channels inside one cell = that cell expresses both genes."
+        }
+      ]
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "Red dots are in one set of cells and green dots in a *different*, neighboring set, with almost no overlap.",
+      "prompt": "What does the pattern show?",
+      "options": [
+        "The two genes mark largely separate cell populations",
+        "Expression is strictly exclusive in every single cell",
+        "The probes compete, so each cell shows only one color"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Separate cells with separate colors = distinct populations. That's a real, useful result — it rules out co-expression.",
+      "followUp": "This is why you need DAPI and cell outlines: 'nearby' is not 'same cell'.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Red cells and green cells barely overlap. The two markers are…",
+          "options": [
+            "Marking two largely separate cell populations",
+            "Competing, so each cell can show only one color",
+            "Both just staining artifacts, nothing real here"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Non-overlap indicates distinct populations, a meaningful result."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "setup": "You want to prove a new Cre line targets Bmpr1b+ neurons.",
+      "prompt": "How does RNAscope help?",
+      "options": [
+        "Show the Cre reporter and Bmpr1b mRNA in the same cells",
+        "Show the reporter cells are brighter than their neighbors",
+        "Replace the need for any reporter allele whatsoever",
+        "Show Bmpr1b mRNA is present somewhere in the DRG"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Co-detecting the **[[reporter]]** and the endogenous marker mRNA in the same cells confirms the line hits the intended subtype — exactly the lab's validation step.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To confirm a Cre line marks the right subtype, RNAscope can…",
+          "options": [
+            "Show reporter and marker mRNA in the same cells",
+            "Show the marker mRNA is present somewhere in DRG",
+            "Let you confidently skip all the usual controls"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Co-localizing reporter and marker confirms targeting."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Uses RNAscope to confirm DRG subtype markers for colon afferents."
+    }
+  ],
+  "reviewNotes": "Reading co-expression; ties to Cre-line validation."
+}

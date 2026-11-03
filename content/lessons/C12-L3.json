@@ -1,0 +1,87 @@
+{
+  "id": "C12-L3",
+  "unitId": "C12",
+  "title": "What a UMAP can and can't say",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Interpret a UMAP correctly, avoiding over-reading distances.",
+  "tags": [
+    "UMAP",
+    "visualization"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A 2D cartoon of many dimensions",
+      "body": "A **[[UMAP]]** squashes thousands of genes into a 2D plot where each dot is a cell. Nearby dots are *similar*. But the **global distances and the exact shapes are not quantitative** — far-apart blobs aren't 'more different' by any fixed ruler.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Two clusters sit far apart on a UMAP. What can you safely conclude?",
+      "options": [
+        "They differ, but the distance is not a quantitative measure",
+        "They are exactly twice as different as the closer ones",
+        "Their cells must sit far apart in the actual tissue",
+        "They must come from separate developmental lineages"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "UMAP preserves local similarity, not global metric distance. 'Far' means 'drawn apart', not a measured amount of difference.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Cluster A is far from B, close to C on a UMAP.",
+          "prompt": "Can you rank how different they are by the gaps?",
+          "options": [
+            "No — UMAP distances simply aren't quantitative",
+            "Yes, you can rank them by their pixel distance",
+            "Yes, as long as UMAP was run with a fixed seed"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "UMAP gaps are not a ruler; don't quantify difference from them."
+        }
+      ]
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "A figure argues one cell type 'transitions' into another because their UMAP blobs touch.",
+      "prompt": "What's the caution?",
+      "options": [
+        "Touching only counts if the blobs actually overlap",
+        "Adjacency on a UMAP isn't proof of a transition",
+        "It's fine as long as the UMAP used a fixed seed"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Proximity can be an artifact of the layout. Claims of trajectories need dedicated methods and validation, not just a UMAP.",
+      "followUp": "Use UMAP to *show* structure, not to *prove* relationships — confirm with marker genes and experiments.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Two touching UMAP blobs mean…",
+          "options": [
+            "A proven cell-state transition",
+            "Only that they're drawn adjacent",
+            "That they're the same cell type"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Adjacency is a layout feature, not evidence of a transition."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "UMAP literacy; don't over-read."
+}

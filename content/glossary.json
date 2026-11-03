@@ -923,6 +923,391 @@
       ],
       "definition": "A probe-based method that detects specific mRNA molecules in tissue, used to confirm which cells express a marker gene.",
       "track": "C"
+    },
+    {
+      "term": "colon",
+      "aliases": [],
+      "definition": "The large intestine's main segment; the distal colon is the lab's model organ for how DRG sensory neurons innervate the gut.",
+      "track": "A"
+    },
+    {
+      "term": "fixation",
+      "aliases": [],
+      "definition": "Chemically preserving tissue so it stops degrading and molecules stay in place; paraformaldehyde is the usual fixative.",
+      "track": "C"
+    },
+    {
+      "term": "paraformaldehyde",
+      "aliases": [
+        "PFA"
+      ],
+      "definition": "The standard tissue fixative (PFA); it cross-links proteins to preserve structure.",
+      "track": "C"
+    },
+    {
+      "term": "epitope",
+      "aliases": [],
+      "definition": "The small, specific region of a target that an antibody recognizes.",
+      "track": "C"
+    },
+    {
+      "term": "perfusion",
+      "aliases": [
+        "transcardial perfusion"
+      ],
+      "definition": "Pushing fixative through an animal's own blood vessels to fix a whole organ evenly.",
+      "track": "C"
+    },
+    {
+      "term": "autofluorescence",
+      "aliases": [],
+      "definition": "Background glow from the tissue itself (e.g. red blood cells, lipofuscin) that can be mistaken for real signal.",
+      "track": "C"
+    },
+    {
+      "term": "cryosection",
+      "aliases": [
+        "cryostat"
+      ],
+      "definition": "A thin tissue slice cut from frozen, OCT-embedded tissue on a cryostat.",
+      "track": "C"
+    },
+    {
+      "term": "vibratome",
+      "aliases": [],
+      "definition": "An instrument that cuts thick tissue sections with a vibrating blade in buffer, without freezing.",
+      "track": "C"
+    },
+    {
+      "term": "whole-mount",
+      "aliases": [
+        "whole mount"
+      ],
+      "definition": "Staining and imaging an intact flat tissue sheet instead of cutting sections.",
+      "track": "C"
+    },
+    {
+      "term": "tissue clearing",
+      "aliases": [
+        "clearing"
+      ],
+      "definition": "Making a thick, intact sample transparent (e.g. CLARITY, iDISCO) so it can be imaged in 3D.",
+      "track": "C"
+    },
+    {
+      "term": "immunofluorescence",
+      "aliases": [
+        "IF"
+      ],
+      "definition": "Detecting a protein in tissue with antibodies that carry fluorescent tags.",
+      "track": "C"
+    },
+    {
+      "term": "primary antibody",
+      "aliases": [],
+      "definition": "The unlabeled antibody that binds the target first in indirect immunofluorescence.",
+      "track": "C"
+    },
+    {
+      "term": "secondary antibody",
+      "aliases": [],
+      "definition": "A labeled antibody that binds the primary (by its host species), amplifying and reporting the signal.",
+      "track": "C"
+    },
+    {
+      "term": "DAPI",
+      "aliases": [],
+      "definition": "A blue stain that binds DNA, marking cell nuclei.",
+      "track": "C"
+    },
+    {
+      "term": "confocal microscopy",
+      "aliases": [
+        "confocal"
+      ],
+      "definition": "Microscopy that uses a pinhole to block out-of-focus light, giving thin optical sections.",
+      "track": "C"
+    },
+    {
+      "term": "widefield microscopy",
+      "aliases": [
+        "widefield"
+      ],
+      "definition": "Standard microscopy that lights the whole sample; out-of-focus light blurs thick samples.",
+      "track": "C"
+    },
+    {
+      "term": "two-photon microscopy",
+      "aliases": [
+        "two-photon"
+      ],
+      "definition": "Microscopy where two infrared photons excite dye only at the focal point, allowing deep, low-damage imaging.",
+      "track": "C"
+    },
+    {
+      "term": "diffraction limit",
+      "aliases": [],
+      "definition": "The ~200 nm floor on what light microscopy can resolve; closer points blur into one.",
+      "track": "C"
+    },
+    {
+      "term": "numerical aperture",
+      "aliases": [
+        "NA"
+      ],
+      "definition": "A lens property setting light-gathering and resolution; higher NA resolves finer detail.",
+      "track": "C"
+    },
+    {
+      "term": "Fiji",
+      "aliases": [
+        "ImageJ"
+      ],
+      "definition": "A free image-analysis program widely used to quantify microscopy images.",
+      "track": "C"
+    },
+    {
+      "term": "RT-qPCR",
+      "aliases": [
+        "qPCR",
+        "quantitative PCR"
+      ],
+      "definition": "Reverse-transcription quantitative PCR: measures how much of a specific mRNA is present from how many amplification cycles it takes to detect.",
+      "track": "C"
+    },
+    {
+      "term": "cycle threshold",
+      "aliases": [
+        "Ct"
+      ],
+      "definition": "The PCR cycle where signal crosses a set line; lower Ct means more starting template.",
+      "track": "C"
+    },
+    {
+      "term": "reference gene",
+      "aliases": [
+        "housekeeping gene"
+      ],
+      "definition": "A gene assumed stable across conditions, used to normalize qPCR for input differences.",
+      "track": "C"
+    },
+    {
+      "term": "western blot",
+      "aliases": [],
+      "definition": "A method that separates proteins by size and detects a specific one with antibodies.",
+      "track": "C"
+    },
+    {
+      "term": "SDS-PAGE",
+      "aliases": [],
+      "definition": "Gel electrophoresis that separates SDS-coated proteins by size.",
+      "track": "C"
+    },
+    {
+      "term": "loading control",
+      "aliases": [],
+      "definition": "A signal (a housekeeping protein or total protein) showing each lane was loaded with similar amounts.",
+      "track": "C"
+    },
+    {
+      "term": "dissociated culture",
+      "aliases": [
+        "dissociated DRG culture"
+      ],
+      "definition": "Tissue broken enzymatically into individual cells grown in a dish, for single-cell access.",
+      "track": "C"
+    },
+    {
+      "term": "GCaMP",
+      "aliases": [],
+      "definition": "A protein that fluoresces more brightly when it binds calcium, used to report neural activity.",
+      "track": "C"
+    },
+    {
+      "term": "calcium imaging",
+      "aliases": [],
+      "definition": "Watching calcium-sensitive fluorescence (e.g. GCaMP) rise as a proxy for neural firing.",
+      "track": "C"
+    },
+    {
+      "term": "ΔF/F",
+      "aliases": [
+        "dF/F",
+        "delta F over F"
+      ],
+      "definition": "The change in fluorescence relative to baseline; the standard way to express a calcium-imaging signal.",
+      "track": "C"
+    },
+    {
+      "term": "optotagging",
+      "aliases": [],
+      "definition": "Identifying a genetically defined neuron in a recording by the spikes it fires time-locked to a light pulse.",
+      "track": "C"
+    },
+    {
+      "term": "bulk RNA-seq",
+      "aliases": [
+        "bulk RNA sequencing"
+      ],
+      "definition": "Sequencing mRNA from a whole tissue sample, giving the average expression across all its cells.",
+      "track": "C"
+    },
+    {
+      "term": "clustering",
+      "aliases": [],
+      "definition": "Grouping cells (or data points) with similar profiles; in single-cell work each cluster is a candidate cell type.",
+      "track": "C"
+    },
+    {
+      "term": "UMAP",
+      "aliases": [],
+      "definition": "A method that projects high-dimensional single-cell data into 2D; nearby points are similar, but distances aren't quantitative.",
+      "track": "C"
+    },
+    {
+      "term": "epineurium",
+      "aliases": [],
+      "definition": "The outer connective-tissue sheath wrapping a whole peripheral nerve.",
+      "track": "D"
+    },
+    {
+      "term": "perineurium",
+      "aliases": [],
+      "definition": "The connective-tissue sheath binding axons into a fascicle and forming a protective barrier around it.",
+      "track": "D"
+    },
+    {
+      "term": "endoneurium",
+      "aliases": [],
+      "definition": "The delicate connective tissue wrapping each individual axon within a nerve.",
+      "track": "D"
+    },
+    {
+      "term": "fascicle",
+      "aliases": [],
+      "definition": "A bundle of axons within a nerve, wrapped by perineurium.",
+      "track": "D"
+    },
+    {
+      "term": "node of Ranvier",
+      "aliases": [
+        "nodes of Ranvier"
+      ],
+      "definition": "A gap in the myelin sheath where the action potential regenerates during saltatory conduction.",
+      "track": "D"
+    },
+    {
+      "term": "saltatory conduction",
+      "aliases": [],
+      "definition": "Fast conduction in which the action potential 'jumps' from one node of Ranvier to the next along a myelinated axon.",
+      "track": "D"
+    },
+    {
+      "term": "conduction velocity",
+      "aliases": [],
+      "definition": "How fast a nerve signal travels; higher with greater axon diameter and myelination.",
+      "track": "D"
+    },
+    {
+      "term": "sensory unit",
+      "aliases": [],
+      "definition": "One sensory neuron together with all the endings it branches into.",
+      "track": "A"
+    },
+    {
+      "term": "two-point discrimination",
+      "aliases": [],
+      "definition": "The smallest distance at which two touches are felt as separate; finer where receptive fields are small and dense.",
+      "track": "D"
+    },
+    {
+      "term": "referred pain",
+      "aliases": [],
+      "definition": "Pain from an internal organ felt in a distant body-surface region, due to central convergence of visceral and somatic afferents.",
+      "track": "A"
+    },
+    {
+      "term": "viscerosomatic convergence",
+      "aliases": [],
+      "definition": "Visceral and somatic afferents from the same spinal level synapsing onto the same dorsal-horn neurons, causing referred pain.",
+      "track": "A"
+    },
+    {
+      "term": "interoception",
+      "aliases": [],
+      "definition": "The nervous system's sense of the body's internal state (organs, blood pressure, inflammation, metabolism).",
+      "track": "A"
+    },
+    {
+      "term": "homeostasis",
+      "aliases": [],
+      "definition": "Keeping internal variables (temperature, glucose, pressure) near a stable set point.",
+      "track": "D"
+    },
+    {
+      "term": "negative feedback",
+      "aliases": [],
+      "definition": "A control loop where the response opposes a change, pushing the variable back toward its set point.",
+      "track": "D"
+    },
+    {
+      "term": "set point",
+      "aliases": [],
+      "definition": "The target value a homeostatic loop works to maintain.",
+      "track": "D"
+    },
+    {
+      "term": "reflex arc",
+      "aliases": [],
+      "definition": "The basic sense-and-respond circuit: receptor → afferent neuron → CNS integration → efferent neuron → effector.",
+      "track": "D"
+    },
+    {
+      "term": "effector",
+      "aliases": [],
+      "definition": "The muscle or gland that carries out a reflex's response.",
+      "track": "D"
+    },
+    {
+      "term": "insulin",
+      "aliases": [],
+      "definition": "The β-cell hormone that lowers blood glucose by driving its uptake into tissues.",
+      "track": "D"
+    },
+    {
+      "term": "glucagon",
+      "aliases": [],
+      "definition": "The α-cell hormone that raises blood glucose by prompting the liver to release it.",
+      "track": "D"
+    },
+    {
+      "term": "blood glucose",
+      "aliases": [
+        "blood sugar"
+      ],
+      "definition": "The concentration of glucose in the blood, held in a narrow range by insulin and glucagon.",
+      "track": "D"
+    },
+    {
+      "term": "somatostatin",
+      "aliases": [],
+      "definition": "A δ-cell hormone that acts locally to brake secretion of insulin and glucagon.",
+      "track": "D"
+    },
+    {
+      "term": "diabetes",
+      "aliases": [
+        "type 1 diabetes",
+        "type 2 diabetes"
+      ],
+      "definition": "Chronically high blood glucose, from β-cell loss (type 1) or insulin resistance (type 2).",
+      "track": "D"
+    },
+    {
+      "term": "baroreflex",
+      "aliases": [],
+      "definition": "An autonomic negative-feedback reflex that keeps blood pressure stable via arterial stretch receptors and brainstem output.",
+      "track": "D"
     }
   ]
 }

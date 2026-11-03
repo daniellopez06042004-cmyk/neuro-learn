@@ -1,0 +1,100 @@
+{
+  "id": "D8-L1",
+  "unitId": "D8",
+  "title": "Homeostasis and negative feedback",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe the sensor–controller–effector loop that keeps a variable near its set point.",
+  "tags": [
+    "homeostasis",
+    "feedback"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Holding steady",
+      "body": "**[[homeostasis]]** keeps internal variables (temperature, glucose, blood pressure) near a **[[set point]]**. The machinery is a loop: a **sensor** detects the value, a **controller** compares it to the set point, and an **[[effector]]** pushes it back. That correction is **[[negative feedback]]**.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order a negative-feedback loop.",
+      "items": [
+        "A sensor detects the current value",
+        "A controller compares it to the set point",
+        "An effector acts to correct the deviation",
+        "The variable returns toward the set point"
+      ],
+      "explanation": "Sense → compare → correct → return. The correction opposes the deviation, which is what 'negative' feedback means."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why is it called *negative* feedback?",
+      "options": [
+        "The correction opposes the change, pushing the variable back",
+        "It reliably makes the variable's deviation even worse",
+        "It only ever works for values that happen to be falling",
+        "It signals that something harmful has happened"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Negative = opposing. A rise triggers a lowering response and vice versa, so the variable is pulled back toward the set point.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A variable rises above its set point and the body lowers it back.",
+          "prompt": "What kind of feedback is this?",
+          "options": [
+            "Negative feedback",
+            "Positive feedback",
+            "No feedback"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "A response opposing the change is negative feedback."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "Glucose control (D7) is an example of what?",
+      "options": [
+        "A negative-feedback homeostatic loop",
+        "Positive feedback with no set point",
+        "An open loop with no sensing",
+        "A purely neural reflex arc"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Glucose is sensed, compared to a set point, and corrected by insulin/glucagon — a textbook negative-feedback loop.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Insulin and glucagon pull glucose back toward a set point.",
+          "prompt": "This is an example of…",
+          "options": [
+            "Negative feedback",
+            "Positive feedback",
+            "No regulation"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Opposing hormones restoring a set point is negative feedback."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Homeostasis/negative feedback; links D7."
+}

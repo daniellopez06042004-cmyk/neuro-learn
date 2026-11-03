@@ -1,0 +1,87 @@
+{
+  "id": "C8-L2",
+  "unitId": "C8",
+  "title": "How RNAscope works",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how double-Z probes make RNAscope specific and amplified.",
+  "tags": [
+    "RNAscope",
+    "method"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two probes must agree",
+      "body": "**[[RNAscope]]** uses pairs of **double-Z (ZZ) probes**. The preamplifier only binds when *two* adjacent Z probes land side by side on the mRNA. A single probe sticking non-specifically can't build signal — it takes two neighbors to start the tree. That double requirement is what makes it specific.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order how an RNAscope signal is built.",
+      "items": [
+        "A pair of ZZ probes binds adjacent sites on the target mRNA",
+        "A preamplifier binds across the two Z tails",
+        "Amplifiers build a branched tree",
+        "Labeled probes bind the tree",
+        "Each mRNA appears as a bright dot"
+      ],
+      "explanation": "The paired-probe requirement gates the whole cascade; the tree then amplifies one transcript into a visible dot."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why does requiring *two* adjacent probes cut background?",
+      "options": [
+        "A single off-target probe cannot trigger amplification alone",
+        "Two adjacent probes simply bind the target faster than one",
+        "It roughly doubles the brightness of each fluorophore used",
+        "Each probe can be half as long, so it mismatches less often"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Non-specific binding is usually a lone probe. With no adjacent partner, no amplifier assembles — so stray binding stays dark.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "One ZZ probe sticks somewhere off-target, with no partner nearby.",
+          "prompt": "Does it make a dot?",
+          "options": [
+            "No — amplification needs both probes of the adjacent pair",
+            "Yes, it lights up as a bright but completely false dot",
+            "Yes, but as a dimmer dot than a true paired site"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The amplifier needs both Z tails side by side, so a lone off-target probe stays dark."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "One dot ≈ one transcript",
+      "body": "A probe set tiles each mRNA with ~20 ZZ pairs, and their trees pile up into one bright spot. So RNAscope is near single-molecule: individual mRNA copies show up as countable dots. That makes it quantitative *and* spatial — you can count transcripts per cell.",
+      "flag": {
+        "level": "simplified",
+        "note": "Dot counts approximate transcript number; dense or overlapping signals need careful imaging and thresholds."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wang F et al., 2012, J Mol Diagn",
+      "doi": "10.1016/j.jmoldx.2011.08.002",
+      "url": "https://doi.org/10.1016/j.jmoldx.2011.08.002",
+      "verified": true,
+      "note": "Original RNAscope method: double-Z probes and tree amplification."
+    }
+  ],
+  "reviewNotes": "RNAscope mechanism; the ZZ specificity trick."
+}

@@ -1,0 +1,109 @@
+{
+  "id": "D5-L2",
+  "unitId": "D5",
+  "title": "What visceral afferents actually sense",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain which stimuli drive visceral afferents and which don't.",
+  "tags": [
+    "visceral",
+    "mechanosensation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Stretch, not a scalpel",
+      "body": "The adequate stimuli for visceral afferents aren't the same as for skin. Cutting or burning the gut wall barely registers, but **distension (stretch)**, strong contraction, inflammation and ischemia drive them hard. The lab's colon afferents are tuned to mechanical **stretch** via channels like **[[Piezo2]]**.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Which stimulus most strongly activates gut visceral afferents?",
+      "options": [
+        "A clean surgical cut to the mucosa",
+        "Distension (stretch) of the gut wall",
+        "A light brush across the lining",
+        "Gentle warming of the gut wall"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Hollow-organ afferents are tuned to stretch/distension — the meaningful signal for a tube moving contents — not to cutting, which can be nearly painless internally.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A clinician inflates a balloon in the colon vs lightly scratches the lining.",
+          "prompt": "Which evokes more visceral sensation?",
+          "options": [
+            "Balloon distension",
+            "The light scratch",
+            "Both about equally"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Distension drives gut afferents strongly and is felt; a light scratch barely registers."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You delete Piezo2 from sensory neurons innervating the gut.",
+      "prompt": "What do you predict for mechanically-driven gut responses and transit?",
+      "options": [
+        "Reduced stretch sensing and altered GI transit",
+        "Completely unchanged mechanical responses",
+        "Stronger stretch responses than in normal mice"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Piezo2 is a key stretch transducer; removing it blunts mechanosensation and changes gut transit — direct evidence that these afferents read mechanical stretch.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Losing Piezo2 in gut sensory neurons most likely…",
+          "options": [
+            "Reduces stretch sensing and alters gut transit",
+            "Leaves mechanical stretch sensing fully intact",
+            "Boosts stretch sensing above its normal levels"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Piezo2 transduces stretch, so its loss blunts mechanosensation and shifts transit."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why this matters for the lab",
+      "body": "Knowing the *adequate stimulus* tells you how to test these neurons — distend the organ, don't poke it — and which channels to target. It's the logic behind studying pancreas and colon afferents by mechanics and chemistry, not by cutting.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Servin-Vences MR et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.006",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.006",
+      "verified": true,
+      "note": "PIEZO2 in somatosensory neurons controls gastrointestinal transit (visceral mechanosensation)."
+    },
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG afferents sensing distal-colon mechanics; visceral stretch sensation."
+    }
+  ],
+  "reviewNotes": "Adequate stimulus for viscera; Piezo2 stretch; lab tie-in."
+}

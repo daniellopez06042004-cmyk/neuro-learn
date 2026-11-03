@@ -1,0 +1,76 @@
+{
+  "id": "C12-L2",
+  "unitId": "C12",
+  "title": "From reads to clusters",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how single-cell data becomes clusters that stand for cell types.",
+  "tags": [
+    "RNA-seq",
+    "clustering"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Group cells by what they express",
+      "body": "Each cell becomes a long list of gene counts. **[[clustering|Clustering]]** groups cells with similar profiles; each cluster is proposed as a cell type or state. You then find **marker genes** — genes high in one cluster — to name it and, later, target it.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the single-cell analysis pipeline.",
+      "items": [
+        "Sequence each cell's mRNA into gene counts",
+        "Filter low-quality cells and normalize",
+        "Cluster cells by similar expression",
+        "Find marker genes for each cluster",
+        "Annotate clusters as cell types"
+      ],
+      "explanation": "Counts → clean/normalize → cluster → markers → biological names. Each step has choices that shape the result."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "A 'cluster' in single-cell data is…",
+      "options": [
+        "A group of cells with similar profiles — a hypothesis to test",
+        "A guaranteed, fully discrete and real biological cell type",
+        "One single cell, imaged and sequenced on its own",
+        "A single gene measured across all of the cells"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Clusters are data-driven groupings, sensitive to analysis choices. They're candidate types you confirm in tissue (RNAscope, C8).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your pipeline returns 12 clusters.",
+          "prompt": "Is that the true number of cell types?",
+          "options": [
+            "Not necessarily — your clustering choices affect it",
+            "Yes, that means exactly twelve real cell types",
+            "Yes, if the clusters look well separated on a UMAP"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Cluster count depends on parameters; treat clusters as hypotheses, not facts."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Choices matter",
+      "body": "How you filter, normalize, and set clustering resolution changes how many clusters you get. Two labs can split the 'same' cells differently. That's why clusters are a starting point, confirmed with independent methods.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Clustering as hypothesis; pipeline choices."
+}

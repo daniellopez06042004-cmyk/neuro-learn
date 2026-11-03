@@ -1,0 +1,94 @@
+{
+  "id": "C7-L1",
+  "unitId": "C7",
+  "title": "What an antibody recognizes",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Define an epitope and explain what determines antibody specificity.",
+  "tags": [
+    "antibody",
+    "immunofluorescence"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Antibodies see shapes, not names",
+      "body": "An **[[antibody]]** binds one small patch on its target — an **[[epitope]]**, a specific 3D shape of a few amino acids. It doesn't know the protein's name; it only recognizes that shape. Change the shape (denaturation, fixation, a point mutation) and binding can fail.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "What does an antibody actually bind?",
+      "options": [
+        "An epitope — a small, specific region on the target",
+        "A whole protein, recognized somehow by its function",
+        "The gene sequence that encodes the target protein",
+        "Any protein that happens to be roughly the right size"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Antibodies bind epitopes — small shaped regions. That's why one protein can have several antibodies against different epitopes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two antibodies are raised against the same protein but different regions.",
+          "prompt": "Can they give different staining patterns?",
+          "options": [
+            "Yes, if the two epitopes differ in accessibility",
+            "No, the same protein always stains identically",
+            "Only if one of the two antibodies is polyclonal"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Different epitopes can be differently accessible after fixation, so the same protein can stain differently with two antibodies."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "An antibody works well on fresh-frozen sections. You use it on heavily cross-linked, PFA-fixed tissue.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Stronger binding than on fresh tissue",
+        "Binding may fail because the epitope is masked or altered",
+        "Same binding, since fixation just locks the target in place"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Fixation can distort or bury the epitope. This is exactly why antigen retrieval and the right fixation (C6) matter.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Heavy fixation can make an antibody fail because it…",
+          "options": [
+            "Alters or buries the epitope's shape",
+            "Washes the target protein out of the tissue",
+            "Breaks the target into small fragments"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Cross-linking can distort the epitope the antibody needs."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Monoclonal vs polyclonal",
+      "body": "A **monoclonal** antibody recognizes one epitope (consistent, specific, but fragile if that epitope is hidden). A **polyclonal** is a mix recognizing several epitopes on the target (robust signal, but more batch-to-batch variation and off-target risk).",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Epitope concept; sets up IF mechanics and validation."
+}

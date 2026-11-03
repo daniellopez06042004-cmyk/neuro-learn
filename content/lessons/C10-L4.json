@@ -1,0 +1,94 @@
+{
+  "id": "C10-L4",
+  "unitId": "C10",
+  "title": "Loading controls and honest blots",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain the role of a loading control and the ethics of blot presentation.",
+  "tags": [
+    "western-blot",
+    "rigor"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Did you load equal protein?",
+      "body": "A **[[loading control]]** — a housekeeping protein (e.g. GAPDH, actin) or total-protein stain — shows each lane got similar protein. Without it, a 'bigger band' might just mean you loaded more, not that expression rose.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Your target band is stronger in the treated lane. The loading control is *also* stronger there, by about the same amount. What can you conclude?",
+      "options": [
+        "You likely just loaded more in that lane, not a real rise",
+        "Expression has clearly and genuinely increased with treatment",
+        "The loading control is unreliable here, so trust the target",
+        "The target rose, since the loading control is a separate protein"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "If the loading control tracks the target, the difference is loading, not biology. Normalize target to the loading control.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Target up, loading control up by the same amount in the treated lane.",
+          "prompt": "Real increase?",
+          "options": [
+            "No — this is really just a loading difference",
+            "Yes, expression has genuinely gone up here now",
+            "Can't tell without repeating it with a new antibody"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Both rising together points to unequal loading, not changed expression."
+        }
+      ]
+    },
+    {
+      "type": "troubleshoot",
+      "id": "s3",
+      "scenario": "A published figure splices two non-adjacent lanes together with no dividing line, to put 'control' next to 'treated'.",
+      "prompt": "What's the issue?",
+      "options": [
+        "Undisclosed splicing can mislead; any lane edits must be marked",
+        "Fine, as long as both lanes came from the very same gel",
+        "Fine, as long as both lanes had the identical exposure"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Rearranging or splicing lanes without a clear divider misrepresents the raw data. Journals require splices to be marked.",
+      "followUp": "Rule: show full blots where possible, mark any splice, and keep uncropped originals.",
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Splicing blot lanes together without marking it is…",
+          "options": [
+            "Misleading — any splices have to be disclosed",
+            "Fine, if both lanes came from the same blot",
+            "Fine, if both lanes had the same exposure"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Undisclosed lane edits misrepresent data."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The through-line",
+      "body": "qPCR has reference genes; westerns have loading controls; imaging has matched settings (C9). Every quantitative method needs a yardstick and honest presentation — the C1 mindset, in each assay.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Loading controls and figure ethics."
+}

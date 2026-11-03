@@ -24,12 +24,20 @@ export function layoutTrack(track) {
     rowOf.set(u.id, r);
   }
 
+  // Within a row, units sit under the average position of their prereqs, so
+  // links don't cross.
   const SLOTS = { 1: [0.5], 2: [0.27, 0.73], 3: [0.17, 0.5, 0.83] };
-  const nodes = [];
+  const nodes = [], xOf = new Map();
+  const under = (u) => {
+    const xs = localPrereqs(u).filter((p) => xOf.has(p)).map((p) => xOf.get(p));
+    return xs.length ? xs.reduce((a, b) => a + b) / xs.length : 0.5;
+  };
   rows.forEach((row, r) => {
     const y = TOP + r * ROW_H;
-    if (row.length === 1) nodes.push({ unit: row[0], x: 0.5 + 0.2 * Math.sin(r * 1.15), y });
-    else row.forEach((u, i) => nodes.push({ unit: u, x: SLOTS[row.length][i], y }));
+    const place = (u, x) => { nodes.push({ unit: u, x, y }); xOf.set(u.id, x); };
+    if (row.length === 1) place(row[0], 0.5 + 0.2 * Math.sin(r * 1.15));
+    else row.map((u, i) => ({ u, i, k: under(u) })).sort((a, b) => a.k - b.k || a.i - b.i)
+      .forEach(({ u }, i) => place(u, SLOTS[row.length][i]));
   });
 
   // Real prereq links, plus a faint "spine" into any unit that has none so

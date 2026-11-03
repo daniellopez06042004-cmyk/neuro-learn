@@ -1,0 +1,94 @@
+{
+  "id": "D8-L3",
+  "unitId": "D8",
+  "title": "Autonomic reflexes",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain an autonomic reflex arc using the baroreflex as an example.",
+  "tags": [
+    "autonomic",
+    "reflex"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Reflexes you don't command",
+      "body": "**[[autonomic nervous system|Autonomic]]** reflexes keep organs in check without conscious control. In the **[[baroreflex]]**, stretch receptors in big arteries sense blood pressure; the brainstem responds via **[[sympathetic]]** and **[[parasympathetic]]** (**[[vagus]]**) output to adjust heart rate and vessel tone — a negative-feedback arc for pressure.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Blood pressure suddenly rises. In the baroreflex, what happens?",
+      "options": [
+        "Baroreceptors fire more; the vagus slows the heart and pressure falls",
+        "Baroreceptors fire less; sympathetic drive speeds the heart",
+        "Baroreceptors fire more; sympathetic drive slows the heart",
+        "Baroreceptors fire more; the vagus speeds the heart up"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Higher pressure stretches baroreceptors more; parasympathetic (vagal) output slows the heart and sympathetic tone drops, lowering pressure — negative feedback.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Arterial pressure spikes and baroreceptors fire harder.",
+          "prompt": "What's the reflex response?",
+          "options": [
+            "Slow the heart and lower pressure",
+            "Speed the heart and raise pressure",
+            "Do nothing"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The baroreflex opposes the rise: it slows the heart and drops pressure."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You stand up quickly and blood pressure briefly drops.",
+      "prompt": "What do you predict the baroreflex does?",
+      "options": [
+        "Raises heart rate and vessel tone to restore pressure",
+        "Lowers heart rate to ease the strain on the heart",
+        "Nothing at all, since it only senses high pressure"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Falling pressure means less baroreceptor firing; the reflex raises sympathetic output (faster heart, tighter vessels) to bring pressure back — the same arc, opposite direction.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "On standing, a pressure drop triggers the baroreflex to…",
+          "options": [
+            "Raise both the heart rate and the vessel tone",
+            "Slow the heart to ease its workload",
+            "Nothing, since baroreceptors sense only high pressure"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Less baroreceptor firing drives sympathetic output up to restore pressure."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The afferent limb is interoceptive",
+      "body": "The baroreflex's sensory limb is an [[interoception|interoceptive]] afferent — the nervous system reading an internal variable. Visceral afferents (the lab's focus) are the afferent limb of many such organ reflexes.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Baroreflex as autonomic negative feedback; interoceptive afferent limb."
+}

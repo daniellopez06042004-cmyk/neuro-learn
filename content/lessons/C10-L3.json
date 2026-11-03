@@ -1,0 +1,102 @@
+{
+  "id": "C10-L3",
+  "unitId": "C10",
+  "title": "Western blot: lysis to bands",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how a western blot separates and detects a specific protein.",
+  "tags": [
+    "western-blot",
+    "protein"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sort by size, then probe",
+      "body": "A **[[western blot]]** separates proteins by size with **[[SDS-PAGE]]** (SDS coats proteins with negative charge so they migrate by size in a gel), transfers them to a membrane, then detects one protein with a primary **[[antibody]]** and a labeled secondary. The target shows up as a band at its molecular weight.",
+      "flag": null
+    },
+    {
+      "type": "order",
+      "id": "s2",
+      "prompt": "Order the western blot workflow.",
+      "items": [
+        "Lyse cells and denature proteins in SDS",
+        "Run SDS-PAGE to separate by size",
+        "Transfer proteins to a membrane",
+        "Block, then primary antibody",
+        "Labeled secondary antibody",
+        "Image the bands"
+      ],
+      "explanation": "Separate by size, move to membrane, then the antibody sandwich reveals the target band."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What does SDS do in SDS-PAGE?",
+      "options": [
+        "Coats proteins in uniform negative charge so they sort by size",
+        "Cuts every protein down into its single amino acids",
+        "Adds a fluorescent tag onto each and every protein",
+        "Amplifies the total amount of protein in the sample"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "SDS gives a roughly constant charge-to-mass ratio, so migration depends on size, not native charge or shape.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "SDS coats every protein with negative charge.",
+          "prompt": "What then determines how far a protein runs?",
+          "options": [
+            "Its size",
+            "Its native charge",
+            "Its native shape"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "With charge normalized, smaller proteins run faster — separation by size."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "prompt": "A western gives a band at an unexpected size. A reasonable first check is…",
+      "options": [
+        "Consider cross-reactivity or a modified form, and validate the antibody",
+        "Report it as your target, since the vendor says the antibody is specific",
+        "Raise the antibody concentration until the expected band shows up",
+        "Re-run the same gel with a much longer exposure to find the right band"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Unexpected bands often mean cross-reactivity or a modified/processed form. Antibody validation (C7) applies here too.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your antibody gives a band at the wrong molecular weight.",
+          "prompt": "Best next step?",
+          "options": [
+            "Validate the antibody; weigh cross-reactivity or modification",
+            "Trust it, since the vendor says the antibody is specific",
+            "Raise the antibody concentration to find the right band"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Wrong-size bands demand validation, not acceptance."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Western workflow; links antibody validation from C7."
+}

@@ -1,0 +1,102 @@
+{
+  "id": "D4-L3",
+  "unitId": "D4",
+  "title": "The sensory unit and its receptive field",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Define a sensory unit and relate receptive-field size to acuity.",
+  "tags": [
+    "receptive-field",
+    "sensory-unit"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "One neuron, one territory",
+      "body": "A **[[sensory unit]]** is one sensory neuron plus all the endings it branches into. The patch of body it covers is its **[[receptive field]]**. Small receptive fields packed densely give fine spatial detail; large ones give coarse, blurry localization.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "A region has many neurons, each with a tiny receptive field. What does that give?",
+      "options": [
+        "High spatial acuity, with fine localization",
+        "Poor localization but noticeably faster speed",
+        "Faster conduction, but no change in acuity",
+        "Coarser localization, since the fields overlap"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Many small, dense receptive fields let the brain pinpoint *where* a stimulus is — like a high-resolution grid.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Skin region A has tiny, dense receptive fields; region B has large ones.",
+          "prompt": "Which localizes touch better?",
+          "options": [
+            "Region A",
+            "Region B",
+            "Both the same"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Small, dense receptive fields give finer spatial resolution, so region A localizes better."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A single afferent branches to cover a very large area of tissue.",
+      "prompt": "What do you predict about localizing a stimulus in that area?",
+      "options": [
+        "Poor localization — the brain only knows 'somewhere in that field'",
+        "Very precise localization, right down to the exact spot that was touched",
+        "Normal localization, as long as the axon is myelinated"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "One neuron covering a big field can't tell the brain *where* within it a stimulus fell — only that it fired. Large fields = coarse localization. This idea explains visceral sensation (next unit).",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A big receptive field means localization is…",
+          "options": [
+            "Precise",
+            "Coarse",
+            "Unchanged"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "A large field can't resolve position within it, so localization is coarse."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Convergence blurs further",
+      "body": "If many afferents **[[converge]]** onto one central neuron, the brain sees their fields merged into one bigger effective field — more sensitivity, less precision. The nervous system constantly trades acuity against coverage.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Abraira VE & Ginty DD, 2013, Neuron",
+      "doi": "10.1016/j.neuron.2013.07.051",
+      "url": "https://doi.org/10.1016/j.neuron.2013.07.051",
+      "verified": true,
+      "note": "The sensory neurons of touch: fiber classes, receptive fields, the sensory unit."
+    }
+  ],
+  "reviewNotes": "Sensory unit, receptive field, acuity; bridges to visceral sensation."
+}

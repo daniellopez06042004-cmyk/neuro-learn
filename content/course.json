@@ -284,51 +284,100 @@
         {
           "id": "C6",
           "title": "Tissue In, Data Out",
-          "summary": "Perfusion, fixation chemistry, cryo/vibratome sectioning, whole-mount, clearing.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Perfusion, fixation, sectioning, whole-mount and clearing.",
+          "prereqs": [
+            "C1"
+          ],
+          "lessons": [
+            "C6-L1",
+            "C6-L2",
+            "C6-L3",
+            "C6-L4"
+          ]
         },
         {
           "id": "C7",
           "title": "Immunofluorescence & Antibodies",
-          "summary": "Epitopes, primary/secondary design, blocking, validation, and how antibodies lie.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Epitopes, primary/secondary antibodies, blocking, and antibody validation.",
+          "prereqs": [
+            "C6"
+          ],
+          "lessons": [
+            "C7-L1",
+            "C7-L2",
+            "C7-L3",
+            "C7-L4"
+          ]
         },
         {
           "id": "C8",
           "title": "RNAscope & In Situ",
-          "summary": "Probe-based single-cell mRNA detection; why the lab uses it to validate markers.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Probe-based single-cell mRNA detection and marker validation.",
+          "prereqs": [
+            "C7"
+          ],
+          "lessons": [
+            "C8-L1",
+            "C8-L2",
+            "C8-L3",
+            "C8-L4"
+          ]
         },
         {
           "id": "C9",
           "title": "Microscopy & Image Analysis",
-          "summary": "Widefield/confocal/two-photon, resolution, honest quantification in Fiji.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Widefield/confocal/two-photon, resolution, and honest quantification.",
+          "prereqs": [
+            "C7"
+          ],
+          "lessons": [
+            "C9-L1",
+            "C9-L2",
+            "C9-L3",
+            "C9-L4"
+          ]
         },
         {
           "id": "C10",
           "title": "Measuring RNA & Protein",
-          "summary": "RT-qPCR (ΔΔCt, reference genes) and western blot from lysis to normalization.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "RT-qPCR (ΔΔCt) and western blot from lysis to normalization.",
+          "prereqs": [
+            "C6"
+          ],
+          "lessons": [
+            "C10-L1",
+            "C10-L2",
+            "C10-L3",
+            "C10-L4"
+          ]
         },
         {
           "id": "C11",
           "title": "Watching Neurons Work",
-          "summary": "DRG dissection/culture, calcium imaging (GCaMP), basics of in vivo recording/optotagging.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "DRG culture, calcium imaging with GCaMP, and in vivo optotagging.",
+          "prereqs": [
+            "C9"
+          ],
+          "lessons": [
+            "C11-L1",
+            "C11-L2",
+            "C11-L3",
+            "C11-L4"
+          ]
         },
         {
           "id": "C12",
           "title": "Reading the Transcriptome",
-          "summary": "Bulk vs. single-cell/nucleus RNA-seq, clustering, what UMAPs can and can't say.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Bulk vs single-cell RNA-seq, clustering, and reading UMAPs.",
+          "prereqs": [
+            "C8"
+          ],
+          "lessons": [
+            "C12-L1",
+            "C12-L2",
+            "C12-L3",
+            "C12-L4"
+          ]
         }
       ]
     },
@@ -381,16 +430,30 @@
         {
           "id": "D4",
           "title": "Peripheral Nerve & the Sensory Unit",
-          "summary": "Nerve structure, conduction, myelination, receptive fields, and the Aβ/Aδ/C speed–diameter logic.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Nerve structure, myelination, conduction, receptive fields.",
+          "prereqs": [
+            "D3"
+          ],
+          "lessons": [
+            "D4-L1",
+            "D4-L2",
+            "D4-L3",
+            "D4-L4"
+          ]
         },
         {
           "id": "D5",
           "title": "Visceral vs. Somatic Sensation",
-          "summary": "Referred pain, sparse visceral innervation, and why gut/pancreas sensation feels different from skin.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Why organ sensation is diffuse; referred pain and convergence.",
+          "prereqs": [
+            "D4"
+          ],
+          "lessons": [
+            "D5-L1",
+            "D5-L2",
+            "D5-L3",
+            "D5-L4"
+          ]
         },
         {
           "id": "D6",
@@ -410,16 +473,30 @@
         {
           "id": "D7",
           "title": "Endocrine & Metabolic Basics",
-          "summary": "Islet hormones (insulin/glucagon), glucose regulation, and the diabetes angle the lab cares about.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Islet hormones, glucose regulation, diabetes, and the metabolic angle.",
+          "prereqs": [
+            "D6"
+          ],
+          "lessons": [
+            "D7-L1",
+            "D7-L2",
+            "D7-L3",
+            "D7-L4"
+          ]
         },
         {
           "id": "D8",
           "title": "Homeostasis & Reflex Arcs",
-          "summary": "Feedback loops, the reflex arc as the unit of physiology, and how interoceptive circuits close the loop.",
-          "prereqs": [],
-          "lessons": []
+          "summary": "Feedback loops, the reflex arc, and interoceptive circuits.",
+          "prereqs": [
+            "D2"
+          ],
+          "lessons": [
+            "D8-L1",
+            "D8-L2",
+            "D8-L3",
+            "D8-L4"
+          ]
         }
       ]
     },

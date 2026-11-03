@@ -1,0 +1,83 @@
+{
+  "id": "D7-L1",
+  "unitId": "D7",
+  "title": "Hormones straight to the blood",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Recall the main islet hormones and which cell makes each.",
+  "tags": [
+    "endocrine",
+    "islets"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The endocrine pancreas",
+      "body": "The **[[endocrine]]** pancreas is the **[[islet|islets of Langerhans]]** — tiny cell clusters secreting hormones into the blood (unlike the **[[exocrine]]** acini that secrete enzymes into ducts, D6).\n\n- **[[beta cell|β cells]]** → **[[insulin]]**\n- **[[alpha cell|α cells]]** → **[[glucagon]]**\n- **δ cells** → **[[somatostatin]]**",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each islet cell to its hormone.",
+      "pairs": [
+        [
+          "β cell",
+          "Insulin"
+        ],
+        [
+          "α cell",
+          "Glucagon"
+        ],
+        [
+          "δ cell",
+          "Somatostatin"
+        ]
+      ],
+      "explanation": "β→insulin (lowers glucose), α→glucagon (raises glucose), δ→somatostatin (a local brake on both)."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "What makes the islets **endocrine** rather than exocrine?",
+      "options": [
+        "They secrete hormones into the blood, not into ducts",
+        "They release hormones into the pancreatic duct",
+        "They make and release the main digestive enzymes",
+        "They have essentially no blood supply of their own"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Endocrine = into the bloodstream. The islets are richly vascularized so their hormones reach the whole body.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Islet hormones need to reach distant tissues like muscle and liver.",
+          "prompt": "How do they travel?",
+          "options": [
+            "Through the bloodstream, the endocrine route",
+            "Down the pancreatic duct to the intestine",
+            "Along motor nerves out toward the tissues"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Islets secrete into the blood — the endocrine route — so hormones reach distant organs."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "A small but vital minority",
+      "body": "Islets are only ~1–2% of the pancreas by mass, yet they run whole-body glucose control. The exocrine 98% and this endocrine sliver can fail independently — a theme from D6 that matters for diabetes.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Islet hormones recap; builds on D6."
+}

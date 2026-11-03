@@ -1,0 +1,102 @@
+{
+  "id": "D5-L4",
+  "unitId": "D5",
+  "title": "Sparse innervation, big consequences",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect sparse visceral innervation to the lab's approach to gut and pancreas afferents.",
+  "tags": [
+    "visceral",
+    "lab"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Few neurons, whole organ",
+      "body": "Compared with skin, an organ like the **[[colon]]** or pancreas is innervated by relatively few [[DRG]] afferents, each covering a lot of tissue. That sparseness is why visceral sensation is diffuse — and why mapping *which* neurons do what is both hard and valuable.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why is identifying visceral afferent subtypes especially important?",
+      "options": [
+        "With so few afferents, each subtype's role is outsized",
+        "Each organ is served by one uniform afferent type",
+        "Skin afferent classes map directly onto visceral ones",
+        "Visceral subtypes are already fully catalogued"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "With sparse innervation, a handful of molecularly-defined subtypes can carry distinct jobs — so defining and manipulating them (Cre lines, DREADDs) is how you learn what each does.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "An organ is covered by only a few afferent subtypes.",
+          "prompt": "How valuable is identifying each subtype?",
+          "options": [
+            "Very — each likely has a distinct role",
+            "Pointless — they're all the same",
+            "Low — a few subtypes can't differ much"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Few subtypes means each is likely specialized, so identifying them is high-value."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "You want to know what one colon afferent subtype does to sensation and motility.",
+      "prompt": "Which strategy fits the lab's toolkit?",
+      "options": [
+        "Target that subtype with a Cre line, then silence it with a DREADD",
+        "Silence every DRG neuron at once with a pan-neuronal DREADD",
+        "Image that subtype's calcium activity without ever manipulating it"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "A subtype-specific **[[Cre]]** line plus a silencing **[[DREADD]]** isolates one population's contribution — the colon paper's playbook, and the template for your pancreas project.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To test one visceral subtype's function, the lab would…",
+          "options": [
+            "Target it genetically, then silence it with a DREADD",
+            "Silence every DRG neuron at once with a DREADD",
+            "Record its activity without manipulating it"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Genetic targeting + DREADD silencing isolates one subtype's role."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The through-line",
+      "body": "Sparse visceral innervation is the reason the field is only now mapping these neurons — and why the lab's genetic, subtype-level approach (Tracks C and E) is the way in.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG afferents sensing distal-colon mechanics; visceral stretch sensation."
+    }
+  ],
+  "reviewNotes": "Sparse visceral innervation; bridges to C/E toolkit."
+}

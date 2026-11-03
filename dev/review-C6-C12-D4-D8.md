@@ -1,0 +1,453 @@
+# Review of the C6–C12 and D4–D8 lessons (2026-11-02)
+
+146 edits, already live in the app. Copy each lesson file from `app/content/lessons/` over yours; this list is the record of what changed and why.
+
+## Science fixes (19)
+
+- `C11-L1` › `s1 › body`: Overstated: single DRG neurons are also routinely imaged in intact ganglia (e.g. in vivo GCaMP imaging), so culture isn't the only route.
+  - was: "To record from single sensory neurons, the lab dissects **[[DRG]]**, then uses enzymes to make a **[[dissociated culture]]** — the ganglion broken into individual cell bodies in a dish. Now each neuron is accessible for calcium imaging or patch recording."
+  - now: "One common way to study single sensory neurons: dissect **[[DRG]]**, then use enzymes to make a **[[dissociated culture]]** — the ganglion broken into individual cell bodies in a dish. Now each neuron is accessible for calcium imaging or patch recording."
+- `C11-L2` › `s2 › options`: 'A clear sign' overstates an indirect proxy (concept says 'indirect'); two distractors were throwaways.
+  - was: "Intracellular calcium rose — a clear sign of activity" / "The neuron simply took up more of the dye than before" / "Its membrane sealed itself over and closed up fully" / "The neuron divided into two separate daughter cells"
+  - now: "Intracellular calcium rose, which usually reflects activity" / "The neuron simply took up more of the dye than before" / "The cell made more GCaMP protein during the recording" / "Calcium was pumped out of the cell, lighting the sensor"
+- `C6-L2` › `s1 › body`: A mouse colon wall is thin and is routinely immersion-fixed well; 'the core rots' overstates it. Keep the colon link, drop the claim.
+  - was: "To fix a whole brain or a **[[colon]]** evenly, you can't just drop it in PFA — the outside fixes while the core rots. **[[perfusion|Transcardial perfusion]]** pushes fixative through the animal's own blood vessels: first cold PBS to flush out blood, then PFA, reaching every capillary at once."
+  - now: "To fix a whole brain evenly, dropping it in PFA isn't enough — the outside fixes hours before the core. **[[perfusion|Transcardial perfusion]]** pushes fixative through the animal's own blood vessels: first cold PBS to flush out blood, then PFA, reaching every capillary — brain, **[[DRG]]**, **[[colon]]** — at once."
+- `C6-L2` › `s4 › setup`: Mouse pancreas is a thin, diffuse lobular tissue that immersion-fixes fine; it is not a 'thick' organ. Liver is a fair example.
+  - was: "You immersion-fix a thick, intact mouse pancreas instead of perfusing it."
+  - now: "You immersion-fix a whole, intact mouse liver instead of perfusing it."
+- `C6-L4` › `s1 › body`: Scattering comes from refractive-index mismatch between lipids/proteins and water, not 'lipids and water' both bending light.
+  - was: "Tissue scatters light mostly because lipids and water bend it at every membrane. **[[tissue clearing|Tissue clearing]]** (e.g. CLARITY, iDISCO) removes or index-matches those components so a whole block turns transparent — then you can image deep without slicing."
+  - now: "Tissue scatters light because lipids and proteins bend light more than the water around them, so light bends at every membrane. **[[tissue clearing|Tissue clearing]]** (e.g. CLARITY, iDISCO) removes or index-matches those components so a whole block turns transparent — then you can image deep without slicing."
+- `C7-L1` › `s3 › setup`: Antibodies raised against linear peptides are usually the more fixation-tolerant kind; the detail points the wrong way.
+  - was: "An antibody was raised against a linear peptide. You use it on heavily cross-linked, PFA-fixed tissue."
+  - now: "An antibody works well on fresh-frozen sections. You use it on heavily cross-linked, PFA-fixed tissue."
+- `C7-L3` › `s4 › body`: 'Secondary-only' and 'no-primary' are the same control, listed twice.
+  - was: "**Negative controls** (secondary-only, isotype, no-primary) guard against *false positives*. **Positive controls** (known-expressing tissue) guard against *false negatives*. Run both, every time you trust a new stain."
+  - now: "**Negative controls** (secondary-only, isotype, knockout tissue) guard against *false positives*. **Positive controls** (known-expressing tissue) guard against *false negatives*. Run both, every time you trust a new stain."
+- `C7-L4` › `s4 › explanation`: mRNA can't fully 'confirm' a protein stain (C8-L1 says they can diverge); soften to independent support.
+  - was: "Detecting the mRNA independently confirms the antibody isn't misleading you — two methods, one answer."
+  - now: "Detecting the mRNA in the same cells is independent support that the antibody marks the right neurons — two methods, one answer."
+- `C8-L1` › `s2 › explanation`: 'Neither reads DNA sequence' is wrong for ISH: DNA-FISH targets genomic DNA.
+  - was: "ISH detects mRNA in place. IF detects protein; neither reads DNA sequence."
+  - now: "ISH detects mRNA in place. IF detects protein, not message."
+- `C8-L2` › `s1 › body`: It is the preamplifier that needs both Z tails (as the order step says), not 'an amplifier'.
+  - was: "**[[RNAscope]]** uses pairs of **double-Z (ZZ) probes**. An amplifier only binds when *two* adjacent Z probes land side by side on the mRNA. A single probe sticking non-specifically can't build signal — it takes two neighbors to start the tree. That double requirement is what makes it specific."
+  - now: "**[[RNAscope]]** uses pairs of **double-Z (ZZ) probes**. The preamplifier only binds when *two* adjacent Z probes land side by side on the mRNA. A single probe sticking non-specifically can't build signal — it takes two neighbors to start the tree. That double requirement is what makes it specific."
+- `C8-L2` › `s4 › body`: One dot = one mRNA because ~20 ZZ pairs on the same transcript sum into one spot, not because each pair makes its own dot.
+  - was: "Because each paired-probe site builds its own tree, RNAscope is near single-molecule: individual mRNA copies show up as countable dots. That makes it quantitative *and* spatial — you can count transcripts per cell."
+  - now: "A probe set tiles each mRNA with ~20 ZZ pairs, and their trees pile up into one bright spot. So RNAscope is near single-molecule: individual mRNA copies show up as countable dots. That makes it quantitative *and* spatial — you can count transcripts per cell."
+- `C8-L3` › `s2 › variants[0] › setup`: DAPI marks nuclei, not cell borders; DRG somata extend well past the nucleus, where most dots sit.
+  - was: "Red and green dots fill the same DAPI-bounded cell."
+  - now: "Red and green dots fill the same neuron, around a single DAPI nucleus."
+- `C8-L3` › `s2 › variants[0] › reveal`: 'Inside one nucleus's cell' implies DAPI defines the cell; dots are mostly cytoplasmic.
+  - was: "Two channels inside one nucleus's cell = that cell expresses both genes."
+  - now: "Both channels inside one cell = that cell expresses both genes."
+- `D4-L2` › `s3 › explanation`: Aα (proprioceptive Ia/Ib) fibers are faster than Aβ; Aβ is not the fastest class.
+  - was: "Thicker axons conduct faster (less internal resistance). That's why large myelinated Aβ fibers are the fastest and thin unmyelinated C fibers the slowest."
+  - now: "Thicker axons conduct faster (less internal resistance). That's why large myelinated Aα and Aβ fibers are the fastest and thin unmyelinated C fibers the slowest."
+- `D5-L1` › `s1 › body`: Deep somatic (muscle/joint) pain is itself aching and poorly localized; the sharp/placed contrast is cutaneous.
+  - was: "**Somatic** sensation (skin, muscle, joints) is often sharp and well-localized. **Visceral** sensation (gut, pancreas, bladder) is typically dull, aching, and hard to place. The difference comes largely from how densely each is innervated."
+  - now: "**Somatic** sensation from the skin is usually sharp and well-localized (deep muscle and joint pain is duller). **Visceral** sensation (gut, pancreas, bladder) is typically dull, aching, and hard to place. The difference comes largely from how densely each is innervated."
+- `D5-L2` › `s2 › variants[0] › reveal`: Some colon (mucosal) afferents do respond to light stroking, so 'a scratch is not an adequate stimulus' overstates.
+  - was: "Distension is the adequate stimulus for gut afferents; a light scratch is not."
+  - now: "Distension drives gut afferents strongly and is felt; a light scratch barely registers."
+- `D7-L4` › `s1 › body`: Stated as settled, but s4 (and the flag) says sensory control of pancreatic function is unsettled.
+  - was: "Metabolism isn't only hormones. **[[interoception]]** — the nervous system's sense of the body's internal state — lets the brain monitor and influence organs like the pancreas. Sensory nerves to the pancreas are part of how the body tracks and tunes glucose handling."
+  - now: "Metabolism isn't only hormones. **[[interoception]]** — the nervous system's sense of the body's internal state — lets the brain monitor and influence organs like the pancreas. Sensory nerves to the pancreas may help the body track and tune glucose handling; that is still being worked out."
+- `D8-L2` › `s4 › body`: Overstatement: much regulation is hormonal, local, or intrinsic (e.g., pacemaker, myogenic tone).
+  - was: "Nearly all physiology is reflex arcs stacked and modulated — somatic (knee-jerk), autonomic (pupil, bladder), and interoceptive. Identify the receptor, the limbs, and the effector, and you can read almost any circuit."
+  - now: "Much of physiology is built from reflex arcs, stacked and modulated — somatic (knee-jerk), autonomic (pupil, bladder), and interoceptive. Identify the receptor, the limbs, and the effector, and you can read almost any circuit."
+- `D8-L4` › `s1 › body`: Overstatement: hormones/circulating signals and local (enteric) circuits also report organ state.
+  - was: "Every homeostatic reflex needs an afferent limb — the sensor. **[[interoception|Interoceptive]]** afferents (spinal/[[DRG]] and vagal/[[nodose ganglion|nodose]]) are that limb for the viscera. Without them, the brain is blind to the organ and can't close the loop."
+  - now: "Every homeostatic reflex needs an afferent limb — the sensor. **[[interoception|Interoceptive]]** afferents (spinal/[[DRG]] and vagal/[[nodose ganglion|nodose]]) are that limb for the viscera. Without them, the brain loses its direct neural readout of the organ, and neural reflexes can't close the loop."
+
+## Questions that gave the answer away (21)
+
+- `C11-L1` › `s2 › options`: "Because" tell: the only distractor not starting "To…"
+  - was: "To access and record from individual neuron cell bodies" / "Because GCaMP only works in cultured, not intact, neurons" / "To make the sensory neurons divide and multiply again" / "To let the neurons regrow the axons cut during dissection"
+  - now: "To access and record from individual neuron cell bodies" / "To use GCaMP, which only works in cultured neurons" / "To make the sensory neurons divide and multiply again" / "To let the neurons regrow the axons cut during dissection"
+- `C11-L1` › `s3 › setup`: Setup ('strips a neuron from its tissue, axons, and targets') stated the correct answer.
+  - was: "Dissociation strips a neuron from its tissue, axons, and targets."
+  - now: "Culture makes DRG neurons easy to reach and image."
+- `C11-L4` › `s2 › options`: Distractors were throwaways and the only correct option mentioned light; now all do.
+  - was: "Neurons that fire reliably, time-locked to each light flash" / "Any neuron that happens to fire during the session" / "Whichever neurons produce the very largest spikes" / "The neurons that never fire at any point at all"
+  - now: "Neurons that fire reliably, time-locked to each light flash" / "Neurons whose firing slowly ramps up over minutes of light" / "Neurons that fall silent during each of the light flashes" / "Neurons with the largest spikes once the light comes on"
+- `C11-L4` › `s2 › variants[0] › options`: Replace throwaway distractors; correct was the only one mentioning light.
+  - was: "Spikes that are tightly locked to the light pulses" / "Whichever units happen to be the loudest ones" / "Units already active well before the light comes"
+  - now: "Spikes that are tightly locked to the light pulses" / "Units whose firing creeps up seconds after light" / "Units that go quiet whenever the light is on"
+- `C11-L4` › `s3 › prompt`: 'How could optotagging help?' made the only option that uses an opsin the answer.
+  - was: "How could optotagging help?"
+  - now: "Which approach answers this?"
+- `C6-L3` › `s3 › prompt`: Prompt said 'thick sections' and only one option was thick.
+  - was: "You want thick sections that preserve long, branching DRG axons through the tissue. Which method fits best?"
+  - now: "You want to trace long, branching DRG axons through the tissue. Which method fits best?"
+- `C6-L4` › `s2 › variants[0] › options`: correct option was clearly longest
+  - was: "Image deep into an intact 3D sample" / "Skip fixation entirely" / "Count individual mRNA dots"
+  - now: "Image deep into an intact 3D sample" / "Image living tissue without fixing it" / "Count single mRNA dots without probes"
+- `C6-L4` › `s3 › setup`: Setup stated the answer ('without reconstructing it from hundreds of thin sections').
+  - was: "You want to trace a single afferent's full arbor through a whole-mount gut without reconstructing it from hundreds of thin sections."
+  - now: "You want to trace a single afferent's full arbor through a thick piece of gut wall."
+- `C7-L1` › `s2 › variants[0] › options`: Correct option was clearly the longest and only explained one.
+  - was: "Yes — each binds a different epitope, so they can behave differently" / "No, the same protein always gives exactly identical staining" / "Only in the special case where the protein is mutated"
+  - now: "Yes, if the two epitopes differ in accessibility" / "No, the same protein always stains identically" / "Only if one of the two antibodies is polyclonal"
+- `D4-L2` › `s4 › variants[0] › options`: correct option was clearly longest
+  - was: "Faster conduction" / "Slowed or blocked conduction" / "No functional change"
+  - now: "Faster conduction" / "Slowed or blocked conduction" / "No change, since the axons stay intact"
+- `D4-L3` › `s3 › variants[0] › options`: correct option was the only long one
+  - was: "Precise" / "Coarse / imprecise" / "Unaffected"
+  - now: "Precise" / "Coarse" / "Unchanged"
+- `D5-L2` › `s2 › variants[0] › options`: "Neither" was a throwaway
+  - was: "Balloon distension" / "The light scratch" / "Neither"
+  - now: "Balloon distension" / "The light scratch" / "Both about equally"
+- `D5-L3` › `s2 › variants[0] › setup`: Old setup stated convergence with left-arm afferents, giving away the answer.
+  - was: "Cardiac afferents converge with left-arm afferents centrally."
+  - now: "During a heart attack, cardiac pain afferents enter the upper thoracic cord (T1–T4)."
+- `D5-L3` › `s2 › variants[0] › prompt`: Fits the new setup; avoids 'Only in the heart' ambiguity.
+  - was: "Where might heart pain be felt?"
+  - now: "Besides the chest, where is the pain classically felt?"
+- `D5-L3` › `s2 › variants[0] › options`: Old 'right foot' was a throwaway; use other real referral sites at different spinal levels.
+  - was: "The left arm" / "The right foot" / "Only in the heart"
+  - now: "The inner left arm" / "The right lower abdomen" / "The front of the thigh"
+- `D5-L3` › `s2 › variants[0] › reveal`: Reveal now explains the referral instead of restating the setup.
+  - was: "Convergence with arm afferents makes the brain refer the pain to the left arm."
+  - now: "Cardiac afferents share T1–T4 dorsal-horn neurons with afferents from the chest wall and inner arm, so the brain refers heart pain there."
+- `D5-L4` › `s3 › options`: correct option was clearly longest
+  - was: "Target that subtype with a Cre line, then silence it with a DREADD" / "Silence all DRG neurons at once with a DREADD" / "Record that subtype's activity but never manipulate it"
+  - now: "Target that subtype with a Cre line, then silence it with a DREADD" / "Silence every DRG neuron at once with a pan-neuronal DREADD" / "Image that subtype's calcium activity without ever manipulating it"
+- `D7-L3` › `s4 › options`: correct option was clearly longest
+  - was: "Tissues respond poorly to insulin, i.e. insulin resistance" / "The immune system destroys the β cells" / "The α cells stop making glucagon" / "The gut absorbs glucose far too quickly"
+  - now: "Tissues respond poorly to insulin" / "The immune system destroys the β cells" / "The α cells stop making glucagon" / "The gut absorbs glucose far too quickly"
+- `D7-L4` › `s2 › variants[0] › setup`: 'Internal status' in the setup cues 'Intero-ception'.
+  - was: "The brain needs to know an organ's internal status."
+  - now: "The brain tracks how full the stomach is and how fast the heart beats."
+- `D8-L2` › `s3 › options`: Correct option was the only 'Afferent:...; efferent:...' one and much longest; distractors were throwaways.
+  - was: "Afferent: a stretch sensor in; efferent: a motor neuron out to the muscle" / "Both limbs of the reflex arc are purely sensory neurons carrying signals inward" / "Both limbs of the reflex arc are purely motor neurons" / "There is simply no afferent limb at all in this reflex"
+  - now: "Afferent: a stretch sensor in; efferent: a motor neuron out to the muscle" / "Afferent: a motor neuron in; efferent: a stretch sensor out" / "Afferent: a pain fiber in; efferent: a motor neuron out to the muscle" / "Afferent: a stretch sensor in; efferent: an interneuron out to the muscle"
+- `D8-L2` › `s3 › variants[0] › options`: "Neither" was a throwaway
+  - was: "The afferent (sensory) limb" / "The efferent (motor) limb" / "Neither"
+  - now: "The afferent (sensory) limb" / "The efferent (motor) limb" / "Both limbs equally"
+
+## Prompt and options that did not fit (11)
+
+- `C10-L2` › `s3 › scenario`: A reference Ct shift can also just reflect unequal input (what normalization corrects); stating equal loading makes 'unstable reference' the one defensible answer.
+  - was: "Your 'reference' gene's own Ct shifts a lot between control and treated groups."
+  - now: "You loaded equal cDNA, yet your 'reference' gene's own Ct shifts a lot between control and treated groups."
+- `C10-L4` › `s2 › prompt`: Without 'same amount', the target could still be up after normalizing, so 'just loaded more' isn't the only defensible answer (variant already says this).
+  - was: "Your target band is stronger in the treated lane. The loading control is *also* stronger there. What can you conclude?"
+  - now: "Your target band is stronger in the treated lane. The loading control is *also* stronger there, by about the same amount. What can you conclude?"
+- `C11-L1` › `s2 › variants[0] › setup`: Intact-ganglion GCaMP imaging can also record many single neurons' drug responses, so the original setup had two defensible answers.
+  - was: "You want to record many single DRG neurons' responses to a drug."
+  - now: "You want to patch single DRG neurons and give every cell body direct drug access."
+- `C11-L1` › `s3 › options`: 'Behave exactly as in vivo' isn't a limitation, so it didn't fit the stem; use a plausible wrong limitation.
+  - was: "They lose their normal connections and tissue context" / "They behave in culture exactly as they do in vivo" / "They can no longer fire an action potential at all"
+  - now: "They lose their normal connections and tissue context" / "They keep dividing in culture, so their numbers drift" / "They can no longer fire an action potential at all"
+- `C12-L3` › `s3 › options`: 'Touching blobs prove...' isn't a caution (doesn't fit the stem) and 'UMAP can't show cell types' is a throwaway.
+  - was: "Touching blobs prove a developmental trajectory" / "Adjacency on a UMAP isn't proof of a transition" / "UMAP can't show cell types"
+  - now: "Touching only counts if the blobs actually overlap" / "Adjacency on a UMAP isn't proof of a transition" / "It's fine as long as the UMAP used a fixed seed"
+- `C7-L4` › `s1 › title`: Title says 'band' (western) but the card is about stains.
+  - was: "A clean band isn't proof"
+  - now: "A pretty stain isn't proof"
+- `C9-L2` › `s2 › variants[0] › setup`: Setup was itself a question and the prompt just said 'Where?'.
+  - was: "Compared with confocal, where does two-photon actually excite dye?"
+  - now: "You focus a two-photon laser deep inside a thick sample."
+- `C9-L2` › `s2 › variants[0] › prompt`: Pairs with the new setup.
+  - was: "Where?"
+  - now: "Where does it actually excite the dye?"
+- `D4-L2` › `s3 › options`: 'Fewer nodes' (longer internodes) does tend to raise velocity, so it is a second defensible answer.
+  - was: "A larger axon diameter" / "A smaller axon diameter" / "Fewer nodes of Ranvier" / "A colder axon"
+  - now: "A larger axon diameter" / "A smaller axon diameter" / "Fewer sodium channels at the nodes" / "A colder axon"
+- `D8-L3` › `s3 › options`: 'Even further than it was' implies heart rate had already dropped, which the stem doesn't say.
+  - was: "Raises heart rate and vessel tone to restore pressure" / "Lowers the heart rate even further than it was" / "Nothing at all, since it only senses high pressure"
+  - now: "Raises heart rate and vessel tone to restore pressure" / "Lowers heart rate to ease the strain on the heart" / "Nothing at all, since it only senses high pressure"
+- `D8-L3` › `s3 › variants[0] › options`: 'Even further than before' mismatches the stem; 'simply ignore' is a throwaway.
+  - was: "Raise both the heart rate and the vessel tone" / "Slow the heart down even further than before" / "Simply ignore the drop in pressure entirely"
+  - now: "Raise both the heart rate and the vessel tone" / "Slow the heart to ease its workload" / "Nothing, since baroreceptors sense only high pressure"
+
+## Throwaway wrong answers replaced (95)
+
+- `C10-L1` › `s3 › options`: Distractors were throwaways and only the correct option gave a reason; now each carries a plausible misconception.
+  - was: "Little or no signal, since the polymerase needs a DNA template" / "Normal amplification, with a perfectly ordinary curve" / "A brighter signal than usual, above the normal baseline"
+  - now: "Little or no signal, since the polymerase needs a DNA template" / "Normal amplification, since the primers anneal to RNA too" / "A lower Ct, since RNA is more abundant than the cDNA copy"
+- `C10-L1` › `s3 › variants[0] › options`: Replace throwaway distractors with plausible misconceptions.
+  - was: "Little or no signal, with no DNA template present" / "A perfectly normal amplification curve as usual" / "Roughly double the normal signal across the board"
+  - now: "Little or no signal, with no DNA template present" / "Normal curve, since the primers bind the RNA too" / "A lower Ct, since RNA outnumbers cDNA copies"
+- `C10-L2` › `s3 › options`: Replace throwaway distractors with plausible misconceptions.
+  - was: "The reference isn't stable here, so normalization is invalid" / "Nothing is wrong, since reference genes always shift around" / "It actually proves that the treatment definitely worked"
+  - now: "The reference isn't stable here, so normalization is invalid" / "Nothing, since ΔΔCt already cancels out any reference shift" / "The target primers are failing, not the reference gene itself"
+- `C10-L2` › `s3 › variants[0] › options`: Replace throwaway distractors with plausible misconceptions.
+  - was: "Invalid — it ends up biasing the normalization" / "Perfectly fine to use just as it is here" / "Actually the best possible control available"
+  - now: "Invalid — it ends up biasing the normalization" / "Fine, since ΔΔCt cancels out the change anyway" / "Fine, as long as every sample uses the same one"
+- `C10-L2` › `s4 › options`: Distractors were throwaways; these are real misconceptions (ΔΔCt actually assumes equal efficiency and gives relative, not absolute, amounts).
+  - was: "To cancel out differences in the amount of input cDNA" / "To deliberately make the measured Ct values larger" / "The polymerase itself strictly requires a reference" / "To avoid having to run any experimental controls"
+  - now: "To cancel out differences in the amount of input cDNA" / "To correct for primer efficiency differences between genes" / "To convert Ct values into absolute mRNA copy numbers" / "To remove genomic DNA contamination from the signal"
+- `C10-L2` › `s4 › variants[0] › options`: Replace throwaway distractors with plausible misconceptions.
+  - was: "Normalizing the data to a stable reference gene" / "Simply ignoring the difference and moving on" / "Just running the reaction for many more cycles"
+  - now: "Normalizing the data to a stable reference gene" / "Running more cycles so both samples plateau" / "Comparing the raw target Ct values directly"
+- `C10-L3` › `s3 › variants[0] › options`: 'Its color'/'Its function' are throwaways; native charge and shape are the real misconceptions SDS removes.
+  - was: "Its size" / "Its color" / "Its function"
+  - now: "Its size" / "Its native charge" / "Its native shape"
+- `C10-L3` › `s4 › options`: Correct option was circular ('or wrong size') and distractors were obvious misconduct; replace with tempting but wrong first steps.
+  - was: "Consider cross-reactivity, a modified form, or wrong size, and validate it" / "Increase the exposure time until the faint band finally looks the way you want" / "Declare that an entirely new, previously unknown protein has been discovered" / "Simply delete the problematic lane from the final figure"
+  - now: "Consider cross-reactivity or a modified form, and validate the antibody" / "Report it as your target, since the vendor says the antibody is specific" / "Raise the antibody concentration until the expected band shows up" / "Re-run the same gel with a much longer exposure to find the right band"
+- `C10-L3` › `s4 › variants[0] › options`: Distractors were obvious misconduct; replace with plausible wrong steps.
+  - was: "Validate the antibody; weigh cross-reactivity or modification" / "Just assume the unexpected band is real and move on" / "Quietly crop the band out of the final figure now"
+  - now: "Validate the antibody; weigh cross-reactivity or modification" / "Trust it, since the vendor says the antibody is specific" / "Raise the antibody concentration to find the right band"
+- `C10-L4` › `s2 › options`: 'Antibody failed'/'transfer failed' make no sense for a stronger band; replace with plausible misreadings.
+  - was: "You likely just loaded more in that lane, not a real rise" / "Expression has clearly and genuinely increased with treatment" / "The primary antibody must have failed in that single lane" / "The membrane transfer step clearly failed for that lane"
+  - now: "You likely just loaded more in that lane, not a real rise" / "Expression has clearly and genuinely increased with treatment" / "The loading control is unreliable here, so trust the target" / "The target rose, since the loading control is a separate protein"
+- `C10-L4` › `s2 › variants[0] › options`: Replace throwaway distractor.
+  - was: "No — this is really just a loading difference" / "Yes, expression has genuinely gone up here now" / "This result cannot possibly involve loading at all"
+  - now: "No — this is really just a loading difference" / "Yes, expression has genuinely gone up here now" / "Can't tell without repeating it with a new antibody"
+- `C10-L4` › `s3 › options`: Distractors were throwaways; these are the common real misconceptions about splicing.
+  - was: "Undisclosed splicing can mislead; any lane edits must be marked" / "Nothing is wrong with it; it just looks tidier that way" / "Splicing the lanes together actually improves the statistics"
+  - now: "Undisclosed splicing can mislead; any lane edits must be marked" / "Fine, as long as both lanes came from the very same gel" / "Fine, as long as both lanes had the identical exposure"
+- `C10-L4` › `s3 › variants[0] › options`: Replace throwaway distractors with plausible misconceptions.
+  - was: "Misleading — any splices have to be disclosed" / "Completely standard practice and perfectly fine" / "Actually required by most journals these days"
+  - now: "Misleading — any splices have to be disclosed" / "Fine, if both lanes came from the same blot" / "Fine, if both lanes had the same exposure"
+- `C11-L1` › `s2 › options`: Two distractors were throwaways; replace with plausible misconceptions.
+  - was: "To access and record from individual neuron cell bodies" / "Intact ganglia simply cannot be chemically fixed at all" / "To make the sensory neurons divide and multiply again" / "Culturing removes any need to use antibodies later"
+  - now: "To access and record from individual neuron cell bodies" / "Because GCaMP only works in cultured, not intact, neurons" / "To make the sensory neurons divide and multiply again" / "To let the neurons regrow the axons cut during dissection"
+- `C11-L1` › `s3 › variants[0] › options`: 'Are identical to in vivo' doesn't fit 'a caveat'; 'Cannot be stained' is a throwaway.
+  - was: "Are identical to in vivo" / "Lose connections and context" / "Cannot be stained"
+  - now: "Stop firing action potentials" / "Lose connections and context" / "Keep dividing in the dish"
+- `C11-L2` › `s2 › variants[0] › options`: Replace throwaway distractors ('died', 'lost all GCaMP').
+  - was: "It became active, so calcium rose inside it" / "It died at that exact moment of the imaging" / "It somehow lost all of its GCaMP protein"
+  - now: "It became active, so calcium rose inside it" / "It pumped calcium out, which lights the sensor" / "It made a sudden burst of new GCaMP protein"
+- `C11-L2` › `s3 › options`: 'No neuron responds' is a throwaway; 'large neurons' is a real misconception (TRPV1 is mostly in small-diameter neurons).
+  - was: "All neurons brighten equally" / "Only TRPV1+ neurons brighten" / "No neuron responds"
+  - now: "All neurons brighten equally" / "Only TRPV1+ neurons brighten" / "Only large neurons brighten"
+- `C11-L2` › `s3 › variants[0] › options`: Same fix as main item.
+  - was: "Every neuron" / "Only TRPV1+ neurons" / "No neurons"
+  - now: "Every neuron" / "Only TRPV1+ neurons" / "Only large neurons"
+- `C11-L3` › `s2 › options`: 'Definitely TRPV1+' is a throwaway and made the correct the only hedged option.
+  - was: "It's a capsaicin-insensitive but healthy neuron" / "It was probably unhealthy or dead — exclude it" / "It's definitely TRPV1+"
+  - now: "It's a capsaicin-insensitive but healthy neuron" / "It was probably unhealthy or dead — exclude it" / "It's TRPV1+ but desensitized to capsaicin"
+- `C11-L3` › `s2 › variants[0] › options`: Replace throwaway 'Certainly TRPV1+'.
+  - was: "Healthy but capsaicin-insensitive" / "Likely dead — exclude it" / "Certainly TRPV1+"
+  - now: "Healthy but capsaicin-insensitive" / "Likely dead — exclude it" / "TRPV1+ but desensitized"
+- `C11-L3` › `s3 › options`: 'Kill the neurons' and 'bleach GCaMP' are throwaways.
+  - was: "As a positive control that the silent neurons are still alive" / "To deliberately kill the neurons once imaging is finished" / "To wash the remaining capsaicin back out of the dish" / "To intentionally bleach the GCaMP signal fully away"
+  - now: "As a positive control that the silent neurons are still alive" / "To pick out which of the neurons are the nociceptors" / "To reset every neuron to rest before the next trial" / "To wash the remaining capsaicin back out of the dish"
+- `C11-L4` › `s3 › options`: Replace fix-and-stain (obviously no activity readout) with a real misconception: spike shape doesn't reveal genotype.
+  - was: "Tag that subtype with an opsin, then read its spikes during distension" / "Perfuse, fix, and section the tissue, then stain it for that subtype afterward" / "Dissociate the ganglion and culture all of its neurons in a dish first"
+  - now: "Tag that subtype with an opsin, then read its spikes during distension" / "Record every unit during distension, then sort the subtype by spike shape" / "Dissociate the ganglion and culture all of its neurons in a dish first"
+- `C11-L4` › `s3 › variants[0] › options`: Distractors were throwaways ('two antibodies', 'mRNA to DNA').
+  - was: "A genetic subtype to its own in vivo firing" / "Two different antibodies to one another here" / "A strand of mRNA back to its own source DNA"
+  - now: "A genetic subtype to its own in vivo firing" / "A subtype's mRNA profile to its axon targets" / "A neuron's soma size to its firing threshold"
+- `C12-L1` › `s2 › options`: 'Nothing at all' was a throwaway; detection-limit is a plausible misconception.
+  - was: "A modest average that hides the real bimodal truth" / "A clear, sharp picture of just that 5% of cells" / "Nothing at all, with no usable signal returned" / "Each individual cell's value reported separately"
+  - now: "A modest average that hides the real bimodal truth" / "A clear, sharp picture of just that 5% of cells" / "Nothing, since 5% is below bulk's detection limit" / "Each individual cell's value reported separately"
+- `C12-L1` › `s3 › options`: 'A western blot' is a throwaway; in situ for known markers is the tempting wrong choice for discovery.
+  - was: "Bulk RNA-seq of whole ganglia" / "Single-cell RNA-seq" / "A western blot"
+  - now: "Bulk RNA-seq of whole ganglia" / "Single-cell RNA-seq" / "RNAscope for known markers"
+- `C12-L2` › `s3 › variants[0] › options`: 'Twelve cells total' is a throwaway; UMAP separation is a real misconception (ties to C12-L3).
+  - was: "Not necessarily — your clustering choices affect it" / "Yes, that means exactly twelve real cell types" / "It simply means there were twelve cells total"
+  - now: "Not necessarily — your clustering choices affect it" / "Yes, that means exactly twelve real cell types" / "Yes, if the clusters look well separated on a UMAP"
+- `C12-L3` › `s2 › options`: 'Share no genes' and 'physically larger in the body' are throwaways; replace with real misreadings.
+  - was: "They differ, but the distance is not a quantitative measure" / "They are exactly twice as different as the closer ones" / "They share no genes with each other whatsoever here" / "One cluster must be physically larger in the body"
+  - now: "They differ, but the distance is not a quantitative measure" / "They are exactly twice as different as the closer ones" / "Their cells must sit far apart in the actual tissue" / "They must come from separate developmental lineages"
+- `C12-L3` › `s2 › variants[0] › options`: 'Only along the vertical axis' is a throwaway.
+  - was: "No — UMAP distances simply aren't quantitative" / "Yes, you can rank them by their pixel distance" / "Only along the vertical axis of the whole plot"
+  - now: "No — UMAP distances simply aren't quantitative" / "Yes, you can rank them by their pixel distance" / "Yes, as long as UMAP was run with a fixed seed"
+- `C12-L3` › `s3 › variants[0] › options`: 'Identical cells' is a throwaway.
+  - was: "A proven cell-state transition" / "Only that they're drawn adjacent" / "Identical cells"
+  - now: "A proven cell-state transition" / "Only that they're drawn adjacent" / "That they're the same cell type"
+- `C12-L4` › `s3 › options`: Distractors were throwaways ('always wrong', 'destroys the gene', 'read off the UMAP').
+  - was: "You still need a way to label and manipulate those cells in vivo" / "A computational cluster is always wrong and untrustworthy" / "Sequencing itself destroys the gene it is measuring" / "Function can be read directly off of the UMAP plot"
+  - now: "You still need a way to label and manipulate those cells in vivo" / "Clusters only count once a second dataset reproduces them" / "Function needs a protein readout, so run a western first" / "A marker gene's expression already tells you its function"
+- `C12-L4` › `s3 › variants[0] › options`: 'UMAP shows function' and 'one western' are throwaways; RNAscope is needed but not enough to test function.
+  - was: "Genetic access — a Cre line and tools — to the cells" / "Nothing more, since the UMAP already shows function" / "Only a single western blot of the tissue lysate"
+  - now: "Genetic access — a Cre line and tools — to the cells" / "Just a larger single-cell dataset with more cells" / "Only RNAscope confirming the marker in the tissue"
+- `C6-L1` › `s3 › options`: Correct option was the only explained one besides a throwaway; balance with plausible misconceptions.
+  - was: "Much brighter, cleaner signal than usual" / "Weak or absent signal — the epitopes are masked" / "No change at all; fixation time doesn't matter"
+  - now: "Brighter signal, since more target is locked in place" / "Weak or absent signal, since the epitopes get masked" / "Normal signal, since PFA stops reacting after a few hours"
+- `C6-L2` › `s4 › variants[0] › options`: 'A perfectly cleared sample' is a throwaway.
+  - was: "Even fixation everywhere" / "Good surface, poorly fixed core" / "A perfectly cleared sample"
+  - now: "Even fixation everywhere" / "Good surface, poorly fixed core" / "Faster fixation than perfusion"
+- `C6-L3` › `s3 › options`: 'Smear on a slide' is a throwaway; serial thin sections is the real alternative people consider.
+  - was: "Cryostat at 10 µm" / "Vibratome at 100 µm" / "Paraffin at 5 µm" / "Smear on a slide"
+  - now: "Cryostat at 10 µm" / "Vibratome at 100 µm" / "Paraffin at 5 µm" / "Serial 10 µm cryosections, every 4th kept"
+- `C6-L4` › `s3 › options`: Old distractors ('Nothing useful', 'Faster fixation') were throwaways.
+  - was: "A continuous 3D view of the whole arbor in a single sample" / "Nothing useful — you must still cut and stitch thin sections" / "Faster fixation, but it brings no actual imaging benefit"
+  - now: "A continuous 3D view of the whole arbor in a single sample" / "A sharper surface image, while deeper parts stay hazy" / "Brighter labeling, since clearing amplifies the fluorophore"
+- `C7-L1` › `s3 › options`: 'Binds a completely different protein' is a throwaway; also match the new setup (masked, not only reshaped).
+  - was: "Stronger binding than on fresh tissue" / "Binding may fail because the epitope's shape is altered" / "The antibody will bind a completely different protein"
+  - now: "Stronger binding than on fresh tissue" / "Binding may fail because the epitope is masked or altered" / "Same binding, since fixation just locks the target in place"
+- `C7-L1` › `s3 › variants[0] › options`: 'Changes the protein's gene' and 'too thin' are throwaways.
+  - was: "Alters or buries the epitope's shape" / "Changes the protein's gene" / "Makes the tissue too thin"
+  - now: "Alters or buries the epitope's shape" / "Washes the target protein out of the tissue" / "Breaks the target into small fragments"
+- `C7-L2` › `s4 › options`: DAPI masking and too-brief fixation are throwaways.
+  - was: "The secondary can't tell the two rabbit primaries apart" / "The DAPI channel will completely mask both of the signals" / "The tissue was almost certainly fixed for far too briefly"
+  - now: "The secondary can't tell the two rabbit primaries apart" / "The two primaries will compete for each other's epitopes" / "The first primary will use up all of the secondary"
+- `C7-L2` › `s4 › variants[0] › options`: 'Both left unlabeled, with no secondary' is a throwaway.
+  - was: "From different host species, with matched secondaries" / "From the same host species as each other, to be safe" / "Both left unlabeled, with no secondary antibody at all"
+  - now: "From different host species, with matched secondaries" / "From the same host species, at different dilutions" / "From any species, as long as both are monoclonal"
+- `C7-L3` › `s2 › options`: DAPI-only and higher laser power are throwaways; isotype and unstained are the controls people confuse.
+  - was: "Secondary-only (omit the primary)" / "Known positive tissue" / "A DAPI-only slide" / "Imaging at higher laser power"
+  - now: "Secondary-only (omit the primary)" / "Known positive tissue" / "Isotype control in place of the primary" / "Unstained tissue (no antibodies)"
+- `C7-L3` › `s2 › variants[0] › options`: 'A no-DAPI slide' is a throwaway.
+  - was: "Secondary-only" / "Positive-control tissue" / "A no-DAPI slide"
+  - now: "Secondary-only" / "Positive-control tissue" / "Unstained tissue"
+- `C7-L4` › `s4 › options`: 'Cheaper' and 'antibodies can't be used on mouse tissue' are throwaways.
+  - was: "An orthogonal method (mRNA) cross-checks the protein stain" / "RNAscope is considerably cheaper than any antibody" / "Antibodies simply cannot be used on any mouse tissue" / "RNAscope needs no experimental controls of its own"
+  - now: "An orthogonal method (mRNA) cross-checks the protein stain" / "RNAscope shows where the protein sits more precisely" / "RNAscope skips fixation, so epitopes can't be masked" / "RNAscope needs no experimental controls of its own"
+- `C7-L4` › `s4 › variants[0] › options`: 'Replaces controls' and 'gene is essential' are throwaways.
+  - was: "Two independent methods converge on the same cells" / "It means RNAscope replaces the need for any controls" / "It proves the gene in question is strictly essential"
+  - now: "Two independent methods converge on the same cells" / "It shows the antibody also binds the target's mRNA" / "It proves the protein is made at high levels there"
+- `C8-L1` › `s2 › options`: 'Lipid membranes' is a throwaway.
+  - was: "A specific protein, by its shape" / "A specific mRNA, in its spatial location" / "The gene's DNA sequence only" / "Lipid membranes in the cell"
+  - now: "A specific protein, by its shape" / "A specific mRNA, in its spatial location" / "The gene's DNA sequence only" / "Total RNA in each cell, not one gene"
+- `C8-L1` › `s2 › variants[0] › options`: 'A DAPI-only stain' is a throwaway.
+  - was: "In situ hybridization, detecting its mRNA directly" / "A western blot of the whole dissected tissue" / "A DAPI-only stain, with nothing else added"
+  - now: "In situ hybridization, detecting its mRNA directly" / "A western blot of the whole dissected tissue" / "qPCR on RNA from the whole dissected tissue"
+- `C8-L1` › `s3 › options`: 'ISH always wrong' and 'mRNA and protein are the same molecule' are throwaways.
+  - was: "mRNA can be present without much protein (regulation, timing)" / "ISH readings are simply always wrong and never trustworthy" / "The gene in question must therefore have been fully deleted" / "mRNA and protein are really just the same single molecule"
+  - now: "mRNA can be present without much protein (regulation, timing)" / "The ISH probe is most likely binding genomic DNA instead" / "The cells must be dying, so their mRNA is piling up" / "The mRNA itself is blocking the antibody's epitope"
+- `C8-L2` › `s3 › options`: 'Removes the need for washing' is a throwaway (copied from C7-L2).
+  - was: "A single off-target probe cannot trigger amplification alone" / "Two adjacent probes simply bind the target faster than one" / "It roughly doubles the brightness of each fluorophore used" / "It removes the need for any washing steps in the protocol"
+  - now: "A single off-target probe cannot trigger amplification alone" / "Two adjacent probes simply bind the target faster than one" / "It roughly doubles the brightness of each fluorophore used" / "Each probe can be half as long, so it mismatches less often"
+- `C8-L2` › `s3 › variants[0] › options`: 'Only under direct UV light' is a throwaway.
+  - was: "No — amplification needs both probes of the adjacent pair" / "Yes, it lights up as a bright but completely false dot" / "Only when the sample is viewed under direct UV light"
+  - now: "No — amplification needs both probes of the adjacent pair" / "Yes, it lights up as a bright but completely false dot" / "Yes, but as a dimmer dot than a true paired site"
+- `C8-L3` › `s2 › options`: 'The cell is dead' is a throwaway.
+  - was: "The two genes are co-expressed in that cell" / "The two genes are never expressed together" / "The cell is dead" / "The probes cross-reacted with each other"
+  - now: "The two genes are co-expressed in that cell" / "The two genes are never expressed together" / "The two probes are binding the same mRNA" / "The probes cross-reacted with each other"
+- `C8-L3` › `s3 › options`: 'Every cell co-expresses' and 'the experiment failed' are throwaways.
+  - was: "The two genes mark largely separate cell populations" / "Every single cell co-expresses both of the genes" / "The experiment must have failed somewhere entirely"
+  - now: "The two genes mark largely separate cell populations" / "Expression is strictly exclusive in every single cell" / "The probes compete, so each cell shows only one color"
+- `C8-L3` › `s3 › variants[0] › options`: 'Co-expressed within one single type' contradicts the stem outright.
+  - was: "Marking two largely separate cell populations" / "Co-expressed together within one single type" / "Both just staining artifacts, nothing real here"
+  - now: "Marking two largely separate cell populations" / "Competing, so each cell can show only one color" / "Both just staining artifacts, nothing real here"
+- `C8-L3` › `s4 › options`: Body weight and 'gene is essential' are throwaways; 'present in DRG' is the real trap (presence isn't targeting).
+  - was: "Show the Cre reporter and Bmpr1b mRNA in the same cells" / "Measure the mouse's body weight steadily over time" / "Replace the need for any reporter allele whatsoever" / "Prove the Bmpr1b gene is essential for the animal"
+  - now: "Show the Cre reporter and Bmpr1b mRNA in the same cells" / "Show the reporter cells are brighter than their neighbors" / "Replace the need for any reporter allele whatsoever" / "Show Bmpr1b mRNA is present somewhere in the DRG"
+- `C8-L3` › `s4 › variants[0] › options`: 'Weigh the whole animal' is a throwaway.
+  - was: "Show reporter and marker mRNA in the same cells" / "Weigh the whole animal repeatedly over weeks" / "Let you confidently skip all the usual controls"
+  - now: "Show reporter and marker mRNA in the same cells" / "Show the marker mRNA is present somewhere in DRG" / "Let you confidently skip all the usual controls"
+- `C8-L4` › `s2 › options`: 'Changes the gene's function' and 'counts neurons for you' are throwaways; RNAscope-detects-protein is a real misconception.
+  - was: "It shows X is really, spatially expressed in real neurons" / "It makes the earlier sequencing step entirely unnecessary" / "It directly changes the biological function of the gene" / "It conveniently counts the mouse's neurons for you too"
+  - now: "It shows X is really, spatially expressed in real neurons" / "It shows protein X is made in those same neurons" / "It proves X is needed for that subtype's function" / "It makes the earlier sequencing step entirely unnecessary"
+- `C8-L4` › `s2 › variants[0] › options`: Behavior test and antibody lot number are throwaways.
+  - was: "That the marker really is expressed in those neurons" / "The behaving animal's response in a behavior test" / "The particular lot number printed on the antibody"
+  - now: "That the marker really is expressed in those neurons" / "That the marker protein is made in those neurons" / "That the marker is needed for those neurons' function"
+- `C8-L4` › `s3 › options`: Whole-brain lysate and a one-off behavior test are throwaways; bulk methods lack cell resolution, the real point.
+  - was: "RNAscope for its marker genes in DRG sections" / "A single, one-off behavioral test in the mouse" / "A western blot of homogenized whole-brain lysate"
+  - now: "RNAscope for its marker genes in DRG sections" / "A western blot of homogenized DRG lysate" / "Bulk RNA-seq of whole dissected DRG"
+- `C8-L4` › `s3 › variants[0] › options`: 'Weigh the colon' and 'Sequence again only' are throwaways.
+  - was: "RNAscope the marker in DRG" / "Weigh the colon" / "Sequence again only"
+  - now: "RNAscope the marker in DRG" / "Western blot DRG lysate" / "Bulk-sequence whole DRG"
+- `C9-L1` › `s2 › options`: Staining and freezing are throwaways; 'only focal plane excited' (that's two-photon) and filter role are real confusions.
+  - was: "Blocks out-of-focus light to give a clean optical section" / "Makes the excitation laser substantially more powerful" / "Chemically stains the tissue as the stage scans across" / "Freezes the whole sample to reduce any stage motion"
+  - now: "Blocks out-of-focus light to give a clean optical section" / "Makes the excitation laser substantially more powerful" / "Narrows the beam so only the focal plane gets excited" / "Filters the excitation light out of the emitted light"
+- `C9-L1` › `s3 › options`: 'Even worse' and 'nothing at all' are throwaways.
+  - was: "Separate the planes so the axons become distinguishable" / "Make the image even worse, adding still more blur" / "Nothing at all, since this blur is simply unavoidable"
+  - now: "Separate the planes so the axons become distinguishable" / "Brighten the axons, but they would still overlap" / "Sharpen only the surface; deeper axons stay hazy"
+- `C9-L2` › `s2 › options`: 'Uses no laser' and 'skips fixation' are throwaways; IR-has-more-energy is a real misconception.
+  - was: "Excitation happens only right at the focal point" / "It somehow uses no excitation laser at all here" / "It skips the fixation step of the protocol" / "Its confocal pinhole is substantially larger"
+  - now: "Excitation happens only right at the focal point" / "Its infrared photons each carry more energy" / "It scans faster, so each spot gets less light" / "Its confocal pinhole is substantially larger"
+- `C9-L2` › `s3 › options`: 'A standard light box' is a throwaway; confocal is the real competitor.
+  - was: "Widefield" / "Two-photon" / "A standard light box"
+  - now: "Widefield" / "Two-photon" / "Confocal"
+- `C9-L2` › `s3 › variants[0] › options`: 'Brightfield only' is a throwaway.
+  - was: "Two-photon" / "Widefield" / "Brightfield only"
+  - now: "Two-photon" / "Widefield" / "Confocal"
+- `C9-L3` › `s3 › options`: 'Dimmer lamp' is a throwaway; magnification-equals-resolution is the common misconception.
+  - was: "A higher-NA objective paired with a shorter wavelength" / "Switching to a noticeably dimmer illumination lamp" / "Cutting and imaging a considerably thicker section" / "Opening up to a much bigger overall field of view"
+  - now: "A higher-NA objective paired with a shorter wavelength" / "More digital zoom or a higher-power eyepiece" / "Cutting and imaging a considerably thicker section" / "Opening up to a much bigger overall field of view"
+- `C9-L4` › `s2 › options`: 'Biggest effect' and 'only images that agree' are obviously dishonest; also removes 'apply it to all' as a giveaway.
+  - was: "Adjust it per image until the result looks right" / "Set one rule on blinded images, apply it to all" / "Pick the threshold that gives the biggest effect" / "Count only the images that agree with your hypothesis"
+  - now: "Adjust it per image until the result looks right" / "Set one rule on blinded images, apply it to all" / "Set it on a treated image, then apply it to all" / "Set it separately for each group's brightness"
+- `C9-L4` › `s3 › options`: 'Nothing is wrong' and 'more cells' are throwaways.
+  - was: "Acquisition and display differ by group, so the comparison is invalid" / "Nothing is wrong here; the figure looks quite convincing" / "The treated group simply happens to contain many more cells"
+  - now: "Acquisition and display differ by group, so the comparison is invalid" / "Only the display stretch matters; laser power is a fair difference" / "Only the laser power matters; display stretch is just cosmetic"
+- `C9-L4` › `s3 › variants[0] › options`: 'Brighten the winner' and 'any settings' are throwaways.
+  - was: "Use identical acquisition and display settings" / "Brighten the group you expect to win" / "Use any settings, software fixes it"
+  - now: "Use identical acquisition and display settings" / "Match acquisition; display can differ by group" / "Match display; acquisition can differ by group"
+- `D4-L1` › `s3 › options`: 'Carries blood' is a throwaway; autonomic mix is a real misreading of 'mixed'.
+  - was: "It carries both sensory and motor axons together" / "It contains only unmyelinated axons" / "It belongs to the central nervous system" / "It carries blood as well as signals"
+  - now: "It carries both sensory and motor axons together" / "It contains only unmyelinated axons" / "It belongs to the central nervous system" / "It carries both sympathetic and parasympathetic axons"
+- `D4-L1` › `s4 › options`: 'Only the CNS is affected' is a throwaway; mirror the other partial-loss misconception.
+  - was: "Only movement is affected, sensation is spared" / "Both sensation and movement can be lost in its territory" / "Only the central nervous system is affected"
+  - now: "Only movement is affected, sensation is spared" / "Both sensation and movement can be lost in its territory" / "Only sensation is affected, movement is spared"
+- `D4-L1` › `s4 › variants[0] › options`: 'Only the spinal cord, never the limb' is a throwaway.
+  - was: "Both sensation and movement in its territory" / "Only sensation, with movement fully spared" / "Only the spinal cord, never the limb itself"
+  - now: "Both sensation and movement in its territory" / "Only sensation, with movement fully spared" / "Only movement, with sensation fully spared"
+- `D4-L3` › `s2 › options`: 'No sensation at all' and 'Only temperature sensing' are throwaways.
+  - was: "High spatial acuity, with fine localization" / "Poor localization but noticeably faster speed" / "No sensation at all from that whole region" / "Only temperature sensing, and nothing else"
+  - now: "High spatial acuity, with fine localization" / "Poor localization but noticeably faster speed" / "Faster conduction, but no change in acuity" / "Coarser localization, since the fields overlap"
+- `D4-L3` › `s3 › options`: 'No effect one way or the other at all' is a throwaway; myelin/speed confusion is a real one.
+  - was: "Poor localization — the brain only knows 'somewhere in that field'" / "Very precise localization, right down to the exact spot that was touched" / "No effect on localization one way or the other at all"
+  - now: "Poor localization — the brain only knows 'somewhere in that field'" / "Very precise localization, right down to the exact spot that was touched" / "Normal localization, as long as the axon is myelinated"
+- `D4-L4` › `s2 › options`: 'Back has no sensory neurons' contradicts the stem (points are felt); 'fingertip has no myelin' is nonsense.
+  - was: "The back has larger, sparser receptive fields" / "The back simply has no sensory neurons at all" / "The fingertip has no myelin on any of its axons" / "The back sits closer to the spinal cord itself"
+  - now: "The back has larger, sparser receptive fields" / "The back's afferents are mostly slow C fibers" / "Fingertip afferents conduct signals faster" / "The back sits closer to the spinal cord itself"
+- `D4-L4` › `s3 › options`: 'No sensation is possible' is a throwaway.
+  - was: "Pinpoint accuracy, like a fingertip" / "Vague, poorly localized sensation" / "No sensation is possible at all"
+  - now: "Pinpoint accuracy, like a fingertip" / "Vague, poorly localized sensation" / "Precise, but only for painful stimuli"
+- `D4-L4` › `s3 › variants[0] › options`: 'No sensation' is a throwaway.
+  - was: "Precise localization" / "Diffuse, vague localization" / "No sensation"
+  - now: "Precise localization" / "Diffuse, vague localization" / "Precise only for painful stimuli"
+- `D5-L1` › `s3 › options`: All three distractors contradict the stem (a stomachache is felt); replace with real misconceptions.
+  - was: "Viscera are sparsely innervated, with large receptive fields" / "Internal organs simply have no sensory neurons anywhere at all" / "The stomach is completely numb to every possible stimulus" / "Pain signals never reach the brain from any internal organ"
+  - now: "Viscera are sparsely innervated, with large receptive fields" / "Gut afferents conduct too slowly to carry location" / "Visceral pain travels only in the vagus, not the cord" / "The brain ignores gut signals unless they are severe"
+- `D5-L2` › `s2 › options`: 'A brief flash of light' is a throwaway.
+  - was: "A clean surgical cut to the mucosa" / "Distension (stretch) of the gut wall" / "A light brush across the lining" / "A brief flash of light"
+  - now: "A clean surgical cut to the mucosa" / "Distension (stretch) of the gut wall" / "A light brush across the lining" / "Gentle warming of the gut wall"
+- `D5-L3` › `s2 › options`: 'Heart has no sensory neurons' is a throwaway; option 2 was overlong; replace with real misconceptions of similar length.
+  - was: "Cardiac and arm afferents converge on the same dorsal-horn neurons" / "Pain somehow travels backward along the sensory nerves of the arm itself" / "The heart simply has no sensory neurons of its own at all" / "The arm itself is genuinely injured at that very moment"
+  - now: "Cardiac and arm afferents converge on the same dorsal-horn neurons" / "Pain spreads backward along the arm's sensory nerves" / "The vagus nerve carries heart pain down into the arm" / "Reduced blood flow also reaches the arm muscles"
+- `D5-L3` › `s3 › options`: 'Pure coincidence' is a throwaway.
+  - was: "Convergence of diaphragm and shoulder afferents centrally" / "The shoulder joint itself is badly torn or injured" / "Pure coincidence, with no underlying mechanism"
+  - now: "Convergence of diaphragm and shoulder afferents centrally" / "The shoulder joint itself is badly torn or injured" / "The irritated diaphragm presses on nerves in the shoulder"
+- `D5-L3` › `s3 › variants[0] › options`: 'Purely random chance' is a throwaway.
+  - was: "Central convergence of visceral and somatic afferents" / "Purely random chance, with no real mechanism" / "Sensory nerves somehow conducting backward here"
+  - now: "Central convergence of visceral and somatic afferents" / "Visceral nerves branching out to supply the skin" / "Sensory nerves somehow conducting backward here"
+- `D5-L4` › `s2 › options`: 'Billions of identical neurons', 'never vary', 'skin mapping fully answered' are throwaways.
+  - was: "With so few afferents, each subtype's role is outsized" / "Viscera contain billions of essentially identical neurons" / "Visceral neurons never vary from one another at all" / "Skin mapping has already fully answered the question"
+  - now: "With so few afferents, each subtype's role is outsized" / "Each organ is served by one uniform afferent type" / "Skin afferent classes map directly onto visceral ones" / "Visceral subtypes are already fully catalogued"
+- `D5-L4` › `s2 › variants[0] › options`: 'Only relevant for skin' is a throwaway.
+  - was: "Very — each likely has a distinct role" / "Pointless — they're all the same" / "Only relevant for skin"
+  - now: "Very — each likely has a distinct role" / "Pointless — they're all the same" / "Low — a few subtypes can't differ much"
+- `D5-L4` › `s3 › options`: Blunt-cut and 'describe anatomy then stop' are throwaways; non-specific silencing and correlation-only are real design errors.
+  - was: "Target that subtype with a Cre line, then silence it with a DREADD" / "Cut the entire nerve to the organ bluntly and see what then happens" / "Only describe the gross anatomy and then simply stop there"
+  - now: "Target that subtype with a Cre line, then silence it with a DREADD" / "Silence all DRG neurons at once with a DREADD" / "Record that subtype's activity but never manipulate it"
+- `D5-L4` › `s3 › variants[0] › options`: Same throwaway distractors as the main item.
+  - was: "Target it genetically, then silence it with a DREADD" / "Bluntly remove the entire nerve to the organ" / "Stop at the anatomy and go no further at all"
+  - now: "Target it genetically, then silence it with a DREADD" / "Silence every DRG neuron at once with a DREADD" / "Record its activity without manipulating it"
+- `D7-L1` › `s3 › options`: 'Simply larger than the rest of the pancreas' is a throwaway (and false: ~1-2%).
+  - was: "They secrete hormones into the blood, not into ducts" / "They are simply larger than the rest of the pancreas" / "They make and release the main digestive enzymes" / "They have essentially no blood supply of their own"
+  - now: "They secrete hormones into the blood, not into ducts" / "They release hormones into the pancreatic duct" / "They make and release the main digestive enzymes" / "They have essentially no blood supply of their own"
+- `D7-L2` › `s2 › options`: 'Converts glucose to protein' and 'glucose isn't regulated' are throwaways; glucagon/glycogen mix-up is a classic error.
+  - was: "Insulin — drives glucose into cells, lowering it" / "Glucagon — releases more glucose, raising it" / "Somatostatin — converts glucose to protein" / "None; glucose isn't regulated"
+  - now: "Insulin — drives glucose into cells, lowering it" / "Glucagon — releases more glucose, raising it" / "Somatostatin — boosts insulin release, lowering it" / "Glucagon — stores glucose as glycogen, lowering it"
+- `D7-L3` › `s4 › options`: 'Pancreas removed' and 'gut stops absorbing' are throwaways; 'too much insulin' is muddy since early T2D is hyperinsulinemic.
+  - was: "Tissues respond poorly to insulin, i.e. insulin resistance" / "The pancreas has been surgically removed entirely" / "There is far too much insulin present from birth" / "The gut simply stops absorbing any glucose at all"
+  - now: "Tissues respond poorly to insulin, i.e. insulin resistance" / "The immune system destroys the β cells" / "The α cells stop making glucagon" / "The gut absorbs glucose far too quickly"
+- `D7-L4` › `s2 › options`: Digestive enzyme / islet hormone are throwaways; proprioception and efferent control are real confusions.
+  - was: "The nervous system's sense of the body's internal state" / "The ordinary sense of touch felt on the skin surface" / "A type of digestive enzyme made by the pancreas" / "A metabolic hormone secreted by the islet beta cells"
+  - now: "The nervous system's sense of the body's internal state" / "The ordinary sense of touch felt on the skin surface" / "The sense of body position and limb movement" / "The brain's autonomic control of the organs"
+- `D7-L4` › `s2 › variants[0] › options`: 'Vision' and 'Smell' are throwaways.
+  - was: "Interoception" / "Vision" / "Smell"
+  - now: "Interoception" / "Proprioception" / "Exteroception"
+- `D7-L4` › `s3 › options`: Pancreatectomy and 'never touch the nerves' are throwaways; non-specific denervation and no-manipulation are real design errors.
+  - was: "Silence those neurons with a DREADD and then measure glucose" / "Surgically remove the whole pancreas from the mouse" / "Only measure the hormones and never touch the nerves"
+  - now: "Silence those neurons with a DREADD and then measure glucose" / "Cut all nerves to the pancreas, then measure glucose" / "Feed the mice sugar and simply track their glucose"
+- `D7-L4` › `s3 › variants[0] › options`: Same throwaway distractors as the main item.
+  - was: "Silence them with a DREADD and read out glucose" / "Surgically remove the entire organ from the mouse" / "Measure only the hormones, never the neurons at all"
+  - now: "Silence them with a DREADD and read out glucose" / "Cut all nerves to the pancreas, then read glucose" / "Feed the mice sugar and track their glucose"
+- `D8-L1` › `s3 › options`: 'No effect at all' is a throwaway; 'negative = bad' is a real misreading.
+  - was: "The correction opposes the change, pushing the variable back" / "It reliably makes the variable's deviation even worse" / "It only ever works for values that happen to be falling" / "It has essentially no effect on the variable at all"
+  - now: "The correction opposes the change, pushing the variable back" / "It reliably makes the variable's deviation even worse" / "It only ever works for values that happen to be falling" / "It signals that something harmful has happened"
+- `D8-L1` › `s4 › options`: 'A purely random process' is a throwaway.
+  - was: "A negative-feedback homeostatic loop" / "Positive feedback with no set point" / "An open loop with no sensing" / "A purely random process"
+  - now: "A negative-feedback homeostatic loop" / "Positive feedback with no set point" / "An open loop with no sensing" / "A purely neural reflex arc"
+- `D8-L3` › `s2 › options`: Two throwaways ('no reflex', 'perversely higher'); make all options parallel misconceptions.
+  - was: "Baroreceptors fire more; the vagus slows the heart and pressure falls" / "Baroreceptors fall completely silent and the heart rate climbs sharply" / "Pressure simply keeps on rising, with no reflex response at all" / "The reflex perversely drives the pressure even higher than before"
+  - now: "Baroreceptors fire more; the vagus slows the heart and pressure falls" / "Baroreceptors fire less; sympathetic drive speeds the heart" / "Baroreceptors fire more; sympathetic drive slows the heart" / "Baroreceptors fire more; the vagus speeds the heart up"
+- `D8-L4` › `s2 › variants[0] › options`: 'Somehow regulates even better' and 'only the hormone level changes' are throwaways.
+  - was: "It can no longer sense the variable, so regulation fails" / "Somehow it ends up regulating the variable even better" / "Only the hormone level changes, and nothing else at all"
+  - now: "It can no longer sense the variable, so regulation fails" / "Nothing changes, since the effector limb is still intact" / "The loop flips into positive feedback and runs away"
+- `D8-L4` › `s3 › options`: 'Somehow has no afferent limb' is a throwaway; correct was the only structured 'X: ...' option.
+  - was: "An interoceptive reflex: afferents sense inflammation and efferents dampen it" / "A purely hormonal control loop involving no afferent or efferent nerves whatsoever" / "An ordinary somatic stretch reflex, much like the familiar knee-jerk" / "A regulatory process that somehow has no afferent limb at all"
+  - now: "An interoceptive reflex: afferents sense inflammation and efferents dampen it" / "A purely hormonal loop: cytokines alone shut inflammation off" / "A somatic stretch reflex, much like the familiar knee-jerk" / "A positive-feedback loop: vagal output amplifies inflammation"

@@ -1,0 +1,102 @@
+{
+  "id": "D4-L4",
+  "unitId": "D4",
+  "title": "Receptive-field size across the body",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain two-point discrimination differences and preview sparse visceral fields.",
+  "tags": [
+    "receptive-field",
+    "acuity"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Why fingertips beat your back",
+      "body": "**[[two-point discrimination]]** — the smallest gap you can feel as *two* points — is tiny on the fingertip (dense small fields) and large on the back (sparse big fields). Same skin, different receptive-field grids.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Two points feel like one on the back but clearly two on the fingertip. Why?",
+      "options": [
+        "The back has larger, sparser receptive fields",
+        "The back's afferents are mostly slow C fibers",
+        "Fingertip afferents conduct signals faster",
+        "The back sits closer to the spinal cord itself"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Acuity follows receptive-field density. Sparse, large fields on the back merge nearby points; dense, small fields on the fingertip resolve them.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You test two-point discrimination on fingertip vs back.",
+          "prompt": "Where is the threshold gap smaller?",
+          "options": [
+            "Fingertip",
+            "Back",
+            "Identical"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Dense small fields on the fingertip resolve closer points, so its threshold is smaller."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "An organ like the colon is innervated by relatively few, widely-branching afferents.",
+      "prompt": "What do you predict about localizing a stimulus there?",
+      "options": [
+        "Pinpoint accuracy, like a fingertip",
+        "Vague, poorly localized sensation",
+        "Precise, but only for painful stimuli"
+      ],
+      "answer": [
+        1
+      ],
+      "reveal": "Sparse afferents with large fields mean the brain gets 'something's happening in there' but not precisely where — the heart of why visceral sensation is diffuse (unit D5).",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Sparse, large-field innervation of an organ gives…",
+          "options": [
+            "Precise localization",
+            "Diffuse, vague localization",
+            "Precise only for painful stimuli"
+          ],
+          "answer": [
+            1
+          ],
+          "explanation": "Few neurons with big fields can't localize precisely, giving diffuse sensation."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Skin vs viscera",
+      "body": "Skin is densely mapped for acuity; the viscera are sparsely innervated for *detecting* events (stretch, injury, chemistry), not for pinpointing them. That design choice is exactly what the next unit unpacks.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG afferents sensing distal-colon mechanics; visceral stretch sensation."
+    }
+  ],
+  "reviewNotes": "Two-point discrimination; preview visceral sparseness."
+}

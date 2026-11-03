@@ -1,0 +1,95 @@
+{
+  "id": "C7-L3",
+  "unitId": "C7",
+  "title": "Blocking and the controls that save you",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Choose the IF control that rules out a given false result.",
+  "tags": [
+    "controls",
+    "immunofluorescence"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Background has two sources",
+      "body": "False signal in IF comes from two places: antibodies sticking where they shouldn't (non-specific binding, cut by **blocking** with serum/BSA) and the tissue glowing on its own (**[[autofluorescence]]**, worst in red blood cells and lipofuscin). Controls tell the two apart from real signal.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Your stain shows signal. Which control checks whether the *secondary* is binding non-specifically?",
+      "options": [
+        "Secondary-only (omit the primary)",
+        "Known positive tissue",
+        "Isotype control in place of the primary",
+        "Unstained tissue (no antibodies)"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Secondary-only shows what the secondary does with no primary present. Any signal there is background, not target.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You see fluorescence and want to know if the secondary is to blame.",
+          "prompt": "Which control answers that?",
+          "options": [
+            "Secondary-only",
+            "Positive-control tissue",
+            "Unstained tissue"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Running the secondary with no primary reveals non-specific secondary binding."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Your stain shows *nothing*. Which control tells you the stain *can* work at all?",
+      "options": [
+        "Tissue known to express the target protein",
+        "A secondary-only slide with no primary added",
+        "An isotype-matched control antibody run alone",
+        "A noticeably longer final wash step at the end"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Known-positive tissue is a positive control: if it's blank too, your reagents or protocol failed (a false negative), not biology.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A stain is completely blank.",
+          "prompt": "What rules out a dead protocol?",
+          "options": [
+            "Known-positive tissue stains",
+            "Secondary-only is blank",
+            "Higher laser power"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "If a known-positive sample also fails, the problem is the assay, not the sample."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "The pairing to remember",
+      "body": "**Negative controls** (secondary-only, isotype, knockout tissue) guard against *false positives*. **Positive controls** (known-expressing tissue) guard against *false negatives*. Run both, every time you trust a new stain.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "IF controls, mirrors C1 control logic for staining."
+}

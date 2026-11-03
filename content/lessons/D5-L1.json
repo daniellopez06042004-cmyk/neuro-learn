@@ -1,0 +1,79 @@
+{
+  "id": "D5-L1",
+  "unitId": "D5",
+  "title": "Two kinds of sensation",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Contrast somatic and visceral sensation in quality and localization.",
+  "tags": [
+    "visceral",
+    "somatic"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sharp and placed vs dull and vague",
+      "body": "**Somatic** sensation from the skin is usually sharp and well-localized (deep muscle and joint pain is duller). **Visceral** sensation (gut, pancreas, bladder) is typically dull, aching, and hard to place. The difference comes largely from how densely each is innervated.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each sensation to its usual character.",
+      "pairs": [
+        [
+          "Somatic (skin)",
+          "Sharp, precisely localized"
+        ],
+        [
+          "Visceral (gut)",
+          "Dull, diffuse, poorly localized"
+        ]
+      ],
+      "explanation": "Dense skin innervation gives precise somatic sensation; sparse visceral innervation gives vague, diffuse sensation."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "Why can't you pinpoint a stomachache the way you locate a pinprick on your hand?",
+      "options": [
+        "Viscera are sparsely innervated, with large receptive fields",
+        "Gut afferents conduct too slowly to carry location",
+        "Visceral pain travels only in the vagus, not the cord",
+        "The brain ignores gut signals unless they are severe"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Few afferents with big [[receptive field|receptive fields]] can't give the brain a fine spatial map, so visceral sensation is diffuse.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You compare locating a pinprick on skin vs an ache in the gut.",
+          "prompt": "Which is easier to pinpoint?",
+          "options": [
+            "The skin pinprick",
+            "The gut ache",
+            "Equally easy"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Dense skin innervation pinpoints the pinprick; sparse gut innervation can't localize the ache."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Different jobs",
+      "body": "Skin needs a fine map to guide action. Viscera mostly need to flag *that* something is wrong — over-stretch, inflammation, ischemia — so their afferents are tuned to those events, not to precise location.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Somatic vs visceral sensation; sets up referred pain."
+}

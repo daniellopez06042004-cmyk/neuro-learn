@@ -1,0 +1,94 @@
+{
+  "id": "D5-L3",
+  "unitId": "D5",
+  "title": "Referred pain and convergence",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain referred pain via viscerosomatic convergence in the dorsal horn.",
+  "tags": [
+    "referred-pain",
+    "convergence"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Wires that share a line",
+      "body": "Visceral and somatic afferents from the same spinal level often **[[converge]]** onto the *same* [[dorsal horn]] neurons — **[[viscerosomatic convergence]]**. The brain, used to signals from skin, misreads a visceral signal as coming from the skin region sharing that line.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "prompt": "Why is heart pain often 'felt' in the left arm (**[[referred pain]]**)?",
+      "options": [
+        "Cardiac and arm afferents converge on the same dorsal-horn neurons",
+        "Pain spreads backward along the arm's sensory nerves",
+        "The vagus nerve carries heart pain down into the arm",
+        "Reduced blood flow also reaches the arm muscles"
+      ],
+      "answer": [
+        0
+      ],
+      "multi": false,
+      "explanation": "Shared central wiring makes the brain mislocalize the visceral signal to the somatic territory it usually hears from — the classic referred-pain mechanism.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "During a heart attack, cardiac pain afferents enter the upper thoracic cord (T1–T4).",
+          "prompt": "Besides the chest, where is the pain classically felt?",
+          "options": [
+            "The inner left arm",
+            "The right lower abdomen",
+            "The front of the thigh"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Cardiac afferents share T1–T4 dorsal-horn neurons with afferents from the chest wall and inner arm, so the brain refers heart pain there."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "setup": "A patient reports shoulder-tip pain, and it turns out the diaphragm is irritated.",
+      "prompt": "What's the likely explanation?",
+      "options": [
+        "Convergence of diaphragm and shoulder afferents centrally",
+        "The shoulder joint itself is badly torn or injured",
+        "The irritated diaphragm presses on nerves in the shoulder"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Diaphragm (phrenic) and shoulder afferents share central levels, so diaphragmatic irritation refers to the shoulder — the same convergence logic.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Referred pain patterns are explained by…",
+          "options": [
+            "Central convergence of visceral and somatic afferents",
+            "Visceral nerves branching out to supply the skin",
+            "Sensory nerves somehow conducting backward here"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Shared dorsal-horn targets cause the brain to mislocalize visceral signals."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "A diagnostic fingerprint",
+      "body": "Referred-pain maps are clinically useful: the *pattern* hints at which organ and spinal level is involved. It also warns researchers that where a signal is 'felt' isn't where it started.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Referred pain via viscerosomatic convergence."
+}

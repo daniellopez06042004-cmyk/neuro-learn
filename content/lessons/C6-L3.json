@@ -1,0 +1,91 @@
+{
+  "id": "C6-L3",
+  "unitId": "C6",
+  "title": "Sectioning: cryostat vs vibratome",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Choose between cryostat and vibratome sectioning for a given experiment.",
+  "tags": [
+    "sectioning",
+    "histology"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Thin enough to see through",
+      "body": "Light microscopy needs thin tissue. Two common ways to slice fixed tissue:\n\n- **[[cryosection|Cryostat]]:** tissue frozen in OCT, cut cold (often 10–40 µm). Fast, great for fluorescence.\n- **[[vibratome|Vibratome]]:** tissue in agarose, cut with a vibrating blade in buffer (often 40–300 µm). No freezing, thicker sections, better for whole circuits.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "prompt": "Match each method to what it's best for.",
+      "pairs": [
+        [
+          "Cryostat",
+          "Thin sections, fast turnaround"
+        ],
+        [
+          "Vibratome",
+          "Thick sections, no freeze damage"
+        ],
+        [
+          "Whole-mount",
+          "Keeping a flat tissue intact, no sectioning"
+        ]
+      ],
+      "explanation": "Cryostat = thin and fast; vibratome = thick and gentle; whole-mount skips sectioning entirely."
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "prompt": "You want to trace long, branching DRG axons through the tissue. Which method fits best?",
+      "options": [
+        "Cryostat at 10 µm",
+        "Vibratome at 100 µm",
+        "Paraffin at 5 µm",
+        "Serial 10 µm cryosections, every 4th kept"
+      ],
+      "answer": [
+        1
+      ],
+      "multi": false,
+      "explanation": "Thicker vibratome sections keep more of an axon's length in one slice, so you can trace branching. Thin sections chop axons into fragments.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You need to follow branching axons through the depth of a tissue.",
+          "prompt": "Thin 10 µm cryosections or 100 µm vibratome sections?",
+          "options": [
+            "Thin cryosections",
+            "Thick vibratome sections",
+            "It makes no difference"
+          ],
+          "answer": [
+            1
+          ],
+          "reveal": "Thicker sections keep more of each axon intact, so you can trace its path instead of guessing across fragments."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Whole-mount: don't section at all",
+      "body": "For a flat tissue like gut wall, you can stain the **[[whole-mount|whole mount]]** — the intact sheet, no sectioning — and image the full network of nerve endings in one piece. The lab uses this to map how **[[DRG]]** afferents tile the **[[colon]]** wall.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "Uses perfusion-fixed and whole-mount tissue to map colon DRG endings."
+    }
+  ],
+  "reviewNotes": "Sectioning choices; whole-mount tied to colon mapping."
+}
