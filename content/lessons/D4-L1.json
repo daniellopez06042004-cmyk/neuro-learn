@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "A cable of cables",
       "body": "A peripheral nerve is a bundle, wrapped in three sheaths:\n\n- **[[endoneurium]]** wraps each individual axon\n- **[[perineurium]]** binds axons into a **[[fascicle]]**\n- **[[epineurium]]** wraps the whole nerve\n\nMost nerves are **mixed**: sensory ([[afferent]]) and motor ([[efferent]]) axons travel together.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg",
+        "src": "assets/nerve-cross-section.svg",
+        "alt": "Cross-section of a peripheral nerve: the epineurium wraps the whole nerve and three fascicles, each fascicle is bound by a ring of perineurium, and each axon inside has its own thin endoneurium. Larger axons have a thick myelin ring. A few axons are coloured as sensory and a few as motor, side by side in the same fascicles.",
+        "caption": "A nerve is a cable of cables, and most carry sensory and motor axons together."
+      }
     },
     {
       "type": "order",

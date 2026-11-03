@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Two probes must agree",
       "body": "**[[RNAscope]]** uses pairs of **double-Z (ZZ) probes**. The preamplifier only binds when *two* adjacent Z probes land side by side on the mRNA. A single probe sticking non-specifically can't build signal — it takes two neighbors to start the tree. That double requirement is what makes it specific.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/rnascope-zz.svg",
+        "alt": "An mRNA tiled by ZZ probe pairs (three shown, more continue). A preamplifier binds across each pair's two side-by-side Z tails, amplifiers branch off it, and label probes light up so the trees merge into one bright dot. A lone probe stuck on an off-target strand has no partner, so nothing binds it and it stays dark, marked with a cross.",
+        "caption": "Only two Z probes side by side can start the tree, so a lone stray probe stays dark."
+      }
     },
     {
       "type": "order",

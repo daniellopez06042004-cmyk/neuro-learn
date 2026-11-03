@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 302" role="img">
+  <title>RNAscope: two Z probes must sit side by side</title>
+  <desc>An mRNA strand is tiled by ZZ probe pairs (three shown; more continue along the strand). Each pair lands on adjacent sites, and a preamplifier binds across the two side-by-side Z tails. Amplifiers branch off each preamplifier, label probes bind the amplifiers and light up, and the trees merge into one bright dot. Elsewhere a lone probe stuck on an off-target strand has no partner, so no preamplifier binds and it stays dark (cross).</desc>
+  <style>
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;--lipid:#4a4237;}}
+    svg{--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t3:color-mix(in srgb,var(--track) 70%,var(--text));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-hi:color-mix(in srgb,#e8b4b0 55%,var(--surface-2));--tissue-line:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .rna{fill:none;stroke:var(--muted);stroke-width:5;stroke-linecap:round;}
+    .tick{fill:none;stroke:var(--line-strong);stroke-width:2;}
+    .orna{fill:none;stroke:var(--line-strong);stroke-width:4;stroke-linecap:round;}
+    .z{fill:none;stroke:var(--t3);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+    .zl{fill:none;stroke:var(--bad);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+    .pre{fill:none;stroke:var(--track);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+    .ghost{fill:none;stroke:var(--bad);stroke-width:3;stroke-linecap:round;stroke-dasharray:5 5;}
+    .amp{fill:none;stroke:var(--t2);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1 1;stroke-dashoffset:1;}
+    .lp{fill:color-mix(in srgb,var(--track) 40%,#ffffff);stroke:var(--track);stroke-width:1.5;}
+    .halo{fill:var(--track);opacity:.22;}
+    .lead{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round;}
+    .x{fill:none;stroke:var(--bad);stroke-width:3.5;stroke-linecap:round;}
+    .dots{fill:var(--muted);}
+    .glow{opacity:0;animation:glow 10s ease-in-out infinite;}
+    @keyframes glow{0%,64%{opacity:0;}76%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .zin0{animation:zin0 10s ease-out infinite;}
+    @keyframes zin0{0%,5%{opacity:0;transform:translateY(-26px)}13%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .zin1{animation:zin1 10s ease-out infinite;}
+    @keyframes zin1{0%,8%{opacity:0;transform:translateY(-26px)}16%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .zin2{animation:zin2 10s ease-out infinite;}
+    @keyframes zin2{0%,11%{opacity:0;transform:translateY(-26px)}19%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .zinL{animation:zinL 10s ease-out infinite;}
+    @keyframes zinL{0%,8%{opacity:0;transform:translateY(-26px)}16%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .xo{opacity:0;animation:xo 10s ease-in-out infinite;}
+    @keyframes xo{0%,36%{opacity:0;}42%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .pin0{animation:pin0 10s ease-in-out infinite;}
+    @keyframes pin0{0%,22%{opacity:0;transform:translateY(-36px)}31%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .pin1{animation:pin1 10s ease-in-out infinite;}
+    @keyframes pin1{0%,25%{opacity:0;transform:translateY(-36px)}34%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .pin2{animation:pin2 10s ease-in-out infinite;}
+    @keyframes pin2{0%,28%{opacity:0;transform:translateY(-36px)}37%,95%{opacity:1;transform:translateY(0)}99%,100%{opacity:0;transform:translateY(0)}}
+    .gh{opacity:0;animation:gh 10s ease-in-out infinite;}
+    @keyframes gh{0%,24%{opacity:0;transform:translateY(-18px)}30%{opacity:1;transform:translateY(-10px)}34%{opacity:1;transform:translateY(-8px)}40%,100%{opacity:0;transform:translateY(-22px)}}
+    .a0{animation:a0 10s ease-out infinite;}
+    @keyframes a0{0%,40%{stroke-dashoffset:1;opacity:1}47%,95%{stroke-dashoffset:0;opacity:1}99%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+    .a1{animation:a1 10s ease-out infinite;}
+    @keyframes a1{0%,44%{stroke-dashoffset:1;opacity:1}51%,95%{stroke-dashoffset:0;opacity:1}99%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+    .a2{animation:a2 10s ease-out infinite;}
+    @keyframes a2{0%,48%{stroke-dashoffset:1;opacity:1}55%,95%{stroke-dashoffset:0;opacity:1}99%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+    .a3{animation:a3 10s ease-out infinite;}
+    @keyframes a3{0%,52%{stroke-dashoffset:1;opacity:1}59%,95%{stroke-dashoffset:0;opacity:1}99%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+    .lit{opacity:0;animation:lit 10s ease-in-out infinite;}
+    @keyframes lit{0%,58%{opacity:0;}66%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .L1{opacity:0;animation:L1 10s ease-in-out infinite;}@keyframes L1{0%,28%{opacity:0;}34%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .L2{opacity:0;animation:L2 10s ease-in-out infinite;}@keyframes L2{0%,48%{opacity:0;}54%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .L3{opacity:0;animation:L3 10s ease-in-out infinite;}@keyframes L3{0%,60%{opacity:0;}66%,95%{opacity:1;}99%,100%{opacity:0;}}
+    .L0{opacity:0;animation:L0 10s ease-in-out infinite;}@keyframes L0{0%,12%{opacity:0;}17%,95%{opacity:1;}99%,100%{opacity:0;}}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-8.8s!important;animation-play-state:paused!important;}}
+  </style>
+
+  <g transform="translate(0 -78)">
+  <defs><radialGradient id="gl" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:var(--track);stop-opacity:.6"/><stop offset=".5" style="stop-color:var(--track);stop-opacity:.28"/><stop offset="1" style="stop-color:var(--track);stop-opacity:0"/></radialGradient></defs>
+  <ellipse class="glow" cx="124" cy="222" rx="132" ry="150" fill="url(#gl)"/>
+  <path class="tick" d="M18 335V341 M26 335V341 M34 335V341 M42 335V341 M50 335V341 M58 335V341 M66 335V341 M74 335V341 M82 335V341 M90 335V341 M98 335V341 M106 335V341 M114 335V341 M122 335V341 M130 335V341 M138 335V341 M146 335V341 M154 335V341 M162 335V341 M170 335V341 M178 335V341 M186 335V341 M194 335V341 M202 335V341 M210 335V341 M218 335V341 M226 335V341 M234 335V341 M242 335V341"/>
+  <path class="rna" d="M14 332H250"/>
+  <g class="dots"><circle cx="232" cy="320" r="2.5"/><circle cx="240" cy="320" r="2.5"/><circle cx="248" cy="320" r="2.5"/></g>
+  <path class="tick" d="M272 335V340 M280 335V340 M288 335V340 M296 335V340 M304 335V340 M312 335V340 M320 335V340 M328 335V340 M336 335V340 M344 335V340"/>
+  <path class="orna" d="M270 332H348"/>
+  <g class="zin0"><path class="z" d="M26 300H46L26 326H46"/><path class="z" d="M54 300H74L54 326H74"/></g>
+  <g class="zin1"><path class="z" d="M100 300H120L100 326H120"/><path class="z" d="M128 300H148L128 326H148"/></g>
+  <g class="zin2"><path class="z" d="M174 300H194L174 326H194"/><path class="z" d="M202 300H222L202 326H222"/></g>
+  <g class="zinL"><path class="zl" d="M292 300H312L292 326H312"/></g>
+  <path class="x xo" d="M321 305L335 319M335 305L321 319"/>
+  <g class="pin0"><path class="pre" d="M28 293H72M50 293V132"/></g>
+  <g class="pin1"><path class="pre" d="M102 293H146M124 293V132"/></g>
+  <g class="pin2"><path class="pre" d="M176 293H220M198 293V132"/></g>
+  <g class="gh"><path class="ghost" d="M290 293H334M312 293V277"/></g>
+  <g><path class="amp a0" pathLength="1" d="M50 270L20 244"/><path class="amp a0" pathLength="1" d="M50 270L80 244"/><path class="amp a1" pathLength="1" d="M50 228L20 202"/><path class="amp a1" pathLength="1" d="M50 228L80 202"/><path class="amp a2" pathLength="1" d="M50 186L20 160"/><path class="amp a2" pathLength="1" d="M50 186L80 160"/><path class="amp a3" pathLength="1" d="M50 144L20 118"/><path class="amp a3" pathLength="1" d="M50 144L80 118"/><path class="amp a0" pathLength="1" d="M124 270L94 244"/><path class="amp a0" pathLength="1" d="M124 270L154 244"/><path class="amp a1" pathLength="1" d="M124 228L94 202"/><path class="amp a1" pathLength="1" d="M124 228L154 202"/><path class="amp a2" pathLength="1" d="M124 186L94 160"/><path class="amp a2" pathLength="1" d="M124 186L154 160"/><path class="amp a3" pathLength="1" d="M124 144L94 118"/><path class="amp a3" pathLength="1" d="M124 144L154 118"/><path class="amp a0" pathLength="1" d="M198 270L168 244"/><path class="amp a0" pathLength="1" d="M198 270L228 244"/><path class="amp a1" pathLength="1" d="M198 228L168 202"/><path class="amp a1" pathLength="1" d="M198 228L228 202"/><path class="amp a2" pathLength="1" d="M198 186L168 160"/><path class="amp a2" pathLength="1" d="M198 186L228 160"/><path class="amp a3" pathLength="1" d="M198 144L168 118"/><path class="amp a3" pathLength="1" d="M198 144L228 118"/></g>
+  <g class="lit"><circle class="halo" cx="37.4" cy="259.1" r="8"/><circle class="halo" cx="28.7" cy="251.5" r="8"/><circle class="halo" cx="20" cy="244" r="8"/><circle class="halo" cx="62.6" cy="259.1" r="8"/><circle class="halo" cx="71.3" cy="251.5" r="8"/><circle class="halo" cx="80" cy="244" r="8"/><circle class="halo" cx="37.4" cy="217.1" r="8"/><circle class="halo" cx="28.7" cy="209.5" r="8"/><circle class="halo" cx="20" cy="202" r="8"/><circle class="halo" cx="62.6" cy="217.1" r="8"/><circle class="halo" cx="71.3" cy="209.5" r="8"/><circle class="halo" cx="80" cy="202" r="8"/><circle class="halo" cx="37.4" cy="175.1" r="8"/><circle class="halo" cx="28.7" cy="167.5" r="8"/><circle class="halo" cx="20" cy="160" r="8"/><circle class="halo" cx="62.6" cy="175.1" r="8"/><circle class="halo" cx="71.3" cy="167.5" r="8"/><circle class="halo" cx="80" cy="160" r="8"/><circle class="halo" cx="37.4" cy="133.1" r="8"/><circle class="halo" cx="28.7" cy="125.5" r="8"/><circle class="halo" cx="20" cy="118" r="8"/><circle class="halo" cx="62.6" cy="133.1" r="8"/><circle class="halo" cx="71.3" cy="125.5" r="8"/><circle class="halo" cx="80" cy="118" r="8"/><circle class="halo" cx="111.4" cy="259.1" r="8"/><circle class="halo" cx="102.7" cy="251.5" r="8"/><circle class="halo" cx="94" cy="244" r="8"/><circle class="halo" cx="136.6" cy="259.1" r="8"/><circle class="halo" cx="145.3" cy="251.5" r="8"/><circle class="halo" cx="154" cy="244" r="8"/><circle class="halo" cx="111.4" cy="217.1" r="8"/><circle class="halo" cx="102.7" cy="209.5" r="8"/><circle class="halo" cx="94" cy="202" r="8"/><circle class="halo" cx="136.6" cy="217.1" r="8"/><circle class="halo" cx="145.3" cy="209.5" r="8"/><circle class="halo" cx="154" cy="202" r="8"/><circle class="halo" cx="111.4" cy="175.1" r="8"/><circle class="halo" cx="102.7" cy="167.5" r="8"/><circle class="halo" cx="94" cy="160" r="8"/><circle class="halo" cx="136.6" cy="175.1" r="8"/><circle class="halo" cx="145.3" cy="167.5" r="8"/><circle class="halo" cx="154" cy="160" r="8"/><circle class="halo" cx="111.4" cy="133.1" r="8"/><circle class="halo" cx="102.7" cy="125.5" r="8"/><circle class="halo" cx="94" cy="118" r="8"/><circle class="halo" cx="136.6" cy="133.1" r="8"/><circle class="halo" cx="145.3" cy="125.5" r="8"/><circle class="halo" cx="154" cy="118" r="8"/><circle class="halo" cx="185.4" cy="259.1" r="8"/><circle class="halo" cx="176.7" cy="251.5" r="8"/><circle class="halo" cx="168" cy="244" r="8"/><circle class="halo" cx="210.6" cy="259.1" r="8"/><circle class="halo" cx="219.3" cy="251.5" r="8"/><circle class="halo" cx="228" cy="244" r="8"/><circle class="halo" cx="185.4" cy="217.1" r="8"/><circle class="halo" cx="176.7" cy="209.5" r="8"/><circle class="halo" cx="168" cy="202" r="8"/><circle class="halo" cx="210.6" cy="217.1" r="8"/><circle class="halo" cx="219.3" cy="209.5" r="8"/><circle class="halo" cx="228" cy="202" r="8"/><circle class="halo" cx="185.4" cy="175.1" r="8"/><circle class="halo" cx="176.7" cy="167.5" r="8"/><circle class="halo" cx="168" cy="160" r="8"/><circle class="halo" cx="210.6" cy="175.1" r="8"/><circle class="halo" cx="219.3" cy="167.5" r="8"/><circle class="halo" cx="228" cy="160" r="8"/><circle class="halo" cx="185.4" cy="133.1" r="8"/><circle class="halo" cx="176.7" cy="125.5" r="8"/><circle class="halo" cx="168" cy="118" r="8"/><circle class="halo" cx="210.6" cy="133.1" r="8"/><circle class="halo" cx="219.3" cy="125.5" r="8"/><circle class="halo" cx="228" cy="118" r="8"/><circle class="lp" cx="37.4" cy="259.1" r="4"/><circle class="lp" cx="28.7" cy="251.5" r="4"/><circle class="lp" cx="20" cy="244" r="4"/><circle class="lp" cx="62.6" cy="259.1" r="4"/><circle class="lp" cx="71.3" cy="251.5" r="4"/><circle class="lp" cx="80" cy="244" r="4"/><circle class="lp" cx="37.4" cy="217.1" r="4"/><circle class="lp" cx="28.7" cy="209.5" r="4"/><circle class="lp" cx="20" cy="202" r="4"/><circle class="lp" cx="62.6" cy="217.1" r="4"/><circle class="lp" cx="71.3" cy="209.5" r="4"/><circle class="lp" cx="80" cy="202" r="4"/><circle class="lp" cx="37.4" cy="175.1" r="4"/><circle class="lp" cx="28.7" cy="167.5" r="4"/><circle class="lp" cx="20" cy="160" r="4"/><circle class="lp" cx="62.6" cy="175.1" r="4"/><circle class="lp" cx="71.3" cy="167.5" r="4"/><circle class="lp" cx="80" cy="160" r="4"/><circle class="lp" cx="37.4" cy="133.1" r="4"/><circle class="lp" cx="28.7" cy="125.5" r="4"/><circle class="lp" cx="20" cy="118" r="4"/><circle class="lp" cx="62.6" cy="133.1" r="4"/><circle class="lp" cx="71.3" cy="125.5" r="4"/><circle class="lp" cx="80" cy="118" r="4"/><circle class="lp" cx="111.4" cy="259.1" r="4"/><circle class="lp" cx="102.7" cy="251.5" r="4"/><circle class="lp" cx="94" cy="244" r="4"/><circle class="lp" cx="136.6" cy="259.1" r="4"/><circle class="lp" cx="145.3" cy="251.5" r="4"/><circle class="lp" cx="154" cy="244" r="4"/><circle class="lp" cx="111.4" cy="217.1" r="4"/><circle class="lp" cx="102.7" cy="209.5" r="4"/><circle class="lp" cx="94" cy="202" r="4"/><circle class="lp" cx="136.6" cy="217.1" r="4"/><circle class="lp" cx="145.3" cy="209.5" r="4"/><circle class="lp" cx="154" cy="202" r="4"/><circle class="lp" cx="111.4" cy="175.1" r="4"/><circle class="lp" cx="102.7" cy="167.5" r="4"/><circle class="lp" cx="94" cy="160" r="4"/><circle class="lp" cx="136.6" cy="175.1" r="4"/><circle class="lp" cx="145.3" cy="167.5" r="4"/><circle class="lp" cx="154" cy="160" r="4"/><circle class="lp" cx="111.4" cy="133.1" r="4"/><circle class="lp" cx="102.7" cy="125.5" r="4"/><circle class="lp" cx="94" cy="118" r="4"/><circle class="lp" cx="136.6" cy="133.1" r="4"/><circle class="lp" cx="145.3" cy="125.5" r="4"/><circle class="lp" cx="154" cy="118" r="4"/><circle class="lp" cx="185.4" cy="259.1" r="4"/><circle class="lp" cx="176.7" cy="251.5" r="4"/><circle class="lp" cx="168" cy="244" r="4"/><circle class="lp" cx="210.6" cy="259.1" r="4"/><circle class="lp" cx="219.3" cy="251.5" r="4"/><circle class="lp" cx="228" cy="244" r="4"/><circle class="lp" cx="185.4" cy="217.1" r="4"/><circle class="lp" cx="176.7" cy="209.5" r="4"/><circle class="lp" cx="168" cy="202" r="4"/><circle class="lp" cx="210.6" cy="217.1" r="4"/><circle class="lp" cx="219.3" cy="209.5" r="4"/><circle class="lp" cx="228" cy="202" r="4"/><circle class="lp" cx="185.4" cy="175.1" r="4"/><circle class="lp" cx="176.7" cy="167.5" r="4"/><circle class="lp" cx="168" cy="160" r="4"/><circle class="lp" cx="210.6" cy="175.1" r="4"/><circle class="lp" cx="219.3" cy="167.5" r="4"/><circle class="lp" cx="228" cy="160" r="4"/><circle class="lp" cx="185.4" cy="133.1" r="4"/><circle class="lp" cx="176.7" cy="125.5" r="4"/><circle class="lp" cx="168" cy="118" r="4"/><circle class="lp" cx="210.6" cy="133.1" r="4"/><circle class="lp" cx="219.3" cy="125.5" r="4"/><circle class="lp" cx="228" cy="118" r="4"/></g>
+  <g class="L3"><path class="lead" d="M250 106L234 114"/><text x="254" y="110">label probe</text></g>
+  <g class="L2"><path class="lead" d="M250 168L217.8 169.4"/><text x="254" y="172">amplifier</text></g>
+  <g class="L1"><path class="lead" d="M250 238L223 289"/><text x="254" y="242">preamplifier</text></g>
+  <text x="14" y="364">mRNA</text>
+  <g class="L0"><path class="lead" d="M100 345V349H148V345"/><text x="124" y="366" text-anchor="middle">ZZ probe pair</text></g>
+  <g class="L0"><text x="348" y="364" text-anchor="end" style="fill:var(--bad)">lone probe</text></g>
+  </g>
+</svg>

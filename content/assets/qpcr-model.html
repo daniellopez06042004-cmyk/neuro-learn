@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  RT-qPCR amplification curves, computed cycle by cycle. Product roughly doubles each cycle until reagents
+  run low (logistic growth to a plateau). Sample A's starting amount is fixed; the slider sets how much less
+  sample B started with. Ct is the cycle where each curve crosses the threshold line. With perfect doubling,
+  each halving of the starting amount adds one cycle, so 1/32 as much template crosses 5 cycles later
+  (Ct 20 vs 25, as in the lesson). Amounts and the threshold are illustrative.
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--track:#5B8DEF;--warn:#ba7517;--b:#993c1d;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--track:#7ea6f5;--warn:#ef9f27;--b:#f0997b;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  canvas{display:block;width:100%}
+  label.f{display:flex;align-items:center;gap:10px;margin:8px 0 0;font-weight:600}
+  label.f span{min-width:120px}
+  input[type=range]{flex:1;height:32px;accent-color:var(--b)}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <canvas id="c" role="img" aria-label="Two qPCR amplification curves. Each stays flat, rises steeply, then plateaus. Sample A, with more starting mRNA, crosses the threshold line at an earlier cycle (lower Ct) than sample B."></canvas>
+  <label class="f"><span id="lab">B starts with 1/32</span><input id="amt" type="range" min="0" max="10" step="1" value="5" aria-label="How much less mRNA sample B starts with, in halvings"></label>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Simulated: product doubles each cycle until it plateaus. Amounts and threshold are illustrative.</p>
+<script>
+(function () {
+  var CYCLES = 40, K = 1, TH = 0.08, A0 = TH / Math.pow(2, 20); // sample A crosses at about cycle 20
+  function run(n0) { // logistic: near-doubling while product is scarce, then a plateau
+    var n = n0, out = [n];
+    for (var c = 1; c <= CYCLES; c++) { n = n + n * (1 - n / K); out.push(n); }
+    return out;
+  }
+  function ct(curve) { // fractional cycle where the curve crosses the threshold (log-linear interpolation)
+    for (var c = 1; c < curve.length; c++) if (curve[c] >= TH) {
+      var a = Math.log(curve[c - 1]), b = Math.log(curve[c]);
+      return c - 1 + (Math.log(TH) - a) / (b - a);
+    }
+    return null;
+  }
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say');
+  var slider = document.getElementById('amt'), lab = document.getElementById('lab');
+  var W = 0, H = 292, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'surface-2', 'track', 'warn', 'b'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function label(s, x, y, c, align, weight, px) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (px || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'left'; ctx.fillText(s, x, y); }
+
+  var A = run(A0), B, ctA = ct(A), ctB, halvings = 5, shown = 0, last = 0;
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function setB() {
+    halvings = Number(slider.value); B = run(A0 / Math.pow(2, halvings)); ctB = ct(B);
+    lab.textContent = halvings ? 'B starts with 1/' + Math.pow(2, halvings) : 'B starts the same';
+    shown = still ? CYCLES : 0;
+  }
+  var L = 34, R = function () { return W - 12; }, T = 22, Bt = 236;
+  var X = function (c) { return L + c / CYCLES * (R() - L); }, Y = function (v) { return Bt - v / K * (Bt - T); };
+  function curve(data, upto, c, name) {
+    ctx.strokeStyle = c; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.beginPath();
+    var n = Math.floor(upto);
+    for (var i = 0; i <= n; i++) i ? ctx.lineTo(X(i), Y(data[i])) : ctx.moveTo(X(i), Y(data[i]));
+    if (upto > n && n < CYCLES) ctx.lineTo(X(upto), Y(data[n] + (data[n + 1] - data[n]) * (upto - n)));
+    ctx.stroke();
+    if (upto >= CYCLES) { // name each curve beside its steep middle: A on the left, B on the right
+      var mid = data.findIndex(function (v) { return v >= K / 2; });
+      label(name, X(mid) + (name === 'A' ? -8 : 8), Y(K / 2) + 5, c, name === 'A' ? 'right' : 'left', 700, 15);
+    }
+  }
+  function mark(cyc, c, row) {
+    if (cyc === null || shown < cyc) return;
+    ctx.fillStyle = c; ctx.beginPath(); ctx.arc(X(cyc), Y(TH), 5, 0, 6.283); ctx.fill();
+    ctx.strokeStyle = c; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(X(cyc), Y(TH)); ctx.lineTo(X(cyc), Bt); ctx.stroke(); ctx.setLineDash([]);
+    label('Ct ' + cyc.toFixed(1), X(cyc), Bt + 16 + row * 16, c, 'center', 700, 13);
+  }
+  function frame(now) {
+    var dt = last ? Math.min(50, now - last) : 16; last = now;
+    if (shown < CYCLES) shown = Math.min(CYCLES, shown + dt / 1000 * 9); // about 9 cycles per second
+    ctx.clearRect(0, 0, W, H);
+    // axes
+    ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(L, T - 6); ctx.lineTo(L, Bt); ctx.lineTo(R(), Bt); ctx.stroke();
+    for (var c = 0; c < CYCLES; c += 10) label(String(c), X(c), Bt + 46, col.muted, 'center', 400, 12);
+    label('cycle', R(), Bt + 46, col.muted, 'right', 400, 12);
+    ctx.save(); ctx.translate(14, (T + Bt) / 2); ctx.rotate(-Math.PI / 2); label('signal', 0, 0, col.muted, 'center', 400, 12); ctx.restore();
+    // threshold
+    ctx.strokeStyle = col.warn; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(L, Y(TH)); ctx.lineTo(R(), Y(TH)); ctx.stroke(); ctx.setLineDash([]);
+    label('threshold', L + 4, Y(TH) - 6, col.warn, 'left', 600, 13);
+    curve(B, shown, col.b, 'B'); curve(A, shown, col.track, 'A');
+    mark(ctA, col.track, 0); mark(ctB, col.b, halvings ? 1 : 0);
+    var text = shown < CYCLES ? 'Each cycle roughly doubles the product…'
+      : !halvings ? 'Same starting mRNA, same Ct: the curves overlap.'
+      : 'B started with ' + Math.pow(2, halvings) + '× less mRNA, so it crosses ' + (ctB - ctA).toFixed(0) + ' cycle' + (halvings > 1 ? 's' : '') + ' later. More mRNA → lower Ct.';
+    if (say.textContent !== text) say.textContent = text;
+    requestAnimationFrame(frame);
+  }
+  slider.oninput = setB;
+  readColors(); size(); setB();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColors);
+  addEventListener('resize', size);
+  requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

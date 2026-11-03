@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Holding steady",
       "body": "**[[homeostasis]]** keeps internal variables (temperature, glucose, blood pressure) near a **[[set point]]**. The machinery is a loop: a **sensor** detects the value, a **controller** compares it to the set point, and an **[[effector]]** pushes it back. That correction is **[[negative feedback]]**.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/negative-feedback.svg",
+        "alt": "A four-box thermostat loop: room temp feeds a sensor, the sensor feeds a controller that compares the reading with a set point, the controller drives an effector (a heater), and the heater warms the room. The room temperature drops below the set point, the sensor detects it, the controller switches the heater on, and the temperature climbs back. The loop ends with the heater off and the room-temperature trace showing the dip and its return to the set point.",
+        "caption": "Sensor, controller and effector push the variable back toward its set point."
+      }
     },
     {
       "type": "order",

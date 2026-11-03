@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Calcium imaging of cultured DRG neurons expressing GCaMP. Five neurons: two TRPV1+ (respond to capsaicin),
+  two TRPV1- (don't), and one unhealthy cell that responds to nothing. Capsaicin opens TRPV1, so only TRPV1+
+  cells take up calcium and brighten. High KCl depolarizes every healthy neuron: the positive control that
+  a silent cell was alive. Calcium rises fast and decays over seconds. Kinetics, amplitudes and the time axis
+  are illustrative, not measured.
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--track:#5B8DEF;--warn:#ba7517;--bad:#993c1d;--ok:#0f6e56;--field:#101312;--glow:#7dff9a;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--track:#7ea6f5;--warn:#ef9f27;--bad:#f0997b;--ok:#5dcaa5;--field:#050706;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  .seg{display:flex;gap:8px;margin:0 0 8px}
+  .seg button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 4px}
+  .seg button.drug{border-color:var(--warn)}
+  .seg button:disabled{opacity:.45;cursor:default}
+  canvas{display:block;width:100%}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <div class="seg">
+    <button class="drug" id="cap">Capsaicin</button>
+    <button class="drug" id="kcl">KCl</button>
+    <button id="reset" aria-label="Start over">Reset</button>
+  </div>
+  <canvas id="c" role="img" aria-label="Five cultured DRG neurons glowing green with GCaMP, and a ΔF/F trace for each. Capsaicin brightens only the two TRPV1-positive neurons. KCl brightens every healthy neuron. One neuron responds to neither, so it is excluded as unhealthy."></canvas>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Simulated GCaMP traces. Timing and response sizes are illustrative.</p>
+<script>
+(function () {
+  var CELLS = [
+    { trpv1: true, alive: true, x: 0.16, y: 0.38, r: 0.075 },
+    { trpv1: false, alive: true, x: 0.38, y: 0.62, r: 0.115 },
+    { trpv1: true, alive: true, x: 0.6, y: 0.33, r: 0.08 },
+    { trpv1: false, alive: false, x: 0.75, y: 0.64, r: 0.09 },
+    { trpv1: false, alive: true, x: 0.92, y: 0.3, r: 0.06 }
+  ];
+  var WIN = 30, RISE = 0.6, DECAY = 4.5; // seconds shown; calcium rise and decay time constants
+  var CAP = 4, KCL = 3; // how long each stimulus is applied, s
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say');
+  var W = 0, H = 318, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'track', 'warn', 'bad', 'ok', 'field', 'glow'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function label(s, x, y, c, align, weight, px) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (px || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'left'; ctx.fillText(s, x, y); }
+
+  var t, stims, hist, seen;
+  function reset() {
+    t = 0; stims = []; hist = []; seen = { cap: false, kcl: false };
+    CELLS.forEach(function (c, i) { c.ca = 0; c.capResp = false; c.kclResp = false; c.noise = i * 17; });
+  }
+  function drive(c, now) {
+    if (!c.alive) return 0;
+    var d = 0;
+    stims.forEach(function (s) {
+      if (now < s.t || now > s.t + s.dur) return;
+      if (s.kind === 'kcl') { d = Math.max(d, 1); c.kclResp = true; }
+      else if (c.trpv1) { d = Math.max(d, 0.75); c.capResp = true; }
+    });
+    return d;
+  }
+  function step(dt) {
+    t += dt;
+    CELLS.forEach(function (c) {
+      var d = drive(c, t);
+      c.ca += (d - c.ca) * dt / (d > c.ca ? RISE : DECAY);
+    });
+    hist.push({ t: t, v: CELLS.map(function (c, i) { return c.ca + 0.025 * Math.sin(t * 7.3 + c.noise) + 0.02 * Math.sin(t * 3.1 + i); }) });
+    while (hist.length && hist[0].t < t - WIN) hist.shift();
+  }
+  function apply(kind) { stims.push({ kind: kind, t: t, dur: kind === 'kcl' ? KCL : CAP }); seen[kind] = true; }
+
+  function blob(cx, cy, r, seed) {
+    ctx.beginPath();
+    for (var i = 0; i <= 24; i++) { var a = i / 24 * 6.283, rr = r * (1 + 0.06 * Math.sin(a * 3 + seed) + 0.04 * Math.sin(a * 5 + seed * 2)); i ? ctx.lineTo(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr) : ctx.moveTo(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr); }
+    ctx.closePath();
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    // the culture dish field
+    var fh = 112, fy = 0;
+    ctx.fillStyle = col.field; rr(0, fy, W, fh, 10); ctx.fill();
+    ctx.save(); rr(0, fy, W, fh, 10); ctx.clip();
+    CELLS.forEach(function (c, i) {
+      var cx = c.x * W, cy = fy + c.y * fh, r = c.r * Math.min(W, 360);
+      ctx.strokeStyle = 'rgba(125,255,154,0.25)'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(cx + r, cy); ctx.quadraticCurveTo(cx + r * 2.2, cy + r * 1.4, cx + r * 3.2, cy + r * 0.6); ctx.stroke();
+      ctx.globalAlpha = c.alive ? 0.22 + 0.78 * Math.min(1, c.ca) : 0.12; ctx.fillStyle = col.glow; blob(cx, cy, r, i); ctx.fill();
+      ctx.globalAlpha = c.alive ? 0.15 + 0.6 * Math.min(1, c.ca) : 0.05; ctx.fillStyle = '#ffffff'; blob(cx, cy, r * 0.45, i + 3); ctx.fill();
+      ctx.globalAlpha = 1;
+      label(String(i + 1), cx, cy + r + 15 > fh - 4 ? cy - r - 5 : cy + r + 15, 'rgba(255,255,255,0.85)', 'center', 700, 13);
+    });
+    ctx.restore();
+    // traces
+    var top = fh + 20, rowH = 32, L = 22, R = W - 92, X = function (tt) { return R - (t - tt) / WIN * (R - L); };
+    label('ΔF/F', L, top - 6, col.muted, 'left', 400, 12);
+    stims.forEach(function (s) {
+      var x0 = Math.max(L, X(s.t)), x1 = Math.min(R, X(s.t + s.dur)); if (x1 <= L) return;
+      ctx.fillStyle = col.warn; ctx.globalAlpha = 0.14; ctx.fillRect(x0, top, x1 - x0, rowH * CELLS.length); ctx.globalAlpha = 1;
+      if (x0 > L + 2 || x1 - x0 > 30) label(s.kind === 'kcl' ? 'KCl' : 'cap', x0 + 2, top + rowH * CELLS.length + 14, col.warn, 'left', 700, 12);
+    });
+    CELLS.forEach(function (c, i) {
+      var y0 = top + (i + 1) * rowH - 6;
+      label(String(i + 1), 4, y0 - 2, col.muted, 'left', 700, 13);
+      ctx.strokeStyle = col.line; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(L, y0); ctx.lineTo(R, y0); ctx.stroke();
+      ctx.strokeStyle = c.alive ? col.ok : col['line-strong']; ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.beginPath();
+      hist.forEach(function (h, k) { var x = X(h.t), y = y0 - Math.max(-0.1, h.v[i]) * (rowH - 6); k ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+      ctx.stroke();
+      // verdict for this cell once both stimuli have been tried
+      if (seen.cap && seen.kcl && t > lastStim() + 3) {
+        var v = !c.kclResp ? ['no KCl: exclude', col.bad] : c.capResp ? ['capsaicin ✓', col.ok] : ['KCl only', col.text];
+        label(v[0], W - 2, y0 - 4, v[1], 'right', 700, 13);
+      }
+    });
+    var text;
+    if (!stims.length) text = 'Tap Capsaicin, then KCl.';
+    else if (!(seen.cap && seen.kcl)) text = seen.cap ? 'Only the TRPV1+ neurons answer capsaicin. Are the silent ones alive? Try KCl.' : 'KCl depolarizes every healthy neuron. Now try capsaicin.';
+    else text = t > lastStim() + 3 ? 'Responders: 1 and 3. Cells 2 and 5 are alive but capsaicin-insensitive. Cell 4 ignored KCl too, so it is excluded.' : 'Watching the responses…';
+    if (say.textContent !== text) say.textContent = text;
+  }
+  function lastStim() { return stims.length ? stims[stims.length - 1].t + stims[stims.length - 1].dur : 0; }
+  function rr(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches, last = 0;
+  function frame(now) {
+    var dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016; last = now;
+    step(dt); draw(); requestAnimationFrame(frame);
+  }
+  function stillRun() { // reduced motion: show a finished experiment
+    reset(); for (var i = 0; i < 300; i++) step(0.02); apply('cap'); for (i = 0; i < 700; i++) step(0.02); apply('kcl'); for (i = 0; i < 500; i++) step(0.02); draw();
+  }
+  document.getElementById('cap').onclick = function () { if (still) return stillRun(); apply('cap'); };
+  document.getElementById('kcl').onclick = function () { if (still) return stillRun(); apply('kcl'); };
+  document.getElementById('reset').onclick = function () { if (still) return stillRun(); reset(); };
+  readColors(); size(); reset();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { readColors(); if (still) draw(); });
+  addEventListener('resize', function () { size(); if (still) draw(); });
+  if (still) stillRun(); else requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

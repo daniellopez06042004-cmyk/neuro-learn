@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img">
+  <title>Referred pain: heart felt in the left arm</title>
+  <desc>A heart afferent and a left-arm skin afferent, with their pseudounipolar cell bodies side by side in the same upper-thoracic (T1 to T4) DRG, both synapse onto one shared neuron in the dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, its signal crosses the cord and ascends to the brain, and the left arm on the body outline glows as the place the pain is felt. The arm's own afferent stays quiet, and the heart itself is not where the pain is felt.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-lo:color-mix(in srgb,#e8b4b0 16%,var(--surface-2));--tissue-hi:color-mix(in srgb,#e8b4b0 50%,var(--surface-2));--muscle:color-mix(in srgb,#e8b4b0 62%,var(--surface-2));--muscle-line:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--warn-1:color-mix(in srgb,var(--warn) 24%,var(--surface));--bad-1:color-mix(in srgb,var(--bad) 24%,var(--surface));--ok-1:color-mix(in srgb,var(--ok) 22%,var(--surface));--ok-2:color-mix(in srgb,var(--ok) 55%,var(--surface));--muted-1:color-mix(in srgb,var(--muted) 22%,var(--surface));--nuc:color-mix(in srgb,var(--muted) 55%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
+    .lbl{font-size:15px;font-weight:600;}
+    .key{font-size:16px;font-weight:700;}
+    .body{fill:var(--tissue-lo);stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .heart{fill:var(--muscle);stroke:var(--muscle-line);stroke-width:2;stroke-linejoin:round;}
+    .brain{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .gyri{fill:none;stroke:var(--line-strong);stroke-width:1.5;stroke-linecap:round;}
+    .cord{fill:var(--tissue-lo);stroke:var(--line-strong);stroke-width:2;}
+    .gmo{fill:none;stroke:var(--line-strong);stroke-width:4;}
+    .gm{fill:color-mix(in srgb,#e8b4b0 40%,var(--surface-2));}
+    .drg{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2;}
+    .ax{fill:none;stroke:var(--track-2);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+    .dot{fill:var(--track-2);}
+    .soma{fill:var(--track-1);stroke:var(--track);stroke-width:2;}
+    .somaN{fill:var(--track-2);}
+    .lit{fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;}
+    .glow{fill:none;stroke:var(--track);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:.2;}
+    .on{fill:var(--track);}
+    .felt{fill:color-mix(in srgb,var(--bad) 38%,var(--surface));stroke:var(--bad);stroke-width:2;stroke-linejoin:round;}
+    .ray{fill:none;stroke:var(--bad);stroke-width:2.5;stroke-linecap:round;}
+    /* 10 s loop. Beat 1 (0.8-2.6 s): heart afferent fires into the cord. Beat 2 (2.6-3.8 s): the shared dorsal-horn
+       neuron fires. Beat 3 (3.8-5.4 s): the signal crosses and ascends; the brain lights. Beat 4 (5.4-6.6 s): the left
+       arm glows, "felt here". Hold to 9.2 s. The arm's own afferent never fires. */
+    .endA{opacity:0;animation:endA 10s ease-in-out infinite;}
+    .trA{stroke-dasharray:100 100;stroke-dashoffset:100;animation:trA 10s ease-in-out infinite;}
+    .somaA{opacity:0;animation:somaA 10s ease-in-out infinite;}
+    .dh{opacity:0;animation:dh 10s ease-in-out infinite;}
+    .ring{fill:none;stroke:var(--track);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 10s ease-out infinite;}
+    .trU{stroke-dasharray:100 100;stroke-dashoffset:100;animation:trU 10s ease-in-out infinite;}
+    .brainOn{fill:var(--track);opacity:0;animation:brainOn 10s ease-in-out infinite;}
+    .arm{opacity:0;animation:arm 10s ease-in-out infinite;}
+    @keyframes endA{0%,6%{opacity:0}10%,92%{opacity:1}98%,100%{opacity:0}}
+    @keyframes trA{0%,8%{stroke-dashoffset:100;opacity:1}26%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes somaA{0%,15%{opacity:0}20%{opacity:.6}26%,92%{opacity:.35}98%,100%{opacity:0}}
+    @keyframes dh{0%,26%{opacity:0}30%,92%{opacity:1}98%,100%{opacity:0}}
+    @keyframes ring{0%,28%{opacity:0;transform:scale(1)}30%{opacity:.9;transform:scale(1)}38%,100%{opacity:0;transform:scale(2.4)}}
+    @keyframes trU{0%,38%{stroke-dashoffset:100;opacity:1}54%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes brainOn{0%,50%{opacity:0}56%,92%{opacity:.32}98%,100%{opacity:0}}
+    @keyframes arm{0%,54%{opacity:0}66%,92%{opacity:1}98%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){
+      .endA,.dh,.arm{animation:none;opacity:1}
+      .somaA{animation:none;opacity:.35}
+      .ring{animation:none;opacity:0}
+      .trA,.trU{animation:none;stroke-dashoffset:0;opacity:1}
+      .brainOn{animation:none;opacity:.32}
+    }
+  </style>
+  <path class="brain" d="M94 70 C97 78 97 84 95 92 H107 C106 84 107 78 110 70 Z"/>
+  <path class="brain" d="M34 60 C20 50 22 30 38 24 C46 12 66 10 78 16 C90 8 112 10 120 18 C138 16 152 30 148 46 C152 60 140 72 124 70 C118 78 106 80 98 74 C84 78 66 78 58 70 C44 74 34 68 34 60 Z"/>
+  <path class="brainOn" d="M34 60 C20 50 22 30 38 24 C46 12 66 10 78 16 C90 8 112 10 120 18 C138 16 152 30 148 46 C152 60 140 72 124 70 C118 78 106 80 98 74 C84 78 66 78 58 70 C44 74 34 68 34 60 Z"/>
+  <path class="gyri" d="M48 42 C58 34 68 46 78 38 M88 28 C98 22 106 34 116 26 M58 60 C70 52 84 64 96 56 M116 48 C124 40 134 50 142 42 M30 46 C36 42 40 50 46 48"/>
+  <text class="lbl" x="158" y="48">brain</text>
+  <path class="body" d="M224 230 C244 234 254 250 256 272 L264 366 H238 L232 290 Z"/>
+  <path class="body" d="M68 230 C48 234 38 250 36 272 L28 366 H54 L60 290 Z"/>
+  <g class="arm"><path class="felt" d="M224 230 C244 234 254 250 256 272 L264 366 H238 L232 290 Z"/></g>
+  <path class="body" d="M130 206 H162 L164 220 C190 224 214 226 226 238 L222 366 H70 L66 238 C78 226 102 224 128 220 Z"/>
+  <path class="heart" d="M194 266 C202 255 218 257 218 272 C218 288 204 298 192 310 C180 298 166 288 168 272 C168 258 186 255 194 266 Z"/>
+  <text class="lbl" x="162" y="294" text-anchor="end">heart</text>
+  <ellipse class="cord" cx="176" cy="146" rx="104" ry="54"/>
+  <g class="gmo"><ellipse cx="140" cy="124" rx="14" ry="27" transform="rotate(-16 140 124)"/><ellipse cx="212" cy="124" rx="14" ry="27" transform="rotate(16 212 124)"/><ellipse cx="140" cy="170" rx="27" ry="18"/><ellipse cx="212" cy="170" rx="27" ry="18"/><rect x="140" y="142" width="72" height="16" rx="6"/></g>
+  <g class="gm"><ellipse cx="140" cy="124" rx="14" ry="27" transform="rotate(-16 140 124)"/><ellipse cx="212" cy="124" rx="14" ry="27" transform="rotate(16 212 124)"/><ellipse cx="140" cy="170" rx="27" ry="18"/><ellipse cx="212" cy="170" rx="27" ry="18"/><rect x="140" y="142" width="72" height="16" rx="6"/></g>
+  <circle cx="176" cy="150" r="2.5" style="fill:var(--line-strong)"/>
+  <text class="lbl" x="216" y="84" text-anchor="middle">T1–T4 dorsal horn</text>
+  <ellipse class="drg" cx="316" cy="136" rx="28" ry="44"/>
+  <text class="lbl" x="316" y="84" text-anchor="middle">DRG</text>
+  <path class="ax" d="M242 318 C252 300 270 274 300 268 C324 262 330 244 330 214 V100 C330 80 290 92 257 106 L232 108"/>
+  <path class="ax" d="M242 318 L236 331 M242 318 L238 305 M242 318 L247 333"/>
+  <circle class="dot" cx="236" cy="331" r="2.8"/>
+  <circle class="dot" cx="238" cy="305" r="2.8"/>
+  <circle class="dot" cx="247" cy="333" r="2.8"/>
+  <path class="ax" d="M196 274 C198 250 206 230 230 214 C256 198 302 206 302 182 V110 C302 98 280 106 257 114 L236 120"/>
+  <path class="ax" d="M196 274 L184 284 M196 274 L208 286 M196 274 L195 292"/>
+  <circle class="dot" cx="184" cy="284" r="2.8"/>
+  <circle class="dot" cx="208" cy="286" r="2.8"/>
+  <circle class="dot" cx="195" cy="292" r="2.8"/>
+  <path class="ax" d="M307 116 H330 M325 154 H302"/>
+  <circle class="soma" cx="316" cy="116" r="9"/><circle class="somaN" cx="314" cy="115" r="3.5"/>
+  <circle class="soma" cx="316" cy="154" r="9"/><circle class="on somaA" cx="316" cy="154" r="9"/><circle class="somaN" cx="314" cy="153" r="3.5"/>
+  <path class="ax" d="M214 125 C208 148 196 170 176 176 C150 194 108 194 100 178 V92 C100 76 96 64 86 52"/>
+  <path class="ax" style="stroke-width:2.2" d="M210 116 L202 100 M205 107 L196 104 M220 116 L224 100 M222 108 L230 104 M204 130 L190 136"/>
+  <circle class="dot" cx="229" cy="128" r="3.8"/><circle class="dot" cx="227" cy="114" r="3.8"/>
+  <circle class="soma" cx="214" cy="125" r="11"/>
+  <g class="endA"><path class="lit" d="M196 274 L184 284 M196 274 L208 286 M196 274 L195 292"/><circle class="on" cx="184" cy="284" r="3.2"/><circle class="on" cx="208" cy="286" r="3.2"/><circle class="on" cx="195" cy="292" r="3.2"/></g>
+  <path class="glow trA" pathLength="100" d="M196 274 C198 250 206 230 230 214 C256 198 302 206 302 182 V110 C302 98 280 106 257 114 L236 120"/>
+  <path class="lit trA" pathLength="100" d="M196 274 C198 250 206 230 230 214 C256 198 302 206 302 182 V110 C302 98 280 106 257 114 L236 120"/>
+  <path class="glow trU" pathLength="100" d="M214 125 C208 148 196 170 176 176 C150 194 108 194 100 178 V92 C100 76 96 64 86 52"/>
+  <path class="lit trU" pathLength="100" d="M214 125 C208 148 196 170 176 176 C150 194 108 194 100 178 V92 C100 76 96 64 86 52"/>
+  <g class="dh"><circle class="on" cx="229" cy="128" r="4.2"/><circle class="on" cx="214" cy="125" r="11"/></g>
+  <circle class="ring" cx="214" cy="125" r="11"/>
+  <circle class="somaN" cx="212" cy="124" r="4"/>
+  <text class="lbl" x="274" y="330">left arm</text>
+  <g class="arm"><text class="key" x="274" y="354" style="fill:var(--bad)">felt here</text></g>
+</svg>

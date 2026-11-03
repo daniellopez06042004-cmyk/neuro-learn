@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img">
+  <title>Stretch, not a scalpel</title>
+  <desc>Two strips of gut wall, each with a sensory afferent ending in the wall and a firing readout. Top: a balloon inflates and distends the wall, the afferent endings light up and the readout shows a burst of spikes. Bottom: a scalpel slices the lining right over the endings, and the readout shows only a single small blip: the cut barely registers.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-lo:color-mix(in srgb,#e8b4b0 16%,var(--surface-2));--tissue-hi:color-mix(in srgb,#e8b4b0 50%,var(--surface-2));--muscle:color-mix(in srgb,#e8b4b0 62%,var(--surface-2));--muscle-line:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--warn-1:color-mix(in srgb,var(--warn) 24%,var(--surface));--bad-1:color-mix(in srgb,var(--bad) 24%,var(--surface));--ok-1:color-mix(in srgb,var(--ok) 22%,var(--surface));--ok-2:color-mix(in srgb,var(--ok) 55%,var(--surface));--muted-1:color-mix(in srgb,var(--muted) 22%,var(--surface));--nuc:color-mix(in srgb,var(--muted) 55%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
+    .lbl{font-size:15px;font-weight:600;}
+    .key{font-size:16px;font-weight:700;}
+    .mus{fill:var(--muscle);stroke:var(--muscle-line);stroke-width:1.5;}
+    .muc{fill:var(--tissue-hi);stroke:var(--line-strong);stroke-width:1.5;stroke-linejoin:round;}
+    .aff path{fill:none;stroke:var(--track-2);stroke-width:3;stroke-linecap:round;}
+    .aff circle{fill:var(--track-2);}
+    .on path{fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;}
+    .on circle{fill:var(--track);}
+    .base{fill:none;stroke:var(--line-strong);stroke-width:1.5;stroke-dasharray:3 4;}
+    .spk{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+    .cath{fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round;}
+    .bal{fill:color-mix(in srgb,var(--muted) 20%,var(--surface));stroke:var(--muted);stroke-width:2;transform-box:fill-box;transform-origin:center;}
+    .blade{fill:color-mix(in srgb,var(--muted) 14%,var(--surface));stroke:var(--muted);stroke-width:1.8;stroke-linejoin:round;}
+    .handle{fill:none;stroke:var(--muted);stroke-width:9;stroke-linecap:round;}
+    .cut{fill:none;stroke:var(--bad);stroke-width:3;stroke-linecap:round;}
+    .div{stroke:var(--line);stroke-width:2;stroke-dasharray:4 6;}
+    /* 10 s loop. Beat 1 (0.8-3.6 s): balloon distends the wall, endings fire a burst.
+       Beat 2 (4.2-6.8 s): scalpel slices the lining over the endings, one small blip. Hold to 9.2 s. */
+    .bal{animation:inflate 10s ease-in-out infinite;}
+    .wu{animation:wallup 10s ease-in-out infinite;}
+    .ends1{transform-box:fill-box;transform-origin:center;animation:stretch 10s ease-in-out infinite;}
+    .on1{opacity:0;animation:on1 10s ease-in-out infinite;}
+    .burst{stroke-dasharray:100 100;stroke-dashoffset:100;animation:burst 10s linear infinite;}
+    .out1{opacity:0;animation:out1 10s ease-in-out infinite;}
+    .knife{animation:knife 10s ease-in-out infinite;}
+    .cut{stroke-dasharray:100 100;stroke-dashoffset:100;animation:cut 10s ease-in-out infinite;}
+    .blip{stroke-dasharray:100 100;stroke-dashoffset:100;animation:blip 10s linear infinite;}
+    .out2{opacity:0;animation:out2 10s ease-in-out infinite;}
+    @keyframes inflate{0%,8%{transform:scale(.42,.5)}20%,92%{transform:scale(1,1)}100%{transform:scale(.42,.5)}}
+    @keyframes wallup{0%,8%{transform:translateY(0)}20%,92%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+    @keyframes stretch{0%,8%{transform:scaleX(1)}20%,92%{transform:scaleX(1.06)}100%{transform:scaleX(1)}}
+    @keyframes on1{0%,19%{opacity:0}23%,92%{opacity:1}98%,100%{opacity:0}}
+    @keyframes burst{0%,20%{stroke-dashoffset:100;opacity:1}36%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes out1{0%,30%{opacity:0}36%,92%{opacity:1}98%,100%{opacity:0}}
+    @keyframes knife{0%,40%{opacity:0;transform:translateX(-64px)}44%{opacity:1;transform:translateX(-64px)}56%{opacity:1;transform:translate(0,0)}62%,92%{opacity:1;transform:translate(0,-8px)}98%,100%{opacity:0;transform:translate(0,-8px)}}
+    @keyframes cut{0%,45%{stroke-dashoffset:100;opacity:1}56%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes blip{0%,56%{stroke-dashoffset:100;opacity:1}68%,92%{stroke-dashoffset:0;opacity:1}98%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes out2{0%,62%{opacity:0}68%,92%{opacity:1}98%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){
+      .bal{animation:none;transform:none}
+      .wu{animation:none;transform:translateY(-8px)}
+      .ends1{animation:none;transform:scaleX(1.06)}
+      .knife{animation:none;opacity:1;transform:translate(0,-8px)}
+      .burst,.cut,.blip{animation:none;stroke-dashoffset:0;opacity:1}
+      .on1,.out1,.out2{animation:none;opacity:1}
+    }
+  </style>
+  <text class="key" x="16" y="26">distension</text>
+  <g class="out1"><text class="lbl" x="344" y="26" text-anchor="end" style="fill:var(--track)">burst</text></g>
+  <path class="cath" d="M18 83 H96"/>
+  <ellipse class="bal" cx="108" cy="82" rx="70" ry="22"/>
+  <g class="wu"><rect class="mus" x="16" y="40" width="184" height="14" rx="3"/><path class="muc" d="M16 52 H200 V62 C199.0 70.0 189.5 70.0 188.5 62.0 C187.5 70.0 178.0 70.0 177.0 62.0 C176.0 70.0 166.5 70.0 165.5 62.0 C164.5 70.0 155.0 70.0 154.0 62.0 C153.0 70.0 143.5 70.0 142.5 62.0 C141.5 70.0 132.0 70.0 131.0 62.0 C130.0 70.0 120.5 70.0 119.5 62.0 C118.5 70.0 109.0 70.0 108.0 62.0 C107.0 70.0 97.5 70.0 96.5 62.0 C95.5 70.0 86.0 70.0 85.0 62.0 C84.0 70.0 74.5 70.0 73.5 62.0 C72.5 70.0 63.0 70.0 62.0 62.0 C61.0 70.0 51.5 70.0 50.5 62.0 C49.5 70.0 40.0 70.0 39.0 62.0 C38.0 70.0 28.5 70.0 27.5 62.0 C26.5 70.0 17.0 70.0 16.0 62.0 Z"/></g>
+  <path class="muc" d="M16 114 H200 V104 C199.0 96.0 189.5 96.0 188.5 104.0 C187.5 96.0 178.0 96.0 177.0 104.0 C176.0 96.0 166.5 96.0 165.5 104.0 C164.5 96.0 155.0 96.0 154.0 104.0 C153.0 96.0 143.5 96.0 142.5 104.0 C141.5 96.0 132.0 96.0 131.0 104.0 C130.0 96.0 120.5 96.0 119.5 104.0 C118.5 96.0 109.0 96.0 108.0 104.0 C107.0 96.0 97.5 96.0 96.5 104.0 C95.5 96.0 86.0 96.0 85.0 104.0 C84.0 96.0 74.5 96.0 73.5 104.0 C72.5 96.0 63.0 96.0 62.0 104.0 C61.0 96.0 51.5 96.0 50.5 104.0 C49.5 96.0 40.0 96.0 39.0 104.0 C38.0 96.0 28.5 96.0 27.5 104.0 C26.5 96.0 17.0 96.0 16.0 104.0 Z"/><rect class="mus" x="16" y="112" width="184" height="18" rx="3"/>
+  <g class="ends1"><g class="aff"><g class="e"><path d="M52 123 H196"/><path d="M52 123 V112 M52 112 L45 103 M52 112 L59 103"/><circle cx="45" cy="103" r="2.8"/><circle cx="59" cy="103" r="2.8"/><path d="M94 123 V112 M94 112 L87 103 M94 112 L101 103"/><circle cx="87" cy="103" r="2.8"/><circle cx="101" cy="103" r="2.8"/><path d="M136 123 V112 M136 112 L129 103 M136 112 L143 103"/><circle cx="129" cy="103" r="2.8"/><circle cx="143" cy="103" r="2.8"/><path d="M176 123 V112 M176 112 L169 103 M176 112 L183 103"/><circle cx="169" cy="103" r="2.8"/><circle cx="183" cy="103" r="2.8"/></g></g><g class="on on1"><g class="e"><path d="M52 123 H196"/><path d="M52 123 V112 M52 112 L45 103 M52 112 L59 103"/><circle cx="45" cy="103" r="2.8"/><circle cx="59" cy="103" r="2.8"/><path d="M94 123 V112 M94 112 L87 103 M94 112 L101 103"/><circle cx="87" cy="103" r="2.8"/><circle cx="101" cy="103" r="2.8"/><path d="M136 123 V112 M136 112 L129 103 M136 112 L143 103"/><circle cx="129" cy="103" r="2.8"/><circle cx="143" cy="103" r="2.8"/><path d="M176 123 V112 M176 112 L169 103 M176 112 L183 103"/><circle cx="169" cy="103" r="2.8"/><circle cx="183" cy="103" r="2.8"/></g></g></g>
+  <text class="lbl" x="52" y="154" style="fill:var(--track)">afferent</text>
+  <path class="base" d="M216 123 H344"/>
+  <path class="spk burst" pathLength="100" d="M216 123 L226 123 l2 -46 l2.5 52 l2 -6 L237 123 l2 -46 l2.5 52 l2 -6 L247 123 l2 -46 l2.5 52 l2 -6 L256 123 l2 -46 l2.5 52 l2 -6 L265 123 l2 -46 l2.5 52 l2 -6 L275 123 l2 -46 l2.5 52 l2 -6 L287 123 l2 -46 l2.5 52 l2 -6 L301 123 l2 -46 l2.5 52 l2 -6 L319 123 l2 -46 l2.5 52 l2 -6 L344 123"/>
+  <line class="div" x1="16" y1="170" x2="344" y2="170"/>
+  <text class="key" x="16" y="202">cut</text>
+  <g class="out2"><text class="lbl" x="344" y="202" text-anchor="end" style="fill:var(--muted)">barely registers</text></g>
+  <rect class="mus" x="16" y="216" width="184" height="14" rx="3"/><path class="muc" d="M16 228 H200 V238 C199.0 246.0 189.5 246.0 188.5 238.0 C187.5 246.0 178.0 246.0 177.0 238.0 C176.0 246.0 166.5 246.0 165.5 238.0 C164.5 246.0 155.0 246.0 154.0 238.0 C153.0 246.0 143.5 246.0 142.5 238.0 C141.5 246.0 132.0 246.0 131.0 238.0 C130.0 246.0 120.5 246.0 119.5 238.0 C118.5 246.0 109.0 246.0 108.0 238.0 C107.0 246.0 97.5 246.0 96.5 238.0 C95.5 246.0 86.0 246.0 85.0 238.0 C84.0 246.0 74.5 246.0 73.5 238.0 C72.5 246.0 63.0 246.0 62.0 238.0 C61.0 246.0 51.5 246.0 50.5 238.0 C49.5 246.0 40.0 246.0 39.0 238.0 C38.0 246.0 28.5 246.0 27.5 238.0 C26.5 246.0 17.0 246.0 16.0 238.0 Z"/>
+  <path class="muc" d="M16 290 H200 V280 C199.0 272.0 189.5 272.0 188.5 280.0 C187.5 272.0 178.0 272.0 177.0 280.0 C176.0 272.0 166.5 272.0 165.5 280.0 C164.5 272.0 155.0 272.0 154.0 280.0 C153.0 272.0 143.5 272.0 142.5 280.0 C141.5 272.0 132.0 272.0 131.0 280.0 C130.0 272.0 120.5 272.0 119.5 280.0 C118.5 272.0 109.0 272.0 108.0 280.0 C107.0 272.0 97.5 272.0 96.5 280.0 C95.5 272.0 86.0 272.0 85.0 280.0 C84.0 272.0 74.5 272.0 73.5 280.0 C72.5 272.0 63.0 272.0 62.0 280.0 C61.0 272.0 51.5 272.0 50.5 280.0 C49.5 272.0 40.0 272.0 39.0 280.0 C38.0 272.0 28.5 272.0 27.5 280.0 C26.5 272.0 17.0 272.0 16.0 280.0 Z"/><rect class="mus" x="16" y="288" width="184" height="18" rx="3"/>
+  <g class="aff"><g class="e"><path d="M52 299 H196"/><path d="M52 299 V288 M52 288 L45 279 M52 288 L59 279"/><circle cx="45" cy="279" r="2.8"/><circle cx="59" cy="279" r="2.8"/><path d="M94 299 V288 M94 288 L87 279 M94 288 L101 279"/><circle cx="87" cy="279" r="2.8"/><circle cx="101" cy="279" r="2.8"/><path d="M136 299 V288 M136 288 L129 279 M136 288 L143 279"/><circle cx="129" cy="279" r="2.8"/><circle cx="143" cy="279" r="2.8"/><path d="M176 299 V288 M176 288 L169 279 M176 288 L183 279"/><circle cx="169" cy="279" r="2.8"/><circle cx="183" cy="279" r="2.8"/></g></g>
+  <path class="cut" pathLength="100" d="M40 277 H138"/>
+  <g class="knife"><path class="handle" d="M20 266 H70"/><path class="blade" d="M66 259 H112 Q132 261 140 276 H66 Z"/></g>
+  <path class="base" d="M216 299 H344"/>
+  <path class="spk blip" pathLength="100" d="M216 299 L262 299 l2 -18 l2.5 22 l2 -4 L344 299"/>
+</svg>

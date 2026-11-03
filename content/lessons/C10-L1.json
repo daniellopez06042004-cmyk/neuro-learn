@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "From mRNA to a number",
       "body": "**[[RT-qPCR]]** first copies mRNA into cDNA (reverse transcription), then amplifies it, doubling each cycle. A dye reports product in real time. The **[[cycle threshold|cycle threshold (Ct)]]** is the cycle where signal crosses a line — **more starting mRNA → fewer cycles → lower Ct**.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/qpcr-model.html",
+        "alt": "Two simulated qPCR amplification curves. Each stays flat, rises steeply as product doubles each cycle, then plateaus. Sample A crosses the threshold line near cycle 20; sample B, which started with 32 times less mRNA, crosses about 5 cycles later. A slider sets how much less B starts with.",
+        "caption": "More starting mRNA crosses the threshold sooner: lower Ct. Drag to change sample B."
+      }
     },
     {
       "type": "mcq",

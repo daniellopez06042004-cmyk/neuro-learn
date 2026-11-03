@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Wires that share a line",
       "body": "Visceral and somatic afferents from the same spinal level often **[[converge]]** onto the *same* [[dorsal horn]] neurons — **[[viscerosomatic convergence]]**. The brain, used to signals from skin, misreads a visceral signal as coming from the skin region sharing that line.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/referred-pain.svg",
+        "alt": "A heart afferent and a left-arm skin afferent have their cell bodies side by side in the same DRG, and both synapse onto one neuron in the T1–T4 dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, and its signal crosses the cord and ascends to the brain. The brain lights up and the left arm on the body outline glows, labelled 'felt here', while the arm's own afferent stays quiet and the heart is not highlighted.",
+        "caption": "Heart and arm afferents share a dorsal-horn neuron, so the brain places heart pain in the arm."
+      }
     },
     {
       "type": "mcq",

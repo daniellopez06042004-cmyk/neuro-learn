@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "The out-of-focus haze",
       "body": "A **[[widefield microscopy|widefield]]** scope lights the whole sample, so light from above and below your focal plane blurs the image. A **[[confocal microscopy|confocal]]** adds a **pinhole** that blocks out-of-focus light, so only the in-focus plane reaches the detector — an *optical section*.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/confocal-pinhole.svg",
+        "alt": "A thick sample under a lens, with light from points above, on and below the focal plane. With no pinhole (widefield), all of it reaches the detector and the image is hazy. Then a pinhole slides in at the plane where in-focus light comes to a point: out-of-focus light is blocked there (✕), only in-focus light reaches the detector, and the image ends crisp (confocal).",
+        "caption": "The pinhole passes only in-focus light, so you get a clean optical section."
+      }
     },
     {
       "type": "mcq",

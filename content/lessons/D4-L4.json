@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Why fingertips beat your back",
       "body": "**[[two-point discrimination]]** — the smallest gap you can feel as *two* points — is tiny on the fingertip (dense small fields) and large on the back (sparse big fields). Same skin, different receptive-field grids.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg",
+        "src": "assets/receptive-fields.svg",
+        "alt": "A fingertip tiled with many small receptive fields next to a patch of back with a few large ones, drawn at the same scale. A caliper with the same gap touches both. On the fingertip its two tips land in two different fields with an untouched field between them (felt as two); on the back both tips land in one large field (felt as one).",
+        "caption": "Small, dense receptive fields tell two points apart; large, sparse ones merge them."
+      }
     },
     {
       "type": "mcq",

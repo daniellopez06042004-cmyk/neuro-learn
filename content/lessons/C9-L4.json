@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "The threshold is a decision",
       "body": "Counting 'positive' cells means picking a brightness **threshold** — and nudging it changes your result. In **[[Fiji]]** (ImageJ) it's one slider. If you set it while watching your groups' outcomes, you can unconsciously push the data your way.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/threshold-count-model.html",
+        "alt": "Two simulated fluorescence images, control and treated, with the same spread of cell brightness. Cells above a brightness threshold are ringed and counted as positive. With one shared threshold the two percentages stay close; with a separate threshold per group, dragging one slider creates a large difference that isn't real.",
+        "caption": "Same cells, different thresholds: the 'effect' comes from the slider. Try one per group."
+      }
     },
     {
       "type": "mcq",

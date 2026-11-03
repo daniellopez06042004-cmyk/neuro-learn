@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" role="img">
+  <title>Saltatory conduction: myelin makes the spike jump</title>
+  <desc>Two axons of the same size start firing at the same moment. On the top, myelinated axon the action potential regenerates only at the nodes of Ranvier and jumps from node to node, reaching the far end quickly. On the bottom, unmyelinated axon the action potential creeps continuously along the bare membrane. The end state is held: the myelinated axon has finished while the unmyelinated spike is still less than halfway along.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;--myelin:color-mix(in srgb,#e8d9c4 70%,var(--surface-2));--myelin-line:color-mix(in srgb,#c9b48f 70%,var(--line-strong));}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;--myelin:color-mix(in srgb,#8a7a63 45%,var(--surface-2));--myelin-line:color-mix(in srgb,#8a7a63 75%,var(--line-strong));}}
+    svg{--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:15px;font-weight:600;fill:var(--text);}
+    .note{font-size:14px;font-weight:400;fill:var(--muted);}
+    .tube{fill:var(--track-1);stroke:var(--track);stroke-width:1.5;}
+    .my{fill:var(--myelin);stroke:var(--myelin-line);stroke-width:2;}
+    .lit{fill:var(--track);opacity:0;}
+    .jump{fill:none;stroke:var(--track);stroke-width:2.5;stroke-dasharray:5 4;stroke-linecap:round;opacity:0;}
+    .gate{fill:none;stroke:var(--line-strong);stroke-width:2;stroke-dasharray:4 5;}
+    .spk{fill:var(--track);stroke:var(--surface);stroke-width:2.5;}
+    .glow{fill:var(--track);opacity:.25;}
+    .trail{fill:none;stroke:var(--track);stroke-width:8;stroke-linecap:round;stroke-dasharray:100 100;stroke-dashoffset:100;}
+    .lead{fill:none;stroke:var(--text);stroke-width:1.5;}
+    /* beats: 1 both axons at the same start · 2 top spike jumps node to node and arrives · 3 bottom spike is still creeping · 4 hold */
+    .hop{offset-path:path("M36 84 Q66 22 96 84 Q126 22 156 84 Q186 22 216 84 Q246 22 276 84 Q306 22 336 84");offset-rotate:0deg;animation:hop 9s linear infinite;}
+    @keyframes hop{0%,10%{offset-distance:0%;opacity:1}13.5%{offset-distance:0%}15.5%{offset-distance:20%}19.0%{offset-distance:20%}21%{offset-distance:40%}24.5%{offset-distance:40%}26.5%{offset-distance:60%}30.0%{offset-distance:60%}32%{offset-distance:80%}35.5%{offset-distance:80%}37.5%{offset-distance:100%}96%{offset-distance:100%;opacity:1}98%{offset-distance:100%;opacity:0}99%{offset-distance:0%;opacity:0}100%{offset-distance:0%;opacity:1}}
+    .creep{animation:creep 9s linear infinite;}
+    @keyframes creep{0%,10%{transform:translateX(0);opacity:1}80%,96%{transform:translateX(114px);opacity:1}98%{transform:translateX(114px);opacity:0}99%{transform:translateX(0);opacity:0}100%{transform:translateX(0);opacity:1}}
+    .trail{animation:trail 9s linear infinite;}
+    @keyframes trail{0%,10%{stroke-dashoffset:100;opacity:1}80%,96%{stroke-dashoffset:62.0;opacity:1}98%{opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    .win{opacity:0;animation:win 9s ease-in-out infinite;}
+    @keyframes win{0%,37%{opacity:0}41%,96%{opacity:1}98%,100%{opacity:0}}
+    .n0{animation:n0 9s linear infinite;}@keyframes n0{0%,9.5%{opacity:0}10%,96%{opacity:1}98%,100%{opacity:0}}
+    .n1{animation:n1 9s linear infinite;}@keyframes n1{0%,15.0%{opacity:0}15.5%,96%{opacity:1}98%,100%{opacity:0}}
+    .n2{animation:n2 9s linear infinite;}@keyframes n2{0%,20.5%{opacity:0}21%,96%{opacity:1}98%,100%{opacity:0}}
+    .n3{animation:n3 9s linear infinite;}@keyframes n3{0%,26.0%{opacity:0}26.5%,96%{opacity:1}98%,100%{opacity:0}}
+    .n4{animation:n4 9s linear infinite;}@keyframes n4{0%,31.5%{opacity:0}32%,96%{opacity:1}98%,100%{opacity:0}}
+    .n5{animation:n5 9s linear infinite;}@keyframes n5{0%,37.0%{opacity:0}37.5%,96%{opacity:1}98%,100%{opacity:0}}
+    .j0{animation:j0 9s linear infinite;}@keyframes j0{0%,13.3%{opacity:0}15.5%,96%{opacity:1}98%,100%{opacity:0}}
+    .j1{animation:j1 9s linear infinite;}@keyframes j1{0%,18.8%{opacity:0}21%,96%{opacity:1}98%,100%{opacity:0}}
+    .j2{animation:j2 9s linear infinite;}@keyframes j2{0%,24.3%{opacity:0}26.5%,96%{opacity:1}98%,100%{opacity:0}}
+    .j3{animation:j3 9s linear infinite;}@keyframes j3{0%,29.8%{opacity:0}32%,96%{opacity:1}98%,100%{opacity:0}}
+    .j4{animation:j4 9s linear infinite;}@keyframes j4{0%,35.3%{opacity:0}37.5%,96%{opacity:1}98%,100%{opacity:0}}
+    
+    @media (prefers-reduced-motion:reduce){
+      .hop{animation:none;offset-distance:100%}
+      .creep{animation:none;transform:translateX(114px)}
+      .trail{animation:none;stroke-dashoffset:62.0}
+      .win,.lit,.jump{animation:none;opacity:1}
+    }
+  </style>
+
+  <!-- shared start and finish -->
+  <path class="gate" d="M36 30 V226 M336 30 V226"/>
+  <text class="note" x="36" y="246" text-anchor="middle">start</text>
+
+  <!-- myelinated axon -->
+  <text x="14" y="24">myelinated</text>
+  <rect class="tube" x="14" y="78" width="332" height="12" rx="6"/>
+  <rect class="my" x="14" y="69" width="17" height="30" rx="10"/>
+  <rect class="my" x="41" y="69" width="50" height="30" rx="12"/><rect class="my" x="101" y="69" width="50" height="30" rx="12"/><rect class="my" x="161" y="69" width="50" height="30" rx="12"/><rect class="my" x="221" y="69" width="50" height="30" rx="12"/><rect class="my" x="281" y="69" width="50" height="30" rx="12"/>
+  <rect class="lit n0" x="31" y="76" width="10" height="16" rx="2"/><rect class="lit n1" x="91" y="76" width="10" height="16" rx="2"/><rect class="lit n2" x="151" y="76" width="10" height="16" rx="2"/><rect class="lit n3" x="211" y="76" width="10" height="16" rx="2"/><rect class="lit n4" x="271" y="76" width="10" height="16" rx="2"/><rect class="lit n5" x="331" y="76" width="10" height="16" rx="2"/>
+  <path class="jump j0" d="M36 68 Q66 34 96 68"/><path class="jump j1" d="M96 68 Q126 34 156 68"/><path class="jump j2" d="M156 68 Q186 34 216 68"/><path class="jump j3" d="M216 68 Q246 34 276 68"/><path class="jump j4" d="M276 68 Q306 34 336 68"/>
+  <circle class="spk hop" r="7"/>
+  <text class="win" x="346" y="24" text-anchor="end" style="fill:var(--ok)">✓ arrives first</text>
+  <path class="lead" d="M156 93 V122"/>
+  <text x="156" y="138" text-anchor="middle">node of Ranvier</text>
+
+  <!-- unmyelinated axon -->
+  <text x="14" y="184">unmyelinated</text>
+  <rect class="tube" x="14" y="200" width="332" height="12" rx="6"/>
+  <path class="trail" pathLength="100" d="M36 206 H336"/>
+  <g transform="translate(36 206)"><g class="creep"><circle class="glow" r="13"/><circle class="spk" r="7"/></g></g>
+</svg>

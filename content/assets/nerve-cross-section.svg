@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img">
+  <title>Inside a peripheral nerve</title>
+  <desc>Cross-section of a peripheral nerve. The epineurium wraps the whole nerve and fills the space between three fascicles. Each fascicle is a bundle of axons bound by a ring of perineurium. Inside a fascicle, each axon has its own thin endoneurium; larger axons are myelinated (a thick ring around the axon) and the smallest are unmyelinated. A few axons are coloured as sensory and a few as motor, mixed together in the same fascicles: a mixed nerve.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-lo:color-mix(in srgb,#e8b4b0 12%,var(--surface));--peri:color-mix(in srgb,#e8b4b0 50%,var(--line-strong));--myelin:color-mix(in srgb,var(--muted) 42%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 30%,var(--surface));--motor:color-mix(in srgb,var(--text) 78%,var(--surface));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:15px;font-weight:600;fill:var(--text);}
+    .nerve{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2.5;}
+    .fib{fill:none;stroke:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));stroke-width:1.5;stroke-linecap:round;opacity:.7;}
+    .endo-sp{fill:var(--tissue-lo);}
+    .peri{fill:none;stroke:var(--peri);stroke-width:5;}
+    .endo{fill:var(--surface);stroke:var(--peri);stroke-width:1.6;}
+    .my{fill:none;stroke:var(--myelin);}
+    .axN{fill:var(--n1);}
+    .axS{fill:var(--track);}
+    .axM{fill:var(--motor);}
+    .mdot{fill:var(--surface);}
+    .lead{fill:none;stroke:var(--text);stroke-width:1.5;}
+    .tip{fill:var(--text);}
+  </style>
+
+  <path class="nerve" d="M320.6 131.8Q326.6 158.0 319.7 183.9Q312.8 209.8 293.2 231.4Q273.6 253.0 243.1 263.4Q212.7 273.8 180.0 273.9Q147.3 274.1 117.6 262.8Q87.9 251.4 68.8 230.1Q49.6 208.8 41.3 183.4Q32.9 158.0 39.8 132.0Q46.7 106.0 66.9 84.8Q87.0 63.6 117.5 54.0Q148.0 44.3 180.2 43.7Q212.4 43.1 241.1 55.0Q269.8 66.9 292.1 86.2Q314.5 105.6 320.6 131.8Z"/>
+  <g>
+    <path class="fib" d="M150 76 q8 -5 16 0 t16 0"/><path class="fib" d="M176 96 q8 -5 16 0 t16 0"/><path class="fib" d="M160 160 q8 -5 16 0 t16 0"/>
+    <path class="fib" d="M72 214 q8 -5 16 0 t16 0"/><path class="fib" d="M96 236 q8 -5 16 0 t16 0"/><path class="fib" d="M264 200 q8 -5 16 0 t16 0"/><path class="fib" d="M252 222 q8 -5 16 0 t16 0"/>
+  </g>
+  <circle class="endo-sp" cx="112" cy="126" r="53.5"/>
+  <circle class="endo" cx="114.2" cy="155.5" r="9.6"/>
+  <circle class="my" cx="114.2" cy="155.5" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axM" cx="114.2" cy="155.5" r="4.6"/>
+  <circle class="mdot" cx="114.2" cy="155.5" r="1.7"/>
+  <circle class="endo" cx="90.7" cy="148.7" r="9.6"/>
+  <circle class="my" cx="90.7" cy="148.7" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="90.7" cy="148.7" r="4.6"/>
+  <circle class="endo" cx="104.8" cy="118.7" r="9.6"/>
+  <circle class="my" cx="104.8" cy="118.7" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="104.8" cy="118.7" r="4.6"/>
+  <circle class="endo" cx="148.6" cy="129.0" r="9.6"/>
+  <circle class="my" cx="148.6" cy="129.0" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="148.6" cy="129.0" r="4.6"/>
+  <circle class="endo" cx="126.3" cy="102.3" r="9.6"/>
+  <circle class="my" cx="126.3" cy="102.3" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axM" cx="126.3" cy="102.3" r="4.6"/>
+  <circle class="mdot" cx="126.3" cy="102.3" r="1.7"/>
+  <circle class="endo" cx="87.3" cy="98.0" r="9.6"/>
+  <circle class="my" cx="87.3" cy="98.0" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axS" cx="87.3" cy="98.0" r="4.6"/>
+  <circle class="endo" cx="77.8" cy="121.0" r="9.6"/>
+  <circle class="my" cx="77.8" cy="121.0" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axS" cx="77.8" cy="121.0" r="4.6"/>
+  <circle class="endo" cx="125.4" cy="130.8" r="9.6"/>
+  <circle class="my" cx="125.4" cy="130.8" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="125.4" cy="130.8" r="4.6"/>
+  <circle class="endo" cx="137.9" cy="151.3" r="9.6"/>
+  <circle class="my" cx="137.9" cy="151.3" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="137.9" cy="151.3" r="4.6"/>
+  <circle class="endo" cx="111.7" cy="87.2" r="9.6"/>
+  <circle class="my" cx="111.7" cy="87.2" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="111.7" cy="87.2" r="4.6"/>
+  <circle class="endo" cx="145.7" cy="108.5" r="9.6"/>
+  <circle class="my" cx="145.7" cy="108.5" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="145.7" cy="108.5" r="4.6"/>
+  <circle class="endo" cx="75.0" cy="139.4" r="6.6"/>
+  <circle class="my" cx="75.0" cy="139.4" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="75.0" cy="139.4" r="3.0"/>
+  <circle class="endo" cx="109.6" cy="138.6" r="6.6"/>
+  <circle class="my" cx="109.6" cy="138.6" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="109.6" cy="138.6" r="3.0"/>
+  <circle class="endo" cx="99.1" cy="165.5" r="6.6"/>
+  <circle class="my" cx="99.1" cy="165.5" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="99.1" cy="165.5" r="3.0"/>
+  <circle class="endo" cx="73.5" cy="103.9" r="4.0"/>
+  <circle class="axN" cx="73.5" cy="103.9" r="2.4"/>
+  <circle class="endo" cx="104.3" cy="102.8" r="4.0"/>
+  <circle class="axN" cx="104.3" cy="102.8" r="2.4"/>
+  <circle class="endo" cx="151.8" cy="145.5" r="4.0"/>
+  <circle class="axN" cx="151.8" cy="145.5" r="2.4"/>
+  <circle class="endo" cx="130.2" cy="167.3" r="4.0"/>
+  <circle class="axN" cx="130.2" cy="167.3" r="2.4"/>
+  <circle class="endo" cx="135.0" cy="86.9" r="4.0"/>
+  <circle class="axN" cx="135.0" cy="86.9" r="2.4"/>
+  <circle class="endo" cx="75.3" cy="152.4" r="4.0"/>
+  <circle class="axS" cx="75.3" cy="152.4" r="2.4"/>
+  <circle class="endo" cx="92.0" cy="132.0" r="4.0"/>
+  <circle class="axS" cx="92.0" cy="132.0" r="2.4"/>
+  <circle class="endo" cx="85.5" cy="163.1" r="4.0"/>
+  <circle class="axN" cx="85.5" cy="163.1" r="2.4"/>
+  <circle class="endo" cx="115.8" cy="171.1" r="4.0"/>
+  <circle class="axN" cx="115.8" cy="171.1" r="2.4"/>
+  <circle class="endo" cx="95.9" cy="83.4" r="4.0"/>
+  <circle class="axN" cx="95.9" cy="83.4" r="2.4"/>
+  <circle class="endo" cx="126.2" cy="82.6" r="4.0"/>
+  <circle class="axN" cx="126.2" cy="82.6" r="2.4"/>
+  <circle class="endo" cx="119.9" cy="116.1" r="4.0"/>
+  <circle class="axN" cx="119.9" cy="116.1" r="2.4"/>
+  <circle class="endo" cx="142.7" cy="93.0" r="4.0"/>
+  <circle class="axN" cx="142.7" cy="93.0" r="2.4"/>
+  <circle class="endo" cx="133.1" cy="117.6" r="4.0"/>
+  <circle class="axN" cx="133.1" cy="117.6" r="2.4"/>
+  <circle class="endo" cx="90.8" cy="112.4" r="4.0"/>
+  <circle class="axN" cx="90.8" cy="112.4" r="2.4"/>
+  <circle class="peri" cx="112" cy="126" r="53.5"/>
+  <circle class="endo-sp" cx="250" cy="120" r="49.5"/>
+  <circle class="endo" cx="230.5" cy="94.4" r="9.6"/>
+  <circle class="my" cx="230.5" cy="94.4" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="230.5" cy="94.4" r="4.6"/>
+  <circle class="endo" cx="248.0" cy="154.6" r="9.6"/>
+  <circle class="my" cx="248.0" cy="154.6" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axM" cx="248.0" cy="154.6" r="4.6"/>
+  <circle class="mdot" cx="248.0" cy="154.6" r="1.7"/>
+  <circle class="endo" cx="268.7" cy="145.4" r="9.6"/>
+  <circle class="my" cx="268.7" cy="145.4" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="268.7" cy="145.4" r="4.6"/>
+  <circle class="endo" cx="262.1" cy="99.8" r="9.6"/>
+  <circle class="my" cx="262.1" cy="99.8" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axM" cx="262.1" cy="99.8" r="4.6"/>
+  <circle class="mdot" cx="262.1" cy="99.8" r="1.7"/>
+  <circle class="endo" cx="217.0" cy="114.2" r="9.6"/>
+  <circle class="my" cx="217.0" cy="114.2" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="217.0" cy="114.2" r="4.6"/>
+  <circle class="endo" cx="222.8" cy="134.3" r="9.6"/>
+  <circle class="my" cx="222.8" cy="134.3" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="222.8" cy="134.3" r="4.6"/>
+  <circle class="endo" cx="256.2" cy="124.5" r="9.6"/>
+  <circle class="my" cx="256.2" cy="124.5" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="256.2" cy="124.5" r="4.6"/>
+  <circle class="endo" cx="282.5" cy="115.8" r="9.6"/>
+  <circle class="my" cx="282.5" cy="115.8" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="282.5" cy="115.8" r="4.6"/>
+  <circle class="endo" cx="238.0" cy="115.3" r="9.6"/>
+  <circle class="my" cx="238.0" cy="115.3" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="238.0" cy="115.3" r="4.6"/>
+  <circle class="endo" cx="241.1" cy="136.3" r="6.6"/>
+  <circle class="my" cx="241.1" cy="136.3" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="241.1" cy="136.3" r="3.0"/>
+  <circle class="endo" cx="226.7" cy="151.3" r="6.6"/>
+  <circle class="my" cx="226.7" cy="151.3" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="226.7" cy="151.3" r="3.0"/>
+  <circle class="endo" cx="251.7" cy="85.6" r="6.6"/>
+  <circle class="my" cx="251.7" cy="85.6" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="251.7" cy="85.6" r="3.0"/>
+  <circle class="endo" cx="284.7" cy="133.1" r="6.6"/>
+  <circle class="my" cx="284.7" cy="133.1" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axS" cx="284.7" cy="133.1" r="3.0"/>
+  <circle class="endo" cx="280.6" cy="96.2" r="6.6"/>
+  <circle class="my" cx="280.6" cy="96.2" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axS" cx="280.6" cy="96.2" r="3.0"/>
+  <circle class="endo" cx="239.6" cy="80.6" r="4.0"/>
+  <circle class="axN" cx="239.6" cy="80.6" r="2.4"/>
+  <circle class="endo" cx="272.7" cy="86.6" r="4.0"/>
+  <circle class="axN" cx="272.7" cy="86.6" r="2.4"/>
+  <circle class="endo" cx="246.5" cy="103.1" r="4.0"/>
+  <circle class="axN" cx="246.5" cy="103.1" r="2.4"/>
+  <circle class="endo" cx="271.8" cy="127.1" r="4.0"/>
+  <circle class="axS" cx="271.8" cy="127.1" r="2.4"/>
+  <circle class="endo" cx="215.4" cy="98.6" r="4.0"/>
+  <circle class="axN" cx="215.4" cy="98.6" r="2.4"/>
+  <circle class="endo" cx="262.4" cy="80.5" r="4.0"/>
+  <circle class="axN" cx="262.4" cy="80.5" r="2.4"/>
+  <circle class="endo" cx="209.1" cy="127.9" r="4.0"/>
+  <circle class="axN" cx="209.1" cy="127.9" r="2.4"/>
+  <circle class="endo" cx="255.0" cy="139.7" r="4.0"/>
+  <circle class="axN" cx="255.0" cy="139.7" r="2.4"/>
+  <circle class="peri" cx="250" cy="120" r="49.5"/>
+  <circle class="endo-sp" cx="194" cy="218" r="45.5"/>
+  <circle class="endo" cx="220.0" cy="240.0" r="10.6"/>
+  <circle class="my" cx="220.0" cy="240.0" r="6.60" style="stroke-width:3.2"/>
+  <circle class="axN" cx="220.0" cy="240.0" r="5.0"/>
+  <circle class="endo" cx="188.5" cy="216.2" r="9.6"/>
+  <circle class="my" cx="188.5" cy="216.2" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axM" cx="188.5" cy="216.2" r="4.6"/>
+  <circle class="mdot" cx="188.5" cy="216.2" r="1.7"/>
+  <circle class="endo" cx="186.6" cy="243.4" r="9.6"/>
+  <circle class="my" cx="186.6" cy="243.4" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="186.6" cy="243.4" r="4.6"/>
+  <circle class="endo" cx="212.1" cy="213.2" r="9.6"/>
+  <circle class="my" cx="212.1" cy="213.2" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="212.1" cy="213.2" r="4.6"/>
+  <circle class="endo" cx="167.1" cy="219.6" r="9.6"/>
+  <circle class="my" cx="167.1" cy="219.6" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="167.1" cy="219.6" r="4.6"/>
+  <circle class="endo" cx="205.4" cy="188.8" r="9.6"/>
+  <circle class="my" cx="205.4" cy="188.8" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axS" cx="205.4" cy="188.8" r="4.6"/>
+  <circle class="endo" cx="177.4" cy="197.3" r="9.6"/>
+  <circle class="my" cx="177.4" cy="197.3" r="6.10" style="stroke-width:3.0"/>
+  <circle class="axN" cx="177.4" cy="197.3" r="4.6"/>
+  <circle class="endo" cx="228.5" cy="223.5" r="6.6"/>
+  <circle class="my" cx="228.5" cy="223.5" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="228.5" cy="223.5" r="3.0"/>
+  <circle class="endo" cx="167.2" cy="238.3" r="6.6"/>
+  <circle class="my" cx="167.2" cy="238.3" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="167.2" cy="238.3" r="3.0"/>
+  <circle class="endo" cx="202.9" cy="251.9" r="6.6"/>
+  <circle class="my" cx="202.9" cy="251.9" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="202.9" cy="251.9" r="3.0"/>
+  <circle class="endo" cx="201.4" cy="232.6" r="6.6"/>
+  <circle class="my" cx="201.4" cy="232.6" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="201.4" cy="232.6" r="3.0"/>
+  <circle class="endo" cx="220.6" cy="197.8" r="6.6"/>
+  <circle class="my" cx="220.6" cy="197.8" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="220.6" cy="197.8" r="3.0"/>
+  <circle class="endo" cx="188.8" cy="183.5" r="6.6"/>
+  <circle class="my" cx="188.8" cy="183.5" r="4.00" style="stroke-width:2.0"/>
+  <circle class="axN" cx="188.8" cy="183.5" r="3.0"/>
+  <circle class="endo" cx="194.9" cy="200.4" r="4.0"/>
+  <circle class="axS" cx="194.9" cy="200.4" r="2.4"/>
+  <circle class="endo" cx="162.3" cy="200.4" r="4.0"/>
+  <circle class="axN" cx="162.3" cy="200.4" r="2.4"/>
+  <circle class="endo" cx="228.4" cy="207.0" r="4.0"/>
+  <circle class="axN" cx="228.4" cy="207.0" r="2.4"/>
+  <circle class="endo" cx="181.1" cy="229.5" r="4.0"/>
+  <circle class="axS" cx="181.1" cy="229.5" r="2.4"/>
+  <circle class="endo" cx="173.0" cy="249.2" r="4.0"/>
+  <circle class="axN" cx="173.0" cy="249.2" r="2.4"/>
+  <circle class="peri" cx="194" cy="218" r="45.5"/>
+
+  <!-- labels -->
+  <text x="14" y="24">epineurium</text>
+  <path class="lead" d="M40 31 L46 150"/><circle class="tip" cx="46" cy="150" r="3"/>
+  <text x="346" y="24" text-anchor="end">perineurium</text>
+  <path class="lead" d="M310 31 L281.5 82.5"/><circle class="tip" cx="281.5" cy="82.5" r="3"/>
+  <text x="14" y="302">fascicle</text>
+  <path class="lead" d="M44 288 L90 158"/><circle class="tip" cx="90" cy="158" r="3"/>
+  <text x="346" y="302" text-anchor="end">endoneurium</text>
+  <path class="lead" d="M300 288 L228 248"/><circle class="tip" cx="228" cy="248" r="3"/>
+
+  <!-- key -->
+  <g transform="translate(108 324)">
+    <circle class="endo" cx="0" cy="0" r="9.6"/><circle class="my" cx="0" cy="0" r="6.1" style="stroke-width:3"/><circle class="axS" cx="0" cy="0" r="4.6"/>
+    <text x="16" y="5">sensory</text>
+    <circle class="endo" cx="104" cy="0" r="9.6"/><circle class="my" cx="104" cy="0" r="6.1" style="stroke-width:3"/><circle class="axM" cx="104" cy="0" r="4.6"/><circle class="mdot" cx="104" cy="0" r="1.8"/>
+    <text x="120" y="5">motor</text>
+  </g>
+</svg>

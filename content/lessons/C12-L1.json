@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Average vs per-cell",
       "body": "**[[bulk RNA-seq|Bulk RNA-seq]]** grinds up tissue and reports the *average* expression across all cells. **[[single-cell RNA sequencing|Single-cell RNA-seq]]** measures each cell separately, so you can see distinct cell types and rare populations the average would blur together.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/bulk-vs-single-cell.svg",
+        "alt": "A tissue of mostly-off grey cells with a few bright blue ones. Bulk RNA-seq turns it into one short average bar. Single-cell RNA-seq gives one dot per cell: most dots sit low and a rare subset sits high, and the dashed bulk average falls between the two groups, where no cell actually is.",
+        "caption": "Bulk gives one blended average; single-cell shows the rare subset that average hides."
+      }
     },
     {
       "type": "mcq",

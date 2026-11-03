@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "A pretty stain isn't proof",
       "body": "A pretty stain doesn't prove the antibody hit the right protein. Antibodies cross-react, bind off-target proteins, and vary by lot. The gold standard: the signal **disappears in a knockout** (or knockdown) that lacks the target.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg",
+        "src": "assets/antibody-ko-validation.svg",
+        "alt": "Two panels stained with the same antibody. Wild-type cells glow with signal; in the knockout the same cells are present but dark, marked no signal with a check.",
+        "caption": "Specific signal disappears in the knockout."
+      }
     },
     {
       "type": "predict",

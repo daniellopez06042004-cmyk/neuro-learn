@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Two hormones, opposite jobs",
       "body": "**[[blood glucose]]** is held in a narrow range by a push-pull pair:\n\n- After a meal, glucose rises → **[[insulin]]** tells liver, muscle and fat to take glucose up → glucose falls.\n- When fasting, glucose drops → **[[glucagon]]** tells the liver to release glucose → glucose rises.\n\nIt's a classic balancing loop around a **[[set point]]**.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/glucose-loop-model.html",
+        "alt": "Blood glucose plotted over time around a set point, with insulin and glucagon bars. After a meal glucose rises, insulin rises and glucose falls back. During a fast glucose dips, glucagon rises and glucose settles near the set point. With the hormones switched off, glucose drifts far from the set point.",
+        "caption": "Insulin and glucagon push glucose back toward the set point. Try a meal, a fast, then switch the hormones off."
+      }
     },
     {
       "type": "mcq",

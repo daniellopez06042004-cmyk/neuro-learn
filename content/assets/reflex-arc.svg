@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img">
+  <title>The knee-jerk reflex arc</title>
+  <desc>The knee-jerk reflex. A hammer taps the patellar tendon and stretches the quadriceps. A muscle spindle (the stretch receptor) fires; the signal runs up the afferent sensory fibre, past its pseudounipolar cell body in the DRG, into the dorsal spinal cord and straight to a motor neuron in the ventral horn: one synapse. The motor neuron fires, the efferent motor axon carries the command out to the quadriceps, the muscle contracts and the lower leg kicks forward.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-lo:color-mix(in srgb,#e8b4b0 16%,var(--surface-2));--tissue-hi:color-mix(in srgb,#e8b4b0 50%,var(--surface-2));--muscle:color-mix(in srgb,#e8b4b0 62%,var(--surface-2));--muscle-line:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--warn-1:color-mix(in srgb,var(--warn) 24%,var(--surface));--bad-1:color-mix(in srgb,var(--bad) 24%,var(--surface));--ok-1:color-mix(in srgb,var(--ok) 22%,var(--surface));--ok-2:color-mix(in srgb,var(--ok) 55%,var(--surface));--muted-1:color-mix(in srgb,var(--muted) 22%,var(--surface));--nuc:color-mix(in srgb,var(--muted) 55%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
+    .lbl{font-size:15px;font-weight:600;}
+    .key{font-size:16px;font-weight:700;}
+    .cord{fill:var(--tissue-lo);stroke:var(--line-strong);stroke-width:2;}
+    .gmo{fill:none;stroke:var(--line-strong);stroke-width:4;}
+    .gm{fill:color-mix(in srgb,#e8b4b0 40%,var(--surface-2));}
+    .drg{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2;}
+    .limbF{fill:var(--tissue-lo);}
+    .limbS{fill:none;stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .shin{fill:var(--tissue-lo);stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .quad{fill:var(--muscle);stroke:var(--muscle-line);stroke-width:2;}
+    .bone{fill:var(--surface);stroke:var(--line-strong);stroke-width:2;}
+    .tendon{fill:none;stroke:var(--line-strong);stroke-width:5;stroke-linecap:round;}
+    .spin{fill:var(--tissue-hi);stroke:var(--track);stroke-width:1.8;}
+    .coil{fill:none;stroke:var(--track-2);stroke-width:2;stroke-linejoin:round;}
+    .coilOn{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linejoin:round;}
+    .ax{fill:none;stroke:var(--track-2);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+    .axE{fill:none;stroke:var(--ok-2);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+    .lit{fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;}
+    .litE{fill:none;stroke:var(--ok);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;}
+    .glow{fill:none;stroke:var(--track);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:.2;}
+    .glowE{fill:none;stroke:var(--ok);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:.2;}
+    .soma{fill:var(--track-1);stroke:var(--track);stroke-width:2;}
+    .somaN{fill:var(--track-2);}
+    .mn{fill:var(--ok-1);stroke:var(--ok);stroke-width:2;}
+    .mnN{fill:var(--ok-2);}
+    .den{fill:none;stroke:var(--ok-2);stroke-width:2.2;stroke-linecap:round;}
+    .onT{fill:var(--track);}
+    .onE{fill:var(--ok);}
+    .ham{fill:color-mix(in srgb,var(--muted) 22%,var(--surface));stroke:var(--muted);stroke-width:2;stroke-linejoin:round;}
+    .hamH{fill:none;stroke:var(--muted);stroke-width:5;stroke-linecap:round;}
+    /* 10 s loop. Beat 1 (1.0-2.2 s): hammer taps the tendon, the spindle stretches and fires. Beat 2 (1.8-3.6 s): afferent
+       signal to the cord and straight onto the motor neuron. Beat 3 (3.6-5.4 s): motor neuron fires, efferent signal to the
+       muscle. Beat 4 (5.4-6.4 s): quadriceps contracts, leg kicks. Hold to 9.0 s. */
+    .hammer{animation:tap 10s ease-in-out infinite;}
+    .spinG{transform-box:fill-box;transform-origin:center;animation:stretch 10s ease-in-out infinite;}
+    .coilOn{opacity:0;animation:coil 10s ease-in-out infinite;}
+    .trA{stroke-dasharray:100 100;stroke-dashoffset:100;animation:trA 10s ease-in-out infinite;}
+    .drgOn{opacity:0;animation:drgOn 10s ease-in-out infinite;}
+    .mnOn{opacity:0;animation:mnOn 10s ease-in-out infinite;}
+    .ring{fill:none;stroke:var(--ok);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 10s ease-out infinite;}
+    .trE{stroke-dasharray:100 100;stroke-dashoffset:100;animation:trE 10s ease-in-out infinite;}
+    .nmj{opacity:0;animation:nmj 10s ease-in-out infinite;}
+    .quadG{transform-box:fill-box;transform-origin:50% 100%;animation:contract 10s ease-in-out infinite;}
+    .quadOn{opacity:0;animation:quadOn 10s ease-in-out infinite;}
+    .leg{transform-origin:260px 282px;animation:kick 10s ease-in-out infinite;}
+    @keyframes tap{0%,8%{transform:translate(10px,-30px)}14%{transform:translate(0,0)}18%{transform:translate(0,0)}26%,100%{transform:translate(10px,-30px)}}
+    @keyframes stretch{0%,13%{transform:scaleX(1)}17%,22%{transform:scaleX(1.14)}30%,100%{transform:scaleX(1)}}
+    @keyframes coil{0%,15%{opacity:0}18%,90%{opacity:1}97%,100%{opacity:0}}
+    @keyframes trA{0%,18%{stroke-dashoffset:100;opacity:1}36%,90%{stroke-dashoffset:0;opacity:1}97%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes drgOn{0%,24%{opacity:0}28%{opacity:.6}34%,90%{opacity:.35}97%,100%{opacity:0}}
+    @keyframes mnOn{0%,36%{opacity:0}40%,90%{opacity:1}97%,100%{opacity:0}}
+    @keyframes ring{0%,37%{opacity:0;transform:scale(1)}40%{opacity:.9;transform:scale(1)}48%,100%{opacity:0;transform:scale(2.3)}}
+    @keyframes trE{0%,40%{stroke-dashoffset:100;opacity:1}54%,90%{stroke-dashoffset:0;opacity:1}97%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:100;opacity:0}}
+    @keyframes nmj{0%,52%{opacity:0}55%,90%{opacity:1}97%,100%{opacity:0}}
+    @keyframes contract{0%,54%{transform:scale(1,1)}62%,88%{transform:scale(1,1.12)}96%,100%{transform:scale(1,1)}}
+    @keyframes quadOn{0%,54%{opacity:0}62%,88%{opacity:1}96%,100%{opacity:0}}
+    @keyframes kick{0%,55%{transform:rotate(0deg)}64%,88%{transform:rotate(-28deg)}97%,100%{transform:rotate(0deg)}}
+    @media (prefers-reduced-motion:reduce){
+      .hammer{animation:none;transform:translate(10px,-30px)}
+      .spinG{animation:none;transform:none}
+      .coilOn,.mnOn,.nmj,.quadOn{animation:none;opacity:1}
+      .drgOn{animation:none;opacity:.35}
+      .ring{animation:none;opacity:0}
+      .trA,.trE{animation:none;stroke-dashoffset:0;opacity:1}
+      .quadG{animation:none;transform:scale(1,1.12)}
+      .leg{animation:none;transform:rotate(-28deg)}
+    }
+  </style>
+  <ellipse class="cord" cx="262" cy="82" rx="80" ry="60"/>
+  <g class="gmo"><ellipse cx="238" cy="62" rx="10" ry="19" transform="rotate(-22 238 62)"/><ellipse cx="286" cy="62" rx="10" ry="19" transform="rotate(22 286 62)"/><ellipse cx="236" cy="108" rx="24" ry="19"/><ellipse cx="288" cy="108" rx="24" ry="19"/><rect x="236" y="78" width="52" height="14" rx="5"/></g>
+  <g class="gm"><ellipse cx="238" cy="62" rx="10" ry="19" transform="rotate(-22 238 62)"/><ellipse cx="286" cy="62" rx="10" ry="19" transform="rotate(22 286 62)"/><ellipse cx="236" cy="108" rx="24" ry="19"/><ellipse cx="288" cy="108" rx="24" ry="19"/><rect x="236" y="78" width="52" height="14" rx="5"/></g>
+  <circle cx="262" cy="83" r="2.5" style="fill:var(--line-strong)"/>
+  <ellipse class="drg" cx="148" cy="60" rx="32" ry="25"/>
+  <text class="lbl" x="104" y="44" text-anchor="end">DRG</text>
+  <g class="leg"><path class="shin" d="M244 292 L238 350 C238 362 244 366 254 366 H306 C316 366 318 354 308 350 L280 342 L284 294 Z"/><path class="tendon" d="M284 278 L276 312"/><ellipse class="bone" cx="287" cy="264" rx="7" ry="12"/></g>
+  <path class="limbF" d="M16 228 H232 C262 228 286 246 288 270 C290 298 266 314 240 314 H16 Z"/><path class="limbS" d="M16 228 H232 C262 228 286 246 288 270 C290 298 266 314 240 314 H16"/>
+  <g class="quadG"><path class="quad" d="M30 250 C40 234 90 234 150 236 C200 238 240 238 256 252 C268 262 262 280 240 282 C190 288 90 288 44 282 C28 278 22 262 30 250 Z"/><path class="quadOn" style="fill:none;stroke:var(--ok);stroke-width:2.5" d="M30 250 C40 234 90 234 150 236 C200 238 240 238 256 252 C268 262 262 280 240 282 C190 288 90 288 44 282 C28 278 22 262 30 250 Z"/></g>
+  <text class="lbl" x="184" y="270">quadriceps</text>
+  <g class="spinG"><path class="spin" d="M100 260 C108 252 132 252 140 260 C132 268 108 268 100 260 Z"/><path class="coil" d="M112 260 l3 -5 l3 10 l3 -10 l3 10 l3 -10 l3 10 l2 -5"/><path class="coilOn" d="M112 260 l3 -5 l3 10 l3 -10 l3 10 l3 -10 l3 10 l2 -5"/></g>
+  <text class="lbl" x="120" y="306" text-anchor="middle">muscle spindle</text>
+  <g class="hammer"><path class="hamH" d="M300 298 L336 262"/><path class="ham" d="M281 298 C281 288 291 280 299 286 L309 294 C315 300 307 310 297 308 Z"/></g>
+  <path class="ax" d="M120 260 C110 246 100 230 100 204 V96 C100 76 106 64 124 64 H176 L192 62 C214 58 230 56 236 66 C242 78 238 92 238 98"/>
+  <path class="ax" d="M148 50 V64"/><circle class="soma" cx="148" cy="47" r="10"/><circle class="drgOn onT" cx="148" cy="47" r="10"/><circle class="somaN" cx="146" cy="46" r="3.8"/>
+  <path class="axE" d="M236 112 C222 114 206 114 196 118 C178 124 168 140 168 162 V250"/><path class="axE" d="M168 250 L160 260 M168 250 L176 260 M168 250 L168 264"/>
+  <path class="den" d="M240 102 L246 90 M243 96 L250 94 M246 112 L258 112 M252 112 L256 118 M238 122 L242 130 M232 104 L226 96"/>
+  <circle class="mn" cx="238" cy="111" r="11"/>
+  <path class="glow trA" pathLength="100" d="M120 260 C110 246 100 230 100 204 V96 C100 76 106 64 124 64 H176 L192 62 C214 58 230 56 236 66 C242 78 238 92 238 98"/>
+  <path class="lit trA" pathLength="100" d="M120 260 C110 246 100 230 100 204 V96 C100 76 106 64 124 64 H176 L192 62 C214 58 230 56 236 66 C242 78 238 92 238 98"/>
+  <circle class="trA" cx="238" cy="99" r="3.8" style="fill:var(--track);stroke:none;stroke-dasharray:none;stroke-dashoffset:0;animation-name:drgOn"/>
+  <g class="mnOn"><circle class="onE" cx="238" cy="111" r="11"/></g>
+  <circle class="ring" cx="238" cy="111" r="11"/>
+  <circle class="mnN" cx="236" cy="110" r="4"/>
+  <path class="glowE trE" pathLength="100" d="M236 112 C222 114 206 114 196 118 C178 124 168 140 168 162 V250"/>
+  <path class="litE trE" pathLength="100" d="M236 112 C222 114 206 114 196 118 C178 124 168 140 168 162 V250"/>
+  <g class="nmj"><path class="litE" d="M168 250 L160 260 M168 250 L176 260 M168 250 L168 264"/><circle class="onE" cx="160" cy="260" r="3"/><circle class="onE" cx="176" cy="260" r="3"/><circle class="onE" cx="168" cy="264" r="3"/></g>
+  <text class="lbl" x="268" y="164" text-anchor="middle">motor neuron</text>
+  <text class="key" x="22" y="150" style="fill:var(--track)">afferent</text><text class="lbl" x="22" y="170" style="fill:var(--track)">sensory</text>
+  <text class="key" x="180" y="196" style="fill:var(--ok)">efferent</text><text class="lbl" x="180" y="216" style="fill:var(--ok)">motor</text>
+</svg>

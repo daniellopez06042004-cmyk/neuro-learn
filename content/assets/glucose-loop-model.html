@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Blood glucose held near a set point by two opposing hormones (negative feedback). A small model, solved live:
+    dG/dt = gut absorption + liver release (glucagon) − uptake by tissues (insulin × G) − steady use
+  Insulin rises when glucose is above the set point; glucagon rises when it is below; each follows its
+  target with a short lag. A meal adds a pulse of absorption; fasting removes absorption. With the loop
+  switched off, both hormones stay at their resting levels, so glucose drifts much further. All values are
+  illustrative and unitless; only the direction of each effect is the point.
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--track:#7F77DD;--warn:#ba7517;--bad:#993c1d;--ok:#0f6e56;--ins:#1f7a8c;--glc:#c2571a;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--track:#a39df0;--warn:#ef9f27;--bad:#f0997b;--ok:#5dcaa5;--ins:#5cc3d6;--glc:#f0a56b;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  .seg{display:flex;gap:8px;margin:0 0 8px}
+  .seg button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 4px}
+  .seg button#loop{flex:1.5}
+  .seg button.sel{border-color:var(--track);background:color-mix(in srgb,var(--track) 16%,transparent)}
+  .seg button[aria-pressed=true]::before{content:"✓ ";font-weight:800}
+  canvas{display:block;width:100%}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <div class="seg">
+    <button id="meal">Meal</button>
+    <button id="fast" aria-pressed="false">Fast</button>
+    <button id="loop" aria-pressed="true" class="sel">Hormones on</button>
+  </div>
+  <canvas id="c" role="img" aria-label="Blood glucose plotted over time around a set-point band, with insulin and glucagon bars beside it. After a meal glucose rises, insulin rises and glucose falls back. During a fast glucose dips, glucagon rises and glucose climbs back. With the hormones switched off, glucose drifts far from the set point."></canvas>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">A simple simulation. Levels and timing are illustrative; the directions are the point.</p>
+<script>
+(function () {
+  var SET = 1, USE = 0.2, FED = 0.3, I0 = 0.2, N0 = 0.1, KI = 3, KN = 3, TAU_H = 0.3, ABS = 1.2, TAU_M = 1.2, WIN = 24;
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say');
+  var W = 0, H = 250, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'surface-2', 'track', 'warn', 'bad', 'ok', 'ins', 'glc'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function label(s, x, y, c, align, weight, px) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (px || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'left'; ctx.fillText(s, x, y); }
+
+  var t = 0, G = SET, I = I0, N = N0, meals = [], fasting = false, loop = true, hist = [], lastEvent = null;
+  function absorb(now) { // each meal: a pulse of absorption that rises and fades
+    var a = fasting ? 0 : FED;
+    meals.forEach(function (m) { var u = (now - m) / TAU_M; if (u > 0) a += ABS * u * Math.exp(1 - u); });
+    return a;
+  }
+  function step(dt) {
+    t += dt;
+    var iT = loop ? I0 + KI * Math.max(0, G - SET) : I0, nT = loop ? N0 + KN * Math.max(0, SET - G) : N0;
+    I += (iT - I) * dt / TAU_H; N += (nT - N) * dt / TAU_H;
+    G += (absorb(t) + N - I * G - USE) * dt;
+    G = Math.max(0.05, G);
+    meals = meals.filter(function (m) { return t - m < 12; });
+    hist.push({ t: t, g: G }); while (hist.length && hist[0].t < t - WIN) hist.shift();
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    var L = 12, R = W - 128, T = 14, B = 210, GMAX = 2.6;
+    var X = function (tt) { return R - (t - tt) / WIN * (R - L); }, Y = function (g) { return B - Math.min(g, GMAX) / GMAX * (B - T); };
+    // set-point band
+    ctx.fillStyle = col.ok; ctx.globalAlpha = 0.13; ctx.fillRect(L, Y(SET + 0.12), R - L, Y(SET - 0.12) - Y(SET + 0.12)); ctx.globalAlpha = 1;
+    ctx.strokeStyle = col.ok; ctx.lineWidth = 1.5; ctx.setLineDash([5, 4]); ctx.beginPath(); ctx.moveTo(L, Y(SET)); ctx.lineTo(R, Y(SET)); ctx.stroke(); ctx.setLineDash([]);
+    label('set point', L + 4, Y(SET + 0.12) - 5, col.ok, 'left', 700, 13);
+    ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(L, T); ctx.lineTo(L, B); ctx.lineTo(R, B); ctx.stroke();
+    label('time →', L + 2, B + 16, col.muted, 'left', 400, 12);
+    label('blood glucose', L + 4, T + 4, col.muted, 'left', 400, 12);
+    meals.forEach(function (m) { var x = X(m); if (x > L) { ctx.fillStyle = col.warn; ctx.beginPath(); ctx.moveTo(x, B - 2); ctx.lineTo(x - 6, B + 9); ctx.lineTo(x + 6, B + 9); ctx.closePath(); ctx.fill(); } });
+    if (meals.length && X(meals[meals.length - 1]) > L + 30) label('meal', X(meals[meals.length - 1]), B + 22, col.warn, 'center', 700, 12);
+    ctx.strokeStyle = col.track; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.beginPath();
+    hist.forEach(function (h, k) { var x = X(h.t), y = Y(h.g); k ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke();
+    ctx.fillStyle = col.track; ctx.beginPath(); ctx.arc(R, Y(G), 5, 0, 6.283); ctx.fill();
+    // hormone bars
+    [['insulin', I, col.ins], ['glucagon', N, col.glc]].forEach(function (b, i) {
+      var x = R + 20 + i * 58, w = 28, top = T + 16, h = B - top, v = Math.min(1, b[1] / 2);
+      ctx.fillStyle = col['surface-2']; ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 1.5; rr(x, top, w, h, 6); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = b[2]; rr(x + 3, B - 3 - v * (h - 6), w - 6, Math.max(4, v * (h - 6)), 4); ctx.fill();
+      label(b[0], x + w / 2, B + 16, b[2], 'center', 700, 12);
+    });
+    var hi = G > SET + 0.12, lo = G < SET - 0.12, text;
+    if (!loop) text = hi ? 'Hormones off: nothing pulls glucose back down.' : lo ? 'Hormones off: glucose keeps sliding.' : 'Hormones off. Try a meal or a fast.';
+    else if (hi) text = 'Glucose is high, so insulin rises and tissues take glucose up.';
+    else if (lo) text = 'Glucose is low, so glucagon rises and the liver releases glucose.';
+    else text = fasting ? 'Fasting: glucagon is up, holding glucose near the set point.' : lastEvent ? 'Back near the set point.' : 'Tap a button to push glucose away from the set point.';
+    if (say.textContent !== text) say.textContent = text;
+  }
+  function rr(x, y, w, h, r) { r = Math.max(0, Math.min(r, w / 2, h / 2)); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches, last = 0, SPEED = 1.1; // model units per second
+  function frame(now) {
+    var dt = last ? Math.min(0.05, (now - last) / 1000) : 0.016; last = now;
+    for (var k = 0; k < 4; k++) step(dt * SPEED / 4);
+    draw(); requestAnimationFrame(frame);
+  }
+  function settle(n) { for (var k = 0; k < n; k++) step(0.02); draw(); }
+  var fastBtn = document.getElementById('fast'), loopBtn = document.getElementById('loop');
+  document.getElementById('meal').onclick = function () { if (fasting) { fasting = false; fastBtn.setAttribute('aria-pressed', 'false'); fastBtn.classList.remove('sel'); } meals.push(t); lastEvent = 'meal'; if (still) settle(250); };
+  fastBtn.onclick = function () { fasting = !fasting; fastBtn.setAttribute('aria-pressed', String(fasting)); fastBtn.classList.toggle('sel', fasting); lastEvent = 'fast'; if (still) settle(400); };
+  loopBtn.onclick = function () { loop = !loop; loopBtn.setAttribute('aria-pressed', String(loop)); loopBtn.classList.toggle('sel', loop); loopBtn.textContent = loop ? 'Hormones on' : 'Hormones off'; if (still) settle(400); };
+  readColors(); size(); for (var k = 0; k < 600; k++) step(0.02); // start from a settled, fed state
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { readColors(); if (still) draw(); });
+  addEventListener('resize', function () { size(); if (still) draw(); });
+  if (still) draw(); else requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

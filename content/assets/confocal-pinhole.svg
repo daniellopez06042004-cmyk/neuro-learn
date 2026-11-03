@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 356" role="img">
+  <title>The confocal pinhole blocks out-of-focus light</title>
+  <desc>A thick sample sits under a lens. Light from a point on the focal plane is focused onto a pinhole in front of the detector; light from points above and below the focal plane comes to a focus at other depths, so it is spread out at the pinhole. With no pinhole (widefield), all of this light reaches the detector and the image is hazy. Then the pinhole slides in: the out-of-focus light is blocked at the pinhole, only the in-focus light reaches the detector, and the image becomes crisp. The crisp confocal image is held at the end.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--bad-1:color-mix(in srgb,var(--bad) 22%,var(--surface));--glass:color-mix(in srgb,var(--track) 8%,var(--surface-2));--plate:color-mix(in srgb,var(--muted) 70%,var(--surface));--img:color-mix(in srgb,var(--text) 6%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:15px;font-weight:600;fill:var(--text);}
+    .sample{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2;}
+    .fp{fill:none;stroke:var(--track);stroke-width:2.5;stroke-dasharray:7 5;}
+    .op{fill:none;stroke:var(--bad);stroke-width:1.5;stroke-dasharray:4 5;opacity:.7;}
+    .cIn{fill:var(--track);fill-opacity:.26;stroke:var(--track);stroke-width:1.5;stroke-linejoin:round;}
+    .cOut{fill:var(--bad);fill-opacity:.13;stroke:var(--bad);stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:5 3;}
+    .srcIn{fill:var(--track);stroke:var(--surface);stroke-width:2;}
+    .srcOut{fill:var(--bad);stroke:var(--surface);stroke-width:2;}
+    .lens{fill:var(--glass);fill-opacity:.9;stroke:var(--line-strong);stroke-width:2;}
+    .det{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
+    .plate{fill:var(--plate);stroke:var(--muted);stroke-width:1.5;}
+    .x{fill:none;stroke:var(--bad);stroke-width:3;stroke-linecap:round;}
+    .frame{fill:var(--img);stroke:var(--line-strong);stroke-width:2;}
+    .ax{fill:none;stroke:var(--track);stroke-width:3;stroke-linecap:round;}
+    .cell{fill:var(--track);}
+    .haze{fill:var(--bad);opacity:.42;}
+    /* beats: 1 widefield, every plane reaches the detector, hazy image · 2 the pinhole slides in and blocks the out-of-focus light · 3 the image turns crisp · 4 hold */
+    .pin{opacity:0;animation:pin 9s ease-in-out infinite;}
+    .gone{animation:gone 9s ease-in-out infinite;}
+    .blk{opacity:0;animation:blk 9s ease-in-out infinite;}
+    .wf{animation:wf 9s ease-in-out infinite;}
+    .cf{opacity:0;animation:cf 9s ease-in-out infinite;}
+    @keyframes pin{0%,26%{opacity:0;transform:translateY(-14px)}38%,94%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-14px)}}
+    @keyframes gone{0%,30%{opacity:1}38%,94%{opacity:0}100%{opacity:1}}
+    @keyframes blk{0%,34%{opacity:0}42%,94%{opacity:1}100%{opacity:0}}
+    @keyframes wf{0%,42%{opacity:1}54%,94%{opacity:0}100%{opacity:1}}
+    @keyframes cf{0%,42%{opacity:0}54%,94%{opacity:1}100%{opacity:0}}
+    .wfT{animation:wfT 9s ease-in-out infinite;}
+    .cfT{opacity:0;animation:cfT 9s ease-in-out infinite;}
+    @keyframes wfT{0%,40%{opacity:1}46%,96%{opacity:0}100%{opacity:1}}
+    @keyframes cfT{0%,47%{opacity:0}53%,93%{opacity:1}96%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){
+      .pin{animation:none;opacity:1;transform:none}
+      .gone{animation:none;opacity:0}
+      .blk{animation:none;opacity:1}
+      .wf{animation:none;opacity:0}
+      .cf{animation:none;opacity:1}
+      .wfT{animation:none;opacity:0}
+      .cfT{animation:none;opacity:1}
+    }
+  </style>
+  <defs>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2"/></filter>
+    <filter id="fog" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="11"/></filter>
+    <clipPath id="imgclip"><rect x="0" y="0" width="124" height="124" rx="10"/></clipPath>
+  </defs>
+
+  <!-- thick sample with three planes: above, at and below focus -->
+  <rect class="sample" x="28" y="254" width="168" height="88" rx="10"/>
+  <path class="op" d="M32 274 H192 M32 326 H192"/>
+  <path class="fp" d="M30 300 H194"/>
+
+  <!-- light cones: sample to lens -->
+  <path class="cOut" d="M80 274 L52 190 L172 190 Z"/>
+  <path class="cOut" d="M146 326 L52 190 L172 190 Z"/>
+  <path class="cIn" d="M112 300 L52 190 L172 190 Z"/>
+  <!-- lens to the pinhole plane: in-focus light converges on the pinhole, the rest is spread out there -->
+  <path class="cOut" d="M52 190 L172 190 L163.7 96 L131.8 96 Z"/>
+  <path class="cOut" d="M52 190 L172 190 L91.8 109 Z M91.8 109 L98.2 96 L79 96 Z"/>
+  <path class="cIn" d="M52 190 L172 190 L112 96 Z"/>
+  <!-- beyond the pinhole plane: out-of-focus light only gets through while there is no pinhole -->
+  <g class="gone">
+    <path class="cOut" d="M131.8 96 L163.7 96 L162 76 L148.8 76 Z"/>
+    <path class="cOut" d="M79 96 L98.2 96 L108 76 L59.2 76 Z"/>
+  </g>
+  <path class="cIn" d="M112 96 L124.8 76 L99.2 76 Z"/>
+
+  <path class="lens" d="M28 190 Q112 168 196 190 Q112 212 28 190 Z"/>
+  <circle class="srcOut" cx="80" cy="274" r="5.5"/>
+  <circle class="srcOut" cx="146" cy="326" r="5.5"/>
+  <circle class="srcIn" cx="112" cy="300" r="6"/>
+  <text x="202" y="279" style="fill:var(--bad)">out of focus</text>
+  <text x="202" y="305" style="fill:var(--track)">focal plane</text>
+
+  <!-- detector -->
+  <rect class="det" x="44" y="52" width="136" height="24" rx="5"/>
+  <text x="112" y="42" text-anchor="middle">detector</text>
+
+  <!-- pinhole plate, conjugate to the focal plane -->
+  <g class="pin">
+    <rect class="plate" x="38" y="91" width="68" height="10" rx="2"/>
+    <rect class="plate" x="118" y="91" width="68" height="10" rx="2"/>
+    <text x="192" y="101">pinhole</text>
+  </g>
+  <g class="blk">
+    <path class="x" d="M83 80 L93 88 M93 80 L83 88"/>
+    <path class="x" d="M142 80 L152 88 M152 80 L142 88"/>
+  </g>
+
+  <!-- the image the detector builds -->
+  <path d="M186 60 C246 54 282 66 296 98" style="fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round"/>
+  <path d="M288 92 L297 102 L301 89" style="fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <text class="wfT" x="284" y="124" text-anchor="middle">widefield · hazy</text>
+  <text class="cfT" x="284" y="124" text-anchor="middle" style="fill:var(--track)">confocal · crisp</text>
+  <g transform="translate(222 132)">
+    <rect class="frame" x="0" y="0" width="124" height="124" rx="10"/>
+    <g clip-path="url(#imgclip)">
+      <g class="wf">
+        <g filter="url(#fog)"><ellipse class="haze" cx="40" cy="44" rx="34" ry="26"/><ellipse class="haze" cx="88" cy="86" rx="34" ry="28"/><ellipse class="haze" cx="78" cy="30" rx="22" ry="16"/></g>
+        <g filter="url(#soft)" style="opacity:.75">
+          <path class="ax" d="M-4 96 C30 84 50 60 74 54 S112 40 130 22"/>
+          <path class="ax" d="M10 -4 C22 30 44 56 60 84 S76 116 70 130"/>
+          <path class="ax" d="M128 104 C104 98 92 88 84 70"/>
+          <circle class="cell" cx="38" cy="30" r="6"/><circle class="cell" cx="96" cy="100" r="6"/><circle class="cell" cx="102" cy="58" r="5"/>
+        </g>
+      </g>
+      <g class="cf">
+        <path class="ax" d="M-4 96 C30 84 50 60 74 54 S112 40 130 22"/>
+        <path class="ax" d="M10 -4 C22 30 44 56 60 84 S76 116 70 130"/>
+        <path class="ax" d="M128 104 C104 98 92 88 84 70"/>
+        <circle class="cell" cx="38" cy="30" r="6"/><circle class="cell" cx="96" cy="100" r="6"/><circle class="cell" cx="102" cy="58" r="5"/>
+      </g>
+    </g>
+  </g>
+</svg>

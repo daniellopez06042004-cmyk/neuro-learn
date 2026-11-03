@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Use the plumbing that's already there",
       "body": "To fix a whole brain evenly, dropping it in PFA isn't enough — the outside fixes hours before the core. **[[perfusion|Transcardial perfusion]]** pushes fixative through the animal's own blood vessels: first cold PBS to flush out blood, then PFA, reaching every capillary — brain, **[[DRG]]**, **[[colon]]** — at once.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/perfusion.svg",
+        "alt": "Schematic of the heart with vessels to the brain, a DRG beside the spinal cord, and the colon. Blood fills the vessels, a needle goes into the left ventricle, PBS from bottle 1 flushes the blood out, then PFA from bottle 2 fills the same vessels and the brain, DRG and colon end up fixed (hatched).",
+        "caption": "PBS clears the blood first, then PFA fixes every organ through the clean vessels at once."
+      }
     },
     {
       "type": "order",

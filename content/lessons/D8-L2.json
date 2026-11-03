@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "The unit of physiology",
       "body": "A **[[reflex arc]]** is the shortest sense-and-respond circuit: a **receptor** → an **[[afferent]]** (sensory) neuron → integration in the CNS → an **[[efferent]]** (motor) neuron → an **[[effector]]** (muscle or gland). The knee-jerk is the classic monosynaptic example.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/reflex-arc.svg",
+        "alt": "Knee-jerk reflex: a hammer taps the patellar tendon and a muscle spindle in the quadriceps fires. The signal runs up the afferent (sensory) fibre, past its pseudounipolar cell body in the DRG, into the dorsal spinal cord and straight onto a motor neuron in the ventral horn through a single synapse. The motor neuron fires, the efferent (motor) axon carries the command to the quadriceps, and the muscle contracts. The animation ends with the lower leg kicked forward.",
+        "caption": "Receptor, afferent, one synapse in the cord, efferent, effector: the shortest sense-and-respond loop."
+      }
     },
     {
       "type": "order",

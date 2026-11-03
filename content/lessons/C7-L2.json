@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Two antibodies, one signal",
       "body": "In indirect **[[immunofluorescence|IF]]**, an unlabeled **[[primary antibody]]** binds the target. Then a fluorescent **[[secondary antibody]]** binds the primary. The secondary is raised against the primary's *species* (e.g. anti-rabbit), so one labeled secondary works for any rabbit primary.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/indirect-if.svg",
+        "alt": "A target protein sits in the membrane with a notch-shaped epitope. An unlabeled rabbit primary antibody, drawn as an inverted Y, seats one Fab arm tip in the notch with its Fc stem pointing up; then three fluorescent anti-rabbit secondaries dock their arm tips onto that one primary's stem and their dyes glow.",
+        "caption": "The primary finds the target; several labeled secondaries pile onto it and carry the light."
+      }
     },
     {
       "type": "order",

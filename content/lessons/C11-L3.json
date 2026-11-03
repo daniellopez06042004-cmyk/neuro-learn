@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Responders and a final check",
       "body": "A calcium experiment ends by asking: which neurons responded to each stimulus, and are the quiet ones actually alive? A high-**KCl** pulse at the end depolarizes *every* healthy neuron — a positive control that a non-responder was silent, not dead.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "interactive",
+        "src": "assets/calcium-imaging-model.html",
+        "alt": "Five cultured DRG neurons expressing GCaMP, each with a ΔF/F trace. Capsaicin brightens only the two TRPV1-positive neurons. KCl then brightens every healthy neuron. One neuron responds to neither, so it is excluded as unhealthy.",
+        "caption": "Capsaicin finds the responders; KCl checks the quiet ones are alive."
+      }
     },
     {
       "type": "troubleshoot",

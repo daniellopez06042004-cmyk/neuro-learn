@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Jumping down the axon",
       "body": "**[[myelin|Myelin]]** is an insulating wrap broken by gaps, the **[[node of Ranvier|nodes of Ranvier]]**. The [[action potential]] regenerates only at the nodes and 'jumps' between them — **[[saltatory conduction]]** — which is far faster than creeping along a bare membrane.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/saltatory-conduction.svg",
+        "alt": "Two axons of the same size fire from the same start. On the myelinated axon the spike regenerates only at the nodes of Ranvier and jumps from node to node to the far end (✓ arrives first). On the unmyelinated axon it creeps along the bare membrane and is still less than halfway along when the animation holds.",
+        "caption": "Jumping node to node is far faster than creeping along bare membrane."
+      }
     },
     {
       "type": "mcq",

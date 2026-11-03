@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 354" role="img">
+  <title>Bulk averages; single-cell sees each cell</title>
+  <desc>A tissue of cells in which most are off and a rare few are bright. Bulk RNA-seq grinds the tissue up and reports one blended average, a short bar that hides the bright subset. Single-cell RNA-seq gives one dot per cell: most cells sit low and a rare subset sits high, two separate groups, and the bulk average falls between them where no cell actually is. The end state shows both panels side by side.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--mix:color-mix(in srgb,var(--track) 40%,var(--n2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:15px;font-weight:600;fill:var(--text);}
+    .ax-l{font-size:14px;font-weight:400;fill:var(--muted);}
+    .tissue{fill:var(--tissue);stroke:var(--line-strong);stroke-width:2;}
+    .off path{fill:var(--n1);stroke:var(--line-strong);stroke-width:1.5;}
+    .off .nu{fill:var(--n2);}
+    .on path{fill:var(--track);stroke:var(--track);stroke-width:2;}
+    .on .nu{fill:var(--track-1);}
+    .panel{fill:var(--surface-2);stroke:var(--line);stroke-width:1.5;}
+    .axis{fill:none;stroke:var(--line-strong);stroke-width:2;stroke-linecap:round;}
+    .arw{fill:none;stroke:var(--line-strong);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+    .bar{fill:var(--mix);stroke:var(--muted);stroke-width:1.5;}
+    .avg{fill:none;stroke:var(--text);stroke-width:2;stroke-dasharray:6 4;}
+    .dOff{fill:var(--n2);stroke:var(--line-strong);stroke-width:1.5;}
+    .dOn{fill:var(--track);stroke:var(--surface);stroke-width:1.5;}
+    /* beats: 1 the tissue, mostly off with a rare bright subset · 2 bulk: one blended average bar · 3 single-cell: one dot per cell, two groups, the average sits between them · 4 hold */
+    .grow{transform-box:fill-box;transform-origin:50% 100%;animation:grow 9s ease-in-out infinite;}
+    .b2{opacity:0;animation:b2 9s ease-in-out infinite;}
+    .b3{opacity:0;animation:b3 9s ease-in-out infinite;}
+    .d1{opacity:0;animation:d1 9s ease-out infinite;}
+    .d2{opacity:0;animation:d2 9s ease-out infinite;}
+    .hi{opacity:0;animation:hi 9s ease-out infinite;}
+    @keyframes grow{0%,18%{transform:scaleY(0)}32%,95%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+    @keyframes b2{0%,26%{opacity:0}34%,95%{opacity:1}100%{opacity:0}}
+    @keyframes d1{0%,40%{opacity:0;transform:translateY(-14px)}48%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+    @keyframes d2{0%,44%{opacity:0;transform:translateY(-14px)}52%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+    @keyframes hi{0%,48%{opacity:0;transform:translateY(-14px)}56%,95%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+    @keyframes b3{0%,56%{opacity:0}64%,95%{opacity:1}100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){
+      .grow{animation:none;transform:none}
+      .b2,.b3,.d1,.d2,.hi{animation:none;opacity:1;transform:none}
+    }
+  </style>
+
+  <!-- tissue: mostly-off cells with a rare bright subset -->
+  <rect class="tissue" x="14" y="14" width="332" height="118" rx="18"/>
+  <g class="off"><path d="M47.9 34.1Q49.6 38.4 46.9 42.2Q44.3 46.1 39.2 47.2Q34.1 48.3 29.3 46.7Q24.4 45.0 21.3 41.5Q18.2 37.9 19.0 33.8Q19.8 29.6 23.4 26.5Q27.0 23.4 32.3 24.0Q37.6 24.6 41.9 27.2Q46.2 29.8 47.9 34.1Z"/><circle class="nu" cx="30.7" cy="36.0" r="4.2"/><path d="M86.2 31.7Q87.9 35.5 87.0 39.7Q86.0 44.0 81.1 46.1Q76.2 48.3 71.1 47.0Q66.0 45.6 62.4 42.6Q58.9 39.5 59.0 35.3Q59.1 31.0 62.3 27.6Q65.6 24.2 71.0 23.3Q76.4 22.4 80.5 25.2Q84.5 28.0 86.2 31.7Z"/><circle class="nu" cx="70.7" cy="35.1" r="4.2"/><path d="M126.4 30.4Q129.0 34.3 127.4 38.8Q125.7 43.2 120.7 44.9Q115.6 46.7 110.7 46.4Q105.9 46.1 101.6 43.7Q97.2 41.2 97.0 36.7Q96.8 32.2 100.1 28.6Q103.5 25.0 108.7 24.3Q114.0 23.5 118.9 25.0Q123.7 26.5 126.4 30.4Z"/><circle class="nu" cx="114.2" cy="34.0" r="4.2"/><path d="M166.3 41.0Q166.2 45.2 163.2 48.2Q160.2 51.2 155.1 51.0Q150.1 50.7 145.5 48.0Q141.0 45.3 139.3 40.8Q137.6 36.3 140.0 32.8Q142.5 29.4 146.6 28.1Q150.8 26.8 156.0 27.5Q161.1 28.2 163.8 32.5Q166.5 36.8 166.3 41.0Z"/><circle class="nu" cx="153.4" cy="38.4" r="4.2"/><path d="M210.1 36.1Q209.7 40.5 206.7 43.3Q203.6 46.1 198.9 46.8Q194.1 47.5 189.8 44.9Q185.5 42.2 183.7 38.2Q181.9 34.3 183.0 30.3Q184.0 26.3 188.1 23.9Q192.2 21.5 197.6 22.8Q203.1 24.1 206.8 27.9Q210.5 31.8 210.1 36.1Z"/><circle class="nu" cx="194.6" cy="33.9" r="4.2"/><path d="M288.7 34.0Q290.9 38.0 288.8 42.2Q286.7 46.3 281.7 48.0Q276.7 49.6 271.7 48.4Q266.7 47.2 263.9 43.9Q261.1 40.5 260.5 36.3Q259.8 32.1 263.6 29.1Q267.4 26.1 272.7 25.3Q278.0 24.5 282.3 27.2Q286.5 29.9 288.7 34.0Z"/><circle class="nu" cx="271.9" cy="35.5" r="4.2"/><path d="M325.5 34.5Q327.8 38.0 326.1 41.9Q324.5 45.8 320.5 48.6Q316.5 51.5 311.5 50.5Q306.4 49.6 302.5 47.0Q298.5 44.4 298.4 40.2Q298.3 35.9 301.7 32.8Q305.0 29.7 309.8 28.1Q314.6 26.6 318.9 28.8Q323.1 30.9 325.5 34.5Z"/><circle class="nu" cx="311.7" cy="39.4" r="4.2"/><path d="M56.2 71.9Q56.8 76.4 53.8 79.6Q50.7 82.8 45.8 83.7Q40.8 84.5 36.3 82.0Q31.8 79.5 28.8 75.6Q25.8 71.7 27.1 67.3Q28.4 63.0 32.9 60.9Q37.4 58.8 42.5 60.2Q47.6 61.5 51.6 64.5Q55.6 67.5 56.2 71.9Z"/><circle class="nu" cx="43.0" cy="70.8" r="4.2"/><path d="M137.4 65.4Q139.3 69.4 138.0 73.7Q136.8 77.9 132.2 80.5Q127.7 83.1 122.6 82.3Q117.5 81.4 114.3 78.5Q111.0 75.7 110.2 71.7Q109.4 67.7 112.5 64.3Q115.7 61.0 120.7 59.2Q125.7 57.5 130.6 59.5Q135.5 61.4 137.4 65.4Z"/><circle class="nu" cx="125.5" cy="69.3" r="4.2"/><path d="M176.1 68.4Q176.6 72.7 174.6 76.6Q172.7 80.5 167.6 81.9Q162.6 83.2 157.2 81.7Q151.9 80.2 149.8 76.1Q147.7 71.9 148.4 67.9Q149.0 63.9 152.7 61.5Q156.5 59.0 161.5 59.1Q166.4 59.1 171.0 61.6Q175.6 64.1 176.1 68.4Z"/><circle class="nu" cx="163.5" cy="70.5" r="4.2"/><path d="M216.9 70.6Q217.6 74.7 215.8 78.6Q214.0 82.4 208.9 83.6Q203.8 84.8 198.4 83.3Q193.0 81.7 191.0 77.5Q189.0 73.2 189.8 69.2Q190.6 65.2 194.2 62.2Q197.8 59.2 203.2 59.6Q208.7 60.0 212.5 63.3Q216.2 66.5 216.9 70.6Z"/><circle class="nu" cx="204.1" cy="72.2" r="4.2"/><path d="M257.0 77.5Q257.0 82.3 252.7 84.3Q248.4 86.3 243.6 87.1Q238.8 87.8 234.9 84.5Q230.9 81.1 228.2 76.8Q225.5 72.4 228.5 69.1Q231.5 65.8 235.4 63.4Q239.3 61.0 244.6 62.9Q249.8 64.8 253.4 68.8Q256.9 72.8 257.0 77.5Z"/><circle class="nu" cx="241.7" cy="75.7" r="4.2"/><path d="M293.6 72.5Q295.2 76.4 293.0 80.1Q290.8 83.9 285.9 85.2Q281.1 86.6 276.1 85.1Q271.1 83.7 268.3 80.0Q265.5 76.3 265.8 72.0Q266.1 67.7 270.2 65.3Q274.4 62.9 279.6 62.5Q284.8 62.1 288.4 65.3Q292.0 68.5 293.6 72.5Z"/><circle class="nu" cx="283.2" cy="75.5" r="4.2"/><path d="M334.8 70.9Q336.5 74.9 334.3 78.9Q332.1 82.8 326.9 84.4Q321.8 85.9 316.9 83.6Q312.0 81.3 308.7 77.8Q305.3 74.2 306.2 69.8Q307.0 65.4 311.1 62.7Q315.1 60.0 320.3 60.7Q325.5 61.5 329.3 64.2Q333.1 66.9 334.8 70.9Z"/><circle class="nu" cx="318.3" cy="72.2" r="4.2"/><path d="M43.9 95.9Q47.7 98.6 47.5 103.3Q47.3 108.0 44.0 112.1Q40.7 116.2 35.4 118.0Q30.1 119.8 26.0 117.6Q21.8 115.4 19.6 111.7Q17.3 108.1 18.8 103.4Q20.2 98.7 24.9 95.7Q29.7 92.6 34.9 92.9Q40.1 93.2 43.9 95.9Z"/><circle class="nu" cx="34.3" cy="104.2" r="4.2"/><path d="M86.8 108.4Q86.6 112.6 84.0 116.1Q81.4 119.5 76.2 119.8Q71.0 120.1 66.4 117.3Q61.9 114.6 60.3 110.4Q58.6 106.1 59.5 101.8Q60.3 97.6 64.9 95.7Q69.5 93.7 74.7 95.3Q80.0 96.8 83.5 100.5Q87.0 104.2 86.8 108.4Z"/><circle class="nu" cx="70.5" cy="107.1" r="4.2"/><path d="M129.5 110.8Q130.1 115.6 126.3 118.2Q122.4 120.9 117.7 121.3Q113.0 121.8 107.7 120.3Q102.5 118.9 101.2 114.3Q99.9 109.8 101.2 106.0Q102.6 102.3 106.3 99.8Q110.1 97.2 115.3 98.5Q120.4 99.8 124.7 102.9Q129.0 106.1 129.5 110.8Z"/><circle class="nu" cx="116.4" cy="109.4" r="4.2"/><path d="M168.0 108.9Q169.1 113.4 165.7 116.7Q162.3 120.0 156.8 120.2Q151.4 120.5 147.3 117.1Q143.3 113.7 140.8 109.7Q138.3 105.6 140.1 101.7Q141.9 97.9 146.2 96.0Q150.5 94.1 155.4 95.8Q160.3 97.4 163.6 100.9Q166.9 104.3 168.0 108.9Z"/><circle class="nu" cx="156.4" cy="105.8" r="4.2"/><path d="M204.8 99.2Q208.2 102.2 207.7 106.7Q207.1 111.3 202.7 114.1Q198.2 116.9 192.9 118.5Q187.7 120.0 184.1 117.0Q180.5 113.9 178.8 110.0Q177.1 106.1 180.1 102.4Q183.1 98.6 187.6 95.9Q192.0 93.2 196.7 94.7Q201.5 96.2 204.8 99.2Z"/><circle class="nu" cx="192.6" cy="106.7" r="4.2"/><path d="M246.0 100.1Q248.2 103.8 247.3 108.2Q246.5 112.6 241.7 115.2Q237.0 117.8 231.8 116.8Q226.6 115.9 222.2 113.3Q217.9 110.8 217.9 106.3Q217.8 101.9 221.5 98.8Q225.2 95.7 230.0 93.6Q234.9 91.5 239.3 94.0Q243.7 96.4 246.0 100.1Z"/><circle class="nu" cx="232.3" cy="105.3" r="4.2"/><path d="M327.1 110.2Q327.5 114.8 324.6 118.3Q321.7 121.8 316.5 122.9Q311.3 124.0 306.8 121.1Q302.3 118.2 300.3 114.3Q298.2 110.5 298.4 106.1Q298.7 101.8 303.3 100.0Q307.9 98.2 313.0 98.9Q318.1 99.6 322.3 102.6Q326.6 105.7 327.1 110.2Z"/><circle class="nu" cx="314.5" cy="111.6" r="4.2"/></g>
+  <g class="on"><path d="M247.4 37.2Q247.5 41.8 244.6 45.2Q241.6 48.7 236.4 49.4Q231.1 50.1 226.0 47.7Q220.9 45.4 218.8 40.9Q216.6 36.4 217.8 32.0Q219.0 27.6 223.9 26.4Q228.8 25.2 233.8 25.6Q238.8 26.1 243.1 29.3Q247.4 32.6 247.4 37.2Z"/><circle class="nu" cx="230.6" cy="37.2" r="4.2"/><path d="M96.6 74.4Q96.6 78.8 93.5 81.9Q90.5 85.1 85.3 85.8Q80.1 86.5 75.7 83.4Q71.2 80.3 69.2 76.1Q67.2 71.8 68.6 67.7Q70.1 63.7 74.7 62.3Q79.2 61.0 84.3 61.8Q89.3 62.7 93.0 66.3Q96.6 70.0 96.6 74.4Z"/><circle class="nu" cx="83.7" cy="72.3" r="4.2"/><path d="M290.1 105.2Q292.0 109.4 289.5 113.2Q286.9 116.9 282.6 118.9Q278.2 120.8 273.0 120.4Q267.8 120.0 265.1 116.5Q262.3 112.9 261.5 108.6Q260.6 104.4 264.2 101.0Q267.9 97.7 273.2 97.8Q278.5 97.9 283.3 99.5Q288.2 101.0 290.1 105.2Z"/><circle class="nu" cx="276.5" cy="109.8" r="4.2"/></g>
+
+  <path class="arw" d="M92 138 V152 M85 146 L92 153 L99 146"/>
+  <path class="arw" d="M266 138 V152 M259 146 L266 153 L273 146"/>
+  <text x="92" y="172" text-anchor="middle">bulk RNA-seq</text>
+  <text x="266" y="172" text-anchor="middle">single-cell RNA-seq</text>
+
+  <!-- bulk: one blended number -->
+  <rect class="panel" x="14" y="182" width="156" height="160" rx="12"/>
+  <text class="ax-l" transform="translate(34 262) rotate(-90)" text-anchor="middle">expression</text>
+  <path class="axis" d="M46 196 V326 H158"/>
+  <rect class="bar grow" x="70" y="303.6" width="48" height="22.4" rx="3"/>
+  <g class="b2">
+    <path class="avg" d="M50 303.6 H166"/>
+    <text x="94" y="294" text-anchor="middle">average</text>
+  </g>
+
+  <!-- single-cell: one dot per cell -->
+  <rect class="panel" x="186" y="182" width="160" height="160" rx="12"/>
+  <path class="axis" d="M200 196 V326 H338"/>
+  <g class="b3"><path class="avg" d="M190 303.6 H342"/></g>
+  <g class="d1"><circle class="dOff" cx="212.0" cy="320.7" r="5"/></g><g class="d2"><circle class="dOff" cx="223.0" cy="320.8" r="5"/></g><g class="d1"><circle class="dOff" cx="234.0" cy="320.0" r="5"/></g><g class="d2"><circle class="dOff" cx="245.0" cy="321.3" r="5"/></g><g class="d1"><circle class="dOff" cx="256.0" cy="319.9" r="5"/></g><g class="d2"><circle class="dOff" cx="267.0" cy="320.0" r="5"/></g><g class="d1"><circle class="dOff" cx="278.0" cy="320.3" r="5"/></g><g class="d2"><circle class="dOff" cx="289.0" cy="320.2" r="5"/></g><g class="d1"><circle class="dOff" cx="300.0" cy="320.6" r="5"/></g><g class="d2"><circle class="dOff" cx="311.0" cy="319.9" r="5"/></g><g class="d1"><circle class="dOff" cx="322.0" cy="319.8" r="5"/></g><g class="d2"><circle class="dOff" cx="217.5" cy="311.2" r="5"/></g><g class="d1"><circle class="dOff" cx="228.5" cy="311.0" r="5"/></g><g class="d2"><circle class="dOff" cx="239.5" cy="311.7" r="5"/></g><g class="d1"><circle class="dOff" cx="250.5" cy="310.9" r="5"/></g><g class="d2"><circle class="dOff" cx="261.5" cy="312.9" r="5"/></g><g class="d1"><circle class="dOff" cx="272.5" cy="312.3" r="5"/></g><g class="d2"><circle class="dOff" cx="283.5" cy="311.2" r="5"/></g><g class="d1"><circle class="dOff" cx="294.5" cy="311.4" r="5"/></g><g class="d2"><circle class="dOff" cx="305.5" cy="311.6" r="5"/></g><g class="d1"><circle class="dOff" cx="316.5" cy="311.7" r="5"/></g>
+  <g class="hi"><circle class="dOn" cx="220" cy="214" r="5.5"/><circle class="dOn" cx="236" cy="222" r="5.5"/><circle class="dOn" cx="252" cy="210" r="5.5"/></g>
+  <text class="b3" x="236" y="200" text-anchor="middle" style="fill:var(--track)">rare subset</text>
+</svg>

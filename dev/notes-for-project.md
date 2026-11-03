@@ -1,3 +1,26 @@
+### 2026-11-02 (night): your starred visual ideas are built (17), please copy 17 visual fields
+
+All 17 ★ items from `VISUAL-IDEAS-C6-C12.md` and `VISUAL-IDEAS-D4-D8.md` are live. **The files are already in your `content/assets/`.** Please copy the `visual` field from `app/content/lessons/` into your copy of each lesson below, or the next import will drop them. The simplest way is to copy the whole lesson file again: none of these lessons changed in any other way since the review.
+
+**4 live models (`interactive`), computed as you use them:**
+- `C10-L1` s1 · `qpcr-model.html`: amplification curves, doubling each cycle up to a plateau. A slider sets how much less sample B starts with (Ct 20 vs 25 at 1/32, as in s2). Labelled illustrative.
+- `C9-L4` s1 · `threshold-count-model.html`: two simulated images with the same cell brightnesses. "One threshold" keeps the counts close; "One per group" lets you manufacture a big "effect".
+- `C11-L3` s1 · `calcium-imaging-model.html`: five GCaMP neurons (two TRPV1+, two TRPV1−, one unhealthy). Capsaicin, then KCl, then each cell is labelled. **I put it on C11-L3, not C11-L2:** on L2 it would show the answer to s3 (capsaicin → only TRPV1+ brighten) two steps early.
+- `D7-L2` s1 · `glucose-loop-model.html`: meal → insulin, fast → glucagon, and a "Hormones off" switch that shows glucose drifting with no feedback. Unitless, labelled illustrative.
+
+**13 diagrams:** `C6-L2` s1 perfusion · `C7-L2` s1 indirect-if · `C7-L4` **s1** antibody-ko-validation · `C8-L2` s1 rnascope-zz · `C9-L1` s1 confocal-pinhole · `C12-L1` s1 bulk-vs-single-cell · `D4-L1` s1 nerve-cross-section · `D4-L2` s1 saltatory-conduction · `D4-L4` **s1** receptive-fields · `D5-L2` s1 adequate-stimulus · `D5-L3` s1 referred-pain · `D8-L1` s1 negative-feedback · `D8-L2` s1 reflex-arc.
+- **Two hosts moved:** the KO panel is on C7-L4 s1 (the rule), not s2 (s2 asks about a KO that still stains, so the picture would half-answer it). The receptive fields are on D4-L4 s1 (two-point discrimination), not D4-L3 (which defines the sensory unit).
+- **PFA is drawn in track blue, not amber,** because amber and the blood colour look alike in dark mode.
+
+**Things in the lessons worth a look:**
+1. **`C6-L2`: no outflow cut.** A perfusion needs one (usually the right atrium) or the fluid has nowhere to go. The lesson never mentions it, so the drawing leaves it out. Consider adding "cut the right atrium" to the s2 order step; I'll add it to the drawing if you do.
+2. **`C8-L2`:** s1 says "a single probe" but the s3 variant says "One ZZ probe", which could read as a whole pair. The drawing says "lone probe". Please make s3 match.
+3. **`D5-L3`:** the drawing shows only the arm referral. The heart and chest stay unlit, so the arm reads as the referred site. The s2 variant asks "besides the chest", so chest pain is implied there. Tell me if you'd like the chest lit too.
+4. **`D5-L2` s1** still says cutting or burning "barely registers" flatly, while the reviewed s2 variant is softer. The drawing uses "barely registers" (a single small blip, not zero), which fits both.
+5. **`C12-L1`:** the drawing's rare subset is 3 of 24 cells; s2 says 5%. No number is shown, so they don't clash.
+
+**Your ◦ (nice-to-have) ideas are not built yet.** Tell me which matter most.
+
 ### 2026-11-02 (later): C6–C12 and D4–D8 are live, after an independent review (146 edits to copy)
 
 **Imported:** 44 lessons, 57 glossary terms and the 11 unit definitions. Your prereqs work as written. No new term collides with link rendering, and the checker passes. The map now places each unit under the units it depends on, so links don't cross.

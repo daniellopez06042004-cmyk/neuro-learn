@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img">
+  <title>Negative feedback: a thermostat loop</title>
+  <desc>A thermostat loop of four boxes: room temperature (the variable) feeds a sensor, the sensor feeds a controller that compares the reading with a set point, the controller drives an effector (a heater), and the heater acts on the room. The room temperature drops below the set point, the sensor detects it, the controller switches the heater on, the temperature climbs back to the set point and the heater switches off. The room temperature trace ends showing the dip and its return to the set point.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
+    svg{--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));--tissue-lo:color-mix(in srgb,#e8b4b0 16%,var(--surface-2));--tissue-hi:color-mix(in srgb,#e8b4b0 50%,var(--surface-2));--muscle:color-mix(in srgb,#e8b4b0 62%,var(--surface-2));--muscle-line:color-mix(in srgb,#e8b4b0 45%,var(--line-strong));--track-1:color-mix(in srgb,var(--track) 22%,var(--surface));--track-2:color-mix(in srgb,var(--track) 55%,var(--surface));--warn-1:color-mix(in srgb,var(--warn) 24%,var(--surface));--bad-1:color-mix(in srgb,var(--bad) 24%,var(--surface));--ok-1:color-mix(in srgb,var(--ok) 22%,var(--surface));--ok-2:color-mix(in srgb,var(--ok) 55%,var(--surface));--muted-1:color-mix(in srgb,var(--muted) 22%,var(--surface));--nuc:color-mix(in srgb,var(--muted) 55%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
+    .lbl{font-size:15px;font-weight:600;}
+    .key{font-size:16px;font-weight:700;}
+    .card{fill:var(--surface-2);stroke:var(--line);stroke-width:2;}
+    .glass{fill:var(--surface);stroke:var(--line-strong);stroke-width:2;}
+    .fluid{fill:var(--track);}
+    .col{fill:var(--track);transform-box:fill-box;transform-origin:50% 100%;}
+    .ping{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;opacity:0;}
+    .scale{fill:none;stroke:var(--line-strong);stroke-width:5;stroke-linecap:round;}
+    .sp{fill:none;stroke:var(--warn);stroke-width:3;stroke-linecap:round;}
+    .spd{fill:none;stroke:var(--warn);stroke-width:2;stroke-dasharray:5 4;}
+    .ptr{fill:var(--track);stroke:var(--track);stroke-width:1.5;stroke-linejoin:round;}
+    .fin{fill:var(--surface);stroke:var(--line-strong);stroke-width:2;}
+    .finOn{fill:var(--track-1);stroke:var(--track);stroke-width:2;}
+    .wave{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;}
+    .curve{fill:none;stroke:var(--track);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+    .cover{fill:var(--surface-2);transform-box:fill-box;transform-origin:100% 50%;}
+    .arr{fill:none;stroke:var(--line-strong);stroke-width:4;stroke-linecap:round;}
+    .arrH{fill:var(--line-strong);}
+    .lit .arr{stroke:var(--track);}
+    .lit .arrH{fill:var(--track);}
+    .lit{opacity:0;}
+    /* 10 s loop. 1.2-2.6 s temperature drops below the set point. 2.6-4.2 s the sensor detects it and the controller compares.
+       4.2-5.0 s the controller switches the heater on. 5.0-6.6 s heat brings the temperature back. 6.6-7.2 s heater off. Hold to 9.2 s. */
+    .col{animation:col 10s ease-in-out infinite;}
+    .cover{animation:cover 10s linear infinite;}
+    .curve{animation:curve 10s linear infinite;}
+    .ping{animation:ping 10s ease-out infinite;}
+    .a1{animation:a1 10s ease-in-out infinite;}
+    .a2{animation:a2 10s ease-in-out infinite;}
+    .a3{animation:a3 10s ease-in-out infinite;}
+    .a4{animation:a4 10s ease-in-out infinite;}
+    .ptrM{animation:ptr 10s ease-in-out infinite;}
+    .heat{opacity:0;animation:heat 10s ease-in-out infinite;}
+    .offT{animation:offT 10s ease-in-out infinite;}
+    @keyframes col{0%,12%{transform:scaleY(1)}26%,50%{transform:scaleY(.5)}66%,100%{transform:scaleY(1)}}
+    @keyframes cover{0%{transform:scaleX(1)}92%{transform:scaleX(0)}100%{transform:scaleX(0)}}
+    @keyframes curve{0%,92%{opacity:1}99%{opacity:0}100%{opacity:1}}
+    @keyframes ping{0%,27%{opacity:0}30%{opacity:1}38%,100%{opacity:0}}
+    @keyframes a1{0%,25%{opacity:0}28%,33%{opacity:1}38%,100%{opacity:0}}
+    @keyframes a2{0%,33%{opacity:0}36%,41%{opacity:1}46%,100%{opacity:0}}
+    @keyframes a3{0%,41%{opacity:0}44%,49%{opacity:1}54%,100%{opacity:0}}
+    @keyframes a4{0%,49%{opacity:0}52%,64%{opacity:1}70%,100%{opacity:0}}
+    @keyframes ptr{0%,36%{transform:translateX(0)}42%,52%{transform:translateX(-34px)}66%,100%{transform:translateX(0)}}
+    @keyframes heat{0%,44%{opacity:0}48%,66%{opacity:1}72%,100%{opacity:0}}
+    @keyframes offT{0%,44%{opacity:1}48%,66%{opacity:0}72%,100%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){
+      .col,.ptrM{animation:none;transform:none}
+      .cover{animation:none;transform:scaleX(0)}
+      .curve{animation:none;opacity:1}
+      .ping,.a1,.a2,.a3,.a4,.heat{animation:none;opacity:0}
+      .offT{animation:none;opacity:1}
+    }
+  </style>
+  <rect class="card" x="16" y="14" width="140" height="124" rx="14"/>
+  <rect class="card" x="204" y="14" width="140" height="124" rx="14"/>
+  <rect class="card" x="16" y="192" width="140" height="124" rx="14"/>
+  <rect class="card" x="204" y="192" width="140" height="124" rx="14"/>
+  <path class="arr" d="M86 188 V150"/><path class="arrH" d="M86 141 L94 153 H78 Z"/><path class="arr" d="M160 76 H190"/><path class="arrH" d="M199 76 L187 84 V68 Z"/><path class="arr" d="M274 142 V180"/><path class="arrH" d="M274 189 L266 177 H282 Z"/><path class="arr" d="M200 254 H170"/><path class="arrH" d="M161 254 L173 246 V262 Z"/>
+  <g class="lit a1"><path class="arr" d="M86 188 V150"/><path class="arrH" d="M86 141 L94 153 H78 Z"/></g>
+  <g class="lit a2"><path class="arr" d="M160 76 H190"/><path class="arrH" d="M199 76 L187 84 V68 Z"/></g>
+  <g class="lit a3"><path class="arr" d="M274 142 V180"/><path class="arrH" d="M274 189 L266 177 H282 Z"/></g>
+  <g class="lit a4"><path class="arr" d="M200 254 H170"/><path class="arrH" d="M161 254 L173 246 V262 Z"/></g>
+  <text class="lbl" x="86" y="40" text-anchor="middle">sensor</text>
+  <rect class="glass" x="78" y="52" width="16" height="62" rx="8"/><circle class="glass" cx="86" cy="114" r="12"/>
+  <circle class="fluid" cx="86" cy="114" r="8"/><rect class="col" x="83" y="62" width="6" height="50" rx="3"/>
+  <g class="ping"><path d="M106 72 Q112 80 106 88"/><path d="M113 66 Q122 80 113 94"/><path d="M120 60 Q132 80 120 100"/></g>
+  <text class="lbl" x="274" y="40" text-anchor="middle">controller</text>
+  <path class="scale" d="M228 94 H320"/>
+  <path class="sp" d="M274 84 V104"/>
+  <g class="ptrM"><path class="ptr" d="M266 66 H282 L274 78 Z"/></g>
+  <text class="lbl" x="274" y="126" text-anchor="middle" style="fill:var(--warn)">set point</text>
+  <text class="lbl" x="274" y="218" text-anchor="middle">effector</text>
+  <g class="fin"><rect x="240" y="246" width="12" height="42" rx="6"/><rect x="256" y="246" width="12" height="42" rx="6"/><rect x="272" y="246" width="12" height="42" rx="6"/><rect x="288" y="246" width="12" height="42" rx="6"/><rect x="304" y="246" width="12" height="42" rx="6"/></g>
+  <g class="heat"><g class="finOn"><rect x="240" y="246" width="12" height="42" rx="6"/><rect x="256" y="246" width="12" height="42" rx="6"/><rect x="272" y="246" width="12" height="42" rx="6"/><rect x="288" y="246" width="12" height="42" rx="6"/><rect x="304" y="246" width="12" height="42" rx="6"/></g><path class="wave" d="M252 240 q-4 -4 0 -8 q4 -4 0 -8"/><path class="wave" d="M274 240 q-4 -4 0 -8 q4 -4 0 -8"/><path class="wave" d="M296 240 q-4 -4 0 -8 q4 -4 0 -8"/></g>
+  <g class="offT"><text class="lbl" x="274" y="308" text-anchor="middle" style="fill:var(--muted)">heater off</text></g>
+  <g class="heat"><text class="key" x="274" y="308" text-anchor="middle" style="fill:var(--track)">heater ON</text></g>
+  <text class="lbl" x="86" y="218" text-anchor="middle">room temp</text>
+  <path class="curve" d="M30 252 H44.6 C52 252 54 290 62 290 H91 C99 290 102 252 110 252 H142"/>
+  <rect class="cover" x="28" y="228" width="116" height="80"/>
+  <path class="spd" d="M30 252 H142"/>
+</svg>

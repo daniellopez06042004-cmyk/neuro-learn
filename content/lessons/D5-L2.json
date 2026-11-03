@@ -16,7 +16,13 @@
       "id": "s1",
       "title": "Stretch, not a scalpel",
       "body": "The adequate stimuli for visceral afferents aren't the same as for skin. Cutting or burning the gut wall barely registers, but **distension (stretch)**, strong contraction, inflammation and ischemia drive them hard. The lab's colon afferents are tuned to mechanical **stretch** via channels like **[[Piezo2]]**.",
-      "flag": null
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/adequate-stimulus.svg",
+        "alt": "Two strips of gut wall, each with an afferent ending in the lining and a firing readout. Top: a balloon inflates and distends the wall, the afferent endings light up and the readout shows a burst of spikes. Bottom: a scalpel slices the lining right over the endings and the readout shows a single small blip, labelled 'barely registers'.",
+        "caption": "Gut afferents fire hard to stretch, while a clean cut barely registers."
+      }
     },
     {
       "type": "mcq",
