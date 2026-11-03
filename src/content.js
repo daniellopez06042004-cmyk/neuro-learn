@@ -1,7 +1,7 @@
 // Loads course.json and every lesson it lists, validates them, and answers
 // questions like "is this unit unlocked?" that need both content and progress.
 
-import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides } from './validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides, validateQuizPool } from './validate.js';
 import { progress, settings } from './progress.js';
 
 const CONTENT = 'content/';
@@ -15,6 +15,7 @@ export const content = {
   pulse: [],           // Field Pulse papers, newest first
   glossary: new Map(), // lower-case term or alias -> { term, aliases, definition, track }
   slides: new Map(),   // unitId -> its slides.json entry (what the unit's specimen slide shows)
+  quiz: { xp: 25, questions: new Map() }, // weekly-quiz pool: question id -> question
 };
 
 export async function loadContent() {
@@ -52,6 +53,10 @@ export async function loadContent() {
   }));
   jobs.push(loadOptional('slides.json', validateSlides, (d) => {
     for (const s of d.slides) content.slides.set(s.unit, s);
+  }));
+  jobs.push(loadOptional('quiz-pool.json', (d) => validateQuizPool(d, new Set(content.units.keys())), (d) => {
+    content.quiz.xp = d.xp ?? 25;
+    for (const q of d.questions) content.quiz.questions.set(q.id, q);
   }));
   await Promise.all(jobs);
   // ?dev with no slides.json yet: preview the slide box with the sample slides.
@@ -166,6 +171,10 @@ export function dueCountForUnit(unit) {
 }
 
 export function findStep(key) {
+  if (key.startsWith('quiz:')) { // a weekly-quiz question
+    const step = content.quiz.questions.get(key.slice(5));
+    return step ? { key, lessonId: 'quiz', step, lesson: null, color: quizColor(step) } : null;
+  }
   const i = key.lastIndexOf(':');
   const lessonId = key.slice(0, i), stepId = key.slice(i + 1);
   const entry = content.lessons.get(lessonId);
@@ -174,6 +183,11 @@ export function findStep(key) {
   if (!step || step.type === 'concept') return null;
   const { track } = content.units.get(entry.unitId) || {};
   return { key, lessonId, step, lesson: entry.data, color: track?.color };
+}
+
+// A quiz question takes the colour of the first unit it draws on.
+export function quizColor(q) {
+  return content.units.get(q.needs?.[0])?.track.color || '#1D9E75';
 }
 
 export function lessonTrack(lessonId) {

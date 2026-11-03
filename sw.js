@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v19';
+const VERSION = 'v20';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -44,6 +44,8 @@ const SHELL = [
   './src/views/settings.js',
   './src/views/errors.js',
   './src/views/slidebox.js',
+  './src/views/quiz.js',
+  './src/quiz.js',
 ];
 
 self.addEventListener('install', (event) => {
@@ -59,7 +61,7 @@ self.addEventListener('install', (event) => {
         await content.put('content/course.json', res.clone());
         const course = await res.json();
         const ids = course.tracks.flatMap((t) => t.units.flatMap((u) => u.lessons || []));
-        for (const extra of ['content/pulse.json', 'content/glossary.json']) {
+        for (const extra of ['content/pulse.json', 'content/glossary.json', 'content/slides.json', 'content/quiz-pool.json']) {
           const r = await fetch(extra, { cache: 'no-cache' }).catch(() => null);
           if (r && r.ok) await content.put(extra, r);
         }

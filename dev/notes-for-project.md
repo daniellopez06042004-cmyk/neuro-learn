@@ -1,3 +1,42 @@
+### 2026-11-02 (late): the weekly quiz is live, built as a question pool (please write into `content/quiz-pool.json`)
+
+Dan liked the idea and chose a **pool** instead of fixed quizzes. QZ-1 would only have unlocked after about 60 lessons across three tracks. With a pool, the first quiz arrives after a few units.
+
+**How it works in the app:**
+- Every Monday the app builds that week's quiz: up to **6 questions Dan hasn't seen**, picked from the pool.
+- A question is eligible once **every unit in its `needs` is finished**. Questions that span two or more tracks are picked first.
+- **At least 3 eligible questions are needed.** Until then, the home screen shows a locked card ("1 of 3 ready").
+- **One try per question.** **Only missed questions go into review.** **25 xp**, once per week. A clean run gets a "Perfect run" star.
+- The card sits on the home screen above the track chips, not on any track map.
+
+**The format** (`content/quiz-pool.json`, one file; the import merges it by question `id`, and your version of a question wins):
+```json
+{ "schemaVersion": "0.1", "xp": 25, "questions": [
+  { "id": "stretch-vs-capsaicin", "needs": ["A3", "A4", "D5"], "added": "2026-11-02",
+    "type": "mcq", "difficulty": 3, "prompt": "…", "options": ["…"], "answer": [0], "explanation": "…" }
+] }
+```
+- **Each question is a normal step:** mcq, predict, order, match or troubleshoot. It can carry `variants` (used when it comes back in review), a `visual` and a `flag`. No concept cards.
+- **`id`:** a short, permanent slug. Review history is keyed on it, so never rename one.
+- **`needs`:** only the units a learner really must have finished to answer, usually 2–4. This is the unlock gate, so don't list every related unit. More needs means the question opens later.
+- **`added`** is just a record.
+- `sh dev/check.sh` now checks the pool: step rules, `needs` must be real unit ids, `[[links]]` and visuals.
+
+**I seeded the pool with your QZ-1** (both copies match: `content/quiz-pool.json` in your folder and in the app). I left `content/quizzes/QZ-1.json` alone; the app ignores that folder. Please check the `needs` I chose from your explanations:
+
+| id | needs |
+|---|---|
+| marker-to-function | C12, C8, C2, C4, C5 |
+| stretch-vs-capsaicin | A3, A4, D5 |
+| antibody-ko-clincher | C7, C8 |
+| faster-afferent | A5, D4 |
+| pancreas-silencing | C4, C5 (add D6 if pancreas anatomy is needed) |
+| afferent-limbs | D5, D8 (add the Track B unit with the inflammatory reflex once it exists) |
+
+**One wording fix:** in `stretch-vs-capsaicin` the right answer ended "with chemical sensing left intact". That echoed the capsaicin clue in the stem. It now reads "Loss of [[Piezo2]], the channel its endings use to sense stretch", parallel to the TRPV1 option.
+
+**What would help most next:** about 20–30 questions spread across the units Dan reaches first (A1–A5, C1–C5, D1–D6), so each week has fresh ones. Mostly 2–3 `needs` each, and most spanning two tracks.
+
 ### 2026-11-02 (late): papers are live, C8-L4 imported, and I synced 17 lesson files into your folder
 
 **Slide papers: live.** All 40 arrived this time and are now in `app/content/slides.json` and on the phone. The microscope's button reads "Read the paper". I checked all 18 DOIs on Crossref, and every one resolves to the cited paper.

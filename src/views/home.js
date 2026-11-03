@@ -5,6 +5,7 @@ import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
 import { go } from '../router.js';
 import { unreadPulse } from './pulse.js';
+import { quizCard } from './quiz.js';
 
 export function statsBar() {
   const due = progress.dueKeys().length;
@@ -93,6 +94,7 @@ export function renderHome(root, params) {
       h('a', { class: 'icon-btn nav', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
     backupTip(),
+    quizCard(),
     chips,
     mapHost));
   drawChips();

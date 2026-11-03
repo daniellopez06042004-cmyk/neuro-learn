@@ -3,7 +3,7 @@
 // engine; prints problems and exits non-zero if there are any.
 // Extra arguments are the lesson files on disk, so unlisted files get noticed.
 
-import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides } from '../src/validate.js';
+import { validateCourse, validateLesson, validatePulse, validateGlossary, validateSlides, validateQuizPool } from '../src/validate.js';
 
 const problems = [], notes = [];
 
@@ -104,6 +104,20 @@ if (course.missing || course.error) {
       if (s?.tissue === 'request') notes.push(`slides.json › ${s?.unit}: requests a new tissue ("${s.wish}"); draw it and add it to TISSUES.`);
     }
   }
+  // quiz-pool.json: weekly-quiz questions, each naming the units it needs.
+  const pool = readJson('content/quiz-pool.json');
+  if (pool.error) problems.push(pool.error);
+  else if (pool.data) {
+    const units = new Set((course.data.tracks || []).flatMap((t) => (t.units || []).map((u) => u.id)));
+    problems.push(...validateQuizPool(pool.data, units));
+    for (const q of pool.data.questions || []) {
+      const src = q?.visual?.src;
+      if (typeof src === 'string' && !/^(https?:)?\/\//.test(src)) { try { read(`content/${src}`); } catch { problems.push(`quiz-pool.json › ${q.id}: "${src}" isn't in content/`); } }
+    }
+    for (const m of JSON.stringify(pool.data).matchAll(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g)) {
+      if (![m[1], m[2]].filter(Boolean).some((x) => known.has(x.trim().toLowerCase()))) notes.push(`quiz-pool.json links [[${m[1]}]], but it isn't in glossary.json yet.`);
+    }
+  }
   // [[term]] links in lessons should point at glossary entries.
   for (const id of listed) {
     let text;
@@ -113,7 +127,7 @@ if (course.missing || course.error) {
       if (!sides.some((x) => known.has(x.toLowerCase()))) notes.push(`lessons/${id}.json links [[${m[1]}${m[2] ? `|${m[2]}` : ''}]], but neither side is in glossary.json yet.`);
     }
   }
-  print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json, glossary.json and slides.json.`);
+  print(`Checked course.json, ${written} lesson file${written === 1 ? '' : 's'}, pulse.json, glossary.json, slides.json and quiz-pool.json.`);
 }
 
 for (const n of notes) print(`Note: ${n}`);

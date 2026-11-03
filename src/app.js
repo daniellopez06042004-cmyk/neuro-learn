@@ -13,6 +13,7 @@ import { updateBadge } from './badge.js';
 import { renderGlossary, showTerm } from './views/glossary.js';
 import { renderPulse } from './views/pulse.js';
 import { renderSlideBox } from './views/slidebox.js';
+import { renderQuiz } from './views/quiz.js';
 
 route('/', renderHome);
 route('/unit/:id', renderUnit);
@@ -25,6 +26,7 @@ route('/progress', renderStats);
 route('/glossary', renderGlossary);
 route('/pulse', renderPulse);
 route('/slides', renderSlideBox);
+route('/quiz', renderQuiz);
 fallback(() => go('/', { replace: true }));
 
 // Glossary terms ([[term]] in lesson text) open a definition sheet anywhere,

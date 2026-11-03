@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "0.1",
+  "xp": 25,
+  "questions": [
+    {
+      "id": "marker-to-function",
+      "needs": [
+        "C12",
+        "C8",
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "added": "2026-11-02",
+      "type": "order",
+      "difficulty": 3,
+      "prompt": "Single-cell RNA-seq flags a candidate marker gene for a colon-innervating [[DRG]] subtype you want to silence. Put the path from that cluster to a functional test in order.",
+      "items": [
+        "Confirm the marker is expressed in real DRG neurons with [[RNAscope]]",
+        "Get or make a [[Cre]] line driven by that marker gene",
+        "Deliver a Cre-dependent ([[DIO]]) silencing [[hM4Di|DREADD]] by [[AAV]]",
+        "Give the actuator ([[DCZ]]) with the right controls",
+        "Read out behavior/physiology and confirm the neurons were silenced"
+      ],
+      "explanation": "A cluster is a hypothesis (C12): RNAscope grounds it in tissue (C8), a Cre line gives genetic access (C2/C3), a Cre-dependent AAV restricts the tool to those cells (C4), and only then does an actuator + readout test function (C5). Skipping validation or genetic access is where projects go wrong."
+    },
+    {
+      "id": "stretch-vs-capsaicin",
+      "needs": [
+        "A3",
+        "A4",
+        "D5"
+      ],
+      "added": "2026-11-02",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A colon afferent stops responding to balloon distension after a genetic manipulation, yet still responds normally to capsaicin. Which single change best fits?",
+      "options": [
+        "Loss of [[Piezo2]], the channel its endings use to sense stretch",
+        "Loss of [[TRPV1]], the receptor that its endings use to detect stretch",
+        "Demyelination of the afferent, which removes its response to stretch",
+        "An [[hM4Di]] DREADD was expressed and is now silencing the whole neuron"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Distension is a mechanical stimulus (D5) transduced by Piezo2 (A4); capsaicin acts through TRPV1 (A3). A still-normal capsaicin response means the neuron is alive and TRPV1 works, so the defect is mechanical — Piezo2. TRPV1 loss would kill the capsaicin response; demyelination slows conduction rather than removing one stimulus; a silencing DREADD would blunt both responses."
+    },
+    {
+      "id": "antibody-ko-clincher",
+      "needs": [
+        "C7",
+        "C8"
+      ],
+      "added": "2026-11-02",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "Your [[antibody]] stain and your [[RNAscope]] both light up the same neurons for marker X, but a reviewer still doubts the X protein is really there. What is the strongest single addition?",
+      "options": [
+        "Show the antibody signal disappears in tissue from a marker-X knockout",
+        "Add a secondary-only slide to rule out background from the secondary",
+        "Repeat the RNAscope with more probe pairs for a brighter signal",
+        "Re-image the same slide on a confocal at higher magnification"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "mRNA and protein agreeing is independent support, but the two can diverge (C8-L1), so it isn't proof of the protein. The knockout is the clincher (C7): real signal vanishes without the target. A secondary-only control guards against a different error (false positives from the secondary); more probes and higher magnification address brightness and resolution, not specificity."
+    },
+    {
+      "id": "faster-afferent",
+      "needs": [
+        "A5",
+        "D4"
+      ],
+      "added": "2026-11-02",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "Two DRG afferents carry the same stimulus, but one's signal reaches the cord much sooner. Which property best explains the faster one?",
+      "options": [
+        "A larger diameter with a [[myelination|myelinated]] axon",
+        "A more negative resting membrane potential at the ending",
+        "A larger number of [[TRPV1]] channels packed at its ending",
+        "A smaller diameter, which lowers its internal resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Conduction velocity rises with diameter and myelination (D4) — the Aβ-vs-C logic (A5). Resting potential and ending TRPV1 density affect excitability and sensing, not how fast a spike travels. And smaller diameter raises, not lowers, internal resistance, so it conducts slower."
+    },
+    {
+      "id": "pancreas-silencing",
+      "needs": [
+        "C4",
+        "C5"
+      ],
+      "added": "2026-11-02",
+      "type": "predict",
+      "difficulty": 3,
+      "setup": "You need to silence only pancreas-innervating sensory neurons, in an adult mouse, without hitting the same neuron type in other organs and without acting from birth.",
+      "prompt": "Which approach fits all three constraints?",
+      "options": [
+        "Retrograde [[Cre]] from the pancreas, a Cre-dependent [[hM4Di]] AAV, and [[DCZ]] in adulthood",
+        "A germline [[Nav1.8]]-Cre mouse crossed to a floxed hM4Di allele, given DCZ in adulthood",
+        "A pancreatic injection of a no-Cre [[hM3Dq]] AAV, then activation with [[CNO]] in adulthood",
+        "Optogenetic silencing through an optic fiber placed over the entire DRG in an adult mouse"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Retrograde Cre delivered from the organ restricts targeting by *projection* (pancreas), the Cre-dependent AAV restricts the tool to those cells, and giving the actuator in adulthood avoids developmental effects (C4/C5) — the colon paper's playbook aimed at the pancreas. A germline Nav1.8-Cre hits that type body-wide from birth; a no-Cre hM3Dq *activates* (and isn't cell-type restricted); optogenetics needs light delivery and over the whole DRG isn't specific.",
+      "freeText": false
+    },
+    {
+      "id": "afferent-limbs",
+      "needs": [
+        "D5",
+        "D8"
+      ],
+      "added": "2026-11-02",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "The vagal 'inflammatory reflex' and a visceral pain reflex are both [[reflex arc|reflex arcs]]. What do their afferent limbs have in common?",
+      "options": [
+        "Both are sensory neurons sensing the body's internal state ([[interoception]])",
+        "Both are motor neurons that drive an effector organ to make the response",
+        "Both are [[microglia]] detecting tissue damage from inside the central nervous system",
+        "Both run only in the [[vagus]] nerve, never through any spinal DRG neurons"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The afferent limb of any reflex arc is sensory (D8), and for the viscera that sensing is interoception (D5). Motor neurons are the efferent limb; microglia aren't the afferent limb of these arcs; and both vagal (nodose) and spinal (DRG) afferents serve the viscera — the DRG side is exactly the lab's focus."
+    }
+  ]
+}

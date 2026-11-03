@@ -152,6 +152,39 @@ details.flag-box p { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 }
 .banner p { margin: 0; flex: 1; }
 
+/* ---------- Home: weekly quiz card ---------- */
+.quiz-card {
+  display: flex; gap: 12px; align-items: center; min-height: 64px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 12px;
+  color: var(--text); text-decoration: none;
+}
+.quiz-card > svg { flex: none; width: 26px; height: 26px; color: var(--muted); }
+.quiz-card > div { flex: 1; min-width: 0; }
+.quiz-card p { margin: 0; }
+.quiz-title { font-size: 17px; font-weight: 600; }
+.quiz-card.ready { border-color: var(--warn-line); }
+.quiz-card.ready > svg { color: var(--warn-line); }
+.quiz-card.done > svg { color: var(--ok); }
+.quiz-go {
+  flex: none; min-height: 44px; display: grid; place-items: center; padding: 0 16px;
+  border-radius: 12px; background: var(--warn-bg); color: var(--warn); font-weight: 600;
+}
+.quiz-card.ready:active { transform: scale(0.98); }
+
+/* Finish screen: a clean quiz run */
+.perfect {
+  position: relative; width: 84px; height: 84px; margin: 4px auto 10px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--warn-bg); color: var(--warn-line);
+  animation: perfect-pop 600ms cubic-bezier(.2,1.6,.4,1) both;
+}
+.perfect svg { width: 44px; height: 44px; fill: currentColor; }
+.perfect-ring { position: absolute; inset: 0; border-radius: 50%; border: 3px solid var(--warn-line); animation: perfect-ring 1.4s ease-out 300ms both; }
+.perfect-ring.r2 { animation-delay: 650ms; }
+@keyframes perfect-pop { from { transform: scale(0.3); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes perfect-ring { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2.1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .perfect, .perfect-ring { animation: none; } .perfect-ring { display: none; } }
+
 /* ---------- Home: track chips ---------- */
 .chips {
   display: flex; gap: 8px; overflow-x: auto; margin: 4px -16px 6px; padding: 4px 16px 8px;

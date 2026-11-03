@@ -181,6 +181,26 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
   }
 }
 
+// content/quiz-pool.json: hard cross-track questions for the weekly quiz.
+// Each question is a normal step (not a concept card) with a unique "id" and
+// "needs": the units you must finish before it can appear in a quiz.
+export function validateQuizPool(pool, unitIds) {
+  if (!pool || !isArr(pool.questions)) return ['quiz-pool.json › "questions" must be a list'];
+  const errs = [];
+  const at = (where, msg) => errs.push(`quiz-pool.json › ${where}: ${msg}`);
+  if (pool.xp != null && !(Number.isFinite(pool.xp) && pool.xp >= 0)) at('xp', 'must be a number');
+  // Each question is checked like a lesson step (types, options, answers, variants).
+  errs.push(...validateLesson({ id: 'quiz-pool', title: 'quiz pool', steps: pool.questions }, 'quiz-pool')
+    .map((e) => e.replace('lessons/quiz-pool.json › steps', 'quiz-pool.json › questions')));
+  pool.questions.forEach((q, i) => {
+    const w = `questions[${i}]${q?.id ? ` (${q.id})` : ''}`;
+    if (q?.type === 'concept') at(w, 'quiz questions must be questions, not concept cards');
+    if (!isArr(q?.needs) || !q.needs.length || !q.needs.every(isStr)) { at(w, '"needs" must list the unit ids this question draws on, like ["A4", "D5"]'); return; }
+    for (const u of q.needs) if (unitIds && !unitIds.has(u)) at(w, `"needs" names "${u}", which isn't a unit in course.json`);
+  });
+  return errs;
+}
+
 // content/pulse.json: recent papers, each with a checked DOI.
 export function validatePulse(pulse) {
   const errs = [];

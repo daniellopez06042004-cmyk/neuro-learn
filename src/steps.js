@@ -81,9 +81,9 @@ function intro(s) {
   return {
     interactive: false,
     el: [
-      kind(`${s.minutes ? `${s.minutes} min · ` : ''}${s.stepCount} steps`),
+      kind(`${s.minutes ? `${s.minutes} min · ` : ''}${s.stepCount} ${s.countWord || 'steps'}`),
       h('h2', { class: 'concept-title' }, s.title),
-      h('div', { class: 'objective' }, h('p', { class: 'objective-label' }, 'By the end you can'), md(s.objective, 'prose')),
+      h('div', { class: 'objective' }, h('p', { class: 'objective-label' }, s.objectiveLabel || 'By the end you can'), md(s.objective, 'prose')),
       conf ? h('p', { class: 'small muted' }, `Confidence: ${conf}`) : null,
     ],
   };

@@ -7,6 +7,7 @@ what changed there since the last import into app/content/:
   - glossary.json                        (merged by term; the Project's version of a term wins)
   - pulse.json                           (merged by paper id)
   - slides.json                          (merged by unit; brain slides get their Allen section made by dev/atlas.py)
+  - quiz-pool.json                       (weekly-quiz questions, merged by question id)
 Files the Project hasn't touched since the last import are left alone, so fixes
 made on the app side stay put. Run from the app folder:
   python3 dev/import.py            # import
@@ -173,6 +174,28 @@ def main():
                 made = DST / 'assets' / 'atlas' / f'{s["unit"]}.json'
                 if regions and (not made.exists() or load_json(made).get('regions') != regions):
                     report.append(f'atlas    {s["unit"]}: {make_atlas(s["unit"], regions)}')
+
+    # Weekly-quiz pool: merge by question id (the Project's version of a question wins).
+    qpath = SRC / 'quiz-pool.json'
+    if qpath.exists():
+        new, key = is_new(qpath)
+        if new:
+            theirs = load_json(qpath)
+            mine = load_json(DST / 'quiz-pool.json') if (DST / 'quiz-pool.json').exists() else {'questions': []}
+            index = {q.get('id'): i for i, q in enumerate(mine['questions'])}
+            added = 0
+            for q in theirs.get('questions', []):
+                if q.get('id') in index:
+                    mine['questions'][index[q['id']]] = q
+                else:
+                    mine['questions'].append(q)
+                    added += 1
+            for k, v in theirs.items():
+                if k != 'questions':
+                    mine[k] = v
+            save_json(DST / 'quiz-pool.json', mine)
+            report.append(f'quiz     +{added} new, {len(mine["questions"])} total')
+            changed.append((key, qpath))
 
     print('\n'.join(report) if report else 'Nothing new from the Project since the last import.')
     if not DRY:

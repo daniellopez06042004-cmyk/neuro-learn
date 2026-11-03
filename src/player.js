@@ -17,7 +17,7 @@ const FIRE_AT = 0.33; // drag this fraction of the screen width to fire
 
 /**
  * items: [{ key: "lessonId:stepId", step, color }]
- * mode:  'lesson' re-asks a missed question once at the end; 'review' doesn't.
+ * mode:  'lesson' re-asks a missed question once at the end; 'review' and 'quiz' don't.
  * theme: which progress scene sits on top (themes.js); 'ap' is the membrane potential.
  */
 export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) {
@@ -50,9 +50,10 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
   const shell = h('div', { class: 'player' },
     h('div', { class: 'player-top' },
       h('button', {
-        class: 'icon-btn', 'aria-label': mode === 'review' ? 'End review' : 'Quit lesson',
+        class: 'icon-btn', 'aria-label': { review: 'End review', quiz: 'Leave quiz' }[mode] || 'Quit lesson',
         onclick: () => {
-          if (pos > 0 && !finished && !confirm(mode === 'review' ? 'End this review? Answers so far are saved.' : "Quit this lesson? You'll need to restart it to finish.")) return;
+          const ask = { review: 'End this review? Answers so far are saved.', quiz: 'Leave the quiz? Answers so far are saved; finish it later this week.' }[mode] || "Quit this lesson? You'll need to restart it to finish.";
+          if (pos > 0 && !finished && !confirm(ask)) return;
           ac.abort();
           onExit();
         },
@@ -124,7 +125,8 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
     if (!item.retry) {
       graded++;
       if (ok) correct++;
-      progress.recordAnswer(item.key, ok, item.shown);
+      // Quiz questions only join review when you miss them.
+      if (!ok || mode !== 'quiz') progress.recordAnswer(item.key, ok, item.shown);
       if (!ok && mode === 'lesson') queue.push({ ...item, retry: true, avoid: item.shown });
     }
     (ok ? sounds.right : sounds.wrong)();

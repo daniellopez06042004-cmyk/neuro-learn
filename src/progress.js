@@ -77,6 +77,11 @@ export const progress = {
   slideDate(unitId) { return state.slides?.[unitId] || null; },
   earnSlide(unitId, date = today()) { (state.slides ||= {})[unitId] = date; save(); },
 
+  // Weekly quiz: week (the Monday's date) -> { ids, done, correct, graded }
+  quiz(week) { return state.quizzes?.[week] || null; },
+  saveQuiz(week, rec) { (state.quizzes ||= {})[week] = rec; save(); },
+  quizSeen() { return new Set(Object.values(state.quizzes || {}).flatMap((q) => q.ids)); },
+
   addBonusXp(n) { state.bonusXp = (state.bonusXp || 0) + n; this.logXp(n); save(); },
 
   logXp(n) {
