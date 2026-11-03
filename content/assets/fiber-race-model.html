@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Three fibers race from the foot to the spinal cord (about 1 m in a person). Myelinated speeds follow Hursh's
+  rule (about 6 m/s per µm of fiber diameter; J Neurophysiol 1939): Aβ 9 µm → 54 m/s, Aδ 3 µm → 18 m/s, both
+  inside the textbook ranges (Aβ 35–75, Aδ 5–35 m/s). C fibers are unmyelinated and conduct at about 1 m/s
+  (textbook 0.5–2 m/s). In myelinated fibers the impulse jumps from node to node (saltatory); in C it creeps.
+  Plays in real time, or ten times slower.
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--track:#1D9E75;--myelin:#e9e3d3;--warn:#ba7517;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--track:#32c48f;--myelin:#57524a;--warn:#ef9f27;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  .seg{display:flex;gap:8px;margin:0 0 8px}
+  .seg button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 4px}
+  .seg button.sel{border-color:var(--track);background:color-mix(in srgb,var(--track) 16%,transparent)}
+  .seg button.sel::before{content:"✓ ";font-weight:800}
+  canvas{display:block;width:100%}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <div class="seg" role="radiogroup" aria-label="Speed">
+    <button data-slow="1" role="radio" aria-checked="true" class="sel">Real time</button>
+    <button data-slow="10" role="radio" aria-checked="false">10× slower</button>
+  </div>
+  <canvas id="c" role="img" aria-label="Three axons from the foot to the spinal cord: a thick myelinated Aβ fiber, a thin myelinated Aδ fiber and an unmyelinated C fiber. An impulse starts on all three at once; it jumps node to node and arrives first on Aβ, then Aδ, and last, much later, on C."></canvas>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Speeds: Hursh's rule for myelinated fibers (≈6 m/s per µm); C ≈ 1 m/s. Distance ≈ 1 m (foot to spinal cord in a person).</p>
+<script>
+(function () {
+  var DIST = 1.0; // metres
+  var FIBERS = [
+    { name: 'Aβ', d: 9, myelin: true, v: 6 * 9, w: 7, inter: 26, note: 'touch' },
+    { name: 'Aδ', d: 3, myelin: true, v: 6 * 3, w: 4.5, inter: 15, note: 'sharp first pain' },
+    { name: 'C', d: 0.8, myelin: false, v: 1.0, w: 2.2, inter: 0, note: 'burning second pain' }
+  ];
+  FIBERS.forEach(function (f) { f.ms = DIST / f.v * 1000; });
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say');
+  var W = 0, H = 300, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'surface-2', 'track', 'myelin', 'warn'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function label(s, x, y, c, align, weight, px) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (px || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'left'; ctx.fillText(s, x, y); }
+  var X0 = 30, X1 = function () { return W - 30; };
+  var fmt = function (ms) { return ms < 1000 ? Math.round(ms) + ' ms' : (ms / 1000).toFixed(1) + ' s'; };
+
+  function lane(f, y, tModel) {
+    var x1 = X1(), len = x1 - X0, frac = Math.min(1, tModel / f.ms);
+    label(f.name, X0 - 6, y + 5, col.text, 'right', 700, 14);
+    // axon core
+    ctx.strokeStyle = col['line-strong']; ctx.lineWidth = f.w * 0.55; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(X0, y); ctx.lineTo(x1, y); ctx.stroke();
+    var nodes = [];
+    if (f.myelin) { // myelin sheaths with nodes of Ranvier between them
+      for (var x = X0; x < x1 - 4; x += f.inter) {
+        nodes.push(x);
+        var e = Math.min(x1, x + f.inter) - 3;
+        ctx.fillStyle = col.myelin; ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 1;
+        if (e - x - 3 > 2) { rr(x + 3, y - f.w, e - x - 3, f.w * 2, f.w); ctx.fill(); ctx.stroke(); }
+      }
+      nodes.push(x1);
+    }
+    // the impulse: saltatory (lights the node it has reached) or continuous
+    var px = X0 + frac * len;
+    ctx.fillStyle = col.track;
+    if (tModel > 0 && frac < 1) {
+      if (f.myelin) {
+        var at = nodes.filter(function (n) { return n <= px; }).pop();
+        ctx.globalAlpha = 0.35; ctx.beginPath(); ctx.arc(at, y, f.w + 7, 0, 6.283); ctx.fill(); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.arc(at, y, f.w * 0.8 + 2, 0, 6.283); ctx.fill();
+      } else {
+        ctx.globalAlpha = 0.3; ctx.fillRect(Math.max(X0, px - 26), y - 5, Math.min(26, px - X0), 10); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.arc(px, y, 4, 0, 6.283); ctx.fill();
+      }
+    }
+    // clock: running, then the arrival time
+    var arrived = tModel >= f.ms;
+    label(arrived ? '✓ ' + fmt(f.ms) : tModel > 0 ? fmt(tModel) : '', x1, y - f.w - 8, arrived ? col.track : col.muted, 'right', arrived ? 700 : 400);
+    label(f.note, X0, y + f.w + 18, col.muted, 'left', 400, 12);
+  }
+  function rr(x, y, w, h, r) { r = Math.min(r, h / 2, w / 2); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+  var slow = 1, start = 0, still = matchMedia('(prefers-reduced-motion: reduce)').matches, HOLD = 1800;
+  function frame(now) {
+    if (!start) start = now;
+    var tModel = still ? 1e9 : (now - start - 500) / slow, end = FIBERS[2].ms;
+    if (!still && tModel > end + HOLD / slow * 1) { start = now; tModel = -500 / slow; }
+    ctx.clearRect(0, 0, W, H);
+    label('foot', X0, 18, col.muted, 'left', 400); label('spinal cord', X1(), 18, col.muted, 'right', 400);
+    ctx.fillStyle = col.warn; ctx.globalAlpha = tModel >= 0 && tModel < 60 ? 1 : 0.35; ctx.beginPath(); ctx.arc(X0, 34, 5, 0, 6.283); ctx.fill(); ctx.globalAlpha = 1;
+    lane(FIBERS[0], 76, Math.max(0, tModel)); lane(FIBERS[1], 160, Math.max(0, tModel)); lane(FIBERS[2], 236, Math.max(0, tModel));
+    var done = tModel >= end, text = tModel < 0 ? 'A stimulus at the foot starts an impulse on all three fibers at once…'
+      : done ? 'Aβ arrives in ' + fmt(FIBERS[0].ms) + ', Aδ in ' + fmt(FIBERS[1].ms) + ', C only after ' + fmt(FIBERS[2].ms) + '. That gap is why sharp first pain comes before burning second pain.'
+      : 'Myelinated fibers jump from node to node; the bare C fiber creeps along.';
+    if (say.textContent !== text) say.textContent = text;
+    if (!still) requestAnimationFrame(frame);
+  }
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.onclick = function () {
+      slow = Number(b.dataset.slow); start = 0;
+      document.querySelectorAll('.seg button').forEach(function (x) { var on = x === b; x.classList.toggle('sel', on); x.setAttribute('aria-checked', String(on)); });
+      if (still) requestAnimationFrame(frame);
+    };
+  });
+  readColors(); size();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { readColors(); if (still) requestAnimationFrame(frame); });
+  addEventListener('resize', function () { size(); if (still) requestAnimationFrame(frame); });
+  requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

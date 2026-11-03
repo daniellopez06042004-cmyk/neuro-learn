@@ -1,56 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTozY2EyNWI1Yy1lNDliLTQ5YjktYmY4Ny1lMzJhYzU1YWYwODYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaC8skl65OckbZkfZrxxL7FsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0ZGI0YWY2Ni02ZDY5LTQ2OTktOTAzOS1kYzM3YzdkMTM5YjRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNopQxebGreb2/E5BO+47WvgAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg9msFmayML0IaK33DB+Z9q8U8FPP2EG4BOGzNJpJ7YaKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLtbm36LuDF7PyjsSAYon3IAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBGtG0n8aNgoymhrbb8/qKrlKAXGAwkS3SzU3wrQofQGWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjNjYTI1YjVjLWU0OWItNDliOS1iZjg3LWUzMmFjNTVhZjA4Ni9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjEwNWEyN2MzLTBhOTctNDdiYS05MDkzLWE3NjczY2UzZTJjYnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD2awWZrIwvQhorfcMH5n2rxTwU8/YQbgE4bM0mknthoqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggjk92KGCmJkoD5f59dluYbXe3DBOgC+ZwRlKrE/S3b6KiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggzwNbHdL2zFb6eAKMgZi+3LEb3AGlkHaNrIO/Uziw3Cp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLBAzWVXCugbWAI8R1/8OH5C7uYcbqEzzE3QhudD57NMZ59I/4IYkpNlQqW4EsHJgVIpSa7Dbp3vjdyQpxenU3E=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img">
   <title>A TRP channel opens to several triggers</title>
-  <desc>A TRP channel sits in the membrane. Heat and capsaicin act on it; the pore opens and cations (sodium and calcium) flow from outside into the cell, depolarizing it.</desc>
+  <desc>A TRP channel sits in the lipid bilayer. Heat and capsaicin act on it; the two halves of the pore move apart, and cations (sodium and calcium) flow from outside into the cell, which turns the inside positive: it depolarizes.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--track:#1D9E75;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--track:#32c48f;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .memb{fill:none;stroke:var(--line-strong);stroke-width:2;}
-    .pore{fill:var(--surface-2);stroke:var(--track);stroke-width:2.5;}
-    .trig{opacity:0;animation:trig 6s ease-in-out infinite;}
-    .gL{animation:gL 6s ease-in-out infinite;} .gR{animation:gR 6s ease-in-out infinite;}
-    .ion{fill:var(--track);stroke:var(--surface);stroke-width:1;opacity:0;}
-    .i1{animation:flow 6s ease-in-out infinite;} .i2{animation:flow 6s ease-in-out infinite;animation-delay:.5s;} .i3{animation:flow 6s ease-in-out infinite;animation-delay:1s;}
-    @keyframes trig{0%{opacity:0;transform:translateY(-14px)}14%,46%{opacity:1;transform:translateY(0)}58%,100%{opacity:0}}
-    @keyframes gL{0%,24%{transform:translateX(0)}40%,100%{transform:translateX(-12px)}}
-    @keyframes gR{0%,24%{transform:translateX(0)}40%,100%{transform:translateX(12px)}}
-    @keyframes flow{0%,40%{opacity:0;offset-distance:0%}48%{opacity:1}92%{offset-distance:100%;opacity:1}100%{opacity:0}}
-    .i1,.i2,.i3{offset-path:path("M180 120 L180 220");offset-rotate:0deg;}
-    @media (prefers-reduced-motion:reduce){
-      .trig{animation:none;opacity:1;transform:none}
-      .gL{animation:none;transform:translateX(-12px)}
-      .gR{animation:none;transform:translateX(12px)}
-      .i1,.i2,.i3{animation:none;opacity:1;offset-distance:60%}
-    }
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#1D9E75;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#32c48f;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .dep{opacity:0;animation:dep 9s ease-in-out infinite;}
+    @keyframes dep{0%,60%{opacity:0}74%,94%{opacity:1}100%{opacity:0}}
+    .wave{fill:none;stroke:var(--warn);stroke-width:3;stroke-linecap:round;}
+    .heat{opacity:0;animation:heat 9s ease-in-out infinite;}
+    @keyframes heat{0%,8%{opacity:0;transform:translateY(10px)}22%,94%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+    .mol{fill:var(--w1);stroke:var(--warn);stroke-width:2;stroke-linejoin:round;}
+    .tail{fill:none;stroke:var(--warn);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+    .cap0{animation:cap0 9s ease-in-out infinite;}
+    @keyframes cap0{0%,8%{opacity:0;transform:translate(-30px,-84px)}12%{opacity:1;transform:translate(-30px,-84px)}22%,94%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(0,0)}}
+    .cap1{animation:cap1 9s ease-in-out infinite;}
+    @keyframes cap1{0%,10%{opacity:0;transform:translate(-24px,-64px)}14%{opacity:1;transform:translate(-24px,-64px)}22%,94%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(0,0)}}
+    .gL{animation:gL 9s ease-in-out infinite;} .gR{animation:gR 9s ease-in-out infinite;}
+    @keyframes gL{0%,22%{transform:translateX(0)}36%,94%{transform:translateX(-10px)}100%{transform:translateX(0)}}
+    @keyframes gR{0%,22%{transform:translateX(0)}36%,94%{transform:translateX(10px)}100%{transform:translateX(0)}}
+    .na{fill:var(--track);}
+    .ca{fill:var(--t2);stroke:var(--track);stroke-width:2.5;}
+    @keyframes f0{0%,36%{transform:translate(44px,-132px);opacity:1}41%{transform:translate(84px,-124px);opacity:1}45%{transform:translate(84px,-40px);opacity:1}50%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(44px,-132px);opacity:0}100%{transform:translate(44px,-132px);opacity:1}}
+    .f0{animation:f0 9s linear infinite;}
+    @keyframes f1{0%,39%{transform:translate(26px,-174px);opacity:1}44%{transform:translate(42px,-150px);opacity:1}48%{transform:translate(42px,-66px);opacity:1}53%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(26px,-174px);opacity:0}100%{transform:translate(26px,-174px);opacity:1}}
+    .f1{animation:f1 9s linear infinite;}
+    @keyframes f2{0%,42%{transform:translate(6px,-132px);opacity:1}47%{transform:translate(-10px,-120px);opacity:1}51%{transform:translate(-10px,-36px);opacity:1}56%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(6px,-132px);opacity:0}100%{transform:translate(6px,-132px);opacity:1}}
+    .f2{animation:f2 9s linear infinite;}
+    @keyframes f3{0%,45%{transform:translate(-18px,-178px);opacity:1}50%{transform:translate(-52px,-150px);opacity:1}54%{transform:translate(-52px,-66px);opacity:1}59%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(-18px,-178px);opacity:0}100%{transform:translate(-18px,-178px);opacity:1}}
+    .f3{animation:f3 9s linear infinite;}
+    @keyframes f4{0%,48%{transform:translate(-90px,-154px);opacity:1}53%{transform:translate(-90px,-112px);opacity:1}57%{transform:translate(-90px,-28px);opacity:1}62%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(-90px,-154px);opacity:0}100%{transform:translate(-90px,-154px);opacity:1}}
+    .f4{animation:f4 9s linear infinite;}
+    @keyframes f5{0%,51%{transform:translate(70px,-174px);opacity:1}56%{transform:translate(126px,-150px);opacity:1}60%{transform:translate(126px,-66px);opacity:1}65%{transform:translate(0px,0px);opacity:1}94%{transform:translate(0px,0px);opacity:1}97%{transform:translate(0px,0px);opacity:0}97.1%{transform:translate(70px,-174px);opacity:0}100%{transform:translate(70px,-174px);opacity:1}}
+    .f5{animation:f5 9s linear infinite;}
+    .plus{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-7.65s!important;animation-play-state:paused!important;}}
   </style>
-
-  <!-- outside / inside labels -->
-  <text class="small" x="330" y="96" text-anchor="end">outside</text>
-  <text class="small" x="330" y="250" text-anchor="end">inside (cytoplasm)</text>
-
-  <!-- membrane bilayer -->
-  <line class="memb" x1="20" y1="150" x2="340" y2="150"/>
-  <line class="memb" x1="20" y1="166" x2="340" y2="166"/>
-
-  <!-- triggers above the channel -->
-  <g class="trig">
-    <path d="M150 64 q6 -8 12 0 q6 8 12 0" fill="none" stroke="var(--warn)" stroke-width="2.5"/>
-    <text class="lbl" x="150" y="54" text-anchor="end" style="fill:var(--warn)">heat</text>
-    <polygon points="196,58 206,64 206,74 196,80 186,74 186,64" fill="var(--warn)"/>
-    <text class="lbl" x="212" y="72" style="fill:var(--warn)">capsaicin</text>
+  <!-- inside the cell: cytoplasm, which warms as the cell depolarizes -->
+  <path d="M12 168 H348 V274 Q348 288 334 288 H26 Q12 288 12 274 Z" style="fill:var(--t0)"/>
+  <path class="dep" d="M12 168 H348 V274 Q348 288 334 288 H26 Q12 288 12 274 Z" style="fill:var(--t1)"/>
+  <!-- lipid bilayer -->
+  <rect class="lip" x="12" y="128" width="146" height="40"/><path class="hd" d="M16 131.5 H158"/><path class="hd" d="M16 164.5 H158"/><rect class="lip" x="202" y="128" width="146" height="40"/><path class="hd" d="M206 131.5 H348"/><path class="hd" d="M206 164.5 H348"/>
+  <!-- heat -->
+  <g class="heat">
+    <ellipse cx="246" cy="76" rx="58" ry="38" style="fill:var(--w1)"/>
+    <path class="wave" d="M222 108 q-8 -8 0 -16 q8 -8 0 -16 q-8 -8 0 -16 q8 -8 0 -16"/>
+    <path class="wave" d="M246 104 q-8 -8 0 -16 q8 -8 0 -16 q-8 -8 0 -16 q8 -8 0 -16"/>
+    <path class="wave" d="M270 108 q-8 -8 0 -16 q8 -8 0 -16 q-8 -8 0 -16 q8 -8 0 -16"/>
   </g>
-
-  <!-- channel: two pore walls that separate when open -->
-  <g class="gL"><rect class="pore" x="158" y="134" width="14" height="48" rx="5"/></g>
-  <g class="gR"><rect class="pore" x="188" y="134" width="14" height="48" rx="5"/></g>
-  <text class="lbl" x="180" y="126" text-anchor="middle" style="fill:var(--track)">TRP channel</text>
-
-  <!-- cations flowing in through the pore -->
-  <g class="ion i1"><circle r="6"/></g>
-  <g class="ion i2"><circle r="6"/></g>
-  <g class="ion i3"><circle r="6"/></g>
-  <text class="lbl" x="206" y="206" style="fill:var(--track)">Na⁺ Ca²⁺ in</text>
-
-  <text class="small" x="180" y="286" text-anchor="middle">cations enter → the cell depolarizes</text>
+  <text x="300" y="30" text-anchor="middle" style="fill:var(--warn)">heat</text>
+  <!-- capsaicin drifts in and sinks into the membrane next to the channel -->
+  <g transform="translate(110 146)"><g class="cap0"><polygon points="6.9,4 0,8 -6.9,4 -6.9,-4 -0,-8 6.9,-4" class="mol"/><path d="M8 0 l7 -5 l7 5 l7 -5 l7 5" class="tail"/></g></g>
+  <g transform="translate(66 140)"><g class="cap1"><polygon points="6.9,4 0,8 -6.9,4 -6.9,-4 -0,-8 6.9,-4" class="mol"/><path d="M8 0 l7 -5 l7 5 l7 -5 l7 5" class="tail"/></g></g>
+  <text x="24" y="40" style="fill:var(--warn)">capsaicin</text>
+  <!-- TRP channel: two subunits; the gap between them is the pore -->
+  <g class="gL"><rect class="cT" x="156" y="116" width="22" height="64" rx="9"/><rect x="171" y="122" width="6" height="52" rx="3" style="fill:var(--t2)"/><path class="cT" d="M158 178 h18 q4 0 4 6 v8 q0 8 -9 8 h-8 q-9 0 -9 -8 v-6 q0 -8 4 -8 Z"/></g>
+  <g class="gR"><rect class="cT" x="182" y="116" width="22" height="64" rx="9"/><rect x="183" y="122" width="6" height="52" rx="3" style="fill:var(--t2)"/><path class="cT" d="M184 178 h18 q4 0 4 6 v8 q0 8 -9 8 h-8 q-9 0 -9 -8 v-6 q0 -8 4 -8 Z"/></g>
+  <text x="224" y="153">TRP channel</text>
+  <!-- cations waiting outside -->
+  <g transform="translate(30 108)"><circle r="5" class="na"/></g>
+  <g transform="translate(54 98)"><circle r="6.5" class="ca"/></g>
+  <g transform="translate(318 118)"><circle r="5" class="na"/></g>
+  <g transform="translate(338 100)"><circle r="6.5" class="ca"/></g>
+  <g transform="translate(152 66)"><circle r="5" class="na"/></g>
+  <g transform="translate(300 76)"><circle r="5" class="na"/></g>
+  <!-- cations that flow in through the open pore -->
+  <g transform="translate(96 236)"><g class="f0"><circle r="5" class="na"/></g></g>
+  <g transform="translate(138 262)"><g class="f1"><circle r="6.5" class="ca"/></g></g>
+  <g transform="translate(190 232)"><g class="f2"><circle r="5" class="na"/></g></g>
+  <g transform="translate(232 262)"><g class="f3"><circle r="5" class="na"/></g></g>
+  <g transform="translate(270 224)"><g class="f4"><circle r="6.5" class="ca"/></g></g>
+  <g transform="translate(54 262)"><g class="f5"><circle r="5" class="na"/></g></g>
+  <text class="dep" x="108" y="241" style="fill:var(--track)">Na⁺</text>
+  <text class="dep" x="284" y="229" style="fill:var(--track)">Ca²⁺</text>
+  <!-- inside turns positive: the cell depolarizes -->
+  <g class="dep plus"><path d="M31 186 h10 M36 181 v10"/><path d="M65 186 h10 M70 181 v10"/><path d="M231 186 h10 M236 181 v10"/><path d="M265 186 h10 M270 181 v10"/><path d="M299 186 h10 M304 181 v10"/><path d="M329 186 h10 M334 181 v10"/></g>
+  <text class="m" x="24" y="278">inside the cell</text>
 </svg>

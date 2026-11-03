@@ -1,67 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2ZjAyZTYzOC1hZWQ4LTQ1YmUtYWVlZC0yNzAxNDc3YWNkNWUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJDSpSQeFs9FpAkctB3T3IEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDowODBkZGZkZi04ODllLTQ1ZDgtYWVkZC04NmM2ZjRmMTE3MWVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoxIBrAJopm67uFyfqT7zdLAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggDDzY/eE1xi4vZFJDGiX+FI4rRT237Mj5OteFAD+djjCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaP+q/BESWjqY5ehP7GzK6ncAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCD5EF6KexuxOswGqFn9GI+xaA+xRxbKZKzP01HaA+ms/mRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZmMDJlNjM4LWFlZDgtNDViZS1hZWVkLTI3MDE0NzdhY2Q1ZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjEwN2Y3Y2U1LWVmYzAtNGY3OS04MjVlLTc2OWRjMmM1MDE1Y3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAMPNj94TXGLi9kUkMaJf4UjitFPbfsyPk614UAP52OMKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggdl4kPW+44PCVKKYDycfj6HBv5QzrEG9iXmjRA0QVxaWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgglO8d+0s8MgShZhRSVO3Fxt/RaA5zH8T68Mf0JCFhz8x0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQJJEJl9978QMMFHOCJaAcBmFRjU9fx8nPfeaAvNIyAR//LR2EXtpptE+HneADcnCzQ6dvv0JimiiwU2LSWHk8UY=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img">
   <title>Force opens a Piezo mechanically activated channel</title>
-  <desc>A Piezo channel sits in the membrane. A push creates tension in the membrane, which bends the channel open; cations then flow from outside into the cell.</desc>
+  <desc>A Piezo channel sits in the lipid bilayer. A probe pushes down and bends the membrane, which puts the membrane under tension; the tension pulls the two halves of the channel apart, and cations flow from outside into the cell.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--track:#1D9E75;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--track:#32c48f;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .memb{fill:none;stroke:var(--line-strong);stroke-width:2;}
-    .flat{animation:fade 6s ease-in-out infinite;}
-    .bent{opacity:0;animation:appear 6s ease-in-out infinite;}
-    .pore{fill:var(--surface-2);stroke:var(--track);stroke-width:2.5;}
-    .poreOpen{opacity:0;animation:appear 6s ease-in-out infinite;}
-    .probe{animation:push 6s ease-in-out infinite;}
-    .ion{fill:var(--track);stroke:var(--surface);stroke-width:1;opacity:0;}
-    .i1{animation:flow 6s ease-in-out infinite;animation-delay:.1s;} .i2{animation:flow 6s ease-in-out infinite;animation-delay:.6s;}
-    .i1,.i2{offset-path:path("M180 128 L180 224");offset-rotate:0deg;}
-    @keyframes push{0%,10%{transform:translateY(-22px)}34%,100%{transform:translateY(0)}}
-    @keyframes fade{0%,30%{opacity:1}42%,100%{opacity:0}}
-    @keyframes appear{0%,34%{opacity:0}44%,100%{opacity:1}}
-    @keyframes flow{0%,44%{opacity:0;offset-distance:0%}52%{opacity:1}92%{offset-distance:100%;opacity:1}100%{opacity:0}}
-    @media (prefers-reduced-motion:reduce){
-      .probe{animation:none;transform:translateY(0)}
-      .flat{animation:none;opacity:0}
-      .bent,.poreOpen{animation:none;opacity:1}
-      .i1,.i2{animation:none;opacity:1;offset-distance:60%}
-    }
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#1D9E75;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#32c48f;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .rm{display:none;}
+    .cy{fill:var(--t0);}
+    .tens{animation:tens 10s ease-in-out infinite;}
+    @keyframes tens{0%,24%{stroke-dasharray:0 8}38%,95%{stroke-dasharray:0 10.5}100%{stroke-dasharray:0 8}}
+    .probe{animation:probe 10s ease-in-out infinite;}
+    @keyframes probe{0%,10%{transform:translateY(-34px)}24%,95%{transform:translateY(0)}100%{transform:translateY(-34px)}}
+    .tarr{opacity:0;animation:tarr 10s ease-in-out infinite;}
+    @keyframes tarr{0%,24%{opacity:0}36%,95%{opacity:1}100%{opacity:0}}
+    .pL{transform-origin:237px 186px;animation:pL 10s ease-in-out infinite;} .pR{transform-origin:263px 186px;animation:pR 10s ease-in-out infinite;}
+    @keyframes pL{0%,38%{transform:translateX(0) rotate(0)}50%,95%{transform:translateX(-9px) rotate(-8deg)}100%{transform:translateX(0) rotate(0)}}
+    @keyframes pR{0%,38%{transform:translateX(0) rotate(0)}50%,95%{transform:translateX(9px) rotate(8deg)}100%{transform:translateX(0) rotate(0)}}
+    .na{fill:var(--track);}
+    @keyframes f0{0%,50%{transform:translate(14px,-140px);opacity:1}54%{transform:translate(74px,-116px);opacity:1}58%{transform:translate(74px,-38px);opacity:1}62%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(14px,-140px);opacity:0}100%{transform:translate(14px,-140px);opacity:1}}
+    .f0{animation:f0 10s linear infinite;}
+    @keyframes f1{0%,53%{transform:translate(-8px,-192px);opacity:1}57%{transform:translate(36px,-142px);opacity:1}61%{transform:translate(36px,-64px);opacity:1}65%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(-8px,-192px);opacity:0}100%{transform:translate(-8px,-192px);opacity:1}}
+    .f1{animation:f1 10s linear infinite;}
+    @keyframes f2{0%,56%{transform:translate(30px,-144px);opacity:1}60%{transform:translate(-12px,-108px);opacity:1}64%{transform:translate(-12px,-30px);opacity:1}68%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(30px,-144px);opacity:0}100%{transform:translate(30px,-144px);opacity:1}}
+    .f2{animation:f2 10s linear infinite;}
+    @keyframes f3{0%,59%{transform:translate(28px,-196px);opacity:1}63%{transform:translate(100px,-142px);opacity:1}67%{transform:translate(100px,-64px);opacity:1}71%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(28px,-196px);opacity:0}100%{transform:translate(28px,-196px);opacity:1}}
+    .f3{animation:f3 10s linear infinite;}
+    @keyframes f4{0%,62%{transform:translate(16px,-192px);opacity:1}66%{transform:translate(-50px,-136px);opacity:1}70%{transform:translate(-50px,-58px);opacity:1}74%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(16px,-192px);opacity:0}100%{transform:translate(16px,-192px);opacity:1}}
+    .f4{animation:f4 10s linear infinite;}
+    .cin{opacity:0;animation:cin 10s ease-in-out infinite;}
+    @keyframes cin{0%,66%{opacity:0}76%,95%{opacity:1}100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-8.6s!important;animation-play-state:paused!important;}.mv{display:none;}.rm{display:inline;}}
   </style>
-
-  <text class="small" x="330" y="96" text-anchor="end">outside</text>
-  <text class="small" x="330" y="250" text-anchor="end">inside</text>
-
-  <!-- probe pushing down -->
+  <!-- inside of the cell, the bilayer (left piece bends under the probe), all morphing together -->
+  <g class="mv"><path class="cy" d="M12 176 L30 176 C60 176 74 176 104 176 C134 176 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.24;0.95;1" calcMode="spline" keySplines="0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1" values="M12 176 L30 176 C60 176 74 176 104 176 C134 176 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z;M12 176 L30 176 C60 176 74 176 104 176 C134 176 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z;M12 176 L30 176 C60 176 74 206 104 206 C134 206 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z;M12 176 L30 176 C60 176 74 206 104 206 C134 206 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z;M12 176 L30 176 C60 176 74 176 104 176 C134 176 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z"/></path><path class="lip" d="M12 140 L30 140 C60 140 74 140 104 140 C134 140 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 176 104 176 C74 176 60 176 30 176 L12 176 Z"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.24;0.95;1" calcMode="spline" keySplines="0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1" values="M12 140 L30 140 C60 140 74 140 104 140 C134 140 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 176 104 176 C74 176 60 176 30 176 L12 176 Z;M12 140 L30 140 C60 140 74 140 104 140 C134 140 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 176 104 176 C74 176 60 176 30 176 L12 176 Z;M12 140 L30 140 C60 140 74 170 104 170 C134 170 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 206 104 206 C74 206 60 176 30 176 L12 176 Z;M12 140 L30 140 C60 140 74 170 104 170 C134 170 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 206 104 206 C74 206 60 176 30 176 L12 176 Z;M12 140 L30 140 C60 140 74 140 104 140 C134 140 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 176 104 176 C74 176 60 176 30 176 L12 176 Z"/></path><path class="hd tens" d="M16 143.5 L30 143.5 C60 143.5 74 143.5 104 143.5 C134 143.5 148 143.5 178 143.5 L226 143.5"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.24;0.95;1" calcMode="spline" keySplines="0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1" values="M16 143.5 L30 143.5 C60 143.5 74 143.5 104 143.5 C134 143.5 148 143.5 178 143.5 L226 143.5;M16 143.5 L30 143.5 C60 143.5 74 143.5 104 143.5 C134 143.5 148 143.5 178 143.5 L226 143.5;M16 143.5 L30 143.5 C60 143.5 74 173.5 104 173.5 C134 173.5 148 143.5 178 143.5 L226 143.5;M16 143.5 L30 143.5 C60 143.5 74 173.5 104 173.5 C134 173.5 148 143.5 178 143.5 L226 143.5;M16 143.5 L30 143.5 C60 143.5 74 143.5 104 143.5 C134 143.5 148 143.5 178 143.5 L226 143.5"/></path><path class="hd tens" d="M16 172.5 L30 172.5 C60 172.5 74 172.5 104 172.5 C134 172.5 148 172.5 178 172.5 L226 172.5"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.1;0.24;0.95;1" calcMode="spline" keySplines="0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1" values="M16 172.5 L30 172.5 C60 172.5 74 172.5 104 172.5 C134 172.5 148 172.5 178 172.5 L226 172.5;M16 172.5 L30 172.5 C60 172.5 74 172.5 104 172.5 C134 172.5 148 172.5 178 172.5 L226 172.5;M16 172.5 L30 172.5 C60 172.5 74 202.5 104 202.5 C134 202.5 148 172.5 178 172.5 L226 172.5;M16 172.5 L30 172.5 C60 172.5 74 202.5 104 202.5 C134 202.5 148 172.5 178 172.5 L226 172.5;M16 172.5 L30 172.5 C60 172.5 74 172.5 104 172.5 C134 172.5 148 172.5 178 172.5 L226 172.5"/></path></g>
+  <g class="rm"><path class="cy" d="M12 176 L30 176 C60 176 74 206 104 206 C134 206 148 176 178 176 L348 176 V274 Q348 288 334 288 H26 Q12 288 12 274 Z"/><path class="lip" d="M12 140 L30 140 C60 140 74 170 104 170 C134 170 148 140 178 140 L226 140 L226 176 L178 176 C148 176 134 206 104 206 C74 206 60 176 30 176 L12 176 Z"/><path class="hd tens" d="M16 143.5 L30 143.5 C60 143.5 74 173.5 104 173.5 C134 173.5 148 143.5 178 143.5 L226 143.5"/><path class="hd tens" d="M16 172.5 L30 172.5 C60 172.5 74 202.5 104 202.5 C134 202.5 148 172.5 178 172.5 L226 172.5"/></g>
+  <rect class="lip" x="274" y="140" width="74" height="36"/><path class="hd tens" d="M278 143.5 H348"/><path class="hd tens" d="M278 172.5 H348"/>
+  <!-- the probe pushes down -->
   <g class="probe">
-    <line x1="180" y1="40" x2="180" y2="96" stroke="var(--warn)" stroke-width="3" stroke-linecap="round"/>
-    <path d="M172 88 L180 100 L188 88 Z" fill="var(--warn)"/>
-    <text class="lbl" x="180" y="34" text-anchor="middle" style="fill:var(--warn)">force</text>
+    <path d="M92 -40 H116 V154 Q116 166 104 166 Q92 166 92 154 Z" style="fill:var(--w1);stroke:var(--warn);stroke-width:2"/>
+    <path d="M104 40 V84 M96 74 L104 86 L112 74" style="fill:none;stroke:var(--warn);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/>
   </g>
-
-  <!-- flat (resting) membrane -->
-  <g class="flat">
-    <line class="memb" x1="20" y1="150" x2="340" y2="150"/>
-    <line class="memb" x1="20" y1="166" x2="340" y2="166"/>
+  <text x="126" y="36" style="fill:var(--warn)">force</text>
+  <!-- tension pulls outward in the plane of the membrane -->
+  <g class="tarr" style="fill:none;stroke:var(--warn);stroke-width:3;stroke-linecap:round;stroke-linejoin:round">
+    <path d="M218 124 H186 M194 117 L186 124 L194 131"/>
+    <path d="M282 124 H314 M306 117 L314 124 L306 131"/>
   </g>
-  <!-- bent (tense) membrane -->
-  <g class="bent">
-    <path class="memb" d="M20 150 Q110 150 170 128 Q180 124 190 128 Q250 150 340 150"/>
-    <path class="memb" d="M20 166 Q110 166 170 144 Q180 140 190 144 Q250 166 340 166"/>
-    <text class="small" x="250" y="134" style="fill:var(--warn)">membrane tension</text>
-  </g>
-
-  <!-- closed channel (resting) -->
-  <g class="flat"><rect class="pore" x="166" y="134" width="28" height="48" rx="7"/></g>
-  <!-- open channel (bent apart) -->
-  <g class="poreOpen">
-    <rect class="pore" x="156" y="126" width="13" height="50" rx="5"/>
-    <rect class="pore" x="191" y="126" width="13" height="50" rx="5"/>
-  </g>
-  <text class="lbl" x="180" y="120" text-anchor="middle" style="fill:var(--track)">Piezo channel</text>
-
-  <!-- cations in -->
-  <g class="ion i1"><circle r="6"/></g>
-  <g class="ion i2"><circle r="6"/></g>
-  <text class="lbl" x="208" y="210" style="fill:var(--track)">cations in</text>
-
-  <text class="small" x="180" y="286" text-anchor="middle">tension bends the channel open</text>
+  <text class="tarr" x="340" y="60" text-anchor="end" style="fill:var(--warn)">membrane tension</text>
+  <!-- Piezo channel: tension pulls its two halves apart, opening the pore -->
+  <g class="pL"><rect class="cT" x="226" y="128" width="22" height="58" rx="9"/><rect x="241" y="134" width="6" height="46" rx="3" style="fill:var(--t2)"/></g><g class="pR"><rect class="cT" x="252" y="128" width="22" height="58" rx="9"/><rect x="253" y="134" width="6" height="46" rx="3" style="fill:var(--t2)"/></g>
+  <text x="250" y="104" text-anchor="middle" style="fill:var(--track)">Piezo channel</text>
+  <!-- cations outside -->
+  <circle class="na" cx="150" cy="80" r="5"/>
+  <circle class="na" cx="322" cy="104" r="5"/>
+  <circle class="na" cx="340" cy="82" r="5"/>
+  <circle class="na" cx="164" cy="116" r="5"/>
+  <circle class="na" cx="336" cy="120" r="5"/>
+  <g transform="translate(176 236)"><g class="f0"><circle class="na" r="5"/></g></g>
+  <g transform="translate(214 262)"><g class="f1"><circle class="na" r="5"/></g></g>
+  <g transform="translate(262 228)"><g class="f2"><circle class="na" r="5"/></g></g>
+  <g transform="translate(150 262)"><g class="f3"><circle class="na" r="5"/></g></g>
+  <g transform="translate(300 256)"><g class="f4"><circle class="na" r="5"/></g></g>
+  <text class="cin" x="24" y="262" style="fill:var(--track)">cations in</text>
 </svg>

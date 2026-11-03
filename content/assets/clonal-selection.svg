@@ -1,70 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5YmU0MzE5NS1jYTRkLTQ4YjUtODgwMC01N2I4ZjI3NjM2ZjAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMirL/CDgy7c78+CXF/M+SMAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplZjZjNWIwMS1kNmZhLTRkMmQtYjM0My1jYWU2ZjBmNzA1Y2JscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo5CGYzxzquPluBM0BWwWz/QAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggdN8LFxS0d6663cQ764e3O/TB/ACaX7ZVAn+uMoFIQG+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKT2xdIXyW9lgyIQkuuY+A0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDh5vY3t2GRVJyFozWHUgnk7yS4Dbe7q9oJS1xn+NkdqGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjliZTQzMTk1LWNhNGQtNDhiNS04ODAwLTU3YjhmMjc2MzZmMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjRiNmZjYmYxLWNlOGEtNGE0OC1hY2M4LTc5YzUzOGIwN2RiMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCB03wsXFLR3rrrdxDvrh7c79MH8AJpftlUCf64ygUhAb6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg8jUl5V5NJ0J7O5ypL4JOOu7/w6n345oCVYkW/tW2P/GiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggERXkSy3qZe2tHkfT9c14wIlGR1my/L4b6pMtB/gVczN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQP3ywK8/beXdQIor1iagVD917WWKELW5uJFSAoW/zj7zrL9IOOzWwhd1KkvFiW7dS9/dm2Z3KxPEpggulR3fLUk=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" role="img">
   <title>Clonal selection and memory</title>
-  <desc>A row of lymphocytes each carries a differently shaped receptor. An antigen matches one of them; that cell is selected and multiplies into many identical effector cells plus a long-lived memory cell, while the non-matching cells stay quiet.</desc>
+  <desc>A row of lymphocytes each carries a differently shaped receptor. An antigen fits only one of them; that cell is selected and multiplies into identical effector cells plus a long-lived memory cell (dashed, with a star), while the non-matching cells stay quiet.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--track:#D4537E;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--track:#e67ba0;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .cell{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .rcpt{fill:none;stroke:var(--line-strong);stroke-width:2.5;}
-    .sel{animation:sel 7s ease-in-out infinite;}
-    .selR{animation:selR 7s ease-in-out infinite;}
-    .ag{opacity:0;animation:ag 7s ease-in-out infinite;}
-    .clone{opacity:0;animation:clone 7s ease-in-out infinite;}
-    .mem{opacity:0;animation:clone 7s ease-in-out infinite;}
-    @keyframes ag{0%{opacity:0;transform:translateY(-16px)}12%,40%{opacity:1;transform:translateY(0)}50%,100%{opacity:0}}
-    @keyframes sel{0%,40%{fill:var(--surface-2);stroke:var(--line-strong)}52%,100%{fill:var(--track);stroke:var(--track)}}
-    @keyframes selR{0%,40%{stroke:var(--line-strong)}52%,100%{stroke:var(--track)}}
-    @keyframes clone{0%,54%{opacity:0;transform:scale(.4)}68%,100%{opacity:1;transform:scale(1)}}
-    @media (prefers-reduced-motion:reduce){
-      .ag{animation:none;opacity:0}
-      .sel{animation:none;fill:var(--track);stroke:var(--track)}
-      .selR{animation:none;stroke:var(--track)}
-      .clone,.mem{animation:none;opacity:1;transform:none}
-    }
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#D4537E;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#e67ba0;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .rc{fill:var(--n2);stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .rcT{fill:var(--track);stroke:var(--track);stroke-width:2;stroke-linejoin:round;}
+    .ag{fill:var(--warn);stroke:var(--warn);stroke-width:2;stroke-linejoin:round;}
+    .quiet{animation:quiet 9s ease-in-out infinite;}
+    @keyframes quiet{0%,26%{opacity:1}40%,95%{opacity:.45}100%{opacity:1}}
+    .sel{opacity:0;animation:sel 9s ease-in-out infinite;}
+    @keyframes sel{0%,26%{opacity:0}40%,95%{opacity:1}100%{opacity:0}}
+    .agm{animation:agm 9s ease-in-out infinite;}
+    @keyframes agm{0%,8%{opacity:0;transform:translateY(-22px)}12%{opacity:1;transform:translateY(-22px)}24%,95%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+    @keyframes c0{0%,40%{opacity:0;transform:translate(140px,-112px) scale(.35)}42%{opacity:1}52%,95%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(0,0) scale(1)}}
+    .c0{animation:c0 9s ease-in-out infinite;}
+    @keyframes c1{0%,44%{opacity:0;transform:translate(82px,-112px) scale(.35)}46%{opacity:1}56%,95%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(0,0) scale(1)}}
+    .c1{animation:c1 9s ease-in-out infinite;}
+    @keyframes c2{0%,48%{opacity:0;transform:translate(24px,-112px) scale(.35)}50%{opacity:1}60%,95%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(0,0) scale(1)}}
+    .c2{animation:c2 9s ease-in-out infinite;}
+    @keyframes c3{0%,52%{opacity:0;transform:translate(-34px,-112px) scale(.35)}54%{opacity:1}64%,95%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(0,0) scale(1)}}
+    .c3{animation:c3 9s ease-in-out infinite;}
+    @keyframes mem{0%,60%{opacity:0;transform:translate(-120px,-112px) scale(.35)}62%{opacity:1}72%,95%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(0,0) scale(1)}}
+    .mem{animation:mem 9s ease-in-out infinite;}
+    .lab1{opacity:0;animation:lab1 9s ease-in-out infinite;} .lab2{opacity:0;animation:lab2 9s ease-in-out infinite;}
+    @keyframes lab1{0%,54%{opacity:0}60%,95%{opacity:1}100%{opacity:0}}
+    @keyframes lab2{0%,66%{opacity:0}72%,95%{opacity:1}100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-7.8s!important;animation-play-state:paused!important;}}
   </style>
-
-  <text class="small" x="20" y="34">diverse lymphocytes, each a different receptor</text>
-
-  <!-- row of lymphocytes with different receptor shapes -->
-  <!-- cell 1 (square receptor) -->
-  <circle class="cell" cx="46" cy="78" r="20"/>
-  <rect class="rcpt" x="40" y="46" width="12" height="12" fill="none"/>
-  <!-- cell 2 (triangle) -->
-  <circle class="cell" cx="112" cy="78" r="20"/>
-  <path class="rcpt" d="M106 58 L118 58 L112 46 Z"/>
-  <!-- cell 3 (the match: notch) -->
-  <circle class="cell sel" cx="180" cy="78" r="20" style="transform-origin:180px 78px"/>
-  <path class="rcpt selR" d="M172 58 q8 -10 16 0"/>
-  <!-- cell 4 (diamond) -->
-  <circle class="cell" cx="248" cy="78" r="20"/>
-  <path class="rcpt" d="M248 46 L256 56 L248 66 L240 56 Z"/>
-  <!-- cell 5 (double prong) -->
-  <circle class="cell" cx="314" cy="78" r="20"/>
-  <path class="rcpt" d="M308 58 L308 48 M320 58 L320 48"/>
-
-  <!-- antigen that matches cell 3 -->
-  <g class="ag"><path d="M172 38 q8 10 16 0" fill="var(--warn)"/><text class="lbl" x="180" y="30" text-anchor="middle" style="fill:var(--warn)">antigen</text></g>
-
-  <text class="lbl" x="180" y="120" text-anchor="middle" style="fill:var(--track)">match → selected</text>
-  <path d="M180 128 L180 150" stroke="var(--line-strong)" stroke-width="2" marker-end=""/>
-  <path d="M174 144 L180 154 L186 144" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
-
-  <!-- clones expand below -->
-  <text class="small" x="20" y="178">one cell multiplies into many</text>
-  <g class="clone" style="transform-origin:70px 212px"><circle class="cell" cx="70" cy="212" r="17" style="fill:var(--track);stroke:var(--track)"/></g>
-  <g class="clone" style="transform-origin:120px 212px"><circle class="cell" cx="120" cy="212" r="17" style="fill:var(--track);stroke:var(--track)"/></g>
-  <g class="clone" style="transform-origin:170px 212px"><circle class="cell" cx="170" cy="212" r="17" style="fill:var(--track);stroke:var(--track)"/></g>
-  <g class="clone" style="transform-origin:220px 212px"><circle class="cell" cx="220" cy="212" r="17" style="fill:var(--track);stroke:var(--track)"/></g>
-  <text class="lbl clone" x="145" y="250" text-anchor="middle">effector clones</text>
-
-  <!-- memory cell -->
-  <g class="mem" style="transform-origin:300px 212px">
-    <circle class="cell" cx="300" cy="212" r="18" style="stroke:var(--track);stroke-width:3;stroke-dasharray:4 4"/>
-    <text x="300" y="217" text-anchor="middle" font-size="16" font-weight="800" style="fill:var(--track)">★</text>
-  </g>
-  <text class="lbl mem" x="300" y="250" text-anchor="middle">memory</text>
-
-  <text class="small" x="180" y="300" text-anchor="middle">memory makes the next response faster</text>
+  <!-- a repertoire of lymphocytes, each with a differently shaped receptor -->
+  <g class="quiet"><rect class="rc" x="37" y="55" width="14" height="14" rx="2"/><path class="cN" d="M72.1 94 C72 100.1 68 107.8 63.3 111.9 C58.6 116 50.6 118.4 44 118.5 C37.4 118.7 28.3 116.8 23.8 112.7 C19.3 108.6 16.8 100.1 17 94 C17.1 87.9 20.3 80.4 24.8 76.2 C29.3 71.9 37.4 68.5 44 68.3 C50.6 68.2 59.4 71 64.1 75.3 C68.8 79.6 72.3 87.9 72.1 94Z"/><path class="nN" d="M61.9 96 C62 100.2 59.4 106.2 56 108.9 C52.5 111.5 45.6 113 41.1 112 C36.6 111.1 30.6 107 28.8 103.3 C27.1 99.5 28.5 93.5 30.6 89.5 C32.6 85.5 36.8 80.3 40.9 79.3 C45.1 78.3 52.1 80.8 55.6 83.6 C59.1 86.4 61.8 91.8 61.9 96Z"/></g>
+  <g class="quiet"><path class="rc" d="M103 69 L112 53 L121 69 Z"/><path class="cN" d="M138.4 94 C138.1 100.1 135.3 107.3 130.9 111.5 C126.5 115.8 118.5 119.5 112 119.7 C105.5 119.9 96.2 117.1 91.8 112.8 C87.3 108.5 85 100.1 85.2 94 C85.4 87.9 88.7 80.7 93.1 76.5 C97.6 72.3 105.5 69.1 112 68.8 C118.5 68.6 128 70.9 132.4 75 C136.8 79.2 138.6 87.9 138.4 94Z"/><path class="nN" d="M129.2 96 C129.5 100.1 127.8 106.6 124.4 109.4 C121.1 112.2 113.6 113.7 108.9 112.7 C104.3 111.7 98.6 107.3 96.7 103.4 C94.7 99.4 95 92.8 97 88.8 C99.1 84.8 104.8 80.2 109 79.6 C113.2 78.9 119 82.2 122.4 85 C125.8 87.7 128.8 91.9 129.2 96Z"/></g>
+  <g><path class="rc" d="M170 69 V56 H175 A5 5 0 0 0 185 56 H190 V69 Z"/><path class="cN" d="M206.6 94 C206.5 100 203.5 107.5 199.1 111.8 C194.7 116 186.6 119.1 180 119.4 C173.4 119.6 163.9 117.5 159.3 113.3 C154.6 109 151.9 100.4 152 94 C152.1 87.6 155 79.3 159.7 75.1 C164.3 71 173.3 69.2 180 69.2 C186.7 69.3 195.4 71.5 199.8 75.6 C204.3 79.7 206.7 88 206.6 94Z"/><path class="nN" d="M198.3 96 C198.2 100 194.1 104.6 190.6 107.2 C187.1 109.8 181.5 112.3 177.2 111.6 C172.9 111 166.9 107.1 164.9 103.3 C162.8 99.4 162.8 92.5 164.9 88.8 C167 85 172.8 81.6 177.3 80.7 C181.7 79.8 188.2 80.9 191.7 83.4 C195.2 86 198.5 92 198.3 96Z"/></g>
+  <g class="quiet"><path class="rc" d="M248 52 L257 61 L248 70 L239 61 Z"/><path class="cN" d="M276.2 94 C276.4 100.1 272.8 108.2 268.1 112.7 C263.4 117.2 254.6 121.1 248 121 C241.4 120.9 233.5 116.4 228.7 111.9 C224 107.4 219.7 100.2 219.5 94 C219.2 87.8 222.5 79.3 227.3 74.8 C232 70.2 241.4 66.5 248 66.7 C254.6 67 262.3 71.8 267.1 76.3 C271.8 80.9 276.1 87.9 276.2 94Z"/><path class="nN" d="M266.2 96 C266.1 100.1 262.8 105.4 259.3 108.1 C255.8 110.7 249.1 112.9 245.1 112 C241.1 111 237.2 106 235.2 102.2 C233.3 98.4 231.6 92.5 233.3 88.9 C235 85.4 241 82 245.4 81.1 C249.8 80.2 256.2 81 259.7 83.5 C263.1 86 266.3 91.9 266.2 96Z"/></g>
+  <g class="quiet"><path class="rc" d="M307 69 V54 H313 V69 Z M319 69 V54 H325 V69 Z"/><path class="cN" d="M344.1 94 C344.2 100.1 340.7 108.1 336 112.6 C331.3 117.1 322.8 121 316 121.1 C309.2 121.2 300.1 117.8 295.3 113.3 C290.4 108.8 286.5 100.2 286.7 94 C286.9 87.8 291.6 80.5 296.5 75.9 C301.4 71.3 309.5 66.6 316 66.6 C322.5 66.6 330.9 71.2 335.6 75.8 C340.3 80.3 344 87.9 344.1 94Z"/><path class="nN" d="M332.8 96 C332.8 99.9 330.4 105.6 327.2 108 C324 110.4 317.7 111.2 313.5 110.3 C309.3 109.5 304.2 106.2 302.2 102.7 C300.3 99.1 299.9 92.8 301.7 89.1 C303.6 85.4 309 81.1 313.2 80.3 C317.4 79.5 323.7 81.7 326.9 84.4 C330.2 87 332.7 92.1 332.8 96Z"/></g>
+  <g class="sel"><path class="rcT" d="M170 69 V56 H175 A5 5 0 0 0 185 56 H190 V69 Z"/><path class="cT" d="M206.6 94 C206.5 100 203.5 107.5 199.1 111.8 C194.7 116 186.6 119.1 180 119.4 C173.4 119.6 163.9 117.5 159.3 113.3 C154.6 109 151.9 100.4 152 94 C152.1 87.6 155 79.3 159.7 75.1 C164.3 71 173.3 69.2 180 69.2 C186.7 69.3 195.4 71.5 199.8 75.6 C204.3 79.7 206.7 88 206.6 94Z"/><path class="nT" d="M198.3 96 C198.2 100 194.1 104.6 190.6 107.2 C187.1 109.8 181.5 112.3 177.2 111.6 C172.9 111 166.9 107.1 164.9 103.3 C162.8 99.4 162.8 92.5 164.9 88.8 C167 85 172.8 81.6 177.3 80.7 C181.7 79.8 188.2 80.9 191.7 83.4 C195.2 86 198.5 92 198.3 96Z"/></g>
+  <!-- the antigen fits only the third receptor -->
+  <g transform="translate(180 0)"><g class="agm"><path class="ag" d="M-11 42 H11 V55 H5 V56 A5 5 0 0 1 -5 56 V55 H-11 Z"/><text x="18" y="53" style="fill:var(--warn)">antigen</text></g></g>
+  <g class="sel"><path d="M180 130 V152 M172 144 L180 154 L188 144" style="fill:none;stroke:var(--track);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><text x="194" y="147" style="fill:var(--track)">match → selected</text></g>
+  <!-- the selected cell multiplies into identical effector clones, plus a memory cell -->
+  <g transform="translate(40 206)"><g class="c0"><path class="rcT" d="M-10 -21 V-34 H-5 A5 5 0 0 0 5 -34 H10 V-21 Z"/><path class="cT" d="M23.9 0 C24.1 5.3 21.7 12.8 17.7 16.3 C13.8 19.7 5.7 20.9 0 20.8 C-5.7 20.6 -12.3 18.6 -16.5 15.2 C-20.7 11.7 -25.2 5.2 -25.3 0 C-25.5 -5.2 -21.5 -12.4 -17.3 -15.9 C-13.1 -19.4 -5.7 -21.1 -0 -21 C5.7 -20.9 12.7 -18.8 16.7 -15.3 C20.6 -11.8 23.7 -5.3 23.9 0Z"/><path class="nT" d="M14.6 2 C14.7 5.4 12.6 10.4 9.9 12.4 C7.1 14.4 1.6 14.7 -1.9 13.9 C-5.5 13.1 -10 10.5 -11.4 7.6 C-12.9 4.7 -12.3 -0.4 -10.7 -3.3 C-9.2 -6.2 -5.2 -9 -1.9 -9.7 C1.5 -10.5 6.8 -9.9 9.5 -8 C12.3 -6 14.5 -1.4 14.6 2Z"/></g></g>
+  <g transform="translate(98 206)"><g class="c1"><path class="rcT" d="M-10 -21 V-34 H-5 A5 5 0 0 0 5 -34 H10 V-21 Z"/><path class="cT" d="M23.7 0 C23.6 5.1 20.4 11.5 16.4 15.1 C12.5 18.6 5.7 20.9 0 21.1 C-5.7 21.3 -13.8 19.8 -17.8 16.3 C-21.9 12.8 -24.3 5.4 -24.2 0 C-24.1 -5.4 -21.4 -12.2 -17.4 -15.9 C-13.3 -19.6 -5.7 -22.2 -0 -22.1 C5.7 -22 12.8 -19 16.7 -15.3 C20.7 -11.6 23.7 -5.1 23.7 0Z"/><path class="nT" d="M16.4 2 C16.3 5.5 12.8 10 9.7 12.2 C6.6 14.4 1.5 15.9 -2.2 15.2 C-6 14.6 -11.3 11.3 -12.8 8.2 C-14.3 5.1 -12.9 -0.3 -11.2 -3.5 C-9.4 -6.7 -5.7 -10.2 -2.2 -11 C1.3 -11.9 6.9 -10.8 10 -8.6 C13.1 -6.4 16.4 -1.5 16.4 2Z"/></g></g>
+  <g transform="translate(156 206)"><g class="c2"><path class="rcT" d="M-10 -21 V-34 H-5 A5 5 0 0 0 5 -34 H10 V-21 Z"/><path class="cT" d="M24.4 0 C24.4 4.9 20.1 11.1 16 14.7 C11.9 18.2 5.4 21.3 0 21.4 C-5.4 21.5 -12.3 18.6 -16.4 15 C-20.5 11.5 -24.5 5.2 -24.7 0 C-24.8 -5.2 -21.4 -12 -17.3 -15.9 C-13.2 -19.7 -5.6 -23.2 -0 -23 C5.6 -22.9 12.1 -18.6 16.1 -14.8 C20.2 -10.9 24.4 -4.9 24.4 0Z"/><path class="nT" d="M14.8 2 C15 5.3 12.6 10.1 9.8 12.3 C6.9 14.4 1.4 15.7 -2.1 14.9 C-5.7 14.1 -9.8 10.7 -11.4 7.6 C-13.1 4.5 -13.4 -0.7 -11.9 -3.8 C-10.3 -6.9 -5.6 -10.1 -2.1 -10.7 C1.4 -11.3 6.3 -9.6 9.1 -7.5 C11.9 -5.4 14.7 -1.3 14.8 2Z"/></g></g>
+  <g transform="translate(214 206)"><g class="c3"><path class="rcT" d="M-10 -21 V-34 H-5 A5 5 0 0 0 5 -34 H10 V-21 Z"/><path class="cT" d="M22.7 0 C22.7 5.2 21.1 12.4 17.4 15.9 C13.6 19.4 5.7 21.1 0 21.1 C-5.7 21 -12.8 19 -16.9 15.5 C-21 12 -24.4 5.3 -24.5 0 C-24.6 -5.3 -21.6 -12.5 -17.6 -16.1 C-13.5 -19.7 -5.8 -22 -0 -21.9 C5.8 -21.8 13.2 -19.2 17 -15.6 C20.7 -11.9 22.6 -5.2 22.7 0Z"/><path class="nT" d="M15.4 2 C15.2 5.4 12.2 9.4 9.2 11.7 C6.3 13.9 1.1 16.2 -2.3 15.6 C-5.7 14.9 -9.6 10.9 -11.3 7.6 C-13.1 4.3 -14.5 -1.3 -13 -4.3 C-11.4 -7.3 -5.9 -9.4 -2 -10.2 C1.9 -11 7.5 -11 10.4 -9 C13.3 -6.9 15.6 -1.4 15.4 2Z"/></g></g>
+  <g transform="translate(300 206)"><g class="mem"><path class="rcT" d="M-10 -21 V-34 H-5 A5 5 0 0 0 5 -34 H10 V-21 Z"/><path d="M25 0 C25 5.3 21.3 11.9 17.2 15.8 C13 19.7 5.7 23.4 0 23.4 C-5.7 23.4 -13 19.7 -17.1 15.8 C-21.3 11.9 -24.7 5.5 -24.9 0 C-25.2 -5.5 -22.8 -13.5 -18.7 -17.2 C-14.5 -20.8 -6 -22.1 -0 -21.9 C6 -21.6 13.1 -19.5 17.3 -15.9 C21.5 -12.3 25 -5.3 25 0Z" style="fill:var(--t1);stroke:var(--track);stroke-width:3;stroke-dasharray:5 4"/><polygon points="0,-10 2.9,-3 10.5,-2.4 4.7,2.5 6.5,9.9 0,6 -6.5,9.9 -4.7,2.5 -10.5,-2.4 -2.9,-3" style="fill:var(--track)"/></g></g>
+  <text class="lab1" x="127" y="254" text-anchor="middle">effector clones</text>
+  <text class="lab2" x="300" y="254" text-anchor="middle">memory</text>
+  <text class="m" x="14" y="28">diverse lymphocytes</text>
 </svg>

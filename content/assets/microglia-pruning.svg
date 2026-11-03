@@ -1,51 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmM2FlODY4Ny0zM2MyLTQwNWEtOWYxYy01Mjc0ZTAxMGM5MTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGUl7h84+9bXcFQfOofaqBoAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1N2Y3ODJmNS0zZTRmLTQ3NWMtYjQ0Ni1hNjY5N2VjMzA3Y2RscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo3mIswnospuBkoEu9/wSFnAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggEXc9TRvoe5y6KsehbtHYJ1Z+KjelprKph/e9VMCqWtSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK6tJHRKtunSerGgihfd4kgAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBJbz2eW0d/OIJiQ8Fx+YlSKhCCt6QlKxHaIzHi4Y/qQ2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmYzYWU4Njg3LTMzYzItNDA1YS05ZjFjLTUyNzRlMDEwYzkxMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjgwY2UwMDUxLTk2MzctNDJjYS05MGY5LTBiMzY1ZGRjYmY5MXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCARdz1NG+h7nLoqx6Fu0dgnVn4qN6WmsqmH971UwKpa1KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggTQpOcmLCuDsLsPoSgG0XFKA1t1fcGvY6tEpjM1VTbsuiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg8cBrLt4tWrHIVZXyc7m0M6Y9jFTt6s5uIan8p/G6K6N0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQC3L3e3nY16GHjX54WLffTNGW1jnWgjOWLf63xP/O5lx7Qqp2CY8bYapEKZJj4VbdunxOHEQQWEw9YWCu439jZ4=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img">
   <title>Microglia prune complement-tagged synapses</title>
-  <desc>Two synapses sit on a neuron. The weaker, less-active one is tagged with complement protein; a microglial cell extends a process, engulfs the tagged synapse, and it disappears, while the active untagged synapse remains.</desc>
+  <desc>A neuron has two synapses. The active one (green, full of vesicles) is kept. The weaker, less-active one is tagged with complement protein (amber dots); a microglial cell extends a process, engulfs the tagged synapse and pulls it inside, while the active untagged synapse remains.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--ok:#0f6e56;--track:#D4537E;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--ok:#5dcaa5;--track:#e67ba0;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .neuron{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2.5;}
-    .den{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .syn{fill:var(--ok);}
-    .synW{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .tag{fill:var(--warn);opacity:0;animation:tag 7s ease-in-out infinite;}
-    .micro{fill:var(--track);opacity:.9;}
-    .arm{fill:none;stroke:var(--track);stroke-width:5;stroke-linecap:round;stroke-dasharray:120;stroke-dashoffset:120;animation:reach 7s ease-in-out infinite;}
-    .weak{animation:eaten 7s ease-in-out infinite;}
-    @keyframes tag{0%,16%{opacity:0}26%,60%{opacity:1}70%,100%{opacity:0}}
-    @keyframes reach{0%,24%{stroke-dashoffset:120}44%{stroke-dashoffset:0}64%{stroke-dashoffset:0}80%,100%{stroke-dashoffset:120}}
-    @keyframes eaten{0%,50%{opacity:1;transform:scale(1)}66%,100%{opacity:0;transform:scale(.2)}}
-    @media (prefers-reduced-motion:reduce){.tag{animation:none;opacity:0}.arm{animation:none;stroke-dashoffset:120}.weak{animation:none;opacity:0}}
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#D4537E;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#e67ba0;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .den0{fill:none;stroke:var(--line-strong);stroke-width:14;stroke-linecap:round;}
+    .den1{fill:none;stroke:var(--n1);stroke-width:10;stroke-linecap:round;}
+    .ax{fill:none;stroke-width:3;stroke-linecap:round;}
+    .ves{fill:var(--ok);}
+    .tag{fill:var(--warn);stroke:var(--surface);stroke-width:1.5;}
+    .kept{opacity:0;animation:kept 9s ease-in-out infinite;}
+    @keyframes kept{0%,60%{opacity:0}74%,95%{opacity:1}100%{opacity:0}}
+    .arm{stroke-dasharray:1 1;stroke-dashoffset:1;animation:arm 9s ease-in-out infinite;}
+    @keyframes arm{0%,22%{stroke-dashoffset:1}36%,44%{stroke-dashoffset:0}60%,100%{stroke-dashoffset:1}}
+    .eat{animation:eat 9s ease-in-out infinite;}
+    @keyframes eat{0%,40%{opacity:1;transform:translate(0,0) scale(1)}58%,95%{opacity:1;transform:translate(72px,-48px) scale(.5)}97%{opacity:0;transform:translate(72px,-48px) scale(.5)}97.1%{opacity:0;transform:translate(0,0) scale(1)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+    .tags{opacity:0;animation:tags 9s ease-in-out infinite;}
+    @keyframes tags{0%,8%{opacity:0}22%,97%{opacity:1}97.1%{opacity:0}}
+    .wax{opacity:1;animation:wax 9s ease-in-out infinite;}
+    @keyframes wax{0%,48%{opacity:1}58%,95%{opacity:0}100%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-7.8s!important;animation-play-state:paused!important;}}
   </style>
-
-  <!-- postsynaptic neuron with two dendrites -->
-  <circle class="neuron" cx="80" cy="150" r="30"/>
-  <text class="lbl" x="80" y="155" text-anchor="middle">neuron</text>
-  <path class="den" d="M104 134 C150 96 180 84 214 76"/>
-  <path class="den" d="M104 166 C150 204 180 216 214 224"/>
-
-  <!-- active synapse (kept) -->
-  <circle class="syn" cx="224" cy="74" r="13"/>
-  <text class="small" x="244" y="70">active</text>
-  <text class="small" x="244" y="86">synapse · kept</text>
-
-  <!-- weak synapse (tagged, then engulfed) -->
-  <g class="weak" style="transform-origin:224px 226px">
-    <circle class="synW" cx="224" cy="226" r="13"/>
-  </g>
-  <circle class="tag" cx="234" cy="216" r="6"/>
-  <circle class="tag" cx="214" cy="236" r="6"/>
-  <circle class="tag" cx="236" cy="236" r="6"/>
-  <text class="small" x="238" y="204">weak synapse</text>
-  <text class="small" x="238" y="220" style="fill:var(--warn)">complement tag</text>
-
-  <!-- microglion reaching from bottom right -->
-  <path class="arm" d="M300 244 C280 240 250 236 234 230"/>
-  <g class="micro">
-    <circle cx="318" cy="250" r="19"/>
-    <path d="M318 250 L303 239 M318 250 L335 237 M318 250 L305 265 M318 250 L337 262 M318 250 L320 229" stroke="var(--track)" stroke-width="3" stroke-linecap="round"/>
-  </g>
-  <text class="lbl" x="318" y="285" text-anchor="middle">microglion</text>
+  <!-- the neuron and its two dendrites -->
+  <path class="den0" d="M84 136 C130 112 168 90 210 76"/>
+  <path class="den0" d="M84 166 C126 196 158 214 198 224"/>
+  <path class="den1" d="M84 136 C130 112 168 90 210 76"/>
+  <path class="den1" d="M84 166 C126 196 158 214 198 224"/>
+  <circle cx="216" cy="72" r="9" style="fill:var(--n1);stroke:var(--line-strong);stroke-width:2"/>
+  <circle cx="206" cy="228" r="9" style="fill:var(--n1);stroke:var(--line-strong);stroke-width:2"/>
+  <path class="cN" d="M97.1 150 C96.9 158.5 91.3 168.8 84.5 175.1 C77.6 181.3 65.4 187.7 56 187.7 C46.6 187.6 34.9 181.1 27.8 174.8 C20.8 168.5 14 158.4 13.8 150 C13.6 141.6 19.8 130.1 26.8 124.3 C33.8 118.4 46.2 115 56 115 C65.8 114.9 78.9 118 85.7 123.8 C92.6 129.7 97.3 141.5 97.1 150Z"/>
+  <path class="nN" d="M76.9 152 C76.9 156.6 75.5 163.3 71.6 165.7 C67.8 168.1 59.3 167.5 53.9 166.4 C48.5 165.4 41.3 162.7 39.2 159.2 C37.2 155.8 39.1 149.3 41.5 145.6 C43.9 142 48.7 138.4 53.8 137.2 C58.8 136 67.9 135.8 71.7 138.2 C75.6 140.7 76.9 147.4 76.9 152Z"/>
+  <text x="56" y="210" text-anchor="middle">neuron</text>
+  <!-- active synapse: busy terminal full of vesicles -->
+  <path class="ax" d="M346 82 C318 76 296 64 272 58" style="stroke:var(--ok)"/>
+  <path d="M272.9 58 C272.9 62.4 270.4 67.9 266.6 71 C262.7 74 255.4 76.5 250 76.4 C244.6 76.2 238 73.2 234.4 70.2 C230.8 67.1 228.4 62.1 228.4 58 C228.3 53.9 230.4 48.4 234 45.5 C237.6 42.5 244.5 40.6 250 40.5 C255.5 40.4 263 41.9 266.9 44.8 C270.7 47.7 273 53.6 272.9 58Z" style="fill:var(--ok1);stroke:var(--ok);stroke-width:2"/>
+  <circle class="ves" cx="242" cy="52" r="2.6"/>
+  <circle class="ves" cx="254" cy="50" r="2.6"/>
+  <circle class="ves" cx="248" cy="62" r="2.6"/>
+  <circle class="ves" cx="260" cy="60" r="2.6"/>
+  <circle class="ves" cx="238" cy="62" r="2.6"/>
+  <circle class="ves" cx="264" cy="50" r="2.6"/>
+  <text x="230" y="30" text-anchor="end" style="fill:var(--ok)">active synapse</text>
+  <text class="kept" x="238" y="30" style="fill:var(--ok)">✓ kept</text>
+  <!-- microglion with branched processes -->
+  <path d="M316 178 L330 150 L322 128 M330 150 L346 138" style="fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <path d="M324 202 L344 226 L346 246 M344 226 L332 250" style="fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <path d="M292 172 L286 150 L270 136 M286 150 L292 128" style="fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <path d="M304 216 L310 238 L298 256 M310 238 L322 258" style="fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <path d="M268 186 L250 176 L240 164" style="fill:none;stroke:var(--track);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"/>
+  <path class="cT" d="M334.5 194 C334.1 200 326.3 206.5 320.2 210.9 C314.1 215.4 305.5 220.9 298 221 C290.5 221.1 281.4 215.9 275.3 211.4 C269.2 206.9 261.3 199.7 261.4 194 C261.4 188.3 269.7 181.6 275.8 177 C281.9 172.4 290.2 166.7 298 166.4 C305.8 166.1 316.7 170.5 322.7 175.1 C328.8 179.7 335 188 334.5 194Z"/>
+  <path class="nT" d="M319.6 198 C319.6 201.2 316.4 205.9 313 207.5 C309.6 209.1 302.6 208.9 299.1 207.4 C295.6 205.8 292.1 201.1 292.1 198 C292.2 194.9 295.6 190.3 299.1 188.6 C302.6 187 309.8 186.6 313.2 188.2 C316.6 189.7 319.7 194.8 319.6 198Z"/>
+  <text x="298" y="290" text-anchor="middle" style="fill:var(--track)">microglion</text>
+  <path class="arm" pathLength="1" d="M276 200 C262 214 254 224 248 232" style="fill:none;stroke:var(--track);stroke-width:10;stroke-linecap:round"/>
+  <path class="arm" pathLength="1" d="M276 200 C262 214 254 224 248 232" style="fill:none;stroke:var(--t1);stroke-width:5;stroke-linecap:round"/>
+  <!-- weak synapse: few vesicles; complement tags it, the microglion engulfs it -->
+  <path class="ax wax" d="M206 298 C212 280 218 266 228 254" style="stroke:var(--line-strong)"/>
+  <g transform="translate(230 242)"><g class="eat"><path class="cN" d="M22.2 0 C22.1 3.7 17.9 8.3 14.2 10.8 C10.5 13.3 5 14.9 0 15.1 C-5 15.3 -12.4 14.5 -15.7 12 C-19.1 9.5 -20.5 3.8 -20.2 0 C-19.9 -3.8 -17.5 -8.1 -14.2 -10.8 C-10.8 -13.5 -4.8 -16.2 -0 -16.3 C4.8 -16.3 10.9 -13.8 14.6 -11.1 C18.3 -8.4 22.2 -3.7 22.2 0Z"/><circle cx="-4" cy="2" r="2.6" style="fill:var(--n2)"/><g class="tags"><circle class="tag" cx="-15" cy="-11" r="5"/><circle class="tag" cx="12" cy="-14" r="5"/><circle class="tag" cx="20" cy="4" r="5"/><circle class="tag" cx="-2" cy="16" r="5"/><circle class="tag" cx="-20" cy="6" r="5"/></g></g></g>
+  <text x="196" y="270" text-anchor="end">weak synapse</text>
+  <text class="tags" x="196" y="290" text-anchor="end" style="fill:var(--warn)">complement tag</text>
 </svg>

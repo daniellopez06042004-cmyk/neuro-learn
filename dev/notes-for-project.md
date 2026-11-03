@@ -1,3 +1,45 @@
+### 2026-11-02: visuals overhaul, microscope in the slide box, and a request: one paper per slide
+
+**1. A request: a `paper` for every slide.** Dan wants each slide to link to a published paper with a sample like the one on the slide, so he can read about it. Please add this to every entry in `slides.json`:
+```json
+"paper": { "citation": "Wolfson RL et al., 2023, Cell", "doi": "10.1016/j.cell.2023.07.007", "figure": "Fig. 2C" }
+```
+- **Choose a figure that shows the same tissue and stain (or close),** e.g. a DRG section stained for NF200/CGRP, or a whole-mount colon with CGRP fibers.
+- **`figure` is optional but very helpful.**
+- **Brain slides:** the Allen atlas paper is fine unless a paper shows the region better.
+- **Same DOI rules as lessons:** check that each one resolves. The checker validates the field.
+- **Until a slide has one,** the slide shows "Read about it", linking to its first source with a DOI.
+
+**2. The slide box now has a microscope.** You drag the slide onto a stage and look through a round eyepiece. You can drag to move around, pinch to zoom, or switch between 4×/10×/40× objectives, with a scale bar that re-sizes as you zoom. Nothing to do on your side; it uses the existing drawings.
+
+**3. Four more visuals are now live models (like A2-L3's action potential).** These are app-side files, but **please copy each new `visual` into your lesson files**, or a later import of those lessons will bring the old SVGs back. You can read them from the live JSON or from `app/content/lessons/`:
+- `A2-L1` › `s2` → `assets/driving-force-model.html`. E_Na and E_K are computed with the Nernst equation at 37 °C from typical mammalian concentrations (Na⁺ 145/15, K⁺ 5/140 mM), giving +61 and −89 mV. That matches your "≈ +60 / ≈ −90". Drag Vm and watch both driving forces change.
+- `A2-L2` › `s2` → `assets/graded-potential-model.html`. A passive ending (mechanically gated conductance) is coupled to a Hodgkin–Huxley spike zone. Gentle and firmer presses give graded receptor potentials (about 6 and 12 mV at the ending, smaller at the zone); a hard press fires a train. This matches your text on passive spread and the spike initiation zone. The ending's shape is a **real traced mouse skin afferent** (Wu, Williams & Nathans 2012, eLife; NeuroMorpho.Org).
+- `A5-L1` › `s1` → `assets/fiber-race-model.html`. Myelinated speeds follow Hursh's rule (≈6 m/s per µm): Aβ 9 µm → 54 m/s, Aδ 3 µm → 18 m/s. C is ≈1 m/s. Over ≈1 m (a person's foot to cord) they arrive at 19 ms, 56 ms and 1.0 s. **Please check** the readout line: "That gap is why sharp first pain comes before burning second pain."
+- `A5-L2` › `s2` → `assets/threshold-tiling-model.html`. The thresholds are **illustrative** and say so on screen. If the colon paper gives real threshold values or ranges for its subtypes, send them and I'll use them.
+
+**4. All 20 diagram-style SVGs are redrawn** in place, with the same file names, entities and labels. They now use filled shapes, a subject that fills the frame, and animations told in 2–4 beats. Nothing to copy except two alt texts below. **Please check the depiction changes and open questions:**
+- **Fixed in the drawing (please confirm):**
+  - `piezo-gating`: the old drawing bulged the membrane *toward* the probe pushing it. It now dips under the probe.
+  - `trp-gating`: capsaicin was shown acting from outside. It now enters the membrane, where its binding site is.
+  - `gut-wall-layers`: the muscle orientation was inverted. In a cross-section, circular muscle runs in the plane and longitudinal muscle is cut across; this now matches the colon slide.
+  - `dreadd-excite-silence`: hM4Di was drawn greyed out, which read as "not working". Both receptors are now active; the difference shows in the outcome traces.
+  - `control-grid-anim`: both actuator cells now visibly get the drug.
+- **Simplifications kept, flagged in case you want them changed:**
+  - `tlr-pattern` omits the MD-2/CD14 helpers.
+  - `antigen-presentation` draws MHC I and MHC II with the same shape.
+  - `inflammatory-soup` leaves out bradykinin (the body lists it).
+  - `gut-wall-layers` shows villi, which belong to the small intestine and not the colon. Fine if D6-L2 means the gut generally.
+  - `pseudounipolar-neuron` draws the cord with the dorsal horn facing the DRG (schematic).
+- **Alt texts updated on this side to match what's drawn. Please copy them:**
+  - `B1-L2` › `s1` › `visual.alt` → "Three differently shaped bacteria each carry the same surface molecule, LPS. TLR4 receptors on an immune cell bind that shared pattern from all three, and the cell switches on a danger response."
+  - `C4-L4` › `s1` › `visual.alt` → "Three filters — retrograde route, DIO switch, and a subtype Cre line — narrow 24 cells down to 2 target neurons." (The old alt said "the single target neuron", but the drawing has always shown 2.)
+- **Optional:** `C4-L4` › `s1`'s body is about DIO/FLEX specifically, while the funnel shows all three filters. Ask if you want a DIO-specific visual.
+
+**Your `content/assets/` folder now has the new files.** I copied the 20 redrawn SVGs and the 5 live-model HTML files into it, so your copies match the app. Edit those versions if you need to change one; don't restore the old ones.
+
+**5. Real neuron shapes.** `dev/neurons.py` turns NeuroMorpho.Org reconstructions into drawable paths. FlyWire (Dan's suggestion) is a fly connectome, so we're using mouse cells instead: the Nathans lab's skin endings (Wu et al. 2012) and, later, the Todd lab's dorsal horn neurons. If you know a published mouse DRG reconstruction that has both the cell body and the stem, name it.
+
 ### 2026-11-02: A2-L3 now uses a live, model-driven action potential (pilot for the visuals overhaul)
 
 **Dan approved a new kind of visual and it's live:** `assets/action-potential-model.html`, an `interactive` widget on `A2-L3` › `s1`, replacing `action-potential.svg` there. **Please copy this `visual` into your `A2-L3` › `s1`,** or the next import of A2-L3 will bring the old SVG back:

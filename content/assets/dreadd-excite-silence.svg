@@ -1,54 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjZmVjOWQwMS0xMGIxLTRhYmQtOGRiZC05NzVjMzA2OGJmMmIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaF2TMuVbtfvxQYNXqFRW/REAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyYzY3Mjk1My0yZDEzLTQyMGYtYjRjMS04MWI0NDk2YzY4ZjFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoAemjo/tCpGFTgJHwsSLjMgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggRIygttUhebeTI+HnLMYtvLL8myfzSRWHrtfdqricOKKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK5u9Ab40uxK+FvaL3YQ4aAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDeb6jVjIvf8RGO0TxegPhNkPAEVSeljyG/0sjzEHK7xmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNmZWM5ZDAxLTEwYjEtNGFiZC04ZGJkLTk3NWMzMDY4YmYyYi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmQ1OTk4NzBjLWI2NjMtNGMxMi05MGY1LWFmYzFhZDQ4MDhiMnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBEjKC21SF5t5Mj4ecsxi28svybJ/NJFYeu192quJw4oqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXW7OpZLSR+wBENa3+RyOcKkkegflB0KgmscTeTSZYNOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggFzl12o0DTJ3/CSkHTnWaGaGtgat4q2jE8kURO8E9Dnh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHqN39KHMpZZJfBeW44A9cXFVDKg+pUe10MugYS3I3XFs5ndAuayeaB9D25Khj2oWYnnihX9DyzyIfgJwoBOGPk=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 344" role="img">
   <title>hM3Dq excites, hM4Di silences</title>
   <desc>The same drug docks two engineered receptors: hM3Dq couples to Gq and the neuron fires; hM4Di couples to Gi/o and the neuron goes quiet.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line-strong:#b4b2a9;--surface-2:#efede6;--warn:#ba7517;--ok:#0f6e56;--track:#5B8DEF;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--warn:#ef9f27;--ok:#5dcaa5;--track:#7ea6f5;}}
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--lipid:#e8d9c4;--ok:#0f6e56;--warn:#ba7517;--track:#5B8DEF;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--lipid:#4a4237;--ok:#5dcaa5;--warn:#ef9f27;--track:#7ea6f5;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:15px;font-weight:600;} .small{font-size:14px;font-weight:400;fill:var(--muted);}
+    .lbl{font-size:16px;font-weight:600;}
+    .small{font-size:14px;font-weight:600;fill:var(--muted);}
+    .lipid{fill:var(--lipid);stroke:none;}
+    .head{fill:var(--line-strong);}
+    .gpcr{fill:color-mix(in srgb, var(--track) 30%, var(--surface));stroke:var(--track);stroke-width:2;}
+    .gprot{fill:color-mix(in srgb, var(--track) 16%, var(--surface));stroke:var(--track);stroke-width:2;}
+    .drugF{fill:color-mix(in srgb, var(--warn) 70%, var(--surface));stroke:var(--warn);stroke-width:2;}
     .den{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .axon{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .memb{fill:none;stroke:var(--line-strong);stroke-width:2;}
-    .gpcr{fill:var(--surface-2);stroke:var(--track);stroke-width:2;}
-    .drug{fill:var(--warn);}
+    .axon{fill:none;stroke:var(--line-strong);stroke-width:3;stroke-linecap:round;}
     .somaE{fill:var(--track);stroke:var(--track);stroke-width:2.5;}
-    .somaS{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2.5;}
-    .spike{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:150;stroke-dashoffset:150;animation:fire 5s linear infinite;}
-    .flat{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-linecap:round;}
-    @keyframes fire{0%,20%{stroke-dashoffset:150}55%{stroke-dashoffset:0}80%{stroke-dashoffset:0}100%{stroke-dashoffset:150}}
-    @media (prefers-reduced-motion:reduce){.spike{animation:none;stroke-dashoffset:0}}
+    .nucE{fill:color-mix(in srgb, var(--surface) 70%, var(--track));}
+    .somaS{fill:color-mix(in srgb, var(--line-strong) 24%, var(--surface));stroke:var(--line-strong);stroke-width:2.5;}
+    .nucS{fill:color-mix(in srgb, var(--line-strong) 55%, var(--surface));}
+    .arrow{fill:color-mix(in srgb, var(--track) 40%, var(--surface));stroke:var(--track);stroke-width:1.5;}
+    .arrowQ{fill:color-mix(in srgb, var(--line-strong) 30%, var(--surface));stroke:var(--line-strong);stroke-width:1.5;}
+    .trace{fill:none;stroke:var(--line-strong);stroke-width:1.5;stroke-dasharray:3 4;}
+    .spike{fill:none;stroke:var(--track);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:260;stroke-dashoffset:260;animation:fire 8s linear infinite;}
+    .flat{fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round;}
+    /* beats: 1 drug falls · 2 drug docks in both receptors · 3 one neuron fires, the other goes quiet · 4 hold */
+    .dr{animation:dock 8s ease-in-out infinite;}
+    .out{opacity:0;animation:out 8s ease-in-out infinite;}
+    @keyframes dock{0%,6%{opacity:0;transform:translateX(-48px)}22%,100%{opacity:1;transform:translateX(0)}}
+    @keyframes fire{0%,34%{stroke-dashoffset:260}66%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+    @keyframes out{0%,36%{opacity:0}50%,100%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){
+      .dr{animation:none;opacity:1;transform:none}
+      .spike{animation:none;stroke-dashoffset:0}
+      .out{animation:none;opacity:1}
+    }
   </style>
 
+  <!-- ================= ROW 1: hM3Dq · Gq → fires ================= -->
+  <text class="lbl" x="18" y="32" text-anchor="start">hM3Dq · Gq</text>
+
+  <!-- membrane patch with the receptor -->
+  <rect class="lipid" x="18" y="82" width="136" height="28"/>
+  <g class="head">
+    <circle cx="23" cy="82" r="4"/><circle cx="33" cy="82" r="4"/><circle cx="43" cy="82" r="4"/><circle cx="53" cy="82" r="4"/>
+    <circle cx="63" cy="82" r="4"/><circle cx="105" cy="82" r="4"/><circle cx="115" cy="82" r="4"/><circle cx="125" cy="82" r="4"/>
+    <circle cx="135" cy="82" r="4"/><circle cx="145" cy="82" r="4"/>
+    <circle cx="23" cy="110" r="4"/><circle cx="33" cy="110" r="4"/><circle cx="43" cy="110" r="4"/><circle cx="53" cy="110" r="4"/>
+    <circle cx="63" cy="110" r="4"/><circle cx="105" cy="110" r="4"/><circle cx="115" cy="110" r="4"/><circle cx="125" cy="110" r="4"/>
+    <circle cx="135" cy="110" r="4"/><circle cx="145" cy="110" r="4"/>
+  </g>
+  <rect class="gpcr" x="70" y="74" width="14" height="44" rx="6"/>
+  <rect class="gpcr" x="90" y="74" width="14" height="44" rx="6"/>
+  <g class="dr">
+    <polygon class="drugF" points="87,46 99,53 99,67 87,74 75,67 75,53"/>
+    <text class="small" x="108" y="58" text-anchor="start" style="fill:var(--warn)">drug</text>
+  </g>
+  <!-- G protein under the receptor -->
+  <g class="gprot">
+    <circle cx="80" cy="128" r="9"/><circle cx="95" cy="131" r="7"/>
+  </g>
+  <!-- arrow to the neuron -->
+  <g class="arrow"><path d="M124 132 L166 132 L166 126 L182 136 L166 146 L166 140 L124 140 Z"/></g>
+
+  <!-- neuron: fires -->
+  <g transform="translate(252,96)">
+    <g class="den">
+      <path d="M-8,-13 C-17,-26 -25,-32 -33,-40"/><path d="M-22,-28 L-31,-30"/>
+      <path d="M8,-13 C17,-26 25,-32 33,-40"/><path d="M22,-28 L31,-30"/>
+      <path d="M-14,-7 C-26,-14 -35,-16 -43,-15"/><path d="M-31,-14 L-37,-21"/>
+      <path d="M0,-19 C-1,-33 1,-39 0,-47"/><path d="M0,-35 L7,-42"/>
+    </g>
+    <path class="axon" d="M18,2 L74,2"/>
+    <circle class="somaE" r="18"/>
+    <circle class="nucE" r="6"/>
+  </g>
+  <line class="trace" x1="190" y1="152" x2="344" y2="152"/>
+  <polyline class="spike" points="190,152 212,152 220,132 228,172 236,152 252,152 260,132 268,172 276,152 292,152 300,132 308,172 316,152 344,152"/>
+  <g class="out"><text class="lbl" x="344" y="42" text-anchor="end" style="fill:var(--track)">fires</text></g>
+
   <!-- divider -->
-  <line x1="24" y1="165" x2="336" y2="165" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="3 5" opacity=".5"/>
+  <line x1="18" y1="178" x2="344" y2="178" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 6"/>
 
-  <!-- ROW 1: hM3Dq -> fires -->
-  <text class="lbl" x="24" y="36" text-anchor="start">hM3Dq · Gq</text>
-  <!-- receptor inset -->
-  <line class="memb" x1="30" y1="86" x2="120" y2="86"/><line class="memb" x1="30" y1="98" x2="120" y2="98"/>
-  <rect class="gpcr" x="66" y="78" width="18" height="28" rx="6"/>
-  <polygon class="drug" points="75,58 83,63 83,72 75,77 67,72 67,63"/>
-  <text class="small" x="98" y="128" text-anchor="middle">drug docks</text>
-  <!-- neuron fires -->
-  <g transform="translate(248,96)">
-    <g class="den"><path d="M-5,-9 C -13,-20 -20,-24 -28,-31"/><path d="M5,-9 C 13,-20 20,-24 28,-31"/><path d="M-10,-3 C -24,-8 -32,-8 -41,-7"/></g>
-    <circle class="somaE" r="13"/>
-    <path class="axon" d="M12,2 L40,2"/>
-  </g>
-  <polyline class="spike" points="252,116 268,116 276,92 284,140 292,116 320,116"/>
-  <text class="lbl" x="226" y="142" text-anchor="middle" style="fill:var(--track)">fires</text>
+  <!-- ================= ROW 2: hM4Di · Gi/o → quiet ================= -->
+  <text class="lbl" x="18" y="210" text-anchor="start">hM4Di · Gi/o</text>
 
-  <!-- ROW 2: hM4Di -> quiet -->
-  <text class="lbl" x="24" y="200" text-anchor="start">hM4Di · Gi/o</text>
-  <line class="memb" x1="30" y1="250" x2="120" y2="250"/><line class="memb" x1="30" y1="262" x2="120" y2="262"/>
-  <rect class="gpcr" x="66" y="242" width="18" height="28" rx="6" style="stroke:var(--muted)"/>
-  <polygon class="drug" points="75,222 83,227 83,236 75,241 67,236 67,227"/>
-  <text class="small" x="98" y="292" text-anchor="middle">drug docks</text>
-  <g transform="translate(248,260)">
-    <g class="den"><path d="M-5,-9 C -13,-20 -20,-24 -28,-31"/><path d="M5,-9 C 13,-20 20,-24 28,-31"/><path d="M-10,-3 C -24,-8 -32,-8 -41,-7"/></g>
-    <circle class="somaS" r="13"/>
-    <path class="axon" d="M12,2 L40,2"/>
+  <rect class="lipid" x="18" y="260" width="136" height="28"/>
+  <g class="head">
+    <circle cx="23" cy="260" r="4"/><circle cx="33" cy="260" r="4"/><circle cx="43" cy="260" r="4"/><circle cx="53" cy="260" r="4"/>
+    <circle cx="63" cy="260" r="4"/><circle cx="105" cy="260" r="4"/><circle cx="115" cy="260" r="4"/><circle cx="125" cy="260" r="4"/>
+    <circle cx="135" cy="260" r="4"/><circle cx="145" cy="260" r="4"/>
+    <circle cx="23" cy="288" r="4"/><circle cx="33" cy="288" r="4"/><circle cx="43" cy="288" r="4"/><circle cx="53" cy="288" r="4"/>
+    <circle cx="63" cy="288" r="4"/><circle cx="105" cy="288" r="4"/><circle cx="115" cy="288" r="4"/><circle cx="125" cy="288" r="4"/>
+    <circle cx="135" cy="288" r="4"/><circle cx="145" cy="288" r="4"/>
   </g>
-  <line class="flat" x1="252" y1="280" x2="320" y2="280"/>
-  <text class="lbl" x="226" y="306" text-anchor="middle" style="fill:var(--muted)">quiet</text>
+  <rect class="gpcr" x="70" y="252" width="14" height="44" rx="6"/>
+  <rect class="gpcr" x="90" y="252" width="14" height="44" rx="6"/>
+  <g class="dr">
+    <polygon class="drugF" points="87,224 99,231 99,245 87,252 75,245 75,231"/>
+  </g>
+  <g class="gprot">
+    <circle cx="80" cy="306" r="9"/><circle cx="95" cy="309" r="7"/>
+  </g>
+  <g class="arrowQ"><path d="M124 310 L166 310 L166 304 L182 314 L166 324 L166 318 L124 318 Z"/></g>
+
+  <!-- neuron: quiet -->
+  <g transform="translate(252,274)">
+    <g class="den">
+      <path d="M-8,-13 C-17,-26 -25,-32 -33,-40"/><path d="M-22,-28 L-31,-30"/>
+      <path d="M8,-13 C17,-26 25,-32 33,-40"/><path d="M22,-28 L31,-30"/>
+      <path d="M-14,-7 C-26,-14 -35,-16 -43,-15"/><path d="M-31,-14 L-37,-21"/>
+      <path d="M0,-19 C-1,-33 1,-39 0,-47"/><path d="M0,-35 L7,-42"/>
+    </g>
+    <path class="axon" d="M18,2 L74,2"/>
+    <circle class="somaS" r="18"/>
+    <circle class="nucS" r="6"/>
+  </g>
+  <line class="trace" x1="190" y1="330" x2="344" y2="330"/>
+  <line class="flat" x1="190" y1="330" x2="344" y2="330"/>
+  <g class="out"><text class="lbl" x="344" y="220" text-anchor="end" style="fill:var(--muted)">quiet</text></g>
 </svg>

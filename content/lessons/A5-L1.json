@@ -18,10 +18,10 @@
       "title": "Three main cables",
       "body": "Sensory axons sort into three classes by size and [[myelination|myelin]]:\n\n- **Aβ:** large, myelinated, fast. Mostly gentle touch and vibration.\n- **Aδ:** thin, lightly myelinated, medium speed. Sharp 'first' pain and cool.\n- **C:** unmyelinated, slow. Burning 'second' pain, warmth, itch, and most visceral sensation.\n\nBigger and myelinated means faster (A2-L4).",
       "visual": {
-        "type": "svg-anim",
-        "src": "assets/fiber-classes.svg",
-        "alt": "Three sensory axons stacked: a thick heavily myelinated Aβ fiber, a thin lightly myelinated Aδ fiber, and an unmyelinated C fiber. The same signal reaches the far end first on Aβ, then Aδ, and last on C.",
-        "caption": "Same stimulus, three speeds: Aβ fastest, C slowest."
+        "type": "interactive",
+        "src": "assets/fiber-race-model.html",
+        "alt": "Three axons from foot to spinal cord: thick myelinated Aβ, thin myelinated Aδ and unmyelinated C. An impulse starts on all three at once, jumps node to node on the myelinated ones, and arrives after about 19 ms on Aβ, 56 ms on Aδ and 1 s on C.",
+        "caption": "Same stimulus, three speeds: Aβ fastest, C slowest. Try it slowed down."
       }
     },
     {

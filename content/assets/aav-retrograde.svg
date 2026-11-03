@@ -1,54 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxZDk5OGE0Yy1lYTJmLTQ5YTgtOGUxMS02NzQ3ZDUzNTAxYTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaFRx67xipFJdulvdzs4kkOgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozNWQ1MTlhZS0wNWFkLTQ3MTAtYmY3NC01ZGJiOTNmZDkzY2NscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWYEBiX0YqtOrAABHUqgIcwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggqy8Qhu/ejcaN0f61XqzlGjDX+7yStckKgdMTfexAsxykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAG56fj9QpkI77Vto4rL4mQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDm79RIch9Om3YPMXd8grqVIHzcP59NtmozwUXtLt2k62RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjFkOTk4YTRjLWVhMmYtNDlhOC04ZTExLTY3NDdkNTM1MDFhMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmZjZTU0ZjMyLWEwNDMtNGIxYy04YTJhLTY1OGQ5MWI5OTFmYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCrLxCG796Nxo3R/rVerOUaMNf7vJK1yQqB0xN97ECzHKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggHICeVKtueoLXzYX9fQf17i6jt6Dj1ZH8LIJbWjz5JQCiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQGLAYksE2MEO7bqpLWL08Y8yKAFVu78KFUYm0fEEwVh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFcseLssPhMZKRBEiXJ7tzJ6m45mEOwFeBkl/z4bxu7m3R4YsKFZQWAVqP7Dqq8DX0tOnjjI7z+5KjrMg8apcdk=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 368" role="img">
   <title>Retrograde AAV access to DRG neurons</title>
   <desc>A retrograde AAV injected in the pancreas is taken up at nerve terminals and carried up the axon, past the fork, to the DRG cell body, which then expresses the payload; a central branch runs on into the spinal cord.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--track:#5B8DEF;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--track:#7ea6f5;}}
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--track:#5B8DEF;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--track:#7ea6f5;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:15px;font-weight:600;} .small{font-size:14px;font-weight:400;fill:var(--muted);}
-    .branch{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .tissue{fill:#e8b4b0;opacity:.5;stroke:var(--line-strong);stroke-width:2;}
-    .cord{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .soma{fill:var(--surface-2);stroke:var(--track);stroke-width:2.5;}
-    .somaOn{fill:var(--track);opacity:0;animation:on 6s ease-in-out infinite;}
-    .expr{opacity:0;animation:txt 6s ease-in-out infinite;}
-    .cap{fill:var(--track);stroke:var(--surface);stroke-width:1.5;}
-    /* terminal (180,300) → up the axon → fork (150,150) → stem → soma (116,150) */
-    .v{offset-path:path("M180 300 L150 150 L116 150");offset-rotate:0deg;opacity:0;animation:ride 6s ease-in-out infinite;}
-    .v2{animation-delay:.5s;} .v3{animation-delay:1s;}
-    @keyframes ride{0%,6%{offset-distance:0%;opacity:0}12%{offset-distance:0%;opacity:1}56%{offset-distance:100%;opacity:1}64%,100%{offset-distance:100%;opacity:0}}
-    @keyframes on{0%,60%{opacity:0}74%,100%{opacity:.9}}
-    @keyframes txt{0%,62%{opacity:0}76%,100%{opacity:1}}
-    @media (prefers-reduced-motion:reduce){.v{animation:none;opacity:0}.somaOn{animation:none;opacity:.9}.expr{animation:none;opacity:1}}
+    .lbl{font-size:15px;font-weight:600;}
+    .small{font-size:14px;font-weight:400;fill:var(--muted);}
+    .nerveOut{fill:none;stroke:var(--line-strong);stroke-width:11;stroke-linecap:round;stroke-linejoin:round;}
+    .nerveIn{fill:none;stroke:color-mix(in srgb, var(--line-strong) 26%, var(--surface));stroke-width:8;stroke-linecap:round;stroke-linejoin:round;}
+    .twig{fill:none;stroke:var(--line-strong);stroke-width:3;stroke-linecap:round;}
+    .cord{fill:color-mix(in srgb, var(--line-strong) 18%, var(--surface));stroke:var(--line-strong);stroke-width:2;}
+    .grey{fill:color-mix(in srgb, var(--line-strong) 46%, var(--surface));stroke:var(--line-strong);stroke-width:1.5;}
+    .tissue{fill:color-mix(in srgb, #e8b4b0 46%, var(--surface-2));stroke:var(--line-strong);stroke-width:2;}
+    .lobule{fill:color-mix(in srgb, #e8b4b0 66%, var(--surface-2));stroke:var(--line-strong);stroke-width:1.5;}
+    .capsule{fill:color-mix(in srgb, var(--line-strong) 10%, var(--surface));stroke:var(--line-strong);stroke-width:1.5;stroke-dasharray:5 5;}
+    .soma{fill:color-mix(in srgb, var(--track) 18%, var(--surface));stroke:var(--track);stroke-width:2.5;}
+    .nuc{fill:color-mix(in srgb, var(--line-strong) 40%, var(--surface));}
+    .somaOn{fill:var(--track);stroke:var(--track);stroke-width:2.5;opacity:0;animation:on 9s ease-in-out infinite;}
+    .nucOn{fill:color-mix(in srgb, var(--surface) 70%, var(--track));opacity:0;animation:on 9s ease-in-out infinite;}
+    .needle{fill:color-mix(in srgb, var(--muted) 24%, var(--surface));stroke:var(--muted);stroke-width:2;}
+    .cap{fill:color-mix(in srgb, var(--track) 70%, var(--surface));stroke:var(--track);stroke-width:1.5;}
+    .facet{stroke:color-mix(in srgb, var(--track) 40%, var(--surface));stroke-width:1.2;}
+    /* beats: 1 inject at the terminals · 2 virions ride up the axon · 3 the cell body expresses · 4 hold */
+    .v{offset-path:path("M196 300 L176 196 L128 196");offset-rotate:0deg;opacity:0;animation:ride 9s ease-in-out infinite;}
+    .v2{animation-delay:.55s;} .v3{animation-delay:1.1s;}
+    .expr{opacity:0;animation:txt 9s ease-in-out infinite;}
+    .drop{opacity:0;animation:drop 9s ease-in-out infinite;}
+    @keyframes ride{0%,10%{offset-distance:0%;opacity:0}18%{offset-distance:4%;opacity:1}62%{offset-distance:100%;opacity:1}70%,100%{offset-distance:100%;opacity:0}}
+    @keyframes drop{0%,4%{opacity:0}12%,24%{opacity:1}34%,100%{opacity:0}}
+    @keyframes on{0%,66%{opacity:0}78%,100%{opacity:1}}
+    @keyframes txt{0%,70%{opacity:0}82%,100%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){
+      .v{animation:none;opacity:0}
+      .drop{animation:none;opacity:0}
+      .somaOn,.nucOn{animation:none;opacity:1}
+      .expr{animation:none;opacity:1}
+    }
   </style>
 
-  <!-- spinal cord at top -->
-  <rect class="cord" x="120" y="30" width="120" height="44" rx="14"/>
-  <text class="small" x="180" y="57" text-anchor="middle">spinal cord</text>
+  <!-- ===== spinal cord ===== -->
+  <rect class="cord" x="98" y="16" width="164" height="80" rx="24"/>
+  <path class="grey" d="M156 32 C140 34, 134 46, 142 52 C134 58, 140 70, 156 72 C168 74, 172 64, 180 64 C188 64, 192 74, 204 72 C220 70, 226 58, 218 52 C226 46, 220 34, 204 32 C192 30, 188 40, 180 40 C172 40, 168 30, 156 32 Z"/>
+  <text class="small" x="180" y="88" text-anchor="middle">spinal cord</text>
 
-  <!-- central branch soma->cord, stem, peripheral axon down to pancreas -->
-  <path class="branch" d="M132 150 L150 150"/>
-  <path class="branch" d="M150 150 L150 74"/>
-  <path class="branch" d="M150 150 L180 300"/>
+  <!-- ===== nerve: central branch up, stem to the soma, peripheral branch down ===== -->
+  <path class="nerveOut" d="M176 196 L176 96"/>
+  <path class="nerveOut" d="M176 196 L196 300"/>
+  <path class="nerveOut" d="M176 196 L128 196"/>
+  <path class="nerveIn" d="M176 196 L176 96"/>
+  <path class="nerveIn" d="M176 196 L196 300"/>
+  <path class="nerveIn" d="M176 196 L128 196"/>
+  <circle cx="176" cy="196" r="6" fill="var(--line-strong)"/>
 
-  <!-- DRG soma off to the side -->
-  <circle class="soma" cx="116" cy="150" r="16"/>
-  <circle class="somaOn" cx="116" cy="150" r="16"/>
-  <text class="lbl" x="116" y="118" text-anchor="middle">DRG cell body</text>
-  <text class="small expr" x="116" y="190" text-anchor="middle">expresses payload</text>
+  <!-- ===== DRG capsule and cell body ===== -->
+  <ellipse class="capsule" cx="104" cy="196" rx="46" ry="38"/>
+  <circle class="soma" cx="104" cy="196" r="22"/>
+  <circle class="nuc" cx="104" cy="196" r="7"/>
+  <circle class="somaOn" cx="104" cy="196" r="22"/>
+  <circle class="nucOn" cx="104" cy="196" r="7"/>
+  <text class="lbl" x="104" y="148" text-anchor="middle">DRG cell body</text>
+  <text class="small expr" x="104" y="252" text-anchor="middle" style="fill:var(--track)">expresses payload</text>
 
-  <!-- pancreas tissue bottom + terminals -->
-  <ellipse class="tissue" cx="190" cy="324" rx="64" ry="28"/>
-  <path class="branch" d="M180 300 q-12 8 -20 15 M180 300 q12 8 20 15 M180 300 q0 10 0 18" stroke-width="2"/>
-  <text class="lbl" x="190" y="342" text-anchor="middle">pancreas</text>
-  <text class="lbl" x="160" y="280" text-anchor="end">inject AAV2-retro</text>
+  <!-- ===== retrograde transport ===== -->
+  <text class="small" x="214" y="244" text-anchor="start">retrograde</text>
+  <text class="small" x="214" y="262" text-anchor="start">transport ↑</text>
 
-  <!-- retrograde transport label -->
-  <text class="small" x="186" y="222" text-anchor="start">retrograde</text>
-  <text class="small" x="186" y="240" text-anchor="start">transport ↑</text>
+  <!-- ===== pancreas, terminals and the injection ===== -->
+  <path class="tissue" d="M118 310 C112 288, 142 274, 176 278 C212 282, 252 276, 274 290 C294 303, 290 330, 266 342 C238 356, 180 358, 150 348 C124 340, 122 326, 118 310 Z"/>
+  <g class="lobule">
+    <circle cx="150" cy="310" r="11"/><circle cx="180" cy="326" r="10"/><circle cx="238" cy="304" r="11"/><circle cx="256" cy="328" r="9"/>
+  </g>
+  <path class="twig" d="M196 298 L196 312 M196 312 q-16 6 -26 16 M196 312 q16 6 26 16 M196 312 q-2 12 -2 20"/>
+  <g fill="var(--line-strong)"><circle cx="170" cy="328" r="4.5"/><circle cx="222" cy="328" r="4.5"/><circle cx="194" cy="332" r="4.5"/></g>
+  <text class="lbl" x="196" y="356" text-anchor="middle">pancreas</text>
 
-  <!-- virus particles riding the axon to the soma -->
-  <polygon class="cap v" points="0,-8 7,-4 7,4 0,8 -7,4 -7,-4"/>
-  <polygon class="cap v v2" points="0,-8 7,-4 7,4 0,8 -7,4 -7,-4"/>
-  <polygon class="cap v v3" points="0,-8 7,-4 7,4 0,8 -7,4 -7,-4"/>
+  <rect class="needle" x="36" y="292" width="48" height="17" rx="5" transform="rotate(30 36 292)"/>
+  <path class="needle" d="M76 318 L124 336" fill="none" stroke-linecap="round"/>
+  <circle class="cap drop" cx="134" cy="339" r="6"/>
+  <text class="lbl" x="18" y="284" text-anchor="start">inject AAV2-retro</text>
+
+  <!-- ===== virions riding the axon to the cell body ===== -->
+  <g class="v"><polygon class="cap" points="0,-10 9,-5 9,5 0,10 -9,5 -9,-5"/><path class="facet" d="M-9,-5 L9,5 M9,-5 L-9,5"/></g>
+  <g class="v v2"><polygon class="cap" points="0,-10 9,-5 9,5 0,10 -9,5 -9,-5"/><path class="facet" d="M-9,-5 L9,5 M9,-5 L-9,5"/></g>
+  <g class="v v3"><polygon class="cap" points="0,-10 9,-5 9,5 0,10 -9,5 -9,-5"/><path class="facet" d="M-9,-5 L9,5 M9,-5 L-9,5"/></g>
 </svg>

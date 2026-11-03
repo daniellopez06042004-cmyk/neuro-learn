@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Threshold tiling. A balloon distends the colon; three afferents with low, middle and high force thresholds
+  fire spikes (random timing, at a rate that rises above each one's threshold and saturates). Drag the force
+  or let it sweep: together the three cover the whole range, from gentle filling to painful distension.
+  The thresholds and rates are illustrative, not measured values.
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--track:#1D9E75;--warn:#ba7517;--bad:#993c1d;--tissue:#f1dcd6;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--track:#32c48f;--warn:#ef9f27;--bad:#f0997b;--tissue:#4a3633;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  canvas{display:block;width:100%}
+  label.f{display:flex;align-items:center;gap:10px;margin:8px 0 0;font-weight:600}
+  input[type=range]{flex:1;height:32px;accent-color:var(--text)}
+  .say{min-height:40px;margin:6px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <canvas id="c" role="img" aria-label="A balloon distends a section of colon. Below, three afferents with low, middle and high thresholds fire spikes in turn as force rises, together covering gentle to painful force."></canvas>
+  <label class="f">Force <input id="f" type="range" min="0" max="100" value="0" aria-label="Distension force"></label>
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Illustrative thresholds and firing rates. Drag the force, or let it sweep.</p>
+<script>
+(function () {
+  var AFF = [
+    { name: 'low threshold', th: 0.12, color: 'track' },
+    { name: 'mid threshold', th: 0.40, color: 'warn' },
+    { name: 'high threshold', th: 0.68, color: 'bad' }
+  ];
+  var RMAX = 40, K = 0.18; // spikes/s at saturation; how fast the rate saturates above threshold
+  var rate = function (a, F) { return F <= a.th ? 0 : RMAX * (1 - Math.exp(-(F - a.th) / K)); };
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say'), slider = document.getElementById('f');
+  var W = 0, H = 320, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'surface-2', 'track', 'warn', 'bad', 'tissue'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  function label(s, x, y, c, align, weight, px) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (px || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'left'; ctx.fillText(s, x, y); }
+
+  var F = 0, auto = true, phase = 0, spikes = AFF.map(function () { return []; }), last = 0, WINDOW = 3000; // ms of spikes shown
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function frame(now) {
+    var dt = last ? Math.min(50, now - last) : 16; last = now;
+    if (auto && !still) { phase += dt / 9000; F = 0.5 - 0.5 * Math.cos(phase * 2 * Math.PI); slider.value = Math.round(F * 100); }
+    // new spikes: Poisson at each afferent's current rate
+    AFF.forEach(function (a, i) { if (Math.random() < rate(a, F) * dt / 1000) spikes[i].push(now); spikes[i] = spikes[i].filter(function (t) { return now - t < WINDOW; }); });
+    ctx.clearRect(0, 0, W, H);
+    // colon segment with a balloon inside, distended by the force
+    var cx = W / 2, cy = 72, r = 22 + 22 * F;
+    ctx.fillStyle = col.tissue; ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 2;
+    rr(cx - 140, cy - r - 10, 280, 2 * r + 20, r + 10); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = col['surface-2']; ctx.beginPath(); ctx.ellipse(cx, cy, Math.min(120, 60 + 70 * F), r - 2, 0, 0, 6.283); ctx.fill(); ctx.stroke();
+    label('balloon', cx, cy + 5, col.muted, 'center', 400);
+    label(F < 0.3 ? 'gentle filling' : F < 0.62 ? 'moderate' : 'painful distension', cx, 14, F < 0.62 ? col.text : col.bad, 'center');
+    // force scale with each afferent's threshold
+    var sx0 = 16, sx1 = W - 16, sy = 140, fx = function (v) { return sx0 + v * (sx1 - sx0); };
+    ctx.strokeStyle = col.line; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(sx0, sy); ctx.lineTo(sx1, sy); ctx.stroke();
+    ctx.strokeStyle = col.text; ctx.beginPath(); ctx.moveTo(sx0, sy); ctx.lineTo(fx(F), sy); ctx.stroke();
+    AFF.forEach(function (a) { ctx.fillStyle = col[a.color]; ctx.beginPath(); ctx.moveTo(fx(a.th), sy - 6); ctx.lineTo(fx(a.th) - 6, sy - 15); ctx.lineTo(fx(a.th) + 6, sy - 15); ctx.closePath(); ctx.fill(); });
+    label('force', sx0, sy + 18, col.muted, 'left', 400, 12); label('threshold ▼', sx1, sy + 18, col.muted, 'right', 400, 12);
+    // spike rasters, newest at the right
+    AFF.forEach(function (a, i) {
+      var y = 204 + i * 38, on = F > a.th;
+      label(a.name, sx0, y - 6, on ? col[a.color] : col.muted, 'left', on ? 700 : 400);
+      ctx.strokeStyle = col.line; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(sx0, y + 14); ctx.lineTo(sx1, y + 14); ctx.stroke();
+      ctx.strokeStyle = col[a.color]; ctx.lineWidth = 2;
+      spikes[i].forEach(function (t) { var x = sx1 - (now - t) / WINDOW * (sx1 - sx0); ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, y + 14); ctx.stroke(); });
+    });
+    var n = AFF.filter(function (a) { return F > a.th; }).length;
+    var text = n === 0 ? 'Below every threshold: all three afferents are silent.'
+      : n === 1 ? 'Gentle filling: only the low-threshold afferent fires.'
+      : n === 2 ? 'Moderate force: the mid-threshold afferent joins in, and the first fires faster.'
+      : 'Painful distension: even the high-threshold afferent fires. Together they cover the whole range.';
+    if (say.textContent !== text) say.textContent = text;
+    requestAnimationFrame(frame);
+  }
+  function rr(x, y, w, h, r) { r = Math.max(0, Math.min(r, h / 2, w / 2)); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  slider.oninput = function () { auto = false; F = Number(slider.value) / 100; };
+  if (still) { auto = false; F = 0.8; slider.value = 80; }
+  readColors(); size();
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColors);
+  addEventListener('resize', size);
+  requestAnimationFrame(frame);
+})();
+</script>
+</body></html>

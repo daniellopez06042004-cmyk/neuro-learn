@@ -370,7 +370,8 @@ export function scopeView(unitId, slide, atlas, mode = 'stain', accent) {
   let extra = '';
   if (v.channels) { let x = 4; v.channels.forEach((c, i) => { extra += T(x, v.labelY || 7, c, v.colors[i]); x += c.length * 2.1 + 4.5; }); }
   if (v.scale) extra += bar(v.scale[0], v.scale[1], v.dark);
-  const out = { bg: v.bg, svg: v.svg + extra };
+  // tissue + meta let the eyepiece zoom the section while drawing its own labels and scale bar
+  const out = { bg: v.bg, svg: v.svg + extra, tissue: v.svg, channels: v.channels, colors: v.colors, scale: v.scale, dark: v.dark };
   if (slide.tissue !== 'brain-coronal' || atlas) scopeCache.set(key, out);
   return out;
 }

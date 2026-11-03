@@ -1,49 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 310" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2Mzk1OWJiZS1hZTM5LTQ1YTYtOTI4OC02MWIxMjZkN2RiM2UAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMScPyfAIASQoo4Z67RfbA4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphNWIxOTY4Yy1mZDE1LTQ1YmUtYjdkNS03ZGEzMjdlNDQxOGRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNonWtGsIx1GoNf4PD9RXKdGAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggRMIQg5uQxjjT71Eb4CmAHfRc0XTaHV+2pzrelfBv2L2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaB40rJJNV1hUKZg+zH8eML8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBZy+Q5T/a3Xe9RZNeSrxItHDl3HtVDu5P957jqDc/ZwmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjYzOTU5YmJlLWFlMzktNDVhNi05Mjg4LTYxYjEyNmQ3ZGIzZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjA1ODFlMWUwLWM0NTItNGY5NS04MjRjLTA4N2Q5MTJiYWM5MnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBEwhCDm5DGONPvURvgKYAd9FzRdNodX7anOt6V8G/YvaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg4XXlkO3CZivPzUsScpK9bgXkfqb5GyvrzvRL54/hcrqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgga1D98Jf6mHxMpGclu/IMKDBVwZDzhtJCKWA1UBrRx/Z0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIFHcNVZinrdqlmJSPSgabC5uKHI6Qlyhs+Cbt4j8jC0+fAZXTCTb4l6zM45hQl9DKKXwcwEOrBy7Wmbshdtf8Q=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img">
   <title>A pattern-recognition receptor senses a shared microbial pattern</title>
-  <desc>Three different bacteria each carry the same surface molecule, LPS. An immune cell's TLR4 receptor binds that shared pattern, and the cell switches on a danger response.</desc>
+  <desc>Three differently shaped bacteria (a rod, a pair of round cells and a curved rod) each carry the same surface molecule, LPS. An immune cell's TLR4 receptors bind that shared pattern, a signal runs into the cell, and it switches on a danger response.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--track:#D4537E;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--track:#e67ba0;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .mic{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .lps{fill:var(--warn);}
-    .cell{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .tlr{fill:none;stroke:var(--track);stroke-width:3;stroke-linecap:round;}
-    .key{fill:var(--warn);offset-path:path("M180 112 L180 196");offset-rotate:0deg;opacity:0;animation:key 6s ease-in-out infinite;}
-    .resp{opacity:0;animation:resp 6s ease-in-out infinite;}
-    .onGlow{fill:none;stroke:var(--track);stroke-width:3;opacity:0;animation:resp 6s ease-in-out infinite;}
-    @keyframes key{0%,16%{offset-distance:0%;opacity:0}24%{opacity:1}56%{offset-distance:100%;opacity:1}100%{offset-distance:100%;opacity:1}}
-    @keyframes resp{0%,60%{opacity:0}74%,100%{opacity:1}}
-    @media (prefers-reduced-motion:reduce){.key{animation:none;offset-distance:100%;opacity:1}.resp,.onGlow{animation:none;opacity:1}}
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#D4537E;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#e67ba0;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .mic{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .lps{fill:var(--warn);} .lpsS{stroke:var(--warn);stroke-width:2.5;stroke-linecap:round;}
+    .hs{fill:none;stroke-linecap:round;}
+    .act{opacity:0;animation:act 9s ease-in-out infinite;}
+    @keyframes act{0%,30%{opacity:0}42%,95%{opacity:1}100%{opacity:0}}
+    @keyframes k0{0%,10%{transform:translate(-30px,-47.4px);opacity:1}28%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(-30px,-47.4px);opacity:0}100%{transform:translate(-30px,-47.4px);opacity:1}}
+    .k0{animation:k0 9s ease-in-out infinite;}
+    @keyframes k1{0%,12%{transform:translate(2px,-37px);opacity:1}30%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(2px,-37px);opacity:0}100%{transform:translate(2px,-37px);opacity:1}}
+    .k1{animation:k1 9s ease-in-out infinite;}
+    @keyframes k2{0%,14%{transform:translate(37.5px,-56.3px);opacity:1}32%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(37.5px,-56.3px);opacity:0}100%{transform:translate(37.5px,-56.3px);opacity:1}}
+    .k2{animation:k2 9s ease-in-out infinite;}
+    @keyframes s0{0%,44%{opacity:0;transform:translate(-56px,-66.6px)}47%{opacity:1}58%{opacity:1;transform:translate(0,0)}64%,100%{opacity:0;transform:translate(0,0)}}
+    .s0{animation:s0 9s ease-in-out infinite;}
+    @keyframes s1{0%,44%{opacity:0;transform:translate(0px,-74px)}47%{opacity:1}58%{opacity:1;transform:translate(0,0)}64%,100%{opacity:0;transform:translate(0,0)}}
+    .s1{animation:s1 9s ease-in-out infinite;}
+    @keyframes s2{0%,44%{opacity:0;transform:translate(56px,-66.6px)}47%{opacity:1}58%{opacity:1;transform:translate(0,0)}64%,100%{opacity:0;transform:translate(0,0)}}
+    .s2{animation:s2 9s ease-in-out infinite;}
+    .resp{opacity:0;animation:resp 9s ease-in-out infinite;}
+    @keyframes resp{0%,58%{opacity:0}72%,95%{opacity:1}100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-7.7s!important;animation-play-state:paused!important;}}
   </style>
-
-  <text class="small" x="180" y="26" text-anchor="middle">different microbes · same surface pattern</text>
-
-  <!-- three different-shaped bacteria, each studded with LPS (amber) -->
-  <!-- rod -->
-  <rect class="mic" x="40" y="54" width="54" height="24" rx="12"/>
-  <rect class="lps" x="52" y="46" width="7" height="10" rx="2"/><rect class="lps" x="68" y="46" width="7" height="10" rx="2"/>
-  <!-- oval -->
-  <ellipse class="mic" cx="180" cy="66" rx="26" ry="16"/>
-  <rect class="lps" x="168" y="46" width="7" height="10" rx="2"/><rect class="lps" x="184" y="46" width="7" height="10" rx="2"/>
-  <!-- blob -->
-  <circle class="mic" cx="300" cy="66" r="20"/>
-  <rect class="lps" x="288" y="42" width="7" height="10" rx="2"/><rect class="lps" x="304" y="42" width="7" height="10" rx="2"/>
-  <text class="small" x="330" y="92" text-anchor="end" style="fill:var(--warn)">LPS</text>
-
-  <!-- the shared pattern travelling to the receptor -->
-  <rect class="key" x="-4" y="-6" width="8" height="12" rx="2"/>
-
-  <!-- immune cell with TLR4 -->
-  <circle class="cell" cx="180" cy="236" r="46"/>
-  <!-- TLR groove on top -->
-  <path class="tlr" d="M168 196 q12 -6 24 0"/>
-  <rect class="lps resp" x="176" y="192" width="8" height="12" rx="2"/>
-  <text class="lbl" x="180" y="240" text-anchor="middle">immune cell</text>
-  <text class="lbl" x="210" y="196" style="fill:var(--track)">TLR4</text>
-
-  <!-- response -->
-  <circle class="onGlow" cx="180" cy="236" r="52"/>
-  <text class="lbl resp" x="180" y="300" text-anchor="middle" style="fill:var(--track)">danger detected → respond ✓</text>
+  <!-- three differently shaped bacteria, all studded with the same surface molecule (LPS) -->
+  <rect class="mic" x="34" y="62" width="74" height="28" rx="14"/>
+  <g transform="translate(46 62) rotate(0)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(64 62) rotate(0)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(82 62) rotate(0)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(98 62) rotate(0)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(50 90) rotate(180)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(92 90) rotate(180)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(30 76) rotate(-90)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <circle class="mic" cx="166" cy="76" r="17"/><circle class="mic" cx="196" cy="76" r="17"/>
+  <path d="M181 66 V86" style="stroke:var(--line-strong);stroke-width:2"/>
+  <g transform="translate(151.3 67.5) rotate(-60)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(163 59.3) rotate(-10)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(183 65.1) rotate(-50)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(199 59.3) rotate(10)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(210.7 67.5) rotate(60)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(212 81.8) rotate(110)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(150 86) rotate(210)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <path d="M268 92 Q294 50 326 70" style="fill:none;stroke:var(--line-strong);stroke-width:30;stroke-linecap:round"/>
+  <path d="M268 92 Q294 50 326 70" style="fill:none;stroke:var(--n1);stroke-width:26;stroke-linecap:round"/>
+  <g transform="translate(258.2 79.6) rotate(-55.9)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(274.5 60.9) rotate(-40.1)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(294.5 50.1) rotate(-15.1)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(317 49.9) rotate(13.9)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(332.3 56.3) rotate(30.5)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <g transform="translate(254 96) rotate(-110)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g>
+  <!-- immune cell with TLR4 receptors on its surface -->
+  <path class="cT" d="M345.4 226 C346.2 236.7 336 249.2 320.3 258.6 C304.6 268 278.6 278 251.3 282.4 C224 286.9 186.5 287.1 156.4 285.2 C126.4 283.4 94 278.4 71.2 271.4 C48.4 264.3 27.4 253.3 19.6 243 C11.9 232.7 16.1 219.9 24.7 209.5 C33.3 199.1 49.3 187.9 71.2 180.6 C93.1 173.4 126.2 167.7 156.1 166 C186 164.2 224.1 165.4 250.6 170.1 C277.1 174.9 299.3 185.3 315.1 194.6 C330.9 203.9 344.5 215.3 345.4 226Z" style="fill:var(--t0)"/>
+  <path class="resp" d="M345.4 226 C346.2 236.7 336 249.2 320.3 258.6 C304.6 268 278.6 278 251.3 282.4 C224 286.9 186.5 287.1 156.4 285.2 C126.4 283.4 94 278.4 71.2 271.4 C48.4 264.3 27.4 253.3 19.6 243 C11.9 232.7 16.1 219.9 24.7 209.5 C33.3 199.1 49.3 187.9 71.2 180.6 C93.1 173.4 126.2 167.7 156.1 166 C186 164.2 224.1 165.4 250.6 170.1 C277.1 174.9 299.3 185.3 315.1 194.6 C330.9 203.9 344.5 215.3 345.4 226Z" style="fill:var(--t1);stroke:var(--track);stroke-width:2"/>
+  <path class="nT" d="M223.6 250 C222.8 255.1 217.2 260.7 209.9 264.3 C202.7 267.9 190 271.5 180 271.5 C170 271.6 156.7 268.1 149.7 264.5 C142.7 260.9 138.3 255 138 250 C137.7 245 141.1 238.7 148.1 234.7 C155.1 230.8 168.9 226.4 180 226.2 C191.1 226 207.2 229.5 214.5 233.5 C221.7 237.5 224.3 244.9 223.6 250Z" style="fill:var(--t1)"/>
+  <path class="resp" d="M223.6 250 C222.8 255.1 217.2 260.7 209.9 264.3 C202.7 267.9 190 271.5 180 271.5 C170 271.6 156.7 268.1 149.7 264.5 C142.7 260.9 138.3 255 138 250 C137.7 245 141.1 238.7 148.1 234.7 C155.1 230.8 168.9 226.4 180 226.2 C191.1 226 207.2 229.5 214.5 233.5 C221.7 237.5 224.3 244.9 223.6 250Z" style="fill:var(--t2)"/>
+  <path d="M100 162.4 V179.4" style="stroke:var(--track);stroke-width:5;stroke-linecap:round"/>
+  <path class="hs" d="M90.6 150 A10 10 0 1 0 109.4 150" style="stroke:var(--track);stroke-width:11"/>
+  <path class="hs" d="M90.6 150 A10 10 0 1 0 109.4 150" style="stroke:var(--t1);stroke-width:5"/>
+  <path class="hs act" d="M90.6 150 A10 10 0 1 0 109.4 150" style="stroke:var(--track);stroke-width:5"/>
+  <path d="M180 155 V172" style="stroke:var(--track);stroke-width:5;stroke-linecap:round"/>
+  <path class="hs" d="M170.6 142.6 A10 10 0 1 0 189.4 142.6" style="stroke:var(--track);stroke-width:11"/>
+  <path class="hs" d="M170.6 142.6 A10 10 0 1 0 189.4 142.6" style="stroke:var(--t1);stroke-width:5"/>
+  <path class="hs act" d="M170.6 142.6 A10 10 0 1 0 189.4 142.6" style="stroke:var(--track);stroke-width:5"/>
+  <path d="M260 162.4 V179.4" style="stroke:var(--track);stroke-width:5;stroke-linecap:round"/>
+  <path class="hs" d="M250.6 150 A10 10 0 1 0 269.4 150" style="stroke:var(--track);stroke-width:11"/>
+  <path class="hs" d="M250.6 150 A10 10 0 1 0 269.4 150" style="stroke:var(--t1);stroke-width:5"/>
+  <path class="hs act" d="M250.6 150 A10 10 0 1 0 269.4 150" style="stroke:var(--track);stroke-width:5"/>
+  <!-- the shared pattern docks in each receptor -->
+  <g transform="translate(100 137.4)"><g class="k0"><g transform="rotate(180)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g></g></g>
+  <g transform="translate(180 130)"><g class="k1"><g transform="rotate(180)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g></g></g>
+  <g transform="translate(260 137.4)"><g class="k2"><g transform="rotate(180)"><path class="lpsS" d="M0 0 V-7"/><rect class="lps" x="-4.5" y="-16" width="9" height="9" rx="2.5"/></g></g></g>
+  <g transform="translate(156 246)"><circle class="s0" r="5" style="fill:var(--track)"/></g>
+  <g transform="translate(180 246)"><circle class="s1" r="5" style="fill:var(--track)"/></g>
+  <g transform="translate(204 246)"><circle class="s2" r="5" style="fill:var(--track)"/></g>
+  <text x="180" y="26" text-anchor="middle">different microbes · same <tspan style="fill:var(--warn)">LPS</tspan></text>
+  <text x="276" y="150" style="fill:var(--track)">TLR4</text>
+  <text x="34" y="222">immune cell</text>
+  <text class="resp" x="326" y="222" text-anchor="end" style="fill:var(--track)">danger response ✓</text>
 </svg>

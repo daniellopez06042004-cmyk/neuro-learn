@@ -1,56 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjOTFhMGI0Ny0xNTMyLTRlMTctOTcyNy02ZTZmYmFjZDkwZTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNbYHK7aaoPXpFgmVoeQcPUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5MjA2YmFjMi0zZTVhLTQzMTQtOGY5NS00NzE4MDZkYWI4Y2VscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoxrdcKBLA3m1ZUPu2sch6UQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggz6fuVEokLq0FeW2ncNC+C92k17Lep0WElxx9snubMS+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaNS/XaDHqKtdaT3dypeF5goAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCC4Dlpk6yVSu4uodcE2lylldYcs0oCoPfHqlt1+7vFd22RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM5MWEwYjQ3LTE1MzItNGUxNy05NzI3LTZlNmZiYWNkOTBlMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjAyM2FhM2JmLTY1ODktNDcxMS1hN2MyLTVmMmVkMjUxZmYyOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDPp+5USiQurQV5badw0L4L3aTXst6nRYSXHH2ye5sxL6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggWeXPakJLoN6jemRgEtzr3M71x9DAQQRi66DEY6gLHCiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggfdaitMK4iRb3o8biZR/Yl3KRbALBMvmRdiJFyOXUCYZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPpxMcEkvjEJytc1hVWxFQi7iSsbwWE4dYx8DSHtQal4pGpA7HF4qT9EjpsEj9CuovW2VOf9Y05vWRbxEt94MhU=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 268" role="img">
   <title>Intersectional genetics: Cre AND Flp</title>
   <desc>Three neurons. Cre-only and Flp-only stay off; only the neuron with both Cre and Flp turns its payload on.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line-strong:#b4b2a9;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--cre:#5B8DEF;--flp:#7F77DD;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--cre:#7ea6f5;--flp:#9a93e8;}}
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--cre:#5B8DEF;--flp:#7F77DD;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--cre:#7ea6f5;--flp:#9a93e8;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:15px;font-weight:600;} .st{font-size:14px;font-weight:600;}
+    .lbl{font-size:15px;font-weight:600;}
+    .st{font-size:15px;font-weight:600;}
+    .bdg{font-size:14px;font-weight:600;fill:#ffffff;}
+    .card{fill:color-mix(in srgb, var(--line-strong) 12%, var(--surface));stroke:var(--line);stroke-width:1.5;}
+    .cardOn{fill:color-mix(in srgb, var(--cre) 14%, var(--surface));stroke:var(--cre);stroke-width:2;opacity:0;animation:cardOn 8s ease-in-out infinite;}
     .den{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
     .axon{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .soma{fill:var(--surface-2);stroke:var(--cre);stroke-width:2.5;}
-    .somaOn{fill:var(--cre);}
-    .pulse{animation:pulse 5s ease-in-out infinite;transform-origin:180px 128px;}
-    .ring{fill:none;stroke:var(--cre);stroke-width:2.5;opacity:0;animation:ring 5s ease-out infinite;transform-origin:180px 128px;}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-    @keyframes ring{0%{transform:scale(.7);opacity:.5}70%{opacity:0}100%{transform:scale(1.8);opacity:0}}
-    @media (prefers-reduced-motion:reduce){.pulse{animation:none}.ring{animation:none;opacity:0}}
+    .somaCre{fill:color-mix(in srgb, var(--cre) 18%, var(--surface));stroke:var(--cre);stroke-width:2.5;}
+    .somaFlp{fill:color-mix(in srgb, var(--flp) 18%, var(--surface));stroke:var(--flp);stroke-width:2.5;}
+    .nuc{fill:color-mix(in srgb, var(--line-strong) 40%, var(--surface));}
+    .somaOn{fill:var(--cre);stroke:var(--cre);stroke-width:2.5;opacity:0;animation:somaOn 8s ease-in-out infinite;}
+    .nucOn{fill:color-mix(in srgb, var(--surface) 70%, var(--cre));opacity:0;animation:somaOn 8s ease-in-out infinite;}
+    .ring{fill:none;stroke:var(--cre);stroke-width:2.5;opacity:0;animation:ring 8s ease-out infinite;}
+    .creB{fill:var(--cre);} .flpB{fill:var(--flp);}
+    /* beats: 1 three genotypes · 2 the single-recombinase cells fail · 3 the AND cell lights · 4 hold */
+    .vOff{opacity:0;animation:vOff 8s ease-in-out infinite;}
+    .vOn{opacity:0;animation:vOn 8s ease-in-out infinite;}
+    @keyframes vOff{0%,20%{opacity:0;transform:translateY(6px)}32%,100%{opacity:1;transform:translateY(0)}}
+    @keyframes somaOn{0%,42%{opacity:0}56%,100%{opacity:1}}
+    @keyframes cardOn{0%,42%{opacity:0}58%,100%{opacity:1}}
+    @keyframes ring{0%,44%{opacity:0;transform:scale(.7)}58%{opacity:.55;transform:scale(1.05)}74%,100%{opacity:0;transform:scale(1.6)}}
+    @keyframes vOn{0%,60%{opacity:0;transform:scale(.7)}72%,100%{opacity:1;transform:scale(1)}}
+    @media (prefers-reduced-motion:reduce){
+      .vOff{animation:none;opacity:1;transform:none}
+      .vOn{animation:none;opacity:1;transform:none}
+      .somaOn,.nucOn{animation:none;opacity:1}
+      .cardOn{animation:none;opacity:1}
+      .ring{animation:none;opacity:0}
+    }
   </style>
 
-  <!-- badges -->
-  <g font-size="14" font-weight="600" text-anchor="middle">
-    <rect x="52" y="40" width="40" height="24" rx="12" fill="var(--cre)"/><text x="72" y="57" style="fill:#fff">Cre</text>
-    <rect x="140" y="40" width="40" height="24" rx="12" fill="var(--cre)"/><text x="160" y="57" style="fill:#fff">Cre</text>
-    <rect x="184" y="40" width="40" height="24" rx="12" fill="var(--flp)"/><text x="204" y="57" style="fill:#fff">Flp</text>
-    <rect x="268" y="40" width="40" height="24" rx="12" fill="var(--flp)"/><text x="288" y="57" style="fill:#fff">Flp</text>
-  </g>
+  <!-- ===== cards ===== -->
+  <rect class="card" x="12" y="16" width="108" height="238" rx="14"/>
+  <rect class="card" x="126" y="16" width="108" height="238" rx="14"/>
+  <rect class="card" x="240" y="16" width="108" height="238" rx="14"/>
+  <rect class="cardOn" x="126" y="16" width="108" height="238" rx="14"/>
 
-  <!-- neuron glyph, three times. soma centers x=72,180,288 y=128 -->
-  <!-- col 1: Cre only, off -->
-  <g transform="translate(72,128)">
-    <g class="den"><path d="M-5,-9 C -13,-20 -20,-24 -28,-31"/><path d="M5,-9 C 13,-20 20,-24 28,-31"/><path d="M-10,-3 C -24,-8 -32,-8 -41,-7"/><path d="M0,-12 C -1,-26 1,-31 0,-40"/></g>
-    <path class="axon" d="M0,12 C 2,28 -2,38 0,52"/>
-    <circle class="soma" r="13"/>
+  <!-- ===== column 1: Cre only, off ===== -->
+  <g>
+    <rect class="creB" x="44" y="30" width="44" height="26" rx="13"/>
+    <text class="bdg" x="66" y="48" text-anchor="middle">Cre</text>
   </g>
-  <text class="st" x="72" y="196" text-anchor="middle" style="fill:var(--bad)">✕ off</text>
-  <text class="lbl" x="72" y="220" text-anchor="middle">Cre only</text>
+  <g transform="translate(66,150)">
+    <g class="den">
+      <path d="M-7,-13 C-16,-26 -24,-32 -32,-40"/><path d="M-21,-28 L-30,-30"/>
+      <path d="M7,-13 C16,-26 24,-32 32,-40"/><path d="M21,-28 L30,-30"/>
+      <path d="M-13,-6 C-25,-13 -34,-15 -42,-14"/><path d="M-30,-13 L-36,-20"/>
+      <path d="M13,-6 C25,-13 34,-15 42,-14"/><path d="M30,-13 L36,-20"/>
+      <path d="M0,-18 C-1,-32 1,-38 0,-46"/><path d="M0,-34 L7,-41"/>
+    </g>
+    <path class="axon" d="M0,18 C2,34 -2,44 0,58"/>
+    <circle class="somaCre" r="18"/>
+    <circle class="nuc" r="6"/>
+  </g>
+  <g class="vOff">
+    <text class="st" x="66" y="226" text-anchor="middle" style="fill:var(--bad)">✕ off</text>
+  </g>
+  <text class="lbl" x="66" y="248" text-anchor="middle">Cre only</text>
 
-  <!-- col 2: Cre + Flp, ON -->
-  <g transform="translate(180,128)">
-    <g class="den"><path d="M-5,-9 C -13,-20 -20,-24 -28,-31"/><path d="M5,-9 C 13,-20 20,-24 28,-31"/><path d="M-10,-3 C -24,-8 -32,-8 -41,-7"/><path d="M0,-12 C -1,-26 1,-31 0,-40"/></g>
-    <path class="axon" d="M0,12 C 2,28 -2,38 0,52"/>
+  <!-- ===== column 2: Cre + Flp, ON ===== -->
+  <g>
+    <rect class="creB" x="134" y="30" width="44" height="26" rx="13"/>
+    <text class="bdg" x="156" y="48" text-anchor="middle">Cre</text>
+    <rect class="flpB" x="182" y="30" width="44" height="26" rx="13"/>
+    <text class="bdg" x="204" y="48" text-anchor="middle">Flp</text>
   </g>
-  <circle class="ring" cx="180" cy="128" r="13"/>
-  <g class="pulse"><circle class="soma somaOn" cx="180" cy="128" r="13"/></g>
-  <text class="st" x="180" y="196" text-anchor="middle" style="fill:var(--ok)">✓ ON</text>
-  <text class="lbl" x="180" y="220" text-anchor="middle">Cre + Flp</text>
+  <g transform="translate(180,150)">
+    <g class="den">
+      <path d="M-7,-13 C-16,-26 -24,-32 -32,-40"/><path d="M-21,-28 L-30,-30"/>
+      <path d="M7,-13 C16,-26 24,-32 32,-40"/><path d="M21,-28 L30,-30"/>
+      <path d="M-13,-6 C-25,-13 -34,-15 -42,-14"/><path d="M-30,-13 L-36,-20"/>
+      <path d="M13,-6 C25,-13 34,-15 42,-14"/><path d="M30,-13 L36,-20"/>
+      <path d="M0,-18 C-1,-32 1,-38 0,-46"/><path d="M0,-34 L7,-41"/>
+    </g>
+    <path class="axon" d="M0,18 C2,34 -2,44 0,58"/>
+    <circle class="ring" r="18" style="transform-origin:0 0"/>
+    <circle class="somaCre" r="18"/>
+    <circle class="nuc" r="6"/>
+    <circle class="somaOn" r="18"/>
+    <circle class="nucOn" r="6"/>
+  </g>
+  <g class="vOn" style="transform-origin:180px 221px">
+    <text class="st" x="180" y="226" text-anchor="middle" style="fill:var(--ok)">✓ ON</text>
+  </g>
+  <text class="lbl" x="180" y="248" text-anchor="middle">Cre + Flp</text>
 
-  <!-- col 3: Flp only, off -->
-  <g transform="translate(288,128)">
-    <g class="den"><path d="M-5,-9 C -13,-20 -20,-24 -28,-31"/><path d="M5,-9 C 13,-20 20,-24 28,-31"/><path d="M-10,-3 C -24,-8 -32,-8 -41,-7"/><path d="M0,-12 C -1,-26 1,-31 0,-40"/></g>
-    <path class="axon" d="M0,12 C 2,28 -2,38 0,52"/>
-    <circle class="soma" style="stroke:var(--flp)" r="13"/>
+  <!-- ===== column 3: Flp only, off ===== -->
+  <g>
+    <rect class="flpB" x="272" y="30" width="44" height="26" rx="13"/>
+    <text class="bdg" x="294" y="48" text-anchor="middle">Flp</text>
   </g>
-  <text class="st" x="288" y="196" text-anchor="middle" style="fill:var(--bad)">✕ off</text>
-  <text class="lbl" x="288" y="220" text-anchor="middle">Flp only</text>
+  <g transform="translate(294,150)">
+    <g class="den">
+      <path d="M-7,-13 C-16,-26 -24,-32 -32,-40"/><path d="M-21,-28 L-30,-30"/>
+      <path d="M7,-13 C16,-26 24,-32 32,-40"/><path d="M21,-28 L30,-30"/>
+      <path d="M-13,-6 C-25,-13 -34,-15 -42,-14"/><path d="M-30,-13 L-36,-20"/>
+      <path d="M13,-6 C25,-13 34,-15 42,-14"/><path d="M30,-13 L36,-20"/>
+      <path d="M0,-18 C-1,-32 1,-38 0,-46"/><path d="M0,-34 L7,-41"/>
+    </g>
+    <path class="axon" d="M0,18 C2,34 -2,44 0,58"/>
+    <circle class="somaFlp" r="18"/>
+    <circle class="nuc" r="6"/>
+  </g>
+  <g class="vOff">
+    <text class="st" x="294" y="226" text-anchor="middle" style="fill:var(--bad)">✕ off</text>
+  </g>
+  <text class="lbl" x="294" y="248" text-anchor="middle">Flp only</text>
 </svg>

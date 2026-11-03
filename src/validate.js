@@ -253,6 +253,15 @@ export function validateSlides(data) {
       if (!isArr(s.sources)) at(w, '"sources" must be a list');
       else s.sources.forEach((src, k) => { if (!isStr(src?.citation)) at(`${w} › sources[${k}]`, '"citation" is missing'); });
     }
+    // "paper": one published figure showing a sample like this slide, for "Read the paper"
+    if (s?.paper !== undefined) {
+      if (!s.paper || typeof s.paper !== 'object') at(w, '"paper" must be { "citation", "doi", "figure" }');
+      else {
+        if (!isStr(s.paper.citation)) at(`${w} › paper`, '"citation" is missing');
+        if (!isStr(s.paper.doi)) at(`${w} › paper`, '"doi" is missing (the link goes to doi.org)');
+        if (s.paper.figure !== undefined && !isStr(s.paper.figure)) at(`${w} › paper`, '"figure" must be text, e.g. "Fig. 2C"');
+      }
+    }
   });
   return errs;
 }

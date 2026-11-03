@@ -1,48 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxNjE1ZjEyZC1lNjc5LTRlNjgtOTkzZC04OWJmODhiZmJhOWIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaAQCRFrkfnj0Azo2OQdfzDEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3MGQ3Yjk1YS0xOWUwLTQ0YjktOWUzOS1kMWI1ZWJhMmJjOTBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWOUXw/z80ipBfg2tMbXKiQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg5/ZV0FMcvtRl35D8Vcvv3vTrtV6zpBo4kE7fVCK5ULakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaMPnw+/x0XCbVvdGy1n1NTMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBatZ8ynqAghOeIWFuRNMemckNUhWzfsd6NrIpx9LS4XmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjE2MTVmMTJkLWU2NzktNGU2OC05OTNkLTg5YmY4OGJmYmE5Yi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmMyM2FmM2M0LTQ0MmEtNGFkMC1iNWRjLTIzYWY0OGIwNWMwN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDn9lXQUxy+1GXfkPxVy+/e9Ou1XrOkGjiQTt9UIrlQtqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg9hSGMYZMUSOA0QvbKogC2zAeja8UN8G5BU1MIN1ildaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggvPo+eegsXhgi+ViufE8PW5treX86Xv2gxSc5tAoCfSV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHiv3IZE1TtYkonGhVV0cDFE+m1Y3j/NxfeNEWXVXSa3YDX8MUlJowdHinmjSobJ4rSXz5hwhohw+BIKFmWwGVY=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 368" role="img">
   <title>Targeting specificity funnel</title>
   <desc>A crowd of 24 cells narrows through three filters — retrograde route (12 left), Cre-dependent switch (5 left), and a subtype Cre line — leaving 2 target cells.</desc>
   <style>
     svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--track:#5B8DEF;}
     @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--track:#7ea6f5;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .flt{font-size:14px;font-weight:600;} .cnt{font-size:15px;font-weight:700;fill:var(--muted);}
-    .dot{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:1.5;}
-    .win{fill:var(--track);stroke:var(--surface);stroke-width:1.5;}
-    .band{fill:none;stroke:var(--line-strong);stroke-width:1;stroke-dasharray:4 4;}
-    .funnel{fill:none;stroke:var(--line-strong);stroke-width:1.5;}
-    .tgt{animation:p 4.5s ease-in-out infinite;}
-    @keyframes p{0%,100%{opacity:.8}50%{opacity:1}}
-    @media (prefers-reduced-motion:reduce){.tgt{animation:none}}
+    .flt{font-size:14px;font-weight:600;}
+    .cnt{font-size:15px;font-weight:700;fill:var(--muted);}
+    .funnel{fill:color-mix(in srgb, var(--line-strong) 10%, var(--surface));stroke:var(--line-strong);stroke-width:2;stroke-linejoin:round;}
+    .dot{fill:color-mix(in srgb, var(--line-strong) 30%, var(--surface));stroke:var(--line-strong);stroke-width:1.5;}
+    .win{fill:var(--track);stroke:color-mix(in srgb, var(--track) 70%, var(--text));stroke-width:1.5;}
+    .band{fill:color-mix(in srgb, var(--muted) 20%, var(--surface));stroke:var(--muted);stroke-width:2;stroke-linejoin:round;}
+    .bandOn{fill:var(--track);opacity:0;}
+    .lead{stroke:var(--muted);stroke-width:1.5;}
+    /* beats: 24 cells · filter 1 → 12 · filter 2 → 5 · filter 3 → 2 targets, then hold */
+    .s2{opacity:0;animation:s2 9s ease-in-out infinite;}
+    .s3{opacity:0;animation:s3 9s ease-in-out infinite;}
+    .s4{opacity:0;animation:s4 9s ease-in-out infinite;}
+    .f1{animation:f1 9s ease-in-out infinite;}
+    .f2{animation:f2 9s ease-in-out infinite;}
+    .f3{animation:f3 9s ease-in-out infinite;}
+    @keyframes s2{0%,18%{opacity:0}30%,100%{opacity:1}}
+    @keyframes s3{0%,38%{opacity:0}50%,100%{opacity:1}}
+    @keyframes s4{0%,58%{opacity:0}70%,100%{opacity:1}}
+    @keyframes f1{0%,14%{opacity:0}20%{opacity:.45}30%,100%{opacity:0}}
+    @keyframes f2{0%,34%{opacity:0}40%{opacity:.45}50%,100%{opacity:0}}
+    @keyframes f3{0%,54%{opacity:0}60%{opacity:.45}70%,100%{opacity:0}}
+    @media (prefers-reduced-motion:reduce){
+      .s2,.s3,.s4{animation:none;opacity:1}
+      .f1,.f2,.f3{animation:none;opacity:0}
+    }
   </style>
 
-  <!-- funnel outline -->
-  <path class="funnel" d="M20 40 L340 40 L240 296 L120 296 Z"/>
+  <!-- ===== funnel body ===== -->
+  <path class="funnel" d="M12 24 L348 24 L208 318 L208 338 L152 338 L152 318 Z"/>
 
-  <!-- start: 24 cells (count sits above the rim) -->
-  <text class="cnt" x="340" y="30" text-anchor="end">24</text>
-  <g class="dot"><circle cx="59" cy="56" r="6"/><circle cx="81" cy="56" r="6"/><circle cx="103" cy="56" r="6"/><circle cx="125" cy="56" r="6"/><circle cx="147" cy="56" r="6"/><circle cx="169" cy="56" r="6"/><circle cx="191" cy="56" r="6"/><circle cx="213" cy="56" r="6"/><circle cx="235" cy="56" r="6"/><circle cx="257" cy="56" r="6"/><circle cx="279" cy="56" r="6"/><circle cx="301" cy="56" r="6"/><circle cx="59" cy="76" r="6"/><circle cx="81" cy="76" r="6"/><circle cx="103" cy="76" r="6"/><circle cx="125" cy="76" r="6"/><circle cx="147" cy="76" r="6"/><circle cx="169" cy="76" r="6"/><circle cx="191" cy="76" r="6"/><circle cx="213" cy="76" r="6"/><circle cx="235" cy="76" r="6"/><circle cx="257" cy="76" r="6"/><circle cx="279" cy="76" r="6"/><circle cx="301" cy="76" r="6"/></g>
+  <!-- ===== stage 1: 24 cells ===== -->
+  <g class="dot">
+    <circle cx="48" cy="50" r="7"/><circle cx="72" cy="50" r="7"/><circle cx="96" cy="50" r="7"/><circle cx="120" cy="50" r="7"/>
+    <circle cx="144" cy="50" r="7"/><circle cx="168" cy="50" r="7"/><circle cx="192" cy="50" r="7"/><circle cx="216" cy="50" r="7"/>
+    <circle cx="240" cy="50" r="7"/><circle cx="264" cy="50" r="7"/><circle cx="288" cy="50" r="7"/><circle cx="312" cy="50" r="7"/>
+    <circle cx="48" cy="72" r="7"/><circle cx="72" cy="72" r="7"/><circle cx="96" cy="72" r="7"/><circle cx="120" cy="72" r="7"/>
+    <circle cx="144" cy="72" r="7"/><circle cx="168" cy="72" r="7"/><circle cx="192" cy="72" r="7"/><circle cx="216" cy="72" r="7"/>
+    <circle cx="240" cy="72" r="7"/><circle cx="264" cy="72" r="7"/><circle cx="288" cy="72" r="7"/><circle cx="312" cy="72" r="7"/>
+  </g>
+  <text class="cnt" x="346" y="18" text-anchor="end">24</text>
 
-  <!-- filter 1 -->
-  <line class="band" x1="47.875" y1="96" x2="312.125" y2="96"/>
-  <text class="flt" x="180" y="116" text-anchor="middle">retrograde · pancreas-projecting</text>
+  <!-- ===== filter 1 ===== -->
+  <path class="band" d="M68 100 L292 100 L288 144 L72 144 Z"/>
+  <path class="band bandOn f1" d="M68 100 L292 100 L288 144 L72 144 Z"/>
+  <text class="flt" x="180" y="120" text-anchor="middle">retrograde ·</text>
+  <text class="flt" x="180" y="138" text-anchor="middle">pancreas-projecting</text>
 
-  <!-- 12 left -->
-  <g class="dot"><circle cx="125" cy="138" r="6"/><circle cx="147" cy="138" r="6"/><circle cx="169" cy="138" r="6"/><circle cx="191" cy="138" r="6"/><circle cx="213" cy="138" r="6"/><circle cx="235" cy="138" r="6"/><circle cx="125" cy="158" r="6"/><circle cx="147" cy="158" r="6"/><circle cx="169" cy="158" r="6"/><circle cx="191" cy="158" r="6"/><circle cx="213" cy="158" r="6"/><circle cx="235" cy="158" r="6"/></g>
-  <text class="cnt" x="306" y="153">12</text>
+  <!-- ===== stage 2: 12 left ===== -->
+  <g class="s2">
+    <g class="dot">
+      <circle cx="115" cy="166" r="7"/><circle cx="141" cy="166" r="7"/><circle cx="167" cy="166" r="7"/>
+      <circle cx="193" cy="166" r="7"/><circle cx="219" cy="166" r="7"/><circle cx="245" cy="166" r="7"/>
+      <circle cx="115" cy="188" r="7"/><circle cx="141" cy="188" r="7"/><circle cx="167" cy="188" r="7"/>
+      <circle cx="193" cy="188" r="7"/><circle cx="219" cy="188" r="7"/><circle cx="245" cy="188" r="7"/>
+    </g>
+    <line class="lead" x1="268" y1="178" x2="288" y2="178"/>
+    <text class="cnt" x="294" y="183" text-anchor="start">12</text>
+  </g>
 
-  <!-- filter 2 -->
-  <line class="band" x1="79.9062" y1="178" x2="280.094" y2="178"/>
-  <text class="flt" x="180" y="198" text-anchor="middle">DIO · Cre+ only</text>
+  <!-- ===== filter 2 ===== -->
+  <path class="band" d="M114 210 L246 210 L240 242 L120 242 Z"/>
+  <path class="band bandOn f2" d="M114 210 L246 210 L240 242 L120 242 Z"/>
+  <text class="flt" x="180" y="231" text-anchor="middle">DIO · Cre+ only</text>
 
-  <!-- 5 left -->
-  <g class="dot"><circle cx="147" cy="220" r="6"/><circle cx="169" cy="220" r="6"/><circle cx="191" cy="220" r="6"/><circle cx="213" cy="220" r="6"/><circle cx="180" cy="240" r="6"/></g>
-  <text class="cnt" x="276" y="235">5</text>
+  <!-- ===== stage 3: 5 left ===== -->
+  <g class="s3">
+    <g class="dot">
+      <circle cx="156" cy="264" r="7"/><circle cx="180" cy="264" r="7"/><circle cx="204" cy="264" r="7"/>
+      <circle cx="168" cy="286" r="7"/><circle cx="192" cy="286" r="7"/>
+    </g>
+    <line class="lead" x1="228" y1="275" x2="244" y2="275"/>
+    <text class="cnt" x="250" y="280" text-anchor="start">5</text>
+  </g>
 
-  <!-- filter 3 -->
-  <line class="band" x1="111.156" y1="258" x2="248.844" y2="258"/>
-  <text class="flt" x="180" y="280" text-anchor="middle">subtype Cre line</text>
+  <!-- ===== filter 3 ===== -->
+  <path class="band" d="M142 294 L218 294 L206 322 L154 322 Z"/>
+  <path class="band bandOn f3" d="M142 294 L218 294 L206 322 L154 322 Z"/>
+  <line class="lead" x1="214" y1="308" x2="230" y2="308"/>
+  <text class="flt" x="236" y="313" text-anchor="start">subtype Cre line</text>
 
-  <!-- 2 targets leave the funnel -->
-  <g class="tgt"><circle class="win" cx="168" cy="318" r="8"/><circle class="win" cx="192" cy="318" r="8"/></g>
-  <text class="cnt" x="214" y="323" style="fill:var(--ok)">✓ 2 targets</text>
+  <!-- ===== result: 2 targets ===== -->
+  <g class="s4">
+    <circle class="win" cx="166" cy="352" r="9"/>
+    <circle class="win" cx="192" cy="352" r="9"/>
+    <text class="cnt" x="212" y="358" text-anchor="start" style="fill:var(--ok)">✓ 2 targets</text>
+  </g>
 </svg>

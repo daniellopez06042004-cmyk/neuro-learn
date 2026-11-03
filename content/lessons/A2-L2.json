@@ -28,10 +28,10 @@
         "note": "In DRG neurons, the exact site where spikes start can vary by subtype and ending type."
       },
       "visual": {
-        "type": "svg-anim",
-        "src": "assets/graded-potential.svg",
-        "alt": "A membrane-voltage trace: a small stimulus gives a small depolarization, a larger stimulus a larger one, and the largest crosses threshold and fires an all-or-none spike.",
-        "caption": "Receptor potentials scale with the stimulus; only crossing threshold triggers a spike."
+        "type": "interactive",
+        "src": "assets/graded-potential-model.html",
+        "alt": "A real traced sensory ending in skin is pressed gently, firmer, then hard. Its receptor potential grows with the press and fades on the way to the spike initiation zone; only the hard press makes the spike zone fire a train of spikes.",
+        "caption": "Receptor potentials scale with the press; only crossing threshold at the spike zone triggers spikes."
       }
     },
     {

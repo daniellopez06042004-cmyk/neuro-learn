@@ -1,44 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjODNhODUzYy00MWMwLTRmZDgtYWM5Ny1jM2VkZmJmMmNmZGMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaIjdbtAfqesxwvUXf+Fr9swAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiOTEwYTQ0OC1mMDg3LTQxZTUtYWYxNC01NmZhZDE0MjA4ZGRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNowySVfiN1YfZRuLE/wO4HTAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggCOCKi9EDKwvfiCyuNNSOM5bVZ0CFxZvWYj8EzVs1C8SkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaN9I70/z0oi7NxS+VUG7RFQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCMGZ8Xm+TBpuiXsI8nlRDje2pwkeVIlgJqRtO5Gs5FYGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM4M2E4NTNjLTQxYzAtNGZkOC1hYzk3LWMzZWRmYmYyY2ZkYy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjU4Y2IwZWQ0LThmMTUtNGQwZC04ZjEyLWNiYjVhNjhjMDYxMXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAI4IqL0QMrC9+ILK401I4zltVnQIXFm9ZiPwTNWzULxKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggtslp03HXvnDhQlS4Eog+CNcPCm8jzKmA7hIFqPaILW6iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg3GXC1DKe/Fa97ufRRMQs0Y6th0i+QY5bcqR3swme7vp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQI6R8tOWnbbpozM5fJVycwUYgEC+oK4yQUkbkLyML57HKDkW4uVol7QMVooC7ft4tdMnbLH10HGBPuB6SIVF3ao=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 368" role="img">
   <title>CNO back-converts to clozapine</title>
   <desc>CNO, a prodrug, is converted to clozapine, which crosses the blood–brain barrier and binds an off-target receptor on a neuron that has no DREADD.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line-strong:#b4b2a9;--surface-2:#efede6;--warn:#ba7517;--bad:#993c1d;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--warn:#ef9f27;--bad:#f0997b;}}
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--bad:#993c1d;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--bad:#f0997b;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:15px;font-weight:600;} .small{font-size:14px;font-weight:400;fill:var(--muted);}
-    .cno{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .clz{fill:var(--warn);}
-    .bbb{stroke:var(--line-strong);stroke-width:2;stroke-dasharray:6 6;}
+    .lbl{font-size:16px;font-weight:600;}
+    .small{font-size:14px;font-weight:400;fill:var(--muted);}
+    .onTxt{font-size:16px;font-weight:600;fill:#ffffff;}
+    .cnoF{fill:color-mix(in srgb, var(--line-strong) 26%, var(--surface));stroke:var(--line-strong);stroke-width:2.5;}
+    .clzF{fill:var(--warn);stroke:color-mix(in srgb, var(--warn) 70%, var(--text));stroke-width:2;}
+    .molF{fill:color-mix(in srgb, var(--warn) 80%, var(--surface));stroke:color-mix(in srgb, var(--warn) 70%, var(--text));stroke-width:2;}
+    .conv{fill:color-mix(in srgb, var(--muted) 26%, var(--surface));stroke:var(--muted);stroke-width:2;stroke-linejoin:round;}
+    .endo{fill:color-mix(in srgb, var(--line-strong) 26%, var(--surface));stroke:var(--line-strong);stroke-width:2;}
     .den{fill:none;stroke:var(--line-strong);stroke-width:2.5;stroke-linecap:round;}
-    .soma{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2.5;}
-    .hit{fill:var(--bad);opacity:0;animation:hit 6s ease-in-out infinite;}
-    .cloz{animation:fall 6s ease-in-out infinite;}
-    .conv1{animation:c1 6s ease-in-out infinite;} .conv2{animation:c2 6s ease-in-out infinite;}
-    @keyframes c1{0%,22%{opacity:1}34%,100%{opacity:0}}
-    @keyframes c2{0%,24%{opacity:0}36%{opacity:1}100%{opacity:1}}
-    @keyframes fall{0%,36%{transform:translate(0,0)}64%,100%{transform:translate(-62px,172px)}}
-    @keyframes hit{0%,66%{opacity:0}78%{opacity:.85}100%{opacity:.8}}
-    @media (prefers-reduced-motion:reduce){.conv1{animation:none;opacity:0}.conv2{animation:none;opacity:1}.cloz{animation:none;transform:translate(-62px,172px)}.hit{animation:none;opacity:.8}}
+    .axon{fill:none;stroke:var(--line-strong);stroke-width:3;stroke-linecap:round;}
+    .soma{fill:color-mix(in srgb, var(--line-strong) 20%, var(--surface));stroke:var(--line-strong);stroke-width:2.5;}
+    .nuc{fill:color-mix(in srgb, var(--line-strong) 50%, var(--surface));}
+    .rec{fill:color-mix(in srgb, var(--line-strong) 34%, var(--surface));stroke:var(--line-strong);stroke-width:2;}
+    .recHit{fill:color-mix(in srgb, var(--bad) 55%, var(--surface));stroke:var(--bad);stroke-width:2;opacity:0;animation:hit 9s ease-in-out infinite;}
+    .somaHit{fill:color-mix(in srgb, var(--bad) 40%, var(--surface));stroke:var(--bad);stroke-width:2.5;opacity:0;animation:hit 9s ease-in-out infinite;}
+    /* beats: 1 CNO is given · 2 it back-converts to clozapine · 3 clozapine crosses the barrier · 4 it binds an off-target receptor */
+    .step2{opacity:0;animation:step2 9s ease-in-out infinite;}
+    .mol{opacity:0;animation:cross 9s ease-in-out infinite;}
+    .verdict{opacity:0;animation:hit 9s ease-in-out infinite;}
+    @keyframes step2{0%,14%{opacity:0;transform:translateY(-10px)}28%,100%{opacity:1;transform:translateY(0)}}
+    @keyframes cross{0%,30%{opacity:0;transform:translateY(0)}38%{opacity:1;transform:translateY(16px)}62%,100%{opacity:1;transform:translateY(82px)}}
+    @keyframes hit{0%,66%{opacity:0}78%,100%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){
+      .step2{animation:none;opacity:1;transform:none}
+      .mol{animation:none;opacity:1;transform:translateY(82px)}
+      .recHit,.somaHit,.verdict{animation:none;opacity:1}
+    }
   </style>
 
-  <!-- stage 1: CNO prodrug (converts) -->
-  <g class="conv1"><circle class="cno" cx="180" cy="56" r="24"/><text class="lbl" x="180" y="61" text-anchor="middle">CNO</text></g>
-  <text class="small conv1" x="180" y="98" text-anchor="middle">prodrug</text>
+  <!-- ===== stage 1: CNO, a prodrug ===== -->
+  <rect class="cnoF" x="128" y="18" width="104" height="44" rx="22"/>
+  <text class="lbl" x="180" y="46" text-anchor="middle">CNO</text>
+  <text class="small" x="180" y="80" text-anchor="middle">prodrug</text>
 
-  <!-- stage 2: clozapine appears, then falls across BBB -->
-  <g class="cloz">
-    <g class="conv2"><rect class="clz" x="134" y="40" width="92" height="32" rx="16"/><text class="lbl" x="180" y="61" text-anchor="middle" style="fill:#fff">clozapine</text></g>
+  <!-- ===== stage 2: back-conversion to clozapine ===== -->
+  <g class="step2">
+    <path class="conv" d="M172 90 L188 90 L188 104 L198 104 L180 122 L162 104 L172 104 Z"/>
+    <rect class="clzF" x="118" y="128" width="124" height="44" rx="22"/>
+    <text class="onTxt" x="180" y="156" text-anchor="middle">clozapine</text>
   </g>
 
-  <!-- blood-brain barrier -->
-  <line class="bbb" x1="30" y1="170" x2="330" y2="170"/>
-  <text class="small" x="330" y="160" text-anchor="end">blood–brain barrier</text>
-
-  <!-- off-target neuron (no DREADD) at bottom -->
-  <g transform="translate(180,286)">
-    <g class="den"><path d="M-6,-10 C -16,-24 -24,-28 -34,-36"/><path d="M6,-10 C 16,-24 24,-28 34,-36"/><path d="M-12,-3 C -30,-9 -40,-9 -50,-7"/><path d="M12,-3 C 30,-9 40,-9 50,-7"/><path d="M0,-14 C -1,-30 1,-36 0,-46"/></g>
-    <circle class="soma" r="16"/>
-    <circle class="hit" r="16"/>
+  <!-- ===== blood–brain barrier ===== -->
+  <text class="small" x="344" y="196" text-anchor="end">blood–brain barrier</text>
+  <g class="endo">
+    <rect x="16" y="204" width="38" height="26" rx="8"/><rect x="58" y="204" width="38" height="26" rx="8"/>
+    <rect x="100" y="204" width="38" height="26" rx="8"/><rect x="142" y="204" width="38" height="26" rx="8"/>
+    <rect x="184" y="204" width="38" height="26" rx="8"/><rect x="226" y="204" width="38" height="26" rx="8"/>
+    <rect x="268" y="204" width="38" height="26" rx="8"/><rect x="310" y="204" width="34" height="26" rx="8"/>
   </g>
-  <text class="lbl" x="180" y="338" text-anchor="middle" style="fill:var(--bad)">✕ no DREADD · off-target</text>
+
+  <!-- ===== clozapine crossing the barrier ===== -->
+  <g class="mol">
+    <polygon class="molF" points="180,166 193,173.5 193,188.5 180,196 167,188.5 167,173.5"/>
+  </g>
+
+  <!-- ===== stage 3: an off-target neuron with no DREADD ===== -->
+  <g transform="translate(180,308)">
+    <g class="den">
+      <path d="M-9,-15 C-19,-28 -27,-34 -35,-42"/><path d="M-24,-30 L-33,-32"/>
+      <path d="M9,-15 C19,-28 27,-34 35,-42"/><path d="M24,-30 L33,-32"/>
+      <path d="M-15,-8 C-28,-15 -38,-17 -48,-16"/><path d="M-34,-15 L-40,-22"/>
+      <path d="M15,-8 C28,-15 38,-17 48,-16"/><path d="M34,-15 L40,-22"/>
+    </g>
+    <path class="axon" d="M14,16 L54,34"/>
+    <circle class="soma" r="22"/>
+    <circle class="somaHit" r="22"/>
+    <circle class="nuc" r="7"/>
+  </g>
+  <!-- the receptor clozapine binds -->
+  <g>
+    <rect class="rec" x="168" y="274" width="10" height="26" rx="4"/>
+    <rect class="rec" x="182" y="274" width="10" height="26" rx="4"/>
+    <rect class="recHit" x="168" y="274" width="10" height="26" rx="4"/>
+    <rect class="recHit" x="182" y="274" width="10" height="26" rx="4"/>
+  </g>
+  <g class="verdict">
+    <text class="lbl" x="180" y="356" text-anchor="middle" style="fill:var(--bad)">✕ no DREADD · off-target</text>
+  </g>
 </svg>

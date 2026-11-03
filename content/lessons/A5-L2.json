@@ -29,10 +29,10 @@
         "note": "Threshold is one of several properties (ending type, speed, molecular identity) that define a subtype."
       },
       "visual": {
-        "type": "svg-anim",
-        "src": "assets/threshold-tiling.svg",
-        "alt": "A rising force sweeps upward while three afferents switch on in turn: a low-threshold one at gentle force, a mid-threshold one at moderate force, and a high-threshold one only at strong force.",
-        "caption": "Afferents with different thresholds together tile gentle-to-strong force."
+        "type": "interactive",
+        "src": "assets/threshold-tiling-model.html",
+        "alt": "A balloon distends the colon while force sweeps up and down. Three afferents with low, middle and high thresholds fire spikes in turn, so together they report gentle filling through painful distension.",
+        "caption": "Afferents with different thresholds together tile gentle-to-strong force. Drag the force."
       }
     },
     {

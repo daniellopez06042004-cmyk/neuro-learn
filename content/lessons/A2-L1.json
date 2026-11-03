@@ -27,10 +27,10 @@
         "note": "Exact values depend on the ion concentrations in a given cell and preparation."
       },
       "visual": {
-        "type": "svg",
-        "src": "assets/driving-force.svg",
-        "alt": "A voltage scale from +60 to −90 mV. The membrane rests at −70 mV; a long arrow shows sodium's large inward driving force up toward its +60 mV equilibrium, and a short arrow shows potassium's small outward driving force down toward −90 mV.",
-        "caption": "How far Vm sits from each ion's equilibrium sets the size and direction of its push."
+        "type": "interactive",
+        "src": "assets/driving-force-model.html",
+        "alt": "A voltage scale with sodium's and potassium's equilibrium potentials, computed from the Nernst equation (about +61 and −89 mV). Dragging the membrane voltage changes two arrows, Vm − E for each ion, and the ions crossing a membrane flow in that direction at that rate: at rest Na⁺ is pushed in hard and K⁺ out gently; at E_K, K⁺ has no net push.",
+        "caption": "Each ion's push is the gap between Vm and its equilibrium potential. Drag Vm to see it change."
       }
     },
     {

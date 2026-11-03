@@ -601,3 +601,21 @@ svg.circuit { display: block; width: 100%; height: auto; overflow: visible; }
 .sb-newcard { display: block; width: 100%; margin: 0 0 18px; padding: 12px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--text); text-align: center; }
 .sb-newcard-slide { display: block; aspect-ratio: 3 / 1; margin: 8px 0; background: #1b1b1a; border-radius: 6px; padding: 4px; }
 .sb-newcard-go { font-weight: 600; color: var(--track-text); }
+
+/* The microscope: a stage the slide is dragged onto, then a round eyepiece view (pan, pinch-zoom, objectives). */
+.sb-stage { position: relative; height: 128px; margin: 6px 0 14px; border-radius: 14px; background: #2b2a28; box-shadow: inset 0 0 0 2px #3c3a36, inset 0 -6px 0 #1d1c1a; }
+.sb-aperture { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: radial-gradient(circle, #fffbea 0%, #f2e6c2 45%, #6e6656 100%); opacity: .5; transition: opacity 400ms ease; }
+.sb-stage.loaded .sb-aperture { opacity: .8; }
+.sb-onstage { position: absolute; left: 7%; right: 7%; top: 50%; transform: translateY(-50%); aspect-ratio: 3 / 1; }
+.sb-onstage.ghost { border: 2px dashed rgb(255 255 255 / 0.28); border-radius: 4px; }
+.sb-onstage svg { display: block; width: 100%; height: 100%; }
+.sb-clip { position: absolute; top: 50%; width: 22%; height: 10px; margin-top: -5px; border-radius: 5px; background: #8d8a83; box-shadow: 0 2px 0 #1d1c1a; }
+.sb-clip.left { left: 3%; transform: rotate(-8deg); }
+.sb-clip.right { right: 3%; transform: rotate(8deg); }
+.sb-big[role="button"] { cursor: grab; touch-action: none; }
+.sb-eye { position: relative; width: min(100%, 340px); aspect-ratio: 1; margin: 0 auto; border-radius: 50%; overflow: hidden; background: #000; box-shadow: 0 0 0 6px #1d1c1a, 0 0 0 7px #3c3a36; touch-action: none; cursor: grab; }
+.sb-eye svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sb-eye::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 24px 10px rgb(0 0 0 / 0.55); pointer-events: none; }
+.sb-objectives { margin: 14px 0 0; }
+.sb-paper { flex-direction: column; gap: 2px; margin: 12px 0 0; padding: 10px 14px; min-height: 56px; }
+.sb-paper-ref { font-size: 14px; font-weight: 400; color: var(--muted); }

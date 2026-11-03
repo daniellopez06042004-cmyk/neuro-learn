@@ -1,72 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4M2RjM2IyMi1iMzQ2LTRkNTYtOTFjZi02NDIzODI1YmY2MjUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCl3/JXAvcSJ1BINylbWIPEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDowMDIxMTg1YS05ZWUyLTRjZGMtOTBjZi0wNDIyY2U0YzA5MzNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNor3DwFPPXP3LXtn1LoLXYVgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggFm42+bWHY8MTl9CaF5zGj3sbPowXSSJYgfyKMYPuMgqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaH6mcQsuLi2ECupF4dY9kxkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCC0r8RzgrQ+xQpPR6CbMP4MVfE0uSL/Iauyc7gMGA9saGRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjgzZGMzYjIyLWIzNDYtNGQ1Ni05MWNmLTY0MjM4MjViZjYyNS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjFlNGIxZjRmLTkxMTYtNGMxNy05MzE3LWVlZTkzODE5NDJlZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAWbjb5tYdjwxOX0JoXnMaPexs+jBdJIliB/Ioxg+4yCqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggdbf98g0bXM/LLupptvai9TPxa5GOWsJfPlJExLtdbyKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg1gOIKcxwUDIgj4GnvaNu8Uk0IGbCvTuq65bvnYMNGWp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLx8o7x+ANRDahRNFT/0ozJNm+eOYvIJBBIbpUE8rnfarstWtBnxdtx2Ga74UvG7Oje05o/fU75qWI1sOWqYSgQ=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img">
   <title>Cre recombinase cutting at loxP</title>
   <desc>A gene: promoter, loxP, STOP, loxP, payload. Cre cuts at the two loxP sites; the STOP cassette leaves together with one loxP, a single loxP remains, and the payload joins up and switches on.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;}}
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;}}
     text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;}
-    .blk{font-size:14px;font-weight:600;fill:#ffffff;}
-    .dna{stroke:var(--line-strong);stroke-width:2.5;}
-    .seg{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .lox{fill:var(--warn);}
-    .stop{fill:var(--bad);animation:drop 6s ease-in-out infinite;}
-    .lox2{animation:drop 6s ease-in-out infinite;}
-    .pay{animation:slide 6s ease-in-out infinite;}
-    .payOn{fill:var(--track);opacity:0;animation:on 6s ease-in-out infinite;}
-    .cre{opacity:0;animation:cre 6s ease-in-out infinite;}
-    .badge{opacity:0;animation:badge 6s ease-in-out infinite;}
-    @keyframes drop{0%,22%{opacity:1;transform:translateY(0)}38%{opacity:0;transform:translateY(26px)}100%{opacity:0;transform:translateY(26px)}}
-    @keyframes cre{0%,10%{opacity:0;transform:translateY(-10px)}22%{opacity:1;transform:translateY(0)}40%{opacity:1}52%,100%{opacity:0}}
-    @keyframes slide{0%,38%{transform:translateX(0)}50%,100%{transform:translateX(-96px)}}
-    @keyframes on{0%,44%{opacity:0}60%{opacity:1}100%{opacity:1}}
-    @keyframes badge{0%,50%{opacity:0;transform:scale(.6)}64%{opacity:1;transform:scale(1)}100%{opacity:1}}
+    .lbl{font-size:15px;font-weight:600;}
+    .blk{font-size:15px;font-weight:600;fill:#ffffff;}
+    .strand{fill:color-mix(in srgb, var(--line-strong) 30%, var(--surface));stroke:var(--line-strong);stroke-width:2;}
+    .rung{stroke:var(--line-strong);stroke-width:1.5;opacity:.55;}
+    .prom{fill:color-mix(in srgb, var(--muted) 22%, var(--surface));stroke:var(--muted);stroke-width:2;}
+    .loxF{fill:color-mix(in srgb, var(--warn) 50%, var(--surface));stroke:var(--warn);stroke-width:2;}
+    .stopF{fill:color-mix(in srgb, var(--bad) 55%, var(--surface));stroke:var(--bad);stroke-width:2;}
+    .payF{fill:color-mix(in srgb, var(--track) 22%, var(--surface));stroke:var(--track);stroke-width:2;}
+    .payLit{fill:var(--track);stroke:var(--track);stroke-width:2;opacity:0;animation:lit 8s ease-in-out infinite;}
+    .creBody{fill:color-mix(in srgb, var(--text) 16%, var(--surface));stroke:var(--text);stroke-width:2;}
+    .cut{stroke:var(--text);stroke-width:2.5;stroke-linecap:round;}
+    /* beats: 1 the floxed gene · 2 Cre arrives and cuts both loxP · 3 the STOP leaves and the DNA joins up · 4 the payload lights */
+    .cre{opacity:0;animation:cre 8s ease-in-out infinite;}
+    .snip{opacity:0;animation:snip 8s ease-in-out infinite;}
+    .drop{animation:drop 8s ease-in-out infinite;}
+    .left{animation:closeL 8s ease-in-out infinite;}
+    .pay{animation:closeR 8s ease-in-out infinite;}
+    .onBadge{opacity:0;animation:badge 8s ease-in-out infinite;}
+    @keyframes cre{0%,12%{opacity:0;transform:translateY(-18px)}22%,46%{opacity:1;transform:translateY(0)}58%,100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes snip{0%,26%{opacity:0}32%,44%{opacity:1}52%,100%{opacity:0}}
+    @keyframes drop{0%,34%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(48px)}}
+    @keyframes closeL{0%,46%{transform:translateX(0)}60%,100%{transform:translateX(58px)}}
+    @keyframes closeR{0%,46%{transform:translateX(0)}60%,100%{transform:translateX(-58px)}}
+    @keyframes lit{0%,60%{opacity:0}72%,100%{opacity:1}}
+    @keyframes badge{0%,64%{opacity:0;transform:scale(.6)}76%,100%{opacity:1;transform:scale(1)}}
     @media (prefers-reduced-motion:reduce){
-      .stop,.lox2{animation:none;opacity:0}
-      .pay{animation:none;transform:translateX(-96px)}
       .cre{animation:none;opacity:0}
-      .payOn{animation:none;opacity:1}
-      .badge{animation:none;opacity:1;transform:scale(1)}
+      .snip{animation:none;opacity:0}
+      .drop{animation:none;opacity:0}
+      .left{animation:none;transform:translateX(58px)}
+      .pay{animation:none;transform:translateX(-58px)}
+      .payLit{animation:none;opacity:1}
+      .onBadge{animation:none;opacity:1;transform:scale(1)}
     }
   </style>
 
-  <!-- DNA backbone -->
-  <line class="dna" x1="14" y1="130" x2="346" y2="130"/>
-
-  <!-- promoter -->
-  <rect class="seg" x="14" y="112" width="84" height="36" rx="7"/>
-  <text class="lbl" x="56" y="135" text-anchor="middle">promoter</text>
-
-  <!-- loxP triangles -->
-  <path class="lox" d="M106 112 L124 130 L106 148 Z"/>
-  <text class="lbl" x="115" y="104" text-anchor="middle" style="fill:var(--warn)">loxP</text>
-  <g class="lox2">
-    <path class="lox" d="M202 112 L220 130 L202 148 Z"/>
-    <text class="lbl" x="211" y="104" text-anchor="middle" style="fill:var(--warn)">loxP</text>
+  <!-- ===== upstream piece: promoter + the loxP that stays ===== -->
+  <g class="left">
+    <rect class="strand" x="12" y="124" width="130" height="13" rx="6"/>
+    <rect class="strand" x="12" y="163" width="130" height="13" rx="6"/>
+    <g class="rung">
+      <line x1="112" y1="137" x2="112" y2="163"/><line x1="124" y1="137" x2="124" y2="163"/><line x1="136" y1="137" x2="136" y2="163"/>
+    </g>
+    <path class="prom" d="M14 116 L88 116 L104 150 L88 184 L14 184 Z"/>
+    <text class="lbl" x="52" y="156" text-anchor="middle">promoter</text>
+    <path class="loxF" d="M110 120 L136 150 L110 180 Z"/>
+    <text class="lbl" x="118" y="108" text-anchor="middle" style="fill:var(--warn)">loxP</text>
   </g>
 
-  <!-- STOP cassette (removed) -->
-  <g class="stop"><rect x="128" y="112" width="70" height="36" rx="7"/><text class="blk" x="163" y="135" text-anchor="middle">STOP</text></g>
+  <!-- ===== excised piece: STOP + the second loxP ===== -->
+  <g class="drop">
+    <rect class="strand" x="142" y="124" width="112" height="13" rx="6"/>
+    <rect class="strand" x="142" y="163" width="112" height="13" rx="6"/>
+    <rect class="stopF" x="146" y="118" width="74" height="64" rx="10"/>
+    <text class="blk" x="183" y="156" text-anchor="middle">STOP</text>
+    <path class="loxF" d="M226 120 L252 150 L226 180 Z"/>
+    <text class="lbl" x="236" y="108" text-anchor="middle" style="fill:var(--warn)">loxP</text>
+  </g>
 
-  <!-- payload: slides up to the remaining loxP, then turns on -->
+  <!-- ===== downstream piece: the payload, which joins up and lights ===== -->
   <g class="pay">
-    <rect class="seg" x="228" y="112" width="92" height="36" rx="7"/>
-    <rect class="payOn" x="228" y="112" width="92" height="36" rx="7"/>
-    <text class="lbl" x="274" y="135" text-anchor="middle">payload</text>
+    <rect class="strand" x="248" y="124" width="100" height="13" rx="6"/>
+    <rect class="strand" x="248" y="163" width="100" height="13" rx="6"/>
+    <g class="rung">
+      <line x1="252" y1="137" x2="252" y2="163"/><line x1="264" y1="137" x2="264" y2="163"/>
+    </g>
+    <rect class="payF" x="254" y="118" width="94" height="64" rx="10"/>
+    <rect class="payLit" x="254" y="118" width="94" height="64" rx="10"/>
+    <text class="lbl" x="301" y="156" text-anchor="middle">payload</text>
   </g>
 
-  <!-- Cre scissors -->
-  <g transform="translate(163,78)"><g class="cre">
-    <text class="lbl" x="0" y="-14" text-anchor="middle">Cre</text>
-    <circle cx="-8" cy="6" r="6" fill="none" stroke="var(--text)" stroke-width="2.5"/>
-    <circle cx="8" cy="6" r="6" fill="none" stroke="var(--text)" stroke-width="2.5"/>
-    <line x1="-5" y1="9" x2="12" y2="26" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="5" y1="9" x2="-12" y2="26" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
-  </g></g>
+  <!-- ===== Cre: two subunits astride the DNA, cutting at both loxP ===== -->
+  <g class="cre">
+    <g transform="translate(181,68)">
+      <rect class="creBody" x="-46" y="-26" width="92" height="40" rx="14"/>
+      <circle class="creBody" cx="-24" cy="-6" r="9"/>
+      <circle class="creBody" cx="24" cy="-6" r="9"/>
+      <text class="lbl" x="0" y="0" text-anchor="middle">Cre</text>
+    </g>
+    <path class="cut" d="M123 86 L123 112"/>
+    <path class="cut" d="M239 86 L239 112"/>
+  </g>
+  <g class="snip">
+    <path class="cut" d="M114 114 L132 186"/>
+    <path class="cut" d="M230 114 L248 186"/>
+  </g>
 
-  <!-- ON badge -->
-  <g transform="translate(178,176)"><g class="badge" style="transform-origin:0 0">
-    <rect x="-22" y="-14" width="44" height="26" rx="13" fill="var(--track)"/>
-    <text class="blk" x="0" y="4" text-anchor="middle">ON</text>
-  </g></g>
+  <!-- ===== result ===== -->
+  <g transform="translate(243,222)">
+    <g class="onBadge" style="transform-origin:0 0">
+      <rect x="-30" y="-17" width="60" height="32" rx="16" fill="var(--track)"/>
+      <text class="blk" x="0" y="5" text-anchor="middle">ON</text>
+    </g>
+  </g>
 </svg>

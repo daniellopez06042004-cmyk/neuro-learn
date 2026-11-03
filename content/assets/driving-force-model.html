@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Driving force, computed live. Each ion's equilibrium potential comes from the Nernst equation at 37 °C
+  with typical mammalian concentrations (Na⁺ 145 out / 15 in mM, K⁺ 5 out / 140 in mM), giving about +61 and
+  −89 mV. Drag the membrane voltage (Vm): the arrows are Vm − E for each ion, and the ions crossing the
+  membrane flow in the direction and at a rate set by that difference (as if one channel of each were open,
+  with equal conductance: I = g·(Vm − E)).
+-->
+<style>
+  :root{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface-2:#efede6;--na:#1D9E75;--k:#ba7517;--lipid:#e8d9c4;}
+  @media (prefers-color-scheme:dark){:root{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface-2:#2c2c2a;--na:#32c48f;--k:#ef9f27;--lipid:#4a4237;}}
+  html,body{background:transparent;margin:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;color:var(--text);font-size:14px;padding:10px 10px 8px}
+  .seg{display:flex;gap:8px;margin:0 0 8px}
+  .seg button{flex:1;min-height:44px;border:1.5px solid var(--line-strong);border-radius:12px;background:transparent;color:var(--text);font:inherit;font-weight:600;cursor:pointer;padding:0 4px}
+  .seg button.sel{border-color:var(--na);background:color-mix(in srgb,var(--na) 16%,transparent)}
+  .seg button.sel::before{content:"✓ ";font-weight:800}
+  canvas{display:block;width:100%;touch-action:none;cursor:ew-resize}
+  input[type=range]{width:100%;margin:6px 0 0;accent-color:var(--text);height:32px}
+  .say{min-height:40px;margin:4px 0 0;font-weight:600;line-height:1.4}
+  .src{margin:4px 0 0;font-size:12px;color:var(--muted)}
+</style></head>
+<body>
+  <div class="seg" role="radiogroup" aria-label="Membrane voltage">
+    <button data-v="-70" role="radio" aria-checked="true" class="sel">Rest</button>
+    <button data-v="ek" role="radio" aria-checked="false">At E<sub>K</sub></button>
+    <button data-v="30" role="radio" aria-checked="false">Spike peak</button>
+  </div>
+  <canvas id="c" aria-hidden="true"></canvas>
+  <input id="vm" type="range" min="-100" max="70" step="1" value="-70" aria-label="Membrane voltage, mV">
+  <p class="say" id="say" aria-live="polite"></p>
+  <p class="src">Nernst equation, 37 °C · Na⁺ 145 out / 15 in mM · K⁺ 5 out / 140 in mM</p>
+<script>
+(function () {
+  var RT_F = 8.314 * 310.15 / 96485 * 1000; // mV
+  var ENA = RT_F * Math.log(145 / 15), EK = RT_F * Math.log(5 / 140);
+  var VMIN = -100, VMAX = 70, vm = -70, target = -70;
+  var cv = document.getElementById('c'), ctx = cv.getContext('2d'), say = document.getElementById('say'), slider = document.getElementById('vm');
+  var W = 0, H = 316, col = {};
+  function readColors() { var cs = getComputedStyle(document.documentElement); ['text', 'muted', 'line', 'line-strong', 'surface-2', 'na', 'k', 'lipid'].forEach(function (k) { col[k] = cs.getPropertyValue('--' + k).trim(); }); }
+  function size() { W = cv.clientWidth || 320; var d = window.devicePixelRatio || 1; cv.width = Math.round(W * d); cv.height = Math.round(H * d); cv.style.height = H + 'px'; ctx.setTransform(d, 0, 0, d, 0, 0); }
+  var L = 16, R = function () { return W - 16; };
+  var vx = function (v) { return L + (v - VMIN) / (VMAX - VMIN) * (R() - L); };
+  function label(s, x, y, c, align, weight, sizePx) { ctx.fillStyle = c; ctx.font = (weight || 600) + ' ' + (sizePx || 13) + 'px -apple-system,system-ui,sans-serif'; ctx.textAlign = align || 'center'; ctx.fillText(s, x, y); }
+  var fmt = function (v) { v = Math.round(v); return (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v); };
+
+  // A horizontal arrow from Vm toward an ion's E: its length is the driving force.
+  function arrow(y, e, color, name) {
+    var x0 = vx(vm), x1 = vx(e), dir = Math.sign(x1 - x0);
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 4; ctx.lineCap = 'round';
+    if (Math.abs(x1 - x0) > 10) {
+      ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1 - dir * 8, y); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x1, y); ctx.lineTo(x1 - dir * 11, y - 7); ctx.lineTo(x1 - dir * 11, y + 7); ctx.closePath(); ctx.fill();
+    } else { ctx.beginPath(); ctx.arc(x0, y, 4, 0, 6.283); ctx.fill(); }
+    var txt = name + ': ' + fmt(vm - e) + ' mV', lx = (x0 + x1) / 2;
+    if (Math.abs(x1 - x0) < 90) lx = x0 + (dir > 0 ? -1 : 1) * 56; // short arrow: label beside Vm, away from it
+    label(txt, Math.max(L + 50, Math.min(R() - 50, lx)), y - 12, color);
+  }
+
+  var ions = [];
+  function membrane(top) {
+    var bot = top + 44, chNa = W * 0.32, chK = W * 0.68;
+    label('outside', L, top - 30, col.muted, 'left', 400); label('inside', L, bot + 40, col.muted, 'left', 400);
+    ctx.fillStyle = col.lipid; ctx.fillRect(0, top + 4, W, bot - top - 8);
+    ctx.fillStyle = col['line-strong'];
+    for (var x = 3; x < W; x += 7) { ctx.beginPath(); ctx.arc(x, top + 3, 3, 0, 6.283); ctx.fill(); ctx.beginPath(); ctx.arc(x, bot - 3, 3, 0, 6.283); ctx.fill(); }
+    [[chNa, col.na, 'Na⁺'], [chK, col.k, 'K⁺']].forEach(function (c) {
+      ctx.fillStyle = c[1];
+      rr(c[0] - 18, top - 4, 11, bot - top + 8, 5); rr(c[0] + 7, top - 4, 11, bot - top + 8, 5);
+      label(c[2], c[0], top - 12, c[1]);
+    });
+    // flux ∝ Vm − E: positive (cation leaves the cell) goes up, negative (enters) goes down
+    [[chNa, vm - ENA, true], [chK, vm - EK, false]].forEach(function (c) {
+      var f = c[1] / 160;
+      if (Math.random() < Math.abs(f) * 0.9) ions.push({ x: c[0], from: f > 0 ? bot + 26 : top - 26, to: f > 0 ? top - 26 : bot + 26, p: 0, na: c[2] });
+    });
+    ions = ions.filter(function (o) { return o.p < 1; });
+    ions.forEach(function (o) {
+      o.p += 0.03; ctx.globalAlpha = o.p < 0.85 ? 1 : (1 - o.p) / 0.15;
+      ctx.fillStyle = o.na ? col.na : col.k;
+      ctx.beginPath(); ctx.arc(o.x + Math.sin(o.p * 10) * 1.5, o.from + (o.to - o.from) * o.p, 3.5, 0, 6.283); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+  function rr(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.fill(); }
+
+  function draw() {
+    vm += (target - vm) * 0.18; if (Math.abs(target - vm) < 0.05) vm = target;
+    ctx.clearRect(0, 0, W, H);
+    // the voltage ruler, with each ion's equilibrium potential and Vm
+    var ry = 112;
+    ctx.strokeStyle = col['line-strong']; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(L, ry); ctx.lineTo(R(), ry); ctx.stroke();
+    [-100, -50, 0, 50].forEach(function (v) { ctx.beginPath(); ctx.moveTo(vx(v), ry - 4); ctx.lineTo(vx(v), ry + 4); ctx.stroke(); label(fmt(v), vx(v), ry + 18, col.muted, 'center', 400, 12); });
+    [[ENA, col.na, 'E', 'Na'], [EK, col.k, 'E', 'K']].forEach(function (e) {
+      ctx.strokeStyle = e[1]; ctx.lineWidth = 2; ctx.setLineDash([4, 3]); ctx.beginPath(); ctx.moveTo(vx(e[0]), 20); ctx.lineTo(vx(e[0]), ry); ctx.stroke(); ctx.setLineDash([]);
+      label('E' + (e[3] === 'Na' ? 'Na' : 'K') + ' ' + fmt(e[0]), vx(e[0]), 14, e[1]);
+    });
+    arrow(48, ENA, col.na, 'Na⁺'); arrow(88, EK, col.k, 'K⁺');
+    ctx.fillStyle = col.text; ctx.beginPath(); ctx.moveTo(vx(vm), ry - 9); ctx.lineTo(vx(vm) - 8, ry - 22); ctx.lineTo(vx(vm) + 8, ry - 22); ctx.closePath(); ctx.fill();
+    label('Vm ' + fmt(vm), vx(vm), ry + 34, col.text);
+    membrane(206);
+    var dn = vm - ENA, dk = vm - EK, word = function (d) { return Math.abs(d) < 3 ? 'no net push' : Math.abs(d) > 80 ? 'a strong push' : Math.abs(d) > 30 ? 'a moderate push' : 'a gentle push'; };
+    var dirTxt = function (d) { return Math.abs(d) < 3 ? '' : d < 0 ? ' in' : ' out'; };
+    var text = 'At ' + fmt(target) + ' mV, Na⁺ gets ' + word(dn) + dirTxt(dn) + ' and K⁺ gets ' + word(dk) + dirTxt(dk) + '.';
+    if (say.textContent !== text) say.textContent = text;
+    requestAnimationFrame(draw);
+  }
+  function set(v, fromSlider) {
+    target = Math.round(Math.max(VMIN, Math.min(VMAX, v)));
+    if (!fromSlider) slider.value = target;
+    document.querySelectorAll('.seg button').forEach(function (b) {
+      var bv = b.dataset.v === 'ek' ? Math.round(EK) : Number(b.dataset.v), on = bv === target;
+      b.classList.toggle('sel', on); b.setAttribute('aria-checked', String(on));
+    });
+  }
+  document.querySelectorAll('.seg button').forEach(function (b) { b.onclick = function () { set(b.dataset.v === 'ek' ? EK : Number(b.dataset.v)); }; });
+  slider.oninput = function () { set(Number(slider.value), true); };
+  var dragging = false, fromX = function (e) { var r = cv.getBoundingClientRect(); return VMIN + (e.clientX - r.left - L) / (R() - L) * (VMAX - VMIN); };
+  cv.addEventListener('pointerdown', function (e) { dragging = true; cv.setPointerCapture(e.pointerId); set(fromX(e)); });
+  cv.addEventListener('pointermove', function (e) { if (dragging) set(fromX(e)); });
+  cv.addEventListener('pointerup', function () { dragging = false; });
+  readColors(); size();
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) vm = target;
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColors);
+  addEventListener('resize', size);
+  requestAnimationFrame(draw);
+})();
+</script>
+</body></html>

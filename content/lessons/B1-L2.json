@@ -21,7 +21,7 @@
       "visual": {
         "type": "svg-anim",
         "src": "assets/tlr-pattern.svg",
-        "alt": "Three differently shaped bacteria each carry the same surface molecule, LPS. An immune cell's TLR4 binds that shared pattern and switches on a danger response.",
+        "alt": "Three differently shaped bacteria each carry the same surface molecule, LPS. TLR4 receptors on an immune cell bind that shared pattern from all three, and the cell switches on a danger response.",
         "caption": "One receptor reads a pattern shared across many microbes."
       }
     },

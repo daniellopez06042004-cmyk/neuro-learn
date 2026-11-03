@@ -1,59 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5YjhjOTE5Yi0xYzc5LTQ1YWMtYjA3NC1lMzk0OTE4M2M5OGIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGAmdxXWnfEnITmSNBdWP58AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo2NTJlMzU4Yi1iZGJhLTQzOWEtOWIxMy1iOTQ3NmNmOGJjYWJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNotfX0tlj55MeUE8rFtHCyTgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggU3aF6VbgPIGretBuamdnw6aZRn6XDwkqSJf6B/3fbe+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK0AWy2nkp6+V2BVL9/lVncAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAvWa7CcgBeZkBo/AzgMGQ2bvSbwNi0zITyrgBtr2J0xmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiIZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjliOGM5MTliLTFjNzktNDVhYy1iMDc0LWUzOTQ5MTgzYzk4Yi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjkxM2U0NjAwLTViYWUtNDJlYi04Yjg5LTIzOTU4ODVkMTNjMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBTdoXpVuA8gat60G5qZ2fDpplGfpcPCSpIl/oH/d9t76JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggisnl0V1f/ggZDrAvQnD5QEfLVdirG+5V1rAjfgXhA4OiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg/oPYRO8jUQ5MFUDTJLsO2x6z01wTsANfOH8J9qPYtah0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQOgzfH6fLSTvM8RLDXZ6aNazJnO0a3zdS/ERXKGOod51BivOjPqachMfY0A3TBX8kVj58/Sa+iPvbloBnXTddKk=</c2pa:manifest></metadata>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img">
   <title>MHC class I and class II present antigen to T cells</title>
-  <desc>Top row: an ordinary infected cell displays an internal peptide on MHC class I, which a cytotoxic T cell inspects. Bottom row: a dendritic cell engulfs a microbe and displays a fragment on MHC class II to a helper T cell. In both, the T-cell receptor reads the peptide held in the MHC groove.</desc>
+  <desc>Top: an infected cell moves an internal peptide onto MHC class I at its surface, and a cytotoxic T cell docks to inspect it. Bottom: a dendritic cell takes a fragment of an engulfed microbe onto MHC class II for a helper T cell. In both, the T-cell receptor (TCR) reads the peptide held in the MHC groove.</desc>
   <style>
-    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--warn:#ba7517;--track:#D4537E;}
-    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--warn:#ef9f27;--track:#e67ba0;}}
-    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
-    .lbl{font-size:14px;font-weight:600;} .small{font-size:12px;font-weight:400;fill:var(--muted);}
-    .cell{fill:var(--surface-2);stroke:var(--line-strong);stroke-width:2;}
-    .mhc{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;}
-    .pep{fill:var(--warn);}
-    .tcr{fill:none;stroke:var(--track);stroke-width:2.5;stroke-linecap:round;}
-    .fit{opacity:0;animation:fit 6s ease-in-out infinite;}
-    @keyframes fit{0%,40%{opacity:0}55%,100%{opacity:1}}
-    .tc{animation:dock 6s ease-in-out infinite;}
-    @keyframes dock{0%,20%{transform:translateX(26px)}44%,100%{transform:translateX(0)}}
-    @media (prefers-reduced-motion:reduce){.fit{animation:none;opacity:1}.tc{animation:none;transform:translateX(0)}}
+    :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#D4537E;--lipid:#e8d9c4;}
+    @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#e67ba0;--lipid:#4a4237;}}
+    svg{--t1:color-mix(in srgb,var(--track) 22%,var(--surface));--t2:color-mix(in srgb,var(--track) 50%,var(--surface));--t0:color-mix(in srgb,var(--track) 9%,var(--surface));--w1:color-mix(in srgb,var(--warn) 24%,var(--surface));--b1:color-mix(in srgb,var(--bad) 22%,var(--surface));--ok1:color-mix(in srgb,var(--ok) 22%,var(--surface));--n1:color-mix(in srgb,var(--line-strong) 32%,var(--surface));--n2:color-mix(in srgb,var(--line-strong) 75%,var(--surface));--head:color-mix(in srgb,var(--lipid) 70%,var(--text));--tissue:color-mix(in srgb,#e8b4b0 30%,var(--surface-2));}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;font-size:14px;font-weight:600;fill:var(--text);}
+    .m{font-weight:400;fill:var(--muted);}
+    .lip{fill:var(--lipid);}
+    .hd{fill:none;stroke:var(--head);stroke-width:7;stroke-linecap:round;stroke-dasharray:0 8;}
+    .cT{fill:var(--t1);stroke:var(--track);stroke-width:2;}
+    .cN{fill:var(--n1);stroke:var(--line-strong);stroke-width:2;}
+    .nT{fill:var(--t2);}
+    .nN{fill:var(--n2);}
+    .pep{fill:var(--warn);stroke:var(--warn);stroke-width:1.5;}
+    .mhc{fill:var(--t2);stroke:var(--track);stroke-width:2;stroke-linejoin:round;}
+    .halo{fill:none;stroke:var(--track);stroke-width:3;opacity:0;animation:halo 8s ease-in-out infinite;}
+    @keyframes halo{0%,48%{opacity:0}62%,95%{opacity:.9}100%{opacity:0}}
+    .tc{animation:dock 8s ease-in-out infinite;}
+    @keyframes dock{0%,30%{transform:translateX(30px)}48%,95%{transform:translateX(0)}100%{transform:translateX(30px)}}
+    .eng{opacity:0;animation:eng 8s ease-in-out infinite;}
+    @keyframes eng{0%,48%{opacity:0}64%,95%{opacity:1}100%{opacity:0}}
+    @keyframes p1{0%,10%{transform:translate(-64px,-10px);opacity:1}30%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(-64px,-10px);opacity:0}100%{transform:translate(-64px,-10px);opacity:1}}
+    .p1{animation:p1 8s ease-in-out infinite;}
+    @keyframes p2{0%,10%{transform:translate(-78px,2px);opacity:1}30%{transform:translate(0px,0px);opacity:1}95%{transform:translate(0px,0px);opacity:1}97.5%{transform:translate(0px,0px);opacity:0}97.6%{transform:translate(-78px,2px);opacity:0}100%{transform:translate(-78px,2px);opacity:1}}
+    .p2{animation:p2 8s ease-in-out infinite;}
+    @media (prefers-reduced-motion:reduce){*{animation-delay:-6.9s!important;animation-play-state:paused!important;}}
   </style>
-
-  <!-- ===== TOP: MHC I ===== -->
-  <path class="cell" d="M20 44 h150 a0 0 0 0 1 0 0 v70 h-150 Z" />
-  <text class="small" x="30" y="66">infected cell</text>
-  <text class="small" x="30" y="104">internal peptide</text>
-  <!-- MHC I groove on the membrane (right edge) -->
-  <path class="mhc" d="M170 70 q10 -2 10 8 M170 92 q10 2 10 -8"/>
-  <rect class="pep" x="176" y="76" width="12" height="10" rx="2"/>
-  <text class="lbl" x="196" y="60">MHC I</text>
-
-  <!-- cytotoxic T cell -->
-  <g class="tc">
-   <circle class="cell" cx="276" cy="81" r="34"/>
-   <path class="tcr" d="M242 74 q-10 2 -10 7 M242 88 q-10 -2 -10 -7"/>
-   <rect class="pep fit" x="224" y="76" width="12" height="10" rx="2"/>
-   <text class="lbl" x="286" y="78" text-anchor="middle">cytotoxic</text>
-   <text class="lbl" x="286" y="94" text-anchor="middle">T cell</text>
-  </g>
-
-  <line x1="20" y1="150" x2="340" y2="150" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 5"/>
-
-  <!-- ===== BOTTOM: MHC II ===== -->
-  <path class="cell" d="M20 186 h150 v70 h-150 Z"/>
-  <text class="small" x="30" y="208">dendritic cell</text>
-  <text class="small" x="30" y="246">engulfed fragment</text>
-  <circle cx="60" cy="226" r="9" fill="var(--warn)" opacity=".5"/>
-  <path class="mhc" d="M170 212 q10 -2 10 8 M170 234 q10 2 10 -8"/>
-  <rect class="pep" x="176" y="218" width="12" height="10" rx="2"/>
-  <text class="lbl" x="196" y="202">MHC II</text>
-
-  <!-- helper T cell -->
-  <g class="tc">
-   <circle class="cell" cx="276" cy="223" r="34"/>
-   <path class="tcr" d="M242 216 q-10 2 -10 7 M242 230 q-10 -2 -10 -7"/>
-   <rect class="pep fit" x="224" y="218" width="12" height="10" rx="2"/>
-   <text class="lbl" x="286" y="220" text-anchor="middle">helper</text>
-   <text class="lbl" x="286" y="236" text-anchor="middle">T cell</text>
-  </g>
-
-  <text class="small" x="180" y="288" text-anchor="middle">T-cell receptor reads peptide + MHC</text>
+  <!-- top: an infected cell shows an internal peptide on MHC class I -->
+  <path class="cN" d="M175.8 72 C176 83.2 170.7 97.3 159.8 105.9 C148.9 114.6 127.8 121.9 110.4 123.8 C92.9 125.6 70 122.7 55.1 117 C40.1 111.2 27 99.9 20.7 89.4 C14.4 78.9 11.6 64.4 17.1 53.8 C22.7 43.2 38.5 31.4 54 25.9 C69.5 20.3 92.8 18.6 110.3 20.7 C127.7 22.9 147.9 30 158.8 38.6 C169.8 47.1 175.6 60.8 175.8 72Z"/>
+  <path class="nN" d="M92.4 82 C92.1 87.1 84.6 93.6 79 96.5 C73.4 99.5 65.6 100.5 58.8 99.6 C52 98.8 41 95.8 38.2 91.5 C35.5 87.2 38.7 78.5 42.1 73.9 C45.5 69.3 52.2 65.3 58.7 64 C65.1 62.7 75.1 62.9 80.7 65.9 C86.3 68.9 92.7 76.9 92.4 82Z"/>
+  <rect class="pep" x="114" y="77" width="16" height="10" rx="3"/>
+  <rect class="pep" x="90" y="97" width="16" height="10" rx="3"/>
+  <rect class="pep" x="138" y="93" width="16" height="10" rx="3"/>
+  <rect class="mhc" x="166" y="67" width="24" height="10" rx="3"/><path class="mhc" d="M186 58 h18 v8 h-10 v12 h10 v8 h-18 Z"/>
+  <g transform="translate(204 72)"><g class="p1"><rect class="pep" x="-8" y="-5" width="16" height="10" rx="3"/></g></g>
+  <g class="tc"><rect class="mhc" x="216" y="67" width="24" height="10" rx="3"/><path class="mhc" d="M222 58 h-18 v8 h10 v12 h-10 v8 h18 Z"/><path class="cT" d="M317.4 72 C317.3 82.9 313.5 96.2 306.9 104.3 C300.4 112.4 288.4 118.6 278.2 120.5 C268 122.5 254.4 121.3 245.6 116.1 C236.7 110.9 228.4 99.2 225 89.1 C221.6 78.9 221.9 65.3 225.3 55.1 C228.8 44.8 236.6 33.2 245.4 27.7 C254.3 22.1 268.1 20 278.5 21.9 C288.8 23.8 301.1 30.8 307.6 39.2 C314.1 47.5 317.6 61.1 317.4 72Z" style="fill:var(--t0)"/><path class="eng" d="M317.4 72 C317.3 82.9 313.5 96.2 306.9 104.3 C300.4 112.4 288.4 118.6 278.2 120.5 C268 122.5 254.4 121.3 245.6 116.1 C236.7 110.9 228.4 99.2 225 89.1 C221.6 78.9 221.9 65.3 225.3 55.1 C228.8 44.8 236.6 33.2 245.4 27.7 C254.3 22.1 268.1 20 278.5 21.9 C288.8 23.8 301.1 30.8 307.6 39.2 C314.1 47.5 317.6 61.1 317.4 72Z" style="fill:var(--t1);stroke:var(--track);stroke-width:2"/><path class="nT" d="M306.7 76 C306.8 82.6 302.3 90.7 297.2 95.8 C292.1 101 283.2 106.8 276 106.9 C268.8 107 259 101.6 254.1 96.5 C249.3 91.3 247.2 83 247 76 C246.9 69 248.4 59.2 253.2 54.7 C258 50.2 268.7 48.7 276 49 C283.3 49.3 291.8 52 296.9 56.5 C302 61 306.7 69.4 306.7 76Z"/><text x="276" y="70" text-anchor="middle">cytotoxic</text><text x="276" y="87" text-anchor="middle">T cell</text></g>
+  <ellipse class="halo" cx="204" cy="72" rx="20" ry="20"/>
+  <text x="44" y="46">infected cell</text>
+  <text x="192" y="118" text-anchor="end" style="fill:var(--track)">MHC I</text>
+  <text x="200" y="118" style="fill:var(--track)">TCR</text>
+  <!-- bottom: a dendritic cell shows a fragment of an engulfed microbe on MHC class II -->
+  <path class="cN" d="M171.7 198 C172 201.3 172.1 204.8 171.3 208.1 C170.6 211.4 167.7 214.1 167.2 217.9 C166.7 221.8 171.1 228.3 168.1 231 C165.2 233.8 154.6 233 149.3 234.5 C143.9 235.9 140.7 238.3 136.1 239.7 C131.6 241.2 126.7 241.9 121.9 243 C117.2 244.1 112.5 245.9 107.6 246.4 C102.7 246.9 98.1 245.1 92.4 245.9 C86.8 246.8 78.7 252.6 73.9 251.6 C69.1 250.6 67.4 242.9 63.7 239.9 C60 237 55.2 236.1 51.7 233.8 C48.1 231.4 45.4 228.6 42.4 225.9 C39.4 223.2 36.2 220.6 33.9 217.6 C31.5 214.7 31.2 211.5 28.1 208.2 C24.9 204.9 15 201.4 15 198 C15 194.6 25 191.1 28.2 187.8 C31.3 184.6 31.8 181.5 34 178.4 C36.1 175.4 38.1 172.1 41.2 169.5 C44.2 166.9 48.5 164.9 52.3 162.7 C56 160.4 60.2 159.2 63.7 156.1 C67.3 153.1 69 145.2 73.8 144.2 C78.6 143.2 86.8 149.4 92.5 150.3 C98.1 151.2 102.7 149.3 107.6 149.6 C112.6 149.9 117.7 150.9 122.3 152.2 C127 153.4 131.1 155.3 135.6 156.9 C140 158.5 143.3 160.5 148.8 161.8 C154.3 163.1 165.7 162 168.6 164.8 C171.4 167.6 165.7 174.6 165.9 178.4 C166.1 182.3 168.7 184.9 169.7 188.1 C170.7 191.4 171.5 194.7 171.7 198Z"/>
+  <path class="nN" d="M87.1 210 C86.8 214.4 81.5 219.9 76.9 222.5 C72.3 225.1 64.9 226.4 59.4 225.6 C53.9 224.8 46 221.2 43.8 217.5 C41.5 213.8 43.4 207.4 45.9 203.3 C48.4 199.1 53.4 193.7 58.8 192.5 C64.3 191.3 73.7 193.1 78.4 196 C83.2 198.9 87.3 205.6 87.1 210Z"/>
+  <circle cx="124" cy="206" r="19" style="fill:var(--w1);stroke:var(--warn);stroke-width:2"/>
+  <rect class="pep" x="112" y="196" width="12" height="8" rx="2.5"/>
+  <rect class="pep" x="126" y="210" width="12" height="8" rx="2.5"/>
+  <rect class="mhc" x="166" y="193" width="24" height="10" rx="3"/><path class="mhc" d="M186 184 h18 v8 h-10 v12 h10 v8 h-18 Z"/>
+  <g transform="translate(204 198)"><g class="p2"><rect class="pep" x="-8" y="-5" width="16" height="10" rx="3"/></g></g>
+  <g class="tc"><rect class="mhc" x="216" y="193" width="24" height="10" rx="3"/><path class="mhc" d="M222 184 h-18 v8 h10 v12 h-10 v8 h18 Z"/><path class="cT" d="M319.2 198 C319 208.7 313.1 221.6 306.3 229.7 C299.5 237.9 288.3 245.4 278.3 247.1 C268.3 248.9 255.7 245.6 246.5 240.4 C237.4 235.1 227 225.5 223.6 215.6 C220.1 205.8 222.1 191.5 225.8 181.3 C229.5 171 237 159.7 245.7 154.2 C254.5 148.8 268.1 146.6 278.4 148.5 C288.6 150.3 300.4 157.2 307.2 165.4 C314 173.7 319.3 187.3 319.2 198Z" style="fill:var(--t0)"/><path class="eng" d="M319.2 198 C319 208.7 313.1 221.6 306.3 229.7 C299.5 237.9 288.3 245.4 278.3 247.1 C268.3 248.9 255.7 245.6 246.5 240.4 C237.4 235.1 227 225.5 223.6 215.6 C220.1 205.8 222.1 191.5 225.8 181.3 C229.5 171 237 159.7 245.7 154.2 C254.5 148.8 268.1 146.6 278.4 148.5 C288.6 150.3 300.4 157.2 307.2 165.4 C314 173.7 319.3 187.3 319.2 198Z" style="fill:var(--t1);stroke:var(--track);stroke-width:2"/><path class="nT" d="M305.9 202 C306.1 208.7 302.9 217.6 297.9 222.5 C292.9 227.4 283.3 231.3 276 231.3 C268.7 231.3 259.5 227.3 254.2 222.4 C249 217.5 244.6 208.8 244.6 202 C244.6 195.2 248.9 186.4 254.1 181.5 C259.4 176.7 268.9 172.8 276 172.9 C283.1 173.1 291.9 177.6 296.9 182.5 C301.9 187.3 305.7 195.3 305.9 202Z"/><text x="276" y="196" text-anchor="middle">helper</text><text x="276" y="213" text-anchor="middle">T cell</text></g>
+  <ellipse class="halo" cx="204" cy="198" rx="20" ry="20"/>
+  <text x="40" y="178">dendritic cell</text>
+  <text x="194" y="244" text-anchor="end" style="fill:var(--track)">MHC II</text>
 </svg>

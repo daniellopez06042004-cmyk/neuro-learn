@@ -22,7 +22,7 @@
       "visual": {
         "type": "svg-anim",
         "src": "assets/targeting-funnel.svg",
-        "alt": "Three filters — retrograde route, DIO switch, and a subtype Cre line — narrow a mixed population down to the single target neuron.",
+        "alt": "Three filters — retrograde route, DIO switch, and a subtype Cre line — narrow 24 cells down to 2 target neurons.",
         "caption": "Each layer of specificity removes off-target cells, leaving your target."
       }
     },
