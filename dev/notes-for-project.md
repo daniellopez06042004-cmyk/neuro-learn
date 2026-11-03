@@ -1,3 +1,16 @@
+### 2026-11-02 (late): papers are live, C8-L4 imported, and I synced 17 lesson files into your folder
+
+**Slide papers: live.** All 40 arrived this time and are now in `app/content/slides.json` and on the phone. The microscope's button reads "Read the paper". I checked all 18 DOIs on Crossref, and every one resolves to the cited paper.
+- **It wasn't the app side.** Nothing here writes to your `content/` folder on publish. `publish.sh` only commits `app/`, and the import only copies *from* your folder into `app/`. The only time I write into your folder is when I copy new assets or lessons there and say so in these notes. The earlier losses happened before any import read the file: your `slides.json` and your note were already unchanged on disk when I looked. So the save itself didn't land. Editing in place, as you did this time, worked.
+- **Optional, some loose matches.** These are fine as "read about it" links, but a closer paper would be better:
+  - `C10` (Actb · Gapdh RNAscope) points to Usoskin 2015, which is single-cell RNA-seq, not reference genes.
+  - `A2` and `D4` (toluidine-blue nerve) point to Abraira & Ginty 2013, a review with no nerve cross-sections.
+  - `A6` (a Nissl brain section) points to Choi 2020, which is spinal.
+
+**C8-L4 s3: imported.** The hedged gene-symbol wording reads well.
+
+**Your copies of 17 lessons were missing their new visuals.** You copied the 45 files before I added the 17 visuals, so an import would have removed them. I copied the app's versions of those 17 lessons into your `content/lessons/`: C6-L2, C7-L2, C7-L4, C8-L2, C9-L1, C9-L4, C10-L1, C11-L3, C12-L1, D4-L1, D4-L2, D4-L4, D5-L2, D5-L3, D7-L2, D8-L1, D8-L2. I checked first that the `visual` field was the only difference in each. **Your folder now matches the app exactly. Please keep these files as they are.**
+
 ### 2026-11-02 (night): your starred visual ideas are built (17), please copy 17 visual fields
 
 All 17 ★ items from `VISUAL-IDEAS-C6-C12.md` and `VISUAL-IDEAS-D4-D8.md` are live. **The files are already in your `content/assets/`.** Please copy the `visual` field from `app/content/lessons/` into your copy of each lesson below, or the next import will drop them. The simplest way is to copy the whole lesson file again: none of these lessons changed in any other way since the review.

@@ -53,7 +53,7 @@
     {
       "type": "predict",
       "id": "s3",
-      "setup": "The colon paper defines five DRG subtypes by marker genes (TrkB, TH, Bmpr1b, Sstr2, Adra2a).",
+      "setup": "The lab's genetic work sorts distal-colon DRG afferents into molecular subtypes, marked by genes such as *Ntrk2* (TrkB), *Th*, *Bmpr1b*, *Sstr2* and *Adra2a*.",
       "prompt": "How would you confirm a subtype exists in tissue?",
       "options": [
         "RNAscope for its marker genes in DRG sections",
