@@ -1,0 +1,114 @@
+{
+  "id": "A6-L3",
+  "unitId": "A6",
+  "title": "Ascending pathways to the brain",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Contrast the spinothalamic and dorsal-column pathways and where each crosses.",
+  "tags": [
+    "ascending",
+    "pathways"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Two roads up",
+      "body": "Two main pathways carry somatosensation to the brain:\n\n- **[[spinothalamic tract]]** — pain and temperature. It crosses the midline **in the spinal cord**, right near where it enters.\n- **[[dorsal column–medial lemniscus]] (DCML)** — fine touch and proprioception. It crosses **in the brainstem**, higher up.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Match each pathway to what it carries.",
+      "pairs": [
+        [
+          "Spinothalamic tract",
+          "Pain and temperature"
+        ],
+        [
+          "Dorsal column–medial lemniscus",
+          "Fine touch and proprioception"
+        ]
+      ],
+      "explanation": "Pain/temperature ride the spinothalamic tract; fine touch and body-position sense ride the DCML."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "A spinal-cord lesion on one side cuts fibers that have already crossed for pain but not yet crossed for fine touch.",
+      "prompt": "What pattern of loss do you predict?",
+      "options": [
+        "Pain/temp lost on the opposite side; fine touch lost on the same side below it",
+        "All sensation is lost on the same side of the body only, everywhere below the lesion",
+        "All sensation is lost on the opposite side of the body only",
+        "Pain/temp lost on the same side; fine touch lost on the opposite side below it"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Because the spinothalamic tract crosses low (in the cord) and the DCML crosses high (in the brainstem), a one-sided cord lesion gives *contralateral* pain/temp loss but *ipsilateral* fine-touch loss below it — the classic dissociated pattern.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A one-sided cord lesion: pain/temp already crossed, fine touch not yet. The deficit pattern is…",
+          "options": [
+            "Contralateral pain/temp, ipsilateral fine touch",
+            "Ipsilateral pain/temp, contralateral fine touch",
+            "Everything is lost on the opposite (contralateral) side"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Different crossing points produce the split: opposite-side pain/temp, same-side touch."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "difficulty": 2,
+      "prompt": "Where does the spinothalamic (pain/temperature) tract cross the midline?",
+      "options": [
+        "In the spinal cord, near where the fibers enter",
+        "In the brainstem, like the touch pathway",
+        "It never crosses the midline at all",
+        "Only once it reaches the cortex"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Pain/temperature fibers synapse and cross within a segment or two of entering the cord — which is exactly why their deficits appear on the opposite side of the body.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You need to recall where pain/temp crosses.",
+          "prompt": "The spinothalamic tract crosses…",
+          "options": [
+            "Low, in the spinal cord",
+            "High, in the brainstem",
+            "Not at all"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "It crosses in the cord, near entry — unlike the DCML, which crosses in the brainstem."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Choi S et al., 2020, Nature",
+      "doi": "10.1038/s41586-020-2860-1",
+      "url": "https://doi.org/10.1038/s41586-020-2860-1",
+      "verified": true,
+      "note": "Parallel ascending spinal pathways for affective touch and pain."
+    }
+  ],
+  "reviewNotes": "Spinothalamic vs DCML, crossing points, dissociated loss."
+}

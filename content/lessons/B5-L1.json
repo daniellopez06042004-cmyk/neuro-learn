@@ -1,0 +1,89 @@
+{
+  "id": "B5-L1",
+  "unitId": "B5",
+  "title": "The CNS behind a barrier",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why the CNS relies on resident immune cells behind the blood–brain barrier.",
+  "tags": [
+    "BBB",
+    "neuroinflammation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A guarded compartment",
+      "body": "The **[[blood–brain barrier]] (BBB)** tightly limits what crosses from blood into the brain — including most blood-borne immune cells. So the CNS leans on **resident** immune cells, chiefly **[[microglia]]**, to patrol it. This is why CNS immunity looks different from the rest of the body.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why does the CNS depend so heavily on resident microglia rather than blood-borne immune cells?",
+      "options": [
+        "The blood–brain barrier limits entry of circulating immune cells",
+        "The brain has no lymphatic drainage, so immune cells never reach it",
+        "Circulating immune cells cannot survive in cerebrospinal fluid",
+        "Microglia are the only cells able to clear debris in any tissue"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The BBB restricts circulating immune cells, so the CNS keeps its own resident sentinels (microglia) on constant patrol.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Circulating immune cells mostly can't cross into the healthy brain.",
+          "prompt": "How is the CNS still surveilled?",
+          "options": [
+            "By resident microglia already inside it",
+            "By blood neutrophils entering freely",
+            "By antibodies crossing the barrier from the blood"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Resident microglia patrol the CNS from within, since the BBB blocks most blood immune cells."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "A severe injury breaks down the blood–brain barrier in one region.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Blood-borne immune cells can now enter that region",
+        "Only small molecules cross; immune cells still cannot",
+        "Microglia there stop surveying while the barrier is open",
+        "The barrier reseals before anything can cross into the tissue"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "A broken barrier lets circulating immune cells infiltrate — a hallmark of many CNS injuries and diseases, and a reason neuroinflammation can escalate.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "If the BBB breaks down locally, what can happen?",
+          "options": [
+            "Blood immune cells infiltrate the tissue",
+            "Only small molecules cross, never cells",
+            "Microglia stop surveying while it is open"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "A breached barrier allows peripheral immune cells into the CNS."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "BBB + resident immunity; builds on B4 microglia."
+}

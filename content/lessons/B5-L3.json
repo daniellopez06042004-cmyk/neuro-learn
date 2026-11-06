@@ -1,0 +1,100 @@
+{
+  "id": "B5-L3",
+  "unitId": "B5",
+  "title": "Reactive astrocytes",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how astrocytes become reactive and that reactivity can be harmful or helpful.",
+  "tags": [
+    "astrocyte",
+    "reactive"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The other glia",
+      "body": "**[[astrocyte|Astrocytes]]** support neurons, manage ions and transmitters, and help form the [[blood–brain barrier]]. In injury they become **[[reactive astrocyte|reactive]]** (upregulating markers like GFAP). Some reactive astrocytes, induced by activated microglia, are neurotoxic; others are protective.",
+      "flag": {
+        "level": "debated",
+        "note": "The neurotoxic-vs-protective split (the old A1/A2 labels) is debated; the field now describes astrocyte states more carefully."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What can trigger astrocytes to become reactive and even neurotoxic?",
+      "options": [
+        "Signals released by activated microglia",
+        "Loss of GFAP expression by the astrocyte itself",
+        "Direct physical damage to the astrocyte, and nothing else",
+        "A drop in neuronal firing in the surrounding tissue"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Activated microglia can induce a neurotoxic reactive-astrocyte state — a glia-to-glia signal that couples the two in neuroinflammation.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Microglia are strongly activated in a region.",
+          "prompt": "What can happen to nearby astrocytes?",
+          "options": [
+            "They can be induced into a reactive, sometimes neurotoxic state",
+            "They lose GFAP and stop supporting the neurons",
+            "They are unaffected; microglial signals act only on neurons"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Activated microglia can drive astrocytes into a reactive, potentially neurotoxic state."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "A slide is captioned 'reactive astrocytes' but shows the normal, sparse GFAP pattern.",
+      "prompt": "What's the issue?",
+      "options": [
+        "The sparse baseline pattern isn't the reactive, upregulated one",
+        "GFAP is downregulated when astrocytes become reactive",
+        "Reactive astrocytes lose their processes and look smaller",
+        "GFAP labels only the astrocyte endfeet on blood vessels"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Reactive astrocytes upregulate GFAP and change shape; a sparse baseline pattern is the resting reference, not reactivity. GFAP alone doesn't define a reactive state, but it's the usual first marker. (This was a real fix in our B5 microscope slide.)",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A 'reactive astrocyte' image should show…",
+          "options": [
+            "Upregulated GFAP, not the sparse baseline pattern",
+            "GFAP being downregulated as astrocytes react",
+            "Astrocytes shrinking and losing their processes"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Reactivity means upregulated GFAP and altered morphology, unlike the sparse baseline."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Liddelow SA et al., 2017, Nature",
+      "doi": "10.1038/nature21029",
+      "url": "https://doi.org/10.1038/nature21029",
+      "verified": true,
+      "note": "Reactive astrocytes induced by activated microglia can be neurotoxic."
+    }
+  ],
+  "reviewNotes": "Reactive astrocytes; GFAP; ties to the B5 slide."
+}

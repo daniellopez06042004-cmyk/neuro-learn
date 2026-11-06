@@ -1,0 +1,89 @@
+{
+  "id": "A9-L1",
+  "unitId": "A9",
+  "title": "Peripheral sensitization",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how inflammation lowers nociceptor thresholds at the ending.",
+  "tags": [
+    "sensitization",
+    "pain"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Turning up the ending",
+      "body": "Injured or inflamed tissue releases a mix of mediators (an 'inflammatory soup': protons, bradykinin, prostaglandins, cytokines). These act on the [[nociceptor]] ending to **lower its [[threshold]]** — **[[peripheral sensitization]]**. Stimuli that were once sub-threshold now fire the neuron.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What is the direct effect of peripheral sensitization on a nociceptor?",
+      "options": [
+        "Its firing threshold drops, so weaker stimuli now excite it",
+        "Its axon suddenly conducts much faster all the way up to the cord",
+        "It fires as before, but the dorsal horn amplifies the signal instead",
+        "Its threshold rises, so stronger stimuli are now needed to excite it"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inflammatory mediators modify channels at the ending, lowering threshold. The neuron now fires to stimuli it used to ignore — the cell type and conduction speed don't change.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Inflammatory mediators bathe a nociceptor ending.",
+          "prompt": "What happens to its threshold?",
+          "options": [
+            "It drops (easier to fire)",
+            "It rises (harder to fire)",
+            "It stays the same; only the cord's gain changes"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Peripheral sensitization lowers the threshold, so weaker stimuli now fire it."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "Sunburned skin hurts when warm water hits it, though the same water felt fine before.",
+      "prompt": "What's the most likely mechanism?",
+      "options": [
+        "Peripheral sensitization has lowered the heat threshold of nociceptors",
+        "Only the dorsal horn changed; the endings in the skin are normal",
+        "The burned skin now conducts heat faster to the nerve endings",
+        "Heat-sensing nociceptors have multiplied in number in the burned skin"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Inflammation from the burn sensitizes the endings (e.g. via TRPV1 modulation), so merely warm water now crosses the lowered threshold — the classic everyday example.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Warm water hurting sunburned skin is explained by…",
+          "options": [
+            "Lowered nociceptor thresholds (peripheral sensitization)",
+            "A central change only, with normal endings in the skin",
+            "More heat-sensing nociceptors having grown in the burned skin"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Inflammation lowers the heat threshold, so warm now reads as painful."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Peripheral sensitization; inflammatory soup; sunburn example."
+}

@@ -1,0 +1,92 @@
+{
+  "id": "A6-L2",
+  "unitId": "A6",
+  "title": "Gate control: why rubbing helps",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how large-fiber input can dampen pain transmission at the dorsal horn.",
+  "tags": [
+    "gate-control",
+    "pain"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Touch can turn down pain",
+      "body": "**[[gate control theory|Gate control]]** says activity in large touch ([[Aβ]]) fibers recruits inhibitory interneurons in the [[dorsal horn]] that *reduce* transmission of pain from C fibers. Rubbing a stubbed toe literally dials down the pain signal before it ascends.",
+      "flag": {
+        "level": "simplified",
+        "note": "The original 1965 circuit is a simplification; the real interneuron wiring is more complex, but the core 'touch gates pain' idea holds."
+      }
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 2,
+      "setup": "You bang your elbow and immediately rub it.",
+      "prompt": "In gate-control terms, why does rubbing ease the pain?",
+      "options": [
+        "Aβ touch input recruits inhibition that dampens the pain signal",
+        "Aβ input directly silences the C-fiber endings out in the skin",
+        "Rubbing spreads inflammatory chemicals away from the injury",
+        "Rubbing cools the skin below the pain threshold for a while"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "The touch input engages inhibitory interneurons that 'close the gate' on C-fiber pain transmission in the dorsal horn — a central effect, not destruction of nociceptors.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Rubbing a painful spot helps mainly because…",
+          "options": [
+            "Touch input recruits dorsal-horn inhibition of pain",
+            "Touch fibers silence the pain endings out in the skin",
+            "It washes pain chemicals away from the injured spot"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Large-fiber touch input gates C-fiber pain transmission centrally."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Gate control is the principle behind which everyday device?",
+      "options": [
+        "A TENS unit that stimulates nerves to relieve pain",
+        "A heating pad that gently warms up sore muscles",
+        "An ice pack that numbs the area around an injury",
+        "A numbing cream that blocks nerve signals in the skin"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TENS drives large sensory fibers to engage the inhibitory gate, damping pain — a direct application of the theory. Heat and ice work by other mechanisms.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A device delivers mild electrical stimulation to sensory nerves for pain relief.",
+          "prompt": "Which principle is it using?",
+          "options": [
+            "Gate control",
+            "Local-anesthetic-style nerve block",
+            "Warming tissue to relax muscle"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "TENS recruits large-fiber input to gate pain transmission."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Gate control, with the simplification flagged."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "A8-L3",
+  "unitId": "A8",
+  "title": "Sensing chemistry: the EC cell relay",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how enterochromaffin cells let afferents sense luminal chemistry.",
+  "tags": [
+    "chemosensation",
+    "EC-cell"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A sensor cell in the lining",
+      "body": "Afferent endings often don't touch the lumen directly. Instead, specialized **[[enterochromaffin cell|enterochromaffin (EC) cells]]** in the epithelium sample luminal chemistry and release **[[serotonin]] (5-HT)** onto nearby sensory nerve endings — an indirect, cell-relayed form of chemosensation.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "How do many gut afferents 'taste' the lumen if their endings don't reach it?",
+      "options": [
+        "EC cells sample the lumen and signal to the afferent with serotonin",
+        "The afferent extends a long physical process directly into the open gut lumen",
+        "Goblet cells sample the lumen and release mucus onto the endings",
+        "The endings sense only stretch, which tracks what is in the lumen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "EC cells act as transducer cells: they face the lumen, detect chemicals, and release serotonin onto the afferent — a relay, not direct contact.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A sensory ending sits below the epithelium, not in the lumen.",
+          "prompt": "How can it still report luminal chemistry?",
+          "options": [
+            "An EC cell relays the signal via serotonin",
+            "It pushes a process into the lumen",
+            "Goblet cells relay it via mucus"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "EC cells sample the lumen and signal to the afferent with serotonin."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You block serotonin signaling between EC cells and afferents, then deliver a luminal chemical that EC cells detect.",
+      "prompt": "What do you predict for the afferent's response?",
+      "options": [
+        "Blunted response to the chemical stimulus",
+        "A larger response than before",
+        "Loss of its response to stretch instead",
+        "No effect, because afferents sense chemicals directly"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "If EC-to-afferent serotonin is the relay, blocking it should blunt the chemical response — while leaving mechanical (stretch) sensing, a separate pathway, intact. This is why EC cells are studied as gatekeepers of visceral chemosensation.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Blocking EC-cell serotonin signaling should…",
+          "options": [
+            "Blunt chemically-evoked afferent responses",
+            "Boost the chemically-evoked responses instead",
+            "Remove the stretch responses instead of these"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Serotonin is the EC→afferent relay for chemistry; blocking it blunts chemical responses."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Bellono NW et al., 2017, Cell",
+      "doi": "10.1016/j.cell.2017.05.034",
+      "url": "https://doi.org/10.1016/j.cell.2017.05.034",
+      "verified": true,
+      "note": "Enterochromaffin cells are gut chemosensors coupling to sensory nerves via serotonin."
+    }
+  ],
+  "reviewNotes": "EC-cell chemosensation via serotonin relay."
+}

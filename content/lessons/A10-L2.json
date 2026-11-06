@@ -1,0 +1,97 @@
+{
+  "id": "A10-L2",
+  "unitId": "A10",
+  "title": "Seeing whole-organ innervation",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how whole-mount and clearing reveal innervation that sections miss.",
+  "tags": [
+    "imaging",
+    "frontiers"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The whole arbor at once",
+      "body": "A single afferent can branch across a large territory. Thin sections chop that arbor into fragments. **[[whole-mount]]** staining and **[[tissue clearing]]** (plus 3D microscopy) let you see an ending's full shape in the intact organ — how it tiles the [[colon]] wall, where it goes, what it's near.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why prefer whole-mount/cleared tissue for mapping an afferent's endings?",
+      "options": [
+        "It preserves the full 3D arbor instead of fragmenting it into sections",
+        "It images living tissue, so you can watch the endings move",
+        "It removes the need to label the afferents you want to see",
+        "It raises resolution enough to resolve single synaptic contacts"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Seeing the intact arbor in 3D reveals branching and territory that serial sections lose. You still need labels (markers/antibodies), and fixation is separate.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You want an afferent's complete ending morphology in the gut wall.",
+          "prompt": "Which approach fits best?",
+          "options": [
+            "Whole-mount / cleared 3D imaging",
+            "A single thin cryosection on a slide",
+            "A western blot of the tissue lysate"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Whole-mount/cleared imaging preserves the full 3D arbor that sections fragment."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "Two studies disagree on whether one gut afferent forms multiple ending types.",
+      "prompt": "How could whole-organ 3D imaging help settle it?",
+      "options": [
+        "By tracing single labeled afferents' complete arbors in intact tissue",
+        "By densely labeling all fibers and measuring total fluorescence",
+        "By sequencing bulk RNA from the whole dissected gut at once",
+        "By counting labeled fibers in one single thin section"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Following a single, sparsely-labeled afferent through intact tissue shows directly whether it makes one or several ending morphologies — a question (from the 2025 review) that fragmented sections can't resolve.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To test if one afferent makes several ending types, you'd…",
+          "options": [
+            "Trace single arbors in whole, cleared tissue",
+            "Label all fibers densely and measure total signal",
+            "Bulk-sequence the entire dissected gut at once"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Only intact 3D tracing of single cells resolves whole-arbor morphology."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Review mapping the open questions in spinal sensory innervation of the gut."
+    }
+  ],
+  "reviewNotes": "Whole-mount/clearing for innervation mapping; ties to C6/C9."
+}

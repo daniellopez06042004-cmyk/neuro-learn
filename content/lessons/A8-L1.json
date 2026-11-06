@@ -1,0 +1,97 @@
+{
+  "id": "A8-L1",
+  "unitId": "A8",
+  "title": "The organ wall as a sensory surface",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Locate where extrinsic afferent endings sit in the gut wall and why depth matters.",
+  "tags": [
+    "visceral",
+    "anatomy"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Endings at every depth",
+      "body": "Extrinsic [[DRG]] afferents don't just touch the organ surface — their endings spread through the wall at defined depths: in the **[[mucosa]]** near the lumen, woven through the **[[muscularis externa|muscle layers]]**, and around blood vessels. *Where* an ending sits shapes *what* it senses.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why does the wall-depth of an afferent ending matter?",
+      "options": [
+        "Different depths are exposed to different stimuli (stretch vs luminal chemistry)",
+        "Deeper endings in the wall always conduct their signals faster than the shallow ones do",
+        "Mucosal endings sense stretch best because they sit nearest the contents",
+        "The ending's depth changes where its own cell body is located"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An ending in the muscle layers is positioned to feel stretch; one near the lumen is positioned to sample chemistry. Position = tuning. Depth doesn't change conduction speed or where the cell body (the DRG) lives.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two afferent endings sit at different depths in the gut wall.",
+          "prompt": "What does that difference most affect?",
+          "options": [
+            "Which stimuli each ending is exposed to",
+            "How fast each ending's axon conducts",
+            "Where each ending's cell body sits"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Depth sets which stimuli an ending meets — stretch in muscle, chemistry near the lumen."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "An afferent ends as a net woven between the circular and longitudinal muscle layers.",
+      "prompt": "What is it best positioned to sense?",
+      "options": [
+        "Stretch of the gut wall as it fills or contracts",
+        "The exact chemical makeup of the luminal contents",
+        "Bacterial products touching the epithelial surface",
+        "Nutrient levels sampled directly from the lumen"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "An ending embedded in muscle is mechanically coupled to the wall, so it reports stretch and contraction — not luminal chemistry, which a mucosal ending samples.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "An ending between the two muscle layers mainly senses…",
+          "options": [
+            "Wall stretch and contraction",
+            "The lumen's chemical makeup",
+            "Bacterial products at the epithelium"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Muscle-embedded endings are positioned for mechanics (stretch), not chemistry."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG subtypes tile the distal colon by force threshold; endings in defined wall layers."
+    }
+  ],
+  "reviewNotes": "Ending position → tuning; builds on D6 gut wall."
+}

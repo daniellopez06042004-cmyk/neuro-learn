@@ -1,0 +1,107 @@
+{
+  "id": "A7-L3",
+  "unitId": "A7",
+  "title": "Division of labor",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe the rough functional split between vagal and spinal visceral afferents.",
+  "tags": [
+    "interoception",
+    "function"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Different jobs, roughly",
+      "body": "As a first approximation: **vagal** afferents carry physiological 'housekeeping' signals (nutrients, fullness, normal regulation) to the brainstem, while **spinal/[[DRG]]** afferents are weighted toward **mechanical and noxious** signals — strong distension, injury, inflammation — i.e. much of visceral pain.",
+      "flag": {
+        "level": "simplified",
+        "note": "This labor split is a useful rule of thumb, not absolute — both systems carry mechanical and chemical information, with overlap."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "A patient has intense, cramping pain from an inflamed, over-distended colon. Which afferent system most likely carries it?",
+      "options": [
+        "Spinal (DRG) afferents",
+        "Vagal (nodose) afferents",
+        "Enteric neurons alone, with no extrinsic afferents",
+        "Sympathetic efferent fibers in the splanchnic nerves"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Noxious mechanical and inflammatory visceral signals are weighted toward the spinal/DRG line, which dominates the distal colon. Vagal afferents lean toward physiological regulation.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The distal colon is inflamed and painfully distended.",
+          "prompt": "Which system most likely carries that pain?",
+          "options": [
+            "Spinal/DRG afferents",
+            "Vagal/nodose afferents",
+            "Enteric neurons alone"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Visceral pain from the distal gut rides the spinal/DRG line."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "After a normal meal, your brain registers nutrients and fullness without any pain.",
+      "prompt": "Which afferent system is the likeliest main reporter here?",
+      "options": [
+        "Vagal (nodose) afferents to the brainstem",
+        "Spinal (DRG) afferents to the spinal cord",
+        "Enteric neurons, with no signal to the brain",
+        "Taste cells in the mouth, during the meal"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Routine nutrient and fullness signaling leans vagal, reporting to the brainstem — the 'housekeeping' side of interoception. Spinal afferents contribute, but are weighted toward strong and noxious signals.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Normal nutrient/fullness sensing after a meal leans on…",
+          "options": [
+            "Vagal afferents",
+            "Spinal (DRG) afferents",
+            "Enteric neurons alone"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Physiological 'housekeeping' signaling is weighted vagal."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Kaelberer MM et al., 2018, Science",
+      "doi": "10.1126/science.aat5236",
+      "url": "https://doi.org/10.1126/science.aat5236",
+      "verified": true,
+      "note": "A gut-brain neural circuit for rapid nutrient sensing (vagal transduction)."
+    },
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Spinal (DRG) vs vagal innervation of the gut; the DRG side is the frontier."
+    }
+  ],
+  "reviewNotes": "Vagal vs spinal functional split, flagged as a rule of thumb."
+}

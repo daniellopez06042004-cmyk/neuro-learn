@@ -115,7 +115,8 @@
       "id": "afferent-limbs",
       "needs": [
         "D5",
-        "D8"
+        "D8",
+        "B9"
       ],
       "added": "2026-11-02",
       "type": "mcq",
@@ -131,6 +132,513 @@
         0
       ],
       "explanation": "The afferent limb of any reflex arc is sensory (D8), and for the viscera that sensing is interoception (D5). Motor neurons are the efferent limb; microglia aren't the afferent limb of these arcs; and both vagal (nodose) and spinal (DRG) afferents serve the viscera — the DRG side is exactly the lab's focus."
+    },
+    {
+      "id": "trpv1-cre-lineage",
+      "needs": [
+        "A3",
+        "C2"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A [[TRPV1]]-[[Cre]] reporter line marks *more* adult [[DRG]] neurons than currently express TRPV1. Why?",
+      "options": [
+        "Trpv1-Cre permanently tags any cell that expressed Trpv1 in development, even if it later stops",
+        "The reporter leaks sideways into neighboring cells that never once expressed Trpv1 themselves",
+        "TRPV1 protein simply degrades far faster than the long-lived reporter protein ever does",
+        "Adult neurons keep making fresh TRPV1 that the antibody is simply unable to detect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Cre recombines the reporter in any lineage cell that ever turned on Trpv1; some downregulate TRPV1 in adulthood but keep the reporter, so reporter+ exceeds TRPV1+ now. It's a lineage trace, not a snapshot.",
+      "visual": {
+        "type": "svg",
+        "src": "assets/trpv1-lineage.svg",
+        "alt": "Developing DRG neurons expressing Trpv1 are permanently tagged by Trpv1-Cre; in the adult some no longer make TRPV1 but keep the reporter, so reporter-positive cells outnumber TRPV1-positive ones."
+      }
+    },
+    {
+      "id": "capsaicin-kcl-control",
+      "needs": [
+        "A3",
+        "C11"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "In a calcium-imaging run you test [[capsaicin]] on DRG neurons, then finish with a high-KCl pulse. What is the KCl pulse for?",
+      "options": [
+        "A positive control that silent cells were alive and excitable, not dead",
+        "A negative control for background fluorescence coming off the dish",
+        "To wash the capsaicin back off the cells before imaging ends",
+        "To convert the touch neurons into capsaicin-sensitive ones first"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "KCl depolarizes any healthy neuron, so a cell silent to capsaicin but responsive to KCl is genuinely capsaicin-insensitive, not dead. A cell silent to both is excluded as unhealthy."
+    },
+    {
+      "id": "piezo2-touch-gut",
+      "needs": [
+        "A4",
+        "D5"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "[[Piezo2]] is the main touch-transduction channel in skin. What does its role in the gut tell you?",
+      "options": [
+        "The same mechanical channel also transduces stretch of the visceral wall",
+        "Gut sensation must therefore be entirely chemical, never mechanical",
+        "The channel switches over to sensing temperature once it is in the gut",
+        "The gut uses Piezo2 only for pain, and never for normal filling"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Piezo2 is a mechanically-activated channel used for touch in skin and for wall stretch in the viscera — one transducer, two jobs, which is why deleting it blunts both."
+    },
+    {
+      "id": "isolate-subtype-intersectional",
+      "needs": [
+        "C3",
+        "A5"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A marker gene labels a colon [[DRG]] subtype but is *also* on enteric and sympathetic neurons. How do you label only the DRG cells?",
+      "options": [
+        "Intersect two drivers, so only cells with both the marker and a DRG-specific feature are caught",
+        "Use a single Cre line for the marker and simply accept the extra enteric and sympathetic cells",
+        "Raise an antibody to the marker protein and image the entire gut wall all at once under one scope",
+        "Switch to a much stronger promoter so the DRG cells outshine all of the rest"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Intersectional genetics requires two coincident features, so only the DRG cells that carry both the marker and the DRG-defining driver are captured — the logic the colon paper used."
+    },
+    {
+      "id": "retrograde-from-organ",
+      "needs": [
+        "C4"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You want to label only sensory neurons innervating the pancreas, not those of other organs. Which approach fits?",
+      "options": [
+        "Inject a retrograde virus into the pancreas; only its own projecting neurons take it up",
+        "Inject an anterograde virus into the DRG and wait for label to reach the pancreas",
+        "Give a systemic dye through the blood and let it spread through the entire body evenly",
+        "Use a germline reporter that labels every sensory neuron in the whole body at once"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A retrograde virus placed in the organ is taken up by the terminals that project there, so expression is restricted to that organ's afferents — targeting by projection."
+    },
+    {
+      "id": "dreadd-excite-silence-vm",
+      "needs": [
+        "C5",
+        "A2"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "[[hM3Dq]] excites a neuron and [[hM4Di]] silences it. In membrane terms, what differs when the actuator binds?",
+      "options": [
+        "hM3Dq drives depolarization toward threshold; hM4Di hyperpolarizes away from it",
+        "Both receptors depolarize the cell, but hM4Di just does it more slowly over time",
+        "hM3Dq removes the resting potential while hM4Di then restores it again afterward",
+        "hM4Di speeds up axonal conduction while hM3Dq slows the conduction down instead"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Excitatory DREADDs push the membrane toward threshold (more likely to fire); inhibitory DREADDs hyperpolarize it (less likely). It's about membrane potential relative to threshold, not conduction speed."
+    },
+    {
+      "id": "na-driving-force-trpv1",
+      "needs": [
+        "A2",
+        "A3"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "When capsaicin opens [[TRPV1]] at rest, Na⁺ rushes *into* the neuron. Why that direction?",
+      "options": [
+        "At rest both the gradient and the voltage push Na⁺ inward — a large inward driving force",
+        "An open channel always moves its ions out of the cell first before ever letting any in",
+        "TRPV1 actively pumps Na⁺ inward using ATP energy, the way an ion pump would",
+        "Sodium is simply repelled by the cell's positively charged interior and forced in"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "At the resting potential, Na⁺ is far from its equilibrium, so both chemistry and voltage drive it inward through any open channel. TRPV1 is a passive channel, not a pump."
+    },
+    {
+      "id": "receptive-field-acuity",
+      "needs": [
+        "D4",
+        "A1"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A body region has many neurons, each with a tiny [[receptive field]]. In coding terms, what does that give?",
+      "options": [
+        "Fine spatial acuity, close to a labeled-line map of stimulus location",
+        "Coarse localization overall, but with a much faster conduction speed",
+        "Pure rate coding, carrying no spatial information about location at all",
+        "Nearly identical responses from every neuron across the whole region"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Small, dense receptive fields let the brain pinpoint where a stimulus is — a near labeled-line map of space. Field size sets acuity, not conduction speed."
+    },
+    {
+      "id": "visceral-localize",
+      "needs": [
+        "D5",
+        "A1"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "Why is visceral pain vague and hard to place, compared with a sharp skin pinprick?",
+      "options": [
+        "Few afferents with large receptive fields give the brain only a coarse spatial map",
+        "The viscera contain no sensory neurons, so the brain simply guesses",
+        "Visceral signals travel to the brain far more slowly than skin signals do",
+        "Organ pain is processed only in the spinal cord, and never in the brain"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Sparse innervation with large fields means the brain gets 'something's wrong in there' but not precisely where — the opposite of the skin's dense, fine-grained map."
+    },
+    {
+      "id": "drg-afferent-not-autonomic",
+      "needs": [
+        "D2",
+        "A7"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A neuron with its cell body in the [[DRG]] innervates the gut. Is it an autonomic motor neuron?",
+      "options": [
+        "No — it's a sensory afferent; autonomic motor is a separate efferent system",
+        "Yes — any neuron that reaches the gut is by definition an autonomic one",
+        "Yes — DRG neurons are the motor side of the parasympathetic nervous system",
+        "No — it must instead be a somatic motor neuron projecting to skeletal muscle"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "DRG neurons are sensory afferents (interoceptive here). 'Autonomic' is a motor/efferent division — a different axis from 'sensory vs motor', a classic mix-up."
+    },
+    {
+      "id": "dorsal-root-cut",
+      "needs": [
+        "D3"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You cut the dorsal root of a spinal nerve, sparing the ventral root. What is lost?",
+      "options": [
+        "That root's sensory input, while motor output via the ventral root is spared",
+        "That root's motor output, while sensory input through the ventral root is spared",
+        "Both sensation and movement, since the two roots carry identical fibers",
+        "Nothing at all, because the signals simply reroute through the opposite side"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The dorsal root is sensory, the ventral root motor — the classic demonstration that the roots are functionally separate (overlap from neighboring roots can soften the sensory loss)."
+    },
+    {
+      "id": "cre-reporter-logic",
+      "needs": [
+        "C2",
+        "A5"
+      ],
+      "added": "2026-11-05",
+      "type": "predict",
+      "difficulty": 3,
+      "setup": "You cross a subtype-marker [[Cre]] line to a floxed-STOP reporter.",
+      "prompt": "Which cells end up labeled?",
+      "options": [
+        "Cells that have expressed the marker, where Cre excised the stop cassette",
+        "Every neuron in the animal, whether or not it ever expressed the marker",
+        "Only the cells that happen to be dividing at the time of the cross",
+        "No cells at all, since Cre and the reporter must be injected separately"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Cre is made only where the marker's promoter is active; it removes the stop, switching on the reporter in exactly those cells (and their lineage). That's how a line marks a defined subtype."
+    },
+    {
+      "id": "tamoxifen-sparse",
+      "needs": [
+        "C2"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You want only a few neurons labeled so single axons can be traced. What's the trick with [[CreER]]?",
+      "options": [
+        "Give a low dose of tamoxifen, so Cre activates in only a sparse subset of cells",
+        "Give a high dose of tamoxifen, so that every eligible cell lights up at once",
+        "Skip the tamoxifen entirely and let CreER recombine all on its own anyway",
+        "Give the tamoxifen later, in adulthood, which by itself labels only a few cells"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "CreER only recombines when tamoxifen is present, and a low dose catches only a fraction of eligible cells — sparse labeling that lets you resolve single arbors."
+    },
+    {
+      "id": "demyelination-conduction",
+      "needs": [
+        "D4",
+        "A2"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A demyelinating condition strips [[myelin]] from a sensory nerve. What happens to its signals?",
+      "options": [
+        "Conduction slows or blocks, because fast [[saltatory conduction]] is lost",
+        "Conduction speeds up, since the myelin had been slowing the axon",
+        "The neuron's resting potential collapses all the way to zero",
+        "Conduction speed is unchanged, since speed is set by axon diameter alone"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Myelin enables saltatory conduction; without it the spike must creep along bare membrane or fails between nodes, so conduction slows or blocks."
+    },
+    {
+      "id": "rnascope-coexpression-subtype",
+      "needs": [
+        "C8",
+        "A5"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "To show two marker genes define one [[DRG]] subtype, what must [[RNAscope]] reveal?",
+      "options": [
+        "Both probe signals inside the very same cells, not merely in the same region",
+        "The two probes landing in separate, neighboring populations of cells instead",
+        "A much brighter signal for one of the two probes than for the other one",
+        "Both markers detected together in a bulk lysate of the whole ganglion"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Co-expression means both colors in the same DAPI-bounded cell. Signals in neighboring cells would mean separate populations; a bulk lysate loses the single-cell resolution entirely."
+    },
+    {
+      "id": "antibody-ko-trpv1",
+      "needs": [
+        "C7"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You have a new anti-[[TRPV1]] antibody. What most strongly shows it's specific?",
+      "options": [
+        "The staining disappears in knockout tissue that lacks the target protein",
+        "The staining looks bright and clean across normal wild-type tissue",
+        "The antibody also produces a single band on a western blot",
+        "The staining falls exactly where you had expected the target to be"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Specific signal must vanish without the target: a knockout is the clincher. A pretty wild-type stain, a band, or matching your expectation can all occur with an off-target antibody."
+    },
+    {
+      "id": "sensitization-cytokine",
+      "needs": [
+        "A9",
+        "B3"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "During inflammation, [[cytokine|cytokines]] act on nociceptor endings. What's a direct effect on sensation?",
+      "options": [
+        "They lower the nociceptors' threshold, so milder stimuli now cause pain",
+        "They convert the nociceptors into fast, low-threshold touch fibers",
+        "They act in the spinal cord instead, leaving the endings themselves unchanged",
+        "They raise the threshold, making the inflamed area go numb"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inflammatory mediators sensitize the ending by lowering its threshold (peripheral sensitization), so normally innocuous stimuli now fire it — the cytokine link between immunity and pain."
+    },
+    {
+      "id": "allodynia-central",
+      "needs": [
+        "A9",
+        "A6"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "After an injury, gentle touch becomes painful ([[allodynia]]). Which best explains it?",
+      "options": [
+        "Central sensitization: dorsal-horn gain rises, so touch input is read as pain",
+        "The touch fibers themselves have physically turned into pain-sensing nociceptors",
+        "Peripheral sensitization alone: the touch endings themselves now have a lower threshold",
+        "The area is swollen, so ordinary touch presses harder on the nerve endings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Touch-evoked pain points to raised gain in the dorsal horn (central sensitization), where even Aβ touch input is read as painful — a central change, not a conversion of fiber types."
+    },
+    {
+      "id": "microglia-twophoton",
+      "needs": [
+        "B4",
+        "C9"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You want to watch [[microglia]] extend and retract processes deep in a living brain. Which method fits?",
+      "options": [
+        "Two-photon microscopy through a cranial window",
+        "Confocal microscopy, which gives the sharpest single-plane images",
+        "A western blot run for a single microglia-specific marker protein",
+        "Bulk RNA-seq of the whole dissected brain at one single time point"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Live, deep, dynamic imaging calls for two-photon. Confocal is sharp but can't reach far into living tissue; a blot and bulk-seq lose both the live dynamics and the single-cell spatial detail."
+    },
+    {
+      "id": "cytokine-which-cells",
+      "needs": [
+        "B3",
+        "C8"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "You want to know *which* cells in inflamed tissue transcribe the cytokine Il6. Best method?",
+      "options": [
+        "[[RNAscope]] for Il6 mRNA, read per cell against [[DAPI]]",
+        "A western blot of the inflamed tissue, probed for IL-6",
+        "An ELISA for IL-6 run on the whole tissue homogenate",
+        "Bulk RNA-seq of the inflamed tissue, sequenced deeply"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Only in-situ detection assigns the signal to particular cells. A blot and ELISA quantify amount; bulk-seq averages over the population, so none say which cells are the source."
+    },
+    {
+      "id": "hemisection-split",
+      "needs": [
+        "A6",
+        "D3"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A one-sided cord lesion gives pain/temp loss on the opposite side but fine-touch loss on the same side below it. Why the split?",
+      "options": [
+        "Pain/temp crosses low in the cord; fine touch crosses higher, in the brainstem",
+        "Fine touch crosses low in the cord; pain/temp crosses higher, in the brainstem",
+        "Both pathways cross in the cord, so one side should lose both kinds of sensation",
+        "Neither pathway crosses in the cord, so all the loss should be on the lesioned side"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The spinothalamic tract crosses near entry in the cord, while the dorsal-column pathway crosses up in the brainstem — so one lesion gives contralateral pain/temp but ipsilateral touch."
+    },
+    {
+      "id": "ec-cell-relay",
+      "needs": [
+        "A8",
+        "D6"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A gut afferent ends below the epithelium, not in the lumen, yet reports luminal chemistry. How?",
+      "options": [
+        "Enterochromaffin cells sample the lumen and signal to it using serotonin",
+        "The afferent pushes a branch directly into the lumen to taste it on its own",
+        "The chemicals diffuse across the epithelium and bind receptors on the ending itself",
+        "Enteric neurons in the myenteric plexus sample the lumen and pass the signal on"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Lumen-facing EC cells are the transducer: they sense chemistry and release serotonin onto the nearby afferent — sensing by relay, not direct contact."
+    },
+    {
+      "id": "tiling-silence-high",
+      "needs": [
+        "A8",
+        "C5"
+      ],
+      "added": "2026-11-05",
+      "type": "predict",
+      "difficulty": 3,
+      "setup": "Colon afferents come in low-, mid-, and high-threshold subtypes, and you silence only the high-threshold ones with a [[DREADD]].",
+      "prompt": "What do you predict?",
+      "options": [
+        "Blunted responses to strong, noxious distension; gentle filling still sensed",
+        "Loss of all colon sensation at once, the gentle and the strong alike",
+        "Stronger pain from gentle, normal filling of the colon than before",
+        "Noxious distension still reported, since the low-threshold units cover that range too"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "High-threshold units carry the noxious end of the range, so silencing them should spare gentle-filling sensation while blunting responses to harmful distension — a subtype-specific prediction."
+    },
+    {
+      "id": "umap-confirm-subtype",
+      "needs": [
+        "C12",
+        "A5"
+      ],
+      "added": "2026-11-05",
+      "type": "mcq",
+      "difficulty": 3,
+      "prompt": "A [[UMAP]] shows a tidy cluster you think is a new DRG subtype. What actually confirms it's a real cell type?",
+      "options": [
+        "Finding its marker gene expressed in real neurons in the tissue",
+        "The cluster sitting far away from the others on the plot",
+        "The cluster being by far the largest one on the UMAP",
+        "The whole plot looking clean, with well-separated blobs"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A cluster is a hypothesis; grounding its marker in tissue (e.g. by RNAscope) is what makes it a real cell type. UMAP distance, cluster size, and tidy blobs are not evidence on their own."
     }
   ]
 }

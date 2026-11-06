@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img">
   <title>Transcardial perfusion: flush with PBS, then fix with PFA</title>
-  <desc>A schematic of the heart with vessels running to the brain, a DRG beside the spinal cord, and the colon. Blood fills the vessels; a needle goes into the left ventricle; cold PBS from bottle 1 flushes the blood out of every vessel; then PFA from bottle 2 flows through the same clean vessels and the brain, DRG and colon are fixed (hatched) all at once.</desc>
+  <desc>A schematic of the heart with vessels running to the brain, a DRG beside the spinal cord, and the colon. Blood fills the vessels; a needle goes into the left ventricle; the right atrium is cut and, as cold PBS from bottle 1 flushes the blood out of every vessel, fluid drains out of the cut; then PFA from bottle 2 flows through the same clean vessels and the brain, DRG and colon are fixed (hatched) all at once.</desc>
   <style>
     :root,svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#5B8DEF;--lipid:#e8d9c4;}
     @media (prefers-color-scheme:dark){:root,svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#7ea6f5;--lipid:#4a4237;}}
@@ -43,6 +43,11 @@
     .lvbl{opacity:0;animation:lvbl 10s ease-in-out infinite;}@keyframes lvbl{0%,0%{opacity:0}3%,95%{opacity:1}99%,100%{opacity:0}}
     .lvpb{opacity:0;animation:lvpb 10s ease-in-out infinite;}@keyframes lvpb{0%,25%{opacity:0}28%,95%{opacity:1}99%,100%{opacity:0}}
     .lvpf{opacity:0;animation:lvpf 10s ease-in-out infinite;}@keyframes lvpf{0%,51%{opacity:0}53%,95%{opacity:1}99%,100%{opacity:0}}
+    .ob{opacity:0;animation:ob 10s ease-in-out infinite;}@keyframes ob{0%,22%{opacity:0}25%,42%{opacity:1}46%,100%{opacity:0}}
+    .op{opacity:0;animation:op 10s ease-in-out infinite;}@keyframes op{0%,42%{opacity:0}46%,56%{opacity:1}60%,100%{opacity:0}}
+    .of{opacity:0;animation:of 10s ease-in-out infinite;}@keyframes of{0%,56%{opacity:0}60%,95%{opacity:1}99%,100%{opacity:0}}
+    .flow{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:5 6;animation:flow .8s linear infinite;}@keyframes flow{0%{stroke-dashoffset:22}100%{stroke-dashoffset:0}}
+    .cut{opacity:0;animation:cut 10s ease-in-out infinite;}@keyframes cut{0%,20%{opacity:0}23%,95%{opacity:1}99%,100%{opacity:0}}
     .fix{opacity:0;animation:fix 10s ease-in-out infinite;}@keyframes fix{0%,66%{opacity:0}74%,95%{opacity:1}99%,100%{opacity:0}}
     .ndl{animation:ndl 10s ease-in-out infinite;}@keyframes ndl{0%,2%{opacity:0;transform:translate(26px,-10px)}8%,15%{opacity:1;transform:translate(26px,-10px)}21%,95%{opacity:1;transform:translate(0px,0px)}99%,100%{opacity:0;transform:translate(0px,0px)}}
     .r1{opacity:0;animation:r1 10s ease-in-out infinite;}@keyframes r1{0%,20%{opacity:0}23%,44%{opacity:1}48%,100%{opacity:0}}
@@ -189,16 +194,21 @@
   <path class="lvbl" style="fill:var(--bad)" d="M214 160 C222 166 222 184 214 196 C208 204 200 200 199 190 C198 178 204 162 214 160 Z"/>
   <path class="lvpb" style="fill:var(--pbs)" d="M214 160 C222 166 222 184 214 196 C208 204 200 200 199 190 C198 178 204 162 214 160 Z"/>
   <path class="lvpf" style="fill:var(--track)" d="M214 160 C222 166 222 184 214 196 C208 204 200 200 199 190 C198 178 204 162 214 160 Z"/>
+  <path class="mus" d="M150 138 C150 128 162 125 170 129 C176 132 176 146 170 151 C164 156 152 153 150 146 Z"/>
+  <g class="ob"><path class="flow" style="stroke:var(--bad)" d="M146 143 C136 148 130 166 132 196"/></g>
+  <g class="op"><path class="flow" style="stroke:var(--pbs)" d="M146 143 C136 148 130 166 132 196"/></g>
+  <g class="of"><path class="flow" style="stroke:var(--track)" d="M146 143 C136 148 130 166 132 196"/></g>
+  <g class="cut"><path d="M151 132 Q157 141 151 150 Q145 141 151 132 Z" style="fill:var(--bad);stroke:color-mix(in srgb,var(--bad) 55%,var(--text));stroke-width:1.5"/></g>
   <g class="fix"><path class="set" d="M166.6 66.9 C161.4 74.5 149.7 82 137.2 86.4 C124.6 90.8 105.7 94.2 91.1 93.2 C76.5 92.3 59.2 86.7 49.4 80.8 C39.5 74.8 32.8 65.7 31.8 57.8 C30.8 49.9 34.8 40.1 43.3 33.3 C51.9 26.5 68.1 19.1 83.2 17.1 C98.4 15 119.9 17 134.1 21 C148.3 24.9 163.1 33.1 168.5 40.8 C173.9 48.4 171.8 59.3 166.6 66.9Z"/><path class="set" d="M63.7 206 C63.7 208.6 61.2 212.1 58.4 213.9 C55.6 215.6 50.2 217 46.8 216.4 C43.4 215.8 39.6 212.8 38 210.3 C36.5 207.8 35.8 203.8 37.3 201.4 C38.8 199 43.4 196.5 46.9 195.9 C50.4 195.4 55.5 196.5 58.3 198.2 C61.1 199.9 63.7 203.4 63.7 206Z"/><path class="set" d="M134 276 C150 268 166 282 182 274 C198 266 214 282 230 274 C246 266 262 282 278 274 C294 266 310 278 326 274 C340 272 346 286 344 294 C342 306 330 314 318 310 C302 306 286 316 270 310 C254 304 238 316 222 310 C206 304 190 316 174 310 C158 304 142 314 132 308 C122 302 122 282 134 276 Z"/></g>
   <g class="ndl"><path d="M207 184 L258 164" style="fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round"/><rect x="256" y="157" width="10" height="13" rx="2" style="fill:var(--n2);stroke:var(--muted);stroke-width:1.5"/></g>
   <path class="bot1" d="M262 40 H274 V48 C284 50 286 56 286 62 V90 Q286 96 280 96 H256 Q250 96 250 90 V62 C250 56 252 50 262 48 Z"/>
   <path class="bot2" d="M316 40 H328 V48 C338 50 340 56 340 62 V90 Q340 96 334 96 H310 Q304 96 304 90 V62 C304 56 306 50 316 48 Z"/>
   <path class="ring r1" style="stroke:var(--muted)" d="M260 34 H276 V44 C288 47 292 54 292 62 V91 Q292 102 281 102 H255 Q244 102 244 91 V62 C244 54 248 47 260 44 Z"/>
   <path class="ring r2" style="stroke:var(--track)" d="M314 34 H330 V44 C342 47 346 54 346 62 V91 Q346 102 335 102 H309 Q298 102 298 91 V62 C298 54 302 47 314 44 Z"/>
-  <text class="num" x="268" y="26" text-anchor="middle">1 PBS</text>
-  <text class="num" x="322" y="26" text-anchor="middle" style="fill:var(--track)">2 PFA</text>
+  <text class="num" y="26" text-anchor="middle"><tspan x="268">1 PBS</tspan><tspan x="322" style="fill:var(--track)">2 PFA</tspan></text>
   <text x="182" y="54">brain</text>
   <text x="36" y="238">DRG</text>
   <text x="132" y="334">colon</text>
+  <g class="cut"><path class="lead" d="M120 226 V150 Q120 137 132 136 L141 136"/><text x="114" y="240">right atrium (cut)</text></g>
   <path class="lead" d="M244 205 L214 186"/><text x="246" y="214">left ventricle</text>
 </svg>

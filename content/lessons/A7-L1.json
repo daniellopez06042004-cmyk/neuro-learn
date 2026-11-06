@@ -1,0 +1,87 @@
+{
+  "id": "A7-L1",
+  "unitId": "A7",
+  "title": "What interoception is",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Define interoception and distinguish it from exteroception.",
+  "tags": [
+    "interoception"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Sensing inward",
+      "body": "**[[interoception|Interoception]]** is the nervous system's sense of the body's *internal* state — gut fullness, blood pressure, temperature, inflammation. It's distinct from **[[exteroception]]**, which senses the outside world (touch, sound, light). Interoception is mostly below awareness, and it drives reflexes and feelings alike.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Which is an example of interoception rather than exteroception?",
+      "options": [
+        "Feeling your stomach is full after a meal",
+        "Feeling the texture of a fabric with your fingertips",
+        "Hearing a door close down the hallway",
+        "Seeing a traffic light change to green"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Gut fullness is an internal-state signal (interoception). Fabric texture, sound and light are external stimuli (exteroception).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You're deciding which sense reports the body's internal state.",
+          "prompt": "Which of these is interoceptive?",
+          "options": [
+            "Stomach fullness",
+            "A fabric's texture under your fingertips",
+            "A sound across the room"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Fullness is internal (interoception); fabric texture and sound are external (exteroception)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Most interoceptive signals are…",
+      "options": [
+        "Processed largely below conscious awareness, yet they shape reflexes and feelings",
+        "Consciously felt most of the time, much as touch on the skin is",
+        "Used only to drive reflexes, with no influence on mood or feelings",
+        "Carried to the brain only by the vagus, never by spinal nerves"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "You rarely 'feel' blood pressure or gut pH directly, yet these signals constantly drive autonomic reflexes and shape mood and 'gut feelings'. They reach the brain by both vagal and spinal routes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Think about signals such as blood pressure, gut pH and blood glucose.",
+          "prompt": "Interoceptive signals are mostly…",
+          "options": [
+            "Below awareness but influential",
+            "Always vivid and conscious",
+            "Reflex-only, with no effect on feelings"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "They act largely unconsciously, yet steer reflexes and feelings."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Interoception vs exteroception."
+}

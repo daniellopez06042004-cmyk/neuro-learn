@@ -1,0 +1,97 @@
+{
+  "id": "A9-L4",
+  "unitId": "A9",
+  "title": "Why this matters for the lab",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect sensitization to chemogenetic silencing of visceral afferents.",
+  "tags": [
+    "sensitization",
+    "lab"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "If the afferents drive it, silence them",
+      "body": "If sensitized visceral afferents drive hypersensitivity, then quieting them should reduce it. The field already shows **chemogenetic silencing** of nociceptors can lower inflammation-driven hypersensitivity — evidence that these neurons are *necessary* for it, not just correlated.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 2,
+      "setup": "In an inflamed gut, you silence the relevant sensory afferents with an [[hM4Di]] [[DREADD]] and give the actuator.",
+      "prompt": "What do you predict for hypersensitivity?",
+      "options": [
+        "It should decrease if those afferents drive it",
+        "It should increase, since silencing removes an inhibitory brake",
+        "It should be unchanged, because hM4Di acts only on the cell body",
+        "Only conduction velocity in those afferents should change"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Silencing the afferents tests causation: if they carry the hypersensitivity, quieting them reduces it. This is the chemogenetic logic (C5) applied to a disease model — and the template for probing other organs.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Chemogenetically silencing sensitized gut afferents should…",
+          "options": [
+            "Reduce hypersensitivity if they drive it",
+            "Increase it, by removing an inhibitory brake",
+            "Change only the conduction speed, nothing else"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Silencing tests whether those afferents are causal for the hypersensitivity."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Why does silencing (loss-of-function) strengthen a causal claim here?",
+      "options": [
+        "If removing the neurons' activity removes the symptom, they're likely necessary for it",
+        "Silencing on its own shows that the neurons are sufficient for the symptom",
+        "If silencing changed nothing, that would prove the neurons play no role",
+        "Silencing a whole population rules out every other pathway at once"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Loss-of-function tests *necessity*: no activity, no symptom → the neurons are required. (Showing *sufficiency* would need gain-of-function — driving them to evoke the symptom.)",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Silencing the afferents abolishes the hypersensitivity.",
+          "prompt": "What does that establish?",
+          "options": [
+            "They are necessary for it",
+            "They are sufficient on their own",
+            "Nothing about causation"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Loss-of-function shows necessity; sufficiency needs a separate gain-of-function test."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Reviews chemogenetic silencing of nociceptors reducing inflammatory hypersensitivity."
+    }
+  ],
+  "reviewNotes": "Chemogenetic silencing of afferents; necessity vs sufficiency; project tie-in."
+}

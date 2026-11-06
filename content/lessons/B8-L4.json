@@ -1,0 +1,97 @@
+{
+  "id": "B8-L4",
+  "unitId": "B8",
+  "title": "The CGRP–goblet cell axis",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how nociceptor CGRP directs goblet cells via RAMP1.",
+  "tags": [
+    "CGRP",
+    "goblet-cell"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Neurons tell the lining to act",
+      "body": "Beyond immune cells, nociceptor **[[CGRP]]** acts on **[[goblet cell|goblet cells]]** — the mucus-secreting epithelial cells — through receptors containing **[[RAMP1]]**. So a sensory neuron can direct the gut's protective mucus layer. Yang et al. mapped this CGRP–RAMP1 axis.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 3,
+      "setup": "You delete RAMP1 from goblet cells, then challenge the gut.",
+      "prompt": "What do you predict for the mucus/goblet response?",
+      "options": [
+        "The CGRP-directed goblet response is lost, weakening that defense",
+        "Goblet cells respond even more strongly than they normally would",
+        "The neurons stop firing their action potentials altogether",
+        "Goblet cells respond as usual, since they make their own CGRP"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "No receptor, no signal: deleting RAMP1 cuts the neuron→goblet instruction, so that arm of mucosal defense fails — clean evidence the axis is functional, using the receptor-removal logic from B6.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Deleting goblet-cell RAMP1 should…",
+          "options": [
+            "Remove the CGRP-directed goblet response entirely",
+            "Make the goblet cells respond even more strongly",
+            "Stop the neurons from firing their signals entirely"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Without the receptor, neuronal CGRP can't instruct the goblet cells."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "The CGRP–goblet axis shows neurons can signal to which partner, besides immune cells?",
+      "options": [
+        "Epithelial cells of the gut lining",
+        "Smooth muscle cells of the gut wall",
+        "Enteric glia around the plexuses",
+        "Endothelial cells of mucosal vessels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Neurons direct epithelial (goblet) cells too — so the neuroimmune 'unit' really includes neurons, immune cells, and epithelium together.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "CGRP from nerves acts on goblet cells.",
+          "prompt": "This adds which partner to the neuroimmune unit?",
+          "options": [
+            "Gut epithelial cells",
+            "Circulating red blood cells",
+            "Skeletal muscle"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Epithelial cells join neurons and immune cells in the gut unit."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Yang D et al., 2022, Cell",
+      "doi": "10.1016/j.cell.2022.09.024",
+      "url": "https://doi.org/10.1016/j.cell.2022.09.024",
+      "verified": true,
+      "note": "Nociceptors direct goblet cells via a CGRP-RAMP1 axis."
+    }
+  ],
+  "reviewNotes": "CGRP–RAMP1–goblet axis; neuron→epithelium."
+}

@@ -1308,6 +1308,198 @@
       "aliases": [],
       "definition": "An autonomic negative-feedback reflex that keeps blood pressure stable via arterial stretch receptors and brainstem output.",
       "track": "D"
+    },
+    {
+      "term": "Rexed laminae",
+      "aliases": [
+        "laminae"
+      ],
+      "definition": "The layered organization of the spinal dorsal (and ventral) horn; afferents of different types terminate in different laminae.",
+      "track": "A"
+    },
+    {
+      "term": "gate control theory",
+      "aliases": [
+        "gate control"
+      ],
+      "definition": "The idea that large touch-fiber input recruits dorsal-horn inhibition that reduces pain transmission.",
+      "track": "A"
+    },
+    {
+      "term": "spinothalamic tract",
+      "aliases": [],
+      "definition": "The ascending pathway carrying pain and temperature; it crosses the midline in the spinal cord near entry.",
+      "track": "A"
+    },
+    {
+      "term": "dorsal column–medial lemniscus",
+      "aliases": [
+        "DCML"
+      ],
+      "definition": "The ascending pathway for fine touch and proprioception; it crosses the midline in the brainstem.",
+      "track": "A"
+    },
+    {
+      "term": "periaqueductal gray",
+      "aliases": [
+        "PAG"
+      ],
+      "definition": "A midbrain hub for descending pain control that can suppress transmission in the dorsal horn.",
+      "track": "A"
+    },
+    {
+      "term": "descending modulation",
+      "aliases": [],
+      "definition": "Top-down signals from the brain that turn incoming pain up or down at the dorsal horn.",
+      "track": "A"
+    },
+    {
+      "term": "exteroception",
+      "aliases": [],
+      "definition": "Sensing the outside world (touch, sound, light), as opposed to the body's internal state.",
+      "track": "A"
+    },
+    {
+      "term": "enterochromaffin cell",
+      "aliases": [
+        "EC cell",
+        "enterochromaffin cells"
+      ],
+      "definition": "A hormone-producing epithelial cell in the gut lining that senses luminal chemistry and signals to afferents via serotonin.",
+      "track": "A"
+    },
+    {
+      "term": "serotonin",
+      "aliases": [
+        "5-HT"
+      ],
+      "definition": "A signaling molecule (5-HT); in the gut, released by enterochromaffin cells onto sensory nerve endings.",
+      "track": "A"
+    },
+    {
+      "term": "peripheral sensitization",
+      "aliases": [],
+      "definition": "Lowered firing threshold at a nociceptor's ending, caused by inflammatory mediators.",
+      "track": "A"
+    },
+    {
+      "term": "central sensitization",
+      "aliases": [],
+      "definition": "Increased gain in dorsal-horn neurons, so even normal input can be read as pain.",
+      "track": "A"
+    },
+    {
+      "term": "allodynia",
+      "aliases": [],
+      "definition": "Pain evoked by a normally non-painful stimulus, such as light touch.",
+      "track": "A"
+    },
+    {
+      "term": "hyperalgesia",
+      "aliases": [],
+      "definition": "Exaggerated pain from a stimulus that is already painful.",
+      "track": "A"
+    },
+    {
+      "term": "visceral hypersensitivity",
+      "aliases": [],
+      "definition": "Heightened, often painful sensation from internal organs, as in inflamed or irritable bowel.",
+      "track": "A"
+    },
+    {
+      "term": "silent nociceptor",
+      "aliases": [
+        "silent nociceptors"
+      ],
+      "definition": "An afferent unresponsive at baseline that becomes active once tissue is inflamed.",
+      "track": "A"
+    },
+    {
+      "term": "colitis",
+      "aliases": [],
+      "definition": "Inflammation of the colon; a common model for studying visceral hypersensitivity.",
+      "track": "A"
+    },
+    {
+      "term": "Aβ fiber",
+      "aliases": [
+        "Aβ"
+      ],
+      "definition": "A large, fast, myelinated sensory axon that carries fine touch; the low-threshold class.",
+      "track": "A"
+    },
+    {
+      "term": "blood–brain barrier",
+      "aliases": [
+        "BBB",
+        "blood-brain barrier"
+      ],
+      "definition": "The tight barrier that limits what crosses from blood into the CNS, including most circulating immune cells.",
+      "track": "B"
+    },
+    {
+      "term": "astrocyte",
+      "aliases": [
+        "astrocytes"
+      ],
+      "definition": "A star-shaped glial cell that supports neurons, manages ions and transmitters, and helps form the blood–brain barrier.",
+      "track": "B"
+    },
+    {
+      "term": "reactive astrocyte",
+      "aliases": [
+        "reactive astrocytes"
+      ],
+      "definition": "An astrocyte in an injury-induced state (upregulating markers like GFAP); can be protective or neurotoxic.",
+      "track": "B"
+    },
+    {
+      "term": "neuropeptide",
+      "aliases": [
+        "neuropeptides"
+      ],
+      "definition": "A small peptide signaling molecule released by neurons, e.g. CGRP or substance P.",
+      "track": "B"
+    },
+    {
+      "term": "CGRP",
+      "aliases": [
+        "calcitonin gene-related peptide"
+      ],
+      "definition": "A neuropeptide released by sensory neurons that acts on immune and epithelial cells via a RAMP1-containing receptor.",
+      "track": "B"
+    },
+    {
+      "term": "substance P",
+      "aliases": [],
+      "definition": "A neuropeptide released by nociceptors that promotes local inflammation.",
+      "track": "B"
+    },
+    {
+      "term": "RAMP1",
+      "aliases": [],
+      "definition": "A component of the CGRP receptor; cells need it to respond to CGRP.",
+      "track": "B"
+    },
+    {
+      "term": "goblet cell",
+      "aliases": [
+        "goblet cells"
+      ],
+      "definition": "A mucus-secreting epithelial cell of the gut lining; directed in part by nociceptor CGRP.",
+      "track": "B"
+    },
+    {
+      "term": "inflammatory reflex",
+      "aliases": [],
+      "definition": "A reflex in which vagal afferents sense inflammation and the brain sets off a response that dampens it. The outgoing limb reaches the spleen through the splenic nerve rather than the vagus directly, and parts of the circuit are still being worked out.",
+      "track": "B"
+    },
+    {
+      "term": "cholinergic anti-inflammatory pathway",
+      "aliases": [],
+      "definition": "The efferent arm of the inflammatory reflex: vagal output leads to acetylcholine that lowers macrophage cytokine release.",
+      "track": "B"
     }
   ]
 }

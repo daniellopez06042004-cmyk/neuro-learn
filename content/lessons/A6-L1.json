@@ -1,0 +1,80 @@
+{
+  "id": "A6-L1",
+  "unitId": "A6",
+  "title": "The dorsal horn: first stop in the CNS",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe where sensory afferents terminate in the dorsal horn and why layering matters.",
+  "tags": [
+    "dorsal-horn",
+    "central"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Where the periphery meets the CNS",
+      "body": "A sensory [[afferent]]'s central branch enters the spinal cord and ends in the **[[dorsal horn]]**, which is organized in layers (**[[Rexed laminae]]**). Different afferents end at different depths: small [[nociceptor|nociceptors]] (C, Aδ) terminate superficially; large touch fibers (Aβ) dive to deeper laminae.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why does it matter that C fibers and Aβ fibers end in different dorsal-horn layers?",
+      "options": [
+        "It keeps pain and touch information in partly separate circuits",
+        "It makes the C fibers conduct faster than the Aβ touch fibers do",
+        "It means touch and pain can never interact with each other at all",
+        "It decides which of the fibers are myelinated and which are not"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Laminar targeting sorts modalities into partly distinct circuits — the anatomical basis for processing pain and touch differently (and for them to interact, as in gate control).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "C and Aβ fibers terminate at different depths in the dorsal horn.",
+          "prompt": "What does that layering buy the circuit?",
+          "options": [
+            "Partly separate processing of pain vs touch",
+            "Faster conduction in the C fibers",
+            "A guarantee the two never interact"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Different target layers let pain and touch be processed partly separately — while still allowing defined interactions."
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Match each fiber to where it mainly terminates.",
+      "pairs": [
+        [
+          "C / Aδ nociceptors",
+          "Superficial laminae"
+        ],
+        [
+          "Aβ touch fibers",
+          "Deeper laminae"
+        ]
+      ],
+      "explanation": "Small nociceptive fibers end superficially; large low-threshold touch fibers end deeper — the layout that modality-specific circuits are built on."
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "A relay, not a wire",
+      "body": "The dorsal horn isn't a passive junction. Local interneurons, descending inputs, and convergence all shape the signal here before it ascends. The next lessons follow what happens to it.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Dorsal horn + laminar termination; sets up gate control and ascending paths."
+}

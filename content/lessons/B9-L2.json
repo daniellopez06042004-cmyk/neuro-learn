@@ -1,0 +1,106 @@
+{
+  "id": "B9-L2",
+  "unitId": "B9",
+  "title": "The cholinergic anti-inflammatory pathway",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how the efferent vagus limits inflammation via acetylcholine and the spleen.",
+  "tags": [
+    "inflammatory-reflex",
+    "vagus"
+  ],
+  "confidence": "medium",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "How the brake works",
+      "body": "The efferent arm is the **[[cholinergic anti-inflammatory pathway]]**: vagal output leads to acetylcholine acting on immune cells — notably spleen macrophages — to reduce their release of inflammatory cytokines like TNF. Rosas-Ballina et al. showed a surprising relay through acetylcholine-making T cells.",
+      "flag": {
+        "level": "simplified",
+        "note": "The circuit (vagus → splenic nerve → ACh-producing T cells → macrophages) is still being worked out; details and the exact anatomy are debated."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "At the end of the cholinergic anti-inflammatory pathway, what happens to macrophages?",
+      "options": [
+        "Acetylcholine signaling reduces their release of inflammatory cytokines",
+        "They are triggered to release far more TNF than they usually would",
+        "Acetylcholine kills the macrophages outright, which lowers the cytokines",
+        "They begin conducting their own action potentials like neurons"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The pathway's output (acetylcholine) acts on macrophages to suppress inflammatory cytokine release — the molecular 'brake' on inflammation.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The efferent vagal pathway engages acetylcholine signaling on spleen macrophages.",
+          "prompt": "What's the effect on their cytokines?",
+          "options": [
+            "Reduced inflammatory cytokine release",
+            "A large increase in cytokine release",
+            "No change at all"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Acetylcholine signaling dampens macrophage cytokine release."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "What was surprising in Rosas-Ballina et al.'s account of this circuit?",
+      "options": [
+        "A type of T cell that makes acetylcholine relays the neural signal",
+        "Macrophages grew their own axons to reach all the way to the brain",
+        "The spleen turned out to have no role in the pathway at all",
+        "Antibodies carried the signal all the way down the vagus nerve"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An acetylcholine-synthesizing T cell was found to relay the neural signal to macrophages — an unexpected neuron–immune handoff that other groups are still testing.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The neural signal has to reach splenic macrophages.",
+          "prompt": "What relays it, per Rosas-Ballina?",
+          "options": [
+            "Acetylcholine-making T cells",
+            "Macrophage-grown axons",
+            "Antibodies in the vagus"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "In their account, ACh-synthesizing T cells relay the signal to macrophages — a step still being worked out."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Borovikova LV et al., 2000, Nature",
+      "doi": "10.1038/35013070",
+      "url": "https://doi.org/10.1038/35013070",
+      "verified": true,
+      "note": "Vagus nerve stimulation attenuates the systemic inflammatory response to endotoxin."
+    },
+    {
+      "citation": "Rosas-Ballina M et al., 2011, Science",
+      "doi": "10.1126/science.1209985",
+      "url": "https://doi.org/10.1126/science.1209985",
+      "verified": true,
+      "note": "Acetylcholine-synthesizing T cells relay neural signals in a vagus nerve circuit."
+    }
+  ],
+  "reviewNotes": "Cholinergic anti-inflammatory pathway; flagged as still-resolving."
+}

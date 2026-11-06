@@ -1,0 +1,89 @@
+{
+  "id": "A6-L4",
+  "unitId": "A6",
+  "title": "Descending control: the brain talks back",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how descending modulation changes how much pain is felt.",
+  "tags": [
+    "descending",
+    "modulation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Pain is not a fixed readout",
+      "body": "The brain sends signals *down* to the dorsal horn — **[[descending modulation]]** from regions like the **[[periaqueductal gray]] (PAG)** — that can suppress or amplify incoming pain. The same injury can hurt more or less depending on this top-down state.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 2,
+      "setup": "A soldier is wounded mid-battle but reports feeling little pain until later.",
+      "prompt": "What best explains this?",
+      "options": [
+        "Descending modulation is suppressing pain transmission at the time",
+        "Nociceptors at the wound adapt quickly and stop firing",
+        "Pain signals travel far too slowly to arrive during the battle",
+        "Adrenaline physically blocks conduction in the spinal cord"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Strong top-down (descending) inhibition can clamp pain transmission in the dorsal horn during intense states, so the signal is dampened before it's ever felt — then returns when that state fades.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Feeling little pain from a serious wound during a crisis reflects…",
+          "options": [
+            "Descending inhibition of pain transmission",
+            "Nociceptors at the wound adapting and going silent",
+            "Pain signals being too slow to arrive"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Top-down modulation suppresses the signal at the dorsal horn during the crisis."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Descending modulation can do which of the following?",
+      "options": [
+        "Either dampen or amplify incoming pain, depending on state",
+        "Only dampen incoming pain; it has no way to amplify it",
+        "Only amplify incoming pain; it has no way to dampen it",
+        "Silence the nociceptor endings out in the skin itself"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The descending system is bidirectional: it can inhibit pain (stress-induced analgesia) or facilitate it (contributing to chronic pain). It modulates, it doesn't delete.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The descending pain-control system is engaged.",
+          "prompt": "What can it do to incoming pain?",
+          "options": [
+            "Turn it down or up, depending on state",
+            "Only ever turn the pain up, never down",
+            "Only ever turn the pain down, never up"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "It's bidirectional — inhibiting or facilitating pain depending on the brain's state."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Descending modulation; PAG; bidirectional."
+}

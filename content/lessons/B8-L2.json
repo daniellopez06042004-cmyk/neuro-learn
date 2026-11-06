@@ -1,0 +1,97 @@
+{
+  "id": "B8-L2",
+  "unitId": "B8",
+  "title": "Sensory fibers among immune cells",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Interpret imaging of CGRP+ fibers alongside immune cells in the gut wall.",
+  "tags": [
+    "gut",
+    "imaging"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "What the slide shows",
+      "body": "Stain the colon wall for a sensory marker ([[CGRP]]) and an immune marker (CD45) and you see varicose nerve fibers running through the [[lamina propria]] with immune cells clustered right beside them — often close enough to signal. Proximity is the first clue to interaction.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "CGRP+ fibers and CD45+ immune cells sit immediately adjacent in the gut wall. What does that *suggest* (not prove)?",
+      "options": [
+        "They are positioned to signal to each other locally",
+        "They must therefore be the very same cell type",
+        "Neither cell can respond to the other one at all",
+        "The tissue must simply have been fixed incorrectly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Adjacency suggests the opportunity for local signaling; proving it needs functional tests (receptors, silencing). CGRP marks nerve fibers, CD45 marks immune cells — different cell types sitting close.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Sensory fibers and immune cells lie side by side in the wall.",
+          "prompt": "What does proximity alone establish?",
+          "options": [
+            "An opportunity to signal, but not proof of it",
+            "That the two are really the same cell type",
+            "That the two simply cannot interact at all"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Proximity suggests possible signaling; function must be tested separately."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "You want to move from 'they're close' to 'they signal'.",
+      "prompt": "What would show a functional link?",
+      "options": [
+        "Removing a receptor or silencing the neurons changes the immune cells' behavior",
+        "Simply taking a much higher-resolution picture of the two cells side by side",
+        "Counting how many immune cells are present across the whole gut wall",
+        "Showing that fiber density rises wherever immune cell numbers rise"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Function needs a perturbation: knock out the receptor (e.g. RAMP1) or silence the neurons and see the immune readout change. Imaging locates the players; experiments prove the link.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To prove sensory fibers signal to nearby immune cells, you'd…",
+          "options": [
+            "Perturb the receptor or silence the neurons, then measure the response",
+            "Take a sharper, higher-magnification image of the two cells together",
+            "Count up all of the immune cells across the entire gut wall"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "A functional perturbation, not better imaging, proves the link."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG afferents in the colon wall, among lamina-propria immune cells."
+    }
+  ],
+  "reviewNotes": "CGRP/CD45 proximity; proximity vs function; ties to B8 colon slide."
+}

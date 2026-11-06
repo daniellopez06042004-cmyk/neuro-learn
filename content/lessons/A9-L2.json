@@ -1,0 +1,81 @@
+{
+  "id": "A9-L2",
+  "unitId": "A9",
+  "title": "Central sensitization",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Distinguish central from peripheral sensitization and define allodynia and hyperalgesia.",
+  "tags": [
+    "central-sensitization",
+    "pain"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Turning up the amplifier",
+      "body": "**[[central sensitization]]** is increased gain in the [[dorsal horn]] itself: after strong or sustained input, dorsal-horn neurons become more excitable. ('Wind-up' — a build-up of firing during repeated input — is a related but shorter-lived phenomenon that can help trigger it.) Now even normal touch input can be read as painful.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Match each term to its meaning.",
+      "pairs": [
+        [
+          "Allodynia",
+          "Pain from a normally non-painful stimulus"
+        ],
+        [
+          "Hyperalgesia",
+          "Exaggerated pain from a painful stimulus"
+        ]
+      ],
+      "explanation": "Allodynia = a gentle touch hurts; hyperalgesia = a painful stimulus hurts more than it should. Both can arise from central sensitization."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "After an injury heals, light brushing of nearby, uninjured skin is painful.",
+      "prompt": "What best explains pain spreading beyond the injured area?",
+      "options": [
+        "Central sensitization — the dorsal horn's gain is raised, so touch input reads as pain",
+        "The brush is causing fresh micro-damage to the skin each time it passes",
+        "Nociceptors have sprouted into the neighbouring uninjured skin",
+        "Only peripheral sensitization confined to the original injured site"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Pain in *uninjured* neighboring skin points to a central change: the dorsal horn amplifies even Aβ touch input (allodynia). Purely peripheral sensitization would stay confined to the inflamed tissue.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Pain from light touch of uninjured skin near an old injury suggests…",
+          "options": [
+            "Central sensitization (raised dorsal-horn gain)",
+            "Only peripheral sensitization at the old site",
+            "Destruction of all nociceptors"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Spread to uninjured skin and pain from touch point to a central, not purely peripheral, change."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Two levels, one experience",
+      "body": "Peripheral sensitization turns up the *ending*; central sensitization turns up the *relay*. Chronic pain usually involves both. Touch-evoked pain (allodynia) in particular leans on the central side — which is why peripheral fixes alone often fall short.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Central sensitization; allodynia/hyperalgesia; echoes B3-L3."
+}

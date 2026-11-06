@@ -1,0 +1,97 @@
+{
+  "id": "A7-L4",
+  "unitId": "A7",
+  "title": "Why the DRG side is the frontier",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why spinal/DRG visceral afferents are a current research frontier.",
+  "tags": [
+    "interoception",
+    "frontier"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The understudied line",
+      "body": "The **vagal** side of interoception has been studied for decades. The **spinal/[[DRG]]** side — especially how genetically-defined subtypes innervate specific organs — is only now being mapped, thanks to mouse genetics and single-cell tools. That gap is the lab's whole opening.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why is the spinal/DRG side of visceral sensing described as a 'frontier'?",
+      "options": [
+        "Its organ-specific subtypes are only now being defined and manipulated",
+        "No one had recorded from spinal visceral afferents until recently",
+        "Its subtypes were fully defined long ago; only their roles are unknown",
+        "Spinal afferents turned out to outnumber vagal ones in every organ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "New genetic and single-cell tools finally let researchers define DRG visceral subtypes and test their functions — work that wasn't possible before, unlike the long-studied vagal side.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Vagal interoception is well studied; the DRG side less so.",
+          "prompt": "Why is the DRG side a frontier now?",
+          "options": [
+            "Its subtypes are only now definable and testable",
+            "It was never recorded from until recently",
+            "Its subtypes were all defined long ago"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Modern genetic tools newly allow defining and manipulating DRG visceral subtypes."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "Your lab wants to extend the DRG-afferent map from the colon to the pancreas.",
+      "prompt": "What makes this a novel contribution?",
+      "options": [
+        "The pancreas isn't yet mapped the way the colon is, so it's new territory",
+        "Pancreatic DRG afferents have never been seen, so any found are new",
+        "The pancreas is innervated only by the vagus, so DRG fibers are new",
+        "The colon map is already known to apply to the pancreas unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "The DRG-afferent story has been built mostly in the colon; applying that playbook to the pancreas extends the map to an organ it doesn't yet cover — exactly why your project is novel.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Mapping pancreas DRG afferents is novel because…",
+          "options": [
+            "The pancreas isn't yet mapped like the colon",
+            "No DRG fibers have ever been seen there",
+            "Only the vagus innervates the pancreas"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "It extends the colon playbook to an unmapped organ."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Spinal (DRG) vs vagal innervation of the gut; the DRG side is the frontier."
+    }
+  ],
+  "reviewNotes": "DRG visceral afferents as frontier; ties to the pancreas project."
+}

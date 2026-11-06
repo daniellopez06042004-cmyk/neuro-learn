@@ -1,0 +1,90 @@
+{
+  "id": "A7-L2",
+  "unitId": "A7",
+  "title": "Two lines into the body: vagal and spinal",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Contrast vagal (nodose) and spinal (DRG) visceral afferents by route and territory.",
+  "tags": [
+    "vagal",
+    "spinal",
+    "interoception"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Nodose vs DRG",
+      "body": "The viscera are watched by two afferent systems:\n\n- **Vagal** afferents — cell bodies in the **[[nodose ganglion]]** — run in the **[[vagus]]** to the brainstem; densest in the **upper** GI tract (stomach, duodenum).\n- **Spinal** afferents — cell bodies in the **[[DRG]]** — run to the spinal cord; spread **throughout**, densest **distally** (the [[colon]]).",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Match each visceral afferent system to its features.",
+      "pairs": [
+        [
+          "Vagal (nodose)",
+          "To the brainstem; densest in the upper gut"
+        ],
+        [
+          "Spinal (DRG)",
+          "To the spinal cord; densest in the distal gut"
+        ]
+      ],
+      "explanation": "Vagal afferents report to the brainstem and dominate the proximal gut; spinal/DRG afferents report to the cord and dominate distally."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You record from an afferent innervating the distal colon and trace its cell body.",
+      "prompt": "Where do you most likely find that cell body?",
+      "options": [
+        "A dorsal root ganglion",
+        "The nodose ganglion",
+        "The brainstem",
+        "The dorsal horn of the cord"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "The distal colon is dominated by spinal afferents, whose cell bodies sit in the DRG (vagal/nodose coverage thins out distally). The dorsal horn is where their central branch synapses, not where the cell body lives.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "A distal-colon afferent's cell body is most likely in…",
+          "options": [
+            "A DRG",
+            "The nodose ganglion",
+            "The brainstem"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Spinal/DRG afferents dominate the distal colon; nodose coverage is proximal."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s4",
+      "title": "Why the split matters",
+      "body": "Routing differs, so the two systems feed different circuits and are studied with different tools. For the lab, the spinal/DRG line into the distal gut — and, by extension, other organs like the pancreas — is the one under the microscope.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Spinal (DRG) vs vagal innervation of the gut; the DRG side is the frontier."
+    }
+  ],
+  "reviewNotes": "Vagal vs spinal visceral afferents; nodose vs DRG."
+}

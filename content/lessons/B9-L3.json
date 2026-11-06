@@ -1,0 +1,88 @@
+{
+  "id": "B9-L3",
+  "unitId": "B9",
+  "title": "Reflex logic, one more time",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect the inflammatory reflex to the general reflex-arc framework and the afferent limb.",
+  "tags": [
+    "reflex",
+    "interoception"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The same shape everywhere",
+      "body": "The inflammatory reflex is one more [[reflex arc]] (D8): an [[interoception|interoceptive]] **afferent** limb senses the internal state (here, inflammation), and an **efferent** limb corrects it. The knee-jerk, the baroreflex, and this all share that structure.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What do the knee-jerk reflex, the baroreflex, and the inflammatory reflex share?",
+      "options": [
+        "An afferent sensing limb together with an efferent corrective limb",
+        "An identical effector organ that is used in each and every single case",
+        "The complete absence of any afferent limb at all",
+        "Being driven entirely by hormones, not by nerves"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All are reflex arcs: sense → respond. What differs is the variable sensed and the effector, not the underlying logic.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Three different reflexes are compared.",
+          "prompt": "What's common to all reflex arcs?",
+          "options": [
+            "An afferent limb plus an efferent limb together",
+            "The very same effector organ used each time",
+            "No afferent limb present at all within them"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Every reflex arc pairs an afferent (sensing) with an efferent (responding) limb."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "The afferent limb of the inflammatory reflex is best described as what kind of neuron?",
+      "options": [
+        "An interoceptive sensory afferent reporting an internal state",
+        "An autonomic motor neuron that drives an organ to respond",
+        "A microglial cell residing inside the central nervous system",
+        "A skeletal muscle motor neuron of the somatic system"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The sensing side is an interoceptive afferent — the same class of neuron (vagal and spinal/DRG) at the heart of this whole app.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Something must sense the inflammation to start the reflex.",
+          "prompt": "What is that sensing limb?",
+          "options": [
+            "An interoceptive sensory afferent neuron",
+            "An autonomic motor neuron to an organ",
+            "A microglial cell within the brain itself"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The afferent limb is an interoceptive sensory neuron."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Inflammatory reflex within the reflex-arc framework; afferent limb (links to afferent-limbs quiz)."
+}

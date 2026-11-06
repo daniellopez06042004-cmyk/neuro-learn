@@ -1,0 +1,97 @@
+{
+  "id": "A10-L3",
+  "unitId": "A10",
+  "title": "Open questions in gut sensing",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Name current open questions in spinal visceral sensation and why they matter.",
+  "tags": [
+    "open-questions",
+    "frontiers"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "What we still don't know",
+      "body": "The 2025 review flags open questions for spinal ([[DRG]]) gut sensing, including:\n\n- Do more subtypes exist **beyond the colon** (stomach, small intestine, other organs)?\n- What are their **central (dorsal-horn) projection patterns**?\n- How does the **microbiome** shape these neurons?\n- Do afferents form true **synapses** with [[enterochromaffin cell|enterochromaffin cells]], or just sit close?",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why is 'beyond the colon' an open question at all?",
+      "options": [
+        "Most DRG-subtype mapping so far has focused on the distal colon",
+        "Organs above the colon are innervated only by the vagus, not by DRG",
+        "DRG neurons outside the colon have no marker genes to target",
+        "Colon subtypes are already known to be the same in every organ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The genetic subtype story has been built mainly in the distal colon; whether the same or new subtypes serve the stomach, small intestine, or pancreas is largely untested — which is where new projects come in.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "DRG subtype work has centered on the distal colon.",
+          "prompt": "Why is extending to other organs open?",
+          "options": [
+            "Other organs aren't yet mapped this way",
+            "Other organs are innervated only by the vagus",
+            "Colon subtypes are known to be identical elsewhere"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The subtype map is colon-centric; other organs are largely uncharted."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "Evidence conflicts on whether gut afferents truly synapse with EC cells or merely lie nearby.",
+      "prompt": "Why does the distinction matter?",
+      "options": [
+        "A true synapse means fast, specific signaling; proximity means slow, diffuse signaling",
+        "Only a true synapse would let serotonin act as the messenger here",
+        "Without a synapse, the signal would have to travel in the bloodstream",
+        "Only a true synapse can be confirmed by electron microscopy"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "A dedicated synapse supports rapid, targeted transmission; diffusion across a gap is slower and less specific. Which one it is changes how we model gut chemosensation — an unsettled, actively-studied point.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Whether EC cell–afferent contact is a true synapse matters because…",
+          "options": [
+            "It changes whether signaling is fast/specific vs slow/diffuse",
+            "Only a synapse would let serotonin act as the messenger",
+            "Without a synapse the signal must travel in the blood"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Synapse vs proximity changes the speed and specificity of the signal."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Review mapping the open questions in spinal sensory innervation of the gut."
+    }
+  ],
+  "reviewNotes": "Open questions from the 2025 review; good for 'frontiers'."
+}

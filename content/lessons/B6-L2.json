@@ -1,0 +1,97 @@
+{
+  "id": "B6-L2",
+  "unitId": "B6",
+  "title": "Nociceptors sense pathogens directly",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain evidence that nociceptors detect pathogens and modulate inflammation.",
+  "tags": [
+    "nociceptor",
+    "infection"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Pain as an early warning",
+      "body": "**[[nociceptor|Nociceptors]]** can detect bacterial products directly — you feel pain from infection partly because the neurons sense the pathogen themselves. Strikingly, these neurons can then *modulate* the immune response, sometimes even dampening it.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 3,
+      "setup": "In a skin infection, nociceptors are activated directly by bacteria. You then silence those nociceptors.",
+      "prompt": "What might happen to the local immune response?",
+      "options": [
+        "It can change — sometimes increasing, since the neurons were modulating it",
+        "Nothing happens, since neurons have no effect on immunity at all",
+        "The bacteria would be cleared instantly without any neurons involved",
+        "It should simply weaken, since the pain signal normally recruits immune cells"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Chiu et al. found nociceptors sense bacteria and can *suppress* aspects of the immune response; silencing them changed infection outcomes. Neurons are active players, not bystanders.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Silencing bacteria-sensing nociceptors can…",
+          "options": [
+            "Alter the local immune response they had been modulating",
+            "Have no possible effect on the immune response at all",
+            "Instantly sterilize the surrounding tissue on its own"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Nociceptors modulate immunity, so silencing them changes the response."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "What's the broader lesson from nociceptors sensing bacteria?",
+      "options": [
+        "The nervous and immune systems are directly, physically interconnected",
+        "Only antibodies, never neurons, can ever possibly detect a pathogen at all",
+        "Pain is just a by-product of tissue damage, with no role in immunity",
+        "Neurons can detect pathogens but never actually affect them"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Direct pathogen sensing by neurons, plus their feedback onto immune cells, shows the two systems are wired together — the premise of neuroimmunology.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Neurons both detect bacteria and feed back on immune cells.",
+          "prompt": "What does this establish?",
+          "options": [
+            "Direct nervous–immune interconnection",
+            "That pain is unrelated to infection",
+            "That only antibodies detect pathogens"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "It shows the nervous and immune systems are directly interconnected."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Chiu IM et al., 2013, Nature",
+      "doi": "10.1038/nature12479",
+      "url": "https://doi.org/10.1038/nature12479",
+      "verified": true,
+      "note": "Nociceptor neurons detect bacteria directly and modulate inflammation."
+    }
+  ],
+  "reviewNotes": "Chiu 2013: nociceptors sense bacteria, modulate immunity."
+}

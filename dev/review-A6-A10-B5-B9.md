@@ -1,0 +1,408 @@
+# Review of A6–A10, B5–B9 and the new quiz questions (2026-11-06)
+
+131 edits, already live in the app. Copy each lesson file from `app/content/lessons/` (and `quiz-pool.json`) over yours; this is the record of what changed and why.
+
+## Science fixes (20)
+
+- `A7-L1` › `s2 › options`: Skin temperature is counted as interoceptive in Craig's widely used framework (and the concept card lists temperature), so 'cool breeze' is arguably a second answer; use discriminative touch.
+  - was: "Feeling your stomach is full after a meal" / "Feeling a cool breeze across your skin" / "Hearing a door close down the hallway" / "Seeing a traffic light change to green"
+  - now: "Feeling your stomach is full after a meal" / "Feeling the texture of a fabric with your fingertips" / "Hearing a door close down the hallway" / "Seeing a traffic light change to green"
+- `A7-L1` › `s2 › variants[0] › options`: Same breeze/temperature ambiguity in the variant.
+  - was: "Stomach fullness" / "A breeze on the skin" / "A sound across the room"
+  - now: "Stomach fullness" / "A fabric's texture under your fingertips" / "A sound across the room"
+- `A7-L3` › `s2 › prompt`: Visceral pain is typically dull/cramping and poorly localized, not 'sharp'.
+  - was: "A patient has sharp, distressing pain from an inflamed, over-distended colon. Which afferent system most likely carries it?"
+  - now: "A patient has intense, cramping pain from an inflamed, over-distended colon. Which afferent system most likely carries it?"
+- `A8-L2` › `s2 › explanation`: Mucosal afferents (Brierley classes) do respond to light mucosal stroking; 'poor stimuli' overstates. Also matches new heat option.
+  - was: "Hollow-organ afferents are tuned to stretch — the signal that matters for a filling, moving tube. Cutting and light brushing are poor stimuli internally; light is irrelevant."
+  - now: "Hollow-organ afferents are mostly tuned to stretch — the signal that matters for a filling, moving tube. Cutting and burning barely register; light mucosal stroking drives only a subset (mucosal afferents)."
+- `A8-L3` › `s3 › setup`: Some luminal chemicals act on afferents directly (e.g. via TRPA1/TRPV1), so 'blunted' only follows for EC-detected stimuli.
+  - was: "You block serotonin signaling between EC cells and afferents, then deliver a luminal chemical stimulus."
+  - now: "You block serotonin signaling between EC cells and afferents, then deliver a luminal chemical that EC cells detect."
+- `A8-L4` › `s1 › flag`: Classic colon recordings (e.g. Sengupta & Gebhart) show most low-threshold units encode distension into the noxious range, so 'no single afferent reports the whole range' needs a simplified flag.
+  - was: "None"
+  - now: "{'level': 'simplified', 'note': 'Many low-threshold colon afferents also keep encoding into the noxious range; dedicated high-threshold units add to the top end rather than owning it alone.'}"
+- `A8-L4` › `s1 › body`: Soften the absolute claim: low-threshold units can encode wide ranges.
+  - was: "No single afferent reports the whole range of distension. Instead, different [[DRG]] subtypes have different force **[[threshold|thresholds]]** — some fire to gentle filling, others only to strong, potentially harmful distension. Together they **tile** the intensity range, so the brain can tell 'full' from 'dangerously over-full'."
+  - now: "No single afferent type covers the whole range of distension equally well. Instead, different [[DRG]] subtypes have different force **[[threshold|thresholds]]** — some fire to gentle filling, others only to strong, potentially harmful distension. Together they **tile** the intensity range, so the brain can tell 'full' from 'dangerously over-full'."
+- `A8-L4` › `s2 › explanation`: 'One threshold couldn't do that' overstates (single low-threshold units do grade their rate over a wide range).
+  - was: "A set of differently-tuned subtypes spans the intensity range (rate/population coding), letting the system distinguish normal filling from injury-level stretch. One threshold couldn't do that."
+  - now: "A set of differently-tuned subtypes spans the intensity range (rate/population coding), letting the system distinguish normal filling from injury-level stretch. A single threshold would compress that range; tiling extends it."
+- `A9-L2` › `s1 › body`: Wind-up is a distinct, short-lasting phenomenon, not a form of central sensitization.
+  - was: "**[[central sensitization]]** is increased gain in the [[dorsal horn]] itself: after strong or sustained input, dorsal-horn neurons become more excitable (including 'wind-up', a build-up with repeated input). Now even normal touch input can be read as painful."
+  - now: "**[[central sensitization]]** is increased gain in the [[dorsal horn]] itself: after strong or sustained input, dorsal-horn neurons become more excitable. ('Wind-up' — a build-up of firing during repeated input — is a related but shorter-lived phenomenon that can help trigger it.) Now even normal touch input can be read as painful."
+- `A9-L3` › `s1 › body`: Silent nociceptors are mechanically insensitive, not unresponsive to everything (they answer chemical stimuli).
+  - was: "**[[visceral hypersensitivity]]** is heightened sensation from the viscera — normal filling now feels painful. Inflammation (e.g. **[[colitis]]**) sensitizes gut afferents and can **recruit [[silent nociceptor|silent nociceptors]]**: afferents that are unresponsive at baseline but 'wake up' and start firing once inflamed."
+  - now: "**[[visceral hypersensitivity]]** is heightened sensation from the viscera — normal filling now feels painful. Inflammation (e.g. **[[colitis]]**) sensitizes gut afferents and can **recruit [[silent nociceptor|silent nociceptors]]**: afferents that don't respond to mechanical stimuli at baseline but 'wake up' and start firing once inflamed."
+- `A9-L4` › `s1 › body`: Loss-of-function shows necessity, which is what s3 teaches; 'causal' overstates it.
+  - was: "If sensitized visceral afferents drive hypersensitivity, then quieting them should reduce it. The field already shows **chemogenetic silencing** of nociceptors can lower inflammation-driven hypersensitivity — direct evidence that these neurons are causal, not just correlated."
+  - now: "If sensitized visceral afferents drive hypersensitivity, then quieting them should reduce it. The field already shows **chemogenetic silencing** of nociceptors can lower inflammation-driven hypersensitivity — evidence that these neurons are *necessary* for it, not just correlated."
+- `B5-L3` › `s1 › flag`: Contested claim carried no flag, while the parallel microglia claim in B5-L2 does.
+  - was: "None"
+  - now: "{'level': 'debated', 'note': 'The neurotoxic-vs-protective split (the old A1/A2 labels) is debated; the field now describes astrocyte states more carefully.'}"
+- `B5-L3` › `s3 › reveal`: GFAP is the usual marker but isn't sufficient to call an astrocyte reactive; the reveal implied it was.
+  - was: "Reactive astrocytes upregulate GFAP and change shape; a sparse baseline pattern is the resting reference, not reactivity. (This was a real fix in our B5 microscope slide.)"
+  - now: "Reactive astrocytes upregulate GFAP and change shape; a sparse baseline pattern is the resting reference, not reactivity. GFAP alone doesn't define a reactive state, but it's the usual first marker. (This was a real fix in our B5 microscope slide.)"
+- `B7-L3` › `s3 › options`: Each side activating the other is positive feedback; 'feed-forward' names a non-looping motif.
+  - was: "A feed-forward loop that can amplify inflammation" / "A one-way signal with no feedback" / "A process that always self-limits immediately" / "Two unrelated events that never interact"
+  - now: "A positive feedback loop that can amplify inflammation" / "A one-way signal with no feedback" / "A process that always self-limits immediately" / "Two unrelated events that never interact"
+- `B7-L3` › `s3 › variants[0] › options`: Matches the corrected term in the main question.
+  - was: "A feed-forward, amplifying loop" / "A strictly one-way signal" / "A self-limiting single event"
+  - now: "A positive feedback, amplifying loop" / "A strictly one-way signal" / "A self-limiting single event"
+- `B7-L3` › `s3 › variants[0] › explanation`: Mutual activation is feedback, not feed-forward.
+  - was: "Mutual activation makes a feed-forward loop."
+  - now: "Mutual activation makes a positive feedback loop."
+- `B9-L1` › `s1 › flag`: Efferent limb presented as purely vagal; the vagus-to-spleen anatomy is contested, and B9-L2 carries a flag while B9-L1 does not.
+  - was: "None"
+  - now: "{'level': 'simplified', 'note': 'The efferent limb is usually drawn as vagal end to end, but the signal reaches the spleen via the splenic nerve, and the exact anatomy is still debated.'}"
+- `B9-L1` › `s1 › body`: The efferent vagus does not itself reach the spleen; it triggers a downstream chain, so 'sets off a response' is the accurate framing.
+  - was: "The **[[inflammatory reflex]]** is exactly what it sounds like: a [[reflex arc]] whose *afferent* limb (vagal sensory neurons) detects inflammation, and whose *efferent* [[vagus|vagal]] limb acts to **dampen** it. Tracey framed immunity as being under neural reflex control."
+  - now: "The **[[inflammatory reflex]]** is exactly what it sounds like: a [[reflex arc]] whose *afferent* limb (vagal sensory neurons) detects inflammation, and whose *efferent* [[vagus|vagal]] limb sets off a response that **dampens** it. Tracey framed immunity as being under neural reflex control."
+- `B9-L2` › `s3 › explanation`: The ChAT+ T cell relay is a debated step; the lesson flag says so but this explanation states it flatly.
+  - was: "An acetylcholine-synthesizing T cell was found to relay the neural signal to macrophages — an unexpected neuron–immune handoff."
+  - now: "An acetylcholine-synthesizing T cell was found to relay the neural signal to macrophages — an unexpected neuron–immune handoff that other groups are still testing."
+- `B9-L2` › `s3 › variants[0] › reveal`: Variant reveal states the debated ChAT+ T cell relay as settled fact.
+  - was: "ACh-synthesizing T cells relay the signal to macrophages."
+  - now: "In their account, ACh-synthesizing T cells relay the signal to macrophages — a step still being worked out."
+
+## Questions that gave the answer away (16)
+
+- `A6-L3` › `s3 › options`: Correct option is the only one splitting pain/temp vs touch (echoes the stem); add the reversed split as the key misconception.
+  - was: "Pain/temp lost on the opposite side; fine touch lost on the same side below it" / "All sensation is lost on the same side of the body only, everywhere below the lesion" / "All sensation is lost on the opposite side of the body only" / "No sensory loss at all, just weakness in the limb"
+  - now: "Pain/temp lost on the opposite side; fine touch lost on the same side below it" / "All sensation is lost on the same side of the body only, everywhere below the lesion" / "All sensation is lost on the opposite side of the body only" / "Pain/temp lost on the same side; fine touch lost on the opposite side below it"
+- `A6-L3` › `s3 › variants[0] › options`: Add the reversed split so the correct answer isn't the only one naming both modalities.
+  - was: "Contralateral pain/temp, ipsilateral fine touch" / "Everything is lost on the same (ipsilateral) side" / "Everything is lost on the opposite (contralateral) side"
+  - now: "Contralateral pain/temp, ipsilateral fine touch" / "Ipsilateral pain/temp, contralateral fine touch" / "Everything is lost on the opposite (contralateral) side"
+- `A6-L4` › `s3 › options`: Correct option is the only hedged one and distractors are throwaways; use the common 'descending = analgesia only' misconception and a wrong-site option.
+  - was: "Either dampen or amplify incoming pain, depending on state" / "Only ever increase incoming pain, and never reduce it at all" / "Only act on touch signals, and never on pain signals at all" / "Permanently delete the entire pain pathway once and for good"
+  - now: "Either dampen or amplify incoming pain, depending on state" / "Only dampen incoming pain; it has no way to amplify it" / "Only amplify incoming pain; it has no way to dampen it" / "Silence the nociceptor endings out in the skin itself"
+- `A7-L1` › `s3 › options`: Correct is the longest, only hedged option; distractors (motor commands, eyes and ears) are throwaways.
+  - was: "Processed largely below conscious awareness, yet they shape reflexes and feelings" / "Always felt vividly and consciously, exactly the way a bright light is clearly seen" / "Purely motor commands going out, with no actual sensing involved at all" / "Carried into the brain only by the eyes and the ears"
+  - now: "Processed largely below conscious awareness, yet they shape reflexes and feelings" / "Consciously felt most of the time, much as touch on the skin is" / "Used only to drive reflexes, with no influence on mood or feelings" / "Carried to the brain only by the vagus, never by spinal nerves"
+- `A7-L1` › `s3 › variants[0] › setup`: Setup ('whether you consciously feel your blood pressure') telegraphs the answer.
+  - was: "Think about whether you consciously feel your blood pressure."
+  - now: "Think about signals such as blood pressure, gut pH and blood glucose."
+- `A7-L3` › `s3 › options`: Setup says 'without any pain', which rules out both pain options; the correct answer is the only non-pain one.
+  - was: "Vagal (nodose) afferents to the brainstem" / "Spinal nociceptors signaling injury" / "The spinothalamic pain tract" / "None — nutrient status isn't sensed"
+  - now: "Vagal (nodose) afferents to the brainstem" / "Spinal (DRG) afferents to the spinal cord" / "Enteric neurons, with no signal to the brain" / "Taste cells in the mouth, during the meal"
+- `A7-L3` › `s3 › variants[0] › options`: Pain options are ruled out by 'normal meal'; use non-pain alternatives.
+  - was: "Vagal afferents" / "Spinal nociceptors" / "The spinothalamic tract"
+  - now: "Vagal afferents" / "Spinal (DRG) afferents" / "Enteric neurons alone"
+- `A9-L3` › `s3 › prompt`: 'What combination best explains this?' points straight at the only multi-mechanism option.
+  - was: "What combination best explains this?"
+  - now: "What best explains this?"
+- `B8-L3` › `s2 › prompt`: The stem states that the neurons regulate both, handing over the answer.
+  - was: "What do you predict, given these neurons help regulate both?"
+  - now: "What do you predict?"
+- `B8-L4` › `s2 › setup`: Setup spells out that CGRP can no longer be received, which is the answer; RAMP1's role was taught in B6-L3.
+  - was: "You delete RAMP1 from goblet cells so they can't receive neuronal CGRP, then challenge the gut."
+  - now: "You delete RAMP1 from goblet cells, then challenge the gut."
+- `quiz-pool` › `cre-reporter-logic › options`: "marker" appeared only in the correct option
+  - was: "Cells that have expressed the marker, where Cre excised the stop cassette" / "Every neuron in the whole animal, because the reporter is systemic" / "Only the cells that happen to be dividing at the time of the cross" / "No cells at all, since Cre and the reporter must be injected separately"
+  - now: "Cells that have expressed the marker, where Cre excised the stop cassette" / "Every neuron in the animal, whether or not it ever expressed the marker" / "Only the cells that happen to be dividing at the time of the cross" / "No cells at all, since Cre and the reporter must be injected separately"
+- `quiz-pool` › `cytokine-which-cells › options`: Each wrong option announced its own flaw ('shows how much', 'averages across all the cells'); the methods alone should carry it.
+  - was: "[[RNAscope]] for Il6 mRNA, read per cell against [[DAPI]]" / "A western blot, which shows how much IL-6 protein is present" / "An ELISA run on the whole tissue homogenate" / "Bulk RNA-seq, which averages Il6 across all the cells"
+  - now: "[[RNAscope]] for Il6 mRNA, read per cell against [[DAPI]]" / "A western blot of the inflamed tissue, probed for IL-6" / "An ELISA for IL-6 run on the whole tissue homogenate" / "Bulk RNA-seq of the inflamed tissue, sequenced deeply"
+- `quiz-pool` › `dorsal-root-cut › options`: "ventral" appeared only in the correct option; the swapped-roles version is also a real misconception
+  - was: "That root's sensory input, while motor output via the ventral root is spared" / "That root's motor output, while all of its sensation is completely spared" / "Both sensation and movement, since the two roots carry identical fibers" / "Nothing at all, because the signals simply reroute through the opposite side"
+  - now: "That root's sensory input, while motor output via the ventral root is spared" / "That root's motor output, while sensory input through the ventral root is spared" / "Both sensation and movement, since the two roots carry identical fibers" / "Nothing at all, because the signals simply reroute through the opposite side"
+- `quiz-pool` › `microglia-twophoton › options`: The right option was the only one echoing 'deep inside living tissue' from the stem; confocal is the real competing choice.
+  - was: "Two-photon microscopy, which can image deep inside living tissue" / "A standard widefield scope looking at a chemically fixed brain section" / "A western blot run for a single microglia-specific marker protein" / "Bulk RNA-seq of the whole dissected brain at one single time point"
+  - now: "Two-photon microscopy through a cranial window" / "Confocal microscopy, which gives the sharpest single-plane images" / "A western blot run for a single microglia-specific marker protein" / "Bulk RNA-seq of the whole dissected brain at one single time point"
+- `quiz-pool` › `piezo2-touch-gut › options`: "channel" appeared only in the correct option
+  - was: "The same mechanical channel also transduces stretch of the visceral wall" / "Gut sensation must therefore be entirely chemical, never mechanical" / "Piezo2 switches over to sensing temperature once it is in the gut" / "The gut uses Piezo2 only for pain, and never for normal filling"
+  - now: "The same mechanical channel also transduces stretch of the visceral wall" / "Gut sensation must therefore be entirely chemical, never mechanical" / "The channel switches over to sensing temperature once it is in the gut" / "The gut uses Piezo2 only for pain, and never for normal filling"
+- `quiz-pool` › `retrograde-from-organ › options`: "pancreas" appeared only in the correct option
+  - was: "Inject a retrograde virus into the pancreas; only its own projecting neurons take it up" / "Inject a standard anterograde virus into the DRG cell bodies and simply wait for the label" / "Give a systemic dye through the blood and let it spread through the entire body evenly" / "Use a germline reporter that labels every sensory neuron in the whole body at once"
+  - now: "Inject a retrograde virus into the pancreas; only its own projecting neurons take it up" / "Inject an anterograde virus into the DRG and wait for label to reach the pancreas" / "Give a systemic dye through the blood and let it spread through the entire body evenly" / "Use a germline reporter that labels every sensory neuron in the whole body at once"
+
+## Throwaway wrong answers replaced (84)
+
+- `A10-L1` › `s2 › options`: Replaces two impossible options with the common 'transcriptome tells you function/physiology' error.
+  - was: "Molecular subtypes with marker genes you can genetically target" / "Faster axonal conduction in every single sensory neuron" / "Proof that all DRG neurons are essentially identical to each other" / "A way to avoid ever having to use RNAscope validation"
+  - now: "Molecular subtypes with marker genes you can genetically target" / "A direct read-out of what each subtype actually senses in vivo" / "Exact firing thresholds measured for each neuron that was profiled" / "A way to avoid ever having to use RNAscope validation"
+- `A10-L1` › `s2 › variants[0] › options`: Same fix in the variant.
+  - was: "Marker-defined subtypes you can target" / "Faster axonal conduction" / "Proof the neurons are all alike"
+  - now: "Marker-defined subtypes you can target" / "A direct read-out of what each subtype senses" / "Firing thresholds for each neuron profiled"
+- `A10-L1` › `s3 › options`: 'Nothing further' and 'a faster microscope' are throwaway; more-data and staining are what learners actually propose.
+  - was: "Genetic access (a marker-based Cre line and tools) to reach those cells" / "Nothing further — the atlas on its own already reveals their function" / "A faster microscope, which on its own would answer the question" / "Only a much larger sample of dissected tissue to sequence"
+  - now: "Genetic access (a marker-based Cre line and tools) to reach those cells" / "Deeper sequencing of the same neurons to confirm the marker gene" / "An antibody stain showing the marker protein in fixed tissue" / "A larger sample of dissected tissue to sequence in bulk"
+- `A10-L1` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "Genetic access to manipulate it" / "Nothing beyond the atlas" / "Just a better microscope"
+  - now: "Genetic access to manipulate it" / "Deeper sequencing of the same cells" / "An antibody stain in fixed tissue"
+- `A10-L2` › `s2 › options`: Firing-faster and fixation distractors are unpickable; cleared tissue being live or higher-resolution are real misconceptions.
+  - was: "It preserves the full 3D arbor instead of fragmenting it into sections" / "It makes the labeled neurons fire noticeably faster than they did" / "It removes the need for any antibody or fluorescent marker at all" / "It is the only way to chemically fix the tissue in the first place"
+  - now: "It preserves the full 3D arbor instead of fragmenting it into sections" / "It images living tissue, so you can watch the endings move" / "It removes the need to label the afferents you want to see" / "It raises resolution enough to resolve single synaptic contacts"
+- `A10-L2` › `s3 › options`: Weighing the mouse is unpickable; dense labeling is the tempting wrong imaging choice.
+  - was: "By tracing single labeled afferents' complete arbors in intact tissue" / "By carefully measuring the mouse's body weight over several weeks" / "By sequencing bulk RNA from the whole dissected gut at once" / "By counting labeled fibers in one single thin section"
+  - now: "By tracing single labeled afferents' complete arbors in intact tissue" / "By densely labeling all fibers and measuring total fluorescence" / "By sequencing bulk RNA from the whole dissected gut at once" / "By counting labeled fibers in one single thin section"
+- `A10-L2` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "Trace single arbors in whole, cleared tissue" / "Weigh the whole animal repeatedly over weeks" / "Bulk-sequence the entire dissected gut at once"
+  - now: "Trace single arbors in whole, cleared tissue" / "Label all fibers densely and measure total signal" / "Bulk-sequence the entire dissected gut at once"
+- `A10-L3` › `s2 › options`: All three old distractors were absurd; 'upper gut is vagal only' is a misconception learners genuinely hold.
+  - was: "Most DRG-subtype mapping so far has focused on the distal colon" / "No other internal organ has any sensory innervation at all" / "The colon is the only organ in the body that has a microbiome" / "Every other organ was actually fully mapped long before the colon"
+  - now: "Most DRG-subtype mapping so far has focused on the distal colon" / "Organs above the colon are innervated only by the vagus, not by DRG" / "DRG neurons outside the colon have no marker genes to target" / "Colon subtypes are already known to be the same in every organ"
+- `A10-L3` › `s2 › variants[0] › options`: Same fix in the variant.
+  - was: "Other organs aren't yet mapped this way" / "Other organs lack innervation" / "The colon alone has a microbiome"
+  - now: "Other organs aren't yet mapped this way" / "Other organs are innervated only by the vagus" / "Colon subtypes are known to be identical elsewhere"
+- `A10-L3` › `s3 › options`: The 'doesn't matter' and 'afferent is a motor neuron' options are unpickable; new ones are plausible wrong reasons.
+  - was: "A true synapse means fast, specific signaling; proximity means slow, diffuse signaling" / "It doesn't matter at all; a synapse and mere proximity give identical signaling here" / "A true synapse would instead mean the afferent is really a motor neuron, not sensory" / "Mere proximity would instead mean the EC cell must itself be a true neuron"
+  - now: "A true synapse means fast, specific signaling; proximity means slow, diffuse signaling" / "Only a true synapse would let serotonin act as the messenger here" / "Without a synapse, the signal would have to travel in the bloodstream" / "Only a true synapse can be confirmed by electron microscopy"
+- `A10-L3` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "It changes whether signaling is fast/specific vs slow/diffuse" / "It would instead make the afferent a motor neuron, not sensory" / "The physiological outcome is exactly the same either way regardless"
+  - now: "It changes whether signaling is fast/specific vs slow/diffuse" / "Only a synapse would let serotonin act as the messenger" / "Without a synapse the signal must travel in the blood"
+- `A10-L4` › `s2 › options`: 'Always wrong, ignore it' is unpickable; confusing a review with primary work is the real mistake.
+  - was: "It's the map — it synthesizes what's known and flags open questions" / "It's the newest possible result, running ahead of all other papers" / "It fully replaces any need to ever read the primary papers yourself" / "It is essentially always wrong and should simply be ignored outright"
+  - now: "It's the map — it synthesizes what's known and flags open questions" / "It's the newest possible result, running ahead of all other papers" / "It fully replaces any need to ever read the primary papers yourself" / "It reports the authors' own new experiments on the topic"
+- `A6-L1` › `s2 › options`: 'Staining artifact' is a throwaway; swap in a plausible causal mix-up (layer target vs myelination).
+  - was: "It keeps pain and touch information in partly separate circuits" / "It makes the C fibers conduct faster than the Aβ touch fibers do" / "It means touch and pain can never interact with each other at all" / "It is only a staining artifact with no real functional consequence"
+  - now: "It keeps pain and touch information in partly separate circuits" / "It makes the C fibers conduct faster than the Aβ touch fibers do" / "It means touch and pain can never interact with each other at all" / "It decides which of the fibers are myelinated and which are not"
+- `A6-L2` › `s2 › options`: 'Destroys nociceptors' and 'carry pain away faster' are throwaways; use peripheral-site and wash-out misconceptions.
+  - was: "Aβ touch input recruits inhibition that dampens the pain signal" / "Rubbing physically destroys the nociceptors in the skin surface" / "Touch fibers carry the pain signal away from the brain faster" / "Rubbing cools the skin below the pain threshold for a while"
+  - now: "Aβ touch input recruits inhibition that dampens the pain signal" / "Aβ input directly silences the C-fiber endings out in the skin" / "Rubbing spreads inflammatory chemicals away from the injury" / "Rubbing cools the skin below the pain threshold for a while"
+- `A6-L2` › `s2 › variants[0] › options`: Variant distractors are throwaways; replace with the same plausible misconceptions.
+  - was: "Touch input recruits dorsal-horn inhibition of pain" / "It kills off the local pain receptors in the skin" / "Touch fibers reroute the pain away from the cord"
+  - now: "Touch input recruits dorsal-horn inhibition of pain" / "Touch fibers silence the pain endings out in the skin" / "It washes pain chemicals away from the injured spot"
+- `A6-L2` › `s3 › options`: Blood-pressure cuff is a throwaway; a local anesthetic is a plausible pain-relief alternative with a different mechanism.
+  - was: "A TENS unit that stimulates nerves to relieve pain" / "A heating pad that gently warms up sore muscles" / "An ice pack that numbs the area around an injury" / "A blood-pressure cuff placed on the upper arm"
+  - now: "A TENS unit that stimulates nerves to relieve pain" / "A heating pad that gently warms up sore muscles" / "An ice pack that numbs the area around an injury" / "A numbing cream that blocks nerve signals in the skin"
+- `A6-L2` › `s3 › variants[0] › options`: 'Simple cooling' / 'Raising blood pressure' are throwaways; use nerve-block and warming alternatives.
+  - was: "Gate control" / "Simple cooling" / "Raising blood pressure"
+  - now: "Gate control" / "Local-anesthetic-style nerve block" / "Warming tissue to relax muscle"
+- `A6-L4` › `s2 › options`: 'No nociceptors in the wound' is a throwaway; nociceptor adaptation is a real misconception.
+  - was: "Descending modulation is suppressing pain transmission at the time" / "The wound itself contains essentially no nociceptors at all" / "Pain signals travel far too slowly to arrive during the battle" / "Adrenaline physically blocks conduction in the spinal cord"
+  - now: "Descending modulation is suppressing pain transmission at the time" / "Nociceptors at the wound adapt quickly and stop firing" / "Pain signals travel far too slowly to arrive during the battle" / "Adrenaline physically blocks conduction in the spinal cord"
+- `A6-L4` › `s2 › variants[0] › options`: Same throwaway in the variant.
+  - was: "Descending inhibition of pain transmission" / "Absence of nociceptors in the wound" / "Pain signals being too slow to arrive"
+  - now: "Descending inhibition of pain transmission" / "Nociceptors at the wound adapting and going silent" / "Pain signals being too slow to arrive"
+- `A6-L4` › `s3 › variants[0] › options`: 'Erase the pathway' is a throwaway; the 'only turns pain down' misconception is the one learners hold.
+  - was: "Turn it down or up, depending on state" / "Only ever turn the pain up, never down" / "Erase the pain pathway completely for good"
+  - now: "Turn it down or up, depending on state" / "Only ever turn the pain up, never down" / "Only ever turn the pain down, never up"
+- `A7-L1` › `s3 › variants[0] › options`: 'Motor, not sensory' is a throwaway.
+  - was: "Below awareness but influential" / "Always vivid and conscious" / "Motor, not sensory"
+  - now: "Below awareness but influential" / "Always vivid and conscious" / "Reflex-only, with no effect on feelings"
+- `A7-L3` › `s2 › options`: 'Colon has no afferents' and 'dorsal column from the skin' are throwaways.
+  - was: "Spinal (DRG) afferents" / "Vagal (nodose) afferents" / "Neither; the colon has no afferents" / "The dorsal column pathway from the skin"
+  - now: "Spinal (DRG) afferents" / "Vagal (nodose) afferents" / "Enteric neurons alone, with no extrinsic afferents" / "Sympathetic efferent fibers in the splanchnic nerves"
+- `A7-L3` › `s2 › variants[0] › options`: 'Skin's touch pathway' is a throwaway.
+  - was: "Spinal/DRG afferents" / "Vagal/nodose afferents" / "The skin's touch pathway"
+  - now: "Spinal/DRG afferents" / "Vagal/nodose afferents" / "Enteric neurons alone"
+- `A7-L4` › `s2 › options`: Three throwaways; replace with misconceptions (no prior recordings; subtypes already defined; spinal outnumber vagal everywhere).
+  - was: "Its organ-specific subtypes are only now being defined and manipulated" / "It was completely mapped many decades ago and is now a fully closed question" / "It turns out the DRG has no visceral afferents of any kind" / "It can only ever be studied in humans, never in mice"
+  - now: "Its organ-specific subtypes are only now being defined and manipulated" / "No one had recorded from spinal visceral afferents until recently" / "Its subtypes were fully defined long ago; only their roles are unknown" / "Spinal afferents turned out to outnumber vagal ones in every organ"
+- `A7-L4` › `s2 › variants[0] › options`: Throwaways in the variant.
+  - was: "Its subtypes are only now definable and testable" / "It was essentially finished decades ago already" / "The DRG has no visceral sensory role at all"
+  - now: "Its subtypes are only now definable and testable" / "It was never recorded from until recently" / "Its subtypes were all defined long ago"
+- `A7-L4` › `s3 › options`: Correct option is the only hedged one; distractors are throwaways.
+  - was: "The pancreas isn't yet mapped the way the colon is, so it's new territory" / "The pancreas has already been completely mapped, so this is only confirmatory" / "The pancreas has no sensory innervation at all to go and map" / "Only the vagal side could ever possibly reach the pancreas"
+  - now: "The pancreas isn't yet mapped the way the colon is, so it's new territory" / "Pancreatic DRG afferents have never been seen, so any found are new" / "The pancreas is innervated only by the vagus, so DRG fibers are new" / "The colon map is already known to apply to the pancreas unchanged"
+- `A7-L4` › `s3 › variants[0] › options`: Throwaways in the variant.
+  - was: "The pancreas isn't yet mapped like the colon" / "It merely confirms known pancreas maps" / "The pancreas lacks sensory innervation"
+  - now: "The pancreas isn't yet mapped like the colon" / "No DRG fibers have ever been seen there" / "Only the vagus innervates the pancreas"
+- `A8-L1` › `s2 › options`: 'Only the surface can be sensed' is a throwaway; the inverted depth-to-stimulus idea is a real misconception.
+  - was: "Different depths are exposed to different stimuli (stretch vs luminal chemistry)" / "Deeper endings in the wall always conduct their signals faster than the shallow ones do" / "Only the very surface of an organ can ever actually be sensed at all" / "The ending's depth changes where its own cell body is located"
+  - now: "Different depths are exposed to different stimuli (stretch vs luminal chemistry)" / "Deeper endings in the wall always conduct their signals faster than the shallow ones do" / "Mucosal endings sense stretch best because they sit nearest the contents" / "The ending's depth changes where its own cell body is located"
+- `A8-L1` › `s3 › options`: Light and distant blood oxygen are throwaways; use luminal stimuli a mucosal ending would sample.
+  - was: "Stretch of the gut wall as it fills or contracts" / "The exact chemical makeup of the luminal contents" / "Light that happens to enter the gut lumen somehow" / "Blood oxygen levels in distant body tissues"
+  - now: "Stretch of the gut wall as it fills or contracts" / "The exact chemical makeup of the luminal contents" / "Bacterial products touching the epithelial surface" / "Nutrient levels sampled directly from the lumen"
+- `A8-L1` › `s3 › variants[0] › options`: 'Ambient light' is a throwaway.
+  - was: "Wall stretch and contraction" / "The lumen's chemical makeup" / "Ambient light inside the gut"
+  - now: "Wall stretch and contraction" / "The lumen's chemical makeup" / "Bacterial products at the epithelium"
+- `A8-L2` › `s2 › options`: 'Flash of bright light' is a throwaway; heat parallels cutting as a stimulus viscera respond to poorly.
+  - was: "Distension (stretch) of the wall" / "A fine surgical cut to the lining" / "A light brush across the mucosa" / "A flash of bright light"
+  - now: "Distension (stretch) of the wall" / "A fine surgical cut to the lining" / "A light brush across the mucosa" / "Heat applied to the outer wall"
+- `A8-L2` › `s2 › variants[0] › options`: 'Balloons emit a chemical' and 'cools the wall' are throwaways.
+  - was: "Distension is their adequate stimulus" / "Balloons emit a chemical they detect" / "It cools the wall below threshold"
+  - now: "Distension is their adequate stimulus" / "It compresses vessels and makes the wall ischemic" / "It scrapes the lining, like a small cut"
+- `A8-L2` › `s3 › options`: 'No change of any kind' is a throwaway; 'Piezo2 is only a skin-touch channel' is the real misconception.
+  - was: "Reduced stretch-evoked firing and altered GI transit" / "Stronger stretch responses than normal" / "Loss of the capsaicin (TRPV1) response but normal stretch" / "No change of any kind"
+  - now: "Reduced stretch-evoked firing and altered GI transit" / "Stronger stretch responses than normal" / "Loss of the capsaicin (TRPV1) response but normal stretch" / "No gut effect, since Piezo2 only serves skin touch"
+- `A8-L3` › `s2 › options`: 'Light reflected' and 'cannot sense chemistry' are throwaways.
+  - was: "EC cells sample the lumen and signal to the afferent with serotonin" / "The afferent extends a long physical process directly into the open gut lumen" / "The afferent detects it from light reflected off the gut contents" / "Gut afferents simply cannot sense any luminal chemistry at all"
+  - now: "EC cells sample the lumen and signal to the afferent with serotonin" / "The afferent extends a long physical process directly into the open gut lumen" / "Goblet cells sample the lumen and release mucus onto the endings" / "The endings sense only stretch, which tracks what is in the lumen"
+- `A8-L3` › `s2 › variants[0] › options`: 'It can't' is a throwaway.
+  - was: "An EC cell relays the signal via serotonin" / "It pushes a process into the lumen" / "It can't — chemistry goes unsensed"
+  - now: "An EC cell relays the signal via serotonin" / "It pushes a process into the lumen" / "Goblet cells relay it via mucus"
+- `A8-L4` › `s2 › options`: Distractors are throwaways and correct is the longest; use redundancy, modality-confusion and reversed-role misconceptions.
+  - was: "To encode a range of intensities, from gentle filling to harmful over-distension" / "Low-threshold neurons happen to conduct their signals faster than others" / "So that only genuinely painful stimuli are ever detected at all" / "To make every single afferent in the wall respond in exactly the same way"
+  - now: "To encode a range of intensities, from gentle filling to harmful over-distension" / "To provide spares, so one subtype can stand in for another" / "Because each threshold matches a different modality, like heat vs stretch" / "So low-threshold units carry pain and high-threshold units carry fullness"
+- `A8-L4` › `s2 › variants[0] › options`: 'Faster conduction' is a throwaway.
+  - was: "Encoding a range of distension intensities" / "Faster overall conduction in the afferents" / "Detecting only the painful stimuli, nothing else"
+  - now: "Encoding a range of distension intensities" / "Spare neurons that can stand in for each other" / "Detecting only the painful stimuli, nothing else"
+- `A8-L4` › `s3 › options`: 'No change, thresholds don't matter' is a throwaway; the reversed prediction is the real misconception.
+  - was: "Blunted response to strong/noxious distension, with normal responses to gentle filling" / "Loss of all colon sensation at once, both the gentle filling and the strong distension alike" / "Paradoxically stronger pain even from gentle, normal filling of the colon" / "No change at all, since the firing thresholds don't really matter here"
+  - now: "Blunted response to strong/noxious distension, with normal responses to gentle filling" / "Loss of all colon sensation at once, both the gentle filling and the strong distension alike" / "Paradoxically stronger pain even from gentle, normal filling of the colon" / "Loss of the response to gentle filling, while strong distension is still detected normally"
+- `A8-L4` › `s3 › variants[0] › options`: Add the reversed prediction in place of the duplicate-style distractor.
+  - was: "Blunt responses to strong distension, spare gentle filling" / "Remove all colon sensation, gentle and strong alike" / "Paradoxically increase the pain from gentle filling"
+  - now: "Blunt responses to strong distension, spare gentle filling" / "Remove all colon sensation, gentle and strong alike" / "Remove gentle-filling sensation, spare strong distension"
+- `A9-L1` › `s2 › options`: Two distractors were impossible; replaced with real misconceptions (central gain, threshold going the wrong way).
+  - was: "Its firing threshold drops, so weaker stimuli now excite it" / "Its axon suddenly conducts much faster all the way up to the cord" / "It stops responding to absolutely any stimulus at all" / "It turns into a low-threshold touch (Aβ) fiber instead"
+  - now: "Its firing threshold drops, so weaker stimuli now excite it" / "Its axon suddenly conducts much faster all the way up to the cord" / "It fires as before, but the dorsal horn amplifies the signal instead" / "Its threshold rises, so stronger stimuli are now needed to excite it"
+- `A9-L1` › `s2 › variants[0] › options`: 'It vanishes along with the neuron' is unpickable; a central-gain option is a real confusion.
+  - was: "It drops (easier to fire)" / "It rises (harder to fire)" / "It vanishes along with the neuron"
+  - now: "It drops (easier to fire)" / "It rises (harder to fire)" / "It stays the same; only the cord's gain changes"
+- `A9-L1` › `s3 › options`: Severed-cord and water-got-hotter distractors are throwaway; new ones are misconceptions learners hold.
+  - was: "Peripheral sensitization has lowered the heat threshold of nociceptors" / "The warm water has somehow become objectively much hotter than it was before" / "Touch fibers have somehow been converted into nociceptors" / "The spinal cord has been physically cut by the sunburn"
+  - now: "Peripheral sensitization has lowered the heat threshold of nociceptors" / "Only the dorsal horn changed; the endings in the skin are normal" / "The burned skin now conducts heat faster to the nerve endings" / "Heat-sensing nociceptors have multiplied in number in the burned skin"
+- `A9-L1` › `s3 › variants[0] › options`: Same fix in the variant: plausible wrong mechanisms instead of impossible ones.
+  - was: "Lowered nociceptor thresholds (peripheral sensitization)" / "The water being physically hotter than it was before" / "Touch fibers turning into nociceptors now somehow"
+  - now: "Lowered nociceptor thresholds (peripheral sensitization)" / "A central change only, with normal endings in the skin" / "More heat-sensing nociceptors having grown in the burned skin"
+- `A9-L2` › `s3 › options`: 'All nociceptors destroyed' is unpickable; sprouting is a misconception learners actually offer here.
+  - was: "Central sensitization — the dorsal horn's gain is raised, so touch input reads as pain" / "The soft brush is secretly damaging the skin a little bit each and every time it touches" / "Every nociceptor in the entire body has somehow been destroyed at once" / "Only peripheral sensitization confined to the original injured site"
+  - now: "Central sensitization — the dorsal horn's gain is raised, so touch input reads as pain" / "The brush is causing fresh micro-damage to the skin each time it passes" / "Nociceptors have sprouted into the neighbouring uninjured skin" / "Only peripheral sensitization confined to the original injured site"
+- `A9-L3` › `s2 › options`: Matches the 'mechanically insensitive' definition and swaps three unpickable distractors for real confusions.
+  - was: "An afferent that's unresponsive at baseline but becomes active with inflammation" / "A neuron that has permanently and completely stopped firing altogether, for good" / "A touch fiber that by its design never signals any pain at all" / "A sensory neuron that has no axon connecting it to the cord"
+  - now: "An afferent that's mechanically insensitive at baseline but responds once inflamed" / "An afferent whose firing never reaches conscious sensation at all" / "A nociceptor that fires steadily on its own without any stimulus" / "A touch fiber that switches to carrying pain after an injury"
+- `A9-L3` › `s2 › variants[0] › options`: 'The colon grew new ganglia overnight' is unpickable; sprouting and conduction are plausible wrong answers.
+  - was: "Previously silent nociceptors were recruited" / "Afferents turned into touch fibers" / "The colon grew new ganglia overnight"
+  - now: "Previously silent nociceptors were recruited" / "The existing afferents began conducting more quickly" / "New afferents sprouted in from the spinal cord"
+- `A9-L3` › `s3 › options`: Distractors now contest which levels are involved, instead of being obviously impossible.
+  - was: "Peripheral sensitization + recruited silent nociceptors + central sensitization" / "A simple loss of every single one of the colon afferents throughout the inflamed region" / "Only faster conduction velocity in the existing colon afferents" / "The distension stimulus itself having become physically larger"
+  - now: "Peripheral sensitization + recruited silent nociceptors + central sensitization" / "Only central sensitization; the gut afferents themselves are unchanged" / "Only peripheral sensitization at the endings, with no central change" / "Faster conduction velocity in the existing colon afferents"
+- `A9-L3` › `s3 › variants[0] › options`: Same fix in the variant: the 'all afferents lost' option is unpickable.
+  - was: "Peripheral + central sensitization and silent-nociceptor recruitment" / "A simple loss of the colon afferents all throughout the inflamed region" / "Only faster conduction in the existing afferents, nothing more"
+  - now: "Peripheral + central sensitization and silent-nociceptor recruitment" / "Only sensitized endings, with no change in the dorsal horn" / "Only faster conduction in the existing afferents, nothing more"
+- `A9-L4` › `s2 › options`: 'Silencing can't affect sensation' is unpickable; new distractors are real DREADD misconceptions.
+  - was: "It should decrease if those afferents drive it" / "It should increase" / "Only conduction velocity should change" / "Nothing — silencing afferents can't affect sensation"
+  - now: "It should decrease if those afferents drive it" / "It should increase, since silencing removes an inhibitory brake" / "It should be unchanged, because hM4Di acts only on the cell body" / "Only conduction velocity in those afferents should change"
+- `A9-L4` › `s2 › variants[0] › options`: Gives the bare 'increase' option an actual rationale a learner might hold.
+  - was: "Reduce hypersensitivity if they drive it" / "Increase the hypersensitivity instead of reducing" / "Change only the conduction speed, nothing else"
+  - now: "Reduce hypersensitivity if they drive it" / "Increase it, by removing an inhibitory brake" / "Change only the conduction speed, nothing else"
+- `A9-L4` › `s3 › options`: 'Correlation equals causation' and 'silencing adds afferents' are unpickable; new ones are real over-readings.
+  - was: "If removing the neurons' activity removes the symptom, they're likely necessary for it" / "Silencing on its own would somehow prove that the neurons are fully sufficient for the symptom" / "Correlation between the two always simply equals causation here" / "Silencing actually increases the total number of afferents present"
+  - now: "If removing the neurons' activity removes the symptom, they're likely necessary for it" / "Silencing on its own shows that the neurons are sufficient for the symptom" / "If silencing changed nothing, that would prove the neurons play no role" / "Silencing a whole population rules out every other pathway at once"
+- `B5-L1` › `s2 › options`: Three unpickable distractors replaced with plausible wrong reasons for CNS immune isolation.
+  - was: "The blood–brain barrier limits entry of circulating immune cells" / "Microglia are the only cells in the body that can detect pathogens" / "The brain has no need for any immune surveillance at all" / "Blood immune cells are simply too small to be useful anywhere"
+  - now: "The blood–brain barrier limits entry of circulating immune cells" / "The brain has no lymphatic drainage, so immune cells never reach it" / "Circulating immune cells cannot survive in cerebrospinal fluid" / "Microglia are the only cells able to clear debris in any tissue"
+- `B5-L1` › `s2 › variants[0] › options`: 'It isn't surveilled at all' is unpickable; antibody entry is a plausible wrong answer.
+  - was: "By resident microglia already inside it" / "By blood neutrophils entering freely" / "It isn't surveilled at all"
+  - now: "By resident microglia already inside it" / "By blood neutrophils entering freely" / "By antibodies crossing the barrier from the blood"
+- `B5-L1` › `s3 › options`: Replaces 'permanently sealed', 'microglia vanish' and 'nothing changes' with plausible partial-truths.
+  - was: "Blood-borne immune cells can now enter that region" / "The region becomes permanently sealed off from blood" / "Microglia there immediately disappear for good" / "Nothing changes, since the barrier is irrelevant"
+  - now: "Blood-borne immune cells can now enter that region" / "Only small molecules cross; immune cells still cannot" / "Microglia there stop surveying while the barrier is open" / "The barrier reseals before anything can cross into the tissue"
+- `B5-L1` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "Blood immune cells infiltrate the tissue" / "The area is sealed from the blood" / "Microglia vanish permanently"
+  - now: "Blood immune cells infiltrate the tissue" / "Only small molecules cross, never cells" / "Microglia stop surveying while it is open"
+- `B5-L2` › `s2 › options`: The 'dividing nonstop to replace neurons' option is unpickable; blood origin is a real microglia misconception.
+  - was: "Continuously extending and retracting processes to survey the tissue" / "Sitting completely still and motionless until an injury happens to occur" / "Dividing nonstop to replace the neurons that are dying nearby" / "Conducting their own action potentials, the same way neurons do"
+  - now: "Continuously extending and retracting processes to survey the tissue" / "Sitting completely still and motionless until an injury happens to occur" / "Waiting in the bloodstream until an injury recruits them into the brain" / "Conducting their own action potentials, the same way neurons do"
+- `B5-L3` › `s2 › options`: 'Rise in resting membrane potential' and 'no neurons nearby' are unpickable; new ones are real confusions.
+  - was: "Signals released by activated microglia" / "A rise in the resting membrane potential" / "Loss of the blood supply to microglia only" / "The absence of any neurons nearby"
+  - now: "Signals released by activated microglia" / "Loss of GFAP expression by the astrocyte itself" / "Direct physical damage to the astrocyte, and nothing else" / "A drop in neuronal firing in the surrounding tissue"
+- `B5-L3` › `s2 › variants[0] › options`: Replaces 'turn into neurons' and 'stop signaling for good' with plausible wrong answers.
+  - was: "They can be induced into a reactive, sometimes neurotoxic state" / "They are forced to transform into neurons instead of glia" / "They permanently stop all of their signaling for good"
+  - now: "They can be induced into a reactive, sometimes neurotoxic state" / "They lose GFAP and stop supporting the neurons" / "They are unaffected; microglial signals act only on neurons"
+- `B5-L3` › `s3 › options`: Old distractors denied GFAP exists or marked neurons; new ones get the direction of the change wrong instead.
+  - was: "The sparse baseline pattern isn't the reactive, upregulated one" / "Astrocytes never express GFAP under any circumstances at all" / "GFAP actually marks neurons rather than astrocytes here" / "Reactive astrocytes carry no distinguishing markers at all"
+  - now: "The sparse baseline pattern isn't the reactive, upregulated one" / "GFAP is downregulated when astrocytes become reactive" / "Reactive astrocytes lose their processes and look smaller" / "GFAP labels only the astrocyte endfeet on blood vessels"
+- `B5-L3` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "Upregulated GFAP, not the sparse baseline pattern" / "No GFAP expressed whatsoever within them" / "GFAP located inside the neurons instead"
+  - now: "Upregulated GFAP, not the sparse baseline pattern" / "GFAP being downregulated as astrocytes react" / "Astrocytes shrinking and losing their processes"
+- `B5-L4` › `s3 › options`: 'Neurons start dividing' and 'the BBB disappears' are unpickable; compensation by other cells is the real misconception.
+  - was: "Losing the protective surveillance and debris-clearing microglia provide" / "Nothing would change, since microglia only ever do harm anyway" / "Neurons would immediately start dividing to compensate for it" / "The blood–brain barrier would rapidly disappear from that region"
+  - now: "Losing the protective surveillance and debris-clearing microglia provide" / "Nothing would change, since microglia only ever do harm anyway" / "Astrocytes would simply take over every microglial function" / "The debris would be cleared by neighbouring neurons instead"
+- `B5-L4` › `s3 › variants[0] › options`: Same fix in the variant.
+  - was: "Losing the protective surveillance and the clean-up" / "Nothing changes, since microglia only do harm" / "Making the neurons divide to compensate for it"
+  - now: "Losing the protective surveillance and the clean-up" / "Nothing changes, since microglia only do harm" / "Astrocytes would take over every microglial job"
+- `B6-L1` › `s2 › options`: Neurons dividing into immune cells is unpickable; the brain-only route is the misconception learners actually hold.
+  - was: "By releasing neuropeptides from its endings onto nearby immune cells" / "By engulfing and digesting bacteria the way a macrophage does" / "By producing antibodies directed against the pathogen itself" / "By dividing repeatedly to form brand-new immune cells"
+  - now: "By releasing neuropeptides from its endings onto nearby immune cells" / "By engulfing and digesting bacteria the way a macrophage does" / "By producing antibodies directed against the pathogen itself" / "By carrying its pain signal to the brain, which then dispatches immune cells"
+- `B6-L2` › `s2 › options`: 'Antibody levels entirely unaffected' is a throwaway and left the correct option as the only hedged one.
+  - was: "It can change — sometimes increasing, since the neurons were modulating it" / "Nothing happens, since neurons have no effect on immunity at all" / "The bacteria would be cleared instantly without any neurons involved" / "Antibody levels in the tissue would be entirely unaffected by this"
+  - now: "It can change — sometimes increasing, since the neurons were modulating it" / "Nothing happens, since neurons have no effect on immunity at all" / "The bacteria would be cleared instantly without any neurons involved" / "It should simply weaken, since the pain signal normally recruits immune cells"
+- `B6-L2` › `s3 › options`: 'Pain is entirely unrelated to infection' is unpickable; the by-product view is a real belief.
+  - was: "The nervous and immune systems are directly, physically interconnected" / "Only antibodies, never neurons, can ever possibly detect a pathogen at all" / "Pain is entirely unrelated to infection or to immunity in any way" / "Neurons can detect pathogens but never actually affect them"
+  - now: "The nervous and immune systems are directly, physically interconnected" / "Only antibodies, never neurons, can ever possibly detect a pathogen at all" / "Pain is just a by-product of tissue damage, with no role in immunity" / "Neurons can detect pathogens but never actually affect them"
+- `B6-L3` › `s2 › options`: An anti-CGRP antibody on an immune cell is unpickable; peptide-needs-activation is a plausible error.
+  - was: "The CGRP receptor, including the RAMP1 component itself" / "Its own internal supply of conducted action potentials" / "A direct synapse made onto the neuron's own cell body" / "A specific antibody raised against the CGRP peptide"
+  - now: "The CGRP receptor, including the RAMP1 component itself" / "Its own internal supply of conducted action potentials" / "A direct synapse made onto the neuron's own cell body" / "An enzyme that cuts CGRP into its active form first"
+- `B6-L4` › `s2 › options`: 'Cut every nerve in the body' is unpickable; mistaking correlation for a loss-of-function test is the real error.
+  - was: "Silence those neurons with a DREADD and watch the inflammation" / "Remove all of the immune cells and simply ignore the neurons" / "Only measure antibody titers over time and then stop there" / "Cut every single nerve in the whole body all at once"
+  - now: "Silence those neurons with a DREADD and watch the inflammation" / "Remove all of the immune cells and simply ignore the neurons" / "Only measure antibody titers over time and then stop there" / "Measure neuropeptide levels in the tissue and conclude they caused it"
+- `B7-L1` › `s2 › options`: A cytokine 'carrying an action potential' is unpickable; needing injury for cytokines to act is a real misconception.
+  - was: "The neuron expressing that cytokine's receptor" / "The neuron physically engulfing the cytokine" / "The cytokine carrying its own action potential" / "A direct synapse from the immune cell onto the axon"
+  - now: "The neuron expressing that cytokine's receptor" / "The neuron physically engulfing the cytokine" / "The neuron being damaged, so the cytokine can get inside it" / "A direct synapse from the immune cell onto the axon"
+- `B7-L2` › `s3 › options`: 'Cytokines can't affect neurons' contradicts the lesson and left the correct option as the only hedged one.
+  - was: "Reduced sensitization, if that cytokine was driving it" / "Stronger pain than there was before the blocking" / "Permanent loss of all sensation from the area" / "No change, since cytokines can't affect neurons"
+  - now: "Reduced sensitization, if that cytokine was driving it" / "Stronger pain than there was before the blocking" / "Permanent loss of all sensation from the area" / "No change, if the sensitization is driven centrally instead"
+- `B7-L4` › `s2 › options`: 'Cytokines only ever reduce pain' is unpickable; unhealed damage is the common assumption.
+  - was: "Ongoing immune signaling sustains peripheral and central sensitization" / "The nerves have been permanently cut by the inflammation itself" / "Pain pathways shut down entirely for the duration of inflammation" / "Cytokines only ever reduce pain and never cause it in the first place"
+  - now: "Ongoing immune signaling sustains peripheral and central sensitization" / "The nerves have been permanently cut by the inflammation itself" / "Pain pathways shut down entirely for the duration of inflammation" / "The original tissue damage never fully heals in these conditions"
+- `B7-L4` › `s3 › options`: 'Afferents can't carry hypersensitivity' is unpickable, and the correct option was the only hedged one.
+  - was: "It should drop if those afferents carry it" / "It should rise sharply" / "Only conduction speed would change" / "Nothing, since afferents can't carry hypersensitivity"
+  - now: "It should drop if those afferents carry it" / "It should rise sharply" / "Only conduction speed would change" / "Nothing, if the hypersensitivity is maintained in the spinal cord"
+- `B8-L1` › `s2 › options`: 'No epithelial barrier at all' is unpickable; a too-thick-wall assumption is plausible.
+  - was: "Sensory endings and dense immune cells share the wall, facing the microbiota" / "The gut has no epithelial barrier at all, so everything just mixes freely" / "Nerves and immune cells are kept apart in totally separate organs there" / "The gut contains no sensory neurons whatsoever, only immune cells present"
+  - now: "Sensory endings and dense immune cells share the wall, facing the microbiota" / "The gut wall is thick enough that nerves and immune cells rarely meet" / "Nerves and immune cells are kept apart in totally separate organs there" / "The gut contains no sensory neurons whatsoever, only immune cells present"
+- `B8-L1` › `s2 › options`: 'No sensory neurons whatsoever' is unpickable; 'the gut's nerves are all enteric' is a real confusion.
+  - was: "Sensory endings and dense immune cells share the wall, facing the microbiota" / "The gut has no epithelial barrier at all, so everything just mixes freely" / "Nerves and immune cells are kept apart in totally separate organs there" / "The gut contains no sensory neurons whatsoever, only immune cells present"
+  - now: "Sensory endings and dense immune cells share the wall, facing the microbiota" / "The gut has no epithelial barrier at all, so everything just mixes freely" / "Nerves and immune cells are kept apart in totally separate organs there" / "Gut nerves are all enteric, so DRG and vagal endings play no part"
+- `B8-L2` › `s3 › options`: 'Check the stains are bright' is unpickable; mistaking correlation for a functional link is the real error.
+  - was: "Removing a receptor or silencing the neurons changes the immune cells' behavior" / "Simply taking a much higher-resolution picture of the two cells side by side" / "Counting how many immune cells are present across the whole gut wall" / "Confirming that both of the stains come out nice and bright"
+  - now: "Removing a receptor or silencing the neurons changes the immune cells' behavior" / "Simply taking a much higher-resolution picture of the two cells side by side" / "Counting how many immune cells are present across the whole gut wall" / "Showing that fiber density rises wherever immune cell numbers rise"
+- `B8-L3` › `s2 › options`: 'Grows new nociceptors overnight' is unpickable; a microbiota-only change is the plausible half-answer.
+  - was: "The microbial community and tissue protection shift, often for the worse" / "The mouse rapidly grows entirely new nociceptors overnight to fully replace them" / "Nothing at all changes in the gut after their removal" / "Only the brain is affected by this, and never the gut"
+  - now: "The microbial community and tissue protection shift, often for the worse" / "The microbiota shifts, but mucosal protection stays exactly the same" / "Nothing at all changes in the gut after their removal" / "Only the brain is affected by this, and never the gut"
+- `B8-L4` › `s2 › options`: 'Antibodies replace the mucus layer' is unpickable; an autocrine CGRP source is a plausible error.
+  - was: "The CGRP-directed goblet response is lost, weakening that defense" / "Goblet cells respond even more strongly than they normally would" / "The neurons stop firing their action potentials altogether" / "Antibody production simply replaces the mucus layer entirely"
+  - now: "The CGRP-directed goblet response is lost, weakening that defense" / "Goblet cells respond even more strongly than they normally would" / "The neurons stop firing their action potentials altogether" / "Goblet cells respond as usual, since they make their own CGRP"
+- `B9-L2` › `s2 › options`: 'Macrophages become neurons' is unpickable; killing-not-silencing is a real mechanism confusion.
+  - was: "Acetylcholine signaling reduces their release of inflammatory cytokines" / "They are triggered to release far more TNF than they usually would" / "They are converted into neurons rather than staying macrophages" / "They begin conducting their own action potentials like neurons"
+  - now: "Acetylcholine signaling reduces their release of inflammatory cytokines" / "They are triggered to release far more TNF than they usually would" / "Acetylcholine kills the macrophages outright, which lowers the cytokines" / "They begin conducting their own action potentials like neurons"
+- `quiz-pool` › `allodynia-central › options`: 'Every nociceptor destroyed' and 'thinner skin' are throwaways; peripheral-only and swelling are misconceptions a learner would actually pick.
+  - was: "Central sensitization: dorsal-horn gain rises, so touch input is read as pain" / "The touch fibers themselves have physically turned into pain-sensing nociceptors" / "Every nociceptor in the body has by now been permanently and completely destroyed" / "The skin over the area has simply become thinner, weaker, and more fragile"
+  - now: "Central sensitization: dorsal-horn gain rises, so touch input is read as pain" / "The touch fibers themselves have physically turned into pain-sensing nociceptors" / "Peripheral sensitization alone: the touch endings themselves now have a lower threshold" / "The area is swollen, so ordinary touch presses harder on the nerve endings"
+- `quiz-pool` › `demyelination-conduction › options`: 'Only the cell body is affected' is a throwaway; the diameter-only misconception is one learners really hold.
+  - was: "Conduction slows or blocks, because fast [[saltatory conduction]] is lost" / "Conduction speeds up, since the myelin had been slowing the axon" / "The neuron's resting potential collapses all the way to zero" / "Only the cell body is affected, while conduction stays normal"
+  - now: "Conduction slows or blocks, because fast [[saltatory conduction]] is lost" / "Conduction speeds up, since the myelin had been slowing the axon" / "The neuron's resting potential collapses all the way to zero" / "Conduction speed is unchanged, since speed is set by axon diameter alone"
+- `quiz-pool` › `ec-cell-relay › options`: Reflected light and 'it cannot be sensed' are throwaways; direct diffusion and an enteric relay are plausible wrong models.
+  - was: "Enterochromaffin cells sample the lumen and signal to it using serotonin" / "The afferent pushes a branch directly into the lumen to taste it on its own" / "The afferent detects the chemicals by the light that they happen to reflect" / "It cannot — luminal chemistry simply goes completely unsensed by anything"
+  - now: "Enterochromaffin cells sample the lumen and signal to it using serotonin" / "The afferent pushes a branch directly into the lumen to taste it on its own" / "The chemicals diffuse across the epithelium and bind receptors on the ending itself" / "Enteric neurons in the myenteric plexus sample the lumen and pass the signal on"
+- `quiz-pool` › `hemisection-split › options`: 'Only motor fibers' and 'split at random' are throwaways; swapped crossing points and no-crossing are the misconceptions learners hold.
+  - was: "Pain/temp crosses low in the cord; fine touch crosses higher, in the brainstem" / "Both pathways actually cross in the cord, so the split is just coincidence" / "The lesion only ever affects the motor fibers, and never the sensory ones" / "Fine touch and pain share a single tract that happened to split at random"
+  - now: "Pain/temp crosses low in the cord; fine touch crosses higher, in the brainstem" / "Fine touch crosses low in the cord; pain/temp crosses higher, in the brainstem" / "Both pathways cross in the cord, so one side should lose both kinds of sensation" / "Neither pathway crosses in the cord, so all the loss should be on the lesioned side"
+- `quiz-pool` › `sensitization-cytokine › options`: 'Cut the connection to the cord entirely' is a throwaway; confusing peripheral with central sensitization is the real misconception.
+  - was: "They lower the nociceptors' threshold, so milder stimuli now cause pain" / "They convert the nociceptors into fast, low-threshold touch fibers" / "They cut the nociceptors' connection to the spinal cord entirely" / "They raise the threshold, making the inflamed area go numb"
+  - now: "They lower the nociceptors' threshold, so milder stimuli now cause pain" / "They convert the nociceptors into fast, low-threshold touch fibers" / "They act in the spinal cord instead, leaving the endings themselves unchanged" / "They raise the threshold, making the inflamed area go numb"
+- `quiz-pool` › `tamoxifen-sparse › options`: 'Two reporters to dilute the signal' is a throwaway; the timing-vs-dose confusion is a misconception learners actually hold.
+  - was: "Give a low dose of tamoxifen, so Cre activates in only a sparse subset of cells" / "Give a high dose of tamoxifen, so that every eligible cell lights up at once" / "Skip the tamoxifen entirely and let CreER recombine all on its own anyway" / "Use two separate reporters at the same time to dilute the overall signal"
+  - now: "Give a low dose of tamoxifen, so Cre activates in only a sparse subset of cells" / "Give a high dose of tamoxifen, so that every eligible cell lights up at once" / "Skip the tamoxifen entirely and let CreER recombine all on its own anyway" / "Give the tamoxifen later, in adulthood, which by itself labels only a few cells"
+- `quiz-pool` › `tiling-silence-high › options`: 'Every afferent shares the same threshold' contradicts the setup, so nobody picks it; redundancy is the real competing prediction.
+  - was: "Blunted responses to strong, noxious distension; gentle filling still sensed" / "Loss of all colon sensation at once, the gentle and the strong alike" / "Stronger pain from gentle, normal filling of the colon than before" / "No change at all, since every afferent shares the same threshold"
+  - now: "Blunted responses to strong, noxious distension; gentle filling still sensed" / "Loss of all colon sensation at once, the gentle and the strong alike" / "Stronger pain from gentle, normal filling of the colon than before" / "Noxious distension still reported, since the low-threshold units cover that range too"
+
+## Other (quiz unlock units, wording) (11)
+
+- `A7-L1` › `s2 › explanation`: Match the replaced option.
+  - was: "Gut fullness is an internal-state signal (interoception). Breeze, sound and light are external stimuli (exteroception)."
+  - now: "Gut fullness is an internal-state signal (interoception). Fabric texture, sound and light are external stimuli (exteroception)."
+- `A7-L1` › `s2 › variants[0] › reveal`: Match the replaced option.
+  - was: "Fullness is internal (interoception); breeze and sound are external (exteroception)."
+  - now: "Fullness is internal (interoception); fabric texture and sound are external (exteroception)."
+- `A7-L1` › `s3 › explanation`: Match the new distractors.
+  - was: "You rarely 'feel' blood pressure or gut pH directly, yet these signals constantly drive autonomic reflexes and mood/‘gut feelings'. Interoception is sensory, not motor."
+  - now: "You rarely 'feel' blood pressure or gut pH directly, yet these signals constantly drive autonomic reflexes and shape mood and 'gut feelings'. They reach the brain by both vagal and spinal routes."
+- `A7-L3` › `s3 › reveal`: Reveal referred to a removed option; align with the new distractors and the simplified flag.
+  - was: "Routine nutrient and fullness signaling leans vagal, reporting to the brainstem — the 'housekeeping' side of interoception. Nutrient status is very much sensed."
+  - now: "Routine nutrient and fullness signaling leans vagal, reporting to the brainstem — the 'housekeeping' side of interoception. Spinal afferents contribute, but are weighted toward strong and noxious signals."
+- `B5-L2` › `s2 › explanation`: The old wording said 'resting' refers to their reactive state, which reads as the opposite of what's meant.
+  - was: "In vivo imaging shows resting microglia are highly dynamic surveillants — 'resting' refers to their reactive state, not to being inactive."
+  - now: "In vivo imaging shows resting microglia are highly dynamic surveillants — 'resting' means not reactive, it doesn't mean motionless."
+- `quiz-pool` › `antibody-ko-trpv1 › needs`: The logic is C7-L4 antibody validation; TRPV1 is only the example, so A3 is an extra cross-track need that delays the unlock.
+  - was: "C7" / "A3"
+  - now: "C7"
+- `quiz-pool` › `capsaicin-kcl-control › needs`: the KCl viability check is taught in C11 (calcium imaging), not C1 (generic controls)
+  - was: "A3" / "C1"
+  - now: "A3" / "C11"
+- `quiz-pool` › `dorsal-root-cut › needs`: root anatomy is D3; A6 (periphery to brain) is not needed to answer
+  - was: "D3" / "A6"
+  - now: "D3"
+- `quiz-pool` › `microglia-twophoton › explanation`: Explanation must match the revised options (confocal replaces the fixed-section widefield).
+  - was: "Live, deep, dynamic imaging calls for two-photon. Widefield on a fixed section is static; a blot and bulk-seq lose both the live dynamics and the single-cell spatial detail."
+  - now: "Live, deep, dynamic imaging calls for two-photon. Confocal is sharp but can't reach far into living tissue; a blot and bulk-seq lose both the live dynamics and the single-cell spatial detail."
+- `quiz-pool` › `retrograde-from-organ › needs`: pure viral-targeting logic; the pancreas is only the example, so D5 delays the unlock for nothing
+  - was: "C4" / "D5"
+  - now: "C4"
+- `quiz-pool` › `tamoxifen-sparse › needs`: The question is pure C2-L3 (CreER + tamoxifen dose); C3 (Flp/intersectional) adds nothing and delays the unlock.
+  - was: "C3" / "C2"
+  - now: "C2"

@@ -1,0 +1,104 @@
+{
+  "id": "A8-L2",
+  "unitId": "A8",
+  "title": "Sensing stretch",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how visceral afferents transduce mechanical stretch and what defines the adequate stimulus.",
+  "tags": [
+    "mechanosensation",
+    "stretch"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Distension is the signal",
+      "body": "For a hollow organ, the meaningful mechanical event is **distension** — the wall stretching as it fills. Muscle-embedded afferents transduce that stretch, in large part through **[[Piezo2]]**, the same mechanically-activated channel used for touch. Cutting the wall barely registers; stretching it does.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What is the 'adequate stimulus' for most gut mechanosensory afferents?",
+      "options": [
+        "Distension (stretch) of the wall",
+        "A fine surgical cut to the lining",
+        "A light brush across the mucosa",
+        "Heat applied to the outer wall"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Hollow-organ afferents are mostly tuned to stretch — the signal that matters for a filling, moving tube. Cutting and burning barely register; light mucosal stroking drives only a subset (mucosal afferents).",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A balloon is slowly inflated inside the colon.",
+          "prompt": "Why does this drive the afferents so well?",
+          "options": [
+            "Distension is their adequate stimulus",
+            "It compresses vessels and makes the wall ischemic",
+            "It scrapes the lining, like a small cut"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Inflation stretches the wall, the adequate mechanical stimulus for these afferents."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You delete Piezo2 specifically from sensory neurons and then test gut mechanics.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Reduced stretch-evoked firing and altered GI transit",
+        "Stronger stretch responses than normal",
+        "Loss of the capsaicin (TRPV1) response but normal stretch",
+        "No gut effect, since Piezo2 only serves skin touch"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Piezo2 is a principal stretch transducer here; removing it blunts mechanosensation and shifts transit. It wouldn't touch the chemical (TRPV1/capsaicin) response, which is a separate pathway.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Deleting sensory Piezo2 most likely…",
+          "options": [
+            "Reduces stretch responses and alters transit",
+            "Boosts stretch responses above the normal level",
+            "Removes the capsaicin (TRPV1) response instead"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Piezo2 transduces stretch; its loss blunts mechanosensation, sparing chemical sensing."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Servin-Vences MR et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.006",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.006",
+      "verified": true,
+      "note": "PIEZO2 in somatosensory neurons controls GI transit; visceral stretch transduction."
+    },
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG subtypes tile the distal colon by force threshold; endings in defined wall layers."
+    }
+  ],
+  "reviewNotes": "Stretch transduction via Piezo2; adequate stimulus."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "B6-L1",
+  "unitId": "B6",
+  "title": "Neurons speak to immune cells",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how sensory neurons signal to immune cells via neuropeptides.",
+  "tags": [
+    "neuroimmune",
+    "neuropeptide"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "An efferent role for sensory neurons",
+      "body": "Sensory neurons don't only send signals *in* — their peripheral endings can release **[[neuropeptide|neuropeptides]]** like **[[CGRP]]** and **[[substance P]]** locally. These act on nearby immune cells, so a [[nociceptor]] can actively shape the immune response, not just report pain.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "How can a sensory nociceptor influence local immunity?",
+      "options": [
+        "By releasing neuropeptides from its endings onto nearby immune cells",
+        "By engulfing and digesting bacteria the way a macrophage does",
+        "By producing antibodies directed against the pathogen itself",
+        "By carrying its pain signal to the brain, which then dispatches immune cells"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Nociceptor endings release CGRP and substance P, which act on immune cells — an efferent, immune-modulating role for a 'sensory' neuron.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A nociceptor ending releases CGRP into inflamed tissue.",
+          "prompt": "What's the effect?",
+          "options": [
+            "It acts on nearby immune cells",
+            "It directly kills the pathogen itself",
+            "It generates antibodies on the spot"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Released neuropeptides act on immune cells — neurons shaping immunity."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s2b",
+      "title": "Two directions at once",
+      "body": "The same neuron can carry a signal centrally *and* release neuropeptides peripherally. So 'afferent' doesn't mean 'input only' — these cells are nodes in a two-way neuroimmune conversation (the next units trace both directions).",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Neurons→immune via neuropeptides; efferent role."
+}

@@ -20,8 +20,8 @@
       "visual": {
         "type": "svg-anim",
         "src": "assets/referred-pain.svg",
-        "alt": "A heart afferent and a left-arm skin afferent have their cell bodies side by side in the same DRG, and both synapse onto one neuron in the T1–T4 dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, and its signal crosses the cord and ascends to the brain. The brain lights up and the left arm on the body outline glows, labelled 'felt here', while the arm's own afferent stays quiet and the heart is not highlighted.",
-        "caption": "Heart and arm afferents share a dorsal-horn neuron, so the brain places heart pain in the arm."
+        "alt": "A heart afferent and a left-arm skin afferent have their cell bodies side by side in the same DRG, and both synapse onto one neuron in the T1–T4 dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, and its signal crosses the cord and ascends to the brain. The brain lights up, and the chest wall over the heart and the left arm both glow, with one 'felt here' label pointing to each, while the arm's own afferent stays quiet.",
+        "caption": "Heart and arm afferents share a dorsal-horn neuron, so the brain places heart pain in the chest wall and left arm."
       }
     },
     {

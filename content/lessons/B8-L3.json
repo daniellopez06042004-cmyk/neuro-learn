@@ -1,0 +1,97 @@
+{
+  "id": "B8-L3",
+  "unitId": "B8",
+  "title": "Nociceptors and the microbiota",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain evidence that gut nociceptors regulate the microbiota and tissue protection.",
+  "tags": [
+    "microbiota",
+    "nociceptor"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Neurons that tend the garden",
+      "body": "Gut **[[nociceptor|nociceptors]]** do more than report trouble — they help regulate the **microbiota** and defend the mucosa. Zhang et al. found that gut-innervating nociceptors shape the microbial community in ways that protect the tissue.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 3,
+      "setup": "You ablate the gut-innervating nociceptors in a mouse and then examine its gut microbiota and mucosal defense.",
+      "prompt": "What do you predict?",
+      "options": [
+        "The microbial community and tissue protection shift, often for the worse",
+        "The microbiota shifts, but mucosal protection stays exactly the same",
+        "Nothing at all changes in the gut after their removal",
+        "Only the brain is affected by this, and never the gut"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Removing the neurons changed the microbiota and reduced protection — evidence that nociceptors actively regulate the gut ecosystem, not just sense it. A striking efferent role for 'sensory' neurons.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Ablating gut nociceptors (which help regulate the microbiota) tends to…",
+          "options": [
+            "Shift the microbiota and weaken the tissue's protection",
+            "Leave the gut completely unchanged in every way",
+            "Regrow all of the lost neurons almost instantly"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "These neurons regulate the microbiota, so removing them alters it and protection."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "What broader idea does nociceptor control of the microbiota support?",
+      "options": [
+        "The nervous system is an active regulator of host–microbe balance",
+        "Neurons and microbes never influence one another in any way",
+        "Only antibodies, never neurons, can shape the microbiota",
+        "The microbiota is completely fixed and cannot be regulated"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It places neurons among the regulators of the microbiome — extending neuroimmunology to the host–microbe interface.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Nociceptors can shape which microbes thrive in the gut.",
+          "prompt": "What does this imply?",
+          "options": [
+            "Neurons help regulate host–microbe balance",
+            "Neurons and microbes never interact",
+            "The microbiota can't be regulated"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Neurons are active regulators of the host–microbe relationship."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Zhang W et al., 2022, Cell",
+      "doi": "10.1016/j.cell.2022.09.008",
+      "url": "https://doi.org/10.1016/j.cell.2022.09.008",
+      "verified": true,
+      "note": "Gut-innervating nociceptors regulate the microbiota to promote tissue protection."
+    }
+  ],
+  "reviewNotes": "Zhang 2022: nociceptors regulate microbiota/protection."
+}

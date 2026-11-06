@@ -1,0 +1,100 @@
+{
+  "id": "A8-L4",
+  "unitId": "A8",
+  "title": "Threshold tiling",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how subtypes with different force thresholds together encode stimulus intensity.",
+  "tags": [
+    "tiling",
+    "coding"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A team that covers the range",
+      "body": "No single afferent type covers the whole range of distension equally well. Instead, different [[DRG]] subtypes have different force **[[threshold|thresholds]]** — some fire to gentle filling, others only to strong, potentially harmful distension. Together they **tile** the intensity range, so the brain can tell 'full' from 'dangerously over-full'.",
+      "flag": {
+        "level": "simplified",
+        "note": "Many low-threshold colon afferents also keep encoding into the noxious range; dedicated high-threshold units add to the top end rather than owning it alone."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why have multiple subtypes with different force thresholds instead of one?",
+      "options": [
+        "To encode a range of intensities, from gentle filling to harmful over-distension",
+        "To provide spares, so one subtype can stand in for another",
+        "Because each threshold matches a different modality, like heat vs stretch",
+        "So low-threshold units carry pain and high-threshold units carry fullness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A set of differently-tuned subtypes spans the intensity range (rate/population coding), letting the system distinguish normal filling from injury-level stretch. A single threshold would compress that range; tiling extends it.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Colon afferents come in low-, mid-, and high-threshold subtypes.",
+          "prompt": "What does that arrangement achieve?",
+          "options": [
+            "Encoding a range of distension intensities",
+            "Spare neurons that can stand in for each other",
+            "Detecting only the painful stimuli, nothing else"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Tiling thresholds lets the population encode intensity from gentle to harmful."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You selectively silence only the high-threshold colon afferents.",
+      "prompt": "What do you predict?",
+      "options": [
+        "Blunted response to strong/noxious distension, with normal responses to gentle filling",
+        "Loss of all colon sensation at once, both the gentle filling and the strong distension alike",
+        "Paradoxically stronger pain even from gentle, normal filling of the colon",
+        "Loss of the response to gentle filling, while strong distension is still detected normally"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "High-threshold afferents carry the strong/noxious end of the range, so silencing them should spare gentle-filling sensation but blunt responses to harmful distension — a subtype-specific, testable prediction, and exactly the kind of experiment the lab runs.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Silencing only high-threshold colon afferents should…",
+          "options": [
+            "Blunt responses to strong distension, spare gentle filling",
+            "Remove all colon sensation, gentle and strong alike",
+            "Remove gentle-filling sensation, spare strong distension"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "High-threshold units carry the noxious end; gentle-filling sensation uses lower-threshold units."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG subtypes tile the distal colon by force threshold; endings in defined wall layers."
+    }
+  ],
+  "reviewNotes": "Threshold tiling / population coding of intensity; subtype silencing."
+}

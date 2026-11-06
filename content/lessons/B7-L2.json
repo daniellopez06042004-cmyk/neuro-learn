@@ -1,0 +1,97 @@
+{
+  "id": "B7-L2",
+  "unitId": "B7",
+  "title": "Immune signals change excitability",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how inflammatory cytokines sensitize nociceptors.",
+  "tags": [
+    "cytokine",
+    "sensitization"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Turning up the neuron",
+      "body": "Inflammatory cytokines (e.g. TNF, IL-6) act on [[nociceptor|nociceptors]] to **lower their threshold** — a form of [[peripheral sensitization]]. So an immune signal literally makes the neuron fire to milder stimuli, tying inflammation to pain.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What's a direct effect of inflammatory cytokines on a nociceptor?",
+      "options": [
+        "They lower its firing threshold, so milder stimuli now excite it",
+        "They convert it into a fast, low-threshold touch fiber instead",
+        "They sever the neuron's connection to the spinal cord entirely",
+        "They raise its threshold, numbing the inflamed area completely"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Cytokines sensitize the ending (lower threshold), so normally innocuous stimuli now fire it — the immune-to-pain link.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "TNF and IL-6 bathe a nociceptor ending during inflammation.",
+          "prompt": "What happens to its threshold?",
+          "options": [
+            "It drops, so weaker stimuli fire it",
+            "It rises, numbing the ending",
+            "It is unaffected entirely"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Inflammatory cytokines lower the nociceptor's threshold (sensitization)."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You block the receptor for a key inflammatory cytokine on sensory neurons, during inflammation.",
+      "prompt": "What do you predict for pain sensitivity?",
+      "options": [
+        "Reduced sensitization, if that cytokine was driving it",
+        "Stronger pain than there was before the blocking",
+        "Permanent loss of all sensation from the area",
+        "No change, if the sensitization is driven centrally instead"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "If the cytokine was sensitizing the neuron, removing its receptor should blunt the sensitization — a direct test, and the rationale behind cytokine-blocking pain therapies.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Blocking an inflammatory cytokine's receptor on neurons should…",
+          "options": [
+            "Reduce the sensitization if it was driving it",
+            "Increase the pain rather than reduce it",
+            "Erase all sensation from the whole area"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Removing the receptor cuts the sensitizing signal."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of bidirectional neuroimmune interactions in the intestine."
+    }
+  ],
+  "reviewNotes": "Cytokines sensitize nociceptors; echoes A9."
+}

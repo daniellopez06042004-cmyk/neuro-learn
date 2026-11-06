@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img">
   <title>Referred pain: heart felt in the left arm</title>
-  <desc>A heart afferent and a left-arm skin afferent, with their pseudounipolar cell bodies side by side in the same upper-thoracic (T1 to T4) DRG, both synapse onto one shared neuron in the dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, its signal crosses the cord and ascends to the brain, and the left arm on the body outline glows as the place the pain is felt. The arm's own afferent stays quiet, and the heart itself is not where the pain is felt.</desc>
+  <desc>A heart afferent and a left-arm skin afferent, with their pseudounipolar cell bodies side by side in the same upper-thoracic (T1 to T4) DRG, both synapse onto one shared neuron in the dorsal horn. The heart afferent fires, the shared dorsal-horn neuron fires, its signal crosses the cord and ascends to the brain, and two regions of the body outline glow as where the pain is felt: the chest wall over the heart and the left arm. The arm's own afferent stays quiet.</desc>
   <style>
     svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--ok:#0f6e56;--bad:#993c1d;--warn:#ba7517;--track:#7F77DD;}
     @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--ok:#5dcaa5;--bad:#f0997b;--warn:#ef9f27;--track:#a39df0;}}
@@ -61,8 +61,10 @@
   <path class="body" d="M68 230 C48 234 38 250 36 272 L28 366 H54 L60 290 Z"/>
   <g class="arm"><path class="felt" d="M224 230 C244 234 254 250 256 272 L264 366 H238 L232 290 Z"/></g>
   <path class="body" d="M130 206 H162 L164 220 C190 224 214 226 226 238 L222 366 H70 L66 238 C78 226 102 224 128 220 Z"/>
+  <clipPath id="torso"><path d="M130 206 H162 L164 220 C190 224 214 226 226 238 L222 366 H70 L66 238 C78 226 102 224 128 220 Z"/></clipPath>
+  <g class="arm"><ellipse class="felt" clip-path="url(#torso)" cx="190" cy="284" rx="34" ry="40"/></g>
   <path class="heart" d="M194 266 C202 255 218 257 218 272 C218 288 204 298 192 310 C180 298 166 288 168 272 C168 258 186 255 194 266 Z"/>
-  <text class="lbl" x="162" y="294" text-anchor="end">heart</text>
+  <text class="lbl" x="150" y="290" text-anchor="end">heart</text>
   <ellipse class="cord" cx="176" cy="146" rx="104" ry="54"/>
   <g class="gmo"><ellipse cx="140" cy="124" rx="14" ry="27" transform="rotate(-16 140 124)"/><ellipse cx="212" cy="124" rx="14" ry="27" transform="rotate(16 212 124)"/><ellipse cx="140" cy="170" rx="27" ry="18"/><ellipse cx="212" cy="170" rx="27" ry="18"/><rect x="140" y="142" width="72" height="16" rx="6"/></g>
   <g class="gm"><ellipse cx="140" cy="124" rx="14" ry="27" transform="rotate(-16 140 124)"/><ellipse cx="212" cy="124" rx="14" ry="27" transform="rotate(16 212 124)"/><ellipse cx="140" cy="170" rx="27" ry="18"/><ellipse cx="212" cy="170" rx="27" ry="18"/><rect x="140" y="142" width="72" height="16" rx="6"/></g>
@@ -96,5 +98,5 @@
   <circle class="ring" cx="214" cy="125" r="11"/>
   <circle class="somaN" cx="212" cy="124" r="4"/>
   <text class="lbl" x="274" y="330">left arm</text>
-  <g class="arm"><text class="key" x="274" y="354" style="fill:var(--bad)">felt here</text></g>
+  <g class="arm"><path class="ray" d="M190 324 V335 M224 347 H240"/><text class="key" x="190" y="352" text-anchor="middle" style="fill:var(--bad)">felt here</text></g>
 </svg>

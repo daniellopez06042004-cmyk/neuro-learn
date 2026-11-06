@@ -1,0 +1,72 @@
+{
+  "id": "B6-L4",
+  "unitId": "B6",
+  "title": "Why the efferent side matters",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect neuron→immune signaling to disease and to the lab's interests.",
+  "tags": [
+    "neuroimmune",
+    "lab"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Neurons as immune regulators",
+      "body": "If neurons can bias immunity, then targeting *neurons* becomes a way to tune *immune* outcomes — in infection, allergy, and inflammatory disease. This reframes sensory neurons as regulators, and makes tools that silence or activate them (chemogenetics) doubly interesting.",
+      "flag": null
+    },
+    {
+      "type": "predict",
+      "id": "s2",
+      "difficulty": 2,
+      "setup": "A tissue's inflammation seems driven partly by neuropeptide release from its sensory neurons.",
+      "prompt": "How could you test that with the lab's toolkit?",
+      "options": [
+        "Silence those neurons with a DREADD and watch the inflammation",
+        "Remove all of the immune cells and simply ignore the neurons",
+        "Only measure antibody titers over time and then stop there",
+        "Measure neuropeptide levels in the tissue and conclude they caused it"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Chemogenetic silencing of the relevant neurons tests whether their neuropeptide output drives the inflammation — the same loss-of-function logic (C5) applied to a neuroimmune question.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "To test if sensory neurons drive a tissue's inflammation, you'd…",
+          "options": [
+            "Silence them with a DREADD and watch the inflammation",
+            "Delete all of the immune cells and only do that",
+            "Measure the antibody titers alone and nothing else"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "DREADD silencing isolates the neurons' contribution."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Where it points",
+      "body": "The gut is a prime place to study this — sensory fibers and immune cells sit side by side in the wall (B8). And the lab's organs (colon, pancreas) are exactly where neuron–immune and neuron–epithelial signaling can be mapped with genetic tools.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of bidirectional neuroimmune interactions in the intestine."
+    }
+  ],
+  "reviewNotes": "Neuron→immune significance; chemogenetic test; gut/lab tie-in."
+}

@@ -1,0 +1,82 @@
+{
+  "id": "B7-L3",
+  "unitId": "B7",
+  "title": "A two-way street",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Summarize bidirectional neuroimmune signaling.",
+  "tags": [
+    "neuroimmune",
+    "bidirectional"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Both directions at once",
+      "body": "Put the pieces together: neurons signal to immune cells (neuropeptides, B6) and immune cells signal to neurons (cytokines, B7). It's a genuine loop — each can trigger the other, and the loop can amplify or settle an inflammatory state.",
+      "flag": null
+    },
+    {
+      "type": "match",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Match each direction to its typical messenger.",
+      "pairs": [
+        [
+          "Neuron → immune cell",
+          "Neuropeptides (CGRP, substance P)"
+        ],
+        [
+          "Immune cell → neuron",
+          "Cytokines (TNF, IL-6)"
+        ]
+      ],
+      "explanation": "Neurons mostly use neuropeptides to reach immune cells; immune cells mostly use cytokines to reach neurons."
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "Neurons release CGRP that recruits immune activity, and the resulting cytokines further sensitize the neurons.",
+      "prompt": "What kind of dynamic is this?",
+      "options": [
+        "Positive feedback that can amplify inflammation",
+        "A one-way signal from neurons to immune cells",
+        "Negative feedback that settles the response",
+        "Two parallel responses to the same trigger"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Each side drives the other, so the loop can run away (amplify) — one reason chronic neuroinflammatory conditions are self-sustaining. Breaking the loop at either limb is a therapeutic strategy.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Neurons exciting immunity, which then sensitizes the neurons, is…",
+          "options": [
+            "A positive feedback, amplifying loop",
+            "A strictly one-way signal",
+            "A self-limiting single event"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Mutual activation makes a positive feedback loop."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of bidirectional neuroimmune interactions in the intestine."
+    }
+  ],
+  "reviewNotes": "Bidirectional neuroimmune loop."
+}

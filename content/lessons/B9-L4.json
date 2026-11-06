@@ -1,0 +1,97 @@
+{
+  "id": "B9-L4",
+  "unitId": "B9",
+  "title": "Frontiers in neuroimmunology",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Name open questions in neuroimmunology and connect them to the lab's work.",
+  "tags": [
+    "frontiers",
+    "neuroimmune"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Where the field is going",
+      "body": "Open questions abound: which sensory subtypes carry which neuroimmune jobs, how spinal/[[DRG]] afferents (not just vagal) participate, how the circuits differ by organ, and whether tuning them could treat inflammatory disease. The spinal/DRG side, and organs beyond the gut, are wide open.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why is the spinal/DRG side of neuroimmune control a frontier?",
+      "options": [
+        "Most of the classic reflex work is vagal; the DRG side is far less mapped",
+        "The DRG has been clearly shown to have no immune-related role of any kind",
+        "It was fully solved long before the vagal reflex work had even begun",
+        "Spinal sensory neurons are simply unable to release any neuropeptides at all"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The inflammatory reflex is a vagal story; which DRG subtypes do analogous jobs, and in which organs, is largely unmapped — exactly the lab's kind of question.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Classic neuroimmune reflexes are vagal.",
+          "prompt": "Why is the DRG side still open?",
+          "options": [
+            "It's far less mapped than the vagal side is",
+            "It has no immune-related role at all in the body",
+            "It was already solved first, before the vagal work"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The DRG side of neuroimmune control is largely uncharted."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "Your project silences pancreas-innervating sensory neurons and reads out physiology.",
+      "prompt": "How does it fit neuroimmunology's frontier?",
+      "options": [
+        "It probes the understudied DRG side in an organ beyond the gut",
+        "It merely repeats the vagal inflammatory-reflex work already done",
+        "It abandons neuroimmune questions and research entirely",
+        "It only re-describes the colon findings that already exist"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Taking subtype-specific DRG tools to the pancreas extends neuroimmune and interoceptive mapping to a new organ on the understudied spinal side — the through-line of this whole app.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "The pancreas DREADD project sits at the neuroimmune frontier because it…",
+          "options": [
+            "Probes the understudied DRG side in an organ beyond the gut",
+            "Merely repeats the existing vagal reflex work already done",
+            "Drops the neuroimmune questions from the project entirely"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "It extends DRG-side tools to a new organ."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of intestinal neuroimmune interactions."
+    }
+  ],
+  "reviewNotes": "Neuroimmune frontiers; DRG side; pancreas project. Caps Track B."
+}

@@ -1,0 +1,105 @@
+{
+  "id": "B5-L2",
+  "unitId": "B5",
+  "title": "Microglia: from surveillance to reactive",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Describe how microglia shift from surveillance to reactive states and why context matters.",
+  "tags": [
+    "microglia",
+    "reactive"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Never truly at rest",
+      "body": "Even 'resting' **[[microglia]]** constantly extend and retract processes, surveying the tissue. On sensing damage or infection they shift to **reactive** states — changing shape, migrating, releasing signals. The shift isn't simply on/off; it's context-dependent and can help or harm.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What are 'resting' microglia actually doing?",
+      "options": [
+        "Continuously extending and retracting processes to survey the tissue",
+        "Sitting completely still and motionless until an injury happens to occur",
+        "Waiting in the bloodstream until an injury recruits them into the brain",
+        "Conducting their own action potentials, the same way neurons do"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "In vivo imaging shows resting microglia are highly dynamic surveillants — 'resting' means not reactive, it doesn't mean motionless.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Two-photon imaging watches 'resting' microglia in a live brain.",
+          "prompt": "What is seen?",
+          "options": [
+            "Processes constantly probing the tissue",
+            "Totally static, unmoving cells",
+            "Cells firing action potentials"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Resting microglia are dynamic surveillants, their processes always probing."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "A paper labels microglia simply as 'activated = bad'.",
+      "prompt": "What's the problem with that framing?",
+      "options": [
+        "Reactive states are context-dependent and can be protective or harmful",
+        "Microglia are never involved in protection, and only ever cause damage",
+        "Microglia cannot change their state at all once they have matured",
+        "Activation always repairs tissue perfectly and never causes any harm"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Reactive microglia can clear debris and contain damage or can drive injury, depending on context. A flat 'activated = bad' misses that — the field now describes states more carefully.",
+      "freeText": false,
+      "flag": {
+        "level": "debated",
+        "note": "Microglial 'states' are an active area; simple activated/resting or M1/M2 labels are increasingly seen as oversimplified."
+      },
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "'Activated microglia = bad' is a poor framing because…",
+          "options": [
+            "Reactive states can be protective or harmful by context",
+            "Microglia only ever cause damage, never anything useful",
+            "Microglia can't change their state once they are mature"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Reactivity is context-dependent, not uniformly harmful.",
+          "flag": {
+            "level": "debated",
+            "note": "Microglial state labels are debated and increasingly seen as oversimplified."
+          }
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Nimmerjahn A et al., 2005, Science",
+      "doi": "10.1126/science.1110647",
+      "url": "https://doi.org/10.1126/science.1110647",
+      "verified": true,
+      "note": "Resting microglia are highly dynamic surveillants of the brain in vivo."
+    }
+  ],
+  "reviewNotes": "Microglial surveillance vs reactive; context-dependence flagged."
+}

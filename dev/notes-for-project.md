@@ -1,3 +1,39 @@
+### 2026-11-06: A6–A10 and B5–B9 are live after review (131 edits to copy), plus both diagram fixes
+
+**Imported and published:** 40 lessons, the 24 new quiz questions (30 in the pool), 27 glossary terms and the unit definitions. Your prereqs work as written and both new maps lay out cleanly. All four tracks are now complete in the app.
+
+**1. Please copy these 41 files from `app/content/lessons/` over yours** (all 40 new lessons plus `D5-L3`, whose alt text changed), **and `app/content/quiz-pool.json`.** An independent review made **131 edits**: 20 science, 16 giveaways, 84 throwaway distractors, 11 other. The full record, with old text, new text and a reason for each, is in `app/dev/review-A6-A10-B5-B9.md`. Also copy `glossary.json` (see 3).
+
+**The 20 science fixes, the ones worth reading:**
+- **`B9-L1` s1: the inflammatory reflex was stated as fact with no flag,** while `B9-L2` flags the same circuit. The vagus doesn't reach the spleen directly (the chain runs through the splenic nerve) and that anatomy is contested. Now carries a `simplified` flag and reads "sets off a response that dampens it".
+- **`B9-L2` s3:** the ChAT+ T-cell relay was stated as established; now hedged in both the explanation and the variant reveal.
+- **`B7-L3` s3:** two cells that each activate the other is *positive feedback*, not "feed-forward". Fixed in the option, the variant and the explanation.
+- **`A7-L1` s2:** "a cool breeze on the skin" was the exteroception answer, but skin temperature is usually counted as interoception, and your own concept card lists it that way. Now a fabric's texture.
+- **`A8-L4` s1/s2:** "no single afferent reports the whole range" overstates it. Most low-threshold colon units keep encoding into the noxious range (Sengupta & Gebhart). Softened, with a `simplified` flag.
+- **`A8-L2` s2:** light brushing was called a poor stimulus inside the gut, but mucosal afferents do respond to light stroking. Now "drives only a subset".
+- **`A9-L3` s1:** silent nociceptors were "unresponsive at baseline"; they're mechanically insensitive but answer chemical stimuli.
+- **`A9-L4` s1:** silencing was called "direct evidence that these neurons are causal", which contradicts s3 in the same lesson. Now "necessary, not just correlated".
+- **`A9-L2` s1:** wind-up was folded into central sensitization; it's a distinct, shorter build-up that can trigger it.
+- **`A7-L3` s2:** colon pain described as "sharp"; visceral pain is typically dull and cramping.
+- **`B5-L3` s1:** the neurotoxic-vs-protective astrocyte claim now carries a `debated` flag, matching your microglial-state flag.
+- **`A8-L3` s3:** some luminal chemicals act on afferents directly, so blocking serotonin only blunts the EC-cell-detected ones. Setup narrowed.
+
+**2. The same two patterns as last time, in nearly every lesson.** Please apply these when you write the capstone:
+1. **Throwaway distractors (84 of the edits).** "The colon grew new ganglia overnight", "every nociceptor destroyed at once", "antibodies carried the signal down the vagus", "bone cells in the skeleton". A learner can answer by elimination without knowing anything. Every distractor should be a mistake someone might actually make.
+2. **The correct option as the only hedged one (16).** Several predicts had three absolute options and one careful one. Hedge the distractors too.
+
+**3. `glossary.json`: I edited "inflammatory reflex"** to match the `B9-L1` fix (the splenic-nerve limb, and that parts of the circuit are unsettled). Please copy it. Note `alpha7 nAChR` is never named in B9; fine as is, just flagging it.
+
+**4. Both diagram changes you asked for are done.**
+- **`perfusion.svg`:** the right atrium is now cut, with fluid draining from it as PBS flushes and on through PFA. The `C6-L2` alt text matches.
+- **`referred-pain.svg`:** the chest wall over the heart now glows along with the left arm, one "felt here" label pointing to each. The `D5-L3` alt and caption match.
+
+**5. Quiz-pool unlock units.** Three questions needed a unit that isn't required, which only delays the unlock, and one was missing the unit that actually teaches it:
+- `capsaicin-kcl-control`: C1 → **C11** (the KCl viability check is taught in C11, not generic controls).
+- `retrograde-from-organ`: dropped D5; `dorsal-root-cut`: dropped A6; `tamoxifen-sparse`: dropped C3; `antibody-ko-trpv1`: dropped A3.
+
+**6. What's left:** the **capstone E** (your pancreas DREADD project) is the only content not written. Dan's call on when.
+
 ### 2026-11-06: new question type `label` (label the diagram); please write these for figure-heavy lessons
 
 Dan picked this as the top learning upgrade after comparing us with other apps (Anki image occlusion, Complete Anatomy). The app shows one of our figures with its text labels hidden and numbered pins on the structures. The learner taps a pin, then picks its name from a bank. All pins must be right to pass, and a miss goes to review like any question.

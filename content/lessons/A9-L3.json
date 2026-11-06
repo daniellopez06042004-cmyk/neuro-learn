@@ -1,0 +1,97 @@
+{
+  "id": "A9-L3",
+  "unitId": "A9",
+  "title": "Visceral hypersensitivity",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain visceral hypersensitivity and the role of silent nociceptors, using colitis as a model.",
+  "tags": [
+    "visceral",
+    "hypersensitivity"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "When the gut turns up its volume",
+      "body": "**[[visceral hypersensitivity]]** is heightened sensation from the viscera — normal filling now feels painful. Inflammation (e.g. **[[colitis]]**) sensitizes gut afferents and can **recruit [[silent nociceptor|silent nociceptors]]**: afferents that don't respond to mechanical stimuli at baseline but 'wake up' and start firing once inflamed.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What is a 'silent' nociceptor?",
+      "options": [
+        "Mechanically insensitive at rest, but responsive once inflamed",
+        "An afferent whose firing never reaches conscious sensation at all",
+        "A nociceptor that fires steadily on its own without any stimulus",
+        "A touch fiber that switches to carrying pain after an injury"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Silent (or 'sleeping') nociceptors don't respond to normal mechanical stimuli until inflammation sensitizes them — then they add to the barrage, a key contributor to visceral hypersensitivity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "After colon inflammation, more afferents respond to distension than before.",
+          "prompt": "What likely happened?",
+          "options": [
+            "Previously silent nociceptors were recruited",
+            "The existing afferents began conducting more quickly",
+            "New afferents sprouted in from the spinal cord"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Inflammation wakes silent nociceptors, adding to the active population."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "In a colitis model, a mouse shows pain behavior to colon distension that a healthy mouse ignores.",
+      "prompt": "What best explains this?",
+      "options": [
+        "Peripheral sensitization + recruited silent nociceptors + central sensitization",
+        "Only central sensitization; the gut afferents themselves are unchanged",
+        "Only peripheral sensitization at the endings, with no central change",
+        "Faster conduction velocity in the existing colon afferents"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Visceral hypersensitivity is multi-level: sensitized endings, newly-recruited silent nociceptors, and raised dorsal-horn gain together make normal filling feel painful. This is the model the lab's tools can dissect.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Painful responses to normal distension after colitis reflect…",
+          "options": [
+            "Peripheral + central sensitization and silent-nociceptor recruitment",
+            "Only sensitized endings, with no change in the dorsal horn",
+            "Only faster conduction in the existing afferents, nothing more"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Multiple sensitization mechanisms combine to produce visceral hypersensitivity."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Bayrer JR et al., 2023, Nature",
+      "doi": "10.1038/s41586-023-05829-8",
+      "url": "https://doi.org/10.1038/s41586-023-05829-8",
+      "verified": true,
+      "note": "Gut enterochromaffin cells drive visceral pain and anxiety."
+    }
+  ],
+  "reviewNotes": "Visceral hypersensitivity; silent nociceptors; colitis model."
+}

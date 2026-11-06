@@ -1,0 +1,107 @@
+{
+  "id": "B9-L1",
+  "unitId": "B9",
+  "title": "The inflammatory reflex",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Describe the inflammatory reflex as a neural circuit that senses and limits inflammation.",
+  "tags": [
+    "inflammatory-reflex",
+    "reflex"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A reflex for inflammation",
+      "body": "The **[[inflammatory reflex]]** is exactly what it sounds like: a [[reflex arc]] whose *afferent* limb (vagal sensory neurons) detects inflammation, and whose *efferent* [[vagus|vagal]] limb sets off a response that **dampens** it. Tracey framed immunity as being under neural reflex control.",
+      "flag": {
+        "level": "simplified",
+        "note": "The efferent limb is usually drawn as vagal end to end, but the signal reaches the spleen via the splenic nerve, and the exact anatomy is still debated."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What makes the inflammatory reflex a reflex *arc*?",
+      "options": [
+        "It has an afferent limb that senses inflammation and an efferent limb that acts",
+        "It is only a single one-way sensory signal inward, with no corrective output at all",
+        "It involves only immune cells and does not involve any neurons",
+        "It is purely hormonal in nature, with no neural component at all"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Like any reflex arc (D8): sense → integrate → respond. Here the sensed variable is inflammation and the response dampens it.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Vagal afferents sense inflammation and vagal efferents then act to reduce it.",
+          "prompt": "What is this structure?",
+          "options": [
+            "A reflex arc, with both afferent and efferent limbs",
+            "Just a one-way sensory signal travelling inward",
+            "A purely hormonal feedback loop with no nerves"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Sensing plus a corrective output is a reflex arc."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "Borovikova et al. stimulated the vagus nerve in animals given an inflammatory challenge (endotoxin).",
+      "prompt": "What did they find?",
+      "options": [
+        "Vagal stimulation reduced the systemic inflammatory response",
+        "Vagal stimulation sharply worsened the ongoing inflammation",
+        "The vagus nerve had no effect on the inflammation at all",
+        "Only antibodies, and not the nerves, affected the response"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Stimulating the efferent vagus attenuated the systemic inflammatory response to endotoxin — the experiment that established neural reflex control of inflammation.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Vagal stimulation during an endotoxin challenge…",
+          "options": [
+            "Reduced the systemic inflammatory response",
+            "Worsened the inflammation sharply instead",
+            "Did nothing at all to the inflammation"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Borovikova et al. showed vagal stimulation dampens systemic inflammation."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Tracey KJ, 2002, Nature",
+      "doi": "10.1038/nature01321",
+      "url": "https://doi.org/10.1038/nature01321",
+      "verified": true,
+      "note": "The inflammatory reflex: neural control of immunity."
+    },
+    {
+      "citation": "Borovikova LV et al., 2000, Nature",
+      "doi": "10.1038/35013070",
+      "url": "https://doi.org/10.1038/35013070",
+      "verified": true,
+      "note": "Vagus nerve stimulation attenuates the systemic inflammatory response to endotoxin."
+    }
+  ],
+  "reviewNotes": "Inflammatory reflex; Tracey/Borovikova; ties to D8 reflex arc."
+}

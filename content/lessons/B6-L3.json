@@ -1,0 +1,97 @@
+{
+  "id": "B6-L3",
+  "unitId": "B6",
+  "title": "Neuropeptides shape immunity",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how CGRP acts on immune cells through RAMP1-containing receptors.",
+  "tags": [
+    "CGRP",
+    "neuropeptide"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "A neuropeptide with an immune address",
+      "body": "**[[CGRP]]** released by neurons acts on immune (and epithelial) cells that carry its receptor, which includes the component **[[RAMP1]]**. Through this axis, neurons can bias immune activity — for example dialing specific responses up or down.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "For neuronal CGRP to act on an immune cell, what must the immune cell have?",
+      "options": [
+        "The CGRP receptor, including the RAMP1 component itself",
+        "Its own internal supply of conducted action potentials",
+        "A direct synapse made onto the neuron's own cell body",
+        "An enzyme that cuts CGRP into its active form first"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Signaling needs a receptor on the target. CGRP acts on cells bearing its RAMP1-containing receptor — no receptor, no response.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Neurons release CGRP near two cell types; only one responds.",
+          "prompt": "What most likely differs?",
+          "options": [
+            "Only the responder carries the CGRP receptor",
+            "Only the responder can fire action potentials",
+            "Only the responder makes antibodies"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The target must express the CGRP (RAMP1) receptor to respond."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 3,
+      "setup": "You block RAMP1 so immune cells can't receive CGRP, during an infection.",
+      "prompt": "What do you predict?",
+      "options": [
+        "The CGRP-driven arm of the response is lost, shifting the outcome",
+        "Nothing changes at all, since CGRP never affects immunity",
+        "The neurons stop firing their action potentials entirely",
+        "The antibody genes are deleted from the immune cells"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Removing the receptor cuts the neuron→immune CGRP signal, changing the response — direct evidence the axis is functional. Yang et al. used exactly this logic in the gut (next, B8).",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Blocking RAMP1 during infection should…",
+          "options": [
+            "Remove the CGRP-driven arm of the response",
+            "Stop the neurons from firing altogether",
+            "Delete the antibody genes from the cells"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "No receptor means the CGRP signal can't land, changing the outcome."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Yang D et al., 2022, Cell",
+      "doi": "10.1016/j.cell.2022.09.024",
+      "url": "https://doi.org/10.1016/j.cell.2022.09.024",
+      "verified": true,
+      "note": "Nociceptors direct goblet cells via a CGRP-RAMP1 axis."
+    }
+  ],
+  "reviewNotes": "CGRP–RAMP1 axis; receptor logic."
+}

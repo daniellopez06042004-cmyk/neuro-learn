@@ -1,0 +1,71 @@
+{
+  "id": "B7-L1",
+  "unitId": "B7",
+  "title": "Immune signals reach neurons",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how cytokines act on sensory neurons that carry their receptors.",
+  "tags": [
+    "cytokine",
+    "neuroimmune"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The reverse direction",
+      "body": "Immunity also talks back to neurons. **[[cytokine|Cytokines]]** released during inflammation act on sensory neurons that carry the matching receptors, changing how those neurons behave. This is the immune→neuron half of the two-way conversation.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What lets a specific cytokine act on a specific sensory neuron?",
+      "options": [
+        "The neuron expressing that cytokine's receptor",
+        "The neuron physically engulfing the cytokine",
+        "The neuron being damaged, so the cytokine can get inside it",
+        "A direct synapse from the immune cell onto the axon"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "As always, signaling needs a receptor on the target. Sensory neurons expressing cytokine receptors can be acted on directly.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "A cytokine floods inflamed tissue; one neuron responds, another doesn't.",
+          "prompt": "What most likely differs?",
+          "options": [
+            "Only the responder expresses that cytokine's receptor",
+            "Only the responder is able to conduct signals at all",
+            "Only the responder is capable of making antibodies"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The responding neuron carries the receptor for that cytokine."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "Not just background",
+      "body": "These immune signals don't merely coexist with neurons — they actively reset neuronal excitability, which links inflammation directly to how things feel (the next lesson).",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of bidirectional neuroimmune interactions in the intestine."
+    }
+  ],
+  "reviewNotes": "Immune→neuron via cytokine receptors."
+}

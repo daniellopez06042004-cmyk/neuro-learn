@@ -1,0 +1,78 @@
+{
+  "id": "B8-L1",
+  "unitId": "B8",
+  "title": "The gut as a neuroimmune hub",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain why the gut wall is a prime site of neuroimmune interaction.",
+  "tags": [
+    "gut",
+    "neuroimmune"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Nerves and immune cells, side by side",
+      "body": "The gut faces trillions of microbes across a thin wall, so it packs immune cells densely into the **[[lamina propria]]** — right where sensory ([[DRG]] and vagal) endings also run. Nerves and immune cells share the same real estate, making the gut a natural neuroimmune hub.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why is the gut especially rich in neuroimmune interaction?",
+      "options": [
+        "Sensory endings and dense immune cells share the wall, facing the microbiota",
+        "The gut wall is thick enough that nerves and immune cells rarely meet",
+        "Nerves and immune cells are kept apart in totally separate organs there",
+        "The gut contains no sensory neurons whatsoever, only immune cells present"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A thin, heavily-colonized surface means immune cells and sensory endings are packed together in the wall — ideal conditions for them to signal to each other.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "The gut faces a huge microbial load across a thin wall.",
+          "prompt": "What does that favor?",
+          "options": [
+            "Dense immune cells next to sensory endings",
+            "Total separation of nerves and immune cells",
+            "A wall with no sensory innervation"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "The thin, colonized wall packs immune cells and nerve endings together."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "The lab's front line",
+      "body": "This is exactly where the lab works: mapping which [[DRG]] sensory subtypes sit among which immune and epithelial cells in the colon wall — the cellular stage for everything in this track.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL et al., 2023, Cell",
+      "doi": "10.1016/j.cell.2023.07.007",
+      "url": "https://doi.org/10.1016/j.cell.2023.07.007",
+      "verified": true,
+      "note": "DRG afferents in the colon wall, among lamina-propria immune cells."
+    },
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of intestinal neuroimmune interactions."
+    }
+  ],
+  "reviewNotes": "Gut neuroimmune hub; lamina propria."
+}

@@ -1,0 +1,88 @@
+{
+  "id": "B5-L4",
+  "unitId": "B5",
+  "title": "Neuroinflammation: double-edged",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Contrast protective and damaging roles of CNS neuroinflammation.",
+  "tags": [
+    "neuroinflammation"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Help, then harm",
+      "body": "Acute neuroinflammation clears pathogens and debris and walls off damage — useful. But *sustained* neuroinflammation can injure neurons and is implicated in chronic and neurodegenerative disease. The same machinery protects early and harms when it won't resolve.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why is neuroinflammation described as double-edged?",
+      "options": [
+        "Acute responses protect, but chronic ones can damage neurons",
+        "It is always purely protective, with no downside whatsoever",
+        "It is always purely destructive, with no benefit at all",
+        "It has no measurable effect on neurons in either direction"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The acute response defends the tissue; failure to resolve turns the same processes damaging — the core tension in neuroinflammation.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "An inflammatory response in the CNS never shuts off.",
+          "prompt": "What's the likely consequence?",
+          "options": [
+            "Ongoing damage to neurons over time",
+            "Faster, cleaner healing than normal",
+            "No consequence at all"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Unresolved neuroinflammation shifts from protective to damaging."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "A therapy wipes out all microglial activity to stop neuroinflammation.",
+      "prompt": "What's a likely downside?",
+      "options": [
+        "Losing the protective surveillance and debris-clearing microglia provide",
+        "Nothing would change, since microglia only ever do harm anyway",
+        "Astrocytes would simply take over every microglial function",
+        "The debris would be cleared by neighbouring neurons instead"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Because the response is double-edged, blunting it entirely can remove needed defense and clean-up. The goal is usually to resolve or rebalance it, not abolish it.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Abolishing all microglial activity risks…",
+          "options": [
+            "Losing the protective surveillance and the clean-up",
+            "Nothing changes, since microglia only do harm",
+            "Astrocytes would take over every microglial job"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Microglia also protect; removing them entirely loses that benefit."
+        }
+      ]
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Neuroinflammation protective vs damaging."
+}

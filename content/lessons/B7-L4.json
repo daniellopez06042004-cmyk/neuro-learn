@@ -1,0 +1,97 @@
+{
+  "id": "B7-L4",
+  "unitId": "B7",
+  "title": "Immune signals and chronic pain",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Connect sustained immune signaling to chronic sensitization and the lab's disease models.",
+  "tags": [
+    "chronic-pain",
+    "neuroimmune"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "When the loop won't quit",
+      "body": "Sustained immune signaling keeps neurons sensitized — contributing to [[peripheral sensitization|peripheral]] and [[central sensitization]] and, in the viscera, to [[visceral hypersensitivity]]. This is why inflammatory gut disease so often comes with pain that outlasts the tissue damage.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "Why does pain in inflammatory conditions often persist and spread?",
+      "options": [
+        "Ongoing immune signaling sustains peripheral and central sensitization",
+        "The nerves have been permanently cut by the inflammation itself",
+        "Pain pathways shut down entirely for the duration of inflammation",
+        "The original tissue damage never fully heals in these conditions"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "As long as immune signals keep sensitizing neurons (peripherally and centrally), the pain is maintained and can spread — a self-sustaining neuroimmune state.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Gut inflammation persists for weeks.",
+          "prompt": "What sustains the accompanying pain?",
+          "options": [
+            "Ongoing immune-driven sensitization",
+            "Permanent severing of the nerves",
+            "Complete shutdown of pain pathways"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Continued immune signaling keeps neurons sensitized, maintaining pain."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "In a colitis model, you silence the sensitized visceral afferents during active inflammation.",
+      "prompt": "What do you predict for hypersensitivity?",
+      "options": [
+        "It should drop if those afferents carry it",
+        "It should rise sharply",
+        "Only conduction speed would change",
+        "Nothing, if the hypersensitivity is maintained in the spinal cord"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Silencing the afferents tests whether they carry the immune-driven hypersensitivity — the neuroimmune version of the loss-of-function experiment the lab runs (and it links straight to A9).",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Silencing sensitized gut afferents in colitis should…",
+          "options": [
+            "Lower the hypersensitivity, if they drive it",
+            "Raise the hypersensitivity sharply instead",
+            "Change only the conduction speed, nothing else"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Loss-of-function tests whether those afferents carry the hypersensitivity."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wallrapp A & Chiu IM, 2024, Annu Rev Immunol",
+      "doi": "10.1146/annurev-immunol-101921-042929",
+      "url": "https://doi.org/10.1146/annurev-immunol-101921-042929",
+      "verified": true,
+      "note": "Review of bidirectional neuroimmune interactions in the intestine."
+    }
+  ],
+  "reviewNotes": "Immune-driven chronic sensitization; ties A9 + lab models."
+}

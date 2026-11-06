@@ -1,0 +1,97 @@
+{
+  "id": "A10-L4",
+  "unitId": "A10",
+  "title": "Reading the field — and your place in it",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how to track a fast-moving field and where the pancreas project fits.",
+  "tags": [
+    "field",
+    "project"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Staying current",
+      "body": "A moving field is followed through reviews (the map), new primary papers (the edges), and preprints (the bleeding edge). In this app, the **Field Pulse** feed surfaces recent, DOI-checked papers so A10/B9 stay current without hard-coding today's news into lessons.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What's the role of a review paper when learning a field?",
+      "options": [
+        "It's the map — it synthesizes what's known and flags open questions",
+        "It's the newest possible result, running ahead of all other papers",
+        "It fully replaces any need to ever read the primary papers yourself",
+        "It reports the authors' own new experiments on the topic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Reviews orient you and point to open questions, but they lag the newest primary work — so you pair them with recent papers (and preprints) for the edges.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You're new to a field and want orientation plus open questions.",
+          "prompt": "What should you read first?",
+          "options": [
+            "A recent review",
+            "A single raw preprint",
+            "Only the oldest paper"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "A review maps the field and flags open questions; pair it with recent primaries."
+        }
+      ]
+    },
+    {
+      "type": "predict",
+      "id": "s3",
+      "difficulty": 2,
+      "setup": "The gut DRG-afferent map is advancing fast, but the pancreas is barely charted.",
+      "prompt": "Where does your project sit in the field?",
+      "options": [
+        "It extends a proven approach to an organ the field hasn't mapped yet",
+        "It merely repeats work that was already finished on the pancreas",
+        "It abandons the whole DRG approach in favor of something else",
+        "It only re-describes the colon that has already been mapped"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "Taking the colon playbook — genetic subtypes, viral tools, chemogenetics — to the pancreas puts your project right at an unmapped edge of the field. That's the whole arc of this app: the tracks exist to get you fluent in exactly this.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "The pancreas DREADD project sits in the field as…",
+          "options": [
+            "Extending a proven approach to an unmapped organ",
+            "A repeat of work already finished on the pancreas",
+            "A rejection of the established DRG approach entirely"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "It applies the established toolkit to an organ the field hasn't charted."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Wolfson RL, 2025, Curr Opin Neurobiol",
+      "doi": "10.1016/j.conb.2025.102973",
+      "url": "https://doi.org/10.1016/j.conb.2025.102973",
+      "verified": true,
+      "note": "Review mapping the open questions in spinal sensory innervation of the gut."
+    }
+  ],
+  "reviewNotes": "Following the field; Field Pulse; the pancreas gap = the project. Caps Track A."
+}

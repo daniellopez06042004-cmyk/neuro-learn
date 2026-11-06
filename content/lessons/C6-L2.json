@@ -20,7 +20,7 @@
       "visual": {
         "type": "svg-anim",
         "src": "assets/perfusion.svg",
-        "alt": "Schematic of the heart with vessels to the brain, a DRG beside the spinal cord, and the colon. Blood fills the vessels, a needle goes into the left ventricle, PBS from bottle 1 flushes the blood out, then PFA from bottle 2 fills the same vessels and the brain, DRG and colon end up fixed (hatched).",
+        "alt": "Schematic of the heart with vessels to the brain, a DRG beside the spinal cord, and the colon. Blood fills the vessels and a needle goes into the left ventricle; the right atrium is cut and, as PBS from bottle 1 flushes the blood out, fluid drains from the cut; then PFA from bottle 2 fills the same vessels and the brain, DRG and colon end up fixed (hatched).",
         "caption": "PBS clears the blood first, then PFA fixes every organ through the clean vessels at once."
       }
     },
@@ -31,11 +31,12 @@
       "items": [
         "Deeply anesthetize the animal",
         "Open the chest and place the needle in the left ventricle",
+        "Cut the right atrium so the fluid has an outflow",
         "Flush with cold PBS to clear blood",
         "Switch to PFA to fix",
         "Dissect the organ and post-fix"
       ],
-      "explanation": "PBS first clears blood (which causes autofluorescence and clots); PFA second fixes the now-clean vasculature and tissue."
+      "explanation": "Cutting the right atrium gives the perfusate somewhere to drain; PBS first clears blood (which clots and autofluoresces); PFA second fixes the now-clean vasculature and tissue."
     },
     {
       "type": "mcq",

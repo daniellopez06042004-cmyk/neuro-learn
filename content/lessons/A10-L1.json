@@ -1,0 +1,103 @@
+{
+  "id": "A10-L1",
+  "unitId": "A10",
+  "title": "Mapping the sensory-neuron zoo",
+  "minutes": 4,
+  "xp": 10,
+  "objective": "Explain how single-cell atlases turned sensory neurons into defined molecular subtypes.",
+  "tags": [
+    "atlas",
+    "frontiers"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "From 'small, medium, large' to a parts list",
+      "body": "Sensory neurons were once sorted mostly by size and conduction. **[[single-cell RNA sequencing]]** changed that: profiling thousands of [[DRG]] neurons one at a time gave a molecular parts list — defined subtypes, each with marker genes you can target.",
+      "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "What did single-cell atlases add beyond classic size/conduction classes?",
+      "options": [
+        "Molecular subtypes with marker genes you can genetically target",
+        "A direct read-out of what each subtype actually senses in vivo",
+        "Exact firing thresholds measured for each neuron that was profiled",
+        "A way to avoid ever having to use RNAscope validation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Atlases define subtypes by gene expression, handing you markers to build Cre lines around — the bridge from description to manipulation. They don't change conduction, and they reveal diversity, not uniformity.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "scRNA-seq profiles thousands of individual DRG neurons.",
+          "prompt": "What's the main payoff?",
+          "options": [
+            "Marker-defined subtypes you can target",
+            "A direct read-out of what each subtype senses",
+            "Firing thresholds for each neuron profiled"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Atlases yield targetable molecular subtypes — the handle for genetic access."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "A molecular atlas gives you a candidate subtype. What's still needed to study its function?",
+      "options": [
+        "Genetic access (a marker-based Cre line and tools) to reach those cells",
+        "Deeper sequencing of the same neurons to confirm the marker gene",
+        "An antibody stain showing the marker protein in fixed tissue",
+        "A larger sample of dissected tissue to sequence in bulk"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An atlas is a description. Testing function needs a way to label and manipulate the subtype in vivo — the C-track pipeline — not just more imaging or tissue.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "You have a subtype and its marker from an atlas.",
+          "prompt": "What's required to test what it does?",
+          "options": [
+            "Genetic access to manipulate it",
+            "Deeper sequencing of the same cells",
+            "An antibody stain in fixed tissue"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "You need a Cre line and tools to manipulate the subtype — the atlas only names it."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Usoskin D et al., 2015, Nat Neurosci",
+      "doi": "10.1038/nn.3881",
+      "url": "https://doi.org/10.1038/nn.3881",
+      "verified": true,
+      "note": "Single-cell RNA-seq classification of DRG sensory neuron types."
+    },
+    {
+      "citation": "Qi L et al., 2024, Cell",
+      "doi": "10.1016/j.cell.2024.02.006",
+      "url": "https://doi.org/10.1016/j.cell.2024.02.006",
+      "verified": true,
+      "note": "A mouse DRG genetic toolkit resolving somatosensory subtype diversity."
+    }
+  ],
+  "reviewNotes": "scRNA-seq atlases; description→manipulation; echoes C12."
+}
