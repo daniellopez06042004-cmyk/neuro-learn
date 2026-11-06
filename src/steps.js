@@ -143,6 +143,7 @@ function choiceList(options, multi) {
         b.classList.toggle('right', right);
         b.classList.toggle('wrong', picked && !right);
         b.classList.toggle('dim', !right && !picked);
+        b.classList.toggle('hit', right && picked);
         b.setAttribute('aria-disabled', 'true');
         const mark = b.querySelector('.mark');
         if (right) mark.replaceChildren(icon('check', 'correct answer'));

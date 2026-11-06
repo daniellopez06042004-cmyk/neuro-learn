@@ -45,7 +45,7 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
   }, { signal });
 
   const traceHost = h('div', { class: 'trace-host' });
-  const stage = h('div', { class: 'stage' });
+  let stage = h('div', { class: 'stage' }); // replaced by a fresh one on each step (see advance)
   const dock = h('div', { class: 'dock' });
   const shell = h('div', { class: 'player' },
     h('div', { class: 'player-top' },
@@ -86,6 +86,8 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
     stage.scrollTop = 0;
     stage.className = 'stage fire-in';
     stage.style.removeProperty('--dx');
+    // Options arrive one after another (styles.css staggers them by --i).
+    stage.querySelectorAll('.choice, .tile').forEach((el, i) => el.style.setProperty('--i', Math.min(i, 8)));
 
     if (!ctl.interactive) {
       pendingRead = true;
@@ -253,13 +255,23 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
     light();
     sounds.epsp();
     stage.style.transform = '';
-    stage.style.setProperty('--dx', `${fromX}px`);
-    stage.className = 'stage fire-out';
+    // The old step slides out on top while the next one comes in under it, so
+    // there's no empty beat between them.
+    const old = stage, scroll = old.scrollTop;
+    const box = shell.getBoundingClientRect(), r = old.getBoundingClientRect();
+    Object.assign(old.style, { left: `${r.left - box.left}px`, top: `${r.top - box.top}px`, width: `${r.width}px`, height: `${r.height}px` });
+    old.style.setProperty('--dx', `${fromX}px`);
+    old.className = 'stage stage-ghost fire-out';
+    old.setAttribute('aria-hidden', 'true');
+    old.inert = true;
+    old.scrollTop = scroll;
+    stage = h('div', { class: 'stage' });
+    old.before(stage);
+    const drop = () => old.remove();
+    old.addEventListener('animationend', (e) => { if (e.target === old) drop(); });
+    setTimeout(drop, 500); // in case the animation never runs
     dock.classList.add('leaving');
-    let done = false;
-    const go = () => { if (done) return; done = true; advancing = false; next(); };
-    stage.addEventListener('animationend', go, { once: true });
-    setTimeout(go, 600); // in case the animation never runs
+    setTimeout(() => { advancing = false; next(); }, 70);
   }
 
   // Last step: threshold reached. Expand the scope, fire, light up the screen.

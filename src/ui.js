@@ -36,8 +36,13 @@ const linkTerms = (escaped) => escaped.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]
 
 // One line of question text (prompt, option, tile) with its glossary links.
 export function inline(text, tag = 'span') {
-  return h(tag, { html: linkTerms(esc(text)) });
+  return h(tag, { html: emphasis(linkTerms(esc(text))) });
 }
+
+// **bold** and *italic*, for question text as well as concept cards.
+const emphasis = (s) => s
+  .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
 
 // Text with the [[…]] markup removed, for places that need plain words.
 export const plain = (text) => String(text ?? '').replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => {
@@ -48,10 +53,7 @@ export const plain = (text) => String(text ?? '').replace(/\[\[([^\]|]+)(?:\|([^
 // Tiny Markdown: **bold**, *italic*, `code`, "- " lists, blank-line paragraphs,
 // and glossary links (above).
 export function md(text, cls = 'md') {
-  const inline = (s) => linkTerms(esc(s))
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
+  const inline = (s) => emphasis(linkTerms(esc(s)).replace(/`([^`]+)`/g, '<code>$1</code>'));
   const blocks = String(text ?? '').trim().split(/\n\s*\n/);
   const isItem = (l) => /^\s*[-•]\s+/.test(l);
   const html = blocks.map((b) => {
