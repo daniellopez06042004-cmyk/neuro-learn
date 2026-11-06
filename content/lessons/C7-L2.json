@@ -101,6 +101,37 @@
           "explanation": "Different host species let species-specific secondaries separate the channels."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the layers of an indirect immunofluorescence stain.",
+      "image": "assets/indirect-if.svg",
+      "targets": [
+        {
+          "x": 180,
+          "y": 230,
+          "label": "target protein"
+        },
+        {
+          "x": 170,
+          "y": 157,
+          "label": "rabbit primary"
+        },
+        {
+          "x": 135,
+          "y": 93,
+          "label": "fluorescent secondaries"
+        }
+      ],
+      "explanation": "The unlabeled rabbit primary binds the target protein; fluorescent secondaries bind the primary, amplifying the signal.",
+      "distractors": [
+        "DAPI"
+      ],
+      "hide": [
+        "text",
+        ".lead"
+      ]
     }
   ],
   "sources": [],

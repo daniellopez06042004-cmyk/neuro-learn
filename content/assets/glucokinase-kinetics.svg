@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Why glucokinase is the glucose sensor</title>
+  <desc id="d">Two enzyme-rate curves plotted against blood glucose. Hexokinase, with its low Km, rises steeply and is already flat at its maximum before the normal blood-glucose band. Glucokinase, with its high Km, is still climbing right across that band, so its rate tracks how much glucose there is. The curves are illustrative Michaelis-Menten shapes with no numbers.</desc>
+  <style>
+    svg{--text:#22221f;--muted:#5f5e5a;--line:#dcdad1;--line-strong:#b4b2a9;--surface:#ffffff;--surface-2:#efede6;--track:#7F77DD;--warn:#ba7517;}
+    @media (prefers-color-scheme:dark){svg{--text:#f1efe8;--muted:#b4b2a9;--line:#3a3a37;--line-strong:#5f5e5a;--surface:#22221f;--surface-2:#2c2c2a;--track:#a39df0;--warn:#ef9f27;}}
+    text{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;fill:var(--text);}
+    .lbl{font-size:15px;font-weight:600;}
+    .ax{font-size:14px;font-weight:400;fill:var(--muted);}
+    .note{font-size:13px;font-weight:400;fill:var(--muted);}
+    .axis{fill:none;stroke:var(--line-strong);stroke-width:1.6;stroke-linecap:round;}
+    .band{fill:color-mix(in srgb,var(--warn) 16%,var(--surface));}
+    .band-e{fill:none;stroke:color-mix(in srgb,var(--warn) 55%,var(--line-strong));stroke-width:1.2;stroke-dasharray:4 3;}
+    .gk{fill:none;stroke:var(--track);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;}
+    .hex{fill:none;stroke:var(--line-strong);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:7 4;}
+    .tick{fill:none;stroke:var(--line-strong);stroke-width:1.2;}
+  </style>
+  <rect class="band" x="105.6" y="30" width="44.7" height="202"/>
+  <path class="band-e" d="M105.6 30V232M150.3 30V232"/>
+  <text class="ax" x="128" y="20" text-anchor="middle">normal range</text>
+  <path class="axis" d="M46 26V232H344"/>
+  <path class="hex" d="M46 232L48.5 76.6L51 56.3L53.5 48.4L55.9 44.1L58.4 41.4L60.9 39.6L63.4 38.3L65.9 37.3L68.3 36.5L70.8 35.9L73.3 35.4L75.8 34.9L78.3 34.6L80.8 34.2L83.2 34L85.7 33.7L88.2 33.5L90.7 33.3L93.2 33.1L95.7 33L98.2 32.8L100.6 32.7L103.1 32.6L105.6 32.5L108.1 32.4L110.6 32.3L113 32.2L115.5 32.1L118 32.1L120.5 32L123 31.9L125.5 31.9L128 31.8L130.4 31.8L132.9 31.7L135.4 31.7L137.9 31.6L140.4 31.6L142.9 31.5L145.3 31.5L147.8 31.5L150.3 31.4L152.8 31.4L155.3 31.4L157.8 31.3L160.2 31.3L162.7 31.3L165.2 31.3L167.7 31.2L170.2 31.2L172.6 31.2L175.1 31.2L177.6 31.1L180.1 31.1L182.6 31.1L185.1 31.1L187.5 31.1L190 31L192.5 31L195 31L197.5 31L200 31L202.5 31L204.9 30.9L207.4 30.9L209.9 30.9L212.4 30.9L214.9 30.9L217.3 30.9L219.8 30.9L222.3 30.8L224.8 30.8L227.3 30.8L229.8 30.8L232.2 30.8L234.7 30.8L237.2 30.8L239.7 30.8L242.2 30.8L244.7 30.8L247.2 30.7L249.6 30.7L252.1 30.7L254.6 30.7L257.1 30.7L259.6 30.7L262 30.7L264.5 30.7L267 30.7L269.5 30.7L272 30.7L274.5 30.7L277 30.6L279.4 30.6L281.9 30.6L284.4 30.6L286.9 30.6L289.4 30.6L291.9 30.6L294.3 30.6L296.8 30.6L299.3 30.6L301.8 30.6L304.3 30.6L306.8 30.6L309.2 30.6L311.7 30.6L314.2 30.6L316.7 30.6L319.2 30.5L321.7 30.5L324.1 30.5L326.6 30.5L329.1 30.5L331.6 30.5L334.1 30.5L336.6 30.5L339 30.5L341.5 30.5L344 30.5"/>
+  <path class="gk" d="M46 232L48.5 227.9L51 223.9L53.5 220.1L55.9 216.5L58.4 212.9L60.9 209.6L63.4 206.3L65.9 203.1L68.3 200.1L70.8 197.2L73.3 194.3L75.8 191.6L78.3 189L80.8 186.4L83.2 183.9L85.7 181.5L88.2 179.2L90.7 176.9L93.2 174.7L95.7 172.6L98.2 170.5L100.6 168.5L103.1 166.6L105.6 164.7L108.1 162.8L110.6 161L113 159.3L115.5 157.6L118 155.9L120.5 154.3L123 152.7L125.5 151.2L128 149.7L130.4 148.2L132.9 146.8L135.4 145.4L137.9 144.1L140.4 142.7L142.9 141.4L145.3 140.2L147.8 138.9L150.3 137.7L152.8 136.5L155.3 135.4L157.8 134.3L160.2 133.1L162.7 132.1L165.2 131L167.7 130L170.2 128.9L172.6 127.9L175.1 127L177.6 126L180.1 125.1L182.6 124.1L185.1 123.2L187.5 122.3L190 121.5L192.5 120.6L195 119.8L197.5 119L200 118.1L202.5 117.4L204.9 116.6L207.4 115.8L209.9 115.1L212.4 114.3L214.9 113.6L217.3 112.9L219.8 112.2L222.3 111.5L224.8 110.8L227.3 110.1L229.8 109.5L232.2 108.8L234.7 108.2L237.2 107.6L239.7 107L242.2 106.3L244.7 105.8L247.2 105.2L249.6 104.6L252.1 104L254.6 103.5L257.1 102.9L259.6 102.4L262 101.8L264.5 101.3L267 100.8L269.5 100.3L272 99.8L274.5 99.3L277 98.8L279.4 98.3L281.9 97.8L284.4 97.3L286.9 96.9L289.4 96.4L291.9 96L294.3 95.5L296.8 95.1L299.3 94.6L301.8 94.2L304.3 93.8L306.8 93.4L309.2 93L311.7 92.6L314.2 92.2L316.7 91.8L319.2 91.4L321.7 91L324.1 90.6L326.6 90.2L329.1 89.9L331.6 89.5L334.1 89.1L336.6 88.8L339 88.4L341.5 88.1L344 87.7"/>
+  <text class="lbl" x="152" y="54" style="fill:var(--muted)">hexokinase</text>
+  <text class="lbl" x="340" y="75.7" text-anchor="end" style="fill:var(--track)">glucokinase</text>
+  <text class="ax" x="40" y="36" text-anchor="end">max</text>
+  <path class="tick" d="M42 30h4M42 232h4"/>
+  <text class="ax" x="40" y="237" text-anchor="end">0</text>
+  <text class="ax" x="46" y="254">low</text>
+  <text class="ax" x="344" y="254" text-anchor="end">high</text>
+  <text class="ax" x="195" y="254" text-anchor="middle">blood glucose →</text>
+  <text class="lbl" x="46" y="280">rate climbs only for glucokinase</text>
+  <text class="note" x="46" y="298">Illustrative curves; no values implied.</text>
+</svg>

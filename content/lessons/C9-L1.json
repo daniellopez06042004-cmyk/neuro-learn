@@ -93,6 +93,38 @@
       "title": "The cost",
       "body": "Confocal scans point by point, so it's slower and the laser can bleach or photo-damage the sample. For thin, sparse samples, widefield may be faster and plenty. Match the tool to the question.",
       "flag": null
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the parts of this confocal light path.",
+      "image": "assets/confocal-pinhole.svg",
+      "targets": [
+        {
+          "x": 80,
+          "y": 64,
+          "label": "detector"
+        },
+        {
+          "x": 112,
+          "y": 96,
+          "label": "pinhole"
+        },
+        {
+          "x": 80,
+          "y": 274,
+          "label": "out of focus"
+        },
+        {
+          "x": 112,
+          "y": 300,
+          "label": "focal plane"
+        }
+      ],
+      "explanation": "The pinhole blocks out-of-focus light, so only light from the focal plane reaches the detector.",
+      "distractors": [
+        "objective lens"
+      ]
     }
   ],
   "sources": [],

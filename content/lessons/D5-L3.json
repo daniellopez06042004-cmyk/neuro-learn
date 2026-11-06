@@ -93,6 +93,43 @@
       "title": "A diagnostic fingerprint",
       "body": "Referred-pain maps are clinically useful: the *pattern* hints at which organ and spinal level is involved. It also warns researchers that where a signal is 'felt' isn't where it started.",
       "flag": null
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the structures in this referred-pain circuit.",
+      "image": "assets/referred-pain.svg",
+      "targets": [
+        {
+          "x": 84,
+          "y": 44,
+          "label": "brain"
+        },
+        {
+          "x": 192,
+          "y": 288,
+          "label": "heart"
+        },
+        {
+          "x": 214,
+          "y": 112,
+          "label": "T1–T4 dorsal horn"
+        },
+        {
+          "x": 316,
+          "y": 136,
+          "label": "DRG"
+        },
+        {
+          "x": 248,
+          "y": 330,
+          "label": "left arm"
+        }
+      ],
+      "distractors": [
+        "spinothalamic tract"
+      ],
+      "explanation": "Cardiac and left-arm afferents converge in the T1–T4 dorsal horn, so the brain refers heart pain to the chest and arm."
     }
   ],
   "sources": [],

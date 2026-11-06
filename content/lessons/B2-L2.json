@@ -122,6 +122,48 @@
           "reveal": "The 'histocompatibility' in MHC is literal — MHC differences drive rejection, which is how these molecules were discovered."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the cells and the molecules of antigen presentation.",
+      "image": "assets/antigen-presentation.svg",
+      "targets": [
+        {
+          "x": 60,
+          "y": 60,
+          "label": "infected cell"
+        },
+        {
+          "x": 60,
+          "y": 185,
+          "label": "dendritic cell"
+        },
+        {
+          "x": 188,
+          "y": 72,
+          "label": "MHC I"
+        },
+        {
+          "x": 188,
+          "y": 198,
+          "label": "MHC II"
+        },
+        {
+          "x": 285,
+          "y": 78,
+          "label": "cytotoxic T cell"
+        },
+        {
+          "x": 285,
+          "y": 205,
+          "label": "helper T cell"
+        }
+      ],
+      "explanation": "An infected cell shows peptides on MHC I to cytotoxic T cells; a dendritic cell shows them on MHC II to helper T cells.",
+      "distractors": [
+        "B cell"
+      ]
     }
   ],
   "sources": [],

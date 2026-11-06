@@ -162,6 +162,38 @@
           }
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the exocrine and endocrine parts of the pancreas.",
+      "image": "assets/pancreas-acinus-islet.svg",
+      "targets": [
+        {
+          "x": 92,
+          "y": 100,
+          "label": "exocrine acinus"
+        },
+        {
+          "x": 270,
+          "y": 100,
+          "label": "endocrine islet"
+        },
+        {
+          "x": 140,
+          "y": 254,
+          "label": "duct → duodenum"
+        },
+        {
+          "x": 268,
+          "y": 181,
+          "label": "capillary → blood"
+        }
+      ],
+      "explanation": "The exocrine acinus drains enzymes down a duct to the duodenum; the endocrine islet releases hormones into a capillary.",
+      "distractors": [
+        "hepatocyte"
+      ]
     }
   ],
   "sources": [],

@@ -1500,6 +1500,69 @@
       "aliases": [],
       "definition": "The efferent arm of the inflammatory reflex: vagal output leads to acetylcholine that lowers macrophage cytokine release.",
       "track": "B"
+    },
+    {
+      "term": "streptozotocin",
+      "aliases": [
+        "STZ"
+      ],
+      "definition": "A glucose-analogue toxin taken up by β cells via GLUT2, used to destroy them and model type 1 diabetes.",
+      "track": "D"
+    },
+    {
+      "term": "GLUT2",
+      "aliases": [],
+      "definition": "A glucose transporter highly expressed on β cells (and in liver/kidney); the route streptozotocin uses to enter β cells.",
+      "track": "D"
+    },
+    {
+      "term": "GLUT4",
+      "aliases": [],
+      "definition": "The insulin-responsive glucose transporter in muscle and fat; insulin moves it to the cell surface to take up glucose.",
+      "track": "D"
+    },
+    {
+      "term": "glucokinase",
+      "aliases": [],
+      "definition": "The β-cell enzyme that phosphorylates glucose; its high Km makes it the rate-limiting glucose sensor.",
+      "track": "D"
+    },
+    {
+      "term": "ATP-sensitive potassium channel",
+      "aliases": [
+        "K_ATP channel",
+        "KATP channel"
+      ],
+      "definition": "A β-cell K⁺ channel closed by rising ATP; its closure depolarizes the cell to trigger insulin release.",
+      "track": "D"
+    },
+    {
+      "term": "glucose tolerance test",
+      "aliases": [
+        "GTT"
+      ],
+      "definition": "A test that gives a glucose load and tracks how fast it clears; slow, high clearance indicates diabetes.",
+      "track": "D"
+    },
+    {
+      "term": "HbA1c",
+      "aliases": [
+        "glycated hemoglobin"
+      ],
+      "definition": "Hemoglobin glycated by glucose over a red cell's lifespan; a time-averaged (~months) measure of blood glucose.",
+      "track": "D"
+    },
+    {
+      "term": "insulin resistance",
+      "aliases": [],
+      "definition": "A blunted tissue response to insulin (less GLUT4 at the surface); the core defect in type 2 diabetes.",
+      "track": "D"
+    },
+    {
+      "term": "insulitis",
+      "aliases": [],
+      "definition": "Immune-cell infiltration of pancreatic islets; the β-cell–destroying process in autoimmune (and multiple-low-dose STZ) diabetes.",
+      "track": "D"
     }
   ]
 }

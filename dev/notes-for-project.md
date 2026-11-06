@@ -1,3 +1,36 @@
+### 2026-11-06 (night): D7-L5/L6 imported after review (12 edits), and **every label question needed its pins moved**
+
+**1. The label questions: 33 of your 44 pins were in the wrong place.** Thank you for writing all ten — the questions themselves are good, and the fix is mechanical, but please read this before you write any more.
+
+**What went wrong:** the coordinates came from each `<text>` element's own `x`/`y`, i.e. from where the *label sits*, not where the *structure* is. Most of our figures place labels out at the edge with a leader line pointing inward, so a label's own x/y is usually empty background. In `A3-L1` the "capsaicin" pin landed on blank space above the membrane while the capsaicin molecule sits inside it; in `C7-L2` all three pins were on background; in `D8-L2` the "DRG" pin sat beside the ganglion rather than in it.
+
+**How to place a pin correctly:**
+- If the figure has a leader line for that label (`class="lead"` with a `<circle class="tip">` at the end), **use the tip's coordinates** — that is exactly the point the label is pointing at.
+- Otherwise read the coordinates of the drawn structure itself (the `<rect>`/`<path>`/`<ellipse>` for that part), not of its text.
+- Then **look at it**: render the SVG with a marker drawn at each coordinate before you ship it. A pin that is 30 units off is invisible in the JSON and obvious in the picture.
+- Keep pins ≥32 viewBox units apart, and don't pin something that a neighbouring structure could reasonably be called instead.
+
+**All ten are fixed in `app/content/lessons/`** (`A3-L1`, `A4-L1`, `B2-L2`, `C7-L2`, `C9-L1`, `D3-L3`, `D5-L3`, `D6-L3`, `D8-L1`, `D8-L2`) — **please copy those files over yours.** Two other fixes in there: `C7-L2` needed `"hide": ["text", ".lead"]` (the default left a leader line dangling from nowhere), and `D6-L3`'s distractor "duct cell" names the wall of the very duct that pin 3 marks, so it became "hepatocyte".
+
+**One thing for next time:** `D8-L1` has no `distractors` at all, so its bank is exactly the five answers and the last pin is free. One plausible extra name is enough.
+
+**2. D7-L5 and D7-L6 are live, after 12 review edits** (2 science, 1 giveaway, 9 distractors). Record in `app/dev/review-D7-new.md`. The two that matter:
+- **`D7-L5` s5 said GLUT2 is in "some neurons".** As written, an RA would read that as a GLUT2 route into sensory neurons, which isn't established — DRG neurons run mainly GLUT1/GLUT3, and the documented GLUT2 neurons are central glucose-sensing ones. It now reads "some glucose-sensing neurons in the brain, and direct STZ effects on neurons have been reported", keeping those two claims separate. The `debated` flag still does its job.
+- **`D7-L6` s6 said type 2 breaks the action arm,** full stop. Standard definition is resistance *plus* a progressive secretory decline, so it now adds that β-cell output usually falls over time too.
+- Everything else checked out: the GSIS chain is correct in every direction and order, glucokinase vs hexokinase is right, HbA1c and the GTT are right, and your four STZ sources are described accurately.
+
+**3. Two things an STZ project actually gets wrong, which the lesson doesn't yet cover.** Both would be worth adding to `D7-L5`, and both are yours to write:
+- **Why citrate buffer specifically:** STZ is unstable near neutral pH, so it goes in cold, freshly made, acidic citrate. The lesson names the vehicle control but never says why that vehicle.
+- **Multiple-low-dose STZ is strongly strain- and sex-dependent.** A protocol that works in one strain can fail in another, which is exactly the kind of surprise this lesson should pre-empt.
+- Smaller: `D7-L6` could add that glucokinase, unlike hexokinase I, is **not product-inhibited** by glucose-6-phosphate. That's the other half of why it keeps tracking glucose.
+
+**4. Figures built from your spec** (all three starred ones):
+- **`glucokinase-kinetics.svg`** (static) → **`D7-L6` s1**, not s2: s2 asks exactly what the curve shows, so on s2 it would answer its own question. Two Michaelis–Menten curves, hexokinase flat before the normal range and glucokinase still climbing through it; axes are qualitative (low → high) since the lesson states no Km values, and it says "illustrative" on its face.
+- **`stz-selectivity.svg`** (animated) → **`D7-L5` s1**, for the same reason (s2 asks what makes STZ selective). Note it introduces GLUT2 on s1, which the s1 body doesn't currently mention — you may want a clause there.
+- **`gsis-cascade.svg`** (animated) → `D7-L6` s3, the full chain from glucose through K_ATP closing to insulin release.
+- **One science note on the cascade figure:** it draws **GLUT2** on the β cell, as `D7-L6` s1 says. That is right for mouse and rat, but human β cells rely mainly on GLUT1/GLUT3. Since this course is mouse-focused it is fine as written — but if you want the lesson to be species-explicit, that is the one line to add.
+- The new files are in your `content/assets/`. One wording choice: the STZ figure labels the nuclear event "DNA damage" while your s2 explanation says alkylation; "DNA damage" is the safe superset, but say the word if you'd rather it matched.
+
 ### 2026-11-06: A6–A10 and B5–B9 are live after review (131 edits to copy), plus both diagram fixes
 
 **Imported and published:** 40 lessons, the 24 new quiz questions (30 in the pool), 27 glossary terms and the unit definitions. Your prereqs work as written and both new maps lay out cleanly. All four tracks are now complete in the app.

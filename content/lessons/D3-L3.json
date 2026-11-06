@@ -90,6 +90,43 @@
           "explanation": "The signal runs from the peripheral ending, past the off-to-the-side cell body, up the central branch into the dorsal horn."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the parts of this pseudounipolar DRG neuron.",
+      "image": "assets/pseudounipolar-neuron.svg",
+      "targets": [
+        {
+          "x": 162,
+          "y": 196,
+          "label": "cell body"
+        },
+        {
+          "x": 242,
+          "y": 130,
+          "label": "central branch"
+        },
+        {
+          "x": 242,
+          "y": 268,
+          "label": "peripheral branch"
+        },
+        {
+          "x": 258,
+          "y": 203,
+          "label": "DRG"
+        },
+        {
+          "x": 242,
+          "y": 70,
+          "label": "dorsal horn"
+        }
+      ],
+      "explanation": "The cell body sits in the DRG; one branch runs centrally to the dorsal horn, the other peripherally to the target organ.",
+      "distractors": [
+        "ventral root"
+      ]
     }
   ],
   "sources": [],

@@ -1,0 +1,147 @@
+{
+  "id": "D7-L6",
+  "unitId": "D7",
+  "title": "The biochemistry of glucose control",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how β cells sense glucose and release insulin, and how insulin action is read out.",
+  "tags": [
+    "biochemistry",
+    "glucose",
+    "kinetics"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "The β cell is a glucose meter",
+      "body": "Glucose enters the β cell through **[[GLUT2]]**, then **[[glucokinase]]** phosphorylates it. Glucokinase has a **high Km** (low affinity), so unlike ordinary hexokinase it is *not* saturated at normal blood sugar — its rate climbs as glucose rises. That makes it the rate-limiting **glucose sensor**.",
+      "flag": null,
+      "visual": {
+        "type": "svg",
+        "src": "assets/glucokinase-kinetics.svg",
+        "alt": "Two enzyme-rate curves plotted against blood glucose. Hexokinase rises steeply and is already at its maximum before the normal range, so it cannot report further rises. Glucokinase is still climbing right across the normal range and beyond, so its rate tracks how much glucose is there.",
+        "caption": "Hexokinase is maxed out before the normal range; glucokinase is still climbing through it, which is what makes it the sensor."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 3,
+      "prompt": "Why is glucokinase, not ordinary hexokinase, the β cell's glucose sensor?",
+      "options": [
+        "Its high Km keeps it unsaturated at normal glucose, so its rate tracks glucose levels",
+        "It runs flat out at every glucose level alike, giving one steady, constant output rate",
+        "It is the only enzyme anywhere in the β cell that can bind glucose at all",
+        "It binds glucose more tightly than hexokinase, so it detects even tiny rises"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A high Km means glucokinase is below saturation across the physiological range, so flux through it rises with glucose — the kinetic basis of glucose sensing. Hexokinase saturates at low glucose and can't report changes.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Glucokinase has a high Km; ordinary hexokinase has a low Km.",
+          "prompt": "Which one's rate changes most as blood glucose rises from normal to high?",
+          "options": [
+            "Glucokinase, because it isn't saturated there",
+            "Hexokinase, because it is already saturated",
+            "Neither enzyme responds to glucose at all"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Being unsaturated, glucokinase's rate tracks glucose — so it, not hexokinase, reports the level."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s3",
+      "title": "From glucose to insulin",
+      "body": "Metabolizing that glucose raises **ATP**, which **closes the [[ATP-sensitive potassium channel|K_ATP channel]]**. The membrane then depolarizes, voltage-gated **Ca²⁺** channels open, Ca²⁺ enters, and insulin granules are released. (Same depolarize-then-Ca²⁺ logic as a neuron — A2.) This is glucose-stimulated insulin secretion.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/gsis-cascade.svg",
+        "alt": "A pancreatic beta cell: glucose (green hexagons) enters through a GLUT2 transporter and reaches glucokinase, and metabolism fills a rising ATP meter. The high ATP shuts the K_ATP channel so potassium stops leaving; the membrane potential trace then climbs past a dashed threshold line, the voltage-gated Ca2+ channel opens and Ca2+ enters, and an insulin granule fuses with the membrane. The held end state shows K_ATP closed with a cross, the Ca2+ channel open with Ca2+ inside, and insulin released outside the cell.",
+        "caption": "Rising ATP shuts the K_ATP channel, the beta cell depolarizes, Ca2+ comes in, and insulin granules fuse - the same depolarize-then-Ca2+ logic as a neuron."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s4",
+      "difficulty": 2,
+      "prompt": "Insulin reaches a muscle cell. How does it raise glucose uptake there?",
+      "options": [
+        "It triggers GLUT4 transporters to move to the cell surface, letting glucose in",
+        "It pumps glucose directly across the membrane using its own chemical energy",
+        "It opens glucose channels that are already sitting in the membrane",
+        "It raises the cell's resting membrane potential to let the glucose come in"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Insulin signaling moves GLUT4 to the membrane, so muscle and fat take up glucose. In type 2 diabetes this response is blunted — [[insulin resistance]].",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Insulin binds its receptor on a muscle cell.",
+          "prompt": "What's the key downstream event for glucose uptake?",
+          "options": [
+            "GLUT4 transporters move to the cell surface",
+            "The cell starts secreting its own insulin",
+            "GLUT4 transporters are pulled back inside the cell"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Insulin drives GLUT4 to the surface, raising glucose uptake; blunting this is insulin resistance."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "difficulty": 3,
+      "prompt": "A clinician orders **[[HbA1c]]** rather than a single glucose reading. What does HbA1c reflect?",
+      "options": [
+        "Average glucose over weeks, since glucose slowly glycates hemoglobin in red cells",
+        "The exact blood glucose level at the single instant that the blood sample was drawn",
+        "How much insulin the pancreas managed to release within the last hour or so",
+        "The total number of red blood cells that were present in the drawn sample"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Glucose non-enzymatically attaches to hemoglobin (glycation) over a red cell's ~3-month lifespan, so HbA1c is a time-averaged glucose readout — immune to a single good or bad day.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Glucose glycates hemoglobin slowly over a red cell's lifespan.",
+          "prompt": "So HbA1c tells you about glucose over what timescale?",
+          "options": [
+            "Weeks to a few months on average",
+            "Just the past few minutes",
+            "Just the last meal or two"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "Because glycation accumulates over the red cell's life, HbA1c reports average glucose over ~months."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s6",
+      "title": "Where diabetes breaks the loop",
+      "body": "Put it together with the kinetics: a **[[glucose tolerance test]]** gives a glucose load and watches it clear — faster in health, high and slow in diabetes. **Type 1** breaks the *secretion* arm (no β cells, no insulin — the STZ model, D7-L5); **type 2** breaks the *action* arm ([[insulin resistance]], blunted GLUT4) — though beta-cell output usually falls over time too, so type 2 is rarely action alone. Same loop, two failure points.",
+      "flag": null
+    }
+  ],
+  "sources": [],
+  "reviewNotes": "Biochem/kinetics of glucose control: glucokinase sensing (Km), K_ATP/Ca secretion coupling, GLUT4 action, HbA1c glycation, GTT; ties T1/T2 to the two arms. Textbook-level."
+}

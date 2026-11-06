@@ -87,6 +87,43 @@
         ]
       ],
       "explanation": "Plants evolved compounds that act on these channels, which is why spicy, minty and pungent foods produce sensations of heat, cold and irritation."
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label this TRP channel and what gates it.",
+      "image": "assets/trp-gating.svg",
+      "targets": [
+        {
+          "x": 203,
+          "y": 148,
+          "label": "TRP channel"
+        },
+        {
+          "x": 110,
+          "y": 146,
+          "label": "capsaicin"
+        },
+        {
+          "x": 246,
+          "y": 80,
+          "label": "heat"
+        },
+        {
+          "x": 96,
+          "y": 252,
+          "label": "Na⁺"
+        },
+        {
+          "x": 270,
+          "y": 242,
+          "label": "Ca²⁺"
+        }
+      ],
+      "explanation": "Capsaicin and heat both open the TRP channel, letting cations (Na⁺ and Ca²⁺) flow into the neuron.",
+      "distractors": [
+        "K⁺"
+      ]
     }
   ],
   "sources": [],

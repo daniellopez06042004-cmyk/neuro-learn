@@ -1,0 +1,185 @@
+{
+  "id": "D7-L5",
+  "unitId": "D7",
+  "title": "Modeling type 1 diabetes: the STZ model",
+  "minutes": 5,
+  "xp": 10,
+  "objective": "Explain how streptozotocin models type 1 diabetes and what controls an STZ experiment needs.",
+  "tags": [
+    "diabetes",
+    "STZ",
+    "model"
+  ],
+  "confidence": "high",
+  "steps": [
+    {
+      "type": "concept",
+      "id": "s1",
+      "title": "Removing the β cells on purpose",
+      "body": "To study type 1 diabetes you need animals that have *lost* their **[[beta cell|β cells]]**. **[[streptozotocin|Streptozotocin]] (STZ)** does this chemically: it enters β cells and kills them, leaving the animal insulin-deficient and with high **[[blood glucose]]**. It's the standard way to model insulin-dependent diabetes in rodents.",
+      "flag": null,
+      "visual": {
+        "type": "svg-anim",
+        "src": "assets/stz-selectivity.svg",
+        "alt": "Amber streptozotocin (STZ) molecules wait outside two neighbouring cells: a β cell whose membrane is studded with GLUT2 transporters, and a GLUT2-low neighbour with one. STZ is carried in through GLUT2, so the β cell takes up several molecules while the neighbour takes up only one, and the β cell's nuclear DNA breaks, marked with a coral cross and labelled 'DNA damage'. End state: the β cell is dead — greyed, dashed-outlined, blebbing and marked ✕ — and its insulin granules have stopped leaving for the capillary ('insulin ↓'), while the GLUT2-low neighbour survives (✓).",
+        "caption": "STZ rides in on GLUT2, so the cells carrying the most GLUT2 — β cells — take up the most and die."
+      }
+    },
+    {
+      "type": "mcq",
+      "id": "s2",
+      "difficulty": 2,
+      "prompt": "STZ kills β cells far more than most other cells. What makes it selective?",
+      "options": [
+        "β cells take it up through their GLUT2 transporter, which they express heavily",
+        "β cells are simply far more fragile than any other cell type in the whole body",
+        "STZ is an antibody raised specifically against the β-cell surface proteins",
+        "It's injected straight into the pancreas, so only islet cells ever meet it"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "STZ is a glucose analogue that enters mainly through GLUT2; β cells express a lot of GLUT2, so they take up a toxic dose and are killed (DNA alkylation), while GLUT2-low cells are relatively spared.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "STZ enters cells through the GLUT2 glucose transporter.",
+          "prompt": "Which cells will it hit hardest?",
+          "options": [
+            "Cells that express a lot of GLUT2",
+            "Cells with low GLUT2, which can't pump the STZ back out",
+            "Only cells that are actively dividing at the time"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "GLUT2-high cells (β cells) take up the most STZ, which is the basis of its selectivity."
+        }
+      ]
+    },
+    {
+      "type": "match",
+      "id": "s3",
+      "difficulty": 2,
+      "prompt": "Match each STZ dosing protocol to how it destroys β cells.",
+      "pairs": [
+        [
+          "Single high dose",
+          "Direct chemical toxicity that kills β cells quickly"
+        ],
+        [
+          "Multiple low doses",
+          "Immune-mediated insulitis that builds over days"
+        ]
+      ],
+      "explanation": "A single high dose kills β cells directly; repeated low doses (Like & Rossini) provoke [[insulitis]] — immune infiltration of the islet — which more closely resembles autoimmune type 1 diabetes."
+    },
+    {
+      "type": "predict",
+      "id": "s4",
+      "difficulty": 3,
+      "setup": "You give one group of mice STZ and a control group the citrate buffer that STZ is dissolved in.",
+      "prompt": "What do you predict for the two groups?",
+      "options": [
+        "STZ mice: high glucose and low insulin; buffer mice: roughly normal",
+        "Both groups end up about equally diabetic, just from the injection itself",
+        "The STZ mice stay normal while the buffer mice become the diabetic ones",
+        "STZ mice: high glucose and high insulin, since the pancreas compensates"
+      ],
+      "answer": [
+        0
+      ],
+      "reveal": "STZ destroys β cells → little insulin → glucose climbs. The vehicle (citrate buffer) controls for the injection itself, so those mice stay near normal — that contrast is how you know the phenotype is STZ, not handling.",
+      "freeText": false,
+      "variants": [
+        {
+          "type": "mcq",
+          "prompt": "Why inject a control group with just the citrate buffer?",
+          "options": [
+            "To control for the injection itself, isolating STZ's effect",
+            "To confirm the STZ dose was high enough to work",
+            "To give those control mice a milder form of diabetes"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The vehicle control shows the phenotype is due to STZ, not the handling or the solvent."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "id": "s5",
+      "difficulty": 3,
+      "prompt": "Why be cautious using STZ when your study is about sensory neurons?",
+      "options": [
+        "GLUT2 isn't limited to β cells, so STZ can act off-target, including on neurons",
+        "STZ is physically unable to enter any tissue other than the pancreas at all",
+        "Any neuron change must come from the high glucose, never from STZ itself",
+        "STZ has no effect on blood glucose, so the whole model is meaningless anyway"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "GLUT2 is also in the kidney, liver and some glucose-sensing neurons in the brain, and direct STZ effects on neurons have been reported, so an STZ phenotype in a neuro study could partly reflect STZ's own off-target actions — not the diabetes alone.",
+      "flag": {
+        "level": "debated",
+        "note": "How much STZ's off-target (including neuronal) effects matter is debated; designs control for it differently."
+      },
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your mice are made diabetic with STZ, and you then study their sensory neurons.",
+          "prompt": "What's the main confound to rule out?",
+          "options": [
+            "STZ's own direct effects on non-β-cell tissues, including neurons",
+            "That the mice were simply stressed by being handled during the injection",
+            "That high glucose itself, not the drug, changed the neurons"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "STZ isn't perfectly β-cell-specific, so its direct effects are the confound to control for."
+        }
+      ]
+    },
+    {
+      "type": "concept",
+      "id": "s6",
+      "title": "Designing it well",
+      "body": "For a clean STZ study: always run the **vehicle control**, confirm diabetes by **[[blood glucose]]** (and ideally low insulin), and — because STZ isn't perfectly specific — consider a second, non-chemical way to make animals diabetic to cross-check. That rigor is exactly what makes an STZ result in a neuro-metabolic project convincing.",
+      "flag": null
+    }
+  ],
+  "sources": [
+    {
+      "citation": "Like AA & Rossini AA, 1976, Science",
+      "doi": "10.1126/science.180605",
+      "url": "https://doi.org/10.1126/science.180605",
+      "verified": true,
+      "note": "Multiple-low-dose streptozotocin induces immune-mediated insulitis: a diabetes model."
+    },
+    {
+      "citation": "Szkudelski T, 2001, Physiol Res",
+      "doi": "10.33549/physiolres.930111",
+      "url": "https://doi.org/10.33549/physiolres.930111",
+      "verified": true,
+      "note": "Mechanism of alloxan and streptozotocin action in pancreatic B cells."
+    },
+    {
+      "citation": "Deeds MC et al., 2011, Lab Anim",
+      "doi": "10.1258/la.2010.010090",
+      "url": "https://doi.org/10.1258/la.2010.010090",
+      "verified": true,
+      "note": "Single-dose STZ diabetes: dose and study-design considerations, including controls."
+    },
+    {
+      "citation": "Furman BL, 2021, Curr Protoc",
+      "doi": "10.1002/cpz1.78",
+      "url": "https://doi.org/10.1002/cpz1.78",
+      "verified": true,
+      "note": "Protocols for STZ-induced diabetic models in mice and rats."
+    }
+  ],
+  "reviewNotes": "STZ T1D model: GLUT2 selectivity, high-dose vs MLD, vehicle control, off-target caveat. Ties to the pancreas project."
+}

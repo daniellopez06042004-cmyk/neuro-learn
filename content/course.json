@@ -548,7 +548,7 @@
         {
           "id": "D7",
           "title": "Endocrine & Metabolic Basics",
-          "summary": "Islet hormones, glucose regulation, diabetes, and the metabolic angle.",
+          "summary": "Islet hormones, glucose regulation, the biochemistry of glucose control, diabetes and the STZ model.",
           "prereqs": [
             "D6"
           ],
@@ -556,7 +556,9 @@
             "D7-L1",
             "D7-L2",
             "D7-L3",
-            "D7-L4"
+            "D7-L4",
+            "D7-L5",
+            "D7-L6"
           ]
         },
         {

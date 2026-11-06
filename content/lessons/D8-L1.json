@@ -99,6 +99,40 @@
           "reveal": "Opposing hormones restoring a set point is negative feedback."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the parts of this negative-feedback loop.",
+      "image": "assets/negative-feedback.svg",
+      "targets": [
+        {
+          "x": 86,
+          "y": 55,
+          "label": "sensor"
+        },
+        {
+          "x": 274,
+          "y": 55,
+          "label": "controller"
+        },
+        {
+          "x": 274,
+          "y": 110,
+          "label": "set point"
+        },
+        {
+          "x": 274,
+          "y": 225,
+          "label": "effector"
+        },
+        {
+          "x": 86,
+          "y": 225,
+          "label": "room temp"
+        }
+      ],
+      "explanation": "A sensor reads the variable (room temp), a controller compares it to the set point, and an effector corrects any deviation."
     }
   ],
   "sources": [],

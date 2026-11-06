@@ -97,6 +97,38 @@
           "explanation": "Current from stretch alone, with no other cells or messengers, points to intrinsic mechanosensitivity. The strongest proof is the purified channel opening in an artificial lipid membrane, later shown for Piezo1."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label this mechanically-gated channel and its stimulus.",
+      "image": "assets/piezo-gating.svg",
+      "targets": [
+        {
+          "x": 228,
+          "y": 158,
+          "label": "Piezo channel"
+        },
+        {
+          "x": 104,
+          "y": 112,
+          "label": "force"
+        },
+        {
+          "x": 298,
+          "y": 124,
+          "label": "membrane tension"
+        },
+        {
+          "x": 176,
+          "y": 252,
+          "label": "cations in"
+        }
+      ],
+      "explanation": "Force stretches the membrane; the resulting membrane tension opens the Piezo channel, letting cations in.",
+      "distractors": [
+        "TRP channel"
+      ]
     }
   ],
   "sources": [],

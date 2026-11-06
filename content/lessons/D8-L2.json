@@ -75,6 +75,38 @@
       "title": "Why the arc matters",
       "body": "Much of physiology is built from reflex arcs, stacked and modulated — somatic (knee-jerk), autonomic (pupil, bladder), and interoceptive. Identify the receptor, the limbs, and the effector, and you can read almost any circuit.",
       "flag": null
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the structures of this spinal reflex arc.",
+      "image": "assets/reflex-arc.svg",
+      "targets": [
+        {
+          "x": 148,
+          "y": 62,
+          "label": "DRG"
+        },
+        {
+          "x": 110,
+          "y": 260,
+          "label": "muscle spindle"
+        },
+        {
+          "x": 238,
+          "y": 111,
+          "label": "motor neuron"
+        },
+        {
+          "x": 200,
+          "y": 255,
+          "label": "quadriceps"
+        }
+      ],
+      "explanation": "A muscle spindle's afferent (cell body in the DRG) synapses on a motor neuron that contracts the quadriceps.",
+      "distractors": [
+        "interneuron"
+      ]
     }
   ],
   "sources": [],
