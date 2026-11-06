@@ -97,6 +97,47 @@
           "explanation": "Mixed nerves carry sensory and motor axons, so both can be lost."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the wrappings of this nerve.",
+      "image": "assets/nerve-cross-section.svg",
+      "hide": [
+        "text",
+        ".lead",
+        ".tip",
+        "g[transform=\"translate(108 324)\"]"
+      ],
+      "targets": [
+        {
+          "x": 189,
+          "y": 90,
+          "label": "epineurium"
+        },
+        {
+          "x": 281.5,
+          "y": 82.5,
+          "label": "perineurium"
+        },
+        {
+          "x": 118,
+          "y": 116,
+          "label": "fascicle"
+        },
+        {
+          "x": 228,
+          "y": 248,
+          "label": "endoneurium"
+        }
+      ],
+      "explanation": "Endoneurium wraps each axon, perineurium binds axons into a fascicle, and epineurium wraps the whole nerve.",
+      "crop": [
+        0,
+        20,
+        360,
+        270
+      ]
     }
   ],
   "sources": [],

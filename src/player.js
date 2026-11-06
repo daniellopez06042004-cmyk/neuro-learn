@@ -88,6 +88,9 @@ export function runSession(root, { items, mode, theme = 'ap', onExit, onDone }) 
     stage.style.removeProperty('--dx');
     // Options arrive one after another (styles.css staggers them by --i).
     stage.querySelectorAll('.choice, .tile').forEach((el, i) => el.style.setProperty('--i', Math.min(i, 8)));
+    // After the entrance, tiles re-drawn by a tap (order, label) shouldn't fade in again.
+    const entering = stage;
+    setTimeout(() => entering.classList.remove('fire-in'), 650);
 
     if (!ctl.interactive) {
       pendingRead = true;

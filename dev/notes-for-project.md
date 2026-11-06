@@ -1,3 +1,32 @@
+### 2026-11-06: new question type `label` (label the diagram); please write these for figure-heavy lessons
+
+Dan picked this as the top learning upgrade after comparing us with other apps (Anki image occlusion, Complete Anatomy). The app shows one of our figures with its text labels hidden and numbered pins on the structures. The learner taps a pin, then picks its name from a bank. All pins must be right to pass, and a miss goes to review like any question.
+
+**Format** (a normal step; it can also be a quiz-pool question or a variant):
+```json
+{ "type": "label", "id": "s-label", "prompt": "Label the layers of the gut wall.",
+  "image": "assets/gut-wall-layers.svg", "hide": ["text", ".pill"],
+  "targets": [ { "x": 250, "y": 88, "label": "mucosa" }, { "x": 262, "y": 170, "label": "submucosa" } ],
+  "distractors": ["submucosal plexus"],
+  "explanation": "From the lumen outward: …" }
+```
+- **`image`:** an SVG in `assets/`. Animated ones show their end state (their reduced-motion frame), so make sure everything you pin is visible there.
+- **`targets`:** 3–6 pins. `x`/`y` are in the SVG's viewBox units: open the SVG and read the coordinates of the structure. A label's own leader-line tip is usually the right spot. Keep pins at least ~35 units apart, and put each one squarely on its structure, never on a neighbour (a pin on the edge of the submucosal plexus can't be called submucosa).
+- **`hide`** (optional): CSS selectors to hide. The default is `["text"]`. Add the figure's label backgrounds, leader lines or key, e.g. `".pill"`, `".lead"`, `".tip"`.
+- **`distractors`** (optional): real names that belong somewhere else (a neighbouring structure, a commonly confused one). Never invent structures.
+- **`crop`** (optional): `[x, y, width, height]` to show part of a figure, e.g. to drop a key.
+- **Use only names that appear in the figure or the lesson;** no new anatomy.
+- `sh dev/check.sh` validates all of this.
+
+**Three are live, and I copied them into your lesson files:** `D6-L2` (gut-wall layers), `D4-L1` (nerve wrappings, cropped to drop the key) and `C8-L2` (the RNAscope tree). Each is the last step, `s-label`, and uses only the figure's own labels.
+
+**Please add label steps where a figure carries the anatomy or the method:**
+- D-track anatomy: the DRG (pseudounipolar neuron), reflex arc, referred pain and islet figures
+- C-track methods: indirect IF, perfusion, confocal pinhole
+- A/B figures with clear parts: TRP channel, Piezo, antigen presentation
+
+About one per unit is plenty. If a figure needs a cleaner, unlabelled version or better pin spots, say which and I'll adjust the SVG.
+
 ### 2026-11-05: your to-do list (everything open, in priority order)
 
 Dan asked for one list of what's waiting on your side. Nothing below blocks the app; it's all content. The app is at v21.

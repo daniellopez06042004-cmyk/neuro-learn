@@ -3,7 +3,7 @@
 
 import { CIRCUIT_KEYS } from './circuits-data.js';
 
-const STEP_TYPES = ['concept', 'mcq', 'match', 'troubleshoot', 'predict', 'order'];
+const STEP_TYPES = ['concept', 'mcq', 'match', 'troubleshoot', 'predict', 'order', 'label'];
 const FLAG_LEVELS = ['uncertain', 'debated', 'simplified'];
 export const VISUAL_TYPES = ['svg-anim', 'svg', 'gif', 'image', 'lottie', 'mp4', 'interactive'];
 
@@ -170,6 +170,20 @@ export function validateLesson(lesson, expectedId, expectedUnit) {
           const lefts = s.pairs.map((p) => p[0]);
           if (new Set(lefts).size !== lefts.length) at(w, 'every left-hand item must be different');
         }
+        break;
+      case 'label':
+        need('prompt', isStr(s.prompt));
+        need('explanation', isStr(s.explanation));
+        if (!isStr(s.image) || !/\.svg$/i.test(s.image)) at(w, '"image" must be the path of an SVG figure, like "assets/gut-wall-layers.svg"');
+        if (!isArr(s.targets) || s.targets.length < 2) at(w, '"targets" must list at least 2 pins: { "x": …, "y": …, "label": "…" } in the SVG\'s viewBox units');
+        else {
+          s.targets.forEach((t, j) => { if (!Number.isFinite(t?.x) || !Number.isFinite(t?.y) || !isStr(t?.label)) at(w, `targets[${j}] needs numbers "x" and "y" and a "label"`); });
+          const names = s.targets.map((t) => t?.label);
+          if (new Set(names).size !== names.length) at(w, 'every target "label" must be different');
+          if (s.distractors != null && (!isArr(s.distractors) || !s.distractors.every(isStr) || s.distractors.some((d) => names.includes(d)))) at(w, '"distractors" must be a list of names that aren\'t target labels');
+        }
+        if (s.hide != null && (!isArr(s.hide) || !s.hide.every(isStr))) at(w, '"hide" must be a list of CSS selectors, like ["text", ".pill"]');
+        if (s.crop != null && !(isArr(s.crop) && s.crop.length === 4 && s.crop.every(Number.isFinite) && s.crop[2] > 0 && s.crop[3] > 0)) at(w, '"crop" must be [x, y, width, height] in the SVG\'s viewBox units');
         break;
       case 'order':
         need('prompt', isStr(s.prompt));

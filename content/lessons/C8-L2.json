@@ -78,6 +78,39 @@
         "level": "simplified",
         "note": "Dot counts approximate transcript number; dense or overlapping signals need careful imaging and thresholds."
       }
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the parts of the RNAscope signal tree.",
+      "image": "assets/rnascope-zz.svg",
+      "hide": [
+        "text",
+        ".lead"
+      ],
+      "targets": [
+        {
+          "x": 234,
+          "y": 36,
+          "label": "label probe"
+        },
+        {
+          "x": 217.8,
+          "y": 91.4,
+          "label": "amplifier"
+        },
+        {
+          "x": 223,
+          "y": 211,
+          "label": "preamplifier"
+        },
+        {
+          "x": 128,
+          "y": 236,
+          "label": "ZZ probe pair"
+        }
+      ],
+      "explanation": "A ZZ probe pair lands on the mRNA, the preamplifier binds across its two tails, amplifiers branch off the preamplifier, and label probes carry the dye."
     }
   ],
   "sources": [

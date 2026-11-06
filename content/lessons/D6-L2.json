@@ -112,6 +112,47 @@
           "explanation": "The myenteric plexus sits between the circular and longitudinal muscle; spinal afferents often travel and branch near it."
         }
       ]
+    },
+    {
+      "type": "label",
+      "id": "s-label",
+      "prompt": "Label the layers of the gut wall.",
+      "image": "assets/gut-wall-layers.svg",
+      "hide": [
+        "text",
+        ".pill"
+      ],
+      "targets": [
+        {
+          "x": 250,
+          "y": 88,
+          "label": "mucosa"
+        },
+        {
+          "x": 262,
+          "y": 170,
+          "label": "submucosa"
+        },
+        {
+          "x": 250,
+          "y": 199,
+          "label": "circular muscle"
+        },
+        {
+          "x": 130,
+          "y": 225,
+          "label": "myenteric plexus"
+        },
+        {
+          "x": 300,
+          "y": 247,
+          "label": "longitudinal muscle"
+        }
+      ],
+      "distractors": [
+        "submucosal plexus"
+      ],
+      "explanation": "From the lumen outward: mucosa, submucosa, circular muscle, the myenteric plexus between the two muscle layers, then longitudinal muscle. The submucosal plexus sits in the submucosa, not between the muscles."
     }
   ],
   "sources": [],

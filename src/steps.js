@@ -23,7 +23,7 @@ export function pickVariant(step, avoid = null) {
 }
 
 export function createStep(step, ctx) {
-  const build = { intro, concept, mcq, troubleshoot, predict, match, order }[step.type];
+  const build = { intro, concept, mcq, troubleshoot, predict, match, order, label }[step.type];
   const ctl = build(step, ctx);
   if (step.visual) ctl.el = [visual(step.visual), ...ctl.el]; // shown above the step
   return ctl;
@@ -259,6 +259,102 @@ function match(s, ctx) {
       : { ok: mistakes === 0, answerText: s.pairs.map(([a, b]) => `${a} → ${b}`).join('\n'), note: mistakes ? `${mistakes} wrong ${mistakes === 1 ? 'try' : 'tries'} along the way.` : null },
     lock: () => {},
   };
+}
+
+// Label the diagram: numbered pins on a figure whose own text labels are
+// hidden. Pick a pin (or its row), then the name that belongs there.
+//   "image": "assets/gut-wall-layers.svg", "targets": [{ "x": 250, "y": 90, "label": "mucosa" }, ...]
+// x/y are in the SVG's viewBox units. "hide" lists CSS selectors to hide
+// (default: all text); "distractors" adds names that belong nowhere; "crop"
+// ([x, y, width, height] in viewBox units) shows only part of the figure.
+// Animated figures are shown at their end state (their reduced-motion frame).
+function label(s, ctx) {
+  const t = s.targets;
+  let bank = shuffle([...t.map((x) => x.label), ...(s.distractors || [])]);
+  const filled = t.map(() => null);
+  let active = 0, locked = false;
+
+  const fig = h('div', { class: 'label-fig' });
+  const pins = t.map((_, i) => h('button', { class: 'pin', 'aria-label': `Pin ${i + 1}`, onclick: () => pick(i) }, String(i + 1)));
+  const rows = t.map((_, i) => h('button', { class: 'tile lrow', onclick: () => pick(i) }, h('span', { class: 'n' }, i + 1), h('span', { class: 'ltext' })));
+  const bankEl = h('div', { class: 'bank', 'aria-label': 'Names' });
+  loadFigure(s).then(({ url, w, hgt }) => {
+    fig.style.aspectRatio = `${w} / ${hgt}`;
+    fig.prepend(h('img', { src: url, alt: `${plain(s.prompt)} (labels hidden)` }));
+    const [x0, y0] = s.crop || [0, 0];
+    t.forEach((x, i) => { pins[i].style.left = `${((x.x - x0) / w) * 100}%`; pins[i].style.top = `${((x.y - y0) / hgt) * 100}%`; });
+  }).catch(() => fig.replaceChildren(h('p', { class: 'visual-fallback' }, 'Couldn’t load this figure. Open it once while online.')));
+  fig.append(...pins);
+
+  // Choosing a filled pin sends its name back to the bank.
+  const pick = (i) => {
+    if (locked) return;
+    if (filled[i] != null) { bank.push(filled[i]); filled[i] = null; }
+    active = i;
+    draw();
+  };
+  const place = (name) => {
+    if (locked) return;
+    if (filled[active] != null) bank.push(filled[active]);
+    filled[active] = name;
+    bank.splice(bank.indexOf(name), 1);
+    const next = filled.findIndex((f, i) => f == null && i > active);
+    active = next >= 0 ? next : filled.findIndex((f) => f == null);
+    draw();
+  };
+  const draw = () => {
+    t.forEach((_, i) => {
+      const on = i === active && !locked;
+      pins[i].classList.toggle('on', on); pins[i].classList.toggle('set', filled[i] != null);
+      rows[i].setAttribute('aria-pressed', String(on));
+      rows[i].setAttribute('aria-label', `Pin ${i + 1}: ${filled[i] ? plain(filled[i]) : 'empty'}`);
+      rows[i].querySelector('.ltext').replaceChildren(filled[i] ? inline(filled[i]) : h('span', { class: 'muted' }, on ? 'Pick a name below' : 'Tap to choose'));
+    });
+    bankEl.replaceChildren(...bank.map((name) => h('button', { class: 'tile', onclick: () => place(name) }, inline(name))));
+  };
+  draw();
+
+  return {
+    interactive: true,
+    el: [flagBadge(s.flag), kind('Label the diagram', s.prompt, /label/i), prompt(s.prompt), fig, h('div', { class: 'slots' }, rows), bankEl],
+    check: () => filled.some((f) => f == null)
+      ? { notReady: 'Name every pin first' }
+      : { ok: filled.every((f, i) => f === t[i].label), answerText: t.map((x, i) => `${i + 1}. ${x.label}`).join('\n') },
+    lock: () => {
+      locked = true;
+      draw();
+      bankEl.replaceChildren();
+      t.forEach((x, i) => {
+        const right = filled[i] === x.label;
+        rows[i].classList.add(right ? 'right' : 'wrong');
+        pins[i].classList.add(right ? 'right' : 'wrong');
+        if (!right) rows[i].querySelector('.ltext').append(h('span', { class: 'lfix' }, ' → ', inline(x.label)));
+        rows[i].append(icon(right ? 'check' : 'x', right ? 'right' : 'wrong'));
+      });
+    },
+  };
+}
+
+// The figure as an image with its labels hidden and any animation shown at
+// its end state, plus its viewBox size (to place the pins).
+const figureCache = new Map();
+function loadFigure(s) {
+  const key = `${s.image}|${(s.hide || []).join(',')}|${(s.crop || []).join(',')}`;
+  if (!figureCache.has(key)) {
+    figureCache.set(key, fetch(imageUrl(s.image)).then((r) => (r.ok ? r.text() : Promise.reject(new Error(r.status)))).then((svgText) => {
+      const vb = /viewBox="\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)/.exec(svgText);
+      const hide = (s.hide || ['text']).join(', ');
+      let text = svgText;
+      // "crop": [x, y, width, height] shows only that part of the figure.
+      if (s.crop) text = text.replace(/viewBox="[^"]*"/, `viewBox="${s.crop.join(' ')}"`).replace(/(<svg[^>]*?)\sheight="[^"]*"/, '$1');
+      text = text
+        .replace(/@media\s*\(\s*prefers-reduced-motion\s*:\s*reduce\s*\)/g, '@media all')
+        .replace(/<\/svg>\s*$/, `<style>${hide} { display: none !important; }</style></svg>`);
+      const [w, hgt] = s.crop ? s.crop.slice(2) : [vb ? +vb[1] : 360, vb ? +vb[2] : 300];
+      return { url: URL.createObjectURL(new Blob([text], { type: 'image/svg+xml' })), w, hgt };
+    }));
+  }
+  return figureCache.get(key);
 }
 
 function order(s) {
