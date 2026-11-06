@@ -1,3 +1,43 @@
+### 2026-11-05: your to-do list (everything open, in priority order)
+
+Dan asked for one list of what's waiting on your side. Nothing below blocks the app; it's all content. The app is at v21.
+
+**1. Write the remaining units (the main work).**
+- **Track A, A6–A10** and **Track B, B5–B9**: lessons plus `course-*-snippet.json`, the same way as C and D. Their slides already exist in `slides.json`.
+- **Then the capstone, E.**
+- **Same bar as the last review:**
+  - every distractor is a real misconception
+  - no setup that states the answer, and no lone cue word in the correct option
+  - 0 length tells and 0 "Because" tells
+  - `[[links]]` resolve, and DOIs are checked on Crossref
+- **Add a `VISUAL-IDEAS-*.md` for each batch**, like last time. I'll build the starred ones.
+
+**2. Grow the weekly-quiz pool (`content/quiz-pool.json`).**
+- **Add 20–30 questions** for the units Dan reaches first: A1–A5, C1–C5, D1–D6. Most should span two tracks, with 2–3 `needs` each. Dan's first quiz opens only when 3 are ready, and right now only 6 exist in total.
+- **Confirm the `needs` I gave your 6 seed questions:**
+  - `pancreas-silencing`: should it need D6?
+  - `afferent-limbs`: add the Track B unit with the inflammatory reflex once it exists.
+- The format and rules are in the 2026-11-02 (late) weekly-quiz note below.
+
+**3. Small lesson fixes from the visuals build.**
+- **`C6-L2`:** add the outflow cut (usually the right atrium) to the s2 order step. I'll add it to the perfusion drawing once you do.
+- **`C8-L2` s3 variant:** "One ZZ probe" can read as a whole pair. Match s1's "a single probe".
+- **`D5-L3`:** decide whether the referred-pain drawing should also light the chest. The s2 variant says "besides the chest"; right now only the arm is lit.
+- **Optional, `D5-L2` s1:** the "barely registers" wording is flatter than the reviewed s2 variant.
+
+**4. Optional slide-paper upgrades** (the current links all work):
+- **Closer papers for:**
+  - `C10`: an RNAscope reference-gene sample. Usoskin is single-cell RNA-seq.
+  - `A2` and `D4`: a toluidine-blue nerve cross-section. Abraira & Ginty is a review.
+  - `A6`: a Nissl brain section. Choi 2020 is spinal.
+- **A `figure` field** on any high-value slide where you've checked the panel.
+- **`C8-L4`:** if you can confirm the exact marker set from the primary paper, tighten the wording.
+
+**5. Good to know.**
+- **Bold and italic now render in question text** (prompts, setups, options), not just concept cards. Fifteen existing questions were showing literal asterisks; they're fixed now, so you can keep using `*word*` and `**word**` there.
+- **Saving:** two of your saves didn't land earlier, and editing files in place fixed it. After a big save, re-open the file to check it stuck.
+- **Your lesson copies match the app exactly** after my sync on 2026-11-02, so you can edit them directly.
+
 ### 2026-11-02 (late): the weekly quiz is live, built as a question pool (please write into `content/quiz-pool.json`)
 
 Dan liked the idea and chose a **pool** instead of fixed quizzes. QZ-1 would only have unlocked after about 60 lessons across three tracks. With a pool, the first quiz arrives after a few units.
