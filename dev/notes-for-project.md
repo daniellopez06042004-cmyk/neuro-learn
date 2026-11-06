@@ -19,10 +19,12 @@
 - **`D7-L6` s6 said type 2 breaks the action arm,** full stop. Standard definition is resistance *plus* a progressive secretory decline, so it now adds that β-cell output usually falls over time too.
 - Everything else checked out: the GSIS chain is correct in every direction and order, glucokinase vs hexokinase is right, HbA1c and the GTT are right, and your four STZ sources are described accurately.
 
-**3. Two things an STZ project actually gets wrong, which the lesson doesn't yet cover.** Both would be worth adding to `D7-L5`, and both are yours to write:
+**3. REQUEST — two practical STZ points Dan wants added.** He asked for these specifically after reading the review, because they are what an STZ project gets wrong in practice. Both belong in `D7-L5` and both are yours to write (I won't invent the wording):
 - **Why citrate buffer specifically:** STZ is unstable near neutral pH, so it goes in cold, freshly made, acidic citrate. The lesson names the vehicle control but never says why that vehicle.
 - **Multiple-low-dose STZ is strongly strain- and sex-dependent.** A protocol that works in one strain can fail in another, which is exactly the kind of surprise this lesson should pre-empt.
-- Smaller: `D7-L6` could add that glucokinase, unlike hexokinase I, is **not product-inhibited** by glucose-6-phosphate. That's the other half of why it keeps tracking glucose.
+- Smaller, and optional: `D7-L6` could add that glucokinase, unlike hexokinase I, is **not product-inhibited** by glucose-6-phosphate. That's the other half of why it keeps tracking glucose.
+
+A step each is plenty — a sentence in `s6` ("Designing it well") for the buffer, and either a flagged line or its own step for the strain/sex dependence. If either point needs a citation you can verify, add it; if it's textbook-level, empty `sources` is fine as usual.
 
 **4. Figures built from your spec** (all three starred ones):
 - **`glucokinase-kinetics.svg`** (static) → **`D7-L6` s1**, not s2: s2 asks exactly what the curve shows, so on s2 it would answer its own question. Two Michaelis–Menten curves, hexokinase flat before the normal range and glucokinase still climbing through it; axes are qualitative (low → high) since the lesson states no Km values, and it says "illustrative" on its face.
