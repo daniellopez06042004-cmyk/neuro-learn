@@ -56,7 +56,7 @@
       "setup": "A therapy wipes out all microglial activity to stop neuroinflammation.",
       "prompt": "What's a likely downside?",
       "options": [
-        "Losing the protective surveillance and debris-clearing microglia provide",
+        "Losing the surveillance and debris-clearing microglia provide",
         "Nothing would change, since microglia only ever do harm anyway",
         "Astrocytes would simply take over every microglial function",
         "The debris would be cleared by neighbouring neurons instead"

@@ -27,7 +27,7 @@
       "difficulty": 2,
       "prompt": "Why have multiple subtypes with different force thresholds instead of one?",
       "options": [
-        "To encode a range of intensities, from gentle filling to harmful over-distension",
+        "To encode intensity, from gentle filling to harmful over-distension",
         "To provide spares, so one subtype can stand in for another",
         "Because each threshold matches a different modality, like heat vs stretch",
         "So low-threshold units carry pain and high-threshold units carry fullness"

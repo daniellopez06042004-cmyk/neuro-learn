@@ -16,7 +16,7 @@
       "type": "concept",
       "id": "s1",
       "title": "Removing the β cells on purpose",
-      "body": "To study type 1 diabetes you need animals that have *lost* their **[[beta cell|β cells]]**. **[[streptozotocin|Streptozotocin]] (STZ)** does this chemically: it enters β cells and kills them, leaving the animal insulin-deficient and with high **[[blood glucose]]**. It's the standard way to model insulin-dependent diabetes in rodents.",
+      "body": "To study type 1 diabetes you need animals that have *lost* their **[[beta cell|β cells]]**. **[[streptozotocin|Streptozotocin]] (STZ)** does this chemically: it's a glucose analogue, so it rides into β cells on their **[[GLUT2]]** transporter and kills them, leaving the animal insulin-deficient and with high **[[blood glucose]]**. It's the standard way to model insulin-dependent diabetes in rodents.",
       "flag": null,
       "visual": {
         "type": "svg-anim",
@@ -147,8 +147,40 @@
       "type": "concept",
       "id": "s6",
       "title": "Designing it well",
-      "body": "For a clean STZ study: always run the **vehicle control**, confirm diabetes by **[[blood glucose]]** (and ideally low insulin), and — because STZ isn't perfectly specific — consider a second, non-chemical way to make animals diabetic to cross-check. That rigor is exactly what makes an STZ result in a neuro-metabolic project convincing.",
+      "body": "For a clean STZ study: always run the **vehicle control**, confirm diabetes by **[[blood glucose]]** (and ideally low insulin), and — because STZ isn't perfectly specific — consider a second, non-chemical way to make animals diabetic to cross-check.\n\n**Why citrate, specifically:** STZ breaks down quickly near neutral pH, so it's made up *fresh*, kept *cold*, dissolved in *acidic citrate buffer*, and injected within minutes. The vehicle control is citrate buffer because that's what STZ has to be delivered in. Stale or neutral-pH STZ is a common reason a model simply fails to take.",
       "flag": null
+    },
+    {
+      "type": "mcq",
+      "id": "s7",
+      "difficulty": 3,
+      "prompt": "A multiple-low-dose STZ protocol reliably makes one mouse line diabetic but fails in another. Most likely explanation?",
+      "options": [
+        "Multiple-low-dose STZ is strongly strain- and sex-dependent, so protocols don't transfer",
+        "The STZ must have been injected into entirely the wrong tissue in the second group",
+        "Multiple low doses only work in autoimmune-prone lines like NOD mice",
+        "Low doses can't kill β cells at all, so the first line's diabetes came from something else"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "MLD-STZ depends heavily on genetic background and sex — Leiter showed susceptibility varies with inbred background, sex and the thymus, and males are generally more susceptible than females. Pilot the dose in *your* strain and sex rather than lifting a published protocol.",
+      "variants": [
+        {
+          "type": "predict",
+          "setup": "Your multiple-low-dose STZ protocol worked in one strain and fails in another.",
+          "prompt": "What should you check first?",
+          "options": [
+            "Whether the protocol was ever validated in your strain and sex",
+            "Whether all of the mice were housed in the very same room",
+            "Whether low doses are simply too weak to kill β cells on their own"
+          ],
+          "answer": [
+            0
+          ],
+          "reveal": "MLD-STZ susceptibility varies with genetic background and sex, so the protocol has to be piloted in the strain and sex you actually use."
+        }
+      ]
     }
   ],
   "sources": [
@@ -179,6 +211,13 @@
       "url": "https://doi.org/10.1002/cpz1.78",
       "verified": true,
       "note": "Protocols for STZ-induced diabetic models in mice and rats."
+    },
+    {
+      "citation": "Leiter EH, 1982, Proc Natl Acad Sci USA",
+      "doi": "10.1073/pnas.79.2.630",
+      "url": "https://doi.org/10.1073/pnas.79.2.630",
+      "verified": true,
+      "note": "Multiple-low-dose STZ susceptibility varies with inbred background, sex and thymus."
     }
   ],
   "reviewNotes": "STZ T1D model: GLUT2 selectivity, high-dose vs MLD, vehicle control, off-target caveat. Ties to the pancreas project."

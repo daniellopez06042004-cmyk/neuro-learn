@@ -16,7 +16,7 @@
       "type": "concept",
       "id": "s1",
       "title": "The β cell is a glucose meter",
-      "body": "Glucose enters the β cell through **[[GLUT2]]**, then **[[glucokinase]]** phosphorylates it. Glucokinase has a **high Km** (low affinity), so unlike ordinary hexokinase it is *not* saturated at normal blood sugar — its rate climbs as glucose rises. That makes it the rate-limiting **glucose sensor**.",
+      "body": "Glucose enters the β cell through **[[GLUT2]]** (mouse and rat; human β cells use mainly GLUT1/GLUT3), then **[[glucokinase]]** phosphorylates it. Glucokinase has a **high Km**, so unlike ordinary hexokinase it isn't saturated at normal blood sugar — its rate climbs as glucose rises. It's also **not product-inhibited** by glucose-6-phosphate, so it keeps reporting instead of throttling itself. That makes it the rate-limiting **glucose sensor**.",
       "flag": null,
       "visual": {
         "type": "svg",
@@ -39,7 +39,7 @@
       "answer": [
         0
       ],
-      "explanation": "A high Km means glucokinase is below saturation across the physiological range, so flux through it rises with glucose — the kinetic basis of glucose sensing. Hexokinase saturates at low glucose and can't report changes.",
+      "explanation": "A high Km means glucokinase is below saturation across the physiological range, so flux through it rises with glucose — the kinetic basis of glucose sensing. Hexokinase saturates at low glucose and is product-inhibited by glucose-6-phosphate, so it can't report changes.",
       "variants": [
         {
           "type": "predict",

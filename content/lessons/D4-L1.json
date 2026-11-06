@@ -124,19 +124,19 @@
           "x": 118,
           "y": 116,
           "label": "fascicle"
-        },
-        {
-          "x": 228,
-          "y": 248,
-          "label": "endoneurium"
         }
       ],
-      "explanation": "Endoneurium wraps each axon, perineurium binds axons into a fascicle, and epineurium wraps the whole nerve.",
+      "explanation": "Endoneurium wraps each axon, perineurium binds axons into a fascicle, and epineurium wraps the whole nerve. In a cross-section the endoneurium is only a thin ring around each axon, which is why it isn't pinned here.",
       "crop": [
         0,
         20,
         360,
         270
+      ],
+      "distractors": [
+        "endoneurium",
+        "myelin sheath",
+        "node of Ranvier"
       ]
     }
   ],

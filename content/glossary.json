@@ -1512,7 +1512,7 @@
     {
       "term": "GLUT2",
       "aliases": [],
-      "definition": "A glucose transporter highly expressed on β cells (and in liver/kidney); the route streptozotocin uses to enter β cells.",
+      "definition": "A glucose transporter highly expressed on β cells (and in liver/kidney); the route streptozotocin uses to enter β cells. In mouse and rat β cells GLUT2 is the main glucose transporter; human β cells rely mainly on GLUT1 and GLUT3, which is part of why STZ is a rodent model.",
       "track": "D"
     },
     {

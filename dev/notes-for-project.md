@@ -1,3 +1,30 @@
+### 2026-11-07: both D7 additions reviewed and live — the science checked out clean
+
+**Your whole batch is imported and published.** The 12 copied lessons are byte-identical to the app's, the three figures are attached where you say, and your self-audit work came through intact.
+
+**1. The new STZ content is accurate.** An independent review of `s7`, the changed `s1`/`s6` and the `D7-L6` changes found **no science errors** — worth saying plainly, because this is the batch Dan will actually use at the bench:
+- **Strain and sex:** the direction is right and correctly hedged. MLD-STZ susceptibility really is strongly background- and sex-dependent, males generally more susceptible, and that male bias is androgen-dependent. You name no specific strains, so there's no strain-direction claim to get wrong.
+- **Citrate:** right. STZ degrades fast in aqueous solution at neutral or alkaline pH and is relatively stable cold and acidic (~pH 4.5), hence fresh, cold, injected within minutes — and that is why citrate is the vehicle control. "Stale or neutral-pH STZ is a common reason a model fails to take" is a fair practical statement.
+- **Product inhibition:** correct for glucokinase vs hexokinase I/II, and s2's explanation states the hexokinase side correctly too.
+- **Species:** correct, and "mainly" is the right strength.
+- **Leiter 1982 verified on Crossref:** 10.1073/pnas.79.2.630 → Leiter EH, "Multiple low-dose streptozotocin-induced hyperglycemia and insulitis in C57BL mice: Influence of inbred background, sex, and thymus", PNAS 1982;79(2):630–634. Author, year, journal and title all match your citation and note. `verified: true` is justified.
+
+**Two edits, both in `s7`** (record in `app/dev/review-D7-s7.md`, please copy `D7-L5.json`):
+- **s7 options:** "mice only become diabetic if already old" and "β cells fully regenerate within hours" are throwaways. Now "only works in autoimmune-prone lines like NOD" and "low doses can't kill β cells at all" — the second also blunts a mild giveaway, since the stem ("works in one line, fails in another") nearly states the key.
+- **s7 variant 0:** "Whether the citrate buffer was warmed up before injection" was a *defensible answer*, not a distractor — your own s6 teaches that warm or stale STZ is exactly why a model fails. Replaced with a clearly wrong check.
+
+**2. Your 11 trims are all safe.** I verified each one mechanically: in every case only the correct option changed, no answer index moved, and no trim altered the meaning. Your diagnosis is right too — the tells appeared *because* the rewritten distractors got tighter, and trimming the correct option is the right response. Keeping the fuller wording in the `explanation` is exactly where it belongs.
+
+**3. `D6-L2` pin spacing — fixed on my side.** The "circular muscle" pin moved to x=200, same layer, now 68 units from its nearest neighbour.
+
+**4. `D4-L1` — I had to drop a pin, and it was my question, not yours.** "Endoneurium" cannot be pinned unambiguously in that figure: the axons are densely packed, the widest gap between them is about 4 viewBox units, and the endoneurium is only a thin ring around each axon. Any pin inside a bundle reads the same as the "fascicle" pin, and the old coordinate sat exactly on the perineurium ring (45.4 units from the centre, ring radius 45.5) — i.e. on pin 2's answer. So that question is now **three pins** (epineurium, perineurium, fascicle) with **endoneurium as a distractor** alongside myelin sheath and node of Ranvier, and the explanation says why it isn't pinned. **General rule worth adding to your method:** only pin a structure the figure draws as its own distinguishable region. If naming it would also be true of a neighbouring pin, make it a distractor instead.
+
+**5. Glossary, `GLUT2`:** it still read "highly expressed on β cells" with no species caveat, which sat oddly beside your new `D7-L6` line. I appended: mouse and rat β cells use GLUT2, human β cells rely mainly on GLUT1/GLUT3, which is part of why STZ is a rodent model. Please copy `glossary.json`.
+
+**6. Keeping "DNA damage" on the STZ figure** — agreed, no change made.
+
+**Capstone E** is the only unwritten content. Dan hasn't greenlit it yet; I'll pass it on when he does.
+
 ### 2026-11-06 (night): D7-L5/L6 imported after review (12 edits), and **every label question needed its pins moved**
 
 **1. The label questions: 33 of your 44 pins were in the wrong place.** Thank you for writing all ten — the questions themselves are good, and the fix is mechanical, but please read this before you write any more.

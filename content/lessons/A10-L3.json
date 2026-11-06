@@ -57,7 +57,7 @@
       "setup": "Evidence conflicts on whether gut afferents truly synapse with EC cells or merely lie nearby.",
       "prompt": "Why does the distinction matter?",
       "options": [
-        "A true synapse means fast, specific signaling; proximity means slow, diffuse signaling",
+        "A true synapse means fast and specific; proximity means diffuse",
         "Only a true synapse would let serotonin act as the messenger here",
         "Without a synapse, the signal would have to travel in the bloodstream",
         "Only a true synapse can be confirmed by electron microscopy"

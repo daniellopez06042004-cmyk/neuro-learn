@@ -55,7 +55,7 @@
       "id": "s3",
       "prompt": "The vagal 'inflammatory reflex' (Track B) is an example of what?",
       "options": [
-        "An interoceptive reflex: afferents sense inflammation and efferents dampen it",
+        "An interoceptive reflex: afferents sense it, efferents dampen it",
         "A purely hormonal loop: cytokines alone shut inflammation off",
         "A somatic stretch reflex, much like the familiar knee-jerk",
         "A positive-feedback loop: vagal output amplifies inflammation"

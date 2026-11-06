@@ -132,7 +132,11 @@
           "label": "room temp"
         }
       ],
-      "explanation": "A sensor reads the variable (room temp), a controller compares it to the set point, and an effector corrects any deviation."
+      "explanation": "A sensor reads the variable (room temp), a controller compares it to the set point, and an effector corrects any deviation.",
+      "distractors": [
+        "error signal",
+        "disturbance"
+      ]
     }
   ],
   "sources": [],

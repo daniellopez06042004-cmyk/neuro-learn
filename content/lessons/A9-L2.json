@@ -42,7 +42,7 @@
       "setup": "After an injury heals, light brushing of nearby, uninjured skin is painful.",
       "prompt": "What best explains pain spreading beyond the injured area?",
       "options": [
-        "Central sensitization — the dorsal horn's gain is raised, so touch input reads as pain",
+        "Central sensitization — dorsal-horn gain is raised, so touch reads as pain",
         "The brush is causing fresh micro-damage to the skin each time it passes",
         "Nociceptors have sprouted into the neighbouring uninjured skin",
         "Only peripheral sensitization confined to the original injured site"

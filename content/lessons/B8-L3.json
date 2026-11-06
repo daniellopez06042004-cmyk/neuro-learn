@@ -25,7 +25,7 @@
       "setup": "You ablate the gut-innervating nociceptors in a mouse and then examine its gut microbiota and mucosal defense.",
       "prompt": "What do you predict?",
       "options": [
-        "The microbial community and tissue protection shift, often for the worse",
+        "The microbial community and tissue protection both shift",
         "The microbiota shifts, but mucosal protection stays exactly the same",
         "Nothing at all changes in the gut after their removal",
         "Only the brain is affected by this, and never the gut"

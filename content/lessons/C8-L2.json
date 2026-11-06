@@ -110,7 +110,11 @@
           "label": "ZZ probe pair"
         }
       ],
-      "explanation": "A ZZ probe pair lands on the mRNA, the preamplifier binds across its two tails, amplifiers branch off the preamplifier, and label probes carry the dye."
+      "explanation": "A ZZ probe pair lands on the mRNA, the preamplifier binds across its two tails, amplifiers branch off the preamplifier, and label probes carry the dye.",
+      "distractors": [
+        "secondary antibody",
+        "epitope"
+      ]
     }
   ],
   "sources": [

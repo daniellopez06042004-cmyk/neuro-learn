@@ -57,7 +57,7 @@
       "difficulty": 2,
       "prompt": "Why does silencing (loss-of-function) strengthen a causal claim here?",
       "options": [
-        "If removing the neurons' activity removes the symptom, they're likely necessary for it",
+        "If removing their activity removes the symptom, they're likely necessary",
         "Silencing on its own shows that the neurons are sufficient for the symptom",
         "If silencing changed nothing, that would prove the neurons play no role",
         "Silencing a whole population rules out every other pathway at once"

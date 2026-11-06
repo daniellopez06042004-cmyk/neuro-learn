@@ -57,7 +57,7 @@
       "setup": "In a colitis model, a mouse shows pain behavior to colon distension that a healthy mouse ignores.",
       "prompt": "What best explains this?",
       "options": [
-        "Peripheral sensitization + recruited silent nociceptors + central sensitization",
+        "Peripheral sensitization, silent nociceptors, and central sensitization",
         "Only central sensitization; the gut afferents themselves are unchanged",
         "Only peripheral sensitization at the endings, with no central change",
         "Faster conduction velocity in the existing colon afferents"
