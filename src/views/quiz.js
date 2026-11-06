@@ -54,11 +54,8 @@ export function quizCard() {
   const quiz = weeklyQuiz();
   if (!quiz) return null;
   if (quiz.locked) {
-    return h('div', { class: 'quiz-card locked' },
-      icon('lock'),
-      h('div', null,
-        h('p', { class: 'quiz-title' }, 'Weekly quiz'),
-        h('p', { class: 'small muted' }, `Hard questions that connect the tracks. Each opens once you finish the units it draws on: ${quiz.ready} of ${quiz.needed} ready.`)));
+    return h('div', { class: 'quiz-line', title: 'Hard questions that connect the tracks. Each opens once you finish the units it draws on.' },
+      icon('lock'), h('span', null, h('b', null, 'Weekly quiz'), ` · ${quiz.ready} of ${quiz.needed} questions ready`));
   }
   const n = quiz.questions.length;
   if (quiz.done) {

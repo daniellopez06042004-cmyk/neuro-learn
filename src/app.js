@@ -14,6 +14,8 @@ import { renderGlossary, showTerm } from './views/glossary.js';
 import { renderPulse } from './views/pulse.js';
 import { renderSlideBox } from './views/slidebox.js';
 import { renderQuiz } from './views/quiz.js';
+import { renderLibrary } from './views/library.js';
+import { renderFigures } from './views/figures.js';
 
 route('/', renderHome);
 route('/unit/:id', renderUnit);
@@ -27,6 +29,8 @@ route('/glossary', renderGlossary);
 route('/pulse', renderPulse);
 route('/slides', renderSlideBox);
 route('/quiz', renderQuiz);
+route('/library', renderLibrary);
+route('/figures', renderFigures);
 fallback(() => go('/', { replace: true }));
 
 // Glossary terms ([[term]] in lesson text) open a definition sheet anywhere,

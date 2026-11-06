@@ -25,7 +25,7 @@ export function renderGlossary(root) {
   search.addEventListener('input', draw);
   root.replaceChildren(h('div', { class: 'screen' },
     h('header', { class: 'topbar' },
-      h('button', { class: 'icon-btn', 'aria-label': 'Back to map', onclick: () => go('/') }, icon('back')),
+      h('button', { class: 'icon-btn', 'aria-label': 'Back to library', onclick: () => go('/library') }, icon('back')),
       h('h1', null, 'Glossary')),
     search, list));
   draw();

@@ -36,7 +36,7 @@ export function renderSlideBox(root, params) {
   const wrap = h('div', { class: 'sb-wrap' }, sb);
   root.replaceChildren(h('div', { class: 'screen slidebox' },
     h('header', { class: 'topbar' },
-      h('button', { class: 'icon-btn sb-top-back', 'aria-label': 'Back', onclick: () => (viewing ? putBack(...viewing) : go('/')) }, icon('back')),
+      h('button', { class: 'icon-btn sb-top-back', 'aria-label': 'Back', onclick: () => (viewing ? putBack(...viewing) : go('/library')) }, icon('back')),
       h('h1', null, 'Slide box')),
     wrap));
 

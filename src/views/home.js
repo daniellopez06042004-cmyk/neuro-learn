@@ -1,5 +1,4 @@
 import { h, icon, svg, trackStyle } from '../ui.js';
-import { slideBoxReady } from './slidebox.js';
 import { content, unitStats, unitUnlocked, dueCountForUnit, blockingPrereqs } from '../content.js';
 import { progress, settings, today, addDays } from '../progress.js';
 import { layoutTrack, axonPath } from '../map.js';
@@ -35,15 +34,12 @@ function backupTip() {
   return el;
 }
 
-// Field Pulse, Glossary and the slide box as icons in the top bar (Progress is the streak and xp counters;
-// Your circuit is on the progress screen).
-function shortcuts() {
+// The Library (figures, slide box, glossary, Field Pulse) behind one icon; its
+// badge counts new Field Pulse papers.
+function libraryButton() {
   const unread = unreadPulse();
-  return [
-    h('a', { class: 'icon-btn nav', href: '#/pulse', 'aria-label': `Field Pulse${unread ? `, ${unread} new` : ''}` }, icon('pulse'), unread ? h('span', { class: 'badge', 'aria-hidden': 'true' }, unread) : null),
-    h('a', { class: 'icon-btn nav', href: '#/glossary', 'aria-label': 'Glossary' }, icon('book')),
-    slideBoxReady() ? h('a', { class: 'icon-btn nav', href: '#/slides', 'aria-label': 'Slide box' }, icon('slide')) : null,
-  ];
+  return h('a', { class: 'icon-btn nav', href: '#/library', 'aria-label': `Library${unread ? `, ${unread} new papers` : ''}` },
+    icon('library'), unread ? h('span', { class: 'badge', 'aria-hidden': 'true' }, unread) : null);
 }
 
 function installTip() {
@@ -79,7 +75,6 @@ export function renderHome(root, params) {
     const done = t.units.filter((u) => unitStats(u).complete).length;
     mapHost.replaceChildren(
       h('div', { class: 'track-head' },
-        h('div', { class: 'eyebrow' }, content.course.title),
         h('h2', null, t.title),
         h('p', null, `${done} of ${t.units.length} units done`)),
       t.units.length ? neuralMap(t, params.fired) : h('p', { class: 'muted' }, 'This track has no units yet.'));
@@ -90,7 +85,7 @@ export function renderHome(root, params) {
       h('h1', { class: 'sr-only' }, content.course.title),
       ...statsBar(),
       h('span', { style: 'flex:1' }),
-      ...shortcuts(),
+      libraryButton(),
       h('a', { class: 'icon-btn nav', href: '#/settings', 'aria-label': 'Settings' }, icon('sliders'))),
     installTip(),
     backupTip(),

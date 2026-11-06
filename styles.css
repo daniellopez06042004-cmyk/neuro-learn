@@ -185,6 +185,50 @@ details.flag-box p { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
 @keyframes perfect-ring { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2.1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .perfect, .perfect-ring { animation: none; } .perfect-ring { display: none; } }
 
+.quiz-line { display: flex; align-items: center; gap: 8px; min-height: 36px; margin: 0 0 10px; font-size: 14px; color: var(--muted); }
+.quiz-line svg { width: 18px; height: 18px; flex: none; }
+.quiz-line b { color: var(--text); font-weight: 600; }
+
+/* ---------- Library ---------- */
+.lib { display: flex; flex-direction: column; gap: 10px; }
+.lib-tile {
+  position: relative; display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  color: var(--text); text-decoration: none; transition: transform 120ms ease-out;
+}
+.lib-tile:active { transform: scale(0.98); }
+.lib-icon { flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--surface-2); }
+.lib-icon svg { width: 24px; height: 24px; }
+.lib-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.lib-title { font-size: 17px; font-weight: 600; }
+.lib-chev { font-size: 24px; color: var(--faint); }
+.lib-tile .badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--warn-line); color: #1c1c1b; font-size: 13px; font-weight: 700; line-height: 22px; text-align: center; }
+
+/* ---------- Figures ---------- */
+.fig-count { margin: 0 0 4px; }
+.fig-unit { display: flex; align-items: baseline; gap: 8px; font-size: 17px; font-weight: 600; margin: 18px 0 8px; }
+.fig-id { font-size: 14px; font-weight: 700; color: var(--track-text); }
+.fig-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.fig-card {
+  display: flex; flex-direction: column; gap: 6px; padding: 6px; text-align: left; cursor: pointer;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text);
+  font: inherit; transition: transform 120ms ease-out;
+}
+.fig-card:active { transform: scale(0.97); }
+.fig-thumb { display: grid; place-items: center; aspect-ratio: 1; border-radius: 10px; overflow: hidden; background: var(--bg); }
+.fig-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.fig-card.live .fig-thumb { position: relative; background: var(--track-soft); color: var(--track-text); padding: 10px; place-items: end start; }
+.fig-live { position: absolute; top: 8px; left: 8px; display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.fig-live svg { width: 16px; height: 16px; }
+.fig-live-title { font-family: var(--serif); font-size: 17px; line-height: 1.2; font-weight: 600; color: var(--text); }
+.fig-cap { font-size: 14px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.fig-viewer { position: fixed; inset: 0; z-index: 50; display: flex; align-items: flex-end; justify-content: center; background: rgb(0 0 0 / 0.5); animation: fadein 160ms ease-out; }
+.fig-sheet {
+  width: 100%; max-width: 640px; max-height: 92dvh; overflow-y: auto; background: var(--surface);
+  border-radius: 20px 20px 0 0; padding: 12px 16px calc(var(--safe-bottom) + 16px); animation: rise 240ms cubic-bezier(.2,.9,.3,1);
+}
+.fig-sheet .visual img { max-height: 62dvh; }
+
 /* ---------- Home: track chips ---------- */
 .chips {
   display: flex; gap: 8px; overflow-x: auto; margin: 4px -16px 6px; padding: 4px 16px 8px;
@@ -460,32 +504,52 @@ svg.circuit { display: block; width: 100%; height: auto; overflow: visible; }
 .finish svg.circuit { width: auto; height: 46dvh; max-width: 100%; margin: 0 auto; }
 .circuit-caption { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 .circuit-frame { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; }
-.a-cortex { fill: url(#nl-shade); stroke: var(--line-strong); stroke-width: 1.6; stroke-linejoin: round; }
-.a-tissue { fill: color-mix(in srgb, #e8b4b0 10%, var(--surface-2)); stroke: var(--line-strong); stroke-width: 1.3; }
-.a-shade-in { stop-color: color-mix(in srgb, #e8b4b0 34%, var(--surface-2)); }
-.a-shade-out { stop-color: color-mix(in srgb, #b07a76 22%, var(--surface)); }
-.a-gyri { fill: none; stroke: color-mix(in srgb, #7a4a46 45%, var(--line-strong)); stroke-width: 1.1; stroke-linecap: round; opacity: 0.8; }
-.a-sulcus { fill: none; stroke: var(--line-strong); stroke-width: 1.1; stroke-linecap: round; opacity: 0.75; }
-.a-sulcus.major { stroke-width: 1.8; opacity: 1; }
-.a-folia { fill: none; stroke: var(--line-strong); stroke-width: 1; opacity: 0.8; }
-.a-deep { fill: color-mix(in srgb, var(--surface) 40%, transparent); stroke: var(--faint); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.8; }
-.a-nerve { fill: none; stroke: var(--line-strong); stroke-width: 1; stroke-linecap: round; opacity: 0.7; }
-.a-nerve.thick { stroke-width: 2; }
-.a-ganglion { fill: color-mix(in srgb, #e8b4b0 18%, var(--surface-2)); stroke: var(--line-strong); stroke-width: 1.2; }
-.a-organ { fill: color-mix(in srgb, #d85a30 18%, var(--surface-2)); stroke: var(--line-strong); stroke-width: 1.2; }
-.a-muscle { fill: color-mix(in srgb, #a32d2d 16%, var(--surface-2)); stroke: var(--line-strong); stroke-width: 1.2; }
-.a-skin { fill: none; stroke: color-mix(in srgb, #e8b4b0 50%, var(--line-strong)); stroke-width: 3; stroke-linecap: round; }
-.a-label { font: 600 10px var(--sans); fill: var(--faint); }
-.c-tract { fill: none; stroke-width: 1.2; stroke-dasharray: 1 4; stroke-linecap: round; opacity: 0.7; }
-.c-tract-glow { fill: none; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; opacity: 0.09; }
+svg.circuit {
+  --tis: color-mix(in srgb, #e8b4b0 34%, var(--surface-2));
+  --tis-lo: color-mix(in srgb, #e8b4b0 18%, var(--surface-2));
+  --tis-hi: color-mix(in srgb, #e8b4b0 12%, var(--surface));
+  --tis-line: color-mix(in srgb, #9a5f5a 55%, var(--line-strong));
+  --tis-grey: color-mix(in srgb, #9a5f5a 30%, var(--surface-2));
+}
+.a-cortex { fill: url(#nl-shade); stroke: var(--tis-line); stroke-width: 1.8; stroke-linejoin: round; }
+.a-shade-in { stop-color: color-mix(in srgb, #e8b4b0 42%, var(--surface-2)); }
+.a-shade-out { stop-color: color-mix(in srgb, #b07a76 34%, var(--surface-2)); }
+.a-gyri { fill: none; stroke: var(--tis-line); stroke-width: 1; stroke-linecap: round; opacity: 0.35; }
+.a-sulcus { fill: none; stroke: var(--tis-line); stroke-width: 1.3; stroke-linecap: round; opacity: 0.8; }
+.a-sulcus.major { stroke-width: 2.2; opacity: 1; }
+.a-tissue { fill: var(--tis-lo); stroke: var(--tis-line); stroke-width: 1.4; }
+.a-stem { fill: var(--tis); stroke: var(--tis-line); stroke-width: 1.4; }
+.a-grey { fill: var(--tis-grey); opacity: 0.7; }
+.a-cerebellum { fill: var(--tis-grey); stroke: var(--tis-line); stroke-width: 1.4; }
+.a-folia { fill: none; stroke: var(--tis-hi); stroke-width: 1.8; stroke-linecap: round; opacity: 0.85; }
+.a-ending { fill: none; stroke: var(--tis-line); stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.a-deep { fill: color-mix(in srgb, #9a5f5a 26%, var(--surface-2)); stroke: var(--tis-line); stroke-width: 1.2; opacity: 0.9; }
+.a-root { fill: none; stroke: var(--tis-line); stroke-width: 1.6; stroke-linecap: round; }
+.a-cable-o { fill: none; stroke: var(--tis-line); stroke-linecap: round; stroke-linejoin: round; }
+.a-cable-i { fill: none; stroke: var(--tis-hi); stroke-linecap: round; stroke-linejoin: round; }
+.a-ganglion { fill: var(--tis); stroke: var(--tis-line); stroke-width: 1.4; }
+.a-cellbody { fill: var(--tis-grey); stroke: var(--tis-line); stroke-width: 0.6; }
+.a-skin { fill: none; stroke: var(--tis); stroke-width: 9; stroke-linecap: round; }
+.a-epi { fill: none; stroke: var(--tis-line); stroke-width: 2; stroke-linecap: round; }
+.a-pancreas { fill: color-mix(in srgb, #e3a857 36%, var(--surface-2)); stroke: color-mix(in srgb, #a8702a 60%, var(--line-strong)); stroke-width: 1.4; }
+.a-lobule { fill: color-mix(in srgb, #e3a857 50%, var(--surface-2)); stroke: none; opacity: 0.8; }
+.a-spleen { fill: color-mix(in srgb, #8e3b46 38%, var(--surface-2)); stroke: color-mix(in srgb, #6e2a33 60%, var(--line-strong)); stroke-width: 1.4; }
+.a-shine { fill: none; stroke: var(--tis-hi); stroke-width: 2; stroke-linecap: round; opacity: 0.8; }
+.a-muscle { fill: color-mix(in srgb, #b8473f 36%, var(--surface-2)); stroke: color-mix(in srgb, #7a2a24 60%, var(--line-strong)); stroke-width: 1.4; }
+.a-striae { fill: none; stroke: color-mix(in srgb, #7a2a24 40%, var(--surface-2)); stroke-width: 1; opacity: 0.7; }
+.a-label { font: 600 11px var(--sans); fill: var(--muted); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
+.c-tract { fill: none; stroke-width: 1.4; stroke-dasharray: 1 4; stroke-linecap: round; opacity: 0.75; }
+.c-tract-glow { fill: none; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; opacity: 0.1; }
 .c-axon { fill: none; stroke-linecap: round; }
-.c-axon.off { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 1.5 4; opacity: 0.7; }
-.c-myelin { fill: none; stroke-width: 6; stroke-dasharray: 7 3; opacity: 0.35; }
-.c-dend { fill: none; stroke-width: 1.4; stroke-linecap: round; }
-.c-dend.off { stroke: var(--line-strong); stroke-width: 1; opacity: 0.45; }
-.c-soma { stroke-width: 1.5; }
-.c-soma.off { fill: var(--surface); stroke-dasharray: 2 2; opacity: 0.8; }
-.c-halo { fill: none; stroke-width: 1; opacity: 0.6; }
+.c-myelin-o { fill: none; stroke-width: 7; stroke-dasharray: 9 4; stroke-linecap: butt; }
+.c-myelin-i { fill: none; stroke-width: 4.4; stroke-dasharray: 9 4; stroke-linecap: butt; }
+.c-dend { fill: none; stroke-width: 2.4; stroke-linecap: round; }
+.c-twig { fill: none; stroke-width: 1.3; stroke-linecap: round; }
+.c-dend.off, .c-twig.off { stroke: var(--line-strong); stroke-width: 1.2; stroke-dasharray: 2 2; opacity: 0.7; }
+.c-soma { stroke-width: 1.4; stroke-linejoin: round; }
+.c-soma.off { fill: var(--surface); stroke-dasharray: 2 2; opacity: 0.9; }
+.c-nucleus { fill: color-mix(in srgb, var(--surface) 70%, transparent); }
+.c-halo { opacity: 0.18; }
 .c-ghost { opacity: 0.55; }
 .c-ping { fill: none; stroke-width: 2; transform-box: fill-box; transform-origin: center; animation: cping 1.8s ease-out infinite; }
 .circuit .grow { stroke-dasharray: 100; stroke-dashoffset: 100; animation: draw 1.4s 400ms ease-out forwards; }

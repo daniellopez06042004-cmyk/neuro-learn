@@ -4,7 +4,7 @@
 //   up right away, falling back to the cached copy when offline.
 // Bump VERSION when you change any app file so phones pick up the new code.
 
-const VERSION = 'v21';
+const VERSION = 'v22';
 const SHELL_CACHE = `shell-${VERSION}`;
 const CONTENT_CACHE = 'content';
 
@@ -46,6 +46,8 @@ const SHELL = [
   './src/views/slidebox.js',
   './src/views/quiz.js',
   './src/quiz.js',
+  './src/views/library.js',
+  './src/views/figures.js',
 ];
 
 self.addEventListener('install', (event) => {

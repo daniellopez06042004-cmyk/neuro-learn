@@ -87,6 +87,8 @@ const PATHS = {
   pulse: '<path d="M3 12h4l2.5-6 5 12 2.5-6h4"/>',
   slide: '<rect x="2.5" y="8" width="19" height="8" rx="1"/><path d="M8 8v8"/><circle cx="14.5" cy="12" r="1.6"/>',
   dots: '<circle cx="6" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="18" cy="12" r="1"/>',
+  library: '<path d="M4 4.5h4v15H4zM10 4.5h4v15h-4z"/><path d="M16.2 5.4l3.8-1 3 14.5-3.8 1z" transform="translate(-1.5 0)"/>',
+  figure: '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M4 17l5-4.5 3.5 3 3-2.5 4.5 4"/>',
 };
 
 export function icon(name, label) {

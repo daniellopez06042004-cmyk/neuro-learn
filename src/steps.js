@@ -31,7 +31,7 @@ export function createStep(step, ctx) {
 
 // ---------- visuals (lesson-format.md: "visual" on any step) ----------
 
-function visual(v) {
+export function visual(v) {
   const src = imageUrl(v.src);
   let media;
   if (v.type === 'interactive') media = widget(v, src);
